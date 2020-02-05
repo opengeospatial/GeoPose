@@ -7,4 +7,4 @@ After performing scan of landscape and requirements analyses, the SWG will defin
 
 To determine how well the proposed standard works in real world spatial computing scenarios and to assess its ease of use for average developers, there will be multiple implementations and use cases examined. Best practices will be compiled when possible.
 
-Examine whether the proposed standard maintains interoperability with the OGC Standards Baseline and assess whether extension of existing standards could achieve the goals of GeoPose.
+The SWG will then examine whether the proposed standard maintains interoperability with the OGC Standards Baseline and assess whether extensions of existing standards could achieve the goals of GeoPose.
