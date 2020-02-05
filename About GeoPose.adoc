@@ -1,4 +1,4 @@
-#About GeoPose
+# About GeoPose
 
 All physical world objects in space can be described by their position and orientation. In addition, they have three components of translation – up and down (z), left and right (x) and forward and backward (y) and three components of rotation – Pitch, Roll and Yaw. Hence, real objects have six degrees of freedom.
 
