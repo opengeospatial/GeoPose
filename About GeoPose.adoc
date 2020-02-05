@@ -1,6 +1,6 @@
 # About GeoPose
 
-All physical world objects in space can be described by their position and orientation. In addition, they have three components of translation – up and down (z), left and right (x) and forward and backward (y) and three components of rotation – Pitch, Roll and Yaw. Hence, real objects have six degrees of freedom.
+All objects can be described by their position and orientation. In addition, they have three components of translation – up and down (z), left and right (x) and forward and backward (y) and three components of rotation – Pitch, Roll and Yaw. Hence, real objects have six degrees of freedom.
 
 In computer graphics and robotics, the combination of position and orientation with 6 degrees of freedom of objects are commonly referred to as the object’s “pose.” Pose is expressed as being in relation to other objects and/or to the user. Some part of the object must be recognized as the anchor (or origin) of the position. 
 
