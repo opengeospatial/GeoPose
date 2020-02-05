@@ -3,7 +3,7 @@
 Welcome to the GeoPose SWG GitHub Repo.
 
 This SWG will develop a standard data exchange format for GeoPose.
-After performing scan of landscape and requirements analyses, the SWg will define the standard and to illustrate it with a JSON encoding. The data structure will be defined with a limited set of pre-defined fields, building on the default practice of using JSON to store and exchange more or less any data today.
+After performing scan of landscape and requirements analyses, the SWG will define the standard and illustrate it with JSON. The data structure will be defined with a limited set of pre-defined fields, building on the default practice of using JSON to store and exchange more or less any data today.
 
 To determine how well the proposed standard works in real world spatial computing scenarios and to assess its ease of use for average developers, there will be multiple implementations and use cases examined. Best practices will be compiled when possible.
 
