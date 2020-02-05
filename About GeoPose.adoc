@@ -4,4 +4,6 @@ All physical world objects in space can be described by their position and orien
 
 In computer graphics and robotics, the combination of position and orientation with 6 degrees of freedom of objects are commonly referred to as the object’s “pose.” Pose is expressed as being in relation to other objects and/or to the user. Some part of the object must be recognized as the anchor (or origin) of the position. 
 
-When a pose is defined relative to a geographical frame of reference or coordinate system, it will be called a geographically-anchored pose, or "GeoPose" for short. All physical world objects inherently have a geographically-anchored pose. 
+When a pose is defined relative to a geographical frame of reference or coordinate system, it will be called a geographically-anchored pose, or "GeoPose" for short. All physical world objects inherently have a geographically-anchored pose. In addition, digital (synthetic) objects may be assigned/attributed a GeoPose.
+
+When the GeoPose of both real and virtual objects include the current position and orientation of the objects in a way that is universally understood, the interactions between the objects and an object and its location can be put to many uses. It is also important to note that many objects move with respect to a common frame of reference (and one another). Their positions and orientations can also vary over time.
