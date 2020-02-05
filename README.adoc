@@ -4,7 +4,7 @@ Welcome to the GeoPose SWG GitHub Repo.
 
 The main purpose of this SWG will be to develop and propose a standard for geographically-anchored pose (GeoPose) with 6 degrees of freedom referenced to one or more standardized Coordinate Reference Systems (CRSs). The proposed standard will provide an interoperable way to seamlessly express, record, and share the GeoPose of objects in an entirely consistent manner across different applications, users, devices, services, and platforms which adopt the standard or are able to translate/exchange the GeoPose into another CRS.
 
-After performing scan of landscape and requirements analyses, the SWG will define the standard and illustrate it with UML diagrams, and examples in formats such as JSON. The data structure will be defined with a limited set of pre-defined fields, building on the default practice of using JSON to store and exchange more or less any data today.
+After performing a scan of all relevant approaches and standards, and developing use cases and requirements, the SWG will define the standard and illustrate it with UML diagrams, and examples in formats such as JSON. The data structure will be defined with a limited set of pre-defined fields, building on the default practice of using JSON to store and exchange more or less any data today.
 
 To determine how well the proposed standard works in real world spatial computing scenarios and to assess its ease of use for average developers, there will be multiple implementations and use cases examined. Best practices will be compiled when possible.
 
