@@ -1,10 +1,14 @@
-# Standard template
+# Draft GeoPose Specification
 
-This GitHub repository contains the content for an OGC standard.
+⚠️ The OGC GeoPose specification available in this repo is a draft (work in progress). It reflects the current agreement of members of the GeoPose SWG who have been actively working on the document since January 2020. It is provided here in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
 
-The repo is organized as follows:
+# Contributing
+The OGC GeoPose SWG is the group at OGC responsible for the stewardship of the standard. As of our publication to this repo, the SWG will do as much work in public as possible.
 
-* index.adoc - nothing in this document
-* standard - the main standard document content
-  - organized in multiple sections and directories
-  - this is the only part needed to create a standard
+If you have input, comments or feedback for the SWG's consideration, please begin by reviewing the http://github.com/opengeospatial/GeoPose/issues[open issues]. If there is already an issue with your question, concern or input, please respond or discuss in the issue. If your input, feedback or question is new (not captured in a prior issue), please open a new issue.
+
+The GeoPose SWG will promptly review open issues and address or reply to new issues in a timely manner.
+
+If necessary, Pull Requests from contributors may only be made on the Development branch. Please note that by sending a Pull Request or Commit to this GitHub repository, you are agreeing to the terms in the http://portal.ogc.org/files/?artifact_id=92169[Observer Agreement].
+
+The contributor understands that any contributions, if accepted by the OGC GeoPose SWG, shall be incorporated into a final OGC standards document and that all copyright and intellectual property shall be vested to the OGC. See http://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/LICENSE[Copy of OGC License Language].
