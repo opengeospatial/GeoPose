@@ -1,0 +1,51 @@
+# Implementations of GeoPose
+
+In this file, we will maintain status of projects that are in this folder to demonstrate the eight implementation targets.
+
+## Basic-Quaternion
+
+Implementation #1:
+
+Implementation #2:
+
+## Basic-Euler
+
+Implementation #1:
+
+Implementation #2:
+
+## Advanced
+
+Implementation #1:
+
+Implementation #2:
+
+## Graph
+
+Implementation #1:
+
+Implementation #2:
+
+## Chain
+
+Implementation #1:
+
+Implementation #2:
+
+## Regular Series
+
+Implementation #1:
+
+Implementation #2:
+
+## Irregular Series
+
+Implementation #1:
+
+Implementation #2:
+
+## Stream
+
+Implementation #1:
+
+Implementation #2:
