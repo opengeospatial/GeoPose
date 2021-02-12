@@ -1,0 +1,7 @@
+[[req_basic_eulerangle]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement {counter:req-id}* |*/req/basic/EulerAngle/JSON_Encoding* 
+^|Requirement |A JSON-encoded Basic-Euler GeoPose shall conform to the Basic-Euler JSON-Schema 2019-9 definition.
+^|ID |<<req_basic_eulerangle_json,/req/basic/EulerAngle/JSON_Encoding>>
+|===

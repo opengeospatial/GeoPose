@@ -1,0 +1,8 @@
+[[ats_building_ade_use]]
+[width="90%",cols="2,6"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/basic/Euler* 
+^|Test Purpose |To validate that Basic-Euler GeoPose data objects conform to the JSON-Schema definition.
+^|Requirement |<<req_building_ade_use,/req/basic/Euler>>
+^|Test Method |JSON-Schema validation
+|===

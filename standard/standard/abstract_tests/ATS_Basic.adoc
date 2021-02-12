@@ -1,0 +1,16 @@
+=== + Basic Conformance Classes:
+
+==== .Basic-Euler Conformance Class
+
+include::Basic/ATS_Basic_Euler.adoc[]
+
+==== .Basic-Quaternion (Strict) Conformance Class
+
+include::Basic/ATS_Basic_Quaternion.adoc[]
+
+==== .Basic-Quaternion (Permissive) Conformance Class
+
+include::Basic/ATS_Basic_Quaternion_Permissive.adoc[]
+
+
+

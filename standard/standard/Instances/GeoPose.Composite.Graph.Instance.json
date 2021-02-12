@@ -1,0 +1,77 @@
+{
+  "frameList": [
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Extrinsic/LTP-ENU",
+      "parameters": "longitude=-122.3000000&latitude=47.7000000&height=11.000"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    }
+  ],
+  "transformList": [
+    {
+      "link": [
+        0,
+        1
+      ]
+    },
+    {
+      "link": [
+        1,
+        2
+      ]
+    },
+    {
+      "link": [
+        2,
+        3
+      ]
+    },
+    {
+      "link": [
+        0,
+        4
+      ]
+    },
+    {
+      "link": [
+        4,
+        5
+      ]
+    },
+    {
+      "link": [
+        5,
+        6
+      ]
+    }
+  ]
+}

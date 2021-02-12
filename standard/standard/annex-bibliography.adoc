@@ -23,3 +23,5 @@ Springer LNCS is widely used in technical and computer science journals and othe
 ((( Example )))
 [[OGC2015]]
 [1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).
+
+ HAMILTON, SIR WILLIAM ROWAN, "On quaternions; or on a new system of imaginaries in algebra," Philosophical Magazine xxv pp. 10-13 (July 1844).

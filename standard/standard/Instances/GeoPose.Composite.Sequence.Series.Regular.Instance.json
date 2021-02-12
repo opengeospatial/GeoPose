@@ -1,0 +1,36 @@
+{
+  "header": {
+    "poseCount": 2,
+    "integrityCheck": "{\"SHA256\": \"5556fb65f8bf9eddb3ace1329c9a6aeedd4833409965aeee3e6b61ed21f47858\"}",
+    "startInstant": 1605237061821,
+    "stopInstant": 1605237106821,
+    "transitionModel": "None"
+  },
+  "interPoseDuration": 1000,
+  "outerFrame": {
+    "authority": "/geopose/1.0",
+    "id": "LTP-ENU",
+    "parameters": "longitude=-122.3000000&latitude=47.7000000&height=11.000"
+  },
+  "innerFrameSeries": [
+    {
+      "authority": "/geopose/1.0",
+      "id": "RotateTranslate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "RotateTranslate",
+      "parameters": "translation=[0.5, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "RotateTranslate",
+      "parameters": "translation=[1.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+    }
+  ],
+  "trailer": {
+    "poseCount": 2,
+    "integrityCheck": "{\"SHA256\": \"5556fb65f8bf9eddb3ace1329c9a6aeedd4833409965aeee3e6b61ed21f47858\"}"
+  }
+}

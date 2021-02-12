@@ -1,0 +1,33 @@
+{
+  "description": "Basic-Euler: Basic GeoPose using Euler angle rotations to specify orientation",
+  "type": "object",
+  "properties": {
+    "longitude": {
+      "type": "number",
+      "minimum": -180.0,
+      "maximum": 180.0
+    },
+    "latitude": {
+      "type": "number",
+      "minimum": -90.0,
+      "maximum": 90.0
+    },
+    "height": {
+      "type": "number"
+    },
+    "rotations": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    }
+  },
+  "required": [
+    "longitude",
+    "latitude",
+    "height",
+    "rotations"
+  ]
+}

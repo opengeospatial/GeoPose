@@ -1,0 +1,14 @@
+{
+  "frameSpecification": {
+    "authority": "/geopose/1.0",
+    "id": "LTP-ENU",
+    "parameters": "longitude=-122.3000000&latitude=47.7000000&height=11.000"
+  },
+  "quaternion": [
+    -0.70177968287969039,
+    0.16036411620279825,
+    -0.15462581332019135,
+    0.676667928002241
+  ],
+  "validTime": 1605237061231
+}
