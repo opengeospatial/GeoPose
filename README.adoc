@@ -1,16 +1,19 @@
 # GeoPose Standard Working Group (SWG)
 
-Welcome to the GeoPose SWG GitHub Repo.
+Welcome to the OGC GeoPose SWG GitHub Repo.
 
-The main purpose of this SWG is to develop a standard for geographically-anchored pose (GeoPose) with 6 degrees of freedom referenced to one or more standardized Coordinate Reference Systems (CRSs). The proposed standard will provide an interoperable way to seamlessly express, record, and share the GeoPose of objects in an entirely consistent manner across different applications, users, devices, services, and platforms which adopt the standard or are able to translate/exchange the GeoPose into another CRS.
+The https://www.ogc.org/projects/groups/geoposeswg[GeoPose Standards Working Group (SWG)] is working under the auspices of the https://www.ogc.org/[Open Geospatial Consortium].  The purpose of this SWG is to develop a standard for geographically-anchored pose (GeoPose) with 6 degrees of freedom referenced to one or more standardized Coordinate Reference Systems (CRSs). The proposed standard will provide an interoperable way to seamlessly express, record, and share the GeoPose of objects in an entirely consistent manner across different applications, users, devices, services, and platforms which adopt the standard or are able to translate/exchange the GeoPose into another CRS.
 
-To determine how well the proposed standard works in real world spatial computing scenarios and to assess its ease of use for average developers, there will be multiple implementations and use cases examined.
+To determine how well the proposed standard works in real world spatial computing scenarios and to assess its ease of use for average developers, there will be multiple https://github.com/opengeospatial/GeoPose/tree/main/Implementations/[implementations] and use cases examined.
 
 The SWG will then examine whether the proposed standard maintains interoperability with the OGC Standards Baseline and assess whether extensions of existing standards could achieve the goals of GeoPose.
 
 # Draft GeoPose Specification
 
-⚠️ The OGC GeoPose specification available in this repo is a draft (work in progress). It reflects the current agreement of members of the GeoPose SWG who have been actively working on the document since January 2020. It is provided here in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
+⚠️ The https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[OGC GeoPose specification] available in this repo is a draft (work in progress). This draft reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[here] in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
+
+# Get More Information
+The OGC GeoPose SWG is currently developing a pair of informational guides and a set of sample implementations which will be made public on GitHub. The guides will support reviewers of this specification and those who seek to implement it.
 
 # Contributing
 The OGC GeoPose SWG is the group at OGC responsible for the stewardship of the standard. As of our publication to this repo, the SWG will do as much work in public as possible.
@@ -19,6 +22,6 @@ If you have input, comments or feedback for the SWG's consideration, please begi
 
 The GeoPose SWG will promptly review open issues and address or reply to new issues in a timely manner.
 
-If necessary, Pull Requests from contributors may only be made on the Development branch. Please note that by sending a Pull Request or Commit to this GitHub repository, you are agreeing to the terms in the http://portal.ogc.org/files/?artifact_id=92169[Observer Agreement].
+If necessary, make a branch from the "working" branch of this repo. Make any changes to your own branch of "working" Pull Requests from contributors may only be made on the "working" branch. Please note that by sending a Pull Request or Commit to this GitHub repository, you are agreeing to the terms in the [OGC GeoPose SWG Observer Agreement].
 
 The contributor understands that any contributions, if accepted by the OGC GeoPose SWG, shall be incorporated into a final OGC standards document and that all copyright and intellectual property shall be vested to the OGC. See http://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/LICENSE[Copy of OGC License Language].
