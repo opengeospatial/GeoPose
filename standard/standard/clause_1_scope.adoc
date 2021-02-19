@@ -1,5 +1,10 @@
 == Scope
-[NOTE]
-====
-Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.
-====
+
+
+GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The standard specifies a basic form with no configuration options for common use cases, an advanced form with more flexibility for more complex applications, and composite GeoPose structures to support time series and chain and graph structures.
+
+The GeoPose standard consists of an implementation-neutral Logical Model which establishes the structure and relationships between GeoPose components and also between GeoPoses data objects themselves in composite structures. Classes and properties of the Logical Model that are expressed in concrete data objects defined by this standard are identified as implementation-neutral Structural Data Units (SDUs), aliases for elements of the Logical Model. SDUs are grouped to define the implementation-neutral form of the GeoPose Standardization Targets. For each Standardization Target, each implementation technology will have the definition of the encoding or serialization specified in a manner appropriate to that technology.
+
+GeoPose Version 1.0 has a single encoding, JavaScript Object Notation (JSON). Each Standardization Target has a JSON-Schema:2019-9 specification. Most of the standardization requirements are that concrete JSON GeoPose data objects must conform to the corresponding JSON-Schema definition. The individual elements identified in the encoding specification are SDUs, tying the specifications back to the Logical Model.
+
+The GeoPose 1.0 standard excludes assumptions about the interpretation of external specifications for example, of reference frames. Nor does it assume or constrain services or interfaces providing conversion between GeoPoses of difference types or relying on different external reference frame definitions.

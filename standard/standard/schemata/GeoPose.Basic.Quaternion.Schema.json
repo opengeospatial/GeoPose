@@ -1,0 +1,29 @@
+{
+  "description": "Basic-Quaternion: Basic GeoPose using quaternion to specify orientation",
+  "type": "object",
+  "properties": {
+    "longitude": {
+      "type": "number"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "quaternion": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 4,
+      "maxItems": 4
+    }
+  },
+  "required": [
+    "longitude",
+    "latitude",
+    "height",
+    "quaternion"
+  ]
+}

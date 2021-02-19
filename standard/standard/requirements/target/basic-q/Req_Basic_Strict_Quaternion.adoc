@@ -1,0 +1,7 @@
+[[req_basic_quaternion]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement BQ-S-{counter:req-bq-id}* |*/req/basic/quaternion-strict/JSON_Encoding* 
+^|Requirement |JSON encoded Basic-quaternion-strict GeoPose data elements as a whole shall conform to the GeoPose Basic-Quaternion-Strict JSON-Schema 2019-9 definition. There shall be no encoded properties not explicitly defined in the JSON-Schema definition.
+^|ID |<<req_basic_quaternion,/req/basic/quaternion-strict/JSON_Encoding>>
+|===

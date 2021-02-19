@@ -1,0 +1,15 @@
+[appendix]
+:appendix-caption: Annex
+[[abstract-test-suite]]
+== Abstract Test Suite (Normative)
+
+=== Introduction
+
+GeoPose 1.0 specifies a eight Standardization Targets using elements of the Logical Model. These elements are Structural Data Units (SDUs). Each SDU is an alias for an element of the Logical Model that will be expressed in concrete data objects encoded using specific serialization technologies. GeoPose 1.0 has a single encoding technology: JavaScript Object Notation (JSON) and the encodings are specified using JSON-Schema. To keep the individual Standardization targets independent, there are some SDU requirements and corresponding conformance tests that appear in more than one conformance class. This structure is based on the judgement that it is easier to understand the independence of the Targets than would be the case if the definitional requirements of the SDUs were factored out and referenced indirectly by individual encodings.
+
+include::abstract_tests/ATS_Basic.adoc[]
+
+include::abstract_tests/ATS_Advanced.adoc[]
+
+include::abstract_tests/ATS_Composite.adoc[]
+

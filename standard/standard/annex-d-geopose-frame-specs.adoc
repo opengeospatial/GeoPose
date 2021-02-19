@@ -1,0 +1,111 @@
+[appendix]
+:appendix-caption: Annex
+[[defined-reference-frame-specification]]
+
+
+== GeoPose Local Frame of Reference Specifications (Normative)
+
+XXX Frame Specification types are defined by the built in to GeoPose v1. The authority string for these is "geopose://v1/<frame specification name>".
+
+=== Local Tangent Plane - East North Up (LTP-ENU)
+
+LTP-ENU ISO 19162 WKT
+---- 
+
+BASEGEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4979]],
+CONVERSION["To LTP-ENU",
+    METHOD["Geographic/topocentric conversions",
+        ID["EPSG",9837]],
+    PARAMETER["Latitude of topocentric origin",<latitude>,
+        ANGLEUNIT["degree",0.0174532925199433],
+        ID["EPSG",8834]],
+    PARAMETER["Longitude of topocentric origin",<longitude>,
+        ANGLEUNIT["degree",0.0174532925199433],
+        ID["EPSG",8835]],
+    PARAMETER["Ellipsoidal height of topocentric origin",<height>,
+        LENGTHUNIT["metre",1],
+        ID["EPSG",8836]]],
+CS[Cartesian,3],
+    AXIS["topocentric East (U)",east,
+        ORDER[1],
+        LENGTHUNIT["metre",1]],
+    AXIS["topocentric North (V)",north,
+        ORDER[2],
+        LENGTHUNIT["metre",1]],
+    AXIS["topocentric height (W)",up,
+        ORDER[3],
+        LENGTHUNIT["metre",1]],
+USAGE[
+    SCOPE["unknown"],
+    AREA["To be specified"],
+    BBOX[-90,-180,90,180]],
+]
+
+----
+
+==== Requirement 2
+[cols=">20h,<80d",width="100%"]
+|===
+
+|Requirement: |/req/framespec/LTP-ENU
+|Test purpose: | Verify that...
+|Test method: | Inspect...
+|===
+
+
+=== Local Tangent Plane - North East Down (LTP-NED)
+
+LTP-NED ISO 19162 WKT
+---- 
+
+BASEGEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4979]],
+CONVERSION["To LTP-NED",
+    METHOD["Geographic/topocentric conversions",
+        ID["EPSG",9837]],
+    PARAMETER["Latitude of topocentric origin",<latitude>,
+        ANGLEUNIT["degree",0.0174532925199433],
+        ID["EPSG",8834]],
+    PARAMETER["Longitude of topocentric origin",<longitude>,
+        ANGLEUNIT["degree",0.0174532925199433],
+        ID["EPSG",8835]],
+    PARAMETER["Ellipsoidal height of topocentric origin",<height>,
+        LENGTHUNIT["metre",1],
+        ID["EPSG",8836]]],
+CS[Cartesian,3],
+    AXIS["topocentric North (U)",north,
+        ORDER[1],
+        LENGTHUNIT["metre",1]],
+    AXIS["topocentric East (V)",east,
+        ORDER[2],
+        LENGTHUNIT["metre",1]],
+    AXIS["topocentric depth (W)",down,
+        ORDER[3],
+        LENGTHUNIT["metre",1]],
+USAGE[
+    SCOPE["unknown"],
+    AREA["To be specified"],
+    BBOX[-90,-180,90,180]],
+]
+
+----
+
+==== Requirement 1
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/conf-class-a/req-name-1
+|Requirement: |/req/req-class-a/req-name-1
+|Test purpose: | Verify that...
+|Test method: | Inspect...
+|===
+
+
