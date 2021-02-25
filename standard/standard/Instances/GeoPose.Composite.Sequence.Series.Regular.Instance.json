@@ -16,17 +16,17 @@
     {
       "authority": "/geopose/1.0",
       "id": "RotateTranslate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
     },
     {
       "authority": "/geopose/1.0",
       "id": "RotateTranslate",
-      "parameters": "translation=[0.5, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+      "parameters": "translation=[0.5, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
     },
     {
       "authority": "/geopose/1.0",
       "id": "RotateTranslate",
-      "parameters": "translation=[1.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+      "parameters": "translation=[1.0, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
     }
   ],
   "trailer": {
