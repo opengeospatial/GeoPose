@@ -3,7 +3,7 @@
     "frame": {
       "authority": "/geopose/1.0",
       "id": "RotateTranslate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.58793, 0.07988, -0.10838, 0.79763]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[-0.58793, 0.07988, -0.10838, 0.79763]"
     },
     "validTime": 1609466694321
   }

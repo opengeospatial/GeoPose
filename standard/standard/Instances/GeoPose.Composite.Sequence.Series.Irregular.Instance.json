@@ -16,7 +16,7 @@
       "frame": {
         "authority": "/geopose/1.0",
         "id": "RotateTranslate",
-        "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+        "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
       },
       "validTime": 1605237062006
     },
@@ -24,7 +24,7 @@
       "frame": {
         "authority": "/geopose/1.0",
         "id": "RotateTranslate",
-        "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+        "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
       },
       "validTime": 1605237062006
     },
@@ -32,7 +32,7 @@
       "frame": {
         "authority": "/geopose/1.0",
         "id": "RotateTranslate",
-        "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
+        "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
       },
       "validTime": 1605237062006
     }
