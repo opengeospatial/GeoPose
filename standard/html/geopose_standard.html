@@ -2320,12 +2320,12 @@ Two JSON encodings are defined for the Basic-Quaternion Target:
   "longitude": -122.3,
   "latitude": 47.7,
   "height": 11.5,
-  "quaternion": [
-    0.17714751898022013,
-    0.027333861767123824,
-    0.15002562109509499,
-    0.9722982718976102
-  ]
+  "quaternion": {
+    "x": 0.24935508863486583,
+    "y": -0.13561967913187356,
+    "z": 0.4581349646468323,
+    "w": -0.8423429803661402
+  }
 }</pre>
 </div>
 </div>
@@ -2406,12 +2406,12 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
   "longitude": -122.3,
   "latitude": 47.7,
   "height": 11.5,
-  "quaternion": [
-    -0.70175970846900892,
-    0.1603347407305844,
-    -0.15460908584542163,
-    0.67669942593325083
-  ]
+  "quaternion": {
+    "x": 0.24935508863486583,
+    "y": -0.13561967913187356,
+    "z": 0.4581349646468323,
+    "w": -0.8423429803661402
+  }
 }</pre>
 </div>
 </div>
@@ -2499,11 +2499,11 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
   "longitude": -122.3,
   "latitude": 47.7,
   "height": 11.5,
-  "rotations": [
-    -0.44923956963306039,
-    0.0,
-    4.7487448237599832
-  ]
+  "eulerAngles": {
+    "rotX": -0.5756131639306046,
+    "rotY": 0.0,
+    "rotZ": 5.2869177931177145
+  }
 }</pre>
 </div>
 </div>
@@ -2589,13 +2589,13 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
     "id": "LTP-ENU",
     "parameters": "longitude=-122.3000000&amp;latitude=47.7000000&amp;height=11.000"
   },
-  "quaternion": [
-    -0.70177968287969039,
-    0.16036411620279825,
-    -0.15462581332019135,
-    0.676667928002241
-  ],
-  "validTime": 1605237061231
+  "quaternion": {
+    "x": 0.24936888089896878,
+    "y": -0.13562001157583606,
+    "z": 0.4581145403168927,
+    "w": -0.842349952009026
+  },
+  "validTime": 1614921636567
 }</pre>
 </div>
 </div>
@@ -2876,7 +2876,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <div class="listingblock">
 <div class="content">
 <pre>{
-  "validTime": 1605237061481,
+  "validTime": 1614921636596,
   "outerFrame": {
     "authority": "/geopose/1.0",
     "id": "/Extrinsic/LTP-ENU",
@@ -3057,9 +3057,13 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
   "header": {
     "poseCount": 2,
     "integrityCheck": "{\"SHA256\": \"5556fb65f8bf9eddb3ace1329c9a6aeedd4833409965aeee3e6b61ed21f47858\"}",
-    "startInstant": 1605237061821,
-    "stopInstant": 1605237106821,
-    "transitionModel": "None"
+    "startInstant": 1614921636680,
+    "stopInstant": 1614921681680,
+    "transitionModel": {
+      "authority": "/geopose/1.0",
+      "id": "none",
+      "parameters": ""
+    }
   },
   "interPoseDuration": 1000,
   "outerFrame": {
@@ -3238,9 +3242,13 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
   "header": {
     "poseCount": 2,
     "integrityCheck": "{\"SHA256\": \"5556fb65f8bf9eddb3ace1329c9a6aeedd4833409965aeee3e6b61ed21f47858\"}",
-    "startInstant": 1605237062006,
-    "stopInstant": 1605237107006,
-    "transitionModel": "None"
+    "startInstant": 1614921636723,
+    "stopInstant": 1614921681723,
+    "transitionModel": {
+      "authority": "/geopose/1.0",
+      "id": "none",
+      "parameters": ""
+    }
   },
   "outerFrame": {
     "authority": "/geopose/1.0",
@@ -3254,7 +3262,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "id": "RotateTranslate",
         "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1605237062006
+      "validTime": 1614921636724
     },
     {
       "frame": {
@@ -3262,7 +3270,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "id": "RotateTranslate",
         "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1605237062006
+      "validTime": 1614921636724
     },
     {
       "frame": {
@@ -3270,7 +3278,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "id": "RotateTranslate",
         "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1605237062006
+      "validTime": 1614921636724
     }
   ],
   "trailer": {
@@ -3503,7 +3511,11 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <div class="listingblock">
 <div class="content">
 <pre>{
-  "transitionModel": "Interpolate",
+  "transitionModel": {
+    "authority": "/geopose/1.0",
+    "id": "interpolate",
+    "parameters": ""
+  },
   "outerFrame": {
     "authority": "/geopose/1.0",
     "id": "LTP-ENU",
@@ -3522,9 +3534,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
     "frame": {
       "authority": "/geopose/1.0",
       "id": "RotateTranslate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.58793, 0.07988, -0.10838, 0.79763]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.84235, 0.24937, -0.13562, 0.45811]"
     },
-    "validTime": 1609466694321
+    "validTime": 1614921636772
   }
 }</pre>
 </div>
@@ -3536,7 +3548,11 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <div class="content">
 <pre>{
   "header": {
-    "transitionModel": "Interpolate",
+    "transitionModel": {
+      "authority": "/geopose/1.0",
+      "id": "interpolate",
+      "parameters": ""
+    },
     "outerFrame": {
       "authority": "/geopose/1.0",
       "id": "LTP-ENU",
@@ -3549,9 +3565,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.58793, 0.07988, -0.10838, 0.79763]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.84235, 0.24937, -0.13562, 0.45811]"
         },
-        "validTime": 1609466694321
+        "validTime": 1614921636772
       }
     },
     {
@@ -3559,9 +3575,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.58901, 0.08087, -0.10937, 0.79660]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.84302, 0.25070, -0.13565, 0.45614]"
         },
-        "validTime": 1609466706667
+        "validTime": 1614921649117
       }
     },
     {
@@ -3569,9 +3585,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.59008, 0.08186, -0.11037, 0.79556]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.84369, 0.25202, -0.13567, 0.45417]"
         },
-        "validTime": 1609466719012
+        "validTime": 1614921661462
       }
     }
   ]

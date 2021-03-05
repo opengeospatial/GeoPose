@@ -2,9 +2,13 @@
   "header": {
     "poseCount": 2,
     "integrityCheck": "{\"SHA256\": \"5556fb65f8bf9eddb3ace1329c9a6aeedd4833409965aeee3e6b61ed21f47858\"}",
-    "startInstant": 1605237062006,
-    "stopInstant": 1605237107006,
-    "transitionModel": "None"
+    "startInstant": 1614921636723,
+    "stopInstant": 1614921681723,
+    "transitionModel": {
+      "authority": "/geopose/1.0",
+      "id": "none",
+      "parameters": ""
+    }
   },
   "outerFrame": {
     "authority": "/geopose/1.0",
@@ -16,25 +20,25 @@
       "frame": {
         "authority": "/geopose/1.0",
         "id": "RotateTranslate",
-        "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
+        "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1605237062006
+      "validTime": 1614921636724
     },
     {
       "frame": {
         "authority": "/geopose/1.0",
         "id": "RotateTranslate",
-        "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
+        "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1605237062006
+      "validTime": 1614921636724
     },
     {
       "frame": {
         "authority": "/geopose/1.0",
         "id": "RotateTranslate",
-        "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[1.0, 0.0, 0.0, 0.5]"
+        "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1605237062006
+      "validTime": 1614921636724
     }
   ],
   "trailer": {
