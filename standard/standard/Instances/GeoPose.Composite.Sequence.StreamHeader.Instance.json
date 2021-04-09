@@ -1,5 +1,9 @@
 {
-  "transitionModel": "Interpolate",
+  "transitionModel": {
+    "authority": "/geopose/1.0",
+    "id": "interpolate",
+    "parameters": ""
+  },
   "outerFrame": {
     "authority": "/geopose/1.0",
     "id": "LTP-ENU",

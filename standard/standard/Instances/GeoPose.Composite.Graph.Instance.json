@@ -8,32 +8,32 @@
     {
       "authority": "/geopose/1.0",
       "id": "/Intrinsic/Translate-Rotate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[0.69291, 0.69291, 0.14097, 0.14097]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
     },
     {
       "authority": "/geopose/1.0",
       "id": "/Intrinsic/Translate-Rotate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[0.69291, 0.69291, 0.14097, 0.14097]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
     },
     {
       "authority": "/geopose/1.0",
       "id": "/Intrinsic/Translate-Rotate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[0.69291, 0.69291, 0.14097, 0.14097]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
     },
     {
       "authority": "/geopose/1.0",
       "id": "/Intrinsic/Translate-Rotate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[0.69291, 0.69291, 0.14097, 0.14097]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
     },
     {
       "authority": "/geopose/1.0",
       "id": "/Intrinsic/Translate-Rotate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[0.69291, 0.69291, 0.14097, 0.14097]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
     },
     {
       "authority": "/geopose/1.0",
       "id": "/Intrinsic/Translate-Rotate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[0.69291, 0.69291, 0.14097, 0.14097]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
     }
   ],
   "transformList": [

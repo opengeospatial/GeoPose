@@ -1,6 +1,10 @@
 {
   "header": {
-    "transitionModel": "Interpolate",
+    "transitionModel": {
+      "authority": "/geopose/1.0",
+      "id": "interpolate",
+      "parameters": ""
+    },
     "outerFrame": {
       "authority": "/geopose/1.0",
       "id": "LTP-ENU",
@@ -13,9 +17,9 @@
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[-0.58793, 0.07988, -0.10838, 0.79763]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.84235, 0.24937, -0.13562, 0.45811]"
         },
-        "validTime": 1609466694321
+        "validTime": 1614921636772
       }
     },
     {
@@ -23,9 +27,9 @@
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[-0.58901, 0.08087, -0.10937, 0.79660]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.84302, 0.25070, -0.13565, 0.45614]"
         },
-        "validTime": 1609466706667
+        "validTime": 1614921649117
       }
     },
     {
@@ -33,9 +37,9 @@
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&quaternion=[-0.59008, 0.08186, -0.11037, 0.79556]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.84369, 0.25202, -0.13567, 0.45417]"
         },
-        "validTime": 1609466719012
+        "validTime": 1614921661462
       }
     }
   ]
