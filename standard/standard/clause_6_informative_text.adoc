@@ -2,13 +2,13 @@
 
 === Document Structure
 
-The structure of this document flows from the GeoPose use cases to the JSON-Schema specification of eight GeoPose data object types. A conceptual domain of discourse based on section XX, comprehensive enough to support those use cases, a realization of a portion of that conceptual domain with an implementation-neutral but specific and normative logical data model expressed in UML, and the normative derivation of specific structural data units that represent abstract implementation and standardization targets. These structural data units are independent of serialization or encoding format. Version 1.0 of this standard specifies one realization of the SDUs as JavaScript Object Notation (JSON), using the JSON-Schema 2019-9 specification.
+The structure of the GeoPose  specification flows from use cases to the JSON-Schema specification of the eight GeoPose data object types. A conceptual domain of discourse comprehensive enough to support those use cases, a realization of a portion of that conceptual domain with an implementation-neutral but specific and normative logical data model expressed in UML, and the normative derivation of specific structural data units that represent abstract implementation and standardization targets. These structural data units are independent of serialization or encoding format. GeoPose Version 1.0 specifies one realization of the SDUs as JavaScript Object Notation (JSON).
 
-A key idea is that specific use cases are tied to the standardization targets, i.e. the part of the document that prescribes the structure and content of GeoPose data objects. These use cases are linked to these data objects as well as implementation examples that appear in other documents.
+A key idea is that specific use cases are tied to the standardization targets. The part of the Standard that prescribes the structure and content of GeoPose data objects. These use cases are linked to these data objects as well as implementation examples that appear in other documents.
 
-Of course, GeoPose must incorporate or align with other relevant existing standards and common practices. The goal is to fill a gap in existing standards without reinventing technology and in a way that encourages interoperability. 
+Of course, GeoPose must incorporate or align with other relevant existing standards and common practices. The goal is to fill an interoperability gap in existing standards without reinventing technology in a way that encourages interoperability. 
 
-image::diagram/ogc_process_Detail.png[caption="Figure 6.1: ",title=     "Document Structure Overview",  align="center"]
+image::diagram/OGC_Process_Detail.png[caption="Figure 6.1: ",title=     "Document Structure Overview",  align="center"]
 
 === Use Case Summary
 

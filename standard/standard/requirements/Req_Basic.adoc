@@ -1,6 +1,6 @@
 === Conformance Class Basic
 
-include::Basic/req_Basic_Euler.adoc[]
+include::Basic/req_Basic_YPR.adoc[]
 
 include::Basic/req_Basic_Quaternion.adoc[]
 

@@ -1,4 +1,4 @@
-The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of GeoPoses is to convey location and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring all together in a geographic reference frame.
+The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPoses is to convey the location and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of GeoPoses in a common geographic reference frame.
 
 ==== Augmented and Mixed Reality [AR]
 
@@ -14,11 +14,11 @@ The GeoPose use cases involve interactions between information systems or betwee
 
 |/geopose/1.0/use_case/ar/01
 |Stored representation of synthetic objects
-|Basic-E, Basic-Q, Advanced
+|Basic-YPR, Basic-Quaternion, Advanced
 
 |/geopose/1.0/use_case/ar/02
 |Positioning information to support integration of synthetic object data in a representation or visualization of the physical environment
-|Basic-E, Basic-Q, Advanced
+|Basic-YPR, Basic-Quaternion, Advanced
 
 |/geopose/1.0/use_case/ar/03
 |Report of position and orientation from a mobile device to an AR network service
@@ -26,15 +26,15 @@ The GeoPose use cases involve interactions between information systems or betwee
 
 |/geopose/1.0/use_case/ar/04
 |Input to visual occlusion calculations
-|Basic-E, Basic-Q
+|Basic-YPR, Basic-Quaternion
 
 |/geopose/1.0/use_case/ar/05
 |Input to ray-casting and line-of-sight calculations
-|Basic-E, Basic-Q, Chain
+|Basic-YPR, Basic-Quaternion, Chain
 
 |/geopose/1.0/use_case/ar/06
 |Input to proximity calculations
-|Basic-E, Basic-Q, 
+Basic-YPR, Basic-Quaternion, 
 
 |/geopose/1.0/use_case/ar/07
 |In time series, input and output to and from trajectory projection calculations
@@ -44,7 +44,7 @@ The GeoPose use cases involve interactions between information systems or betwee
 
 ==== Autonomous Vehicles [AV]
 
-**Description**: Autonomous vehicles are mobile objects that move through water, across a water surface, in the air, through the solid earth (tunnel boring machine), on the land surface, or in outer space without real-time control by an independent onboard operator. A pose captures the essential information in locating and orienting a moving object. Sensors attached to mobile elements have their own poses and a chain of reference frame transformtions enables common reference frames to be used for data fusion. The possibility of relating the vehicle to other elements of the environment via a common reference frame is essential.
+**Description**: Autonomous vehicles are mobile objects that move through water, across a water surface, in the air, through the solid earth (tunnel boring machine), on the land surface, or in outer space without real-time control by an independent onboard operator. A pose captures the essential information in locating and orienting a moving object. Sensors attached to mobile elements have their own poses and a chain of reference frame transformations enables common reference frames to be used for data fusion. The possibility of relating the vehicle to other elements of the environment via a common reference frame is essential.
 
 [%header,cols="2,5,2"] 
 |===
@@ -53,12 +53,12 @@ The GeoPose use cases involve interactions between information systems or betwee
 |Standardization Target
 
 |/geopose/1.0/use_case/av/01
-|Provide accurate visual positioning and guidance based one or more services based on a  3D representation of the real world combined with real time detection and location of real world objects
-|Basic-E, Basic-Q
+|Provide accurate visual positioning and guidance based on one or more services based on a 3D representation of the real world combined with real time detection and location of real world objects
+|Basic-YPR, Basic-Quaternion
 
 |/geopose/1.0/use_case/av/02
 |Calculate parameters such as distances and routes  (reference to OGC Moving Features?)
-|Basic-E, Basic-Q, Regular Timeseries, Irregular Timeseries, Stream
+|Basic-YPR, Basic-Quaternion, Regular Timeseries, Irregular Timeseries, Stream
 
 |/geopose/1.0/use_case/av/03
 |Record the trajectory of a moving vehicle.
@@ -76,17 +76,17 @@ The GeoPose use cases involve interactions between information systems or betwee
 |Standardization Target
 
 |/geopose/1.0/use_case/be/01
-|Specify the precise position and orientation of objects both those visible to  and hidden from the user’s view (e.g. underground, embedded in walls or ceilings)
-|Basic-E, Basic-Q
+|Specify the precise position and orientation of objects including both those visible to  and those hidden from the user’s view (e.g. underground, embedded in walls or ceilings)
+|Basic-YPR, Basic-Quaternion
 
 |/geopose/1.0/use_case/be/02
 |Compactly and consistently specify or share the location and pose of objects in architecture, design and construction.
-|Basic-E, Basic-Q
+|Basic-YPR, Basic-Quaternion
 
 |===
  
 ==== Synthetic Environments [SE]
-**Description**: Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environement that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated in time to display a visualization or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archive of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there are may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and implements is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations make a coherent assembly possible
+**Description**: Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environement that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated in time to provide a visualization or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archive of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there are may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and implements is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations make a coherent assembly possible
 
 [%header,cols="2,5,2"] 
 |===
@@ -115,16 +115,16 @@ The GeoPose use cases involve interactions between information systems or betwee
 |Implementation Target
 
 |/geopose/1.0/use_case/im/01
-|Instantaeous and time series locations and orientations of mobile objects
-|Basic-E, Basic-Q, Advanced, Regular Timeseries, Irregular Timeseries, Stream
+|Instantaneous and time series locations and orientations of mobile objects
+|Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream
 
 |/geopose/1.0/use_case/im/02
-|Instantaeous and time series location and orientation of an optical imaging device simultaneous location and mapping (SLAM)
-|Basic-E, Basic-Q, Advanced, Regular Timeseries, Irregular Timeseries, Stream
+|Instantaneous and time series location and orientation of an optical imaging device using Simultaneous Location And Mapping (SLAM)
+|Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream
 
 |/geopose/1.0/use_case/im/03
-|Instantaeous and time series location and orientation of an optical imaging device (Visual Odometry)
-|Basic-E, Basic-Q, Advanced, Regular Timeseries, Irregular Timeseries, Stream
+|Instantaeous and time series estimation of the changes in location and orientation of an object using an optical imaging device (Visual Odometry)
+|Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream
 
 |/geopose/1.0/use_case/im/04
 |Instantaeous and time series location and orientation of an optical imaging device used for photogrammetry
