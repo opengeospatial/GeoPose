@@ -1,0 +1,25 @@
+{
+  "validTime": 1619592970083,
+  "outerFrame": {
+    "authority": "/geopose/1.0",
+    "id": "/Extrinsic/LTP-ENU",
+    "parameters": "longitude=-122.3000000&latitude=47.7000000&height=11.000"
+  },
+  "frameChain": [
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    },
+    {
+      "authority": "/geopose/1.0",
+      "id": "/Intrinsic/Translate-Rotate",
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[0.69291, 0.69291, 0.14097, 0.14097]"
+    }
+  ]
+}

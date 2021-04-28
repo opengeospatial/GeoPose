@@ -1,0 +1,46 @@
+{
+  "header": {
+    "transitionModel": {
+      "authority": "/geopose/1.0",
+      "id": "interpolate",
+      "parameters": ""
+    },
+    "outerFrame": {
+      "authority": "/geopose/1.0",
+      "id": "LTP-ENU",
+      "parameters": "longitude=-122.3000000&latitude=47.7000000&height=11.000"
+    }
+  },
+  "streamElements": [
+    {
+      "streamElement": {
+        "frame": {
+          "authority": "/geopose/1.0",
+          "id": "RotateTranslate",
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.95897, 0.22877, -0.03886, 0.16289]"
+        },
+        "validTime": 1619592970283
+      }
+    },
+    {
+      "streamElement": {
+        "frame": {
+          "authority": "/geopose/1.0",
+          "id": "RotateTranslate",
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.95923, 0.22932, -0.03841, 0.16065]"
+        },
+        "validTime": 1619592982628
+      }
+    },
+    {
+      "streamElement": {
+        "frame": {
+          "authority": "/geopose/1.0",
+          "id": "RotateTranslate",
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.95949, 0.22987, -0.03795, 0.15841]"
+        },
+        "validTime": 1619592994973
+      }
+    }
+  ]
+}

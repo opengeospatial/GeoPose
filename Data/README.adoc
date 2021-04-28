@@ -1,0 +1,3 @@
+# GeoPose Sample Data
+
+This folder contains datasets conforming to the current state of the GeoPose 1.0 standard. It is not very organized yet, but will be soon.
