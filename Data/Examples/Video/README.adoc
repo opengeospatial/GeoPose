@@ -1,0 +1,3 @@
+# GeoPose  Real World Video
+
+This folder will have (ETA 5 May 2021) an mp4 video and corresponding frame-synchronised  GeoPoses as defined in the GeoPose 1.0 draft standard. The video covers the same area as the image samples.
