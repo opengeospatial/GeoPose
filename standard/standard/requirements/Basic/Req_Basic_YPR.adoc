@@ -1,4 +1,4 @@
-[[req_basic_eulerangle]]
+[[req_basic_YPR]]
 [width="90%",cols="2,6"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/basic/YawPitchRoll/JSON_Encoding* 
