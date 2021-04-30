@@ -1,6 +1,6 @@
 # GeoPose  Real World Video
 
-On or about 1 May 2021, this folder contains a sample .mp4 video and corresponding frame-synchronised  GeoPoses as defined in the GeoPose 1.0 draft standard. The video covers approximately the same area as the image samples. It consists of 8,850 frames with 295 key frames with associated GeoPoses.
+On or about 6 May 2021, this folder contains a sample .mp4 video and corresponding frame-synchronised  GeoPoses as defined in the GeoPose 1.0 draft standard. The video covers approximately the same area as the image samples. It consists of 8,850 frames with 295 key frames with associated GeoPoses.
 
 
 ++++
