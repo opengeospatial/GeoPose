@@ -4,7 +4,7 @@ This folder contains a sample set of 172 images and corresponding Basic-Quaterni
 
 ++++
 <p align="center">
-  <img width="1000" height="800" src="GeoPose_BH_Images_Overview.jpg">
+  <img width="1000" height="600" src="GeoPose_BH_Images_Overview.jpg">
  </br>
   House Moving onto Barge: Cameras (blue squares) and GeoPose Overview with Point Cloud
   </p>
