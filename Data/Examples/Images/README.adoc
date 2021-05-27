@@ -6,6 +6,8 @@ This folder contains a sample set of 172 images and corresponding Basic-Quaterni
 <p align="center">
   <img width="1000" height="600" src="GeoPose_BH_Images_Overview.jpg">
  </br>
-  House Moving onto Barge: Cameras (blue squares) and GeoPose Overview with Point Cloud
+  House Moving onto Barge: Camera poses (blue squares) and GeoPose Overview with Point Cloud
   </p>
 ++++
+
+link:https://geopose.io/ogc_geopose/examples/ImagesBH/GeoPose.BH489.jpg[Example Image BH489]
