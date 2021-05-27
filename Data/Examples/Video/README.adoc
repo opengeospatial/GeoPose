@@ -10,3 +10,7 @@ This folder contains a sample .mp4 video and corresponding frame-synchronised  G
   House Moving onto Barge: Video Key-Frame GeoPose Overview with Point Cloud
 </p>
 ++++
+
+link:https://geopose.io/ogc_geopose/examples/Video/GeoPose.BH319.mp4[Example Video BH489]
+
+link:https://youtu.be/gbBdw-DQHYY[YouTube Downsample]
