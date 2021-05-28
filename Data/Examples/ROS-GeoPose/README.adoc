@@ -8,7 +8,7 @@ Included are two sets of data:
 
 ## GeoPose data
 
-In the link:ROS-msgs/sample_data[sample_data] folder there are files that contain example data from an example data collection run on 16th July 2019.  A dump of 3 different message types has been created:
+In the link:sample_data[sample_data] folder there are files that contain example data from an example data collection run on 16th July 2019.  A dump of 3 different message types has been created:
 
 * fix
 * ndt_pose
