@@ -1,0 +1,22 @@
+# ROS GeoPose 
+
+This folder contains sample data and message definitions for the ROS link:http://docs.ros.org/en/jade/api/geographic_msgs/html/msg/GeoPose.html[GeoPose] type.
+
+link:https://www.ros.org/[ROS] - Robot Operating System, is a pseudo-framework of tools and libraries to help create robot applications.  It is used extensively in the Connected Autonomous Vehicle industry (CAVs).  As CAVs require 6 degree position/location information, the GeoPose type describes this. 
+
+Included are two sets of data:
+
+## GeoPose data
+
+In the geopose folder there are files that contain example data from an example data collection run on 16th July 2019.  A dump of 3 different message types has been created:
+
+* fix
+* ndt_pose
+* nmea_sentence
+
+## Message definitions
+
+In the ROS-msgs directory you can find the hierarchical definitions of each of the message types included as part of this example:
+
+* For fix and nmea_sentence messages see the link:https://github.com/jraclarke/GeoPose/tree/data/GeoPose/Data/Examples/ROS-GeoPose/ROS-msgs/nmea_msgs[nmea_msgs] and link:https://github.com/jraclarke/GeoPose/tree/data/GeoPose/Data/Examples/ROS-GeoPose/ROS-msgs/sensor_msgs[sensor_msgs] folders.
+* For the ndt_pose message components see link:ROS-GeoPose/ROS-msgs/geographic_msgs[geographic_msgs], link:ROS-GeoPose/ROS-msgs/geometry_msgs[geometry_msgs] and link:ROS-GeoPose/ROS-msgs/std_msgs[std_msgs] folders.
