@@ -1,0 +1,50 @@
+# ROS GeoPose 
+
+This folder contains sample data and message definitions for the ROS link:http://docs.ros.org/en/jade/api/geographic_msgs/html/msg/GeoPose.html[GeoPose] type.
+
+link:https://www.ros.org/[ROS] - Robot Operating System, is a pseudo-framework of tools and libraries to help create robot applications.  It is used extensively in the Connected Autonomous Vehicle industry (CAVs).  As CAVs require 6 degree position/location information, the GeoPose type describes this. 
+
+Included are two sets of data:
+
+## GeoPose data
+
+In the link:sample_data[sample_data] folder there are files that contain example data from an example data collection run on 16th July 2019.  A dump of 3 different message types has been created:
+
+* fix
+* ndt_pose
+* nmea_sentence
+
+You can find the column names in each file.  For example, in the ndt_pose text file the headings have the following meanings:
+
+time - The ROS time (epoch time, i.e. seconds since 01/01/1970) - this is the time of playback +
+header.seq - each msg increments the sequence by 1 +
+header.stamp - the message timestamp, this is the time that the message was originally created. +
+header.frame_id - reference frame in ROS +
+pose.position.x - x position +
+pose.position.y - y position +
+pose.position.z - z position +
+pose.orientation.x - x quaternion component +
+pose.orientation.y - y quaternion component +
+pose.orientation.z - z quaternion component +
+pose.orientation.w - w quaternion component +
+
+Note that the nmea_msgs/Sentence gives the gps metadata - the most important component is link:http://lefebure.com/articles/nmea-gga/#:~:text=Introduction%3A%20The%20NMEA%20GGA%20sentence,fix%20type%2C%20and%20correction%20age.&text=The%20time%20is%20always%20in,time%20zone%20you're%20in.[GGA]
+
+### Context Video
+
+The video alongside the sample data shows a replay of the real-world drive in a simulation environment known as RViz.  This was a drive around Adanac Park (OS HQ), Southampton, SO16 0YF. It shows the following data:
+
+White points - base point cloud map, generated from previous drives around the area. + 
+Red points - real-time scan from the LiDAR scanner +
+Three axes symbols - the pose location, for example, the pose labelled "base_link" is showing the location of the ndt_pose text file.  It represents the location of the mid-point of the vehicle's rear axel. The Velodyne pose is offset to this and is the location of the LiDAR on the vehicle. +
+Video - Slightly jumpy 12 fps forward facing 100 degree 2MP imagery.
+
+
+## Message definitions
+
+In the ROS-msgs directory you can find the hierarchical definitions of each of the message types included as part of this example:
+
+* For fix and nmea_sentence messages see the link:ROS-msgs/nmea_msgs[nmea_msgs] and link:ROS-msgs/sensor_msgs[sensor_msgs] folders.
+* For the ndt_pose message components see link:ROS-msgs/geographic_msgs[geographic_msgs], link:ROS-msgs/geometry_msgs[geometry_msgs] and link:ROS-msgs/std_msgs[std_msgs] folders.
+
+
