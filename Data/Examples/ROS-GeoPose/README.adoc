@@ -30,7 +30,7 @@ pose.orientation.w - w quaternion component +
 
 Note that the nmea_msgs/Sentence gives the gps metadata - the most important component is link:http://lefebure.com/articles/nmea-gga/#:~:text=Introduction%3A%20The%20NMEA%20GGA%20sentence,fix%20type%2C%20and%20correction%20age.&text=The%20time%20is%20always%20in,time%20zone%20you're%20in.[GGA]
 
-### Context Video
+### Context Videos
 
 The video alongside the sample data shows a replay of the real-world drive in a simulation environment known as RViz.  This was a drive around Adanac Park (OS HQ), Southampton, SO16 0YF. It shows the following data:
 
@@ -39,6 +39,7 @@ Red points - real-time scan from the LiDAR scanner +
 Three axes symbols - the pose location, for example, the pose labelled "base_link" is showing the location of the ndt_pose text file.  It represents the location of the mid-point of the vehicle's rear axel. The Velodyne pose is offset to this and is the location of the LiDAR on the vehicle. +
 Video - Slightly jumpy 12 fps forward facing 100 degree 2MP imagery.
 
+There is also a video with the isolated forward facing camera feed.
 
 ## Message definitions
 
@@ -46,5 +47,9 @@ In the ROS-msgs directory you can find the hierarchical definitions of each of t
 
 * For fix and nmea_sentence messages see the link:ROS-msgs/nmea_msgs[nmea_msgs] and link:ROS-msgs/sensor_msgs[sensor_msgs] folders.
 * For the ndt_pose message components see link:ROS-msgs/geographic_msgs[geographic_msgs], link:ROS-msgs/geometry_msgs[geometry_msgs] and link:ROS-msgs/std_msgs[std_msgs] folders.
+
+## Licence
+
+The terms and conditions of use (for the sample_data contents) are covered by the link:http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/[Open Government Licence (OGL)].  If you use these data, please acknowledge as per the guidelines for link:https://www.ordnancesurvey.co.uk/business-government/licensing-agreements/copyright-acknowledgements#:~:text=PDFs-,The%20standard%20acknowledgement%20is%3A,of%20Licensee%5D%20makes%20it%20available.[OS OpenData].
 
 
