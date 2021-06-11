@@ -1,20 +1,25 @@
 ## Using 16th July 2019 OS ROS Data 
 
-This folder is the root for GeoPose experiments on the Ordnance Survey ROS data for the autonomous vehicle run on 16th July 2019.
+This folder is the root for GeoPose experiments on the Ordnance Survey ROS data for the autonomous vehicle run on 16th July 2019. The purpose of the experiments is to expose and try different approaches to solve practical issues when using GeoPose.
 
 ## Folder Layout
 
 *FFVideo*: Cropped and undistorted (well, less distorted) video derived from the isolated forward facing video.
 
-*VehiclePoseSeries*: Irregular GeoPose Series for the length of the fix and pose data provided by OS
+*AVGeoPoseSeries*: Irregular GeoPose Series for the length of the fix and pose data provided by OS
 
-*FFFramePoses*: Irregular GeoPose Series for the length of forward facing video provided by OS plus six manually derived ground control points.
+*FFFrameGeoPoses*: Regular GeoPose Series for the length of forward facing video provided by OS plus six manually derived ground control points.
 
-*FFFrames*: Timestamped frames of the FFVideo.
+*FFVideoFrames*: Timestamped frames of the FFVideo.
+
+    Keyframes
 
 *GoogleFrames*: Timestamped Google StreetView frames corresponding to each GeoPose in the *VehiclePoseSeries* data.
 
-*Animation*: HTML/JS for an animation with side-by-side view *FFFrames* and *GoogleFrames* with video-style control. Note that Google SV is not available for the entire route. Note that the FFVideo also does not cover the entire route.
+*Animation*: HTML/JS for an animation with side-by-side view *FFFrames* and *GoogleFrames* with video-style control and lighting controlled by GeoPoses from the SolarPose service. 
+
+* Note that Google SV is not available for the entire route. 
+* Note that the FFVideo covers only part of the entire route.
 
 ## Workflow
 
