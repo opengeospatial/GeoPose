@@ -16,6 +16,8 @@ This folder is the root for GeoPose experiments on the Ordnance Survey ROS data 
 
 *GoogleFrames*: Timestamped Google StreetView frames corresponding to each GeoPose in the *VehiclePoseSeries* data.
 
+*AV Model*: .obj files for model of the OS autonomous vehicle for the animation.
+
 *Animation*: HTML/JS for an animation with side-by-side view *FFFrames* and *GoogleFrames* with video-style control and lighting controlled by GeoPoses from the SolarPose service. 
 
 * Note that Google SV is not available for the entire route. 
