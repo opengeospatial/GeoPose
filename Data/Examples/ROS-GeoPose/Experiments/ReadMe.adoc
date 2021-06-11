@@ -14,7 +14,7 @@ This folder is the root for GeoPose experiments on the Ordnance Survey ROS data 
 
     Keyframes
 
-*GoogleFrames*: Timestamped Google StreetView frames corresponding to each GeoPose in the *VehiclePoseSeries* data.
+*GoogleFrames*: Timestamped Google StreetView frames corresponding to each GeoPose in the *AVGeoPoseSeries* data.
 
 *AV Model*: .obj files for model of the OS autonomous vehicle for the animation.
 
