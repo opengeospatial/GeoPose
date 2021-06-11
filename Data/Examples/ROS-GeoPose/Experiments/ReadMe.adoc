@@ -1,0 +1,54 @@
+## Using 16th July 2019 OS ROS Data 
+
+This folder is the root for GeoPose experiments on the Ordnance Survey ROS data for the autonomous vehicle run on 16th July 2019.
+
+## Folder Layout
+
+*FFVideo*: Cropped and undistorted (well, less distorted) video derived from the isolated forward facing video.
+
+*VehiclePoseSeries*: Irregular GeoPose Series for the length of the fix and pose data provided by OS
+
+*FFFramePoses*: Irregular GeoPose Series for the length of forward facing video provided by OS plus six manually derived ground control points.
+
+*FFFrames*: Timestamped frames of the FFVideo.
+
+*GoogleFrames*: Timestamped Google StreetView frames corresponding to each GeoPose in the *VehiclePoseSeries* data.
+
+*Animation*: HTML/JS for an animation with side-by-side view *FFFrames* and *GoogleFrames* with video-style control. Note that Google SV is not available for the entire route. Note that the FFVideo also does not cover the entire route.
+
+## Workflow
+
+## Data notes 
+
+These notes characterise the data and are not in a specific order. Hopefully they are internally consistent.
+
+### Notes
+
+Fix sample 26 is within 1 sample of the start of video 2 = timestamp Tue Jul 16 2019 09:35:43 GMT = 1563269743380701254
+
+Not much alternative to snapping time of first video frame to 1563269743380701254.
+
+Fix sample 40 is start of motion =  timestamp Tue Jul 16 2019 09:35:45 GMT = 1563269745990774545
+
+Fix sample 404 is easternmost point = 50.9367601667,-1.47001966667 =  78 sec in video 2 = timestamp Tue Jul 16 2019 09:37:03 GMT = 1563269823386160148
+
+Fix sample 420 is southernmost point = 50.9366058333,-1.4702375 = 83 sec in video 2 = timestamp = Tue Jul 16 2019 09:37:06 GMT = 1563269826986750652
+
+Fix sample 434 is end of video 2 =  86 sec in video 2 = 50.936703,-1.470514 =  timestamp   =  Tue Jul 16 2019 02:37:09 GMT = 1563269829976656071
+
+Video has some fixed image of interior at bottom of frame: can be removed by cropping.
+
+Video has some radial distortion: can be corrected by remapping.
+
+Video frame rate is 12 FPS and there are 1,043 frames frames = 2.53 frames per position/pose sample from 1563269743380701254 to 1563269829976656071 .
+
+There are 86.83 seconds of video with about 5 (4.7) fix samples per second of video 2.
+
+Fix samples are not equally spaced in time.
+
+Height above geoid is about 16 m at video start point and about 13 m at video end point.
+
+The WGS84 ellipsoid is about 48 m below the EGM96 geoid in Southampton so ellipsoidal height should range between 64 m and 61 m. Altitude in data ranges between 13 m and 16 m, which is consistent with orthometric (geoid/sea level) height, not ellipsoidal height.
+
+Unix timestamp convention: decimal point is located to the right of 10th digit – will work for next 8,300,000,000 seconds or about 263 years so I guess it’s OK
+
