@@ -31,6 +31,27 @@ These notes characterise the data and are not in a specific order. Hopefully the
 
 ### Notes
 
+First pose        =  Tue Jul 16 2019 09:35:38 GMT = 1563269738652180733
+
+Last pose         =  Tue Jul 16 2019 09:37:04 GMT = 1563269824891463389
+
+Number of poses = 615 in 86.239282656 sec = 0.140226475 sec ave per sample
+
+
+First fix         =  Tue Jul 16 2019 09:35:38 GMT = 1563269738604973535
+
+Last fix          =  Tue Jul 16 2019 09:38:31 GMT = 1563269911755875648
+
+Number of fixes = 820 in 173.150902113 sec = 0.211159636 sec ave per sample
+
+
+First video frame =  Tue Jul 16 2019 09:35:43 GMT = 1563269743380701254
+
+Last video frame  =  Tue Jul 16 2019 09:37:09 GMT = 1563269829976656071
+
+Number of video frames = 1043 in 86.595954817 sec = 0.083105522 sec per frame or 12.04 fps (implies estimated video frame rate is 0.3% fast compared to nominal 12 fps, which would be 0.26 sec error at 87 sec or about 3 frames or about 1.25 m at a 5 m/sec speed)
+ 
+
 Fix sample 26 is within 1 sample of the start of video 2 = timestamp Tue Jul 16 2019 09:35:43 GMT = 1563269743380701254
 
 Not much alternative to snapping time of first video frame to 1563269743380701254.
