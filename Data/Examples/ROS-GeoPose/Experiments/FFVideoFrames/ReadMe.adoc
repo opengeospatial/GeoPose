@@ -1,2 +1,3 @@
 ## These are the less distorted and cropped forward facing camera keyframes.
 
+These 1,043 JPEG files are ketframes extracted from the forward facing camera video. I have reduced a substantial amount of the radial distortion in the video  and cropped the frames to remove any view of the interior of the vehicle. The EXIF data for these frames has GPS location information derived from the ROS data stream. A second estimate of positon may be possible using SLAM but has not yet been calculated. 
