@@ -1,0 +1,42 @@
+body {
+    font-family: Monospace;
+    background-color: #000;
+    color: #fff;
+    margin: 10px;
+    overflow: hidden;
+}
+#info {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display:block;
+}
+#info a, .button { color: #fff; font-weight: bold;  cursor: pointer }
+
+#container {
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    background-color: white;
+}
+#container > div {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed black;
+}
+#containerDN {
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    background-color: white;
+}
+#containerDN > div {
+    width: 200px;
+    height: 20px;
+     border: 2px dashed black;
+}

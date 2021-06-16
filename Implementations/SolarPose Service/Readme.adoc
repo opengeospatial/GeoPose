@@ -5,3 +5,6 @@ The service responds to HTTPS GET requests for examples of any of the JSON-encod
 The GeoPoses provided in the samples and in the validator are the pose of a camera or other body located at the anchor location of the GeoPose and oriented toward the current direction of the sun. Before applying the Euler angle rotations the camera is aligned with the axes of the outer reference frame. The first angle is the rotation about the z axis: the horizontal direction of the Sun. The second angle is the rotation about the (once rotated) y axis: the elevation of the Sun above the horizon. If the second angle is positive, then it is daytime. Otherwise it is night. The third angle is the rotation about the (twice rotated) z axis. It is always zero because the camera is (arbitrarily) kept horizontal with respect to the tangent plane. The samples in sequences are at successive times: now, 10 seconds in the future, and 20 seconds in the future.
 
 This service is used to validate the specifications and instances in the JSON encodings in the GeoPose standard.
+
+A dem web app using the service is in the demo folder.
+[link]

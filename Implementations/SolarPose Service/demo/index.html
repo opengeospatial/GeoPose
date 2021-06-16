@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SolarPose GeoPose Demo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+	</head>
+
+	<body>
+		<div id="info" style="height:30px;top:50;background-color:grey;padding:5px;font-size:2em">
+			<a >Simple OGC GeoPose Web Example 0.8.1</a>
+		</div>
+		<div id="zoom"><input id="setZoom" type="range" min="1" max="100" step="5" value="1" ></div>
+		<div id="container">
+			<div id = "googleResponse" style="right:600px;height:200px;width:200px;top:200px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "genevaResponse" style="height:200px;width:200px;top:200px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "tokyoResponse" style="right:400px;height:200px;width:200px;top:200px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "osloResponse" style="right:200px;height:200px;width:200px;top:200px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "londonResponse" style="right:0px;height:200px;width:200px;top:200px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div style="height:200px;width:200px;top:200px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word">
+				</br>
+				<label style="display:block"><input type="radio" id= "time1" name="radgroup" value="1" onclick="setTimeFactor(1);">1:1</label>
+				<label style="display:block"><input type="radio" id="time16" name="radgroup" value="16" onclick="setTimeFactor(16);">x 16</label>
+				<label style="display:block"><input type="radio" id="time256" name="radgroup" checked="checked" value="256" onclick="setTimeFactor(256);">x 256</label>
+				<label style="display:block"><input type="radio" id="time4096" name="radgroup" value="4096" onclick="setTimeFactor(4096);">x 4,096</label>
+				<label style="display:block"><input type="radio" id="time65536"name="radgroup" value="65356" onclick="setTimeFactor(65536);">x 65,356</label>
+			</div>
+		</div>
+		<div id="containerDN">
+			<div id = "googleDayNight" style="right:600px;height:20px;width:200px;top:400px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "genevaDayNight" style="height:20px;width:200px;top:400px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "tokyoDayNight" style="right:400px;height:20px;width:200px;top:400px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "osloDayNight" style="right:200px;height:20px;width:200px;top:400px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "londonDayNight" style="right:0px;height:20px;width:200px;top:400px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >json</div>
+			<div id = "filler" style="right:0px;height:20px;width:200px;top:400px;background-color:white;color:black;font-size:1.4em;padding:10px;margin:20px;overflow-wrap:break-word" >ms per render cycle</div>
+		</div>
+
+		<script src="three/three.js"></script>
+
+		<script src="js/DDSLoader.js"></script>
+		<script src="js/MTLLoader.js"></script>
+		<script src="js/OBJLoader.js"></script>
+
+		<script src="js/Detector.js"></script>
+		<script src="js/stats.min.js"></script>
+		<script src="js/demo.js"></script>
+
+	</body>
+</html>
