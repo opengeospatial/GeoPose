@@ -1,0 +1,7 @@
+# Assets
+
+## This is a list of Amazon S3 files in the geopose1data bucket which are referenced in this folder.
+
+https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4[Undistorted and cropped forward facing AV video derived from OS original data]
+
+
