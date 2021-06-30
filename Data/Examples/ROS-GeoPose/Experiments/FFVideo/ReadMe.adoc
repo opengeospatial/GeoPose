@@ -1,7 +1,12 @@
-## A reprojection of the forward facing camera video, most radial distortion removed, and cropped to just the outside part of the view.
+## This folder contains a reprojection of the Ordnance Survey autonomous vehicle forward facing camera video with most radial distortion removed and cropped to just the outside part of the view.
 
-This is in preparation for using visual odometry to get the relative pose of the individual frames independent of the AV sensors. This facilitates data fusion to produce a best estimate of pose during the video timespan.
+This reprojected video is a first step for using visual odometry to get the relative pose of the individual frames independent of the AV sensors. It will facilitate data fusion to produce a best estimate of pose during the video timespan. The point of these experiments is to exercise the GeoPose structures to see what is possible, what works well, and what does not.
 
-https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4[S3: Undistorted and cropped video]
+[NOTE] This is also an example of the method and style for offloading large binary data files from the git repo to the new public *geopose1data* bucket in Amazon S3 by
+moving the files to Amazon S3 and keeping a list of the links to S3 in an *assets.adoc* file in each folder where blobs have been remoted. The link below shows the mapping between the GeoPose repo folder structure and the S3 folder structure. There is no constraint forcing the use of the S3 structure but it would be confusing if we did not individually adhere to it. The S3 bucket supports versioning and is public. In summary, a large binary file formerly in this repo folder (Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4) has been uploaded to S3, deleted from the repo, and a link placed in the assets.adoc file for this folder. Moving existing blobs to S3 will not decrease the size of the repo until some history is remove by hacking it out but using this template in the future will keep it from growing unnecessariy.
+
+[NOTE] See *assets.adoc* for the real link(s). Here is what you will find there for this example:
+
+ https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4[S3: Undistorted and cropped video]
 
 
