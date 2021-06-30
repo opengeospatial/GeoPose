@@ -1,3 +1,5 @@
-## A reprojection of the forward facing camera video, cropped to just the outside part.
+## A reprojection of the forward facing camera video, most radial distortion removed, and cropped to just the outside part of the view.
+
+https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4[S3: Undistorted and cropped video]
 
 
