@@ -1,5 +1,7 @@
 ## A reprojection of the forward facing camera video, most radial distortion removed, and cropped to just the outside part of the view.
 
+This is in preparation for using visual odometry to get the relative pose of the individual frames independent of the AV sensors. This facilitates data fusion to produce a best estimate of pose during the video timespan.
+
 https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4[S3: Undistorted and cropped video]
 
 
