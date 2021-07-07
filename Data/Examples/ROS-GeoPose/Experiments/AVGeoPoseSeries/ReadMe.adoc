@@ -1,3 +1,4 @@
-## UThis is an empty ReadMe file.
+## The video and ROS data from the OS autonomous vehicle can be converted into several GeoPose time series. This includes independent series for each and a fused series for the overlap timespan.
 
-How useful is tis?
+This has not been completed yet, but this is where the reults will go.
+
