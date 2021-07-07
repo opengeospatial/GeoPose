@@ -1,0 +1,24 @@
+# Assets
+
+### This is a list of large data files which are referenced in this folder but not stored directly in the repository.
+
+
+include::assets_info.adoc[]
+
+[width = "80%", cols = "5,2,2", options = "header"]
+|=========================================================
+| Link | Size | Last Modified
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/sample_data/ROSB_DRIV_BSUN_201907161035_LID-1IMG-GNSS_LGHT_RUN1_fix.txt[ ROSB_DRIV_BSUN_201907161035_LID-1IMG-GNSS_LGHT_RUN1_fix.txt ] | 107 kb | 6/29/2021  8:42 AM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/sample_data/ROSB_DRIV_BSUN_201907161035_LID-1IMG-GNSS_LGHT_RUN1_isolated_ff_camera.mp4[ ROSB_DRIV_BSUN_201907161035_LID-1IMG-GNSS_LGHT_RUN1_isolated_ff_camera.mp4 ] | 75892 kb | 6/29/2021  8:31 AM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/sample_data/ROSB_DRIV_BSUN_201907161035_LID-1IMG-GNSS_LGHT_RUN1_nmea_sentence.txt[ ROSB_DRIV_BSUN_201907161035_LID-1IMG-GNSS_LGHT_RUN1_nmea_sentence.txt ] | 1657 kb | 6/29/2021  8:42 AM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/sample_data/ROSB_DRIV_BSUN_201907161035_LID-1IMG-GNSS_LGHT_RUN1_trim.mp4[ ROSB_DRIV_BSUN_201907161035_LID-1IMG-GNSS_LGHT_RUN1_trim.mp4 ] | 80402 kb | 6/29/2021  8:31 AM
+
+
+
+
+|=========================================================
+ 
