@@ -1,4 +1,0 @@
-[NOTE]
-Add description of these files in the *assets_info.adoc* file. Maybe someday GitHub will support adoc includes :-).
-
-
