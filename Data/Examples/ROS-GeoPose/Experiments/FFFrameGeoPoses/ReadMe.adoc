@@ -1,3 +1,5 @@
-## GeoPoses derived from the forward facing camera video.
+## SLAM-derived Poses from Forward Facing Video
+
+GeoPose series derived from the forward facing camera video.
 
 
