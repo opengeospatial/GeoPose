@@ -1,4 +1,4 @@
-# Real World Images
+ Real World Images
 
 This folder contains a sample set of 172 images and corresponding Basic-Quaternion and Basic-YPR GeoPoses as defined in the GeoPose 1.0 draft standard.
 
