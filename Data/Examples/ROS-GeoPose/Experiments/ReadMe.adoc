@@ -1,6 +1,14 @@
 ## Using 16th July 2019 OS ROS Data 
 
 This folder is the root for GeoPose experiments on the Ordnance Survey ROS data for the autonomous vehicle run on 16th July 2019. The purpose of the experiments is to expose and try different approaches to solve practical issues when using GeoPose.
+Planned experiments:
+
+* Convert ROS data to GeoPose data objects of each type except chain and graph
+* Use SLAM to derive corresponding poses from the forward-facing video
+* Use GCPs to convert the video frame poses to GeoPoses
+* Fuse the visually-derived GeoPoses and the ROS-derived GeoPoses
+* Animate GeoPose timeseries in a 3D environment
+* Animate GeoPose timeseries by "playing" a corresponding sequence of Google StreetViews
 
 ## Folder Layout
 
