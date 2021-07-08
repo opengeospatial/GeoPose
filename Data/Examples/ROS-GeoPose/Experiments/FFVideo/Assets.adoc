@@ -1,6 +1,6 @@
 # Assets
 
-### This is a list of large data files which are referenced in this folder but not stored directly in the repository.
+This is a list of large data files which are referenced in this folder but not stored directly in the repository.
 
 
 include::assets_info.adoc[]
