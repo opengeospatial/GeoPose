@@ -9,7 +9,9 @@ include::assets_info.adoc[]
 |=========================================================
 | Link | Size | Last Modified
 
-| https://data.ogc.org/geopose-swg/Data/Examples/Video/GeoPose_BH_Video_Overview.jpg[ OGC: GeoPose_BH_Video_Overview.jpg ] | 442 kb | 6/29/2021  8:31 AM
+| https://geopose1data.s3.amazonaws.com/Data/Examples/Video/GeoPose_BH_Video_Overview.jpg[ S3: GeoPose_BH_Video_Overview.jpg ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/Video/GeoPose_BH_Video_Overview.jpg[ OGC: GeoPose_BH_Video_Overview.jpg ] | 442 kb | 6/29/2021  8:31 AM
 
 
 
