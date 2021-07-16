@@ -9,7 +9,9 @@ include::assets_info.adoc[]
 |=========================================================
 | Link | Size | Last Modified
 
-| https://data.ogc.org/geopose-swg/Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4[ OGC: FFVideo_Undistorted_Cropped_02.mp4 ] | 99828 kb | 6/29/2021  8:31 AM
+| https://geopose1data.s3.amazonaws.com/Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4[ S3: FFVideo_Undistorted_Cropped_02.mp4 ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/ROS-GeoPose/Experiments/FFVideo/FFVideo_Undistorted_Cropped_02.mp4[ OGC: FFVideo_Undistorted_Cropped_02.mp4 ] | 99828 kb | 6/29/2021  8:31 AM
 
 
 
