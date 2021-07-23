@@ -1,0 +1,3 @@
+# tools
+
+### This folder has shell scripts for creating PDF and HTML versions of the standard.
