@@ -19,6 +19,29 @@
         "id",
         "parameters"
       ]
+    },
+    "Quaternion": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z",
+        "w"
+      ]
     }
   },
   "type": "object",
@@ -27,12 +50,7 @@
       "$ref": "#/definitions/FrameSpecification"
     },
     "quaternion": {
-      "type": "array",
-      "items": {
-        "type": "number"
-      },
-      "minItems": 4,
-      "maxItems": 4
+      "$ref": "#/definitions/Quaternion"
     },
     "validTime": {
       "type": "integer"

@@ -61,7 +61,7 @@
           "type": "integer"
         },
         "transitionModel": {
-          "type": "string"
+          "$ref": "#/definitions/TransitionModel"
         }
       },
       "required": [
@@ -86,6 +86,25 @@
       },
       "required": [
         "poseCount"
+      ]
+    },
+    "TransitionModel": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "authority",
+        "id",
+        "parameters"
       ]
     }
   },
