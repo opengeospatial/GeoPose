@@ -1,7 +1,7 @@
 {
   "description": "Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation",
   "definitions": {
-    "YawPitchRoll": {
+    "angles": {
       "type": "object",
       "properties": {
         "yaw": {
@@ -19,31 +19,38 @@
         "pitch",
         "roll"
       ]
+    },
+    "Position": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "h": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat",
+        "lon",
+        "h"
+      ]
     }
   },
   "type": "object",
   "properties": {
-    "longitude": {
-      "type": "number",
-      "minimum": -180.0,
-      "maximum": 180.0
+    "position": {
+      "$ref": "#/definitions/Position"
     },
-    "latitude": {
-      "type": "number",
-      "minimum": -90.0,
-      "maximum": 90.0
-    },
-    "height": {
-      "type": "number"
-    },
-    "ypr": {
-      "$ref": "#/definitions/YawPitchRoll"
+    "angles": {
+      "$ref": "#/definitions/angles"
     }
   },
   "required": [
-    "longitude",
-    "latitude",
-    "height",
-    "ypr"
+    "position",
+    "angles"
   ]
 }

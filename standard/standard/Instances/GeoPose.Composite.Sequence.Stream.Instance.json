@@ -17,9 +17,9 @@
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.84235, 0.24937, -0.13562, 0.45811]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.51304, -0.17232, 0.26774, 0.79713]"
         },
-        "validTime": 1614921636772
+        "validTime": 1629069964473
       }
     },
     {
@@ -27,9 +27,9 @@
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.84302, 0.25070, -0.13565, 0.45614]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.51492, -0.17218, 0.26631, 0.79642]"
         },
-        "validTime": 1614921649117
+        "validTime": 1629069976818
       }
     },
     {
@@ -37,9 +37,9 @@
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.84369, 0.25202, -0.13567, 0.45417]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.51679, -0.17204, 0.26489, 0.79572]"
         },
-        "validTime": 1614921661462
+        "validTime": 1629069989163
       }
     }
   ]

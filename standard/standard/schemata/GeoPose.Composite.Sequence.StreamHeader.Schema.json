@@ -19,12 +19,31 @@
         "id",
         "parameters"
       ]
+    },
+    "TransitionModel": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "authority",
+        "id",
+        "parameters"
+      ]
     }
   },
   "type": "object",
   "properties": {
     "transitionModel": {
-      "type": "string"
+      "$ref": "#/definitions/TransitionModel"
     },
     "outerFrame": {
       "$ref": "#/definitions/FrameSpecification"
