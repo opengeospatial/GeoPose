@@ -47,9 +47,9 @@ referenced by:
 
  +
 
-[#Basic-Euler]#Basic-Euler:#
+[#Basic-YPR]#Basic-YPR:#
 
-image:diagram/Basic-Euler.png[image,width=737,height=125]
+image:diagram/Basic-YPR.png[image,width=737,height=125]
 
 referenced by:
 
