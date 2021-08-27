@@ -1,0 +1,46 @@
+## Basic Concepts
+
+[cols="1,1"]
+|===
+
+|[[def_bc_frame]] **(Reference) Frame** image:../users_guide/figures/glossary/Frame.png[Frame,320,320]
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Frame.blend[Frame.blend] | **As defined in link:https://www.iso.org/obp/ui/#iso:std:iso:19111:ed-3:v1:en[ISO 19111], a reference Frame is a parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a coordinate system.**
+
+Another, more practical definition link:https://en.wikipedia.org/wiki/Frame_of_reference[from Wikipedia] is: _"In physics, a (reference) frame consists of an abstract coordinate system and the set of physical reference points that uniquely fix (locate and orient) the coordinate system and standardize measurements within that frame."_
+
+A Reference Frame can be visualized as a subspace with its own link:https://en.wikipedia.org/wiki/Coordinate_system[coordinate system] (represented with an arrow for each axis and a 2D grid to facilitate measurements) and a point of origin (represented as a sphere at the point where the arrows intersect). Generally, to simplify calculations, the associated coordinate systems are Cartesian in nature, but in the case of https://en.wikipedia.org/wiki/Non-Euclidean_geometry[non-euclidean spaces], they require more advanced definitions (like the https://en.wikipedia.org/wiki/Geographic_coordinate_system[geographical coordinate systems] used in global positioning systems).
+
+
+|[[def_bc_transform]] **Transform** image:../users_guide/figures/glossary/Transform.png[Transform,320,320]
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Transform.blend[Transform.blend] 
+| **“In computer graphics, a Transform is a logic construct that defines the position, orientation and scale of an object (and all of its components).”**
+
+Each Transform creates its own *Frame*, so it is often represented in a similar way (with arrows overlaid onto the object to indicate its position and orientation). However, instead of a grid, a transform is often displayed with an oriented bounding box, to more clearly delimitate the bounds of the *Frame* subspace.
+
+This concept is so important that all 3D engines include classes and methods to simplify the generation of https://en.wikipedia.org/wiki/Transformation_matrix[Transformation Matrices], in order to switch between different *Frames* across a *Scene Graph*. A good example of this is the link:https://docs.unity3d.com/ScriptReference/Transform.html[Transform class] of the Unity 3D engine.
+
+
+
+|[[def_bc_pose]] **Pose** image:../users_guide/figures/glossary/Pose.png[Pose,320,320]
+https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Pose.blend[Pose.blend] 
+| **"A Pose determines the position and orientation of an object (or group of objects) relative to a coordinate system.”**
+
+In Robotics and Human-Computer Interaction, this concept is often referred to as link:https://en.wikipedia.org/wiki/Six_degrees_of_freedom[Six Degrees of Freedom (6DoF)] and it is used to specify the position and orientation of an object with great precision (generally, by combining a *Local Positioning System* for the translation and an *Aircraft Principal Axes Orientation System* for the rotation). In this way, it is possible to define complex link:https://en.wikipedia.org/wiki/Kinematics[kinematic systems] that allow the creation of advanced link:https://en.wikipedia.org/wiki/Robotic_arm[robotic arms] and link:https://en.wikipedia.org/wiki/Powered_exoskeleton[exoskeletons].
+
+From the point of view of 3D software developers, however, a Pose can be seen as a simplified version of a "Transform class" (without the *Scale*-related fields/properties).  This direct correspondence implies that a Pose is associated to a single node of the Scene Graph (i.e., the "hand" has a Pose, the "arm" has another Pose, etc.), but, when 3D artists and engineers talk about "Poses", they are generally referring to the combined Pose data of all the components of an entity (i.e., the Pose of a dummy, as seen in the illustration). In fact, most 3D editing software solutions include a separate "Pose mode" so that artists can independently work on the geometry of the different 3D models and on their animation.
+
+
+|[[def_bc_pose_chain]] **Pose Chain** image:../users_guide/figures/glossary/SceneGraph.png[Scene Graph,320,320]
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/SceneGraph.blend[SceneGraph.blend] 
+| **“A Scene Graph is a general data structure commonly used by vector-based graphics editing applications and modern computer games, which arranges the logical and often spatial representation of a graphical scene. It is a collection of nodes in a graph or tree structure.”** link:https://en.wikipedia.org/wiki/Scene_graph[(from Wikipedia)]
+
+Scene Graphs are often represented with connectors between the origin points of the Transforms of each object in the scene. And ore often than not, Scene Graphs have a tree structure that facilitates the identification of the different parts of the scene. However, this hierarchical organization can introduce problems when an object has to change parents (e.g., when the person in the illustration grabs the teapot from the table), because the 3D engine has to remove all the Transform operations of the old branch and apply all of the others for the new branch.
+
+
+|[[def_bc_geopose]] **GeoPose** image:../users_guide/figures/glossary/GeoPose.png[GeoPose,320,320]
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend] 
+| **"A GeoPose is a fixed *Pose* related to an astronomical object (by default, Earth) via a Topocentric Reference Frame."**
+
+A GeoPose facilitates the generation of a *Transform* (and the associated transformation matrix) to properly place and orient modes in a *Scene Graph* (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
+
+|===
