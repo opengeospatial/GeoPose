@@ -4,6 +4,11 @@ The following normative documents contain provisions that, through reference in 
 
 ====
 
+[NOTE]
+This section under construction as of 23rd August 2021 ETC 2nd September 2021
+
+ISO 19101 Conceptual Modelling
+
 ISO / TC 211: ISO 19115-1:2014 Geographic information -- Metadata -- Part 1: Fundamentals (2014)
 
 ISO / TC 211: ISO 19157:2013 Geographic information -- Data quality (2013)
@@ -21,5 +26,33 @@ OGC: OGC 12-019, OGC City Geography Markup Language (CityGML) Encoding Standard 
 OGC: OGC 14-005r3, OGC IndoorGML (2014)
 
 OWL Time: https://www.w3.org/TR/2020/CR-owl-time-20200326/
+
+JSON Schema
+
+EBNF
+
+ISO 19162:2019
+Geographic information — Well-known text representation of coordinate reference systems
+https://www.iso.org/standard/76496.html
+
+coordinate reference system https://en.wikipedia.org/wiki/Spatial_reference_system
+ISO 19111:2019 Geographic information — Referencing by coordinates https://www.iso.org/standard/74039.html 
+
+
+EPSG https://iogp.georepository.com/home.html
+
+NASA SPICE https://naif.jpl.nasa.gov/naif/  Navigation and ancillary information facility
+
+Euler angles Wikipedia https://en.wikipedia.org/wiki/Euler_angles 
+
+YPR ref
+https://en.wikipedia.org/wiki/Aircraft_principal_axes principal axes
+https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf 
+
+Ref frame refs https://en.wikipedia.org/wiki/Frame_of_reference
+
+Pose refs
+https://en.wikipedia.org/wiki/Pose_(computer_vision) 
+
 
 ====

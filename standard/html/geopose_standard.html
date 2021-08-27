@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.12">
 <title>Draft OGC GeoPose 1.0 Data Exchange Standard</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -47,7 +47,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -62,10 +62,8 @@ img{-ms-interpolation-mode:bicubic}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
 a img{border:0}
@@ -105,19 +103,22 @@ h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
 .clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
 .clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
 pre>code{display:block}
@@ -182,7 +183,7 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
 #content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
@@ -205,7 +206,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -215,7 +216,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
@@ -261,21 +262,20 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
 p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
 table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
 table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
@@ -284,7 +284,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -313,6 +313,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -385,7 +386,7 @@ a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
 .admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
 .admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
 .conum[data-value]::after{content:attr(data-value)}
@@ -412,6 +413,7 @@ thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
 #toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
@@ -572,6 +574,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_modularity">2.1. Modularity</a></li>
 <li><a href="#_conformance_classes">2.2. Conformance Classes</a></li>
+<li><a href="#_standardization_targets">2.3. Standardization Targets</a></li>
 </ul>
 </li>
 <li><a href="#_references">3. References</a></li>
@@ -620,7 +623,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_core">7.2.1. Core</a></li>
 <li><a href="#_time">7.2.2. Time</a></li>
 <li><a href="#_sequence">7.2.3. Sequence</a></li>
-<li><a href="#_data_types">7.2.4. Data Types</a></li>
 </ul>
 </li>
 <li><a href="#_structural_data_units_normative">7.3. Structural Data Units (Normative)</a>
@@ -906,13 +908,13 @@ The organizations, submitters, participants, and acknowledgements are open to ch
 <h2 id="_scope"><a class="anchor" href="#_scope"></a>1. Scope</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The GeoPose 1.0 Standard defines requirements (rules) for the interoperable exchange of the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth&#8217;s surface (Geo) or within other astronomical coordinate systems. The Standard specifies a basic form with no configuration options for common use cases, an advanced form with more flexibility for more complex applications, and composite GeoPose structures to support time series and chain and graph structures.</p>
+<p>The GeoPose 1.0 Standard defines requirements (rules) for the interoperable exchange of the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth&#8217;s surface (Geo) or within other astronomical coordinate systems. The Standard specifies a basic form with no configuration options for common use cases, an advanced form with more flexibility for more complex applications, and composite GeoPose structures to support time series chain, and graph structures.</p>
 </div>
 <div class="paragraph">
-<p>The GeoPose standard consists of an implementation-neutral Logical Model. This model establishes the structure and relationships between GeoPose components and also between GeoPoses data objects themselves in composite structures. Classes and properties of the Logical Model that are expressed in concrete data objects are identified as implementation-neutral Structural Data Units (SDUs), aliases for elements of the Logical Model. SDUs are grouped to define the implementation-neutral form of the GeoPose Standardization Targets: the specific implementation that the Standard addresses. For each Standardization Target, each implementation technology will have the definition of the encoding or serialization specified in a manner appropriate to that technology.</p>
+<p>The GeoPose standard consists of an implementation-neutral Logical Model. This model establishes the structure and relationships between GeoPose components and also between GeoPoses data objects themselves in composite structures. Note that the GeoPose data objects defined by this standard correspond to only part of the Logical Model, generally the most derived classes and attributes. Those classes and properties of the Logical Model that are expressed in concrete data objects are identified as implementation-neutral Structural Data Units (SDUs). These SDUs are  aliases for the implementable elements of the Logical Model. SDUs are grouped to define the implementation-neutral form of the GeoPose Standardization Targets: the specific implementation that the Standard addresses. For each Standardization Target, each implementation technology will have the definition of the encoding or serialization specified in a manner appropriate to that technology.</p>
 </div>
 <div class="paragraph">
-<p>GeoPose Version 1.0 has a single encoding, JavaScript Object Notation (JSON). Each Standardization Target has a JSON-Schema:2019-9 specification. Most of the standardization requirements are that concrete JSON GeoPose data objects must conform to the corresponding JSON-Schema definition. The individual elements identified in the encoding specification are SDUs that tie the specifications back to the Logical Model.</p>
+<p>GeoPose Version 1.0 defines a single encoding, JavaScript Object Notation (JSON). Each Standardization Target has a JSON-Schema:2019-9 specification. Most of the standardization requirements are that concrete JSON GeoPose data objects shall conform to the corresponding JSON-Schema definition. The individual elements identified in the encoding specifications are SDUs that refer to one or more elements of the Logical Model.</p>
 </div>
 <div class="paragraph">
 <p>The GeoPose 1.0 Standard excludes assumptions about the interpretation of external specifications for example, of reference frames. Nor does it assume or constrain services or interfaces providing conversion between GeoPoses of difference types or relying on different external reference frame definitions.</p>
@@ -940,7 +942,7 @@ The organizations, submitters, participants, and acknowledgements are open to ch
 <div class="sect2">
 <h3 id="_conformance_classes"><a class="anchor" href="#_conformance_classes"></a>2.2. Conformance Classes</h3>
 <div class="paragraph">
-<p>This standard identifies eight conformance classes. One conformance class is defined for each correspoding set of Structural Data Units, each linked to the Logical Model. Additionally, each of the eight standarization targets is represented by a conformance class, defined by a requirements class.
+<p>This standard identifies eight conformance classes. One conformance class is defined for each correspoding set of Structural Data Units (SDUs), each SDU linked to the Logical Model as an alias for a class or attribute. Additionally, each of the eight standarization targets is represented by a conformance class, defined by a requirements class.
 The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Requirements Class. An implementation of a conformance class must pass all tests specified in Annex A for the corresponding requirements class.</p>
 </div>
 <div class="paragraph">
@@ -948,6 +950,68 @@ The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Require
 </div>
 <div class="paragraph">
 <p>The Logical Model is the root normative part of this standard.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_standardization_targets"><a class="anchor" href="#_standardization_targets"></a>2.3. Standardization Targets</h3>
+<div class="paragraph">
+<p>There are eight independent standardization targets. Each addresses the specific requirements of one or more individual use cases. The Basic and Advanced Targets share in the use of an EPSG 4979/3D WGS-84 <a href="#def_Outer_Frame"><strong>Outer Frame</strong></a> but differ in the level of options and flexibility in specication of the <a href="#def_Inner_Frame"><strong>Inner Frame</strong></a>. The Composite Targets offer approaches to packaging sequenced or linked Frame Transforms.  The eight targets are denoted by bold terms in the following categories:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Basic - Satisfy most use cases - EPSG 4979 Outer Frame</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>LTP-ENU <a href="#def_Inner_Frame"><strong>Inner Frame</strong></a> oriented by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: <strong>Basic-YPR</strong> Target</p>
+</li>
+<li>
+<p>LTP-ENU <a href="#def_Inner_Frame"><strong>Inner Frame</strong></a> oriented by unit quaternion: <strong>Basic-Quaternion</strong> Target</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Configurable <a href="#def_Inner_Frame"><strong>Inner Frame</strong></a> oriented by unit quaternion - Flexible enough for complex use cases: <strong>Advanced</strong> Target</p>
+</li>
+<li>
+<p>Composite - Efficient structures for linked and sequential GeoPoses</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Linked linear sequence of poses: <strong>Chain</strong> Target</p>
+</li>
+<li>
+<p>General linked poses: <strong>Graph</strong> Target</p>
+</li>
+<li>
+<p>Sequence</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Series</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>Timeseries with constant time spacing: <strong>Regular</strong> Timeseries Target</p>
+</li>
+<li>
+<p>Timeseries with per-GeoPose time: <strong>Irregular</strong> Timeseries Target</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Open-ended sequence of time-stamped GeoPoses: <strong>Stream</strong> Target</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -960,6 +1024,21 @@ The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Require
 </div>
 <div class="exampleblock">
 <div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This section under construction as of 23rd August 2021 ETC 2nd September 2021
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ISO 19101 Conceptual Modelling</p>
+</div>
 <div class="paragraph">
 <p>ISO / TC 211: ISO 19115-1:2014 Geographic information&#8201;&#8212;&#8201;Metadata&#8201;&#8212;&#8201;Part 1: Fundamentals (2014)</p>
 </div>
@@ -987,6 +1066,42 @@ The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Require
 <div class="paragraph">
 <p>OWL Time: <a href="https://www.w3.org/TR/2020/CR-owl-time-20200326/" class="bare">https://www.w3.org/TR/2020/CR-owl-time-20200326/</a></p>
 </div>
+<div class="paragraph">
+<p>JSON Schema</p>
+</div>
+<div class="paragraph">
+<p>EBNF</p>
+</div>
+<div class="paragraph">
+<p>ISO 19162:2019
+Geographic information — Well-known text representation of coordinate reference systems
+<a href="https://www.iso.org/standard/76496.html" class="bare">https://www.iso.org/standard/76496.html</a></p>
+</div>
+<div class="paragraph">
+<p>coordinate reference system <a href="https://en.wikipedia.org/wiki/Spatial_reference_system" class="bare">https://en.wikipedia.org/wiki/Spatial_reference_system</a>
+ISO 19111:2019 Geographic information — Referencing by coordinates <a href="https://www.iso.org/standard/74039.html" class="bare">https://www.iso.org/standard/74039.html</a></p>
+</div>
+<div class="paragraph">
+<p>EPSG <a href="https://iogp.georepository.com/home.html" class="bare">https://iogp.georepository.com/home.html</a></p>
+</div>
+<div class="paragraph">
+<p>NASA SPICE <a href="https://naif.jpl.nasa.gov/naif/" class="bare">https://naif.jpl.nasa.gov/naif/</a>  Navigation and ancillary information facility</p>
+</div>
+<div class="paragraph">
+<p>Euler angles Wikipedia <a href="https://en.wikipedia.org/wiki/Euler_angles" class="bare">https://en.wikipedia.org/wiki/Euler_angles</a></p>
+</div>
+<div class="paragraph">
+<p>YPR ref
+<a href="https://en.wikipedia.org/wiki/Aircraft_principal_axes" class="bare">https://en.wikipedia.org/wiki/Aircraft_principal_axes</a> principal axes
+<a href="https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf" class="bare">https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf</a></p>
+</div>
+<div class="paragraph">
+<p>Ref frame refs <a href="https://en.wikipedia.org/wiki/Frame_of_reference" class="bare">https://en.wikipedia.org/wiki/Frame_of_reference</a></p>
+</div>
+<div class="paragraph">
+<p>Pose refs
+<a href="https://en.wikipedia.org/wiki/Pose_(computer_vision" class="bare">https://en.wikipedia.org/wiki/Pose_(computer_vision</a>)</p>
+</div>
 </div>
 </div>
 </div>
@@ -999,9 +1114,6 @@ The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Require
 </div>
 <div class="paragraph">
 <p>For the purposes of this document, the following additional terms and definitions apply.</p>
-</div>
-<div class="paragraph">
-<p>[NOTE] Terms moved to annex-glossary.</p>
 </div>
 <div class="paragraph">
 <p>The GeoPose Conceptual Model consists of linked definitions of terms denoting concepts expressed in the GeoPose Logical Model and structural data unit specifications for the implementation targets. The conceptual model describes a (non-normative) domain of discourse for terms used in defining a precise Logical Model (normative) expressed in as a Unified Modelling Language (UML) [ref] class diagram.</p>
@@ -1039,7 +1151,13 @@ The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Require
 <h3 id="_spatial_concepts"><a class="anchor" href="#_spatial_concepts"></a>4.1. Spatial Concepts</h3>
 <hr>
 <div class="paragraph">
-<p><a id="def_Pose"></a>A <strong>pose</strong> is a representation of a <a href="#def_FrameTransform"><strong>frame transform</strong></a>  mapping the space of an <a href="#def_OuterFrame"><strong>outer (reference) frame</strong></a> to the space of an <a href="#def_InnerFrame"><strong>inner (reference) frame</strong></a>. A <strong>pose</strong> may be associated with additional non-geometrical properties such as time of observation or validity.</p>
+<p><a id="def_Position"></a>A <strong>position</strong> is a set of coordinates of a point in a 3D Euclidean space and associated <a href="#def_Reference_Frame"><strong>reference frame</strong></a>.</p>
+</div>
+<div class="paragraph">
+<p><a id="def_Orientation"></a><strong>Orientation</strong> is the rotational relationship between two <a href="#def_Reference_Frame"><strong>reference frames</strong></a>.</p>
+</div>
+<div class="paragraph">
+<p><a id="def_Pose"></a>A <strong>pose</strong> is a representation of a <a href="#def_FrameTransform"><strong>frame transform</strong></a>  mapping the space of an <a href="#def_OuterFrame"><strong>outer (reference) frame</strong></a> to the space of an <a href="#def_InnerFrame"><strong>inner (reference) frame</strong></a>. A <strong>pose</strong> may be associated with additional non-geometrical properties such as time of observation or validity. <a href="#def_Pose"><strong>Poses</strong></a> in computer graphics often have an <a href="#def_OuterFrame"><strong>Outer Frame</strong></a> defined by a parent node in a scenegraph and an <a href="#def_InnerFrame"><strong>Inner Frame</strong></a> define by a <a href="#def_Position"><strong>position</strong></a> and an orientation.</p>
 </div>
 <div class="paragraph">
 <p><a id="def_GeoPose"></a>A <strong>GeoPose</strong> is a <a href="#def_Pose"><strong>pose</strong></a> whose associated <a href="#defOuterFrame"><strong>outer frame</strong></a> or a <a href="#def_PoseChain"><strong>pose chain</strong></a> whose associated <a href="#def_OutermostFrame"><strong>outermost frame</strong></a> is a <a href="#def_TopoCentric"><strong>topocentric</strong></a> <a href="#def_Reference_Frame"><strong>reference frame</strong></a> defined by an <a href="#def_ExtrinsicSpecification"><strong>extrinsic specification</strong></a> related to the <a href="#def_Ephemeris_Object"><strong>ephemeris object</strong></a> planet Earth.</p>
@@ -1253,16 +1371,22 @@ Poses always represent the position and orientation of a real or virtual physica
 <p>In order to enhance the readability of the GeoPose UML diagrams, classes are depicted in different colors. The following coloring scheme is applied:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/BrightYellow_UML.png" alt="BrightYellow UML"></span></p>
+<p><span class="image"><img src="images/Grey_UML.png" alt="Grey UML"></span></p>
 </div>
 <div class="paragraph">
-<p>Classes painted in yellow represent data types.</p>
+<p>Classes painted in grey represent data types.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/Blue_UML.png" alt="Blue UML"></span></p>
 </div>
 <div class="paragraph">
-<p>Classes painted in blue are represented as Structural Data Units or have properties that are represented in Structural Data Units and in encodings of those SDUs.</p>
+<p>Classes painted in blue are internal less-derived elements that are not themselves directly encoded as concrete data objects.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/Yellow_UML.png" alt="Yellow UML"></span></p>
+</div>
+<div class="paragraph">
+<p>Classes painted in yellow correspond to Structural Data Units or have properties that are represented in Structural Data Units and in encodings of those SDUs. Only data types and classes painted yellow are encoded as concrete data objects.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="images/Green_UML.png" alt="Green UML"></span></p>
@@ -1276,9 +1400,6 @@ Poses always represent the position and orientation of a real or virtual physica
 <div class="paragraph">
 <p>The color white is used for notes and OCL constraints that are provided in the UML diagrams.</p>
 </div>
-<div class="paragraph">
-<p>The example UML diagram in <a href="#figure-2">[figure-2]</a> demonstrates the UML notation and coloring scheme used throughout this specification.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="conceptual-modeling-description"><a class="anchor" href="#conceptual-modeling-description"></a>5.4. Conceptual Modelling</h3>
@@ -1287,6 +1408,9 @@ Poses always represent the position and orientation of a real or virtual physica
 </div>
 <div class="paragraph">
 <p>The goal of this GeoPose Standard is to establish and document a common set of concepts that spans the targeted use cases.  This does not attempt to redefine application concepts, but merely present a common set of concepts from and to which their concepts can be understood and mapped.</p>
+</div>
+<div class="paragraph">
+<p>The GeoPose conceptual model is a graph of related concepts. One technology-independent realization is given by the GeoPose Logical Model.</p>
 </div>
 </div>
 </div>
@@ -1523,7 +1647,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <h2 id="_standardization_targets_normative"><a class="anchor" href="#_standardization_targets_normative"></a>7. Standardization Targets (Normative)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a location and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.</p>
+<p>The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1547,7 +1671,7 @@ The following will move to the Conformance section.
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Orientation by Yaw, Pitch, and Roll (YPR) rotations: <strong>Basic-YPR</strong> Target</p>
+<p>Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: <strong>Basic-YPR</strong> Target</p>
 </li>
 <li>
 <p>Orientation by quaternion: <strong>Basic-Quaternion</strong> Target</p>
@@ -1694,15 +1818,6 @@ Implementers of software using encoded SDUs must agree with the logical descript
 <p><span class="image"><img src="models/Logical_Sequence.png" alt="Logical Sequence"></span></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_data_types"><a class="anchor" href="#_data_types"></a>7.2.4. Data Types</h4>
-<div class="paragraph">
-<p>These data types appear in classes that have attributes expressed in standardization targets.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="models/Logical_DataTypes.png" alt="Logical DataTypes"></span></p>
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_structural_data_units_normative"><a class="anchor" href="#_structural_data_units_normative"></a>7.3. Structural Data Units (Normative)</h3>
@@ -1758,7 +1873,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="sect3">
 <h4 id="_standardization_target_1_basic_quaternion"><a class="anchor" href="#_standardization_target_1_basic_quaternion"></a>7.3.1. Standardization Target 1: Basic-Quaternion</h4>
 <div class="paragraph">
-<p>The Basic-Quaternion GeoPose is a rotation-only transformation from a WGS-84-referenced local tangent plane east-north-up coordinate system. The rotation is specified with four components of a normalized quaternion.</p>
+<p>The Basic-Quaternion GeoPose has an EPSG-4979 (WGS-84 with height above ellipsoid) outer frame and an oriented (rotated) local tangent plane east-north-up (LTP-ENU) coordinate system. The rotation is specified with four components of a normalized quaternion.</p>
 </div>
 <div class="sect4">
 <h5 id="_requirements"><a class="anchor" href="#_requirements"></a>Requirements</h5>
@@ -4472,6 +4587,13 @@ A reference level from which elevation or altitude can be measured. The Topograp
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Smyth</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">initial integrated version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2021-08-25</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.5</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">assigned doc number 21-056</p></td>
 </tr>
 </tbody>
 </table>

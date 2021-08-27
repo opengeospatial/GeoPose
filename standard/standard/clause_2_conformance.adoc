@@ -14,10 +14,28 @@ This standard describes eight Standarization Targets. These targets are independ
 
 === Conformance Classes
 
-This standard identifies eight conformance classes. One conformance class is defined for each correspoding set of Structural Data Units, each linked to the Logical Model. Additionally, each of the eight standarization targets is represented by a conformance class, defined by a requirements class.
+This standard identifies eight conformance classes. One conformance class is defined for each correspoding set of Structural Data Units (SDUs), each SDU linked to the Logical Model as an alias for a class or attribute. Additionally, each of the eight standarization targets is represented by a conformance class, defined by a requirements class.
 The tests in <<abstract-test-suite,Annex A>> are organized by Requirements Class. An implementation of a conformance class must pass all tests specified in Annex A for the corresponding requirements class.
 
 No conformance class has a dependency on another conformance class.
 
 The Logical Model is the root normative part of this standard.
+
+=== Standardization Targets
+
+There are eight independent standardization targets. Each addresses the specific requirements of one or more individual use cases. The Basic and Advanced Targets share in the use of an EPSG 4979/3D WGS-84 <<def_Outer_Frame, **Outer Frame**>> but differ in the level of options and flexibility in specication of the <<def_Inner_Frame,**Inner Frame**>>. The Composite Targets offer approaches to packaging sequenced or linked Frame Transforms.  The eight targets are denoted by bold terms in the following categories:
+
+. Basic - Satisfy most use cases - EPSG 4979 Outer Frame
+.. LTP-ENU <<def_Inner_Frame,**Inner Frame**>> oriented by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
+.. LTP-ENU <<def_Inner_Frame,**Inner Frame**>> oriented by unit quaternion: *Basic-Quaternion* Target
+. Configurable <<def_Inner_Frame,**Inner Frame**>> oriented by unit quaternion - Flexible enough for complex use cases: *Advanced* Target
+. Composite - Efficient structures for linked and sequential GeoPoses
+.. Linked linear sequence of poses: *Chain* Target
+.. General linked poses: *Graph* Target
+.. Sequence
+... Series
+.... Timeseries with constant time spacing: *Regular* Timeseries Target
+.... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
+... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
+
 

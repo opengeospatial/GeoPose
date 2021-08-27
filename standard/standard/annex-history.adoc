@@ -6,4 +6,5 @@
 |===
 |Date |Release |Editor | Primary clauses modified |Description
 |2020-11-21 |0.1 |Steve Smyth |all |initial integrated version
+|2021-08-25 |0.5 |Steve Smyth |all |assigned doc number 21-056
 |===
