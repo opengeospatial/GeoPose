@@ -46,6 +46,9 @@
   },
   "type": "object",
   "properties": {
+    "validTime": {
+      "type": "integer"
+    },
     "frameList": {
       "type": "array",
       "items": {
@@ -62,6 +65,7 @@
     }
   },
   "required": [
+    "validTime",
     "frameList",
     "transformList"
   ]

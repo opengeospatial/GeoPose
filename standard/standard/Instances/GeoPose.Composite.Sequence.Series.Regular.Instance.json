@@ -2,8 +2,8 @@
   "header": {
     "poseCount": 2,
     "integrityCheck": "{\"SHA256\": \"5556fb65f8bf9eddb3ace1329c9a6aeedd4833409965aeee3e6b61ed21f47858\"}",
-    "startInstant": 1629069964392,
-    "stopInstant": 1629070009392,
+    "startInstant": 1630560671367,
+    "stopInstant": 1630560716367,
     "transitionModel": {
       "authority": "/geopose/1.0",
       "id": "none",
