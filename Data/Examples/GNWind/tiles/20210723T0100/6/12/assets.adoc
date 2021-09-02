@@ -1,0 +1,20 @@
+# Assets
+
+### This is a list of large data files which are referenced in this folder but not stored directly in the repository.
+
+
+include::assets_info.adoc[]
+
+[width = "80%", cols = "5,2,2", options = "header"]
+|=========================================================
+| Link | Size | Last Modified
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/tiles/20210723T0100/6/12/25.png[ S3: 25.png ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/tiles/20210723T0100/6/12/25.png[ OGC: 25.png ] | 0 kb | 8/30/2021  9:09 PM
+
+
+
+
+|=========================================================
+ 

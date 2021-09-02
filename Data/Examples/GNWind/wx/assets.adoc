@@ -1,0 +1,64 @@
+# Assets
+
+### This is a list of large data files which are referenced in this folder but not stored directly in the repository.
+
+
+include::assets_info.adoc[]
+
+[width = "80%", cols = "5,2,2", options = "header"]
+|=========================================================
+| Link | Size | Last Modified
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210722T2300.json[ S3: WX_20210722T2300.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210722T2300.json[ OGC: WX_20210722T2300.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0000.json[ S3: WX_20210723T0000.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0000.json[ OGC: WX_20210723T0000.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0100.json[ S3: WX_20210723T0100.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0100.json[ OGC: WX_20210723T0100.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0200.json[ S3: WX_20210723T0200.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0200.json[ OGC: WX_20210723T0200.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0300.json[ S3: WX_20210723T0300.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0300.json[ OGC: WX_20210723T0300.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0400.json[ S3: WX_20210723T0400.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0400.json[ OGC: WX_20210723T0400.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0500.json[ S3: WX_20210723T0500.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0500.json[ OGC: WX_20210723T0500.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0600.json[ S3: WX_20210723T0600.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0600.json[ OGC: WX_20210723T0600.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0700.json[ S3: WX_20210723T0700.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0700.json[ OGC: WX_20210723T0700.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0800.json[ S3: WX_20210723T0800.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0800.json[ OGC: WX_20210723T0800.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T0900.json[ S3: WX_20210723T0900.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T0900.json[ OGC: WX_20210723T0900.json ] | 19 kb | 8/30/2021  9:05 PM
+
+| https://geopose1data.s3.amazonaws.com/Data/Examples/GNWind/wx/WX_20210723T1000.json[ S3: WX_20210723T1000.json ] 
+ or 
+  https://data.ogc.org/geopose-swg/Data/Examples/GNWind/wx/WX_20210723T1000.json[ OGC: WX_20210723T1000.json ] | 19 kb | 8/30/2021  9:05 PM
+
+
+
+
+|=========================================================
+ 
