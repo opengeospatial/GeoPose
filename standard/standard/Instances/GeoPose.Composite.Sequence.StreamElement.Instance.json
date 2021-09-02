@@ -3,8 +3,8 @@
     "frame": {
       "authority": "/geopose/1.0",
       "id": "RotateTranslate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.51304, -0.17232, 0.26774, 0.79713]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&rotation=[-0.90510, 0.20057, -0.08112, 0.36605]"
     },
-    "validTime": 1629069964473
+    "validTime": 1630560671474
   }
 }
