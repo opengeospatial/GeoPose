@@ -10,8 +10,8 @@
 [[req_tangent_plane_parameters_latitude]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement SDU-{counter:req-sdu-id}* |*/req/sdu/tangent_plane/latiitude* 
-^|Requirement |An instance of GeoPose tangentPoint.longitude attribute shall be expressed as a real number.
+^|*Requirement SDU-{counter:req-sdu-id}* |*/req/sdu/tangent_plane/latitude* 
+^|Requirement |An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.
 ^|ID |<<req_basic_quaternion,/req/sdu/tangent_plane/latitude>>
 |===
 
@@ -19,6 +19,6 @@
 [width="90%",cols="2,6"]
 |===
 ^|*Requirement SDU-{counter:req-sdu-id}* |*/req/sdu/tangent_plane/height* 
-^|Requirement |An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.
+^|Requirement |An instance of a GeoPose tangentPoint.height attribute shall be expressed as a real number.
 ^|ID |<<req_basic_quaternion,/req/sdu/tangent_plane/height>>
 |===
