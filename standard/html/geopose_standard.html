@@ -469,7 +469,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}" class="bare">http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    21-056</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    21-056r2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0</p></td>
@@ -623,6 +623,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_core">7.2.1. Core</a></li>
 <li><a href="#_time">7.2.2. Time</a></li>
 <li><a href="#_sequence">7.2.3. Sequence</a></li>
+<li><a href="#_targets">7.2.4. Targets</a></li>
 </ul>
 </li>
 <li><a href="#_structural_data_units_normative">7.3. Structural Data Units (Normative)</a>
@@ -1656,7 +1657,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="title">Note</div>
 </td>
 <td class="content">
-The following will move to the Conformance section.
+The following is duplicated in the Conformance section.
 </td>
 </tr>
 </table>
@@ -1674,7 +1675,7 @@ The following will move to the Conformance section.
 <p>Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: <strong>Basic-YPR</strong> Target</p>
 </li>
 <li>
-<p>Orientation by quaternion: <strong>Basic-Quaternion</strong> Target</p>
+<p>Orientation by unit quaternion: <strong>Basic-Quaternion</strong> Target</p>
 </li>
 </ol>
 </div>
@@ -1763,25 +1764,17 @@ Only EBNF-derived diagrams (and not even all of them yet) are in the SDU section
 <p>The Logical Model, expressed in UML static class diagrams, is the normative definition of the various data elements that are either GeoPose instances or groupings of GeoPose instances in composite structures. The detailed expression of elements from the UML model are specified in top level "structural" requirements as Structural Data Units (SDUs), which are terminal symbols in an Extended Backus-Naur Form production system. The SDUs are then expressed in one or more serialization or encoding formats, and there is one requirement per mapping from SDU to a specific encoding, such as JSON.</p>
 </div>
 <div class="paragraph">
-<p>The normative expression of the UML model is a Sparx Systems Enterprise Explorer project ("eap") file, made available <strong>link goes here</strong> by OGC.</p>
+<p>The normative expression of the UML model is a Sparx Systems Enterprise Explorer
+<a href="https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/Model.eapx">project ("eapx")file</a>.</p>
 </div>
 <div class="paragraph">
-<p>The Logical Model consists of three packages: Core, Time, and Sequence. The Basic GeoPose targets rely on only the Core package. The Advanced GeoPose also incorporates the Time Package. Composite GeoPoses incorporate all three Packages.</p>
+<p>The Logical Model consists of four top-level packages: Core, Time, Sequence, and Targets. The Targets package contains two detail packages: Basic and Composite. The Composite package is in turn subdivided into a Linked package and a Sequence package.The Basic GeoPose targets depend on only the Core package. The Advanced GeoPose target also depends on the Time Package. Composite GeoPoses depend on all four top-level packages.</p>
 </div>
 <div class="paragraph">
-<p>The coloring of the classes indicates whther they are normative in terms of concrete structural data units (SDUs) or the corresponding encodings (blue),  provide context for interpreting the SDUs (light yellow), or represent data types (bright yellow).</p>
+<p>The coloring of the classes indicates their role in the logical design. Note that the classes and data types defined in the Target packages are the source of structural data units (SDUs) that may be realized as concrete data objects.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Implementers of software using encoded SDUs must agree with the logical description of the blue model elements. The other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. Therefore the SDUs for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Stated another way, an implementation is free to use any internal representation needed for efficient implementation but the interpretation of the data objects themselves must conform to the standard, including the Logical Model.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Implementers of software using encoded SDUs shall conform to the logical description of the yellow model elements. The other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. The classes for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Concrete data objects created as implementations of this standard shall conform to the standard, including all dependent or inherited classes, attributes, associations, multiplicities, and data types in the Logical Model.</p>
 </div>
 <div class="sect3">
 <h4 id="_core"><a class="anchor" href="#_core"></a>7.2.1. Core</h4>
@@ -1798,12 +1791,8 @@ Implementers of software using encoded SDUs must agree with the logical descript
 <p>The time logical model is based on the
 <a href="https://www.w3.org/TR/2020/CR-owl-time-20200326/">OWL Time</a> document.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time, limited to seconds of UNIX Time.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to milliseconds of UNIX Time.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="models/Logical_time.png" alt="Logical time"></span></p>
@@ -1816,6 +1805,30 @@ Implementers of software using encoded SDUs must agree with the logical descript
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="models/Logical_Sequence.png" alt="Logical Sequence"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_targets"><a class="anchor" href="#_targets"></a>7.2.4. Targets</h4>
+<div class="paragraph">
+<p>The Logical Model&#8217;s Targets packages specify the design of logical data objects and data types that are directly expressed in GeoPose data objects.</p>
+</div>
+<div class="paragraph">
+<p>The two Basic and the Advanced GeoPoses represent single GeoPose objects.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="models/Logical_Target_Basic_Advanced.png" alt="Logical Target Basic Advanced"></span></p>
+</div>
+<div class="paragraph">
+<p>The Chain and the Graph GeoPose composite structures represent linear or branching frame transformation relationships, respectively.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="models/Logical_Target_Linked.png" alt="Linked"></span></p>
+</div>
+<div class="paragraph">
+<p>The Stream and the two Series composite structures represent a time series of a single evolving GeoPose.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="models/Logical_Target_Sequence.png" alt="Logical Target Sequence"></span></p>
 </div>
 </div>
 </div>
@@ -1940,11 +1953,11 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement SDU-2</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/sdu/tangent_plane/latiitude</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/sdu/tangent_plane/latitude</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.longitude attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -1964,7 +1977,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.height attribute shall be expressed as a real number.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2006,6 +2019,68 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </div>
 <div class="paragraph">
 <p><strong>Structure (Normative)</strong></p>
+</div>
+<div class="paragraph">
+<p>There shall be eight independent Standardization Targets. Each specifically addresses the requirements of specific use cases. There is no dependency between or among the individual Targets.</p>
+</div>
+<div class="paragraph">
+<p>A conforming implementation may implement any or all of the individual Targets.  oThe Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Basic - Satisfy most use cases</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: <strong>Basic-YPR</strong> Target</p>
+</li>
+<li>
+<p>Orientation by unit quaternion: <strong>Basic-Quaternion</strong> Target</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Configurable - Flexible enough for complex use cases: <strong>Advanced</strong> Target</p>
+</li>
+<li>
+<p>Composite - Efficient structures for linked and sequential GeoPoses</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Linked linear sequence of poses: <strong>Chain</strong> Target</p>
+</li>
+<li>
+<p>General linked poses: <strong>Graph</strong> Target</p>
+</li>
+<li>
+<p>Sequence</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Series</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>Timeseries with constant time spacing: <strong>Regular</strong> Timeseries Target</p>
+</li>
+<li>
+<p>Timeseries with per-GeoPose time: <strong>Irregular</strong> Timeseries Target</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Open-ended sequence of time-stamped GeoPoses: <strong>Stream</strong> Target</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 <table id="req_basic_ypr" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2061,11 +2136,11 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement SDU-6</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/sdu/tangent_plane/latiitude</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/sdu/tangent_plane/latitude</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.longitude attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2085,7 +2160,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.height attribute shall be expressed as a real number.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2464,10 +2539,10 @@ Two JSON encodings are defined for the Basic-Quaternion Target:
     "h": 11.5
   },
   "quaternion": {
-    "x": -0.17231894920559634,
-    "y": 0.26775440295008673,
-    "z": 0.7971382399657011,
-    "w": -0.513014995716408
+    "x": 0.20054473382601948,
+    "y": -0.08111675703887213,
+    "z": 0.3660908114262869,
+    "w": -0.9050852994339209
   }
 }</pre>
 </div>
@@ -2571,6 +2646,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 }</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Instance (Informative)</strong></p>
 </div>
@@ -2583,10 +2659,10 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
     "h": 11.5
   },
   "quaternion": {
-    "x": -0.17231894920559634,
-    "y": 0.26775440295008673,
-    "z": 0.7971382399657011,
-    "w": -0.513014995716408
+    "x": 0.20054473382601948,
+    "y": -0.08111675703887213,
+    "z": 0.3660908114262869,
+    "w": -0.9050852994339209
   }
 }</pre>
 </div>
@@ -2689,6 +2765,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 }</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Instance (Informative)</strong></p>
 </div>
@@ -2701,8 +2778,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
     "h": 11.5
   },
   "angles": {
-    "yaw": 4.285277405252578,
-    "pitch": 0.6481077793508073,
+    "yaw": 5.514456741060452,
+    "pitch": -0.43610515937237904,
     "roll": 0.0
   }
 }</pre>
@@ -2797,6 +2874,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 }</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Instance</strong></p>
 </div>
@@ -2809,12 +2887,12 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
     "parameters": "longitude=-122.3000000&amp;latitude=47.7000000&amp;height=11.000"
   },
   "quaternion": {
-    "x": -0.17231765016918996,
-    "y": 0.2677403307701769,
-    "z": 0.7971312701730698,
-    "w": -0.513033605947518
+    "x": 0.20056154657066608,
+    "y": -0.08111602541464237,
+    "z": 0.36606032744426537,
+    "w": -0.9050939692261301
   },
-  "validTime": 1629069964274
+  "validTime": 1630560671227
 }</pre>
 </div>
 </div>
@@ -2890,6 +2968,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
   },
   "type": "object",
   "properties": {
+    "validTime": {
+      "type": "integer"
+    },
     "frameList": {
       "type": "array",
       "items": {
@@ -2906,18 +2987,21 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
     }
   },
   "required": [
+    "validTime",
     "frameList",
     "transformList"
   ]
 }</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Instance</strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>{
+  "validTime": 1630560671313,
   "frameList": [
     {
       "authority": "/geopose/1.0",
@@ -3089,13 +3173,14 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 }</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Instance</strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>{
-  "validTime": 1629069964331,
+  "validTime": 1630560671263,
   "outerFrame": {
     "authority": "/geopose/1.0",
     "id": "/Extrinsic/LTP-ENU",
@@ -3286,6 +3371,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 }</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Instance</strong></p>
 </div>
@@ -3295,8 +3381,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
   "header": {
     "poseCount": 2,
     "integrityCheck": "{\"SHA256\": \"5556fb65f8bf9eddb3ace1329c9a6aeedd4833409965aeee3e6b61ed21f47858\"}",
-    "startInstant": 1629069964392,
-    "stopInstant": 1629070009392,
+    "startInstant": 1630560671367,
+    "stopInstant": 1630560716367,
     "transitionModel": {
       "authority": "/geopose/1.0",
       "id": "none",
@@ -3490,6 +3576,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 }</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Instance</strong></p>
 </div>
@@ -3499,8 +3586,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
   "header": {
     "poseCount": 2,
     "integrityCheck": "{\"SHA256\": \"5556fb65f8bf9eddb3ace1329c9a6aeedd4833409965aeee3e6b61ed21f47858\"}",
-    "startInstant": 1629069964434,
-    "stopInstant": 1629070009434,
+    "startInstant": 1630560671429,
+    "stopInstant": 1630560716429,
     "transitionModel": {
       "authority": "/geopose/1.0",
       "id": "none",
@@ -3519,7 +3606,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "id": "RotateTranslate",
         "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1629069964434
+      "validTime": 1630560671429
     },
     {
       "frame": {
@@ -3527,7 +3614,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "id": "RotateTranslate",
         "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1629069964434
+      "validTime": 1630560671429
     },
     {
       "frame": {
@@ -3535,7 +3622,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "id": "RotateTranslate",
         "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[1.0, 0.0, 0.0, 0.5]"
       },
-      "validTime": 1629069964434
+      "validTime": 1630560671429
     }
   ],
   "trailer": {
@@ -3797,6 +3884,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 }</pre>
 </div>
 </div>
+<div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Instance</strong></p>
 </div>
@@ -3829,9 +3917,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
     "frame": {
       "authority": "/geopose/1.0",
       "id": "RotateTranslate",
-      "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.51304, -0.17232, 0.26774, 0.79713]"
+      "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.90510, 0.20057, -0.08112, 0.36605]"
     },
-    "validTime": 1629069964473
+    "validTime": 1630560671474
   }
 }</pre>
 </div>
@@ -3860,9 +3948,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.51304, -0.17232, 0.26774, 0.79713]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.90510, 0.20057, -0.08112, 0.36605]"
         },
-        "validTime": 1629069964473
+        "validTime": 1630560671474
       }
     },
     {
@@ -3870,9 +3958,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.51492, -0.17218, 0.26631, 0.79642]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.90566, 0.20166, -0.08106, 0.36406]"
         },
-        "validTime": 1629069976818
+        "validTime": 1630560683820
       }
     },
     {
@@ -3880,9 +3968,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
         "frame": {
           "authority": "/geopose/1.0",
           "id": "RotateTranslate",
-          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.51679, -0.17204, 0.26489, 0.79572]"
+          "parameters": "translation=[0.0, 0.0, 0.0]&amp;rotation=[-0.90622, 0.20275, -0.08101, 0.36207]"
         },
-        "validTime": 1629069989163
+        "validTime": 1630560696165
       }
     }
   ]
@@ -4595,6 +4683,20 @@ A reference level from which elevation or altitude can be measured. The Topograp
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">assigned doc number 21-056</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2021-08-26</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.5</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">doc number 21-056r1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2021-09-08</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">0.6</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Steve Smyth</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">doc number 21-056r2</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -4652,7 +4754,7 @@ A reference level from which elevation or altitude can be measured. The Topograp
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-08-26 20:24:55 -0700
+Last updated 2021-09-08 19:59:30 -0700
 </div>
 </div>
 </body>
