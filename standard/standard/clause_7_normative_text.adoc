@@ -3,13 +3,13 @@
 The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification. 
 
 [NOTE]
-The following will move to the Conformance section.
+The following is duplicated in the Conformance section.
 
 There are eight independent Standardization Targets to specifically address the requirements of individual use cases. The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:
 
 . Basic - Satisfy most use cases
 .. Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
-.. Orientation by quaternion: *Basic-Quaternion* Target
+.. Orientation by unit quaternion: *Basic-Quaternion* Target
 . Configurable - Flexible enough for complex use cases: *Advanced* Target
 . Composite - Efficient structures for linked and sequential GeoPoses
 .. Linked linear sequence of poses: *Chain* Target
@@ -44,35 +44,52 @@ Only EBNF-derived diagrams (and not even all of them yet) are in the SDU section
 
 The Logical Model, expressed in UML static class diagrams, is the normative definition of the various data elements that are either GeoPose instances or groupings of GeoPose instances in composite structures. The detailed expression of elements from the UML model are specified in top level "structural" requirements as Structural Data Units (SDUs), which are terminal symbols in an Extended Backus-Naur Form production system. The SDUs are then expressed in one or more serialization or encoding formats, and there is one requirement per mapping from SDU to a specific encoding, such as JSON.
 
-The normative expression of the UML model is a Sparx Systems Enterprise Explorer project ("eap") file, made available **link goes here** by OGC.
+The normative expression of the UML model is a Sparx Systems Enterprise Explorer
+link:https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/Model.eapx[project ("eapx")file].
 
-The Logical Model consists of three packages: Core, Time, and Sequence. The Basic GeoPose targets rely on only the Core package. The Advanced GeoPose also incorporates the Time Package. Composite GeoPoses incorporate all three Packages.
+The Logical Model consists of four top-level packages: Core, Time, Sequence, and Targets. The Targets package contains two detail packages: Basic and Composite. The Composite package is in turn subdivided into a Linked package and a Sequence package.The Basic GeoPose targets depend on only the Core package. The Advanced GeoPose target also depends on the Time Package. Composite GeoPoses depend on all four top-level packages.
 
-The coloring of the classes indicates whther they are normative in terms of concrete structural data units (SDUs) or the corresponding encodings (blue),  provide context for interpreting the SDUs (light yellow), or represent data types (bright yellow). 
+The coloring of the classes indicates their role in the logical design. Note that the classes and data types defined in the Target packages are the source of structural data units (SDUs) that may be realized as concrete data objects.  
 
-[NOTE]
-Implementers of software using encoded SDUs must agree with the logical description of the blue model elements. The other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. Therefore the SDUs for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Stated another way, an implementation is free to use any internal representation needed for efficient implementation but the interpretation of the data objects themselves must conform to the standard, including the Logical Model.
+Implementers of software using encoded SDUs shall conform to the logical description of the yellow model elements. The other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. The classes for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Concrete data objects created as implementations of this standard shall conform to the standard, including all dependent or inherited classes, attributes, associations, multiplicities, and data types in the Logical Model.
 
 ==== Core
 
 The Logical Model Core contains the essential elements specific to the GeoPose conceived as a transformation between an anchoring Outer Frame and one or more derived Inner Frames.
 
-image:models/Logical_Core.png[]
+image:models/Logical_Core.png[align="center"]
 
 ==== Time
 
 The time logical model is based on the 
 link:https://www.w3.org/TR/2020/CR-owl-time-20200326/[OWL Time] document.
 
-. Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time, limited to seconds of UNIX Time.
+Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to milliseconds of UNIX Time.
 
-image:models/Logical_time.png[]
+image:models/Logical_time.png[align="center"]
 
 ==== Sequence
 
 The sequence logical model is a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same Outer frame and there is a time-dependent changing inner frame.
 
-image:models/Logical_Sequence.png[]
+image:models/Logical_Sequence.png[align="center"]
+
+==== Targets
+
+The Logical Model's Targets packages specify the design of logical data objects and data types that are directly expressed in GeoPose data objects.  
+
+The two Basic and the Advanced GeoPoses represent single GeoPose objects.
+
+image:models/Logical_Target_Basic_Advanced.png[align="center"]
+
+The Chain and the Graph GeoPose composite structures represent linear or branching frame transformation relationships, respectively.
+
+image:models/Logical_Target_Linked.png[Linked,align="center"]
+
+The Stream and the two Series composite structures represent a time series of a single evolving GeoPose.
+
+image:models/Logical_Target_Sequence.png[align="center"]
+
 
 
 === Structural Data Units (Normative)
@@ -125,6 +142,23 @@ The Basic-YPR GeoPose uses a rotation-only transformation from a WGS-84-referenc
 The Basic-YPR Target consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. Note that this is equivalent to a Generic Frame Specification, with the authority and ID as described above. The Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles. 
 
 *Structure (Normative)*
+
+There shall be eight independent Standardization Targets. Each specifically addresses the requirements of specific use cases. There is no dependency between or among the individual Targets.
+
+A conforming implementation may implement any or all of the individual Targets.  oThe Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:
+
+. Basic - Satisfy most use cases
+.. Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
+.. Orientation by unit quaternion: *Basic-Quaternion* Target
+. Configurable - Flexible enough for complex use cases: *Advanced* Target
+. Composite - Efficient structures for linked and sequential GeoPoses
+.. Linked linear sequence of poses: *Chain* Target
+.. General linked poses: *Graph* Target
+.. Sequence
+... Series
+.... Timeseries with constant time spacing: *Regular* Timeseries Target
+.... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
+... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
 
 [[req_basic_ypr]]
 [width="90%",cols="2,6"]
@@ -301,6 +335,8 @@ include::requirements/target/basic-q/req_basic_quaternion.adoc[]
 include::schemata/GeoPose.Basic.Quaternion.Schema.json[]
 ----
 
+<<<
+
 *Instance (Informative)*
 
 ----
@@ -319,6 +355,8 @@ include::requirements/target/basic-e/req_basic_euler.adoc[]
 ----
 include::schemata/GeoPose.Basic.YPR.Schema.json[]
 ----
+
+<<<
 
 *Instance (Informative)*
 
@@ -339,6 +377,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 ----
 include::schemata/GeoPose.Advanced.Schema.json[]
 ----
+
+<<<
 
 *Instance*
 
@@ -361,6 +401,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 include::schemata/GeoPose.Composite.Graph.Schema.json[]
 ----
 
+<<<
+
 *Instance*
 
 ----
@@ -382,6 +424,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 include::schemata/GeoPose.Composite.Chain.Schema.json[]
 ----
 
+<<<
+
 *Instance*
 
 ----
@@ -400,6 +444,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 ----
 include::schemata/GeoPose.Composite.Sequence.Series.Regular.Schema.json[]
 ----
+
+<<<
 
 *Instance*
 
@@ -420,6 +466,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 ----
 include::schemata/GeoPose.Composite.Sequence.Series.Irregular.Schema.json[]
 ----
+
+<<<
 
 *Instance*
 
@@ -455,6 +503,8 @@ JSON encoding of a recorded Stream:
 ----
 include::schemata/GeoPose.Composite.Sequence.Stream.Schema.json[]
 ----
+
+<<<
 
 *Instance*
 
