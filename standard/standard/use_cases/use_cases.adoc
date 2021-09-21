@@ -1,4 +1,6 @@
-[[use_case_summary]]
+
+
+[[test_bookmark]]
 
 The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPoses is to convey the location and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of GeoPoses in a common geographic reference frame.
 

@@ -10,6 +10,8 @@ Of course, GeoPose must incorporate or align with other relevant existing standa
 
 image::diagram/OGC_Process_Detail.png[caption="Figure 6.1: ",title=     "Document Structure Overview",  align="center"]
 
+[[use_case_summary]]
+
 === Use Case Summary
 
 include::use_cases/use_cases.adoc[]
