@@ -106,6 +106,8 @@ This is where the mapping of elements of the Logical Data Model to SDUs is speci
 Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets. One alternative could be to make all of the requirements on SDUs separately, and then have some language that requires conformance and implementation only for the Targets implemented. Within the document, the SDU requirements are in separate files, included when appropriate in the sections for each of the Targets. This insures that the texts will be identical, even if it is not transparently obvious in the standard.
 The GeoPose Standard requires a specific method for the mapping of each data element from the logical model to SDUs. There are parallel requirements for encoding groups of SDUs in for each encoding. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.
 
+[[standardization_targets]]
+
 ==== Standardization Target 1: Basic-Quaternion
 
 The Basic-Quaternion GeoPose has an EPSG-4979 (WGS-84 with height above ellipsoid) outer frame and an oriented (rotated) local tangent plane east-north-up (LTP-ENU) coordinate system. The rotation is specified with four components of a normalized quaternion.
