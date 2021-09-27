@@ -1,0 +1,8 @@
+
+[[req_basic_eulerangle]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement BE-{counter:req-be-id}* |*/req/basic/YPRAngle/JSON_Encoding* 
+^|Requirement |A JSON-encoded Basic-YPR GeoPose shall conform to the Basic-YPR JSON-Schema 2019-9 definition.
+^|ID |<<req_basic_YPRangle_json,/req/basic/YPRAngle/JSON_Encoding>>
+|===

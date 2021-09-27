@@ -2,7 +2,9 @@
 
 [[test_bookmark]]
 
-The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPoses is to convey the location and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of GeoPoses in a common geographic reference frame.
+The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPoses is to convey the position and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of related GeoPoses in a common geographic reference frame.
+
+Each use case is identified by a unique ID, has a brief description, and a list of the relevant <<def_standardization_targets,**Standardization Targets**>>
 
 ==== Augmented and Mixed Reality [AR]
 
@@ -48,7 +50,7 @@ Basic-YPR, Basic-Quaternion,
 
 ==== Autonomous Vehicles [AV]
 
-**Description**: Autonomous vehicles are mobile objects that move through water, across a water surface, in the air, through the solid earth (tunnel boring machine), on the land surface, or in outer space without real-time control by an independent onboard operator. A pose captures the essential information in locating and orienting a moving object. Sensors attached to mobile elements have their own poses and a chain of reference frame transformations enables common reference frames to be used for data fusion. The possibility of relating the vehicle to other elements of the environment via a common reference frame is essential.
+**Description**: Autonomous vehicles are mobile objects that move through water, across a water surface, in the air, through the solid earth (tunnel boring machine), on the land surface, or in outer space without real-time control by an independent onboard operator. A pose captures the essential information in positioning and orienting a moving object. Sensors attached to mobile elements have their own poses and a chain of reference frame transformations enables common reference frames to be used for data fusion. The possibility of relating the vehicle to other elements of the environment via a common reference frame is essential.
 
 [%header,cols="2,5,2"] 
 |===
@@ -71,7 +73,7 @@ Basic-YPR, Basic-Quaternion,
 |===
  
 ==== Built Environment: [BE]
-**Description**: The built environment consists of objects constructed by humans and located in physical space. Buildings, roads, dams, railways, and underground utilities are all part of the built environment. The location and orientation of built objects, especially those whose view is occluded by other objests is essential information needed for human interaction with the built environment. A common reference frame tied to the earth's surface facilitates the integration of these objects when their representations are supplied by different sources.
+**Description**: The built environment consists of objects constructed by humans and located in physical space. Buildings, roads, dams, railways, and underground utilities are all part of the built environment. The location and orientation of built objects, especially those whose view is occluded by other objects is essential information needed for human interaction with the built environment. A common reference frame tied to the earth's surface facilitates the integration of these objects when their representations are supplied by different sources.
 
 [%header,cols="2,5,2"] 
 |===
@@ -80,7 +82,7 @@ Basic-YPR, Basic-Quaternion,
 |Standardization Target
 
 |/geopose/1.0/use_case/be/01
-|Specify the precise position and orientation of objects including both those visible to  and those hidden from the user’s view (e.g. underground, embedded in walls or ceilings)
+|Specify the position and orientation of visible objects and objects that are underground or hidden within a construction. 
 |Basic-YPR, Basic-Quaternion
 
 |/geopose/1.0/use_case/be/02
