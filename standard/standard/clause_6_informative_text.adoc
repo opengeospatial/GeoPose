@@ -2,7 +2,7 @@
 
 === Document Structure
 
-The structure of the GeoPose  specification flows from use cases to the JSON-Schema specification of the eight GeoPose data object types. A conceptual domain of discourse comprehensive enough to support those use cases, a realization of a portion of that conceptual domain with an implementation-neutral but specific and normative logical data model expressed in UML, and the normative derivation of specific structural data units that represent abstract implementation and standardization targets. These structural data units are independent of serialization or encoding format. GeoPose Version 1.0 specifies one realization of the SDUs as JavaScript Object Notation (JSON).
+The structure of the GeoPose specification flows from use cases to the JSON-Schema specification of the eight GeoPose data object types. A conceptual domain of discourse comprehensive enough to support those use cases, a realization of a portion of that conceptual domain with an implementation-neutral but specific and normative logical data model expressed in UML, and the normative derivation of specific structural data units that represent abstract implementation and standardization targets. These structural data units are independent of serialization or encoding format. GeoPose Version 1.0 specifies one realization of the SDUs as JavaScript Object Notation (JSON).
 
 A key idea is that specific use cases are tied to the standardization targets. The part of the Standard that prescribes the structure and content of GeoPose data objects. These use cases are linked to these data objects as well as implementation examples that appear in other documents.
 
