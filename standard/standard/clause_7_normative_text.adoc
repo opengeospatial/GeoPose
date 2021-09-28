@@ -135,7 +135,8 @@ image:diagram/Basic-Q-SDxUs.PNG[]
 include::requirements/sdu/Req_SDU_TangentPlaneParameters.adoc[]
 
 include::requirements/sdu/Req_SDU_Quaternion.adoc[]
-YPR 
+
+==== Standardization Target 2: Basic-YPR
 
 The Basic-YPR GeoPose uses a rotation-only transformation from a WGS-84-referenced local tangent plane east-north-up coordinate system. The rotation is specified as Yaw, Pitch, and Roll angles. Yaw is rotation about the LTP-ENU frame Z (up) axis. Pitch is rotation about the y axis of the yaw-rotated local frame. Roll is rotation about the yaw and pitch rotated x axis of the local frame. 
 
