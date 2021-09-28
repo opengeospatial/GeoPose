@@ -19,7 +19,7 @@
 |Approval Date:   <yyyy-mm-dd>
 |Publication Date:   <yyyy-mm-dd>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
-|Internal reference number of this OGC(R) document:    21-056r3 
+|Internal reference number of this OGC(R) document:    21-056r4 
 |Version: 1.0
 |Category: OGC(R) Implementation
 |Editor:   Carl Stephen Smyth
