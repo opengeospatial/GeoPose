@@ -1,0 +1,14 @@
+# GeoPose  Visual Velocimetry
+
+Visual velocimetry is a technique to produce a field of surface velocity vectors, i.e. positions, orientations, and an associated speed by automated comparison of successive images in a time sequence of views of the surface of a moving body of water, such as a river. This folder contains time sequences of views of a fast-moving river and a small part of a lake, with a small wind-induced surface current and superimposed waves.
+
+Some of the series are with a moving camera position and some have a stationary camera position. It is often possible to extract velocity vectors even with a moving sensor. The plan is to derive these vectors and package them as GeoPose data objects.
+
+
+
+link:https://youtu.be/R0GZWrLVdAk[Snoqualmie River - 20 October 2021]
+
+link:https://youtu.be/ivMtyN10WPg[Snoqualmie River - 20 October 2021]
+
+link:https://youtu.be/CB10_a4Ebp0[Snoqualmie River - 20 October 2021]
+
