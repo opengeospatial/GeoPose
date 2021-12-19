@@ -4,18 +4,94 @@
 = Bibliography
 
 [NOTE] 
-Under construction
+Under construction - now an organized framework. Brining in pieces from main text and from RFC comments.
+
+== .
 
 
 
+=== Extended Backus-Naur Form (EBNF)
 
+[[EBNF]]
+[nn] ISO/IEC 14977:1996 (Last reviewed and confirmed in 2018)
+Information technology — Syntactic metalanguage — Extended BNF
+https://www.iso.org/standard/26153.html 
 
-[[OGC2015]]
-[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).
+=== JSON and JSON-Schema
+
+[[json]]
+[nn] Bray, T., Ed., "The JavaScript Object Notation (JSON) Data Interchange Format", STD 90, RFC 8259, December 2017, <https://www.rfc-editor.org/info/std90>.
+https://www.rfc-editor.org/info/std90 
+
+[[json-schema-core]]
+[nn] H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09"  <https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8> 
+ 
+
+[[json-schema-validation]]
+[nn] A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. <https://tools.ietf.org/html/draft-handrews-json-schema-validation-02>
+
+=== Pose
+
+pose ref
+
+scene graph ref
+
+ros ref
+
+glTF
+
+=== Position
+
+ref
+
+ref
+
+=== Reference Frames and Coordinate Reference Systems
+
+nasa spice, epsg/r lott , ogc wkt, srm, 
+
+ref from physics
+
+ref from surveying
+
+ref from space
+
+ref from M&S
+
+iso 18026
+
+iso 19162
+
+=== Rotation and Orientation
 
 [[HAM1844]]
 [2] HAMILTON, SIR WILLIAM ROWAN, "On quaternions; or on a new system of imaginaries in algebra," Philosophical Magazine xxv pp. 10-13 (July 1844).
 
 [[WIKIQUAT]]
 [3] Quaternion. (2021, July 23). In Wikipedia. https://en.wikipedia.org/wiki/Quaternion 
+
+ref on euler angles
+
+ref on ypr
+
+i3s
+
+3d tiles
+
+=== Other
+
+[[OGC2015]]
+[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).
+
+IEEE 1278 DIS ref
+
+OGC Testbed-14: CityGML and AR Engineering Report ( https://docs.ogc.org/per/18-025.html )
+
+Interoperable Simulation and Gaming Sprint Engineering Report ( http://docs.ogc.org/per/20-087.html )
+
+ISG Year 2 ER ( https://github.com/opengeospatial/OGC-ISG-Sprint-Sep-2020/tree/master/Sprint%20Report -- not yet published )
+
+GeoVolumes charter ( https://portal.ogc.org/files/97171 )
+
+CDB
 
