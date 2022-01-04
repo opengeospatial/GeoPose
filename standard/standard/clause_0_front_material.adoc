@@ -1,4 +1,3 @@
-cd ..\..
 [big]*i.     Abstract*
 
 GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The standard specifies two Basic forms with no configuration options for common use cases, an Advanced form with more flexibility for more complex applications, and five composite GeoPose structures that support time series plus chain and graph structures.
@@ -87,4 +86,4 @@ The following individuals contributed to the GeoPose 1.0 development:
 
 [big]*vii.    Acknowledgements*
 
-The GeoPose SWG wishes to thank the 3D Information Management (3DIM) Working Group of the OGC as well as Augmented City, Immersal, Trevor F. Smith, Transmutable, ...
+The GeoPose SWG wishes to thank the 3D Information Management (3DIM) Working Group of the OGC as well as Augmented City, Immersal, Trevor F. Smith, Transmutable, Khronos Group, SEDRIS, Roger Lott and Chris Little for their support and insight.

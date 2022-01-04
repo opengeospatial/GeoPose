@@ -2,7 +2,7 @@
 
 ==== .Basic-Euler Conformance Class
 
-include::Basic/ATS_Basic_Euler.adoc[]
+include::Basic/ATS_Basic_YPR.adoc[]
 
 ==== .Basic-Quaternion (Strict) Conformance Class
 
