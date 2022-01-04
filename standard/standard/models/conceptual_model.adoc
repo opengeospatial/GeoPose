@@ -31,14 +31,14 @@ Defined terms are in bold caps. Underlined and bolded terms are linked to the de
 
 [[def_Reference_Frame]]A **(reference) frame** is a system of location and measurement often defined by a <<def_Frame_Specification,**frame specification**>> usually including a coordinate system to be used within a corresponding space. 
 
-[[def_FrameTransform]]A **frame transform** consists of a pair of <<def_Reference_Frame, **reference frames**>> and a bi-continuous coordinate transformation relating points in the corresponding spaces. The two **frames** are called <<def_OuterFrame,**outer frame**>> (domain) and <<def_InnerFrame,**inner frame**>> (range). [The corresponding names in the NASA SPICE system are (*from* <<def_Reference_Frame, **frame**>> (domain) and (*to* <<def_Reference_Frame, **frame**>> (range).] Only an <<def_OuterFrame,**outer frame**>> may have an <<def_ExtrinsicSpecification, **extrinsic specification**>>. [A **frame transform** functions as a directed edge in a <<def_FrameGraph, **frame graph**>> representation of the transformational relationship between <<def_Reference_Frame, **frames**>>.]
+[[def_FrameTransform]]A **frame transform** consists of a pair of <<def_Reference_Frame, **reference frames**>> and a bi-continuous coordinate transformation relating points in the corresponding spaces. The two **frames** are called <<def_OuterFrame,**outer frame**>> (domain) and <<def_InnerFrame,**inner frame**>> (range).  Only an <<def_OuterFrame,**outer frame**>> may have an <<def_ExtrinsicSpecification, **extrinsic specification**>>. [A **frame transform** functions as a directed edge in a <<def_FrameGraph, **frame graph**>> representation of the transformational relationship between <<def_Reference_Frame, **frames**>>.]
 
 [[def_OuterFrame]]An **outer frame** is the first of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>. 
 
 [NOTE]
 In the NASA SPICE system, the <<def_OuterFrame, **outer frame**>> is referred to as the *from* <<def_Frame, **frame**>>. In the ROS SDF documentation, the <<def_OuterFrame, **outer frame**>> is referred to as the *Parent* <<def_Frame, **frame**>>. In ISO 19162, the <<def_OuterFrame, **outer frame**>> is referred to as the *base* <<def_Frame, **frame**>>.
 
-[[def_InnerFrame]]An **inner frame** is the second of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>.   In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to as the *to* <<def_Frame, **frame**>>. An **inner frame** may not be a <<def_TopocentricCoordinates, **topocentric frame**>>.
+[[def_InnerFrame]]An **inner frame** is the second of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>.   An **inner frame** may not be a <<def_TopocentricCoordinates, **topocentric frame**>>.
 
 [NOTE]
 In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to as the *to* <<def_Frame, **frame**>>. In the ROS SDF documentation, the <<def_InnerFrame, **inner frame**>> is referred to as the *child* <<def_Frame, **frame**>>. In ISO 19162, the <<def_InnerFrame, **inner frame**>> is referred to as the *derived* <<def_Frame, **frame**>>.
