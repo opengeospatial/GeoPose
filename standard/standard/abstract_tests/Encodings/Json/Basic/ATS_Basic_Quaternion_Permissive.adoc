@@ -1,4 +1,4 @@
-[[ats_basic_quaternion]]
+[[ats_basic_quaternion_permissive]]
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/ats/basic/quaternion/permissive* 

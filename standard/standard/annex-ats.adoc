@@ -5,11 +5,25 @@
 
 === Introduction
 
-GeoPose 1.0 specifies a eight Standardization Targets using elements of the Logical Model. These elements are Structural Data Units (SDUs). Each SDU is an alias for an element of the Logical Model that will be expressed in concrete data objects encoded using specific serialization technologies. GeoPose 1.0 has a single encoding technology: JavaScript Object Notation (JSON) and the encodings are specified using JSON-Schema. To keep the individual Standardization targets independent, there are some SDU requirements and corresponding conformance tests that appear in more than one conformance class. This structure is based on the judgement that it is easier to understand the independence of the Targets than would be the case if the definitional requirements of the SDUs were factored out and referenced indirectly by individual encodings.
+GeoPose 1.0 specifies a eight Standardization Targets using elements of the Logical Model. These elements are Structural Data Units (SDUs). Each SDU is an alias for an element of the Logical Model that will be expressed in concrete data objects encoded using specific encoding or serialization technologies. Although there is no requirement to do so, GeoPose 1.0 implements a single encoding technology: JavaScript Object Notation (JSON) and the encodings are specified using JSON-Schema-2019-09. To keep the individual Standardization targets independent, there are some SDU requirements and corresponding conformance tests that appear in more than one conformance class. This structure is based on the judgement that it is easier to understand the independence of the Targets than would be the case if the definitional requirements of the SDUs were factored out and referenced indirectly by individual encodings.
 
-include::abstract_tests/ATS_Basic.adoc[]
+=== Structural Data Unit (SDU) Conformance
 
-include::abstract_tests/ATS_Advanced.adoc[]
+There are some universal requirements on values that appear in a concrete implementation using a specific encoding technology. For example, angles may be constrainted to fall within a range of values correponding to a circle. Because these are independent of encoding technology, they are specified here at a logical level. 
 
-include::abstract_tests/ATS_Composite.adoc[]
+include::abstract_tests/structural_data_units/ATS_SDU_Basic.adoc[]
+
+include::abstract_tests/structural_data_units/ATS_SDU_Advanced.adoc[]
+
+include::abstract_tests/structural_data_units/ATS_SDU_Composite.adoc[]
+
+=== Encodings
+
+==== JSON Conformance
+
+include::abstract_tests/encodings/json/ATS_Basic.adoc[]
+
+include::abstract_tests/encodings/json/ATS_Advanced.adoc[]
+
+include::abstract_tests/encodings/json/ATS_Composite.adoc[]
 
