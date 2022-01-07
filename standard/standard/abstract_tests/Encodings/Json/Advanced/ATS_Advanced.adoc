@@ -1,4 +1,4 @@
-[[ats_advanced]]
+[[ats_json_advanced]]
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/ats/advanced* 

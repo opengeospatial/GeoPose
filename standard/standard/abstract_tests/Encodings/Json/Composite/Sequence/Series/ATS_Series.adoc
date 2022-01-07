@@ -1,10 +1,10 @@
 [[ats_composite_sequence_series]]
 [width="90%",cols="2,6"]
 
-==== .. Regular Series Conformance Class
+==== Regular Series JSON Conformance Class
 
 include::regular/ATS_Regular_Series.adoc[]
 
-==== .. Irregular Series Conformance Class
+==== Irregular SeriesJSON Conformance Class
 
 include::irregular/ATS_Irregular_Series.adoc[]

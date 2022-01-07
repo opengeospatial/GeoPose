@@ -1,4 +1,4 @@
-[[ats_composite_graph]]
+[[ats_json_composite_graph]]
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/ats/composite/graph* 

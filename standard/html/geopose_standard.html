@@ -665,12 +665,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_composite_conformance_classes">A.4. Composite Conformance Classes:</a>
 <ul class="sectlevel3">
-<li><a href="#_graph_conformance_class">A.4.1. Graph Conformance Class</a></li>
-<li><a href="#_chain_conformance_class">A.4.2. Chain Conformance Class</a></li>
-<li><a href="#_sequence_conformance_classes">A.4.3. Sequence Conformance Classes:</a></li>
+<li><a href="#_graph_sdu_conformance_class">A.4.1. Graph SDU Conformance Class</a></li>
+<li><a href="#_chain_sdu_conformance_class">A.4.2. Chain SDU Conformance Class</a></li>
+<li><a href="#_sequence_sdu_conformance_classes">A.4.3. Sequence SDU Conformance Classes:</a></li>
 <li><a href="#ats_sequence">A.4.4. Series SDU Conformance Classes:</a></li>
-<li><a href="#ats_composite_sequence_series">A.4.5. Regular Series Conformance Class</a></li>
-<li><a href="#_irregular_series_conformance_class">A.4.6. Irregular Series Conformance Class</a></li>
+<li><a href="#ats_composite_sequence_series">A.4.5. Regular Series SDU Conformance Class</a></li>
+<li><a href="#_irregular_series_sdu_conformance_class">A.4.6. Irregular Series SDU Conformance Class</a></li>
 <li><a href="#_stream_sdu_conformance_class">A.4.7. Stream SDU Conformance Class</a></li>
 </ul>
 </li>
@@ -679,23 +679,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_json_conformance">A.5.1. JSON Conformance</a></li>
 </ul>
 </li>
-<li><a href="#_basic_conformance_classes">A.6. Basic Conformance Classes:</a>
+<li><a href="#_basic_json_conformance_classes">A.6. Basic JSON Conformance Classes:</a>
 <ul class="sectlevel3">
-<li><a href="#_basic_euler_conformance_class">A.6.1. Basic-Euler Conformance Class</a></li>
-<li><a href="#_basic_quaternion_strict_conformance_class">A.6.2. Basic-Quaternion (Strict) Conformance Class</a></li>
-<li><a href="#_basic_quaternion_permissive_conformance_class">A.6.3. Basic-Quaternion (Permissive) Conformance Class</a></li>
+<li><a href="#_basic_euler_json_conformance_class">A.6.1. Basic-Euler JSON Conformance Class</a></li>
+<li><a href="#_basic_quaternion_strict_json_conformance_class">A.6.2. Basic-Quaternion (Strict) JSON Conformance Class</a></li>
+<li><a href="#_basic_quaternion_permissive_json_conformance_class">A.6.3. Basic-Quaternion (Permissive) JSON Conformance Class</a></li>
 </ul>
 </li>
-<li><a href="#_conformance_class_advanced">A.7. Conformance Class Advanced</a></li>
-<li><a href="#_composite_conformance_classes_2">A.8. Composite Conformance Classes:</a>
+<li><a href="#_advanced_json_conformance_class">A.7. Advanced JSON Conformance Class</a></li>
+<li><a href="#_composite_json_conformance_classes">A.8. Composite JSON Conformance Classes:</a>
 <ul class="sectlevel3">
-<li><a href="#_graph_conformance_class_2">A.8.1. . Graph Conformance Class</a></li>
-<li><a href="#_chain_conformance_class_2">A.8.2. . Chain Conformance Class</a></li>
-<li><a href="#_sequence_conformance_classes_2">A.8.3. + Sequence Conformance Classes:</a></li>
-<li><a href="#ats_sequence">A.8.4. ++ Series Conformance Classes:</a></li>
-<li><a href="#ats_composite_sequence_series">A.8.5. .. Regular Series Conformance Class</a></li>
-<li><a href="#_irregular_series_conformance_class_2">A.8.6. .. Irregular Series Conformance Class</a></li>
-<li><a href="#_stream_conformance_class">A.8.7. .. Stream Conformance Class</a></li>
+<li><a href="#_graph_json_conformance_class">A.8.1. Graph JSON Conformance Class</a></li>
+<li><a href="#_chain_json_conformance_class">A.8.2. Chain JSON Conformance Class</a></li>
+<li><a href="#_sequence_json_conformance_classes">A.8.3. Sequence JSON Conformance Classes:</a></li>
+<li><a href="#ats_sequence">A.8.4. Series JSON Conformance Classes:</a></li>
+<li><a href="#ats_composite_sequence_series">A.8.5. Regular Series JSON Conformance Class</a></li>
+<li><a href="#_irregular_seriesjson_conformance_class">A.8.6. Irregular SeriesJSON Conformance Class</a></li>
+<li><a href="#_stream_json_conformance_class">A.8.7. Stream JSON Conformance Class</a></li>
 </ul>
 </li>
 </ul>
@@ -4174,7 +4174,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <div class="sect2">
 <h3 id="_composite_conformance_classes"><a class="anchor" href="#_composite_conformance_classes"></a>A.4. Composite Conformance Classes:</h3>
 <div class="sect3">
-<h4 id="_graph_conformance_class"><a class="anchor" href="#_graph_conformance_class"></a>A.4.1. Graph Conformance Class</h4>
+<h4 id="_graph_sdu_conformance_class"><a class="anchor" href="#_graph_sdu_conformance_class"></a>A.4.1. Graph SDU Conformance Class</h4>
 <table id="ats_composite_graph" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4201,7 +4201,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_chain_conformance_class"><a class="anchor" href="#_chain_conformance_class"></a>A.4.2. Chain Conformance Class</h4>
+<h4 id="_chain_sdu_conformance_class"><a class="anchor" href="#_chain_sdu_conformance_class"></a>A.4.2. Chain SDU Conformance Class</h4>
 <table id="ats_composite_chain" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4228,7 +4228,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_sequence_conformance_classes"><a class="anchor" href="#_sequence_conformance_classes"></a>A.4.3. Sequence Conformance Classes:</h4>
+<h4 id="_sequence_sdu_conformance_classes"><a class="anchor" href="#_sequence_sdu_conformance_classes"></a>A.4.3. Sequence SDU Conformance Classes:</h4>
 
 </div>
 <div class="sect3">
@@ -4236,7 +4236,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 
 </div>
 <div class="sect3">
-<h4 id="ats_composite_sequence_series"><a class="anchor" href="#ats_composite_sequence_series"></a>A.4.5. Regular Series Conformance Class</h4>
+<h4 id="ats_composite_sequence_series"><a class="anchor" href="#ats_composite_sequence_series"></a>A.4.5. Regular Series SDU Conformance Class</h4>
 <table id="ats_composite_sequence_series_regular" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4263,7 +4263,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_irregular_series_conformance_class"><a class="anchor" href="#_irregular_series_conformance_class"></a>A.4.6. Irregular Series Conformance Class</h4>
+<h4 id="_irregular_series_sdu_conformance_class"><a class="anchor" href="#_irregular_series_sdu_conformance_class"></a>A.4.6. Irregular Series SDU Conformance Class</h4>
 <table id="ats_composite_sequence_series_irregular" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4325,10 +4325,10 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_basic_conformance_classes"><a class="anchor" href="#_basic_conformance_classes"></a>A.6. Basic Conformance Classes:</h3>
+<h3 id="_basic_json_conformance_classes"><a class="anchor" href="#_basic_json_conformance_classes"></a>A.6. Basic JSON Conformance Classes:</h3>
 <div class="sect3">
-<h4 id="_basic_euler_conformance_class"><a class="anchor" href="#_basic_euler_conformance_class"></a>A.6.1. Basic-Euler Conformance Class</h4>
-<table id="ats_building_ade_use" class="tableblock frame-all grid-all" style="width: 90%;">
+<h4 id="_basic_euler_json_conformance_class"><a class="anchor" href="#_basic_euler_json_conformance_class"></a>A.6.1. Basic-Euler JSON Conformance Class</h4>
+<table id="ats_json_basic_ypr" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4344,7 +4344,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_building_ade_use">/req/basic/YPRr</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_ypr">/req/basic/YPRr</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
@@ -4354,8 +4354,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_basic_quaternion_strict_conformance_class"><a class="anchor" href="#_basic_quaternion_strict_conformance_class"></a>A.6.2. Basic-Quaternion (Strict) Conformance Class</h4>
-<table id="ats_basic_quaternion" class="tableblock frame-all grid-all" style="width: 90%;">
+<h4 id="_basic_quaternion_strict_json_conformance_class"><a class="anchor" href="#_basic_quaternion_strict_json_conformance_class"></a>A.6.2. Basic-Quaternion (Strict) JSON Conformance Class</h4>
+<table id="ats_json_basic_quaternion" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4381,8 +4381,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_basic_quaternion_permissive_conformance_class"><a class="anchor" href="#_basic_quaternion_permissive_conformance_class"></a>A.6.3. Basic-Quaternion (Permissive) Conformance Class</h4>
-<table id="ats_basic_quaternion_permissive" class="tableblock frame-all grid-all" style="width: 90%;">
+<h4 id="_basic_quaternion_permissive_json_conformance_class"><a class="anchor" href="#_basic_quaternion_permissive_json_conformance_class"></a>A.6.3. Basic-Quaternion (Permissive) JSON Conformance Class</h4>
+<table id="ats_json_basic_quaternion_permissive" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4409,8 +4409,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_advanced"><a class="anchor" href="#_conformance_class_advanced"></a>A.7. Conformance Class Advanced</h3>
-<table id="ats_advanced" class="tableblock frame-all grid-all" style="width: 90%;">
+<h3 id="_advanced_json_conformance_class"><a class="anchor" href="#_advanced_json_conformance_class"></a>A.7. Advanced JSON Conformance Class</h3>
+<table id="ats_json_advanced" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4436,10 +4436,10 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect2">
-<h3 id="_composite_conformance_classes_2"><a class="anchor" href="#_composite_conformance_classes_2"></a>A.8. Composite Conformance Classes:</h3>
+<h3 id="_composite_json_conformance_classes"><a class="anchor" href="#_composite_json_conformance_classes"></a>A.8. Composite JSON Conformance Classes:</h3>
 <div class="sect3">
-<h4 id="_graph_conformance_class_2"><a class="anchor" href="#_graph_conformance_class_2"></a>A.8.1. . Graph Conformance Class</h4>
-<table id="ats_composite_graph" class="tableblock frame-all grid-all" style="width: 90%;">
+<h4 id="_graph_json_conformance_class"><a class="anchor" href="#_graph_json_conformance_class"></a>A.8.1. Graph JSON Conformance Class</h4>
+<table id="ats_json_composite_graph" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4465,8 +4465,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_chain_conformance_class_2"><a class="anchor" href="#_chain_conformance_class_2"></a>A.8.2. . Chain Conformance Class</h4>
-<table id="ats_composite_chain" class="tableblock frame-all grid-all" style="width: 90%;">
+<h4 id="_chain_json_conformance_class"><a class="anchor" href="#_chain_json_conformance_class"></a>A.8.2. Chain JSON Conformance Class</h4>
+<table id="ats_json_composite_chain" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4492,15 +4492,15 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_sequence_conformance_classes_2"><a class="anchor" href="#_sequence_conformance_classes_2"></a>A.8.3. + Sequence Conformance Classes:</h4>
+<h4 id="_sequence_json_conformance_classes"><a class="anchor" href="#_sequence_json_conformance_classes"></a>A.8.3. Sequence JSON Conformance Classes:</h4>
 
 </div>
 <div class="sect3">
-<h4 id="ats_sequence"><a class="anchor" href="#ats_sequence"></a>A.8.4. ++ Series Conformance Classes:</h4>
+<h4 id="ats_sequence"><a class="anchor" href="#ats_sequence"></a>A.8.4. Series JSON Conformance Classes:</h4>
 
 </div>
 <div class="sect3">
-<h4 id="ats_composite_sequence_series"><a class="anchor" href="#ats_composite_sequence_series"></a>A.8.5. .. Regular Series Conformance Class</h4>
+<h4 id="ats_composite_sequence_series"><a class="anchor" href="#ats_composite_sequence_series"></a>A.8.5. Regular Series JSON Conformance Class</h4>
 <table id="ats_composite_sequence_series_regular" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4527,7 +4527,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_irregular_series_conformance_class_2"><a class="anchor" href="#_irregular_series_conformance_class_2"></a>A.8.6. .. Irregular Series Conformance Class</h4>
+<h4 id="_irregular_seriesjson_conformance_class"><a class="anchor" href="#_irregular_seriesjson_conformance_class"></a>A.8.6. Irregular SeriesJSON Conformance Class</h4>
 <table id="ats_composite_sequence_series_irregular" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4554,7 +4554,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_stream_conformance_class"><a class="anchor" href="#_stream_conformance_class"></a>A.8.7. .. Stream Conformance Class</h4>
+<h4 id="_stream_json_conformance_class"><a class="anchor" href="#_stream_json_conformance_class"></a>A.8.7. Stream JSON Conformance Class</h4>
 <table id="ats_composite_sequence_stream" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">

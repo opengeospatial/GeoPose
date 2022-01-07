@@ -1,4 +1,4 @@
-[[ats_composite_chain]]
+[[ats_json_composite_chain]]
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/ats/composite/chain* 

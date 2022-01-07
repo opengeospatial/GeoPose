@@ -1,14 +1,14 @@
 === Composite Conformance Classes:
 
-==== Graph Conformance Class
+==== Graph SDU Conformance Class
 
 include::Composite/graph/ATS_SDU_Graph.adoc[]
 
-==== Chain Conformance Class
+==== Chain SDU Conformance Class
 
 include::Composite/chain/ATS_SDU_Chain.adoc[]
 
-==== Sequence Conformance Classes:
+==== Sequence SDU Conformance Classes:
 
 include::Composite/Sequence/ATS_SDU_Sequence.adoc[]
 
