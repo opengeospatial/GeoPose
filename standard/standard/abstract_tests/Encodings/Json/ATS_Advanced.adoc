@@ -1,4 +1,4 @@
-=== Conformance Class Advanced
+=== Advanced JSON Conformance Class 
 
 include::Advanced/ATS_Advanced.adoc[]
 

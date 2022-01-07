@@ -1,14 +1,14 @@
-=== Basic Conformance Classes:
+=== Basic JSON Conformance Classes:
 
-==== Basic-Euler Conformance Class
+==== Basic-Euler JSON Conformance Class
 
 include::Basic/ATS_Basic_YPR.adoc[]
 
-==== Basic-Quaternion (Strict) Conformance Class
+==== Basic-Quaternion (Strict) JSON Conformance Class
 
 include::Basic/ATS_Basic_Quaternion.adoc[]
 
-==== Basic-Quaternion (Permissive) Conformance Class
+==== Basic-Quaternion (Permissive) JSON Conformance Class
 
 include::Basic/ATS_Basic_Quaternion_Permissive.adoc[]
 
