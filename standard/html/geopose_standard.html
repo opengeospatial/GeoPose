@@ -628,12 +628,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#standardization_targets">7.3.1. Standardization Target 1: Basic-Quaternion</a></li>
 <li><a href="#_standardization_target_2_basic_ypr">7.3.2. Standardization Target 2: Basic-YPR</a></li>
-<li><a href="#_standardization_target_3_advanced">7.3.3. Standardization Target 3: Advanced</a></li>
-<li><a href="#_standardization_target_4_graph">7.3.4. Standardization Target 4: Graph</a></li>
-<li><a href="#_standardization_target_5_chain">7.3.5. Standardization Target 5: Chain</a></li>
-<li><a href="#_standardization_target_6_regular_series">7.3.6. Standardization Target 6: Regular Series</a></li>
-<li><a href="#_standardization_target_7_irregular_series">7.3.7. Standardization Target 7: Irregular Series</a></li>
-<li><a href="#_standardization_target_8_stream">7.3.8. Standardization Target 8: Stream</a></li>
+<li><a href="#_standardization_target_1_basic_ypr">7.3.3. Standardization Target 1: Basic-YPR</a></li>
+<li><a href="#_standardization_target_2_basic_quaternion">7.3.4. Standardization Target 2: Basic-Quaternion</a></li>
+<li><a href="#_standardization_target_3_advanced">7.3.5. Standardization Target 3: Advanced</a></li>
+<li><a href="#_standardization_target_4_graph">7.3.6. Standardization Target 4: Graph</a></li>
+<li><a href="#_standardization_target_5_chain">7.3.7. Standardization Target 5: Chain</a></li>
+<li><a href="#_standardization_target_6_regular_series">7.3.8. Standardization Target 6: Regular Series</a></li>
+<li><a href="#_standardization_target_7_irregular_series">7.3.9. Standardization Target 7: Irregular Series</a></li>
+<li><a href="#_standardization_target_8_stream">7.3.10. Standardization Target 8: Stream</a></li>
 </ul>
 </li>
 <li><a href="#_json_encodings_normative">7.4. JSON Encodings (Normative)</a>
@@ -1689,18 +1691,6 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="paragraph">
 <p>The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The following is duplicated in the Conformance section.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>There are eight independent Standardization Targets to specifically address the requirements of individual use cases. The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:</p>
 </div>
@@ -1763,45 +1753,11 @@ The following is duplicated in the Conformance section.
 <div class="sect2">
 <h3 id="_methodology"><a class="anchor" href="#_methodology"></a>7.1. Methodology</h3>
 <div class="paragraph">
-<p>Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are aliases for elements (classes or attributes) in the Logical Model. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are combined to express each of the Standardization Targets using Extended Backus-Naur Form (EBNF) notation as described in <a href="#EBNF"><strong>EBNF</strong></a> with the following minor differences. The eight independent SDU combinations that define each corresponding Target are expressed as encoding-neutral Requirements. Finally, for each encoding format, there are requirements for the expression of the grouped SDUs.</p>
-</div>
-<div class="paragraph">
-<p>Poses are structurally two frames, each identified by a corresponding frame specification. The edge connecting the two frame specifications represents the pose&#8217;s frame transform and is marked with a thick blue vertical line.</p>
-</div>
-<div class="paragraph">
-<p><a id="EBNF"></a> <strong>EBNF:</strong> ISO/IEC 14977:1996, Information technology — Syntactic metalanguage — Extended BNF
-<a href="https://www.w3.org/TR/2010/REC-xquery-20101214/#XML" class="bare">https://www.w3.org/TR/2010/REC-xquery-20101214/#XML</a></p>
-</div>
-<div class="paragraph">
-<p>The EBNF notation is described in more detail in: <a href="https://www.w3.org/TR/2010/REC-xquery-20101214/#EBNFNotation" class="bare">https://www.w3.org/TR/2010/REC-xquery-20101214/#EBNFNotation</a></p>
-</div>
-<div class="paragraph">
-<p>All named non-terminal symbols have a name that begins with an uppercase letter.</p>
-</div>
-<div class="paragraph">
-<p>All terminal symbols have the name of the corresponding element of the UML GeoPose Logical Model.</p>
-</div>
-<div class="paragraph">
-<p>Comments or extra-grammatical constraints on grammar productions are between '/<strong>' and '</strong>/' symbols.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Only EBNF-derived diagrams (and not even all of them yet) are in the SDU sections now. Adding the actual EBNF allows explicit and machine-readable specification. That&#8217;s why explicit EBNF is still needed.
-</td>
-</tr>
-</table>
+<p>Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_logical_model_normative"><a class="anchor" href="#_logical_model_normative"></a>7.2. Logical Model (Normative)</h3>
-<div class="paragraph">
-<p>The Logical Model, expressed in UML static class diagrams, is the normative definition of the various data elements that are either GeoPose instances or groupings of GeoPose instances in composite structures. The detailed expression of elements from the UML model are specified in top level "structural" requirements as Structural Data Units (SDUs), which are terminal symbols in an Extended Backus-Naur Form production system. The SDUs are then expressed in one or more serialization or encoding formats, and there is one requirement per mapping from SDU to a specific encoding, such as JSON.</p>
-</div>
 <div class="paragraph">
 <p>The normative expression of the UML model is a Sparx Systems Enterprise Explorer
 <a href="https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/Model.eapx">project ("eapx")file</a>.</p>
@@ -1813,15 +1769,18 @@ Only EBNF-derived diagrams (and not even all of them yet) are in the SDU section
 <p>The coloring of the classes indicates their role in the logical design. Note that the classes and data types defined in the Target packages are the source of structural data units (SDUs) that may be realized as concrete data objects.</p>
 </div>
 <div class="paragraph">
-<p>Implementers of software using encoded SDUs shall conform to the logical description of the yellow model elements. The other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. The classes for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Concrete data objects created as implementations of this standard shall conform to the standard, including all dependent or inherited classes, attributes, associations, multiplicities, and data types in the Logical Model.</p>
+<p>Implementers of software using encoded SDUs shall conform to the logical description of the  model elements with the "Structural Data Unit - SDU" stereotype. Other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. The classes for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Concrete data objects created as implementations of this standard shall conform to the standard, including all dependent or inherited classes, attributes, associations, multiplicities, and data types in the Logical Model.</p>
 </div>
 <div class="sect3">
 <h4 id="_core"><a class="anchor" href="#_core"></a>7.2.1. Core</h4>
 <div class="paragraph">
-<p>The Logical Model Core contains the essential elements specific to the GeoPose conceived as a transformation between an anchoring Outer Frame and one or more derived Inner Frames.</p>
+<p>The Logical Model Core contains the essential elements specific to the GeoPose modelled as a transformation between an anchoring Outer Frame and one or more derived Inner Frames.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="models/Logical_Core.png" alt="Logical Core"></span></p>
+<div id="metadata_governance" class="imageblock text-center">
+<div class="content">
+<img src="models/Logical_Core.png" alt="Logical Core">
+</div>
+<div class="title">Figure 2. Core logical model</div>
 </div>
 </div>
 <div class="sect3">
@@ -1831,19 +1790,25 @@ Only EBNF-derived diagrams (and not even all of them yet) are in the SDU section
 <a href="https://www.w3.org/TR/2020/CR-owl-time-20200326/">OWL Time</a> document.</p>
 </div>
 <div class="paragraph">
-<p>Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to milliseconds of UNIX Time.</p>
+<p>Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to seconds of UNIX Time.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="models/Logical_time.png" alt="Logical time"></span></p>
+<div id="core_logical_model" class="imageblock text-center">
+<div class="content">
+<img src="models/Logical_time.png" alt="Logical time">
+</div>
+<div class="title">Figure 3. Time logical model</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_sequence"><a class="anchor" href="#_sequence"></a>7.2.3. Sequence</h4>
 <div class="paragraph">
-<p>The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same <a href="#def_Outer_Frame"><strong>Outer Frame</strong></a> and there is a time-dependent changing Inner Frame.</p>
+<p>The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same <a href="#def_Outer_Frame"><strong>Outer Frame</strong></a> and there is a time-dependent changing <a href="#def_Inner_Frame"><strong>Inner Frame</strong></a>.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="models/Logical_Sequence.png" alt="Logical Sequence"></span></p>
+<div id="sequence_logical_model" class="imageblock text-center">
+<div class="content">
+<img src="models/Logical_Sequence.png" alt="Logical Sequence">
+</div>
+<div class="title">Figure 4. Sequence logical model</div>
 </div>
 </div>
 <div class="sect3">
@@ -1854,60 +1819,36 @@ Only EBNF-derived diagrams (and not even all of them yet) are in the SDU section
 <div class="paragraph">
 <p>The two Basic and the Advanced GeoPoses represent single GeoPose objects.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="models/Logical_Target_Basic_Advanced.png" alt="Logical Target Basic Advanced"></span></p>
+<div id="basic_advanced_logical_model" class="imageblock text-center">
+<div class="content">
+<img src="models/Logical_Target_Basic_Advanced.png" alt="Logical Target Basic Advanced">
+</div>
+<div class="title">Figure 5. Basic and Advanced Structural Data Units</div>
 </div>
 <div class="paragraph">
 <p>The Chain and the Graph GeoPose composite structures represent linear or branching frame transformation relationships, respectively.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="models/Logical_Target_Linked.png" alt="Linked"></span></p>
+<div id="chain_graph_logical_model" class="imageblock text-center">
+<div class="content">
+<img src="models/Logical_Target_Linked.png" alt="Linked">
+</div>
+<div class="title">Figure 6. Chain and Graph Structural Data Units</div>
 </div>
 <div class="paragraph">
 <p>The Stream and the two Series composite structures represent a time series of a single evolving GeoPose.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="models/Logical_Target_Sequence.png" alt="Logical Target Sequence"></span></p>
+<div id="series_and_stream_model" class="imageblock text-center">
+<div class="content">
+<img src="models/Logical_Target_Sequence.png" alt="Logical Target Sequence">
+</div>
+<div class="title">Figure 7. Series and Stream Structural Data Units</div>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_structural_data_units_normative"><a class="anchor" href="#_structural_data_units_normative"></a>7.3. Structural Data Units (Normative)</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The purpose of SDUs is to provide a standardization target that is independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with exactly one element (class or attribute) in the logical model.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-EBNF notation from <a href="https://www.w3.org/TR/REC-xml/#sec-notation" class="bare">https://www.w3.org/TR/REC-xml/#sec-notation</a>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This is where the mapping of elements of the Logical Data Model to SDUs is specified. There is  one requirement per assemblage of SDUs into a Standardization Target: "the implementation independent Standardization Target shall be defined by its EBNF specification".
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The purpose of SDUs is to provide a standardization target that is independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with a corresponding element (class or attribute) in the logical model.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1938,7 +1879,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="paragraph">
 <p><strong>Structure (Normative)</strong></p>
 </div>
-<table id="req_basic_quaternion_sdus" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_basic_quaternion_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1958,9 +1899,6 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><span class="image"><img src="diagram/Basic-Q-SDxUs.PNG" alt="Basic Q SDxUs"></span></p>
-</div>
 <div class="paragraph">
 <p><strong>Structural Dependencies (Normative)</strong></p>
 </div>
@@ -2122,6 +2060,9 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </li>
 </ol>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_standardization_target_1_basic_ypr"><a class="anchor" href="#_standardization_target_1_basic_ypr"></a>7.3.3. Standardization Target 1: Basic-YPR</h4>
 <table id="req_basic_ypr" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2142,8 +2083,11 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><span class="image"><img src="diagram/Basic-E-SDxUs.PNG" alt="Basic E SDxUs"></span></p>
+<div id="basic_ypr_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Basic-YPR_SDU.PNG" alt="Basic YPR SDU">
+</div>
+<div class="title">Figure 8. Basic YPR SDU</div>
 </div>
 <div class="paragraph">
 <p><strong>Structural Dependencies (Normative)</strong></p>
@@ -2231,7 +2175,16 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_3_advanced"><a class="anchor" href="#_standardization_target_3_advanced"></a>7.3.3. Standardization Target 3: Advanced</h4>
+<h4 id="_standardization_target_2_basic_quaternion"><a class="anchor" href="#_standardization_target_2_basic_quaternion"></a>7.3.4. Standardization Target 2: Basic-Quaternion</h4>
+<div id="basic_quaternion_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Basic-Quaternion_SDU.PNG" alt="Basic Quaternion SDU">
+</div>
+<div class="title">Figure 9. Basic Quaternion SDU</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_standardization_target_3_advanced"><a class="anchor" href="#_standardization_target_3_advanced"></a>7.3.5. Standardization Target 3: Advanced</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2261,13 +2214,16 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><span class="image"><img src="diagram/Advanced-SDUs.PNG" alt="Advanced SDUs"></span></p>
+<div id="advanced_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Advanced_SDU.PNG" alt="Advanced SDU">
+</div>
+<div class="title">Figure 10. Basic Advanced SDU</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_4_graph"><a class="anchor" href="#_standardization_target_4_graph"></a>7.3.4. Standardization Target 4: Graph</h4>
+<h4 id="_standardization_target_4_graph"><a class="anchor" href="#_standardization_target_4_graph"></a>7.3.6. Standardization Target 4: Graph</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2294,13 +2250,16 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><span class="image"><img src="diagram/Graph-SDUs.PNG" alt="Graph SDUs"></span></p>
+<div id="graph_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Graph_SDU.PNG" alt="Graph SDU">
+</div>
+<div class="title">Figure 11. Graph SDU</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_5_chain"><a class="anchor" href="#_standardization_target_5_chain"></a>7.3.5. Standardization Target 5: Chain</h4>
+<h4 id="_standardization_target_5_chain"><a class="anchor" href="#_standardization_target_5_chain"></a>7.3.7. Standardization Target 5: Chain</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2330,12 +2289,15 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><span class="image"><img src="diagram/Chain-SDUs.PNG" alt="Chain SDUs"></span></p>
+<div id="chain_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Chain_SDU.PNG" alt="Chain SDU">
+</div>
+<div class="title">Figure 12. Chain SDU</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_6_regular_series"><a class="anchor" href="#_standardization_target_6_regular_series"></a>7.3.6. Standardization Target 6: Regular Series</h4>
+<h4 id="_standardization_target_6_regular_series"><a class="anchor" href="#_standardization_target_6_regular_series"></a>7.3.8. Standardization Target 6: Regular Series</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2365,13 +2327,16 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><span class="image"><img src="diagram/RegularSeries-SDUs.PNG" alt="RegularSeries SDUs"></span></p>
+<div id="regular_series_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Regular-Series_SDU.PNG" alt="Regular Series SDU">
+</div>
+<div class="title">Figure 13. Regular Series SDU</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_7_irregular_series"><a class="anchor" href="#_standardization_target_7_irregular_series"></a>7.3.7. Standardization Target 7: Irregular Series</h4>
+<h4 id="_standardization_target_7_irregular_series"><a class="anchor" href="#_standardization_target_7_irregular_series"></a>7.3.9. Standardization Target 7: Irregular Series</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2401,13 +2366,16 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><span class="image"><img src="diagram/IrregularSeries-SDUs.PNG" alt="IrregularSeries SDUs"></span></p>
+<div id="irregular_series_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Irregular-Series_SDU.PNG" alt="Irregular Series SDU">
+</div>
+<div class="title">Figure 14. Irregular Series SDU</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_8_stream"><a class="anchor" href="#_standardization_target_8_stream"></a>7.3.8. Standardization Target 8: Stream</h4>
+<h4 id="_standardization_target_8_stream"><a class="anchor" href="#_standardization_target_8_stream"></a>7.3.10. Standardization Target 8: Stream</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2437,14 +2405,17 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><span class="image center"><img src="diagram/Stream-SDUs.PNG" alt="SDUS" width="320" height="320"></span></p>
+<div id="stream_header_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Stream-Header_SDU.PNG" alt="Stream Header SDU">
 </div>
-<div class="paragraph">
-<p><span class="image center"><img src="diagram/StreamHeader-SDUs.PNG" alt="SDUS" width="1200" height="320"></span></p>
+<div class="title">Figure 15. Stream Header SDU</div>
 </div>
-<div class="paragraph">
-<p><span class="image center"><img src="diagram/StreamElement-SDUs.PNG" alt="SDUS" width="1200"></span></p>
+<div id="stream_trailer_sdu" class="imageblock text-center">
+<div class="content">
+<img src="diagram/Stream-Element_SDU.PNG" alt="Stream Element SDU">
+</div>
+<div class="title">Figure 16. Stream Element SDU</div>
 </div>
 </div>
 </div>
@@ -4078,7 +4049,10 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <div class="sect2">
 <h3 id="_introduction"><a class="anchor" href="#_introduction"></a>A.1. Introduction</h3>
 <div class="paragraph">
-<p>GeoPose 1.0 specifies a eight Standardization Targets using elements of the Logical Model. These elements are Structural Data Units (SDUs). Each SDU is an alias for an element of the Logical Model that will be expressed in concrete data objects encoded using specific encoding or serialization technologies. Although there is no requirement to do so, GeoPose 1.0 implements a single encoding technology: JavaScript Object Notation (JSON) and the encodings are specified using JSON-Schema-2019-09. To keep the individual Standardization targets independent, there are some SDU requirements and corresponding conformance tests that appear in more than one conformance class. This structure is based on the judgement that it is easier to understand the independence of the Targets than would be the case if the definitional requirements of the SDUs were factored out and referenced indirectly by individual encodings.</p>
+<p>GeoPose 1.0 specifies a eight Standardization Targets using elements of the Logical Model. These elements are Structural Data Units (SDUs) and they have the stereotype "Structural Data Unit - SDU". Each SDU is an element of the Logical Model that will be expressed in concrete data objects encoded using specific encoding or serialization technologies.</p>
+</div>
+<div class="paragraph">
+<p>Although implementation of the Standardization Targets, expressed as SDUs, is independent of the Logical Model, GeoPose 1.0 also defines one of many possible implementations, single encoding in JavaScript Object Notation (JSON). The encodings of the eight targets are specified using JSON-Schema-2019-09. To keep the individual Standardization targets independent, there are some SDU requirements and corresponding conformance tests that appear in more than one requirement or conformance class. This structure is based on the judgement that it is easier to understand the independence of targets with complete definitions than would be the case if the definitional requirements of the SDUs were factored out and referenced indirectly by individual encodings.</p>
 </div>
 </div>
 <div class="sect2">
