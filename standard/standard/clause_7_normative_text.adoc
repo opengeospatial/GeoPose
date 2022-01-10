@@ -2,9 +2,6 @@
 
 The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification. 
 
-[NOTE]
-The following is duplicated in the Conformance section.
-
 There are eight independent Standardization Targets to specifically address the requirements of individual use cases. The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:
 
 . Basic - Satisfy most use cases
@@ -22,27 +19,9 @@ There are eight independent Standardization Targets to specifically address the 
 
 === Methodology
 
-Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are aliases for elements (classes or attributes) in the Logical Model. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are combined to express each of the Standardization Targets using Extended Backus-Naur Form (EBNF) notation as described in <<EBNF,**EBNF**>> with the following minor differences. The eight independent SDU combinations that define each corresponding Target are expressed as encoding-neutral Requirements. Finally, for each encoding format, there are requirements for the expression of the grouped SDUs.
-
-Poses are structurally two frames, each identified by a corresponding frame specification. The edge connecting the two frame specifications represents the pose's frame transform and is marked with a thick blue vertical line.
-
-[[EBNF]] **EBNF:** ISO/IEC 14977:1996, Information technology — Syntactic metalanguage — Extended BNF
-https://www.w3.org/TR/2010/REC-xquery-20101214/#XML
-
-The EBNF notation is described in more detail in: https://www.w3.org/TR/2010/REC-xquery-20101214/#EBNFNotation
-
-All named non-terminal symbols have a name that begins with an uppercase letter.
-
-All terminal symbols have the name of the corresponding element of the UML GeoPose Logical Model.
-
-Comments or extra-grammatical constraints on grammar productions are between '/*' and '*/' symbols.
-
-[NOTE]
-Only EBNF-derived diagrams (and not even all of them yet) are in the SDU sections now. Adding the actual EBNF allows explicit and machine-readable specification. That's why explicit EBNF is still needed.
+Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.
 
 === Logical Model (Normative)
-
-The Logical Model, expressed in UML static class diagrams, is the normative definition of the various data elements that are either GeoPose instances or groupings of GeoPose instances in composite structures. The detailed expression of elements from the UML model are specified in top level "structural" requirements as Structural Data Units (SDUs), which are terminal symbols in an Extended Backus-Naur Form production system. The SDUs are then expressed in one or more serialization or encoding formats, and there is one requirement per mapping from SDU to a specific encoding, such as JSON.
 
 The normative expression of the UML model is a Sparx Systems Enterprise Explorer
 link:https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/Model.eapx[project ("eapx")file].
@@ -51,28 +30,34 @@ The Logical Model consists of four top-level packages: Core, Time, Sequence, and
 
 The coloring of the classes indicates their role in the logical design. Note that the classes and data types defined in the Target packages are the source of structural data units (SDUs) that may be realized as concrete data objects.  
 
-Implementers of software using encoded SDUs shall conform to the logical description of the yellow model elements. The other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. The classes for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Concrete data objects created as implementations of this standard shall conform to the standard, including all dependent or inherited classes, attributes, associations, multiplicities, and data types in the Logical Model.
+Implementers of software using encoded SDUs shall conform to the logical description of the  model elements with the "Structural Data Unit - SDU" stereotype. Other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. The classes for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Concrete data objects created as implementations of this standard shall conform to the standard, including all dependent or inherited classes, attributes, associations, multiplicities, and data types in the Logical Model.
 
 ==== Core
 
-The Logical Model Core contains the essential elements specific to the GeoPose conceived as a transformation between an anchoring Outer Frame and one or more derived Inner Frames.
+The Logical Model Core contains the essential elements specific to the GeoPose modelled as a transformation between an anchoring Outer Frame and one or more derived Inner Frames.
 
-image:models/Logical_Core.png[align="center"]
+[[metadata_governance]]
+.Core logical model
+image::models/Logical_Core.png[align="center"]
 
 ==== Time
 
 The time logical model is based on the 
 link:https://www.w3.org/TR/2020/CR-owl-time-20200326/[OWL Time] document.
 
-Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to milliseconds of UNIX Time.
+Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to seconds of UNIX Time.
 
-image:models/Logical_time.png[align="center"]
+[[core_logical_model]]
+.Time logical model
+image::models/Logical_time.png[align="center"]
 
 ==== Sequence
 
-The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same <<def_Outer_Frame,**Outer Frame**>> and there is a time-dependent changing Inner Frame.
+The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same <<def_Outer_Frame,**Outer Frame**>> and there is a time-dependent changing <<def_Inner_Frame,**Inner Frame**>>.
 
-image:models/Logical_Sequence.png[align="center"]
+[[sequence_logical_model]]
+.Sequence logical model
+image::models/Logical_Sequence.png[align="center"]
 
 ==== Targets
 
@@ -80,27 +65,28 @@ The Logical Model's Targets packages specify the design of logical data objects 
 
 The two Basic and the Advanced GeoPoses represent single GeoPose objects.
 
-image:models/Logical_Target_Basic_Advanced.png[align="center"]
+[[basic_advanced_logical_model]]
+.Basic and Advanced Structural Data Units
+image::models/Logical_Target_Basic_Advanced.png[align="center"]
 
 The Chain and the Graph GeoPose composite structures represent linear or branching frame transformation relationships, respectively.
 
-image:models/Logical_Target_Linked.png[Linked,align="center"]
+[[chain_graph_logical_model]]
+.Chain and Graph Structural Data Units
+image::models/Logical_Target_Linked.png[Linked,align="center"]
 
 The Stream and the two Series composite structures represent a time series of a single evolving GeoPose.
 
-image:models/Logical_Target_Sequence.png[align="center"]
+[[series_and_stream_model]]
+.Series and Stream Structural Data Units
+image::models/Logical_Target_Sequence.png[align="center"]
 
 
 
 === Structural Data Units (Normative)
-[NOTE]
-The purpose of SDUs is to provide a standardization target that is independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with exactly one element (class or attribute) in the logical model.
 
-[NOTE]
-EBNF notation from https://www.w3.org/TR/REC-xml/#sec-notation
+The purpose of SDUs is to provide a standardization target that is independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with a corresponding element (class or attribute) in the logical model.
 
-[NOTE]
-This is where the mapping of elements of the Logical Data Model to SDUs is specified. There is  one requirement per assemblage of SDUs into a Standardization Target: "the implementation independent Standardization Target shall be defined by its EBNF specification".
 
 [NOTE]
 Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets. One alternative could be to make all of the requirements on SDUs separately, and then have some language that requires conformance and implementation only for the Targets implemented. Within the document, the SDU requirements are in separate files, included when appropriate in the sections for each of the Targets. This insures that the texts will be identical, even if it is not transparently obvious in the standard.
@@ -120,15 +106,13 @@ The Basic-Quaternion Target consists of an Outer Frame specified by an implicit 
 
 *Structure (Normative)*
 
-[[req_basic_quaternion_sdus]]
+[[req_basic_quaternion_sdu]]
 [width="90%",cols="2,6"]
 |===
 ^|*Requirement BQ-S-{counter:req-bq-id}* |*/req/basic/quaternion-permissive/structure* 
 ^|Requirement |An implementation of a Basic-Quaternion Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. 
 ^|ID |<<req_basic_quaternion_permissive,/req/basic/quaternion/structure>>
 |===
-
-image:diagram/Basic-Q-SDxUs.PNG[]
 
 *Structural Dependencies (Normative)*
 
@@ -163,6 +147,8 @@ A conforming implementation may implement any or all of the individual Targets. 
 .... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
 ... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
 
+==== Standardization Target 1: Basic-YPR
+
 [[req_basic_ypr]]
 [width="90%",cols="2,6"]
 |===
@@ -171,7 +157,11 @@ A conforming implementation may implement any or all of the individual Targets. 
 ^|ID |<<req_basic_ypr,/req/basic/ypr/structure>>
 |===
 
-image:diagram/Basic-E-SDxUs.PNG[]
+[[basic_ypr_sdu]]
+.Basic YPR SDU
+image::diagram/Basic-YPR_SDU.PNG[align="center"]
+
+
 
 *Structural Dependencies (Normative)*
 
@@ -180,6 +170,16 @@ include::requirements/sdu/Req_SDU_TangentPlaneParameters.adoc[]
 include::requirements/sdu/Req_SDU_YPR_Angles.adoc[]
 
 <<<
+
+==== Standardization Target 2: Basic-Quaternion
+ 
+[[basic_quaternion_sdu]]
+.Basic Quaternion SDU
+image::diagram/Basic-Quaternion_SDU.PNG[align="center"]
+
+ 
+
+
 ==== Standardization Target 3: Advanced
 
 *Summary (Informative)*
@@ -196,8 +196,12 @@ The Advanced Target has a more general structure, allowing flexible specificatio
 ^|ID |<<req_advanced/structure,/req/advanced/structure>>
 |===
 
-image:diagram/Advanced-SDUs.PNG[]
 
+[[advanced_sdu]]
+.Basic Advanced SDU
+image::diagram/Advanced_SDU.PNG[align="center"]
+
+ 
 
 <<<
 
@@ -215,8 +219,11 @@ The Graph Target supports a network of object relative poses. The graph is a dir
 ^|ID |<<req_Graph/structure,/req/Graph/structure>>
 |===
 
-image:diagram/Graph-SDUs.PNG[]
+[[graph_sdu]]
+.Graph SDU
+image::diagram/Graph_SDU.PNG[align="center"]
 
+ 
 <<<
 
 ==== Standardization Target 5: Chain
@@ -235,7 +242,11 @@ The Chain Target supports relationships between a linear sequence of pose relati
 ^|ID |<<req_Chain/structure,/req/Chain/structure>>
 |===
 
-image:diagram/Chain-SDUs.PNG[]
+
+[[chain_sdu]]
+.Chain SDU
+image::diagram/Chain_SDU.PNG[align="center"]
+
 
 ==== Standardization Target 6: Regular Series
 
@@ -253,7 +264,9 @@ The Regular (Time) Series Target represents the time evolution of a single GeoPo
 ^|ID |<<req_Regular_Series/structure,/req/Regular_Series/structure>>
 |===
 
-image:diagram/RegularSeries-SDUs.PNG[]
+[[regular_series_sdu]]
+.Regular Series SDU
+image::diagram/Regular-Series_SDU.PNG[align="center"]
 
 <<<
 
@@ -273,7 +286,10 @@ The Irregular (Time) Series Target represents the time evolution of a single Geo
 ^|ID |<<req_Irregular_Series/structure,/req/Irregular_Series/structure>>
 |===
 
-image:diagram/IrregularSeries-SDUs.PNG[]
+
+[[irregular_series_sdu]]
+.Irregular Series SDU
+image::diagram/Irregular-Series_SDU.PNG[align="center"]
 
 <<<
 
@@ -293,11 +309,14 @@ The Stream target consists of two parts: a single initial specification of a tra
 ^|ID |<<req_Stream/structure,/req/Stream/structure>>
 |===
 
-image:diagram/Stream-SDUs.PNG[SDUS,320,320,role=center]
+[[stream_header_sdu]]
+.Stream Header SDU
+image::diagram/Stream-Header_SDU.PNG[align="center"]
 
-image:diagram/StreamHeader-SDUs.PNG[SDUS,1200,320,role=center]
 
-image:diagram/StreamElement-SDUs.PNG[SDUS,1200,role=center]
+[[stream_trailer_sdu]]
+.Stream Element SDU
+image::diagram/Stream-Element_SDU.PNG[align="center"]
 
 === JSON Encodings (Normative)
 
