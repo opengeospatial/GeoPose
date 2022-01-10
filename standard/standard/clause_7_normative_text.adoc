@@ -83,60 +83,21 @@ image::models/Logical_Target_Sequence.png[align="center"]
 
 
 
-=== Structural Data Units (Normative)
+=== Structural Data Units 
 
+==== Description (Informative)
 The purpose of SDUs is to provide a standardization target that is independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with a corresponding element (class or attribute) in the logical model.
 
-
-[NOTE]
 Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets. One alternative could be to make all of the requirements on SDUs separately, and then have some language that requires conformance and implementation only for the Targets implemented. Within the document, the SDU requirements are in separate files, included when appropriate in the sections for each of the Targets. This insures that the texts will be identical, even if it is not transparently obvious in the standard.
 The GeoPose Standard requires a specific method for the mapping of each data element from the logical model to SDUs. There are parallel requirements for encoding groups of SDUs in for each encoding. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.
 
 [[standardization_targets]]
 
-==== Standardization Target 1: Basic-Quaternion
+==== Standardization Targets(Normative)
 
-The Basic-Quaternion GeoPose has an EPSG-4979 (WGS-84 with height above ellipsoid) outer frame and an oriented (rotated) local tangent plane east-north-up (LTP-ENU) coordinate system. The rotation is specified with four components of a normalized quaternion.
+===== Description of the Standardization Targets (Informative)
 
-=====  Requirements 
-
-*Summary (Informative)*
-
-The Basic-Quaternion Target consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. Note that this is equivalent to a Generic Frame Specification, with the authority and ID as described above. The Inner Frame is a rotation-only transformation using a quaternion specification.
-
-*Structure (Normative)*
-
-[[req_basic_quaternion_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement BQ-S-{counter:req-bq-id}* |*/req/basic/quaternion-permissive/structure* 
-^|Requirement |An implementation of a Basic-Quaternion Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. 
-^|ID |<<req_basic_quaternion_permissive,/req/basic/quaternion/structure>>
-|===
-
-*Structural Dependencies (Normative)*
-
-include::requirements/sdu/Req_SDU_TangentPlaneParameters.adoc[]
-
-include::requirements/sdu/Req_SDU_Quaternion.adoc[]
-
-==== Standardization Target 2: Basic-YPR
-
-The Basic-YPR GeoPose uses a rotation-only transformation from a WGS-84-referenced local tangent plane east-north-up coordinate system. The rotation is specified as Yaw, Pitch, and Roll angles. Yaw is rotation about the LTP-ENU frame Z (up) axis. Pitch is rotation about the y axis of the yaw-rotated local frame. Roll is rotation about the yaw and pitch rotated x axis of the local frame. 
-
-*Summary (Informative)*
-
-The Basic-YPR Target consists of an Outer Frame specified by an implicit 3D WGS-84 CRS (EPSG:4979) and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. Note that this is equivalent to a Generic Frame Specification, with the authority and ID as described above. The Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles. 
-
-*Structure (Normative)*
-
-There shall be eight independent Standardization Targets. Each specifically addresses the requirements of specific use cases. There shall be no dependency between or among the individual Targets.
-
-A conforming implementation may implement an encoding of any or all of the individual Targets.
-
-==== Description of the Standardization Targets (Informative)
-
-The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:
+The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. There are eight Standardization Targets denoted by bold terms in the following categories:
 
 . Basic - Satisfy most use cases
 .. Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
@@ -151,14 +112,19 @@ The Basic and Advanced Targets differ in the level of options and flexibility in
 .... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
 ... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
 
+=====  Global Requirements (Normative)
 
-==== Requirements of the Structural Data Units (Normative)
+There shall be eight independent Standardization Targets. There shall be no dependency between or among the individual Targets.
 
-===== Standardization Target 1: Basic-YPR
+A conforming implementation may implement an encoding of any or all of the individual Targets.
+
+===== Requirements of the Structural Data Units (Normative)
+
+====== Standardization Target 1: Basic-YPR
 
 *Summary (Informative)*
 
-The Basic-YPR Target has a simple structure with no options. 
+The Basic-YPR Target has a simple structure with no options. Position is specified as a point in an LTP-ENU frame and rotation is specified by yaw, pitch, and roll angles specified in decimal degrees.
 
 *Structure (Normative)*
 
@@ -166,10 +132,10 @@ The Basic-YPR Target has a simple structure with no options.
 .Basic YPR SDU
 image::diagram/Basic-YPR_SDU.PNG[align="center"]
 
-[[req_basic_ypr]]
-[width="90%",cols="2,6"]
+[[req_basic_ypr_sdu]]
+[width="100%",cols="4,6"]
 |===
-^|*Requirement BE-S-{counter:req-be-id}* |*/req/basic/ypr/structure* 
+^|*Requirement BE-S-{counter:req-be-sdu-id}* |*/req/basic/ypr/sdu* 
 ^|Requirement |An implementation of a Basic-YPR Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using Yaw, Pitch, and Roll angles.
 ^|ID |<<req_basic_ypr,/req/basic/ypr/structure>>
 |===
@@ -185,11 +151,33 @@ include::requirements/sdu/Req_SDU_YPR_Angles.adoc[]
 
 ==== Standardization Target 2: Basic-Quaternion
  
+*Summary (Informative)*
+
+The Basic-Quaternion Target has a simple structure with no options. Position is specified as a point in an LTP-ENU frame and rotation is specified as a unit quaternion.
+
+*Structure (Normative)*
+
 [[basic_quaternion_sdu]]
 .Basic Quaternion SDU
 image::diagram/Basic-Quaternion_SDU.PNG[align="center"]
 
  
+[[req_basic_quaternion]]
+[width="100%",cols="3,6"]
+|===
+^|*Requirement BE-S-{counter:req-be-id}* |*/req/basic/quaternion/structure* 
+^|Requirement |An implementation of a Basic-Quaternion Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using a unit quaternion.
+^|ID |<<req_basic_ypr,/req/basic/quaternion/structure>>
+|===
+
+
+*Structural Dependencies (Normative)*
+
+include::requirements/sdu/Req_SDU_TangentPlaneParameters.adoc[]
+
+include::requirements/sdu/Req_SDU_Quaternion.adoc[]
+
+<<<
 
 
 ==== Standardization Target 3: Advanced
@@ -200,8 +188,15 @@ The Advanced Target has a more general structure, allowing flexible specificatio
 
 *Structure (Normative)*
 
+
+[[advanced_sdu]]
+.Basic Advanced SDU
+image::diagram/Advanced_SDU.PNG[align="center"]
+
+ 
+
 [[req_advanced]]
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
 ^|*Requirement AD-S-{counter:req-ad-id}* |*/req/advanced/structure* 
 ^|Requirement |An implementation of an Advanced Target shall consist of a
@@ -209,11 +204,6 @@ The Advanced Target has a more general structure, allowing flexible specificatio
 |===
 
 
-[[advanced_sdu]]
-.Basic Advanced SDU
-image::diagram/Advanced_SDU.PNG[align="center"]
-
- 
 
 <<<
 
@@ -224,7 +214,7 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 The Graph Target supports a network of object relative poses. The graph is a directed acyclic graph, each node must either be an Extrinsic Frame or reachable from an Extrinsic Frame.
 
 [[req_graph]]
-[width="90%",cols="2,6"]
+[width="100%",cols="2,6"]
 |===
 ^|*Requirement Graph-S-{counter:req-TT-id}* |*/req/Graph/structure* 
 ^|Requirement |An implementation of a Graph GeoPose shall consist of a

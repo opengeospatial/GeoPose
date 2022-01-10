@@ -1,24 +1,24 @@
 [[req_tangent_plane]]
 [[req_tangent_plane_longitude]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
-^|*Requirement SDU-{counter:req-sdu-id}* |*/req/sdu/tangent_plane/longitude* 
+^|*Requirement B-S-TP-Lon* |*/req/sdu/tangent_plane/longitude* 
 ^|Requirement |An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.
 ^|ID |<<req_tangent_plane_parameters_longitude,/req/sdu/tangent_plane/longitude>>
 |===
 
 [[req_tangent_plane_parameters_latitude]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
-^|*Requirement SDU-{counter:req-sdu-id}* |*/req/sdu/tangent_plane/latitude* 
+^|*Requirement B-S-TP-Lat* |*/req/sdu/tangent_plane/latitude* 
 ^|Requirement |An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.
 ^|ID |<<req_basic_quaternion,/req/sdu/tangent_plane/latitude>>
 |===
 
-[[req_tangent_plane_parameters_height]]
-[width="90%",cols="2,6"]
+[[req_tangent_plane_parameters_h]]
+[width="100%",cols="4,6"]
 |===
-^|*Requirement SDU-{counter:req-sdu-id}* |*/req/sdu/tangent_plane/height* 
-^|Requirement |An instance of a GeoPose tangentPoint.height attribute shall be expressed as a real number.
+^|*Requirement B-S-TP-h* |*/req/sdu/tangent_plane/h* 
+^|Requirement |An instance of a GeoPose tangentPoint.h attribute shall be expressed as a real number.
 ^|ID |<<req_basic_quaternion,/req/sdu/tangent_plane/height>>
 |===
