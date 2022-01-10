@@ -130,9 +130,13 @@ The Basic-YPR Target consists of an Outer Frame specified by an implicit 3D WGS-
 
 *Structure (Normative)*
 
-There shall be eight independent Standardization Targets. Each specifically addresses the requirements of specific use cases. There is no dependency between or among the individual Targets.
+There shall be eight independent Standardization Targets. Each specifically addresses the requirements of specific use cases. There shall be no dependency between or among the individual Targets.
 
-A conforming implementation may implement any or all of the individual Targets.  oThe Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:
+A conforming implementation may implement an encoding of any or all of the individual Targets.
+
+==== Description of the Standardization Targets (Informative)
+
+The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:
 
 . Basic - Satisfy most use cases
 .. Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
@@ -147,7 +151,20 @@ A conforming implementation may implement any or all of the individual Targets. 
 .... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
 ... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
 
-==== Standardization Target 1: Basic-YPR
+
+==== Requirements of the Structural Data Units (Normative)
+
+===== Standardization Target 1: Basic-YPR
+
+*Summary (Informative)*
+
+The Basic-YPR Target has a simple structure with no options. 
+
+*Structure (Normative)*
+
+[[basic_ypr_sdu]]
+.Basic YPR SDU
+image::diagram/Basic-YPR_SDU.PNG[align="center"]
 
 [[req_basic_ypr]]
 [width="90%",cols="2,6"]
@@ -156,11 +173,6 @@ A conforming implementation may implement any or all of the individual Targets. 
 ^|Requirement |An implementation of a Basic-YPR Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using Yaw, Pitch, and Roll angles.
 ^|ID |<<req_basic_ypr,/req/basic/ypr/structure>>
 |===
-
-[[basic_ypr_sdu]]
-.Basic YPR SDU
-image::diagram/Basic-YPR_SDU.PNG[align="center"]
-
 
 
 *Structural Dependencies (Normative)*
