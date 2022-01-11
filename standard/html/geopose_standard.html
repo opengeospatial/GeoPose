@@ -1365,7 +1365,7 @@ Poses always represent the position and orientation of a real or virtual physica
 <h2 id="_conventions"><a class="anchor" href="#_conventions"></a>5. Conventions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This sections provides details and examples for conventions used in this document.</p>
+<p>This section provides details and examples for conventions used in this document.</p>
 </div>
 <div class="sect2">
 <h3 id="_identifiers"><a class="anchor" href="#_identifiers"></a>5.1. Identifiers</h3>
@@ -1391,7 +1391,7 @@ Poses always represent the position and orientation of a real or virtual physica
 <div class="paragraph">
 <p>The GeoPose standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. 1997). The UML notations used in this standard are described in the diagram in <a href="#figure-1">UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).</a>.</p>
 </div>
-<div id="figure-1" class="imageblock">
+<div id="figure-1" class="imageblock text-center">
 <div class="content">
 <img src="images/UML_Notation.png" alt="UML Notation">
 </div>
@@ -1403,32 +1403,45 @@ Poses always represent the position and orientation of a real or virtual physica
 <div class="paragraph">
 <p>In order to enhance the readability of the GeoPose UML diagrams, classes are depicted in different colors. The following coloring scheme is applied:</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="images/Grey_UML.png" alt="Grey UML"></span></p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/Grey_UML.png" alt="Grey UML">
+</div>
+<div class="title">Figure 2. Data Types</div>
 </div>
 <div class="paragraph">
 <p>Classes painted in grey represent data types.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Blue_UML.png" alt="Blue UML"></span></p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/Blue_UML.png" alt="Blue UML">
+</div>
+<div class="title">Figure 3. Blue color Denotes Abstract or More General Classes</div>
 </div>
 <div class="paragraph">
 <p>Classes painted in blue are internal less-derived elements that are not themselves directly encoded as concrete data objects.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Yellow_UML.png" alt="Yellow UML"></span></p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/Yellow_UML.png" alt="Yellow UML">
+</div>
+<div class="title">Figure 4. Yellow Color Denotes Structural Data Units</div>
 </div>
 <div class="paragraph">
 <p>Classes painted in yellow correspond to Structural Data Units or have properties that are represented in Structural Data Units and in encodings of those SDUs. Only data types and classes painted yellow are encoded as concrete data objects.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="images/Green_UML.png" alt="Green UML"></span></p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/Green_UML.png" alt="Green UML">
+</div>
+<div class="title">Figure 5. label</div>
 </div>
 <div class="paragraph">
 <p>Enumerations are painted in green.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/White_UML.png" alt="white" width="256" height="400"></span></p>
+<div class="title">Green Color Denotes Enumeration</div>
+<p><span class="image"><img src="{images/White_UML.png" alt="white" width="256" height="400"></span></p>
 </div>
 <div class="paragraph">
 <p>The color white is used for notes and OCL constraints that are provided in the UML diagrams.</p>
@@ -1469,7 +1482,7 @@ Poses always represent the position and orientation of a real or virtual physica
 <div class="content">
 <img src="diagram/OGC_Process_Detail.png" alt="OGC Process Detail">
 </div>
-<div class="title">Figure 6.1: Document Structure Overview</div>
+<div class="title">Figure 6. Document Structure Overview</div>
 </div>
 </div>
 <div class="sect2">
@@ -1715,7 +1728,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="content">
 <img src="models/Logical_Core.png" alt="Logical Core">
 </div>
-<div class="title">Figure 2. Core Logical Model</div>
+<div class="title">Figure 7. Core Logical Model</div>
 </div>
 </div>
 <div class="sect3">
@@ -1731,7 +1744,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="content">
 <img src="models/Logical_time.png" alt="Logical time">
 </div>
-<div class="title">Figure 3. Time Logical model</div>
+<div class="title">Figure 8. Time Logical model</div>
 </div>
 </div>
 <div class="sect3">
@@ -1743,7 +1756,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="content">
 <img src="models/Logical_Sequence.png" alt="Logical Sequence">
 </div>
-<div class="title">Figure 4. Sequence Logical Model</div>
+<div class="title">Figure 9. Sequence Logical Model</div>
 </div>
 </div>
 <div class="sect3">
@@ -1758,7 +1771,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="content">
 <img src="models/Logical_Target_Basic_Advanced.png" alt="Logical Target Basic Advanced">
 </div>
-<div class="title">Figure 5. Basic and Advanced Structural Data Units</div>
+<div class="title">Figure 10. Basic and Advanced Structural Data Units</div>
 </div>
 <div class="paragraph">
 <p>The Chain and the Graph GeoPose composite structures represent linear or branching frame transformation relationships, respectively.</p>
@@ -1767,7 +1780,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="content">
 <img src="models/Logical_Target_Linked.png" alt="Linked">
 </div>
-<div class="title">Figure 6. Chain and Graph Structural Data Units</div>
+<div class="title">Figure 11. Chain and Graph Structural Data Units</div>
 </div>
 <div class="paragraph">
 <p>The Stream and each of the two Series composite structures represent time series of a single evolving GeoPose.</p>
@@ -1776,7 +1789,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="content">
 <img src="models/Logical_Target_Sequence.png" alt="Logical Target Sequence">
 </div>
-<div class="title">Figure 7. Series and Stream Structural Data Units</div>
+<div class="title">Figure 12. Series and Stream Structural Data Units</div>
 </div>
 </div>
 </div>
@@ -1879,7 +1892,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="content">
 <img src="diagram/Basic-YPR_SDU.PNG" alt="Basic YPR SDU">
 </div>
-<div class="title">Figure 8. Basic YPR SDU</div>
+<div class="title">Figure 13. Basic YPR SDU</div>
 </div>
 <table id="req_basic_ypr_sdu" class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2003,7 +2016,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="content">
 <img src="diagram/Basic-Quaternion_SDU.PNG" alt="Basic Quaternion SDU">
 </div>
-<div class="title">Figure 9. Basic Quaternion SDU</div>
+<div class="title">Figure 14. Basic Quaternion SDU</div>
 </div>
 <table id="req_basic_quaternion" class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2125,7 +2138,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="content">
 <img src="diagram/Advanced_SDU.PNG" alt="Advanced SDU">
 </div>
-<div class="title">Figure 10. Basic Advanced SDU</div>
+<div class="title">Figure 15. Basic Advanced SDU</div>
 </div>
 <table id="req_advanced" class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2285,7 +2298,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="content">
 <img src="diagram/Graph_SDU.PNG" alt="Graph SDU">
 </div>
-<div class="title">Figure 11. Graph SDU</div>
+<div class="title">Figure 16. Graph SDU</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2324,7 +2337,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="content">
 <img src="diagram/Chain_SDU.PNG" alt="Chain SDU">
 </div>
-<div class="title">Figure 12. Chain SDU</div>
+<div class="title">Figure 17. Chain SDU</div>
 </div>
 </div>
 <div class="sect3">
@@ -2362,7 +2375,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="content">
 <img src="diagram/Regular-Series_SDU.PNG" alt="Regular Series SDU">
 </div>
-<div class="title">Figure 13. Regular Series SDU</div>
+<div class="title">Figure 18. Regular Series SDU</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2401,7 +2414,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="content">
 <img src="diagram/Irregular-Series_SDU.PNG" alt="Irregular Series SDU">
 </div>
-<div class="title">Figure 14. Irregular Series SDU</div>
+<div class="title">Figure 19. Irregular Series SDU</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2440,13 +2453,13 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="content">
 <img src="diagram/Stream-Header_SDU.PNG" alt="Stream Header SDU">
 </div>
-<div class="title">Figure 15. Stream Header SDU</div>
+<div class="title">Figure 20. Stream Header SDU</div>
 </div>
 <div id="stream_trailer_sdu" class="imageblock text-center">
 <div class="content">
 <img src="diagram/Stream-Element_SDU.PNG" alt="Stream Element SDU">
 </div>
-<div class="title">Figure 16. Stream Element SDU</div>
+<div class="title">Figure 21. Stream Element SDU</div>
 </div>
 <hr>
 </div>
