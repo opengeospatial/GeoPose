@@ -1,25 +1,23 @@
-==== Frame Specification Attributes
-
 [[req_sdu_frame_specification_authority]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
-^|*Requirement {counter:req-id}* |*/req/sdu/frame_specification/authority* 
+^|*Requirement SDU-FS-Authority* |*/req/sdu/frame_specification/authority* 
 ^|Requirement |The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.
 ^|ID |<<req_sdu_frame_specification_authority,/req/sdu/framespecification/authority>>
 |===
 
 [[req_sdu_frame_specification_id]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
-^|*Requirement {counter:req-id}* |*/req/sdu/frame_specification/id* 
+^|*Requirement SDU-FS-ID* |*/req/sdu/frame_specification/id* 
 ^|Requirement |The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.
 ^|ID |<<req_sdu_frame_specification_id,/req/sdu/tangentplane/latitude>>
 |===
 
 [[req_sdu_frame_specification_parameters]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
-^|*Requirement {counter:req-id}* |*/req/sdu/frame_specification/parameter* 
+^|*Requirement SDU-FS-Parameters* |*/req/sdu/frame_specification/parameter* 
 ^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
 ^|ID |<<req_sdu_frame_specification_parameter,/req/sdu/frame_specification/parameter>>
 |===
