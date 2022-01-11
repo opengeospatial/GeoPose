@@ -17,7 +17,7 @@
 [[req_sdu_frame_specification_parameters]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement SDU-FS-Parameters* |*/req/sdu/frame_specification/parameter* 
+^|*Requirement SDU-FS-Parameters* |*/req/sdu/frame_specification/parameters* 
 ^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
 ^|ID |<<req_sdu_frame_specification_parameter,/req/sdu/frame_specification/parameter>>
 |===
