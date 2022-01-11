@@ -1,5 +1,6 @@
 == Conventions
-This sections provides details and examples for conventions used in this document. 
+
+This section provides details and examples for conventions used in this document. 
 
 === Identifiers
 The normative provisions in this document are denoted by the URI
@@ -20,30 +21,40 @@ The GeoPose standard is presented in this document in diagrams using the Unified
 
 [[figure-1]]
 .UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
-image::images/UML_Notation.png[]
+image::images/UML_Notation.png[align ="center"]
 
 All associations between model elements in GeoPose are uni-directional. Thus, associations in GeoPose are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
 
 
 In order to enhance the readability of the GeoPose UML diagrams, classes are depicted in different colors. The following coloring scheme is applied:
 
-image:images/Grey_UML.png[align="center"]
+[[]]
+.Data Types
+image::images/Grey_UML.png[align="center"]
 
 Classes painted in grey represent data types.
 
-image:./images/Blue_UML.png[align="center"]
+[[]]
+.Blue color Denotes Abstract or More General Classes
+image::./images/Blue_UML.png[align="center"]
 
 Classes painted in blue are internal less-derived elements that are not themselves directly encoded as concrete data objects.
 
-image:./images/Yellow_UML.png[align="center"]
+[[]]
+.Yellow Color Denotes Structural Data Units
+image::./images/Yellow_UML.png[align="center"]
 
 Classes painted in yellow correspond to Structural Data Units or have properties that are represented in Structural Data Units and in encodings of those SDUs. Only data types and classes painted yellow are encoded as concrete data objects.
 
-image:images/Green_UML.png[align="center"]
+[[]]
+.label
+image::images/Green_UML.png[align="center"]
 
 Enumerations are painted in green.
 
-image:images/White_UML.png[white,256,400,align="center"]
+[[]]
+.Green Color Denotes Enumeration
+image:{images/White_UML.png[white,256,400,align="center"]
 
 The color white is used for notes and OCL constraints that are provided in the UML diagrams.
 

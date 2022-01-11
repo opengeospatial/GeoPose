@@ -10,7 +10,9 @@ A key idea is that specific use cases are tied to the standardization targets. T
 
 Of course, GeoPose must incorporate or align with other relevant existing standards and common practices. The goal is to fill an interoperability gap in existing standards without reinventing technology in a way that encourages interoperability. 
 
-image::diagram/OGC_Process_Detail.png[caption="Figure 6.1: ",title=     "Document Structure Overview",  align="center"]
+[[]]
+.Document Structure Overview
+image::diagram/OGC_Process_Detail.png[align="center"]
 
 [[use_case_summary]]
 

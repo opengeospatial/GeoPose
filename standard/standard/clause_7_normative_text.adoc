@@ -201,7 +201,7 @@ include::requirements/sdu/Req_SDU_Quaternion.adoc[]
 The Graph Target supports a network of object relative poses. The graph is a directed acyclic graph, each node must either be an Extrinsic Frame or reachable from an Extrinsic Frame.
 
 [[req_graph]]
-[width="100%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
 ^|*Requirement Graph-S-{counter:req-TT-id}* |*/req/Graph/structure* 
 ^|Requirement |An implementation of a Graph GeoPose shall consist of a
@@ -224,7 +224,7 @@ The Chain Target supports relationships between a linear sequence of pose relati
 *Structure (Normative)*
 
 [[req_chain]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
 ^|*Requirement Chain-S-{counter:req-TT-id}* |*/req/Chain/structure* 
 ^|Requirement |An implementation of a Chain GeoPose shall consist of a
@@ -246,7 +246,7 @@ The Regular (Time) Series Target represents the time evolution of a single GeoPo
 *Structure (Normative)*
 
 [[req_sequence_series_regular]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
 ^|*Requirement Regular_Series-S-{counter:req-Regular_Series-id}* |*/req/Regular_Series/structure* 
 ^|Requirement |An implementation of a Regular Series GeoPose shall consist of a
@@ -268,7 +268,7 @@ The Irregular (Time) Series Target represents the time evolution of a single Geo
 *Structure (Normative)*
 
 [[req_sequence_series_irregular]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
 ^|*Requirement Irregular_Series-S-{counter:req-Irregular_Series-id}* |*/req/Irregular_Series/structure* 
 ^|Requirement |An implementation of an Irregular Series GeoPose shall consist of a
@@ -291,7 +291,7 @@ The Stream target consists of two parts: a single initial specification of a tra
 *Structure (Normative)*
 
 [[req_sequence_stream]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
 ^|*Requirement Stream-S-{counter:req-Stream-id}* |*/req/Stream/structure* 
 ^|Requirement |An implementation of a Stream GeoPose shall consist of a
@@ -522,7 +522,7 @@ include::schemata/GeoPose.Composite.Sequence.Stream.Schema.json[]
 
 <<<
 
-*Instance (Informative)*
+*Instances (Informative)*
 
 Valid JSON encoding of a Stream Header instance:
 
