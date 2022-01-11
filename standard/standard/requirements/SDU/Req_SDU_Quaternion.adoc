@@ -1,7 +1,7 @@
 [[req_sdu_orientation_quaternion]]
-[width="90%",cols="2,6"]
+[width="100%",cols="4,6"]
 |===
-^|*Requirement SDU-Q}* |*/req/sdu/orientation/quaternion* 
+^|*Requirement SDU-Q* |*/req/sdu/orientation/quaternion* 
 ^|Requirement |An instance of a GeoPose Logical Model quaternion datatype value shall be expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order. The sum of the squares of the individual components shall be as close to 1.0 as the real number representation allows. 
 ^|ID |<<req_sdu_orientation_quaternion,/req/sdu/orientation/quaternon>>
 |===

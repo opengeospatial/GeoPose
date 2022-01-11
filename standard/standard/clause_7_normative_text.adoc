@@ -1,27 +1,11 @@
-== Standardization Targets (Normative)
+== Logical Model
 
-The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification. 
+=== Description (Informative)
 
-There are eight independent Standardization Targets to specifically address the requirements of individual use cases. The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:
+The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification. The Logical Model relates these elements to represent different types of GeoPose data objects and also defines structures built of time series and linked GeoPoses.
 
-. Basic - Satisfy most use cases
-.. Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
-.. Orientation by unit quaternion: *Basic-Quaternion* Target
-. Configurable - Flexible enough for complex use cases: *Advanced* Target
-. Composite - Efficient structures for linked and sequential GeoPoses
-.. Linked linear sequence of poses: *Chain* Target
-.. General linked poses: *Graph* Target
-.. Sequence
-... Series
-.... Timeseries with constant time spacing: *Regular* Timeseries Target
-.... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
-... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
 
-=== Methodology
-
-Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.
-
-=== Logical Model (Normative)
+=== UML Logical Model (Normative)
 
 The normative expression of the UML model is a Sparx Systems Enterprise Explorer
 link:https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/Model.eapx[project ("eapx")file].
@@ -37,7 +21,7 @@ Implementers of software using encoded SDUs shall conform to the logical descrip
 The Logical Model Core contains the essential elements specific to the GeoPose modelled as a transformation between an anchoring Outer Frame and one or more derived Inner Frames.
 
 [[metadata_governance]]
-.Core logical model
+.Core Logical Model
 image::models/Logical_Core.png[align="center"]
 
 ==== Time
@@ -48,7 +32,7 @@ link:https://www.w3.org/TR/2020/CR-owl-time-20200326/[OWL Time] document.
 Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to seconds of UNIX Time.
 
 [[core_logical_model]]
-.Time logical model
+.Time Logical model
 image::models/Logical_time.png[align="center"]
 
 ==== Sequence
@@ -56,14 +40,14 @@ image::models/Logical_time.png[align="center"]
 The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same <<def_Outer_Frame,**Outer Frame**>> and there is a time-dependent changing <<def_Inner_Frame,**Inner Frame**>>.
 
 [[sequence_logical_model]]
-.Sequence logical model
+.Sequence Logical Model
 image::models/Logical_Sequence.png[align="center"]
 
 ==== Targets
 
-The Logical Model's Targets packages specify the design of logical data objects and data types that are directly expressed in GeoPose data objects.  
+The Logical Model's Targets package specify the design of logical data objects and data types that are directly expressed in GeoPose data objects.  
 
-The two Basic and the Advanced GeoPoses represent single GeoPose objects.
+The Basic-YPR, Basic-Quaternion, and the Advanced GeoPoses represent single GeoPose objects.
 
 [[basic_advanced_logical_model]]
 .Basic and Advanced Structural Data Units
@@ -75,29 +59,26 @@ The Chain and the Graph GeoPose composite structures represent linear or branchi
 .Chain and Graph Structural Data Units
 image::models/Logical_Target_Linked.png[Linked,align="center"]
 
-The Stream and the two Series composite structures represent a time series of a single evolving GeoPose.
+The Stream and each of the two Series composite structures represent time series of a single evolving GeoPose.
 
 [[series_and_stream_model]]
 .Series and Stream Structural Data Units
 image::models/Logical_Target_Sequence.png[align="center"]
 
-
-
 === Structural Data Units 
 
-==== Description (Informative)
-The purpose of SDUs is to provide a standardization target that is independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with a corresponding element (class or attribute) in the logical model.
+==== Description of SDUs and Standardization Targets (Informative)
+
+Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.
+
+SDUs provide Standardization Targets that are independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with a corresponding element (class or attribute) in the logical model.
 
 Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets. One alternative could be to make all of the requirements on SDUs separately, and then have some language that requires conformance and implementation only for the Targets implemented. Within the document, the SDU requirements are in separate files, included when appropriate in the sections for each of the Targets. This insures that the texts will be identical, even if it is not transparently obvious in the standard.
 The GeoPose Standard requires a specific method for the mapping of each data element from the logical model to SDUs. There are parallel requirements for encoding groups of SDUs in for each encoding. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.
 
 [[standardization_targets]]
 
-==== Standardization Targets(Normative)
-
-===== Description of the Standardization Targets (Informative)
-
-The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. There are eight Standardization Targets denoted by bold terms in the following categories:
+The Basic and Advanced Standardization Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. There are eight Standardization Targets denoted by bold terms in the following categories:
 
 . Basic - Satisfy most use cases
 .. Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
@@ -118,7 +99,7 @@ There shall be eight independent Standardization Targets. There shall be no depe
 
 A conforming implementation may implement an encoding of any or all of the individual Targets.
 
-===== Requirements of the Structural Data Units (Normative)
+===== Requirements on Structural Data Units for Each Standardization Target (Normative)
 
 ====== Standardization Target 1: Basic-YPR
 
@@ -139,7 +120,6 @@ image::diagram/Basic-YPR_SDU.PNG[align="center"]
 ^|Requirement |An implementation of a Basic-YPR Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using Yaw, Pitch, and Roll angles.
 ^|ID |<<req_basic_ypr,/req/basic/ypr/structure>>
 |===
-
 
 *Structural Dependencies (Normative)*
 
@@ -163,7 +143,7 @@ image::diagram/Basic-Quaternion_SDU.PNG[align="center"]
 
  
 [[req_basic_quaternion]]
-[width="100%",cols="3,6"]
+[width="100%",cols="4,6"]
 |===
 ^|*Requirement BE-S-{counter:req-be-id}* |*/req/basic/quaternion/structure* 
 ^|Requirement |An implementation of a Basic-Quaternion Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using a unit quaternion.
@@ -188,7 +168,6 @@ The Advanced Target has a more general structure, allowing flexible specificatio
 
 *Structure (Normative)*
 
-
 [[advanced_sdu]]
 .Basic Advanced SDU
 image::diagram/Advanced_SDU.PNG[align="center"]
@@ -196,14 +175,22 @@ image::diagram/Advanced_SDU.PNG[align="center"]
  
 
 [[req_advanced]]
-[width="100%",cols="3,6"]
+[width="100%",cols="4,6"]
 |===
 ^|*Requirement AD-S-{counter:req-ad-id}* |*/req/advanced/structure* 
-^|Requirement |An implementation of an Advanced Target shall consist of a
+^|Requirement |An implementation of an Advanced Target conform to Requirements AD-S-1, SDU-GP-Instant, and SDU-Q.
 ^|ID |<<req_advanced/structure,/req/advanced/structure>>
 |===
 
+*Structural Dependencies (Normative)*
 
+include::requirements/sdu/Req_SDU_GeoPoseInstant.adoc[]
+
+include::requirements/sdu/Req_SDU_FrameSpec_Attributes.adoc[]
+
+include::requirements/sdu/Req_SDU_Quaternion.adoc[]
+
+<<<
 
 <<<
 
@@ -320,21 +307,26 @@ image::diagram/Stream-Header_SDU.PNG[align="center"]
 .Stream Element SDU
 image::diagram/Stream-Element_SDU.PNG[align="center"]
 
-=== JSON Encodings (Normative)
 
-[NOTE]
-Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets. One alternative could be to make all of the requirements on SDUs separately, and then have some language that requires conformance and implementation only for the Targets implemented. Within the document, the SDU requirements are in separate files, included when appropriate in the sections for each of the Targets. This insures that the texts will be identical, even if it is not transparently obvious in the standard.
-Requirements on how data elements are mapped from the Logical Model to SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target's group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target's section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.
+'''
+=== Encodings
+
+==== Description (Informative)
+
+Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets. 
+Requirements on SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target's group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target's section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.
+
+==== JSON Encoding
 
 
-==== JSON Encodings for Standardization Target 1: Basic-Quaternion
+===== Standardization Target 1: Basic-Quaternion (Normative)
 
 [NOTE]
 Two JSON encodings are defined for the Basic-Quaternion Target:
 *Strict*, disallowing additional JSON properties not defined in the schema and
 *Extensible*, allowing additional JSON properties in addition to those required by the schema. All other targets follow the default.
 
-===== Strict JSON Encoding (Normative)
+====== Strict JSON Encoding (Normative)
 
 include::requirements/target/basic-q/Req_Basic_Strict_Quaternion.adoc[]
 
@@ -348,7 +340,7 @@ include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
 include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
 ----
 
-===== Permissive JSON Encoding (Normative) 
+====== Permissive JSON Encoding (Normative) 
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. This encoding is intended to be the default GeoPose.
@@ -367,7 +359,7 @@ include::schemata/GeoPose.Basic.Quaternion.Schema.json[]
 include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
 ----
 
-==== JSON Encoding for Standardization Target 2: Basic-YPR 
+===== Standardization Target 2: Basic-YPR (Normative)
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
@@ -389,7 +381,7 @@ include::instances/GeoPose.Basic.YPR.Instance.00.json[]
 ----
 
 <<<
-==== JSON Encoding for Standardization Target 3: Advanced GeoPose
+===== Standardization Target 3: Advanced GeoPose (Normative)
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
@@ -404,7 +396,7 @@ include::schemata/GeoPose.Advanced.Schema.json[]
 
 <<<
 
-*Instance*
+*Instance (Informative)*
 
 ----
 include::instances/GeoPose.Advanced.Instance.json[]
@@ -412,7 +404,7 @@ include::instances/GeoPose.Advanced.Instance.json[]
 
 <<<
 
-==== JSON Encoding for Standardization Target 4: Graph
+===== Standardization Target 4: Graph (Normative)
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
@@ -427,7 +419,7 @@ include::schemata/GeoPose.Composite.Graph.Schema.json[]
 
 <<<
 
-*Instance*
+*Instance (Informative)*
 
 ----
 include::instances/GeoPose.Composite.Graph.Instance.json[]
@@ -435,7 +427,7 @@ include::instances/GeoPose.Composite.Graph.Instance.json[]
 
 <<<
 
-==== JSON Encoding for Standardization Target 5: Chain
+===== Standardization Target 5: Chain (Normative)
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
@@ -450,13 +442,13 @@ include::schemata/GeoPose.Composite.Chain.Schema.json[]
 
 <<<
 
-*Instance*
+*Instance (Informative)*
 
 ----
 include::instances/GeoPose.Composite.Chain.Instance.json[]
 ----
 
-==== JSON Encoding for Standardization Target 6: Regular Series
+==== Standardization Target 6: Regular Series (Normative)
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
@@ -471,7 +463,7 @@ include::schemata/GeoPose.Composite.Sequence.Series.Regular.Schema.json[]
 
 <<<
 
-*Instance*
+*Instance (Informative)*
 
 ----
 include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
@@ -479,7 +471,7 @@ include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 
 <<<
 
-==== JSON Encoding for Standardization Target 7: Irregular Series
+==== Standardization Target 7: Irregular Series (Normative)
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
 
@@ -493,7 +485,7 @@ include::schemata/GeoPose.Composite.Sequence.Series.Irregular.Schema.json[]
 
 <<<
 
-*Instance*
+*Instance (Informative)*
 
 ----
 include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
@@ -501,7 +493,7 @@ include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
 
 <<<
 
-==== JSON Encoding for Standardization Target 8: Stream
+==== Standardization Target 8: Stream (Normative)
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
@@ -530,7 +522,7 @@ include::schemata/GeoPose.Composite.Sequence.Stream.Schema.json[]
 
 <<<
 
-*Instance*
+*Instance (Informative)*
 
 Valid JSON encoding of a Stream Header instance:
 
