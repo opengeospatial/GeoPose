@@ -4,8 +4,6 @@ The following normative documents contain provisions that, through reference in 
 
 ====
 
-[NOTE]
-This section under construction as of 23rd August 2021 ETC 2nd September 2021
 
 ISO 19101 Conceptual Modelling
 
@@ -27,32 +25,23 @@ OGC: OGC 14-005r3, OGC IndoorGML (2014)
 
 OWL Time: https://www.w3.org/TR/2020/CR-owl-time-20200326/
 
-JSON Schema
-
-EBNF
+JSON Schema 2019-09 http://json-schema.org/specification.html 
 
 ISO 19162:2019
 Geographic information — Well-known text representation of coordinate reference systems
 https://www.iso.org/standard/76496.html
 
-coordinate reference system https://en.wikipedia.org/wiki/Spatial_reference_system
 ISO 19111:2019 Geographic information — Referencing by coordinates https://www.iso.org/standard/74039.html 
 
-
-EPSG https://iogp.georepository.com/home.html
+EPSG https://epsg.org
 
 NASA SPICE https://naif.jpl.nasa.gov/naif/  Navigation and ancillary information facility
 
-Euler angles Wikipedia https://en.wikipedia.org/wiki/Euler_angles 
-
-YPR ref
-https://en.wikipedia.org/wiki/Aircraft_principal_axes principal axes
-https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf 
+YPR https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf 
 
 Ref frame refs https://en.wikipedia.org/wiki/Frame_of_reference
 
-Pose refs
-https://en.wikipedia.org/wiki/Pose_(computer_vision) 
+Pose https://en.wikipedia.org/wiki/Pose_(computer_vision) 
 
 
 ====
