@@ -116,9 +116,9 @@ image::diagram/Basic-YPR_SDU.PNG[align="center"]
 [[req_basic_ypr_sdu]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement BE-S-{counter:req-be-sdu-id}* |*/req/basic/ypr/sdu* 
+^|*Requirement B-YPR-SDU* |*/req/basic/ypr/sdu* 
 ^|Requirement |An implementation of a Basic-YPR Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using Yaw, Pitch, and Roll angles.
-^|ID |<<req_basic_ypr,/req/basic/ypr/structure>>
+^|ID |<<req_basic_ypr,/req/basic/ypr/sdu>>
 |===
 
 *Structural Dependencies (Normative)*
@@ -145,9 +145,9 @@ image::diagram/Basic-Quaternion_SDU.PNG[align="center"]
 [[req_basic_quaternion]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement BE-S-{counter:req-be-id}* |*/req/basic/quaternion/structure* 
+^|*Requirement B-Q-SDU* |*/req/basic/quaternion/sdu* 
 ^|Requirement |An implementation of a Basic-Quaternion Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using a unit quaternion.
-^|ID |<<req_basic_ypr,/req/basic/quaternion/structure>>
+^|ID |<<req_basic_ypr,/req/basic/quaternion/sdu>>
 |===
 
 
@@ -177,9 +177,9 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 [[req_advanced]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement AD-S-{counter:req-ad-id}* |*/req/advanced/structure* 
+^|*Requirement A-SDU* |*/req/advanced/sdu* 
 ^|Requirement |An implementation of an Advanced Target conform to Requirements AD-S-1, SDU-GP-Instant, and SDU-Q.
-^|ID |<<req_advanced/structure,/req/advanced/structure>>
+^|ID |<<req_advanced/structure,/req/advanced/sdu>>
 |===
 
 *Structural Dependencies (Normative)*
