@@ -47,14 +47,14 @@ image::./images/Yellow_UML.png[align="center"]
 Classes painted in yellow correspond to Structural Data Units or have properties that are represented in Structural Data Units and in encodings of those SDUs. Only data types and classes painted yellow are encoded as concrete data objects.
 
 [[]]
-.label
+.Green Color Denotes Enumeration
 image::images/Green_UML.png[align="center"]
 
 Enumerations are painted in green.
 
 [[]]
-.Green Color Denotes Enumeration
-image:{images/White_UML.png[white,256,400,align="center"]
+.White Color Denotes a Note or Constraint
+image::images/White_UML.png[white,256,400,align="center"]
 
 The color white is used for notes and OCL constraints that are provided in the UML diagrams.
 
