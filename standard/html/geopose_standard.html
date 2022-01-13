@@ -2131,7 +2131,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of an Advanced Target conform to Requirements AD-S-1, SDU-GP-Instant, and SDU-Q.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of an Advanced Target conform to Requirements AD-S-1, GP-Instant-SDU, and Q-SDU.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2260,16 +2260,16 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Graph-S-1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Graph/structure</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Graph-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Graph/sdu</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Graph GeoPose shall consist of a</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Graph GeoPose shall conform to Requirements GP=Instant-SDU, GP-FrameSpec-SDU, and GP=FTIndexPair-SDU.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Graph/structure">/req/Graph/structure</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Graph/structure">/req/Graph/sdu</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -2278,6 +2278,89 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <img src="diagram/Graph_SDU.PNG" alt="Graph SDU">
 </div>
 <div class="title">Figure 17. Graph SDU</div>
+</div>
+<table id="req_sdu_pose_geoposeinstant" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement GP-Instant-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/pose/geoposeinstant/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_pose_geoposeinstant">/req/pose/geoposeinstant/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_authority" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Authority-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_authority">/req/framespecification/authority/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_id" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-ID-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_id">/req/frame_specification/id/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_parameters" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Parameters-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_parameter">/req/frame_specification/parameters/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Unresolved directive in clause_7_normative_text.adoc - include::requirements/sdu/Req_SDU_FrameTransformIndexPair.adoc[]</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -2299,12 +2382,12 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Chain-S-2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Chain-S-1</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Chain/structure</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Chain GeoPose shall consist of a</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Chain GeoPose shall conform to Requirements GP-Instant-SDU and GP-FramwSpec-SDU.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2318,6 +2401,86 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </div>
 <div class="title">Figure 18. Chain SDU</div>
 </div>
+<table id="req_sdu_pose_geoposeinstant" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement GP-Instant-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/pose/geoposeinstant/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_pose_geoposeinstant">/req/pose/geoposeinstant/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_authority" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Authority-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_authority">/req/framespecification/authority/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_id" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-ID-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_id">/req/frame_specification/id/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_parameters" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Parameters-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_parameter">/req/frame_specification/parameters/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_standardization_target_6_regular_series"><a class="anchor" href="#_standardization_target_6_regular_series"></a>7.3.6. Standardization Target 6: Regular Series</h4>
@@ -2342,7 +2505,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Regular Series GeoPose shall consist of a</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Regular Series GeoPose shall conform to Requirements S-Header-SDU, GP-Duration-SDU, GP-FS-SDU, S-Trailer-SDU.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2381,7 +2544,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of an Irregular Series GeoPose shall consist of a</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of an Irregular Series GeoPose shall conform to Requirements S-Header-SDU, GP-FS-SDU, S-FT-Element-SDU, and S-Trailer-SDU.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2420,7 +2583,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Stream GeoPose shall consist of a</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Stream GeoPose shall conform to Requirements S-TM-SDU, GP-FS-SDU, and S-FT-Element-SDU.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2465,7 +2628,7 @@ Requirements on SDUs are abstract in the sense that SDUs are implemented as conc
 <td class="content">
 Two JSON encodings are defined for the Basic-Quaternion Target:
 <strong>Strict</strong>, disallowing additional JSON properties not defined in the schema and
-<strong>Extensible</strong>, allowing additional JSON properties in addition to those required by the schema. All other targets follow the default.
+<strong>Extensible</strong>, allowing additional JSON properties in addition to those required by the schema. All other targets follow the default and permit additional JSON properties.
 </td>
 </tr>
 </table>

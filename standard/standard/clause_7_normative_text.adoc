@@ -180,7 +180,7 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 [width="100%",cols="4,6"]
 |===
 ^|*Requirement A-SDU* |*/req/advanced/sdu* 
-^|Requirement |An implementation of an Advanced Target conform to Requirements AD-S-1, SDU-GP-Instant, and SDU-Q.
+^|Requirement |An implementation of an Advanced Target conform to Requirements AD-S-1, GP-Instant-SDU, and Q-SDU.
 ^|ID |<<req_advanced/structure,/req/advanced/sdu>>
 |===
 
@@ -205,9 +205,9 @@ The Graph Target supports a network of object relative poses. The graph is a dir
 [[req_graph]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement Graph-S-{counter:req-TT-id}* |*/req/Graph/structure* 
-^|Requirement |An implementation of a Graph GeoPose shall consist of a
-^|ID |<<req_Graph/structure,/req/Graph/structure>>
+^|*Requirement Graph-SDU* |*/req/Graph/sdu* 
+^|Requirement |An implementation of a Graph GeoPose shall conform to Requirements GP=Instant-SDU, GP-FrameSpec-SDU, and GP=FTIndexPair-SDU.
+^|ID |<<req_Graph/structure,/req/Graph/sdu>>
 |===
 
 [[graph_sdu]]
@@ -215,6 +215,13 @@ The Graph Target supports a network of object relative poses. The graph is a dir
 image::diagram/Graph_SDU.PNG[align="center"]
 
  
+include::requirements/sdu/Req_SDU_GeoPoseInstant.adoc[]
+
+include::requirements/sdu/Req_SDU_FrameSpec_Attributes.adoc[]
+
+include::requirements/sdu/Req_SDU_FrameTransformIndexPair.adoc[]
+
+
 <<<
 
 ==== Standardization Target 5: Chain
@@ -229,7 +236,7 @@ The Chain Target supports relationships between a linear sequence of pose relati
 [width="100%",cols="4,6"]
 |===
 ^|*Requirement Chain-S-{counter:req-TT-id}* |*/req/Chain/structure* 
-^|Requirement |An implementation of a Chain GeoPose shall consist of a
+^|Requirement |An implementation of a Chain GeoPose shall conform to Requirements GP-Instant-SDU and GP-FramwSpec-SDU.
 ^|ID |<<req_Chain/structure,/req/Chain/structure>>
 |===
 
@@ -238,6 +245,10 @@ The Chain Target supports relationships between a linear sequence of pose relati
 .Chain SDU
 image::diagram/Chain_SDU.PNG[align="center"]
 
+ 
+include::requirements/sdu/Req_SDU_GeoPoseInstant.adoc[]
+
+include::requirements/sdu/Req_SDU_FrameSpec_Attributes.adoc[]
 
 ==== Standardization Target 6: Regular Series
 
@@ -251,7 +262,7 @@ The Regular (Time) Series Target represents the time evolution of a single GeoPo
 [width="100%",cols="4,6"]
 |===
 ^|*Requirement Regular_Series-S-{counter:req-Regular_Series-id}* |*/req/Regular_Series/structure* 
-^|Requirement |An implementation of a Regular Series GeoPose shall consist of a
+^|Requirement |An implementation of a Regular Series GeoPose shall conform to Requirements S-Header-SDU, GP-Duration-SDU, GP-FS-SDU, S-Trailer-SDU.
 ^|ID |<<req_Regular_Series/structure,/req/Regular_Series/structure>>
 |===
 
@@ -273,7 +284,7 @@ The Irregular (Time) Series Target represents the time evolution of a single Geo
 [width="100%",cols="4,6"]
 |===
 ^|*Requirement Irregular_Series-S-{counter:req-Irregular_Series-id}* |*/req/Irregular_Series/structure* 
-^|Requirement |An implementation of an Irregular Series GeoPose shall consist of a
+^|Requirement |An implementation of an Irregular Series GeoPose shall conform to Requirements S-Header-SDU, GP-FS-SDU, S-FT-Element-SDU, and S-Trailer-SDU. 
 ^|ID |<<req_Irregular_Series/structure,/req/Irregular_Series/structure>>
 |===
 
@@ -296,7 +307,7 @@ The Stream target consists of two parts: a single initial specification of a tra
 [width="100%",cols="4,6"]
 |===
 ^|*Requirement Stream-S-{counter:req-Stream-id}* |*/req/Stream/structure* 
-^|Requirement |An implementation of a Stream GeoPose shall consist of a
+^|Requirement |An implementation of a Stream GeoPose shall conform to Requirements S-TM-SDU, GP-FS-SDU, and S-FT-Element-SDU.
 ^|ID |<<req_Stream/structure,/req/Stream/structure>>
 |===
 
@@ -327,7 +338,7 @@ Requirements on SDUs are abstract in the sense that SDUs are implemented as conc
 [NOTE]
 Two JSON encodings are defined for the Basic-Quaternion Target:
 *Strict*, disallowing additional JSON properties not defined in the schema and
-*Extensible*, allowing additional JSON properties in addition to those required by the schema. All other targets follow the default.
+*Extensible*, allowing additional JSON properties in addition to those required by the schema. All other targets follow the default and permit additional JSON properties.
 
 ====== Strict JSON Encoding (Normative)
 
