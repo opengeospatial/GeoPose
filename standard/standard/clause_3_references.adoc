@@ -1,47 +1,52 @@
 == References
+
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
 
-====
 
 
-ISO 19101 Conceptual Modelling
+. Bray, T., Ed., "The JavaScript Object Notation (JSON) Data Interchange Format", STD 90, RFC 8259, December 2017, https://www.rfc-editor.org/info/std90
 
-ISO / TC 211: ISO 19115-1:2014 Geographic information -- Metadata -- Part 1: Fundamentals (2014)
+. H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09"  https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8 
+ 
 
-ISO / TC 211: ISO 19157:2013 Geographic information -- Data quality (2013)
+. A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. https://tools.ietf.org/html/draft-handrews-json-schema-validation-02
 
-ISO / TC 211: ISO 19139:2007 Geographic information -- Metadata -- XML schema implementation (2007)
+. ISO 19101 Conceptual Modelling
 
-ISO / TC 154: ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules (2019)
+. ISO / TC 211: ISO 19115-1:2014 Geographic information -- Metadata -- Part 1: Fundamentals (2014)
 
-ISO / TC 154: ISO 8601-2:2019 Date and time — Representations for information interchange — Part 1: Extensions (2019)
+. ISO / TC 211: ISO 19157:2013 Geographic information -- Data quality (2013)
 
-OGC: OGC 15-097 OGC Geospatial User Feedback Standard. Conceptual Model (2016)
+. ISO / TC 211: ISO 19139:2007 Geographic information -- Metadata -- XML schema implementation (2007)
 
-OGC: OGC 12-019, OGC City Geography Markup Language (CityGML) Encoding Standard (2012)
+. ISO / TC 154: ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules (2019)
 
-OGC: OGC 14-005r3, OGC IndoorGML (2014)
+. ISO / TC 154: ISO 8601-2:2019 Date and time — Representations for information interchange — Part 1: Extensions (2019)
 
-OWL Time: https://www.w3.org/TR/2020/CR-owl-time-20200326/
+. OGC: OGC 15-097 OGC Geospatial User Feedback Standard. Conceptual Model (2016)
 
-JSON Schema 2019-09 http://json-schema.org/specification.html 
+. OGC: OGC 12-019, OGC City Geography Markup Language (CityGML) Encoding Standard (2012)
 
-ISO 19162:2019
+. OGC: OGC 14-005r3, OGC IndoorGML (2014)
+
+. OWL Time: https://www.w3.org/TR/2020/CR-owl-time-20200326/
+
+. JSON Schema 2019-09 http://json-schema.org/specification.html 
+
+. ISO 19162:2019
 Geographic information — Well-known text representation of coordinate reference systems
 https://www.iso.org/standard/76496.html
 
-ISO 19111:2019 Geographic information — Referencing by coordinates https://www.iso.org/standard/74039.html 
+. ISO 19111:2019 Geographic information — Referencing by coordinates https://www.iso.org/standard/74039.html 
 
-EPSG https://epsg.org
+. EPSG https://epsg.org
 
-NASA SPICE https://naif.jpl.nasa.gov/naif/  Navigation and ancillary information facility
+. NASA SPICE https://naif.jpl.nasa.gov/naif/  Navigation and ancillary information facility
 
-YPR https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf 
+. YPR https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf 
 
-Ref frame refs https://en.wikipedia.org/wiki/Frame_of_reference
+. Ref frame  https://en.wikipedia.org/wiki/Frame_of_reference
 
-Pose https://en.wikipedia.org/wiki/Pose_(computer_vision) 
+. Pose https://en.wikipedia.org/wiki/Pose_(computer_vision) 
 
-
-====
