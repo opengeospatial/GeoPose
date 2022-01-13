@@ -626,9 +626,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_targets">7.2.4. Targets</a></li>
 </ul>
 </li>
-<li><a href="#_structural_data_units">7.3. Structural Data Units</a>
+<li><a href="#requiremen6ts">7.3. Requirements on Structural Data Units and Standardization Targets</a>
 <ul class="sectlevel3">
-<li><a href="#_description_of_sdus_and_standardization_targets_informative">7.3.1. Description of SDUs and Standardization Targets (Informative)</a></li>
+<li><a href="#_description_informative_2">7.3.1. Description (Informative)</a></li>
 <li><a href="#_standardization_target_2_basic_quaternion">7.3.2. Standardization Target 2: Basic-Quaternion</a></li>
 <li><a href="#_standardization_target_3_advanced">7.3.3. Standardization Target 3: Advanced</a></li>
 <li><a href="#_standardization_target_4_graph">7.3.4. Standardization Target 4: Graph</a></li>
@@ -638,9 +638,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_standardization_target_8_stream">7.3.8. Standardization Target 8: Stream</a></li>
 </ul>
 </li>
-<li><a href="#_encodings">7.4. Encodings</a>
+<li><a href="#_requirements_on_encodings">7.4. Requirements on Encodings</a>
 <ul class="sectlevel3">
-<li><a href="#_description_informative_2">7.4.1. Description (Informative)</a></li>
+<li><a href="#_description_informative_3">7.4.1. Description (Informative)</a></li>
 <li><a href="#_json_encoding">7.4.2. JSON Encoding</a></li>
 <li><a href="#_standardization_target_6_regular_series_normative">7.4.3. Standardization Target 6: Regular Series (Normative)</a></li>
 <li><a href="#_standardization_target_7_irregular_series_normative">7.4.4. Standardization Target 7: Irregular Series (Normative)</a></li>
@@ -673,7 +673,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_stream_sdu_conformance_class">A.4.7. Stream SDU Conformance Class</a></li>
 </ul>
 </li>
-<li><a href="#_encodings_2">A.5. Encodings</a>
+<li><a href="#_encodings">A.5. Encodings</a>
 <ul class="sectlevel3">
 <li><a href="#_json_conformance">A.5.1. JSON Conformance</a></li>
 </ul>
@@ -727,17 +727,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_glossary">Annex F: Glossary</a></li>
 <li><a href="#_revision_history">Annex G: Revision History</a></li>
 <li><a href="#Bibliography">Annex H: Bibliography</a></li>
-<li><a href="#">9. .</a>
-<ul class="sectlevel2">
-<li><a href="#_extended_backus_naur_form_ebnf">9.1. Extended Backus-Naur Form (EBNF)</a></li>
-<li><a href="#_json_and_json_schema">9.2. JSON and JSON-Schema</a></li>
-<li><a href="#_pose">9.3. Pose</a></li>
-<li><a href="#_position">9.4. Position</a></li>
-<li><a href="#_reference_frames_and_coordinate_reference_systems">9.5. Reference Frames and Coordinate Reference Systems</a></li>
-<li><a href="#_rotation_and_orientation">9.6. Rotation and Orientation</a></li>
-<li><a href="#_other">9.7. Other</a></li>
-</ul>
-</li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -1055,65 +1044,74 @@ The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Require
 <div class="paragraph">
 <p>The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.</p>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Bray, T., Ed., "The JavaScript Object Notation (JSON) Data Interchange Format", STD 90, RFC 8259, December 2017, <a href="https://www.rfc-editor.org/info/std90" class="bare">https://www.rfc-editor.org/info/std90</a></p>
+</li>
+<li>
+<p>H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09"  <a href="https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8" class="bare">https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8</a></p>
+</li>
+<li>
+<p>A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. <a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-02" class="bare">https://tools.ietf.org/html/draft-handrews-json-schema-validation-02</a></p>
+</li>
+<li>
 <p>ISO 19101 Conceptual Modelling</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>ISO / TC 211: ISO 19115-1:2014 Geographic information&#8201;&#8212;&#8201;Metadata&#8201;&#8212;&#8201;Part 1: Fundamentals (2014)</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>ISO / TC 211: ISO 19157:2013 Geographic information&#8201;&#8212;&#8201;Data quality (2013)</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>ISO / TC 211: ISO 19139:2007 Geographic information&#8201;&#8212;&#8201;Metadata&#8201;&#8212;&#8201;XML schema implementation (2007)</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>ISO / TC 154: ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules (2019)</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>ISO / TC 154: ISO 8601-2:2019 Date and time — Representations for information interchange — Part 1: Extensions (2019)</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>OGC: OGC 15-097 OGC Geospatial User Feedback Standard. Conceptual Model (2016)</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>OGC: OGC 12-019, OGC City Geography Markup Language (CityGML) Encoding Standard (2012)</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>OGC: OGC 14-005r3, OGC IndoorGML (2014)</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>OWL Time: <a href="https://www.w3.org/TR/2020/CR-owl-time-20200326/" class="bare">https://www.w3.org/TR/2020/CR-owl-time-20200326/</a></p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>JSON Schema 2019-09 <a href="http://json-schema.org/specification.html" class="bare">http://json-schema.org/specification.html</a></p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>ISO 19162:2019
 Geographic information — Well-known text representation of coordinate reference systems
 <a href="https://www.iso.org/standard/76496.html" class="bare">https://www.iso.org/standard/76496.html</a></p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>ISO 19111:2019 Geographic information — Referencing by coordinates <a href="https://www.iso.org/standard/74039.html" class="bare">https://www.iso.org/standard/74039.html</a></p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>EPSG <a href="https://epsg.org" class="bare">https://epsg.org</a></p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>NASA SPICE <a href="https://naif.jpl.nasa.gov/naif/" class="bare">https://naif.jpl.nasa.gov/naif/</a>  Navigation and ancillary information facility</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>YPR <a href="https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf" class="bare">https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf</a></p>
-</div>
-<div class="paragraph">
-<p>Ref frame refs <a href="https://en.wikipedia.org/wiki/Frame_of_reference" class="bare">https://en.wikipedia.org/wiki/Frame_of_reference</a></p>
-</div>
-<div class="paragraph">
+</li>
+<li>
+<p>Ref frame  <a href="https://en.wikipedia.org/wiki/Frame_of_reference" class="bare">https://en.wikipedia.org/wiki/Frame_of_reference</a></p>
+</li>
+<li>
 <p>Pose <a href="https://en.wikipedia.org/wiki/Pose_(computer_vision" class="bare">https://en.wikipedia.org/wiki/Pose_(computer_vision</a>)</p>
-</div>
-</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1771,12 +1769,13 @@ Basic-YPR, Basic-Quaternion,</p></td>
 </div>
 <div class="title">Figure 13. Series and Stream Structural Data Units</div>
 </div>
+<hr>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_structural_data_units"><a class="anchor" href="#_structural_data_units"></a>7.3. Structural Data Units</h3>
+<h3 id="requiremen6ts"><a class="anchor" href="#requiremen6ts"></a>7.3. Requirements on Structural Data Units and Standardization Targets</h3>
 <div class="sect3">
-<h4 id="_description_of_sdus_and_standardization_targets_informative"><a class="anchor" href="#_description_of_sdus_and_standardization_targets_informative"></a>7.3.1. Description of SDUs and Standardization Targets (Informative)</h4>
+<h4 id="_description_informative_2"><a class="anchor" href="#_description_informative_2"></a>7.3.1. Description (Informative)</h4>
 <div class="paragraph">
 <p>Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.</p>
 </div>
@@ -2445,9 +2444,9 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </div>
 </div>
 <div class="sect2">
-<h3 id="_encodings"><a class="anchor" href="#_encodings"></a>7.4. Encodings</h3>
+<h3 id="_requirements_on_encodings"><a class="anchor" href="#_requirements_on_encodings"></a>7.4. Requirements on Encodings</h3>
 <div class="sect3">
-<h4 id="_description_informative_2"><a class="anchor" href="#_description_informative_2"></a>7.4.1. Description (Informative)</h4>
+<h4 id="_description_informative_3"><a class="anchor" href="#_description_informative_3"></a>7.4.1. Description (Informative)</h4>
 <div class="paragraph">
 <p>Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets.
 Requirements on SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target&#8217;s group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target&#8217;s section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.</p>
@@ -4314,7 +4313,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_encodings_2"><a class="anchor" href="#_encodings_2"></a>A.5. Encodings</h3>
+<h3 id="_encodings"><a class="anchor" href="#_encodings"></a>A.5. Encodings</h3>
 <div class="sect3">
 <h4 id="_json_conformance"><a class="anchor" href="#_json_conformance"></a>A.5.1. JSON Conformance</h4>
 
@@ -4989,136 +4988,23 @@ A reference level from which elevation or altitude can be measured. The Topograp
 <div class="sect1">
 <h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex H: Bibliography</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Under construction - now an organized framework. Brining in pieces from main text and from RFC comments.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id=""><a class="anchor" href="#"></a>9. .</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_extended_backus_naur_form_ebnf"><a class="anchor" href="#_extended_backus_naur_form_ebnf"></a>9.1. Extended Backus-Naur Form (EBNF)</h3>
-<div id="EBNF" class="paragraph">
-<p>[nn] ISO/IEC 14977:1996 (Last reviewed and confirmed in 2018)
-Information technology — Syntactic metalanguage — Extended BNF
-<a href="https://www.iso.org/standard/26153.html" class="bare">https://www.iso.org/standard/26153.html</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_json_and_json_schema"><a class="anchor" href="#_json_and_json_schema"></a>9.2. JSON and JSON-Schema</h3>
-<div id="json" class="paragraph">
-<p>[nn] Bray, T., Ed., "The JavaScript Object Notation (JSON) Data Interchange Format", STD 90, RFC 8259, December 2017, <a href="https://www.rfc-editor.org/info/std90" class="bare">https://www.rfc-editor.org/info/std90</a>.
-<a href="https://www.rfc-editor.org/info/std90" class="bare">https://www.rfc-editor.org/info/std90</a></p>
-</div>
-<div id="json-schema-core" class="paragraph">
-<p>[nn] H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09"  <a href="https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8" class="bare">https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8</a></p>
-</div>
-<div id="json-schema-validation" class="paragraph">
-<p>[nn] A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. <a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-02" class="bare">https://tools.ietf.org/html/draft-handrews-json-schema-validation-02</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pose"><a class="anchor" href="#_pose"></a>9.3. Pose</h3>
 <div class="paragraph">
-<p>pose ref</p>
-</div>
-<div class="paragraph">
-<p>scene graph ref</p>
-</div>
-<div class="paragraph">
-<p>ros ref</p>
-</div>
-<div class="paragraph">
-<p>glTF</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_position"><a class="anchor" href="#_position"></a>9.4. Position</h3>
-<div class="paragraph">
-<p>ref</p>
-</div>
-<div class="paragraph">
-<p>ref</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_reference_frames_and_coordinate_reference_systems"><a class="anchor" href="#_reference_frames_and_coordinate_reference_systems"></a>9.5. Reference Frames and Coordinate Reference Systems</h3>
-<div class="paragraph">
-<p>nasa spice, epsg/r lott , ogc wkt, srm,</p>
-</div>
-<div class="paragraph">
-<p>ref from physics</p>
-</div>
-<div class="paragraph">
-<p>ref from surveying</p>
-</div>
-<div class="paragraph">
-<p>ref from space</p>
-</div>
-<div class="paragraph">
-<p>ref from M&amp;S</p>
-</div>
-<div class="paragraph">
-<p>iso 18026</p>
-</div>
-<div class="paragraph">
-<p>iso 19162</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_rotation_and_orientation"><a class="anchor" href="#_rotation_and_orientation"></a>9.6. Rotation and Orientation</h3>
-<div id="HAM1844" class="paragraph">
-<p>[2] HAMILTON, SIR WILLIAM ROWAN, "On quaternions; or on a new system of imaginaries in algebra," Philosophical Magazine xxv pp. 10-13 (July 1844).</p>
-</div>
-<div id="WIKIQUAT" class="paragraph">
-<p>[3] Quaternion. (2021, July 23). In Wikipedia. <a href="https://en.wikipedia.org/wiki/Quaternion" class="bare">https://en.wikipedia.org/wiki/Quaternion</a></p>
-</div>
-<div class="paragraph">
-<p>ref on euler angles</p>
-</div>
-<div class="paragraph">
-<p>ref on ypr</p>
-</div>
-<div class="paragraph">
-<p>i3s</p>
-</div>
-<div class="paragraph">
-<p>3d tiles</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_other"><a class="anchor" href="#_other"></a>9.7. Other</h3>
-<div id="OGC2015" class="paragraph">
 <p>[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).</p>
 </div>
 <div class="paragraph">
-<p>IEEE 1278 DIS ref</p>
+<p>[2] PHILIP J. SCHNEIDER, DAVID H. EBERLY, Geometric Tools for Computer Graphics, Morgan Kaufmann, 2003.</p>
 </div>
 <div class="paragraph">
-<p>OGC Testbed-14: CityGML and AR Engineering Report ( <a href="https://docs.ogc.org/per/18-025.html" class="bare">https://docs.ogc.org/per/18-025.html</a> )</p>
+<p>[3] OGC Testbed-14: CityGML and AR Engineering Report ( <a href="https://docs.ogc.org/per/18-025.html" class="bare">https://docs.ogc.org/per/18-025.html</a> )</p>
 </div>
 <div class="paragraph">
-<p>Interoperable Simulation and Gaming Sprint Engineering Report ( <a href="http://docs.ogc.org/per/20-087.html" class="bare">http://docs.ogc.org/per/20-087.html</a> )</p>
+<p>[4] Interoperable Simulation and Gaming Sprint Engineering Report ( <a href="http://docs.ogc.org/per/20-087.html" class="bare">http://docs.ogc.org/per/20-087.html</a> )</p>
 </div>
 <div class="paragraph">
-<p>ISG Year 2 ER ( <a href="https://github.com/opengeospatial/OGC-ISG-Sprint-Sep-2020/tree/master/Sprint%20Report&#8201;&#8212;&#8201;not" class="bare">https://github.com/opengeospatial/OGC-ISG-Sprint-Sep-2020/tree/master/Sprint%20Report&#8201;&#8212;&#8201;not</a> yet published )</p>
+<p>[5] ISG Year 2 ER ( <a href="https://github.com/opengeospatial/OGC-ISG-Sprint-Sep-2020/tree/master/Sprint%20Report" class="bare">https://github.com/opengeospatial/OGC-ISG-Sprint-Sep-2020/tree/master/Sprint%20Report</a> )</p>
 </div>
 <div class="paragraph">
-<p>GeoVolumes charter ( <a href="https://portal.ogc.org/files/97171" class="bare">https://portal.ogc.org/files/97171</a> )</p>
-</div>
-<div class="paragraph">
-<p>CDB</p>
-</div>
+<p>[6] GeoVolumes charter ( <a href="https://portal.ogc.org/files/97171" class="bare">https://portal.ogc.org/files/97171</a> )</p>
 </div>
 </div>
 </div>

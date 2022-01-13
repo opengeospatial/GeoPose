@@ -65,9 +65,11 @@ The Stream and each of the two Series composite structures represent time series
 .Series and Stream Structural Data Units
 image::models/Logical_Target_Sequence.png[align="center"]
 
-=== Structural Data Units 
+''''
+[[requiremen6ts]]
+=== Requirements on Structural Data Units and Standardization Targets
 
-==== Description of SDUs and Standardization Targets (Informative)
+==== Description (Informative)
 
 Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.
 
@@ -309,7 +311,7 @@ image::diagram/Stream-Element_SDU.PNG[align="center"]
 
 
 '''
-=== Encodings
+=== Requirements on Encodings
 
 ==== Description (Informative)
 
@@ -317,6 +319,7 @@ Requirements are modular by Standardization Target. This results in some SDU req
 Requirements on SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target's group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target's section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.
 
 ==== JSON Encoding
+
 
 
 ===== Standardization Target 1: Basic-Quaternion (Normative)
