@@ -157,7 +157,7 @@ image::diagram/Basic-YPR_SDU.PNG[align="center"]
 [width="100%",cols="4,6"]
 |===
 ^|*Requirement B-YPR-SDU* |*/req/orientation/ypr_angles/sdu* 
-^|Requirement |Yaw, Pitch, and Roll (YPR) angles shall be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure shall be the degree. 
+^|Requirement |Yaw, Pitch, and Roll (YPR) angles shall be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure shall be the degree. 
 ^|ID |<<req_sdu_orientation_euler_angles,/req/orientation/ypr_angles/sdu>>
 |===
 
