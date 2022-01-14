@@ -95,15 +95,20 @@ The Basic and Advanced Standardization Targets differ in the level of options an
 .... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
 ... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
 
-=====  Global Requirements (Normative)
+=====  Global Requirement (Normative)
 
-There shall be eight independent Standardization Targets. There shall be no dependency between or among the individual Targets.
+[[global]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement G-Global* |*/req/global* 
+^|Requirement |There shall be eight independent Standardization Targets. There shall be no dependency between or among the individual Targets. A conforming implementation may implement an encoding of any or all of the individual Targets.
+^|ID |<<req_global,/req/global>>
+|===
 
-A conforming implementation may implement an encoding of any or all of the individual Targets.
 
-===== Requirements on Structural Data Units for Each Standardization Target (Normative)
+==== Requirements on Structural Data Units for Each Standardization Target (Normative)
 
-====== Standardization Target 1: Basic-YPR
+===== Standardization Target 1: Basic-YPR
 
 *Summary (Informative)*
 
@@ -123,11 +128,38 @@ image::diagram/Basic-YPR_SDU.PNG[align="center"]
 ^|ID |<<req_basic_ypr,/req/basic/ypr/sdu>>
 |===
 
-*Structural Dependencies (Normative)*
+[[req_tangent_plane]]
+[[req_tangent_plane_longitude]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement B-TP-Lon-SDU* |*/req/tangent_plane/longitude/sdu* 
+^|Requirement |An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.
+^|ID |<<req_tangent_plane_parameters_longitude,/req/tangent_plane/longitude/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_TangentPlaneParameters.adoc[]
+[[req_tangent_plane_parameters_latitude]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement B-S-TP-Lat* |*/req/tangent_plane/latitude/sdu* 
+^|Requirement |An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.
+^|ID |<<req_basic_quaternion,/req/tangent_plane/latitude/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_YPR_Angles.adoc[]
+[[req_tangent_plane_parameters_h]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement B-S-TP-h* |*/req/tangent_plane/h/sdu* 
+^|Requirement |An instance of a GeoPose tangentPoint.h attribute shall be expressed as a real number.
+^|ID |<<req_basic_quaternion,/req/tangent_plane/h/sdu>>
+|===
+
+[[req_sdu_orientation_ypr_angles]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement B-YPR-SDU* |*/req/orientation/ypr_angles/sdu* 
+^|Requirement |Euler angles shall be expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure shall be the degree. 
+^|ID |<<req_sdu_orientation_euler_angles,/req/orientation/ypr_angles/sdu>>
+|===
 
 <<<
 
@@ -152,13 +184,38 @@ image::diagram/Basic-Quaternion_SDU.PNG[align="center"]
 ^|ID |<<req_basic_ypr,/req/basic/quaternion/sdu>>
 |===
 
+[[req_tangent_plane]]
+[[req_tangent_plane_longitude]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement B-TP-Lon-SDU* |*/req/tangent_plane/longitude/sdu* 
+^|Requirement |An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.
+^|ID |<<req_tangent_plane_parameters_longitude,/req/tangent_plane/longitude/sdu>>
+|===
 
-*Structural Dependencies (Normative)*
+[[req_tangent_plane_parameters_latitude]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement B-S-TP-Lat* |*/req/tangent_plane/latitude/sdu* 
+^|Requirement |An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.
+^|ID |<<req_basic_quaternion,/req/tangent_plane/latitude/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_TangentPlaneParameters.adoc[]
+[[req_tangent_plane_parameters_h]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement B-S-TP-h* |*/req/tangent_plane/h/sdu* 
+^|Requirement |An instance of a GeoPose tangentPoint.h attribute shall be expressed as a real number.
+^|ID |<<req_basic_quaternion,/req/tangent_plane/h/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_Quaternion.adoc[]
-
+[[req_sdu_orientation_quaternion]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement Q-SDU* |*/req/orientation/quaternion/sdu* 
+^|Requirement |An instance of a GeoPose Logical Model quaternion datatype value shall be expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order. The sum of the squares of the individual components shall be as close to 1.0 as the real number representation allows. 
+^|ID |<<req_sdu_orientation_quaternion,/req/orientation/quaternion/sdu>>
+|===
 <<<
 
 
@@ -174,23 +231,47 @@ The Advanced Target has a more general structure, allowing flexible specificatio
 .Basic Advanced SDU
 image::diagram/Advanced_SDU.PNG[align="center"]
 
- 
-
 [[req_advanced]]
+
+[[req_sdu_pose_geoposeinstant]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement A-SDU* |*/req/advanced/sdu* 
-^|Requirement |An implementation of an Advanced Target conform to Requirements AD-S-1, GP-Instant-SDU, and Q-SDU.
-^|ID |<<req_advanced/structure,/req/advanced/sdu>>
+^|*Requirement GP-Instant-SDU* |*/req/pose/geoposeinstant/sdu* 
+^|Requirement |The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.
+^|ID |<<req_sdu_pose_geoposeinstant,/req/pose/geoposeinstant/sdu>>
 |===
 
-*Structural Dependencies (Normative)*
+[[req_sdu_frame_specification_authority]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
+^|Requirement |The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.
+^|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_GeoPoseInstant.adoc[]
+[[req_sdu_frame_specification_id]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
+^|Requirement |The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.
+^|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_FrameSpec_Attributes.adoc[]
+[[req_sdu_frame_specification_parameters]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
+^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
+^|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_Quaternion.adoc[]
+[[req_sdu_orientation_quaternion]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement Q-SDU* |*/req/orientation/quaternion/sdu* 
+^|Requirement |An instance of a GeoPose Logical Model quaternion datatype value shall be expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order. The sum of the squares of the individual components shall be as close to 1.0 as the real number representation allows. 
+^|ID |<<req_sdu_orientation_quaternion,/req/orientation/quaternion/sdu>>
+|===
 
 <<<
 
@@ -203,24 +284,51 @@ include::requirements/sdu/Req_SDU_Quaternion.adoc[]
 The Graph Target supports a network of object relative poses. The graph is a directed acyclic graph, each node must either be an Extrinsic Frame or reachable from an Extrinsic Frame.
 
 [[req_graph]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement Graph-SDU* |*/req/Graph/sdu* 
-^|Requirement |An implementation of a Graph GeoPose shall conform to Requirements GP=Instant-SDU, GP-FrameSpec-SDU, and GP=FTIndexPair-SDU.
-^|ID |<<req_Graph/structure,/req/Graph/sdu>>
-|===
+
+*Structure (Normative)*
 
 [[graph_sdu]]
 .Graph SDU
 image::diagram/Graph_SDU.PNG[align="center"]
 
- 
-include::requirements/sdu/Req_SDU_GeoPoseInstant.adoc[]
+[[req_sdu_pose_geoposeinstant]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement GP-Instant-SDU* |*/req/pose/geoposeinstant/sdu* 
+^|Requirement |The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.
+^|ID |<<req_sdu_pose_geoposeinstant,/req/pose/geoposeinstant/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_FrameSpec_Attributes.adoc[]
+[[req_sdu_frame_specification_authority]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
+^|Requirement |The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.
+^|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_FrameTransformIndexPair.adoc[]
+[[req_sdu_frame_specification_id]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
+^|Requirement |The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.
+^|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+|===
 
+[[req_sdu_frame_specification_parameters]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
+^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
+^|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+|===
+
+[width="100%",cols="4,6"]
+|===
+^|*Requirement GP-Index-SDU* |*/req/Chain/index/SDU* 
+^|Requirement |Each index vaue in a FrameListTransformPair shall be a distinct integer value between 0 and one less than the number of elements in the frameList property.
+^|ID |<<req_Chain/structure,/req/Chain/index/SDU>>
+|===
 
 <<<
 
@@ -230,25 +338,43 @@ include::requirements/sdu/Req_SDU_FrameTransformIndexPair.adoc[]
 
 The Chain Target supports relationships between a linear sequence of pose relationships. The first frame in the sequence must be an Outer Frame. 
 
-*Structure (Normative)*
-
-[[req_chain]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement Chain-S-{counter:req-TT-id}* |*/req/Chain/structure* 
-^|Requirement |An implementation of a Chain GeoPose shall conform to Requirements GP-Instant-SDU and GP-FramwSpec-SDU.
-^|ID |<<req_Chain/structure,/req/Chain/structure>>
-|===
-
+*Structure*
 
 [[chain_sdu]]
 .Chain SDU
 image::diagram/Chain_SDU.PNG[align="center"]
 
- 
-include::requirements/sdu/Req_SDU_GeoPoseInstant.adoc[]
+[[req_sdu_pose_geoposeinstant]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement GP-Instant-SDU* |*/req/pose/geoposeinstant/sdu* 
+^|Requirement |The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.
+^|ID |<<req_sdu_pose_geoposeinstant,/req/pose/geoposeinstant/sdu>>
+|===
 
-include::requirements/sdu/Req_SDU_FrameSpec_Attributes.adoc[]
+[[req_sdu_frame_specification_authority]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
+^|Requirement |The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.
+^|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+|===
+
+[[req_sdu_frame_specification_id]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
+^|Requirement |The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.
+^|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+|===
+
+[[req_sdu_frame_specification_parameters]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
+^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
+^|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+|===
 
 ==== Standardization Target 6: Regular Series
 
@@ -259,16 +385,55 @@ The Regular (Time) Series Target represents the time evolution of a single GeoPo
 *Structure (Normative)*
 
 [[req_sequence_series_regular]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement Regular_Series-S-{counter:req-Regular_Series-id}* |*/req/Regular_Series/structure* 
-^|Requirement |An implementation of a Regular Series GeoPose shall conform to Requirements S-Header-SDU, GP-Duration-SDU, GP-FS-SDU, S-Trailer-SDU.
-^|ID |<<req_Regular_Series/structure,/req/Regular_Series/structure>>
-|===
 
 [[regular_series_sdu]]
 .Regular Series SDU
 image::diagram/Regular-Series_SDU.PNG[align="center"]
+ 
+[width="100%",cols="4,6"]
+|===
+^|*Requirement S-Header-SDU* |*/req/RegularSeries/header/SDU* 
+^|Requirement |A header property shall be implemented as a SeriesHeader.
+^|ID |<<req_Chain/structure,/req/RegularSeries/header/SDU>>
+|===
+
+[width="100%",cols="4,6"]
+|===
+^|*Requirement GP-Duration-SDU* |*/req/RegularSeries/duration/SDU* 
+^|Requirement |An interposeDuration property shall be implemented as a GeoPoseDuration.
+^|ID |<<req_Chain/structure,/req/RegularSeries/duration/SDU>>
+|===
+
+[[req_sdu_frame_specification_authority]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
+^|Requirement |The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.
+^|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+|===
+
+[[req_sdu_frame_specification_id]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
+^|Requirement |The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.
+^|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+|===
+
+[[req_sdu_frame_specification_parameters]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
+^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
+^|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+|===
+
+[width="100%",cols="4,6"]
+|===
+^|*Requirement S-Trailer-SDU* |*/req/RegularSeries/trailer/SDU* 
+^|Requirement |A trailer property shall be implemented as a SeriesTrailer.
+^|ID |<<req_Chain/structure,/req/RegularSeries/trailer/SDU>>
+|===
 
 <<<
 
@@ -281,17 +446,56 @@ The Irregular (Time) Series Target represents the time evolution of a single Geo
 *Structure (Normative)*
 
 [[req_sequence_series_irregular]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement Irregular_Series-S-{counter:req-Irregular_Series-id}* |*/req/Irregular_Series/structure* 
-^|Requirement |An implementation of an Irregular Series GeoPose shall conform to Requirements S-Header-SDU, GP-FS-SDU, S-FT-Element-SDU, and S-Trailer-SDU. 
-^|ID |<<req_Irregular_Series/structure,/req/Irregular_Series/structure>>
-|===
-
 
 [[irregular_series_sdu]]
 .Irregular Series SDU
 image::diagram/Irregular-Series_SDU.PNG[align="center"]
+
+[width="100%",cols="4,6"]
+|===
+^|*Requirement S-Header-SDU* |*/req/RegularSeries/header/SDU* 
+^|Requirement |A header property shall be implemented as a SeriesHeader.
+^|ID |<<req_Chain/structure,/req/RegularSeries/header/SDU>>
+|===
+
+[[req_sdu_frame_specification_authority]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
+^|Requirement |The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.
+^|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+|===
+
+[[req_sdu_frame_specification_id]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
+^|Requirement |The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.
+^|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+|===
+
+[[req_sdu_frame_specification_parameters]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
+^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
+^|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+|===
+
+
+[width="100%",cols="4,6"]
+|===
+^|*Requirement S-FT-Element-SDU* |*/req/IrregularSeries/frameandtime/SDU* 
+^|Requirement |An innerFrameAndTime property shall be implemented as an ExplicitFrameSpec and GeoPoseInstant pair.
+^|ID |<<req_Chain/structure,/req/IrregularSeries/frameandtime/SDU>>
+|===
+
+[width="100%",cols="4,6"]
+|===
+^|*Requirement S-Trailer-SDU* |*/req/RegularSeries/trailer/SDU* 
+^|Requirement |A trailer property shall be implemented as a SeriesTrailer.
+^|ID |<<req_Chain/structure,/req/RegularSeries/trailer/SDU>>
+|===
 
 <<<
 
@@ -304,12 +508,7 @@ The Stream target consists of two parts: a single initial specification of a tra
 *Structure (Normative)*
 
 [[req_sequence_stream]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement Stream-S-{counter:req-Stream-id}* |*/req/Stream/structure* 
-^|Requirement |An implementation of a Stream GeoPose shall conform to Requirements S-TM-SDU, GP-FS-SDU, and S-FT-Element-SDU.
-^|ID |<<req_Stream/structure,/req/Stream/structure>>
-|===
+
 
 [[stream_header_sdu]]
 .Stream Header SDU
@@ -320,17 +519,60 @@ image::diagram/Stream-Header_SDU.PNG[align="center"]
 .Stream Element SDU
 image::diagram/Stream-Element_SDU.PNG[align="center"]
 
+[width="100%",cols="4,6"]
+|===
+^|*Requirement S-TM-SDU* |*/req/Stream/sdu* 
+^|Requirement |A TransitionModel property shall be implemented as one of the values in the TransitionModel enumeration.
+^|ID |<<req_Stream/structure,/req/Stream/sdu>>
+|===
+
+[[req_sdu_frame_specification_authority]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
+^|Requirement |The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.
+^|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+|===
+
+[[req_sdu_frame_specification_id]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
+^|Requirement |The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.
+^|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+|===
+
+[[req_sdu_frame_specification_parameters]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
+^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
+^|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+|===
+
+[width="100%",cols="4,6"]
+|===
+^|*Requirement S-FST-SDU* |*/req/Stream/fst/sdu* 
+^|Requirement |A FrameAndTimeElement property shall be implemented as as an ExplicitFrameSpec and a GeoPoseInstant.
+^|ID |<<req_Stream/structure,/req/Stream/fst/sdu>>
+|===
 
 '''
+
+<<<
+
+
 === Requirements on Encodings
 
 ==== Description (Informative)
 
 Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets. 
-Requirements on SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target's group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target's section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.
+Requirements on SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target's group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target's section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified for the Basic-Q Target.
+
+'''
+<<<
 
 ==== JSON Encoding
-
 
 
 ===== Standardization Target 1: Basic-Quaternion (Normative)
