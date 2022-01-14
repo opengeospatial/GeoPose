@@ -629,13 +629,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#requiremen6ts">7.3. Requirements on Structural Data Units and Standardization Targets</a>
 <ul class="sectlevel3">
 <li><a href="#_description_informative_2">7.3.1. Description (Informative)</a></li>
-<li><a href="#_standardization_target_2_basic_quaternion">7.3.2. Standardization Target 2: Basic-Quaternion</a></li>
-<li><a href="#_standardization_target_3_advanced">7.3.3. Standardization Target 3: Advanced</a></li>
-<li><a href="#_standardization_target_4_graph">7.3.4. Standardization Target 4: Graph</a></li>
-<li><a href="#_standardization_target_5_chain">7.3.5. Standardization Target 5: Chain</a></li>
-<li><a href="#_standardization_target_6_regular_series">7.3.6. Standardization Target 6: Regular Series</a></li>
-<li><a href="#_standardization_target_7_irregular_series">7.3.7. Standardization Target 7: Irregular Series</a></li>
-<li><a href="#_standardization_target_8_stream">7.3.8. Standardization Target 8: Stream</a></li>
+<li><a href="#_requirements_on_structural_data_units_for_each_standardization_target_normative">7.3.2. Requirements on Structural Data Units for Each Standardization Target (Normative)</a></li>
+<li><a href="#_standardization_target_2_basic_quaternion">7.3.3. Standardization Target 2: Basic-Quaternion</a></li>
+<li><a href="#_standardization_target_3_advanced">7.3.4. Standardization Target 3: Advanced</a></li>
+<li><a href="#_standardization_target_4_graph">7.3.5. Standardization Target 4: Graph</a></li>
+<li><a href="#_standardization_target_5_chain">7.3.6. Standardization Target 5: Chain</a></li>
+<li><a href="#_standardization_target_6_regular_series">7.3.7. Standardization Target 6: Regular Series</a></li>
+<li><a href="#_standardization_target_7_irregular_series">7.3.8. Standardization Target 7: Irregular Series</a></li>
+<li><a href="#_standardization_target_8_stream">7.3.9. Standardization Target 8: Stream</a></li>
 </ul>
 </li>
 <li><a href="#_requirements_on_encodings">7.4. Requirements on Encodings</a>
@@ -654,23 +655,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#abstract-test-suite">Annex A: Abstract Test Suite (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_introduction">A.1. Introduction</a></li>
-<li><a href="#_structural_data_unit_sdu_conformance">A.2. Structural Data Unit (SDU) Conformance</a></li>
-<li><a href="#_basic_sdu_conformance_classes">A.3. Basic SDU Conformance Classes:</a>
+<li><a href="#_global_conformance">A.2. Global Conformance</a></li>
+<li><a href="#_structural_data_unit_sdu_conformance">A.3. Structural Data Unit (SDU) Conformance</a></li>
+<li><a href="#_basic_sdu_conformance_classes_normative">A.4. Basic SDU Conformance Classes (Normative)</a>
 <ul class="sectlevel3">
-<li><a href="#_basic_ypr_sdu_conformance_class">A.3.1. Basic-YPR SDU Conformance Class</a></li>
-<li><a href="#_basic_quaternion_sdu_conformance_class">A.3.2. Basic-Quaternion SDU Conformance Class</a></li>
-<li><a href="#_advanced_sdu_conformance_class">A.3.3. Advanced SDU Conformance Class</a></li>
-</ul>
-</li>
-<li><a href="#_composite_conformance_classes">A.4. Composite Conformance Classes:</a>
-<ul class="sectlevel3">
-<li><a href="#_graph_sdu_conformance_class">A.4.1. Graph SDU Conformance Class</a></li>
-<li><a href="#_chain_sdu_conformance_class">A.4.2. Chain SDU Conformance Class</a></li>
-<li><a href="#_sequence_sdu_conformance_classes">A.4.3. Sequence SDU Conformance Classes:</a></li>
-<li><a href="#ats_sequence">A.4.4. Series SDU Conformance Classes:</a></li>
-<li><a href="#ats_composite_sequence_series">A.4.5. Regular Series SDU Conformance Class</a></li>
-<li><a href="#_irregular_series_sdu_conformance_class">A.4.6. Irregular Series SDU Conformance Class</a></li>
-<li><a href="#_stream_sdu_conformance_class">A.4.7. Stream SDU Conformance Class</a></li>
+<li><a href="#_basic_ypr_sdu_conformance_class">A.4.1. Basic-YPR SDU Conformance Class</a></li>
+<li><a href="#_basic_q_sdu_conformance_class">A.4.2. Basic-Q SDU Conformance Class</a></li>
+<li><a href="#_advanced_sdu_conformance_class">A.4.3. Advanced SDU Conformance Class</a></li>
+<li><a href="#_graph_sdu_conformance_class">A.4.4. Graph SDU Conformance Class</a></li>
+<li><a href="#_chain_sdu_conformance_class">A.4.5. Chain SDU Conformance Class</a></li>
+<li><a href="#_regular_series_sdu_conformance_class">A.4.6. Regular Series SDU Conformance Class</a></li>
+<li><a href="#_irregular_series_sdu_conformance_class">A.4.7. Irregular Series SDU Conformance Class</a></li>
+<li><a href="#_stream_sdu_conformance_class">A.4.8. Stream SDU Conformance Class</a></li>
 </ul>
 </li>
 <li><a href="#_encodings">A.5. Encodings</a>
@@ -1846,18 +1842,33 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </ol>
 </div>
 <div class="sect4">
-<h5 id="_global_requirements_normative"><a class="anchor" href="#_global_requirements_normative"></a>Global Requirements (Normative)</h5>
-<div class="paragraph">
-<p>There shall be eight independent Standardization Targets. There shall be no dependency between or among the individual Targets.</p>
+<h5 id="_global_requirement_normative"><a class="anchor" href="#_global_requirement_normative"></a>Global Requirement (Normative)</h5>
+<table id="global" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement G-Global</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/global</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">There shall be eight independent Standardization Targets. There shall be no dependency between or among the individual Targets. A conforming implementation may implement an encoding of any or all of the individual Targets.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_global">/req/global</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="paragraph">
-<p>A conforming implementation may implement an encoding of any or all of the individual Targets.</p>
 </div>
-</div>
+<div class="sect3">
+<h4 id="_requirements_on_structural_data_units_for_each_standardization_target_normative"><a class="anchor" href="#_requirements_on_structural_data_units_for_each_standardization_target_normative"></a>7.3.2. Requirements on Structural Data Units for Each Standardization Target (Normative)</h4>
 <div class="sect4">
-<h5 id="_requirements_on_structural_data_units_for_each_standardization_target_normative"><a class="anchor" href="#_requirements_on_structural_data_units_for_each_standardization_target_normative"></a>Requirements on Structural Data Units for Each Standardization Target (Normative)</h5>
-<div class="sect5">
-<h6 id="_standardization_target_1_basic_ypr"><a class="anchor" href="#_standardization_target_1_basic_ypr"></a>Standardization Target 1: Basic-YPR</h6>
+<h5 id="_standardization_target_1_basic_ypr"><a class="anchor" href="#_standardization_target_1_basic_ypr"></a>Standardization Target 1: Basic-YPR</h5>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -1893,9 +1904,6 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><strong>Structural Dependencies (Normative)</strong></p>
-</div>
 <table id="req_tangent_plane_longitude" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 40%;">
@@ -1979,9 +1987,8 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="_standardization_target_2_basic_quaternion"><a class="anchor" href="#_standardization_target_2_basic_quaternion"></a>7.3.2. Standardization Target 2: Basic-Quaternion</h4>
+<h4 id="_standardization_target_2_basic_quaternion"><a class="anchor" href="#_standardization_target_2_basic_quaternion"></a>7.3.3. Standardization Target 2: Basic-Quaternion</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2017,9 +2024,6 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><strong>Structural Dependencies (Normative)</strong></p>
-</div>
 <table id="req_tangent_plane_longitude" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 40%;">
@@ -2103,7 +2107,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_3_advanced"><a class="anchor" href="#_standardization_target_3_advanced"></a>7.3.3. Standardization Target 3: Advanced</h4>
+<h4 id="_standardization_target_3_advanced"><a class="anchor" href="#_standardization_target_3_advanced"></a>7.3.4. Standardization Target 3: Advanced</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2118,29 +2122,6 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <img src="diagram/Advanced_SDU.PNG" alt="Advanced SDU">
 </div>
 <div class="title">Figure 16. Basic Advanced SDU</div>
-</div>
-<table id="req_advanced" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement A-SDU</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/advanced/sdu</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of an Advanced Target conform to Requirements AD-S-1, GP-Instant-SDU, and Q-SDU.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_advanced/structure">/req/advanced/sdu</a></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Structural Dependencies (Normative)</strong></p>
 </div>
 <table id="req_sdu_pose_geoposeinstant" class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2246,33 +2227,16 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_4_graph"><a class="anchor" href="#_standardization_target_4_graph"></a>7.3.4. Standardization Target 4: Graph</h4>
+<h4 id="_standardization_target_4_graph"><a class="anchor" href="#_standardization_target_4_graph"></a>7.3.5. Standardization Target 4: Graph</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
 <div class="paragraph">
 <p>The Graph Target supports a network of object relative poses. The graph is a directed acyclic graph, each node must either be an Extrinsic Frame or reachable from an Extrinsic Frame.</p>
 </div>
-<table id="req_graph" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Graph-SDU</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Graph/sdu</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Graph GeoPose shall conform to Requirements GP=Instant-SDU, GP-FrameSpec-SDU, and GP=FTIndexPair-SDU.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Graph/structure">/req/Graph/sdu</a></p></td>
-</tr>
-</tbody>
-</table>
+<div id="req_graph" class="paragraph">
+<p><strong>Structure (Normative)</strong></p>
+</div>
 <div id="graph_sdu" class="imageblock text-center">
 <div class="content">
 <img src="diagram/Graph_SDU.PNG" alt="Graph SDU">
@@ -2359,13 +2323,30 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>Unresolved directive in clause_7_normative_text.adoc - include::requirements/sdu/Req_SDU_FrameTransformIndexPair.adoc[]</p>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement GP-Index-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Chain/index/SDU</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each index vaue in a FrameListTransformPair shall be a distinct integer value between 0 and one less than the number of elements in the frameList property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Chain/structure">/req/Chain/index/SDU</a></p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_5_chain"><a class="anchor" href="#_standardization_target_5_chain"></a>7.3.5. Standardization Target 5: Chain</h4>
+<h4 id="_standardization_target_5_chain"><a class="anchor" href="#_standardization_target_5_chain"></a>7.3.6. Standardization Target 5: Chain</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2373,28 +2354,8 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <p>The Chain Target supports relationships between a linear sequence of pose relationships. The first frame in the sequence must be an Outer Frame.</p>
 </div>
 <div class="paragraph">
-<p><strong>Structure (Normative)</strong></p>
+<p><strong>Structure</strong></p>
 </div>
-<table id="req_chain" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Chain-S-1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Chain/structure</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Chain GeoPose shall conform to Requirements GP-Instant-SDU and GP-FramwSpec-SDU.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Chain/structure">/req/Chain/structure</a></p></td>
-</tr>
-</tbody>
-</table>
 <div id="chain_sdu" class="imageblock text-center">
 <div class="content">
 <img src="diagram/Chain_SDU.PNG" alt="Chain SDU">
@@ -2483,7 +2444,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </table>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_6_regular_series"><a class="anchor" href="#_standardization_target_6_regular_series"></a>7.3.6. Standardization Target 6: Regular Series</h4>
+<h4 id="_standardization_target_6_regular_series"><a class="anchor" href="#_standardization_target_6_regular_series"></a>7.3.7. Standardization Target 6: Regular Series</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2493,36 +2454,136 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="paragraph">
 <p><strong>Structure (Normative)</strong></p>
 </div>
-<table id="req_sequence_series_regular" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Regular_Series-S-1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Regular_Series/structure</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Regular Series GeoPose shall conform to Requirements S-Header-SDU, GP-Duration-SDU, GP-FS-SDU, S-Trailer-SDU.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Regular_Series/structure">/req/Regular_Series/structure</a></p></td>
-</tr>
-</tbody>
-</table>
 <div id="regular_series_sdu" class="imageblock text-center">
 <div class="content">
 <img src="diagram/Regular-Series_SDU.PNG" alt="Regular Series SDU">
 </div>
 <div class="title">Figure 19. Regular Series SDU</div>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement S-Header-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/RegularSeries/header/SDU</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A header property shall be implemented as a SeriesHeader.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Chain/structure">/req/RegularSeries/header/SDU</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement GP-Duration-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/RegularSeries/duration/SDU</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An interposeDuration property shall be implemented as a GeoPoseDuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Chain/structure">/req/RegularSeries/duration/SDU</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_authority" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Authority-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_authority">/req/framespecification/authority/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_id" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-ID-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_id">/req/frame_specification/id/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_parameters" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Parameters-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_parameter">/req/frame_specification/parameters/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement S-Trailer-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/RegularSeries/trailer/SDU</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A trailer property shall be implemented as a SeriesTrailer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Chain/structure">/req/RegularSeries/trailer/SDU</a></p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_7_irregular_series"><a class="anchor" href="#_standardization_target_7_irregular_series"></a>7.3.7. Standardization Target 7: Irregular Series</h4>
+<h4 id="_standardization_target_7_irregular_series"><a class="anchor" href="#_standardization_target_7_irregular_series"></a>7.3.8. Standardization Target 7: Irregular Series</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2532,36 +2593,136 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="paragraph">
 <p><strong>Structure (Normative)</strong></p>
 </div>
-<table id="req_sequence_series_irregular" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Irregular_Series-S-1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Irregular_Series/structure</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of an Irregular Series GeoPose shall conform to Requirements S-Header-SDU, GP-FS-SDU, S-FT-Element-SDU, and S-Trailer-SDU.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Irregular_Series/structure">/req/Irregular_Series/structure</a></p></td>
-</tr>
-</tbody>
-</table>
 <div id="irregular_series_sdu" class="imageblock text-center">
 <div class="content">
 <img src="diagram/Irregular-Series_SDU.PNG" alt="Irregular Series SDU">
 </div>
 <div class="title">Figure 20. Irregular Series SDU</div>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement S-Header-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/RegularSeries/header/SDU</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A header property shall be implemented as a SeriesHeader.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Chain/structure">/req/RegularSeries/header/SDU</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_authority" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Authority-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_authority">/req/framespecification/authority/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_id" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-ID-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_id">/req/frame_specification/id/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_parameters" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Parameters-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_parameter">/req/frame_specification/parameters/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement S-FT-Element-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/IrregularSeries/frameandtime/SDU</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An innerFrameAndTime property shall be implemented as an ExplicitFrameSpec and GeoPoseInstant pair.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Chain/structure">/req/IrregularSeries/frameandtime/SDU</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement S-Trailer-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/RegularSeries/trailer/SDU</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A trailer property shall be implemented as a SeriesTrailer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Chain/structure">/req/RegularSeries/trailer/SDU</a></p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_8_stream"><a class="anchor" href="#_standardization_target_8_stream"></a>7.3.8. Standardization Target 8: Stream</h4>
+<h4 id="_standardization_target_8_stream"><a class="anchor" href="#_standardization_target_8_stream"></a>7.3.9. Standardization Target 8: Stream</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2571,26 +2732,6 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div class="paragraph">
 <p><strong>Structure (Normative)</strong></p>
 </div>
-<table id="req_sequence_stream" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement Stream-S-1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Stream/structure</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Stream GeoPose shall conform to Requirements S-TM-SDU, GP-FS-SDU, and S-FT-Element-SDU.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Stream/structure">/req/Stream/structure</a></p></td>
-</tr>
-</tbody>
-</table>
 <div id="stream_header_sdu" class="imageblock text-center">
 <div class="content">
 <img src="diagram/Stream-Header_SDU.PNG" alt="Stream Header SDU">
@@ -2603,7 +2744,108 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </div>
 <div class="title">Figure 22. Stream Element SDU</div>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement S-TM-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Stream/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A TransitionModel property shall be implemented as one of the values in the TransitionModel enumeration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Stream/structure">/req/Stream/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_authority" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Authority-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_authority">/req/framespecification/authority/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_id" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-ID-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_id">/req/frame_specification/id/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_sdu_frame_specification_parameters" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement FS-Parameters-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/frame_specification/parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_frame_specification_parameter">/req/frame_specification/parameters/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement S-FST-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Stream/fst/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A FrameAndTimeElement property shall be implemented as as an ExplicitFrameSpec and a GeoPoseInstant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_Stream/structure">/req/Stream/fst/sdu</a></p></td>
+</tr>
+</tbody>
+</table>
 <hr>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect2">
@@ -2612,8 +2854,10 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <h4 id="_description_informative_3"><a class="anchor" href="#_description_informative_3"></a>7.4.1. Description (Informative)</h4>
 <div class="paragraph">
 <p>Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets.
-Requirements on SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target&#8217;s group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target&#8217;s section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.</p>
+Requirements on SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target&#8217;s group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target&#8217;s section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified for the Basic-Q Target.</p>
 </div>
+<hr>
+<div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
 <h4 id="_json_encoding"><a class="anchor" href="#_json_encoding"></a>7.4.2. JSON Encoding</h4>
@@ -4240,16 +4484,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_structural_data_unit_sdu_conformance"><a class="anchor" href="#_structural_data_unit_sdu_conformance"></a>A.2. Structural Data Unit (SDU) Conformance</h3>
-<div class="paragraph">
-<p>There are some universal requirements on values that appear in a concrete implementation using a specific encoding technology. For example, angles may be constrainted to fall within a range of values correponding to a circle. Because these are independent of encoding technology, they are specified here at a logical level.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_basic_sdu_conformance_classes"><a class="anchor" href="#_basic_sdu_conformance_classes"></a>A.3. Basic SDU Conformance Classes:</h3>
-<div class="sect3">
-<h4 id="_basic_ypr_sdu_conformance_class"><a class="anchor" href="#_basic_ypr_sdu_conformance_class"></a>A.3.1. Basic-YPR SDU Conformance Class</h4>
-<table id="ats_building_ade_use" class="tableblock frame-all grid-all" style="width: 90%;">
+<h3 id="_global_conformance"><a class="anchor" href="#_global_conformance"></a>A.2. Global Conformance</h3>
+<table id="ats_global" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4257,26 +4493,34 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/YPRr</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/global</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate that Basic-YPR GeoPose data objects conform to the JSON-Schema definition.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate Target implementation.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_building_ade_use">/req/basic/YPRr</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ats_global">/ats_global</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON-Schema validation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="_structural_data_unit_sdu_conformance"><a class="anchor" href="#_structural_data_unit_sdu_conformance"></a>A.3. Structural Data Unit (SDU) Conformance</h3>
+<div class="paragraph">
+<p>There are some universal requirements on values that appear in a concrete implementation using a specific encoding technology. For example, angles may be constrainted to fall within a range of values correponding to a circle. Because these are independent of encoding technology, they are specified here at a logical level. Tests of an implementation at the SDU level generally only be done by inspection.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_basic_sdu_conformance_classes_normative"><a class="anchor" href="#_basic_sdu_conformance_classes_normative"></a>A.4. Basic SDU Conformance Classes (Normative)</h3>
 <div class="sect3">
-<h4 id="_basic_quaternion_sdu_conformance_class"><a class="anchor" href="#_basic_quaternion_sdu_conformance_class"></a>A.3.2. Basic-Quaternion SDU Conformance Class</h4>
-<table id="ats_basic_quaternion" class="tableblock frame-all grid-all" style="width: 90%;">
+<h4 id="_basic_ypr_sdu_conformance_class"><a class="anchor" href="#_basic_ypr_sdu_conformance_class"></a>A.4.1. Basic-YPR SDU Conformance Class</h4>
+<table id="ats_basic_ypr_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4284,15 +4528,111 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 2</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/sdu/basic/quaternion</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/ypr/sdu</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate that Basic-Quaternion GeoPose data objects conform to the JSON-Schema definition.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_quaternion">/req/sdu/basic/quaternion</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req_basic/ypr/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_tangent_plane_longitude_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 3</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/longitude/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a GeoPose tangentPoint.longitude attribute is expressed as a real number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/tangent_plane/longitude/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_tangent_plane_latitude_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 4</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/latitude/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a GeoPose tangentPoint.latitude attribute is expressed as a real number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/tangent_plane/latitude/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_tangent_plane_h_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 5</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/h/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a GeoPose tangentPoint.h attribute is expressed as a real number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/tangent_plane/h/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_orientation_ypr_angles_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 6</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/orientation/ypr/angles/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree..</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/ats/orientation/ypr/angles/sdu</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
@@ -4302,127 +4642,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_advanced_sdu_conformance_class"><a class="anchor" href="#_advanced_sdu_conformance_class"></a>A.3.3. Advanced SDU Conformance Class</h4>
-<table id="ats_advanced" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 3</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/advanced</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate that Advanced GeoPose data objects conform to the JSON-Schema definition.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_building_ade_use">/req/advanced</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON-Schema validation</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_composite_conformance_classes"><a class="anchor" href="#_composite_conformance_classes"></a>A.4. Composite Conformance Classes:</h3>
-<div class="sect3">
-<h4 id="_graph_sdu_conformance_class"><a class="anchor" href="#_graph_sdu_conformance_class"></a>A.4.1. Graph SDU Conformance Class</h4>
-<table id="ats_composite_graph" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 4</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/graph</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate that JSON-encoded GeoPose Graphs conform to the Graph JSON-Schema definition.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_composite_graph">/req/composite/graph</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON-Schema validation</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_chain_sdu_conformance_class"><a class="anchor" href="#_chain_sdu_conformance_class"></a>A.4.2. Chain SDU Conformance Class</h4>
-<table id="ats_composite_chain" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 5</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/chain</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate that GeoPose data Chains conform to their JSON-Schema definition.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_composite_chain">/req/composite/chain</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON-Schema validation</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_sequence_sdu_conformance_classes"><a class="anchor" href="#_sequence_sdu_conformance_classes"></a>A.4.3. Sequence SDU Conformance Classes:</h4>
-
-</div>
-<div class="sect3">
-<h4 id="ats_sequence"><a class="anchor" href="#ats_sequence"></a>A.4.4. Series SDU Conformance Classes:</h4>
-
-</div>
-<div class="sect3">
-<h4 id="ats_composite_sequence_series"><a class="anchor" href="#ats_composite_sequence_series"></a>A.4.5. Regular Series SDU Conformance Class</h4>
-<table id="ats_composite_sequence_series_regular" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 6</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/series/regular</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate that JSON-encoded GeoPose series conform to the Regular Series JSON-Schema definition.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_composite_sequence_series">/req/composite/sequence/series/regular</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON-Schema validation</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_irregular_series_sdu_conformance_class"><a class="anchor" href="#_irregular_series_sdu_conformance_class"></a>A.4.6. Irregular Series SDU Conformance Class</h4>
-<table id="ats_composite_sequence_series_irregular" class="tableblock frame-all grid-all" style="width: 90%;">
+<h4 id="_basic_q_sdu_conformance_class"><a class="anchor" href="#_basic_q_sdu_conformance_class"></a>A.4.2. Basic-Q SDU Conformance Class</h4>
+<table id="ats_basic_quaternion_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4430,26 +4651,23 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 7</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/series/irregular</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/quaternion/sdu</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate that JSON-encoded GeoPose series conform to the Irregular Series JSON-Schema definition.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Basic-Q GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using a unit quaternion.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_composite_sequence_series">/req/composite/sequence/series/irregular</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/basic/quaternion/sdu</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON-Schema validation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect3">
-<h4 id="_stream_sdu_conformance_class"><a class="anchor" href="#_stream_sdu_conformance_class"></a>A.4.7. Stream SDU Conformance Class</h4>
-<table id="ats_composite_sequence_stream" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_tangent_plane_longitude_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4457,19 +4675,853 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 8</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/stream</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/longitude/sdu</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate that GeoPose data stream elements conform to the JSON-Schema definition.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a GeoPose tangentPoint.longitude attribute is expressed as a real number.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_composite_sequence_stream">/req/composite/sequence/stream</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/tangent_plane/longitude/sdu</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON-Schema validation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_tangent_plane_latitude_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 9</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/latitude/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a GeoPose tangentPoint.latitude attribute is expressed as a real number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/tangent_plane/latitude/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_tangent_plane_h_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 10</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/h/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a GeoPose tangentPoint.h attribute is expressed as a real number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/tangent_plane/h/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_orientation_quaternion_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 11</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/orientation/quaternion/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree..</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/orientation/quaternion/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_advanced_sdu_conformance_class"><a class="anchor" href="#_advanced_sdu_conformance_class"></a>A.4.3. Advanced SDU Conformance Class</h4>
+<table id="ats_geoposeinstant_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 12</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/geoposeinstant/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/geoposeinstant/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_authority_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 13</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_authority/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_id_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 14</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_id/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_parameters_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 15</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_parameters/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_orientation_quaternion_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 16</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/orientation/quaternion/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree..</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/orientation/quaternion/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_graph_sdu_conformance_class"><a class="anchor" href="#_graph_sdu_conformance_class"></a>A.4.4. Graph SDU Conformance Class</h4>
+<table id="ats_geoposeinstant_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 17</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/geoposeinstant/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/geoposeinstant/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_authority_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 18</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_authority/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_id_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 19</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_id/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_parameters_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 20</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_parameters/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_chain_index_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 21</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/chain/index/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that each index vaue in a FrameListTransformPair is a distinct integer value between 0 and one less than the number of elements in the frameList property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/Chain/index/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_chain_sdu_conformance_class"><a class="anchor" href="#_chain_sdu_conformance_class"></a>A.4.5. Chain SDU Conformance Class</h4>
+<table id="ats_geoposeinstant_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 22</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/geoposeinstant/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/geoposeinstant/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_authority_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 23</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_authority/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_id_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 24</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_id/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_parameters_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 25</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_parameters/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_regular_series_sdu_conformance_class"><a class="anchor" href="#_regular_series_sdu_conformance_class"></a>A.4.6. Regular Series SDU Conformance Class</h4>
+<table id="ats_series_header_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 26</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/header/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Series Header is implemented in accordance with the Logical Model.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/Series/header/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_geoposeduration_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 27</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/geoposeduration/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Logical Model attribute GeoPoseduration is expressed in seconds multiplied by 1,000 and that the unit of measure is milliseconds.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/RegularSeries/duration/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_authority_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 28</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_authority/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_id_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 29</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_id/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_parameters_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 30</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_parameters/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_series_trailer_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 31</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/trailer/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Series Trailer is implemented in accordance with the Logical Model.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/Series/trailer/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_irregular_series_sdu_conformance_class"><a class="anchor" href="#_irregular_series_sdu_conformance_class"></a>A.4.7. Irregular Series SDU Conformance Class</h4>
+<table id="ats_series_header_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 32</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/header/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Series Header is implemented in accordance with the Logical Model.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/Series/header/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_authority_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 33</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_authority/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_id_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 34</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_id/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_parameters_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 35</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_parameters/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_series_frame_and_time_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 36</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/frame_and_time/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Series frame_and_time is implemented as an innerFrameAndTime property with an ExplicitFrameSpec and GeoPoseInstant pair.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/Series/frame_and_time/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_series_trailer_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 37</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/trailer/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Series Trailer is implemented in accordance with the Logical Model.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/Series/trailer/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_stream_sdu_conformance_class"><a class="anchor" href="#_stream_sdu_conformance_class"></a>A.4.8. Stream SDU Conformance Class</h4>
+<table id="ats_transition_model_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 38</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/transition_model/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a transition_model attribute is one of the values in the TransitionModel enumeration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/transition_model/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_authority_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 39</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_authority/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_id_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 40</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_id/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_frame_specification_parameters_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 41</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/frame_specification_parameters/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_stream_frame_and_time_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 42</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/stream/frame_and_time/sdu</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Stream frame_and_time is implemented as an innerFrameAndTime property with an ExplicitFrameSpec and GeoPoseInstant pair.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/Stream/fst/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
 </tr>
 </tbody>
 </table>
@@ -4477,6 +5529,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 <div class="sect2">
 <h3 id="_encodings"><a class="anchor" href="#_encodings"></a>A.5. Encodings</h3>
+<div class="paragraph">
+<p>Each encoding technology has its own independent test suite.</p>
+</div>
 <div class="sect3">
 <h4 id="_json_conformance"><a class="anchor" href="#_json_conformance"></a>A.5.1. JSON Conformance</h4>
 
@@ -4493,7 +5548,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 9</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 43</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/YPRr</strong></p></td>
 </tr>
 <tr>
@@ -4520,7 +5575,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 44</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/quaternion</strong></p></td>
 </tr>
 <tr>
@@ -4547,7 +5602,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 45</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/quaternion/permissive</strong></p></td>
 </tr>
 <tr>
@@ -4575,7 +5630,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 12</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 46</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/advanced</strong></p></td>
 </tr>
 <tr>
@@ -4604,7 +5659,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 13</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 47</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/graph</strong></p></td>
 </tr>
 <tr>
@@ -4631,7 +5686,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 14</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 48</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/chain</strong></p></td>
 </tr>
 <tr>
@@ -4666,7 +5721,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 15</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 49</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/series/regular</strong></p></td>
 </tr>
 <tr>
@@ -4693,7 +5748,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 16</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 50</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/series/irregular</strong></p></td>
 </tr>
 <tr>
@@ -4720,7 +5775,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 17</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 51</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/stream</strong></p></td>
 </tr>
 <tr>
