@@ -3,21 +3,20 @@
 This section provides details and examples for conventions used in this document. 
 
 === Identifiers
+
 The normative provisions in this document are denoted by the URI
 
 http://www.opengis.net/spec/GeoPose/1.0
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
-=== Design
-
-==== Use Cases, Concepts, Logical Model, Implementation Targets, Encodings
+=== Use Cases, Concepts, Logical Model, Standardization Targets, Encodings
 [[conventions-section]]
 
 [[uml_notation_section]]
 === UML Notation
 
-The GeoPose standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. 1997). The UML notations used in this standard are described in the diagram in <<figure-1>>.
+The logical structure of the elements used in the GeoPose Standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. 1997). The UML notations used in this standard are described in the diagram in <<figure-1>>.
 
 [[figure-1]]
 .UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
