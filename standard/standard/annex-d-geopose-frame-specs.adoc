@@ -1,11 +1,11 @@
 [appendix]
 :appendix-caption: Annex
-[[defined-reference-frame-specification]]
+[[example-reference-frame-specification]]
 
 
-== GeoPose Local Frame of Reference Specifications (Normative)
+== GeoPose Local Frame of Reference Specifications (Informative)
 
-XXX Frame Specification types are defined by the built in to GeoPose v1. The authority string for these is "geopose://v1/<frame specification name>".
+This annex has example Frame Specifications for the LTP-ENU and LTP-NED Reference Frames.
 
 === Local Tangent Plane - East North Up (LTP-ENU)
 
@@ -48,14 +48,6 @@ USAGE[
 
 ----
 
-==== Requirement 2
-[cols=">20h,<80d",width="100%"]
-|===
-
-|Requirement: |/req/framespec/LTP-ENU
-|Test purpose: | Verify that...
-|Test method: | Inspect...
-|===
 
 
 === Local Tangent Plane - North East Down (LTP-NED)
@@ -98,14 +90,4 @@ USAGE[
 ]
 
 ----
-
-==== Requirement 1
-[cols=">20h,<80d",width="100%"]
-|===
-|Test id: |/conf/conf-class-a/req-name-1
-|Requirement: |/req/req-class-a/req-name-1
-|Test purpose: | Verify that...
-|Test method: | Inspect...
-|===
-
 

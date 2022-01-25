@@ -92,7 +92,8 @@ Basic-YPR, Basic-Quaternion,
 |===
  
 ==== Synthetic Environments [SE]
-**Description**: Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environement that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated in time to provide a visualization or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archive of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there are may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and implements is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations make a coherent assembly possible
+
+**Description**: Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environment that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated over some time period to provide visualizations or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archival of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there are may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and implements is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations make a coherent assembly possible
 
 [%header,cols="2,5,2"] 
 |===
@@ -129,11 +130,11 @@ Basic-YPR, Basic-Quaternion,
 |Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream
 
 |/geopose/1.0/use_case/im/03
-|Instantaeous and time series estimation of the changes in location and orientation of an object using an optical imaging device (Visual Odometry)
+|Instantaneous and time series estimation of the changes in location and orientation of an object using an optical imaging device (Visual Odometry)
 |Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream
 
 |/geopose/1.0/use_case/im/04
-|Instantaeous and time series location and orientation of an optical imaging device used for photogrammetry
+|Instantaneous and time series location and orientation of an optical imaging device used for photogrammetry
 |Regular Timeseries, Irregular Timeseries, Stream
 
 |===
