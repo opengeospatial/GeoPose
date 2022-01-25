@@ -580,21 +580,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_spatial_concepts">4.1. Spatial Concepts</a></li>
 <li><a href="#_sequence_and_stream_concepts">4.2. Sequence and Stream Concepts</a></li>
-<li><a href="#_temporal_concepts">4.3. Temporal Concepts</a>
-<ul class="sectlevel3">
-<li><a href="#_temporal_database_concepts">4.3.1. Temporal Database Concepts</a></li>
-</ul>
-</li>
+<li><a href="#_temporal_concepts">4.3. Temporal Concepts</a></li>
+<li><a href="#_temporal_database_concepts">4.4. Temporal Database Concepts</a></li>
 </ul>
 </li>
 <li><a href="#_conventions">5. Conventions</a>
 <ul class="sectlevel2">
 <li><a href="#_identifiers">5.1. Identifiers</a></li>
-<li><a href="#_design">5.2. Design</a>
-<ul class="sectlevel3">
-<li><a href="#_use_cases_concepts_logical_model_implementation_targets_encodings">5.2.1. Use Cases, Concepts, Logical Model, Implementation Targets, Encodings</a></li>
-</ul>
-</li>
+<li><a href="#_use_cases_concepts_logical_model_standardization_targets_encodings">5.2. Use Cases, Concepts, Logical Model, Standardization Targets, Encodings</a></li>
 <li><a href="#uml_notation_section">5.3. UML Notation</a></li>
 <li><a href="#conceptual-modeling-description">5.4. Conceptual Modelling</a></li>
 </ul>
@@ -624,32 +617,43 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_targets">7.2.4. Targets</a></li>
 </ul>
 </li>
-<li><a href="#requiremen6ts">7.3. Requirements on Structural Data Units and Standardization Targets</a>
+</ul>
+</li>
+<li><a href="#requirements">8. Requirements for Structural Data Units and Standardization Targets</a>
+<ul class="sectlevel2">
+<li><a href="#_description_informative_2">8.1. Description (Informative)</a></li>
+<li><a href="#_global_requirements_normative">8.2. Global Requirements (Normative)</a>
 <ul class="sectlevel3">
-<li><a href="#_description_informative_2">7.3.1. Description (Informative)</a></li>
-<li><a href="#_requirements_on_structural_data_units_for_each_standardization_target_normative">7.3.2. Requirements on Structural Data Units for Each Standardization Target (Normative)</a></li>
-<li><a href="#_standardization_target_2_basic_quaternion">7.3.3. Standardization Target 2: Basic-Quaternion</a></li>
-<li><a href="#_standardization_target_3_advanced">7.3.4. Standardization Target 3: Advanced</a></li>
-<li><a href="#_standardization_target_4_graph">7.3.5. Standardization Target 4: Graph</a></li>
-<li><a href="#_standardization_target_5_chain">7.3.6. Standardization Target 5: Chain</a></li>
-<li><a href="#_standardization_target_6_regular_series">7.3.7. Standardization Target 6: Regular Series</a></li>
-<li><a href="#_standardization_target_7_irregular_series">7.3.8. Standardization Target 7: Irregular Series</a></li>
-<li><a href="#_standardization_target_8_stream">7.3.9. Standardization Target 8: Stream</a></li>
+<li><a href="#_requirements_for_standardization_target_1_basic_ypr">8.2.1. Requirements for Standardization Target 1: Basic-YPR</a></li>
+<li><a href="#_requirements_for_standardization_target_2_basic_quaternion">8.2.2. Requirements for Standardization Target 2: Basic-Quaternion</a></li>
+<li><a href="#_requirements_for_standardization_target_3_advanced">8.2.3. Requirements for Standardization Target 3: Advanced</a></li>
+<li><a href="#_requirements_for_standardization_target_4_graph">8.2.4. Requirements for Standardization Target 4: Graph</a></li>
+<li><a href="#_requirements_for_standardization_target_5_chain">8.2.5. Requirements for Standardization Target 5: Chain</a></li>
+<li><a href="#_requirements_for_standardization_target_6_regular_series">8.2.6. Requirements for Standardization Target 6: Regular Series</a></li>
+<li><a href="#_requirements_for_standardization_target_7_irregular_series">8.2.7. Requirements for Standardization Target 7: Irregular Series</a></li>
+<li><a href="#_requirements_for_standardization_target_8_stream">8.2.8. Requirements for Standardization Target 8: Stream</a></li>
 </ul>
 </li>
-<li><a href="#_requirements_on_encodings">7.4. Requirements on Encodings</a>
+</ul>
+</li>
+<li><a href="#_requirements_for_encodings">9. Requirements for Encodings</a>
+<ul class="sectlevel2">
+<li><a href="#_description_informative_3">9.1. Description (Informative)</a></li>
+<li><a href="#_json_encoding">9.2. JSON Encoding</a>
 <ul class="sectlevel3">
-<li><a href="#_description_informative_3">7.4.1. Description (Informative)</a></li>
-<li><a href="#_json_encoding">7.4.2. JSON Encoding</a></li>
-<li><a href="#_standardization_target_6_regular_series_normative">7.4.3. Standardization Target 6: Regular Series (Normative)</a></li>
-<li><a href="#_standardization_target_7_irregular_series_normative">7.4.4. Standardization Target 7: Irregular Series (Normative)</a></li>
-<li><a href="#_standardization_target_8_stream_normative">7.4.5. Standardization Target 8: Stream (Normative)</a></li>
+<li><a href="#_standardization_target_1_basic_ypr_normative">9.2.1. Standardization Target 1: Basic-YPR (Normative)</a></li>
+<li><a href="#_standardization_target_2_basic_quaternion_normative">9.2.2. Standardization Target 2: Basic-Quaternion (Normative)</a></li>
+<li><a href="#_standardization_target_3_advanced_geopose_normative">9.2.3. Standardization Target 3: Advanced GeoPose (Normative)</a></li>
+<li><a href="#_standardization_target_4_graph_normative">9.2.4. Standardization Target 4: Graph (Normative)</a></li>
+<li><a href="#_standardization_target_5_chain_normative">9.2.5. Standardization Target 5: Chain (Normative)</a></li>
+<li><a href="#_standardization_target_6_regular_series_normative">9.2.6. Standardization Target 6: Regular Series (Normative)</a></li>
+<li><a href="#_standardization_target_7_irregular_series_normative">9.2.7. Standardization Target 7: Irregular Series (Normative)</a></li>
+<li><a href="#_standardization_target_8_stream_normative">9.2.8. Standardization Target 8: Stream (Normative)</a></li>
 </ul>
 </li>
-<li><a href="#_required_implementations_normative">7.5. Required Implementations (Normative)</a></li>
 </ul>
 </li>
-<li><a href="#_media_types">8. Media Types for JSON Encoding</a></li>
+<li><a href="#_media_types">10. Media Types for JSON Encoding</a></li>
 <li><a href="#abstract-test-suite">Annex A: Abstract Test Suite (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_introduction">A.1. Introduction</a></li>
@@ -693,34 +697,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#defined-reference-frame-specification">Annex B: GeoPose Local Frame of Reference Specifications (Normative)</a>
+<li><a href="#example-reference-frame-specification">Annex B: GeoPose Local Frame of Reference Specifications (Informative)</a>
 <ul class="sectlevel2">
-<li><a href="#_local_tangent_plane_east_north_up_ltp_enu">B.1. Local Tangent Plane - East North Up (LTP-ENU)</a>
-<ul class="sectlevel3">
-<li><a href="#_requirement_2">B.1.1. Requirement 2</a></li>
+<li><a href="#_local_tangent_plane_east_north_up_ltp_enu">B.1. Local Tangent Plane - East North Up (LTP-ENU)</a></li>
+<li><a href="#_local_tangent_plane_north_east_down_ltp_ned">B.2. Local Tangent Plane - North East Down (LTP-NED)</a></li>
 </ul>
 </li>
-<li><a href="#_local_tangent_plane_north_east_down_ltp_ned">B.2. Local Tangent Plane - North East Down (LTP-NED)</a>
-<ul class="sectlevel3">
-<li><a href="#_requirement_1">B.2.1. Requirement 1</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#Euler-angle-use">Annex C: GeoPose Use and Interpretation of Euler Angles</a></li>
-<li><a href="#quaternion-use">Annex D: GeoPose Use and Interpretation of Quaternions</a></li>
-<li><a href="#time-use">Annex E: GeoPose Use and Interpretation of UNIX Time</a>
+<li><a href="#time-use">Annex C: GeoPose Use and Interpretation of UNIX Time</a>
 <ul class="sectlevel2">
-<li><a href="#_intended_precision">E.1. Intended Precision</a></li>
-<li><a href="#_scaling">E.2. Scaling</a></li>
-<li><a href="#_non_negative_time_positions">E.3. Non-negative Time Positions</a></li>
-<li><a href="#_negative_time_positions">E.4. Negative Time Positions</a></li>
-<li><a href="#_positive_time_positions_before_1_january_1972_utc">E.5. Positive Time Positions before 1 January 1972 UTC</a></li>
+<li><a href="#_intended_precision">C.1. Intended Precision</a></li>
+<li><a href="#_scaling">C.2. Scaling</a></li>
+<li><a href="#_non_negative_time_positions">C.3. Non-negative Time Positions</a></li>
+<li><a href="#_negative_time_positions">C.4. Negative Time Positions</a></li>
+<li><a href="#_positive_time_positions_before_1_january_1972_utc">C.5. Positive Time Positions before 1 January 1972 UTC</a></li>
 </ul>
 </li>
-<li><a href="#_glossary">Annex F: Glossary</a></li>
-<li><a href="#_revision_history">Annex G: Revision History</a></li>
-<li><a href="#Bibliography">Annex H: Bibliography</a></li>
+<li><a href="#_glossary">Annex D: Glossary</a></li>
+<li><a href="#_revision_history">Annex E: Revision History</a></li>
+<li><a href="#Bibliography">Annex F: Bibliography</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -924,16 +918,32 @@ The organizations, submitters, participants, and acknowledgements are open to ch
 <h2 id="_scope"><a class="anchor" href="#_scope"></a>1. Scope</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The GeoPose 1.0 Standard defines requirements (rules) for the interoperable exchange of the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth&#8217;s surface (Geo) or within other astronomical coordinate systems. The Standard specifies a basic form with no configuration options for common use cases, an advanced form with more flexibility for more complex applications, and composite GeoPose structures to support time series chain, and graph structures.</p>
+<p>The OGC GeoPose 1.0 Standard defines requirements (rules) for the interoperable exchange of the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth&#8217;s surface (Geo) or within other astronomical coordinate systems. The Standard specifies</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A basic form with no configuration options for common use cases,</p>
+</li>
+<li>
+<p>An advanced form with more flexibility for more complex applications, and</p>
+</li>
+<li>
+<p>Composite GeoPose structures to support time series chain, and graph structures.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The GeoPose standard consists of an implementation-neutral Logical Model. This model establishes the structure and relationships between GeoPose components and also between GeoPoses data objects themselves in composite structures. Note that the GeoPose data objects defined by this standard correspond to only part of the Logical Model, generally the most derived classes and attributes. Those classes and properties of the Logical Model that are expressed in concrete data objects are identified as implementation-neutral Structural Data Units (SDUs). These SDUs are  aliases for the implementable elements of the Logical Model. SDUs are grouped to define the implementation-neutral form of the GeoPose Standardization Targets: the specific implementation that the Standard addresses. For each Standardization Target, each implementation technology will have the definition of the encoding or serialization specified in a manner appropriate to that technology.</p>
+<p>The GeoPose Standard is based on an implementation-neutral Logical Model(LM). This LM is a formalization of a Conceptual Model(CM). The CM consists of a linked set of terms and definitons, defining a domain odf discourse for the various geometrric, geographic, and physical concepts related to GeoPoses. The LM formalizes the relationships between the implementable parts and aspects of the CM. The LM further establishes the structure and relationships between GeoPose components and also between GeoPoses data objects themselves in composite structures.</p>
 </div>
 <div class="paragraph">
-<p>GeoPose Version 1.0 defines a single encoding: JavaScript Object Notation (JSON). Each Standardization Target has a JSON-Schema:2019-9 definition. Most of the standardization requirements are that concrete JSON GeoPose data objects shall conform to the corresponding JSON-Schema definition. The individual elements identified in the encoding specifications are SDUs that refer to one or more classes or attributes of the Logical Model.</p>
+<p>Note that the concrete GeoPose data objects defined by this standard correspond to only certain classes and properties of the LM. These classes and properties are identified as implementation-neutral Structural Data Units (SDUs). SDUs are  aliases for the implementable elements of the LM. SDUs are grouped to define the implementation-neutral form of the GeoPose Standardization Targets: the specific implementation that the Standard addresses. For each Standardization Target, each implementation technology will have the definition of the encoding or serialization specified in a manner appropriate to that technology.</p>
 </div>
 <div class="paragraph">
-<p>The GeoPose 1.0 Standard excludes assumptions about the interpretation of external specifications fsuch as reference frames. Further, the Standard does not assume or constrain services or interfaces providing conversion between GeoPoses of difference types or relying on different external reference frame definitions.</p>
+<p>GeoPose Version 1.0 defines only one of many possible encoding methods for implementation of any or all of the eight STandardization Targets: JavaScript Object Notation (JSON). Each Standardization Target has a JSON-Schema:2019-9 definition. Most of the GeoPose standardization requirements are that concrete JSON GeoPose data objects shall conform to the corresponding JSON-Schema definition. The individual elements identified in the encoding specifications are SDUs that refer to one or more classes or attributes of the LM.</p>
+</div>
+<div class="paragraph">
+<p>The GeoPose 1.0 Standard excludes assumptions about the interpretation of external specifications such as reference frames. Further, the Standard does not assume or constrain services or interfaces providing conversion between GeoPoses of difference types or relying on different external reference frame definitions.</p>
 </div>
 </div>
 </div>
@@ -944,7 +954,7 @@ The organizations, submitters, participants, and acknowledgements are open to ch
 <p>Conformance with this standard shall be checked using all the relevant tests specified in Annex A (Normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies (<a href="https://portal.ogc.org/files/?artifact_id=55234" class="bare">https://portal.ogc.org/files/?artifact_id=55234</a>) and Procedures and the OGC Compliance Testing web site (<a href="https://www.ogc.org/compliance" class="bare">https://www.ogc.org/compliance</a>). GeoPose 1.0 JSON encodings are specified via JSON-Schema:2019-9 and most of the requirements are that conforming encoded data objects shall validate against the corresponding schema.</p>
 </div>
 <div class="paragraph">
-<p>In order to conform to this OGC® Standard, a software implementation shall choose to implement any one of the eight Standardization Targets specified in Annex A (normative).</p>
+<p>In order to conform to this OGC® Standard, a software implementation shall choose to implement any one or more of the eight Standardization Targets specified in Annex A (normative).</p>
 </div>
 <div class="paragraph">
 <p>All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.</p>
@@ -952,14 +962,14 @@ The organizations, submitters, participants, and acknowledgements are open to ch
 <div class="sect2">
 <h3 id="_modularity"><a class="anchor" href="#_modularity"></a>2.1. Modularity</h3>
 <div class="paragraph">
-<p>This standard describes eight Standarization Targets. These targets are independent and a conforming implementation may implement one or more of them.</p>
+<p>This standard describes eight Standardization Targets. These targets are independent and a conforming implementation may implement one or more of the targets.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_conformance_classes"><a class="anchor" href="#_conformance_classes"></a>2.2. Conformance Classes</h3>
 <div class="paragraph">
-<p>This standard identifies eight conformance classes. One conformance class is defined for each correspoding set of Structural Data Units (SDUs), each SDU linked to the Logical Model as an alias for a class or attribute. Additionally, each of the eight standarization targets is represented by a conformance class, defined by a requirements class.
-The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Requirements Class. An implementation of a conformance class must pass all tests specified in Annex A for the corresponding requirements class.</p>
+<p>This standard identifies eight conformance classes. One conformance class is defined for each corresponding set of Structural Data Units (SDUs) where each SDU is linked to the Logical Model as an alias for a class or attribute. Additionally, each of the eight standardization targets is represented by a conformance class as defined by a corresponding requirements class.
+The tests in <a href="#abstract-test-suite">Annex A</a> are organized by requirements class. An implementation of a conformance class must pass all tests specified in Annex A for the corresponding requirements class.</p>
 </div>
 <div class="paragraph">
 <p>No conformance class has a dependency on another conformance class.</p>
@@ -980,7 +990,7 @@ The tests in <a href="#abstract-test-suite">Annex A</a> are organized by Require
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>LTP-ENU <a href="#def_Inner_Frame"><strong>Inner Frame</strong></a> oriented by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: <strong>Basic-YPR</strong> Target</p>
+<p>Local Tangent Plane East, North, Up(LTP-ENU) <a href="#def_Inner_Frame"><strong>Inner Frame</strong></a> oriented by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: <strong>Basic-YPR</strong> Target</p>
 </li>
 <li>
 <p>LTP-ENU <a href="#def_Inner_Frame"><strong>Inner Frame</strong></a> oriented by unit quaternion: <strong>Basic-Quaternion</strong> Target</p>
@@ -1119,27 +1129,13 @@ Geographic information — Well-known text representation of coordinate referenc
 <p>For the purposes of this document, the following additional terms and definitions apply.</p>
 </div>
 <div class="paragraph">
-<p>The GeoPose Conceptual Model consists of linked definitions of terms denoting concepts expressed in the GeoPose Logical Model and structural data unit specifications for the implementation targets. The conceptual model describes a (non-normative) domain of discourse for terms used in defining a precise Logical Model (normative) expressed in as a Unified Modelling Language (UML) [ref] class diagram.</p>
+<p>The GeoPose Conceptual Model(CM) consists of linked definitions of terms denoting concepts expressed in the GeoPose LM and structural data unit(SDU) specifications for the standardization targets. The CM describes a (non-normative) domain of discourse for terms used in defining a precise and normative Logical Model(LM) expressed as a Unified Modelling Language (UML) class diagram.</p>
 </div>
 <div class="paragraph">
-<p>The scope of the implementation targets is a subset of the scope of the Logical Model. The scope of the Logical Model is a subset of the scope of the Conceptual Model. The Implementation Targets are mutually independent implementations of subsets of the Logical Model. The Implementation Targets are expressed in Extended Backus-Naur Form where all terminal symbols reference attributes of classes in the Logical Model.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Although the issue does not seem to be totally resolved in the OGC OAB, our usage follows the spirit of OAB issue 1310 where the OAB resolved to include the following definitions in the TC Policies and Procedures (meeting of July 9, 2019):</p>
+<p>The scope of the standardization targets is a subset of the scope of the LM. The scope of the LM is a subset of the scope of the Conceptual Model. The standardization targets are mutually independent implementations of subsets of the LM. The standardization targets are expressed in Extended Backus-Naur Form where all terminal symbols reference attributes of classes in the LM.</p>
 </div>
 <div class="paragraph">
 <p>“Conceptual model: a description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain [CEN ENV 1613:1994]. A conceptual model is explicitly chosen to be may be informed by, but independent of design or implementation concerns.”</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <hr>
 <div class="paragraph">
@@ -1153,8 +1149,8 @@ Geographic information — Well-known text representation of coordinate referenc
 <div class="sect2">
 <h3 id="_spatial_concepts"><a class="anchor" href="#_spatial_concepts"></a>4.1. Spatial Concepts</h3>
 <hr>
-<div class="paragraph">
-<p><a id="def_Position"></a>A <strong>position</strong> is a set of coordinates of a point in a 3D Euclidean space and associated <a href="#def_Reference_Frame"><strong>reference frame</strong></a>.</p>
+<div id="def_direct_position" class="paragraph">
+<p><a id="def_Position"></a>A <strong>position</strong> (<a href="#def_direct_position">OGC <strong>direct position</strong></a>) is a set of coordinates of a point in a 3D Euclidean space and associated <a href="#def_Reference_Frame"><strong>reference frame</strong></a>.</p>
 </div>
 <div class="paragraph">
 <p><a id="def_Orientation"></a><strong>Orientation</strong> is the rotational relationship between two <a href="#def_Reference_Frame"><strong>reference frames</strong></a>.</p>
@@ -1214,7 +1210,7 @@ In the NASA SPICE system, the <a href="#def_InnerFrame"><strong>inner frame</str
 <p><a id="def_TopocentricCoordinates"></a>A <strong>topocentric (reference) frame</strong> is a <a href="#def_Reference_Frame"><strong>frame</strong></a> that has an <a href="#def_ExtrinsicSpecification"><strong>extrinsic specification</strong></a> associated with a location on or near the surface of a natural body, such as planet Earth. [This is the definition used in the NASA SPICE system.] In connection with a GeoPose, one way that a <strong>topocentric frame</strong> may be realized is by a <a href="#def_LTPENU"><strong>local tangent plane east-north-up frame (LTP-ENU)</strong></a> attached to the surface of a body, to a gravitational equipotential surface (<a href="#def_Geoid"><strong>geoid</strong></a> in the case of planet Earth), or to a mathematical surface such as an <a href="#def_Ellipsoid"><strong>ellipsoid</strong></a> approximating a <a href="#def_Geoid"><strong>geoid</strong></a>.</p>
 </div>
 <div class="paragraph">
-<p><a id="def_Frame_Specification"></a>A <strong>frame specification</strong> is data that completely and uniquely defines a <a href="#def_Reference_Frame"><strong>reference frame</strong></a>. In the context of Poses, there are <a href="#def_ExtrinsicSpecification"><strong>extrinsic specifications</strong></a> defined by by an external data source, and <a href="#def_DerivedSpecification"><strong>derived specifications</strong></a> defined by a transformation from another <a href="#def_Reference_Frame"><strong>reference frame</strong></a>.</p>
+<p><a id="def_Frame_Specification"></a>A <strong>frame specification</strong> is data that completely and uniquely defines a <a href="#def_Reference_Frame"><strong>reference frame</strong></a>. In the context of Poses, there are <a href="#def_ExtrinsicSpecification"><strong>extrinsic specifications</strong></a> defined by an external data source, and <a href="#def_DerivedSpecification"><strong>derived specifications</strong></a> defined by a transformation from another <a href="#def_Reference_Frame"><strong>reference frame</strong></a>.</p>
 </div>
 <div class="paragraph">
 <p><a id="def_ExtrinsicSpecification"></a>An <strong>extrinsic frame specification</strong> relates a <a href="#def_Reference_Frame"><strong>reference frame</strong></a> to an <a href="#def_EphemerisObject"><strong>ephemeris object</strong></a> or other external reference, which may be based on joint properties of a group of objects, such as the center of mass of the Earth-Moon system.</p>
@@ -1223,7 +1219,7 @@ In the NASA SPICE system, the <a href="#def_InnerFrame"><strong>inner frame</str
 <p><a id="def_DerivedSpecification"></a>A <strong>derived frame specification</strong> relates a <a href="#def_Reference_Frame"><strong>reference frame</strong></a> to another <a href="#def_Reference_Frame"><strong>frame</strong></a> by a <a href="#def_FrameTransform"><strong>frame transform</strong></a> or its inverse.</p>
 </div>
 <div class="paragraph">
-<p><a id="def_FrameGraph"></a>A <strong>frame graph</strong> is a directed acyclic graph representation of the transformational relationships between <a href="#def_Reference_Frame"><strong>reference frames</strong></a>. <a href="#def_Reference_Frame"><strong>frames</strong></a> are the nodes or vertices of the graph. <a href="#def_FrameTransform"><strong>frame transforms</strong></a> are the edges of the graph, directed from the <a href="#def_OuterFrame"><strong>outer frame</strong></a> to the <a href="#def_InnerFrame"><strong>inner frame</strong></a>. [Note that there may be zero, one, or many paths between two distinct vertices, i.e. <a href="#def_Reference_Frame"><strong>frames</strong></a>. This is by design, even though the corresponding linked <a href="#def_FrameTransform"><strong>frame transforms</strong></a>, when composed into single tranformations between the same starting <a href="#def_OuterFrame"><strong>outer frames</strong></a> and the same <a href="#def_InnerFrame"><strong>inner frame</strong></a>. This corresponds to real-world situations with, for example, redundant line-of-sight links in point-to-point radio networks used in communication systems.]</p>
+<p><a id="def_FrameGraph"></a>A <strong>frame graph</strong> is a directed acyclic graph representation of the transformational relationships between <a href="#def_Reference_Frame"><strong>reference frames</strong></a>. <a href="#def_Reference_Frame"><strong>frames</strong></a> are the nodes or vertices of the graph. <a href="#def_FrameTransform"><strong>frame transforms</strong></a> are the edges of the graph, directed from the <a href="#def_OuterFrame"><strong>outer frame</strong></a> to the <a href="#def_InnerFrame"><strong>inner frame</strong></a>. [Note that there may be zero, one, or many paths between two distinct vertices, i.e. <a href="#def_Reference_Frame"><strong>frames</strong></a>. This is by design, even though the corresponding linked <a href="#def_FrameTransform"><strong>frame transforms</strong></a>, when composed into single transformations between the same starting <a href="#def_OuterFrame"><strong>outer frames</strong></a> and the same <a href="#def_InnerFrame"><strong>inner frame</strong></a>. This corresponds to real-world situations with, for example, redundant line-of-sight links in point-to-point radio networks used in communication systems.]</p>
 </div>
 <div class="paragraph">
 <p><a id="def_PoseChain"></a>A <strong>pose chain</strong> is a directed path in a <a href="#def_FrameGraph"><strong>frame graph</strong></a> connecting an <a href="#def_OutermostFrame"><strong>outermost frame</strong></a> to an <a href="#def_InnermostFrame"><strong>innermost frame</strong></a>.  The sequence of <a href="#def_FrameTransform"><strong>frame transforms</strong></a> in a <strong>pose chain</strong> may be combined in a single composite transformation. [There may exist multiple <strong>pose chains</strong> linking the same <a href="#def_OutermostFrame"><strong>outermost frame</strong></a> and <a href="#def_InnermostFrame"><strong>innermost frame</strong></a> and the corresponding composite transformations may not agree. This is intentional, representing real-world configurations and capabilities of sensors and communication links.]</p>
@@ -1262,7 +1258,7 @@ In the NASA SPICE system, the <a href="#def_InnerFrame"><strong>inner frame</str
 <div class="title">Note</div>
 </td>
 <td class="content">
-Poses always represent the position and orientation of a real or virtual physical entity. There is temporal continuity of pose for any such entity. On the other hand, there is no condition on consecutive poses in a sequence. There are two causes. First, the poses themselves may be representative of a physical object only at the instant assigned to the pose. Consider a service that provides a sequence of predicted timed poses of a camera that would observe a satellite flare (specular reflection of sunlight) for a specific satellite at a specific earth location. Poses between the member poses of the sequence are meaningless. Second, the sampling of poses may not support computation of intermediate poses. Consider poses that are sampled at a rate much slower than the rate of change of the pose of an underlying externally controlled (such as an airplane controlled by a pilot) physical entity. The sampled poses do not constrain or otherwise provide computational control for estimating intermediate poses. Alternatively, the provider of the sequence may declare via metadata whether it is possible and/or reasonable to compute intermediate poses. The provider is in a position to know this information, which may be binary: "none" &#8658; the data do not support the computation of intermediate poses or "interpolate" &#8658; the data do support the computation of intermediate poses - though the method is not prescribed. These are the two values in the enumeration in the Logical Model TransitionModel datatype. I know from my experience with the "fair fight" issue in distributed simulations that there are a lot of possibilities in defining how to interpolate and these are themselves as complex as GeoPose. That&#8217;s why I suggest postponing definition of more comprehensive metadata to a later version but leaving this as an enumeration that we can expand to include additional possibilities beyond the binary "none" and "interpolate".
+Poses always represent the position and orientation of a real or virtual physical entity. There is temporal continuity of pose for any such entity. On the other hand, there is no condition on consecutive poses in a sequence. There are two causes. First, the poses themselves may be representative of a physical object only at the instant assigned to the pose. Consider a service that provides a sequence of predicted timed poses of a camera that would observe a satellite flare (specular reflection of sunlight) for a specific satellite at a specific earth location. Poses between the member poses of the sequence are meaningless. Second, the sampling of poses may not support computation of intermediate poses. Consider poses that are sampled at a rate much slower than the rate of change of the pose of an underlying externally controlled (such as an airplane controlled by a pilot) physical entity. The sampled poses do not constrain or otherwise provide computational control for estimating intermediate poses. Alternatively, the provider of the sequence may declare via metadata whether it is possible and/or reasonable to compute intermediate poses. The provider is in a position to know this information, which may be binary: "none" &#8658; the data do not support the computation of intermediate poses or "interpolate" &#8658; the data do support the computation of intermediate poses - though the method is not prescribed. These are the two values in the enumeration in the LM TransitionModel datatype. I know from my experience with the "fair fight" issue in distributed simulations that there are a lot of possibilities in defining how to interpolate and these are themselves as complex as GeoPose. That&#8217;s why I suggest postponing definition of more comprehensive metadata to a later version but leaving this as an enumeration that we can expand to include additional possibilities beyond the binary "none" and "interpolate".
 </td>
 </tr>
 </table>
@@ -1275,7 +1271,7 @@ Poses always represent the position and orientation of a real or virtual physica
 <div class="sect2">
 <h3 id="_temporal_concepts"><a class="anchor" href="#_temporal_concepts"></a>4.3. Temporal Concepts</h3>
 <div class="paragraph">
-<p>These terms are intended to align with terms used in OGC 16-071r3. The only temporal frame used in this GeoPose standard is "Unix Time": seconds since the Unix Epoch of 1 January 1970 measured by a virtual "Unix clock", ticking once per "Unix second", and omitting any corrections such as leap seconds. Times before 1 January 1972 are not precisely related to another temporal frame but the value at UTC 1 January 1972 was +63,072,000. This allows precise conversion to and from modern temporal frames. Note that the GeoPose standard does not reference a calendar and encoded values are representations of the count of seconds, rather than a calendar-relative date and time. These times may be converted to UTC and expressed as text (e.g. with ISO 8601-1:2019 and ISO 8601-2:2019) relative to a specific calendar but this is outside the GeoPose scope.</p>
+<p>These terms are intended to align with terms used in OWL-TIME (<a href="https://www.w3.org/TR/owl-time/" class="bare">https://www.w3.org/TR/owl-time/</a>) . The only temporal frame used in this GeoPose standard is "Unix Time": seconds since the Unix Epoch of 1 January 1970 measured by a virtual "Unix clock", ticking once per "Unix second", and omitting any corrections such as leap seconds. Times before 1 January 1972 are not precisely related to another temporal frame but the value at UTC 1 January 1972 was +63,072,000. This allows precise conversion to and from modern temporal frames. Note that the GeoPose standard does not reference a calendar and encoded values are representations of the count of seconds, rather than a calendar-relative date and time. These times may be converted to UTC and expressed as text (e.g. with ISO 8601-1:2019 and ISO 8601-2:2019) relative to a specific calendar but this is outside the GeoPose scope.</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -1288,10 +1284,10 @@ Poses always represent the position and orientation of a real or virtual physica
 <p><a id="def_Instant"></a>An <strong>instant</strong> is a specific point on a <a href="#def_TimeLine"><strong>time line</strong></a>.</p>
 </div>
 <div class="paragraph">
-<p><a id="def_Duration"></a>An <strong>interval</strong> is the timespan between two <a href="#def_Instant"><strong>Instants</strong></a> on a <a href="#def_TimeLine"><strong>time line</strong></a>, interpreted in context of the associated  <a href="#def_TemporalFrame"><strong>temporal frame</strong></a>. A <a href="#def_Durations"><strong>duration</strong></a> is semi-open: it includes the earlier <a href="#def_Instant"><strong>instant</strong></a> but not the later <a href="#def_Instant"><strong>instant</strong></a>.</p>
+<p><a id="def_Duration"></a>An <strong>interval</strong> is the timespan between two <a href="#def_Instant"><strong>Instants</strong></a> on a <a href="#def_TimeLine"><strong>time line</strong></a>, interpreted in context of the associated  <a href="#def_TemporalFrame"><strong>temporal frame</strong></a>. A <a href="#def_Durations"><strong>duration</strong></a> is semi-open: It includes the earlier <a href="#def_Instant"><strong>instant</strong></a> but not the later <a href="#def_Instant"><strong>instant</strong></a>.</p>
 </div>
 <div class="paragraph">
-<p><a id="def_DurationLength"></a>The <strong>duration</strong> of a <a href="#def_Interval"><strong>interval</strong></a> is the one-dimensional signed distance  between its bounding <a href="#def_Instant"><strong>instants</strong></a>. The magnitude of a <strong>length</strong> value depends on the <a href="#def_TemporalFrame"><strong>temporal frame</strong></a>.</p>
+<p><a id="def_DurationLength"></a>The <strong>duration</strong> of an <a href="#def_Interval"><strong>interval</strong></a> is the one-dimensional signed distance between its bounding <a href="#def_Instant"><strong>instants</strong></a>. The magnitude of a <strong>length</strong> value depends on the <a href="#def_TemporalFrame"><strong>temporal frame</strong></a>.</p>
 </div>
 <div class="paragraph">
 <p><a id="def_Epoch"></a>An <strong>epoch</strong> is a specified <a href="#def_Instant"><strong>instant</strong></a> that can be used as a reference point to calculate <a href="#def_TemporalRelationShip"><strong>temporal relationships</strong></a> and <a href="#def_Durations"><strong>durations</strong></a> between <a href="#def_Instant"><strong>instants</strong></a>.</p>
@@ -1300,8 +1296,9 @@ Poses always represent the position and orientation of a real or virtual physica
 <p><a id="def_TemporalRelationship"></a>A <strong>temporal relationship</strong> between two <a href="#def_Instant"><strong>instants</strong></a> is one of:  <strong>before</strong>, <strong>coincident</strong>, or <strong>after</strong>. <a href="#def_TemporalRelationship"><strong>temporal relationships</strong></a> are only valid within the context of a specific <a href="#def_TemporalFrame"><strong>temporal frame</strong></a>.</p>
 </div>
 <hr>
-<div class="sect3">
-<h4 id="_temporal_database_concepts"><a class="anchor" href="#_temporal_database_concepts"></a>4.3.1. Temporal Database Concepts</h4>
+</div>
+<div class="sect2">
+<h3 id="_temporal_database_concepts"><a class="anchor" href="#_temporal_database_concepts"></a>4.4. Temporal Database Concepts</h3>
 <hr>
 <div class="paragraph">
 <p><a id="def_ValidTime"></a><strong>valid time</strong> is a <a href="#def_TimeLine"><strong>time line</strong></a> where the time of changes in the existence or validity of real-world objects or property values are located. <a href="#def_Instant"><strong>instants</strong></a> in <strong>valid time</strong> mark the temporal location of real-world transitions in existence, property values, or their validity.</p>
@@ -1330,7 +1327,6 @@ Poses always represent the position and orientation of a real or virtual physica
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_conventions"><a class="anchor" href="#_conventions"></a>5. Conventions</h2>
 <div class="sectionbody">
@@ -1350,16 +1346,13 @@ Poses always represent the position and orientation of a real or virtual physica
 </div>
 </div>
 <div class="sect2">
-<h3 id="_design"><a class="anchor" href="#_design"></a>5.2. Design</h3>
-<div class="sect3">
-<h4 id="_use_cases_concepts_logical_model_implementation_targets_encodings"><a class="anchor" href="#_use_cases_concepts_logical_model_implementation_targets_encodings"></a>5.2.1. Use Cases, Concepts, Logical Model, Implementation Targets, Encodings</h4>
+<h3 id="_use_cases_concepts_logical_model_standardization_targets_encodings"><a class="anchor" href="#_use_cases_concepts_logical_model_standardization_targets_encodings"></a>5.2. Use Cases, Concepts, Logical Model, Standardization Targets, Encodings</h3>
 
-</div>
 </div>
 <div class="sect2">
 <h3 id="uml_notation_section"><a class="anchor" href="#uml_notation_section"></a>5.3. UML Notation</h3>
 <div class="paragraph">
-<p>The GeoPose standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. 1997). The UML notations used in this standard are described in the diagram in <a href="#figure-1">UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).</a>.</p>
+<p>The logical structure of the elements used in the GeoPose Standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. 1997). The UML notations used in this standard are described in the diagram in <a href="#figure-1">UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).</a>.</p>
 </div>
 <div id="figure-1" class="imageblock text-center">
 <div class="content">
@@ -1439,13 +1432,26 @@ Poses always represent the position and orientation of a real or virtual physica
 <div class="sect2">
 <h3 id="_document_structure"><a class="anchor" href="#_document_structure"></a>6.1. Document Structure</h3>
 <div class="paragraph">
-<p>The structure of the GeoPose specification flows from use cases to the defintion of a conceptual domain of discourse comprehensive enough to support those use cases, a realization of a portion of that conceptual domain with an implementation-neutral but specific and normative logical data model expressed in UML, and the normative derivation of specific structural data units that represent abstract implementation and standardization targets.</p>
+<p>The structure of the GeoPose Standard document flows from</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>use cases to the definition of a conceptual domain of discourse comprehensive enough to support those use cases,</p>
+</li>
+<li>
+<p>a realization of a portion of that conceptual domain with an implementation-neutral but specific and normative logical data model expressed in UML, and</p>
+</li>
+<li>
+<p>the normative derivation of specific structural data units that represent abstract implementation and standardization targets.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>These structural data units are abstract: they are independent of implementation or delivery technology and serialization or encoding formats. GeoPose Version 1.0 specifies one of many possible realizations of the structural data units in JavaScript Object Notation (JSON).</p>
+<p>These Structural Data Units(SDU)s are abstract: they are independent of implementation or delivery technology and serialization or encoding formats. GeoPose Version 1.0 specifies one of many possible realizations of the structural data units in JSON.</p>
 </div>
 <div class="paragraph">
-<p>A key idea is that specific use cases are tied to the standardization targets. The part of the Standard that prescribes the structure and content of GeoPose data objects. These use cases are linked to these data objects as well as implementation examples that appear in other documents.</p>
+<p>A key aspect of the GeoPose Standard is that specific use cases are tied to the standardization targets, which prescribe the structure and content of GeoPose data objects. Corresponding implementation examples appear in other documents.</p>
 </div>
 <div class="paragraph">
 <p>Of course, GeoPose must incorporate or align with other relevant existing standards and common practices. The goal is to fill an interoperability gap in existing standards without reinventing technology in a way that encourages interoperability.</p>
@@ -1593,7 +1599,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="sect3">
 <h4 id="_synthetic_environments_se"><a class="anchor" href="#_synthetic_environments_se"></a>6.2.4. Synthetic Environments [SE]</h4>
 <div class="paragraph">
-<p><strong>Description</strong>: Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environement that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated in time to provide a visualization or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archive of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there are may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and implements is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations make a coherent assembly possible</p>
+<p><strong>Description</strong>: Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environment that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated over some time period to provide visualizations or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archival of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there are may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and implements is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations make a coherent assembly possible</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1653,12 +1659,12 @@ Basic-YPR, Basic-Quaternion,</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/geopose/1.0/use_case/im/03</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instantaeous and time series estimation of the changes in location and orientation of an object using an optical imaging device (Visual Odometry)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instantaneous and time series estimation of the changes in location and orientation of an object using an optical imaging device (Visual Odometry)</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/geopose/1.0/use_case/im/04</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instantaeous and time series location and orientation of an optical imaging device used for photogrammetry</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instantaneous and time series location and orientation of an optical imaging device used for photogrammetry</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Regular Timeseries, Irregular Timeseries, Stream</p></td>
 </tr>
 </tbody>
@@ -1687,9 +1693,6 @@ Basic-YPR, Basic-Quaternion,</p></td>
 </div>
 <div class="paragraph">
 <p>The coloring of the classes indicates their role in the logical design. Note that the classes and data types defined in the Target packages are the source of structural data units (SDUs) that may be realized as concrete data objects.</p>
-</div>
-<div class="paragraph">
-<p>Implementers of software using encoded SDUs shall conform to the logical description of the  model elements with the "Structural Data Unit - SDU" stereotype. Other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. The classes for which no encoding is specified are not normative in the sense of requiring implementation of a specific internal representation. Concrete data objects created as implementations of this standard shall conform to the standard, including all dependent or inherited classes, attributes, associations, multiplicities, and data types in the Logical Model.</p>
 </div>
 <div class="sect3">
 <h4 id="_core"><a class="anchor" href="#_core"></a>7.2.1. Core</h4>
@@ -1737,7 +1740,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <p>The Logical Model&#8217;s Targets package specify the design of logical data objects and data types that are directly expressed in GeoPose data objects.</p>
 </div>
 <div class="paragraph">
-<p>The Basic-YPR, Basic-Quaternion, and the Advanced GeoPoses represent single GeoPose objects.</p>
+<p>The Basic-YPR, Basic-Quaternion, and the Advanced GeoPose SDUs represent single GeoPose objects.</p>
 </div>
 <div id="basic_advanced_logical_model" class="imageblock text-center">
 <div class="content">
@@ -1746,7 +1749,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div class="title">Figure 11. Basic and Advanced Structural Data Units</div>
 </div>
 <div class="paragraph">
-<p>The Chain and the Graph GeoPose composite structures represent linear or branching frame transformation relationships, respectively.</p>
+<p>The Chain and the Graph GeoPose composite structures respectively represent linear or branching frame transformation relationships.</p>
 </div>
 <div id="chain_graph_logical_model" class="imageblock text-center">
 <div class="content">
@@ -1766,19 +1769,18 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <hr>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requirements"><a class="anchor" href="#requirements"></a>8. Requirements for Structural Data Units and Standardization Targets</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="requiremen6ts"><a class="anchor" href="#requiremen6ts"></a>7.3. Requirements on Structural Data Units and Standardization Targets</h3>
-<div class="sect3">
-<h4 id="_description_informative_2"><a class="anchor" href="#_description_informative_2"></a>7.3.1. Description (Informative)</h4>
+<h3 id="_description_informative_2"><a class="anchor" href="#_description_informative_2"></a>8.1. Description (Informative)</h3>
 <div class="paragraph">
 <p>Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.</p>
 </div>
 <div class="paragraph">
 <p>SDUs provide Standardization Targets that are independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with a corresponding element (class or attribute) in the logical model.</p>
-</div>
-<div class="paragraph">
-<p>Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets. One alternative could be to make all of the requirements on SDUs separately, and then have some language that requires conformance and implementation only for the Targets implemented. Within the document, the SDU requirements are in separate files, included when appropriate in the sections for each of the Targets. This insures that the texts will be identical, even if it is not transparently obvious in the standard.
-The GeoPose Standard requires a specific method for the mapping of each data element from the logical model to SDUs. There are parallel requirements for encoding groups of SDUs in for each encoding. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified.</p>
 </div>
 <div id="standardization_targets" class="paragraph">
 <p>The Basic and Advanced Standardization Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. There are eight Standardization Targets denoted by bold terms in the following categories:</p>
@@ -1839,8 +1841,9 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </li>
 </ol>
 </div>
-<div class="sect4">
-<h5 id="_global_requirement_normative"><a class="anchor" href="#_global_requirement_normative"></a>Global Requirement (Normative)</h5>
+</div>
+<div class="sect2">
+<h3 id="_global_requirements_normative"><a class="anchor" href="#_global_requirements_normative"></a>8.2. Global Requirements (Normative)</h3>
 <table id="global" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 40%;">
@@ -1853,7 +1856,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">There shall be eight independent Standardization Targets. There shall be no dependency between or among the individual Targets. A conforming implementation may implement an encoding of any or all of the individual Targets.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">There SHALL be no dependency between or among the individual Targets.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -1861,12 +1864,48 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+<table id="sdu_confomance" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement G-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/sdu_general</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Implementations using encoded SDUs SHALL conform to the logical description of the model elements with the "Structural Data Unit - SDU" stereotype.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_general">/req/sdu_general</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="lm_confomance" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement G-LM</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/lm_general</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Implementations of concrete data conforming to this standard SHALL conform to all dependent or inherited classes, attributes, and associations, multiplicities, and data types in the Logical Model.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_lm_general">/req/lm_general</a></p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect3">
-<h4 id="_requirements_on_structural_data_units_for_each_standardization_target_normative"><a class="anchor" href="#_requirements_on_structural_data_units_for_each_standardization_target_normative"></a>7.3.2. Requirements on Structural Data Units for Each Standardization Target (Normative)</h4>
-<div class="sect4">
-<h5 id="_standardization_target_1_basic_ypr"><a class="anchor" href="#_standardization_target_1_basic_ypr"></a>Standardization Target 1: Basic-YPR</h5>
+<h4 id="_requirements_for_standardization_target_1_basic_ypr"><a class="anchor" href="#_requirements_for_standardization_target_1_basic_ypr"></a>8.2.1. Requirements for Standardization Target 1: Basic-YPR</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -1894,7 +1933,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Basic-YPR Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using Yaw, Pitch, and Roll angles.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Basic-YPR Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using Yaw, Pitch, and Roll angles.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -1914,7 +1953,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -1934,7 +1973,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -1954,7 +1993,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.h attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -1974,7 +2013,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yaw, Pitch, and Roll (YPR) angles shall be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure shall be the degree.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure SHALL be the degree.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -1984,9 +2023,8 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="_standardization_target_2_basic_quaternion"><a class="anchor" href="#_standardization_target_2_basic_quaternion"></a>7.3.3. Standardization Target 2: Basic-Quaternion</h4>
+<h4 id="_requirements_for_standardization_target_2_basic_quaternion"><a class="anchor" href="#_requirements_for_standardization_target_2_basic_quaternion"></a>8.2.2. Requirements for Standardization Target 2: Basic-Quaternion</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2014,7 +2052,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Basic-Quaternion Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using a unit quaternion.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Basic-Quaternion Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using a unit quaternion.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2034,7 +2072,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2054,7 +2092,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2074,7 +2112,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.h attribute shall be expressed as a real number.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2094,7 +2132,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose Logical Model quaternion datatype value shall be expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order. The sum of the squares of the individual components shall be as close to 1.0 as the real number representation allows. The quaternion shall be applied to an initial reference frame oriented East-North-Up (ENU) coordinate system where the coordinate axes East, North, and Up correspond to the axes X, Y, Z.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose Logical Model quaternion datatype value SHALL be expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order. The sum of the squares of the individual components SHALL be as close to 1.0 as the real number representation allows. The quaternion SHALL be applied to an initial reference frame oriented East-North-Up (ENU) coordinate system where the coordinate axes East, North, and Up correspond to the axes X, Y, Z.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2105,7 +2143,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_3_advanced"><a class="anchor" href="#_standardization_target_3_advanced"></a>7.3.4. Standardization Target 3: Advanced</h4>
+<h4 id="_requirements_for_standardization_target_3_advanced"><a class="anchor" href="#_requirements_for_standardization_target_3_advanced"></a>8.2.3. Requirements for Standardization Target 3: Advanced</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2133,7 +2171,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2153,7 +2191,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2173,7 +2211,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2193,7 +2231,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2213,7 +2251,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose Logical Model quaternion datatype value shall be expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order. The sum of the squares of the individual components shall be as close to 1.0 as the real number representation allows.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose Logical Model quaternion datatype value SHALL be expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order. The sum of the squares of the individual components SHALL be as close to 1.0 as the real number representation allows.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2225,7 +2263,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_4_graph"><a class="anchor" href="#_standardization_target_4_graph"></a>7.3.5. Standardization Target 4: Graph</h4>
+<h4 id="_requirements_for_standardization_target_4_graph"><a class="anchor" href="#_requirements_for_standardization_target_4_graph"></a>8.2.4. Requirements for Standardization Target 4: Graph</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2253,7 +2291,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2273,7 +2311,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2293,7 +2331,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2313,7 +2351,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2333,7 +2371,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each index vaue in a FrameListTransformPair shall be a distinct integer value between 0 and one less than the number of elements in the frameList property.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each index vaue in a FrameListTransformPair SHALL be a distinct integer value between 0 and one less than the number of elements in the frameList property.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2344,7 +2382,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_5_chain"><a class="anchor" href="#_standardization_target_5_chain"></a>7.3.6. Standardization Target 5: Chain</h4>
+<h4 id="_requirements_for_standardization_target_5_chain"><a class="anchor" href="#_requirements_for_standardization_target_5_chain"></a>8.2.5. Requirements for Standardization Target 5: Chain</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2372,7 +2410,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2392,7 +2430,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2412,7 +2450,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2432,7 +2470,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2442,12 +2480,12 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </table>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_6_regular_series"><a class="anchor" href="#_standardization_target_6_regular_series"></a>7.3.7. Standardization Target 6: Regular Series</h4>
+<h4 id="_requirements_for_standardization_target_6_regular_series"><a class="anchor" href="#_requirements_for_standardization_target_6_regular_series"></a>8.2.6. Requirements for Standardization Target 6: Regular Series</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
 <div class="paragraph">
-<p>The Regular (Time) Series Target represents the time evolution of a single GeoPose, with a constant time duration between successsive inner frames.</p>
+<p>The Regular (Time) Series Target represents the time evolution of a single GeoPose, with a constant time duration between successive inner frames.</p>
 </div>
 <div class="paragraph">
 <p><strong>Structure (Normative)</strong></p>
@@ -2470,7 +2508,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A header property shall be implemented as a SeriesHeader.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A header property SHALL be implemented as a SeriesHeader.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2490,7 +2528,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An interposeDuration property shall be implemented as a GeoPoseDuration.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An interposeDuration property SHALL be implemented as a GeoPoseDuration.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2510,7 +2548,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2530,7 +2568,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2550,7 +2588,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2570,7 +2608,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A trailer property shall be implemented as a SeriesTrailer.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A trailer property SHALL be implemented as a SeriesTrailer.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2581,7 +2619,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_7_irregular_series"><a class="anchor" href="#_standardization_target_7_irregular_series"></a>7.3.8. Standardization Target 7: Irregular Series</h4>
+<h4 id="_requirements_for_standardization_target_7_irregular_series"><a class="anchor" href="#_requirements_for_standardization_target_7_irregular_series"></a>8.2.7. Requirements for Standardization Target 7: Irregular Series</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2609,7 +2647,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A header property shall be implemented as a SeriesHeader.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A header property SHALL be implemented as a SeriesHeader.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2629,7 +2667,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2649,7 +2687,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2669,7 +2707,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2689,7 +2727,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An innerFrameAndTime property shall be implemented as an ExplicitFrameSpec and GeoPoseInstant pair.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An innerFrameAndTime property SHALL be implemented as an ExplicitFrameSpec and GeoPoseInstant pair.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2709,7 +2747,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A trailer property shall be implemented as a SeriesTrailer.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A trailer property SHALL be implemented as a SeriesTrailer.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2720,7 +2758,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_8_stream"><a class="anchor" href="#_standardization_target_8_stream"></a>7.3.9. Standardization Target 8: Stream</h4>
+<h4 id="_requirements_for_standardization_target_8_stream"><a class="anchor" href="#_requirements_for_standardization_target_8_stream"></a>8.2.8. Requirements for Standardization Target 8: Stream</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2754,7 +2792,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A TransitionModel property shall be implemented as one of the values in the TransitionModel enumeration.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A TransitionModel property SHALL be implemented as one of the values in the TransitionModel enumeration.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2774,7 +2812,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2794,7 +2832,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2814,7 +2852,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2834,7 +2872,7 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A FrameAndTimeElement property shall be implemented as as an ExplicitFrameSpec and a GeoPoseInstant.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A FrameAndTimeElement property SHALL be implemented as as an ExplicitFrameSpec and a GeoPoseInstant.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
@@ -2846,266 +2884,24 @@ The GeoPose Standard requires a specific method for the mapping of each data ele
 <div style="page-break-after: always;"></div>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_requirements_for_encodings"><a class="anchor" href="#_requirements_for_encodings"></a>9. Requirements for Encodings</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_requirements_on_encodings"><a class="anchor" href="#_requirements_on_encodings"></a>7.4. Requirements on Encodings</h3>
-<div class="sect3">
-<h4 id="_description_informative_3"><a class="anchor" href="#_description_informative_3"></a>7.4.1. Description (Informative)</h4>
+<h3 id="_description_informative_3"><a class="anchor" href="#_description_informative_3"></a>9.1. Description (Informative)</h3>
 <div class="paragraph">
-<p>Requirements are modular by Standardization Target. This results in some SDU requirements being repeated between Targets.
-Requirements on SDUs are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target&#8217;s group of SDUs shall be encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target&#8217;s section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified for the Basic-Q Target.</p>
+<p>Requirements Classes are modularized based on the corresponding Standardization Target. This results in some SDU requirements being repeated between Targets.
+SDU requirements are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target&#8217;s group of SDUs are encoded.  If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target&#8217;s section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified for the Basic-Q Target.</p>
 </div>
 <hr>
 <div style="page-break-after: always;"></div>
 </div>
+<div class="sect2">
+<h3 id="_json_encoding"><a class="anchor" href="#_json_encoding"></a>9.2. JSON Encoding</h3>
 <div class="sect3">
-<h4 id="_json_encoding"><a class="anchor" href="#_json_encoding"></a>7.4.2. JSON Encoding</h4>
-<div class="sect4">
-<h5 id="_standardization_target_1_basic_quaternion_normative"><a class="anchor" href="#_standardization_target_1_basic_quaternion_normative"></a>Standardization Target 1: Basic-Quaternion (Normative)</h5>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Two JSON encodings are defined for the Basic-Quaternion Target:
-<strong>Strict</strong>, disallowing additional JSON properties not defined in the schema and
-<strong>Extensible</strong>, allowing additional JSON properties in addition to those required by the schema. All other targets follow the default and permit additional JSON properties.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect5">
-<h6 id="_strict_json_encoding_normative"><a class="anchor" href="#_strict_json_encoding_normative"></a>Strict JSON Encoding (Normative)</h6>
-<table id="req_basic_quaternion" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement BQ-S-1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/basic/quaternion-strict/JSON_Encoding</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON encoded Basic-quaternion-strict GeoPose data elements as a whole shall conform to the GeoPose Basic-Quaternion-Strict JSON-Schema 2019-9 definition. There shall be no encoded properties not explicitly defined in the JSON-Schema definition.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_quaternion">/req/basic/quaternion-strict/JSON_Encoding</a></p></td>
-</tr>
-</tbody>
-</table>
-<div class="listingblock">
-<div class="content">
-<pre>{
-  "description": "Basic-Quaternion-Strict: Basic GeoPose using quaternion to specify orientation - no additional properties",
-  "definitions": {
-    "Position": {
-      "type": "object",
-      "properties": {
-        "lat": {
-          "type": "number"
-        },
-        "lon": {
-          "type": "number"
-        },
-        "h": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "lat",
-        "lon",
-        "h"
-      ]
-    },
-    "Quaternion": {
-      "type": "object",
-      "properties": {
-        "x": {
-          "type": "number"
-        },
-        "y": {
-          "type": "number"
-        },
-        "z": {
-          "type": "number"
-        },
-        "w": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "x",
-        "y",
-        "z",
-        "w"
-      ]
-    }
-  },
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "position": {
-      "$ref": "#/definitions/Position"
-    },
-    "quaternion": {
-      "$ref": "#/definitions/Quaternion"
-    }
-  },
-  "required": [
-    "position",
-    "quaternion"
-  ]
-}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Instance-Strict (Informative)</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-  "position": {
-    "lat": 47.7,
-    "lon": -122.3,
-    "h": 11.5
-  },
-  "quaternion": {
-    "x": 0.20054473382601948,
-    "y": -0.08111675703887213,
-    "z": 0.3660908114262869,
-    "w": -0.9050852994339209
-  }
-}</pre>
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_permissive_json_encoding_normative"><a class="anchor" href="#_permissive_json_encoding_normative"></a>Permissive JSON Encoding (Normative)</h6>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of <strong>true</strong>. This encoding is intended to be the default GeoPose.
-</td>
-</tr>
-</table>
-</div>
-<table id="req_basic_quaternion" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement BQ-2</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/basic/quaternion/JSON_Encoding</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Basic-quaternion GeoPose data elements as a whole shall conform to the GeoPose Basic-Quaternion JSON-Schema 2019-9 definition.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_quaternion">/req/basic/quaternion/JSON_Encoding</a></p></td>
-</tr>
-</tbody>
-</table>
-<div class="listingblock">
-<div class="content">
-<pre>{
-  "description": "Basic-Quaternion: Basic GeoPose using quaternion to specify orientation",
-  "definitions": {
-    "Position": {
-      "type": "object",
-      "properties": {
-        "lat": {
-          "type": "number"
-        },
-        "lon": {
-          "type": "number"
-        },
-        "h": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "lat",
-        "lon",
-        "h"
-      ]
-    },
-    "Quaternion": {
-      "type": "object",
-      "properties": {
-        "x": {
-          "type": "number"
-        },
-        "y": {
-          "type": "number"
-        },
-        "z": {
-          "type": "number"
-        },
-        "w": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "x",
-        "y",
-        "z",
-        "w"
-      ]
-    }
-  },
-  "type": "object",
-  "properties": {
-    "position": {
-      "$ref": "#/definitions/Position"
-    },
-    "quaternion": {
-      "$ref": "#/definitions/Quaternion"
-    }
-  },
-  "required": [
-    "position",
-    "quaternion"
-  ]
-}</pre>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-<div class="paragraph">
-<p><strong>Instance (Informative)</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-  "position": {
-    "lat": 47.7,
-    "lon": -122.3,
-    "h": 11.5
-  },
-  "quaternion": {
-    "x": 0.20054473382601948,
-    "y": -0.08111675703887213,
-    "z": 0.3660908114262869,
-    "w": -0.9050852994339209
-  }
-}</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_standardization_target_2_basic_ypr_normative"><a class="anchor" href="#_standardization_target_2_basic_ypr_normative"></a>Standardization Target 2: Basic-YPR (Normative)</h5>
+<h4 id="_standardization_target_1_basic_ypr_normative"><a class="anchor" href="#_standardization_target_1_basic_ypr_normative"></a>9.2.1. Standardization Target 1: Basic-YPR (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3118,10 +2914,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </tr>
 </table>
 </div>
-</div>
 <div class="sect4">
 <h5 id="_json_encoding_normative"><a class="anchor" href="#_json_encoding_normative"></a>JSON Encoding (Normative)</h5>
-<table id="req_basic_eulerangle" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_basic_ypr_angle" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3223,8 +3018,255 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 <div style="page-break-after: always;"></div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_standardization_target_2_basic_quaternion_normative"><a class="anchor" href="#_standardization_target_2_basic_quaternion_normative"></a>9.2.2. Standardization Target 2: Basic-Quaternion (Normative)</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Two JSON encodings are defined for the Basic-Quaternion Target:
+<strong>Strict</strong>, disallowing additional JSON properties not defined in the schema and
+<strong>Extensible</strong>, allowing additional JSON properties in addition to those required by the schema. All other targets follow the default and permit additional JSON properties.
+</td>
+</tr>
+</table>
+</div>
 <div class="sect4">
-<h5 id="_standardization_target_3_advanced_geopose_normative"><a class="anchor" href="#_standardization_target_3_advanced_geopose_normative"></a>Standardization Target 3: Advanced GeoPose (Normative)</h5>
+<h5 id="_strict_json_encoding_normative"><a class="anchor" href="#_strict_json_encoding_normative"></a>Strict JSON Encoding (Normative)</h5>
+<table id="req_basic_quaternion-strict" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement BQ-S</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/basic/quaternion-strict/JSON_Encoding</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON encoded Basic-quaternion-strict GeoPose data elements as a whole shall conform to the GeoPose Basic-Quaternion-Strict JSON-Schema 2019-9 definition. There shall be no encoded properties not explicitly defined in the JSON-Schema definition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_quaternion">/req/basic/quaternion-strict/JSON_Encoding</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "description": "Basic-Quaternion-Strict: Basic GeoPose using quaternion to specify orientation - no additional properties",
+  "definitions": {
+    "Position": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "h": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat",
+        "lon",
+        "h"
+      ]
+    },
+    "Quaternion": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z",
+        "w"
+      ]
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "position": {
+      "$ref": "#/definitions/Position"
+    },
+    "quaternion": {
+      "$ref": "#/definitions/Quaternion"
+    }
+  },
+  "required": [
+    "position",
+    "quaternion"
+  ]
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Instance-Strict (Informative)</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "quaternion": {
+    "x": 0.20054473382601948,
+    "y": -0.08111675703887213,
+    "z": 0.3660908114262869,
+    "w": -0.9050852994339209
+  }
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_permissive_json_encoding_normative"><a class="anchor" href="#_permissive_json_encoding_normative"></a>Permissive JSON Encoding (Normative)</h5>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of <strong>true</strong>. This encoding is intended to be the default GeoPose.
+</td>
+</tr>
+</table>
+</div>
+<table id="req_basic_quaternion-permissive" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement BQ-P</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/basic/quaternion-permissive/JSON_Encoding</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Basic-quaternion GeoPose data elements as a whole shall conform to the GeoPose Basic-Quaternion JSON-Schema 2019-9 definition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_quaternion-permissive">/req/basic/quaternion-permissive/JSON_Encoding</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "description": "Basic-Quaternion-Strict: Basic GeoPose using quaternion to specify orientation - no additional properties",
+  "definitions": {
+    "Position": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "h": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat",
+        "lon",
+        "h"
+      ]
+    },
+    "Quaternion": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z",
+        "w"
+      ]
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "position": {
+      "$ref": "#/definitions/Position"
+    },
+    "quaternion": {
+      "$ref": "#/definitions/Quaternion"
+    }
+  },
+  "required": [
+    "position",
+    "quaternion"
+  ]
+}</pre>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p><strong>Instance (Informative)</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "quaternion": {
+    "x": 0.20054473382601948,
+    "y": -0.08111675703887213,
+    "z": 0.3660908114262869,
+    "w": -0.9050852994339209
+  }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_standardization_target_3_advanced_geopose_normative"><a class="anchor" href="#_standardization_target_3_advanced_geopose_normative"></a>9.2.3. Standardization Target 3: Advanced GeoPose (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3236,7 +3278,6 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </td>
 </tr>
 </table>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_json_encoding_normative_2"><a class="anchor" href="#_json_encoding_normative_2"></a>JSON Encoding (Normative)</h5>
@@ -3334,8 +3375,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect4">
-<h5 id="_standardization_target_4_graph_normative"><a class="anchor" href="#_standardization_target_4_graph_normative"></a>Standardization Target 4: Graph (Normative)</h5>
+</div>
+<div class="sect3">
+<h4 id="_standardization_target_4_graph_normative"><a class="anchor" href="#_standardization_target_4_graph_normative"></a>9.2.4. Standardization Target 4: Graph (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3347,7 +3389,6 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </td>
 </tr>
 </table>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_json_encoding_normative_3"><a class="anchor" href="#_json_encoding_normative_3"></a>JSON Encoding (Normative)</h5>
@@ -3518,8 +3559,9 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect4">
-<h5 id="_standardization_target_5_chain_normative"><a class="anchor" href="#_standardization_target_5_chain_normative"></a>Standardization Target 5: Chain (Normative)</h5>
+</div>
+<div class="sect3">
+<h4 id="_standardization_target_5_chain_normative"><a class="anchor" href="#_standardization_target_5_chain_normative"></a>9.2.5. Standardization Target 5: Chain (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3531,7 +3573,6 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </td>
 </tr>
 </table>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_json_encoding_normative_4"><a class="anchor" href="#_json_encoding_normative_4"></a>JSON Encoding (Normative)</h5>
@@ -3645,7 +3686,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_6_regular_series_normative"><a class="anchor" href="#_standardization_target_6_regular_series_normative"></a>7.4.3. Standardization Target 6: Regular Series (Normative)</h4>
+<h4 id="_standardization_target_6_regular_series_normative"><a class="anchor" href="#_standardization_target_6_regular_series_normative"></a>9.2.6. Standardization Target 6: Regular Series (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3859,7 +3900,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_7_irregular_series_normative"><a class="anchor" href="#_standardization_target_7_irregular_series_normative"></a>7.4.4. Standardization Target 7: Irregular Series (Normative)</h4>
+<h4 id="_standardization_target_7_irregular_series_normative"><a class="anchor" href="#_standardization_target_7_irregular_series_normative"></a>9.2.7. Standardization Target 7: Irregular Series (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4072,7 +4113,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_8_stream_normative"><a class="anchor" href="#_standardization_target_8_stream_normative"></a>7.4.5. Standardization Target 8: Stream (Normative)</h4>
+<h4 id="_standardization_target_8_stream_normative"><a class="anchor" href="#_standardization_target_8_stream_normative"></a>9.2.8. Standardization Target 8: Stream (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4416,53 +4457,10 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_required_implementations_normative"><a class="anchor" href="#_required_implementations_normative"></a>7.5. Required Implementations (Normative)</h3>
-<table id="req_required_implementations" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 3. Table Required Implementations (Normative)</caption>
-<colgroup>
-<col style="width: 44.4444%;">
-<col style="width: 22.2222%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame Specification Type</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Authority</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Implementation Requirements</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">LTP-ENU (WGS84 - EPSG 4979-CRS/EPSG 4461-CS)</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://epsg.org" class="bare">https://epsg.org</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Shall be accepted</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">LTP-NED (WGS84 - EPSG 4979-CRS/EPSG 4461-CS with first two coordinates interchanged and the third coordinate multiplied by -1.0: Procedurally EPSG Dataset coordinate operation method code 9837 followed by change of coordinates U' = V; V' = U; W' = -W for the direct transformation and preceded by the same change of coordinates U' = V; V' = U; W' = -W before the inverse transformation)</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://epsg.org" class="bare">https://epsg.org</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Shall be accepted</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">NASA SPICE</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://naif.jpl.nasa.gov/naif" class="bare">https://naif.jpl.nasa.gov/naif</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Proj</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://proj.org" class="bare">https://proj.org</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ISO 19162</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.iso.org/obp/ui/#iso:std:iso:19162:ed-2:v1:en" class="bare">https://www.iso.org/obp/ui/#iso:std:iso:19162:ed-2:v1:en</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_media_types"><a class="anchor" href="#_media_types"></a>8. Media Types for JSON Encoding</h2>
+<h2 id="_media_types"><a class="anchor" href="#_media_types"></a>10. Media Types for JSON Encoding</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>application/json: <a href="http://www.iana.org/assignments/media-types/application/json" class="bare">http://www.iana.org/assignments/media-types/application/json</a></p>
@@ -5795,10 +5793,10 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect1">
-<h2 id="defined-reference-frame-specification"><a class="anchor" href="#defined-reference-frame-specification"></a>Annex B: GeoPose Local Frame of Reference Specifications (Normative)</h2>
+<h2 id="example-reference-frame-specification"><a class="anchor" href="#example-reference-frame-specification"></a>Annex B: GeoPose Local Frame of Reference Specifications (Informative)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>XXX Frame Specification types are defined by the built in to GeoPose v1. The authority string for these is "geopose://v1/&lt;frame specification name&gt;".</p>
+<p>This annex has example Frame Specifications for the LTP-ENU and LTP-NED Reference Frames.</p>
 </div>
 <div class="sect2">
 <h3 id="_local_tangent_plane_east_north_up_ltp_enu"><a class="anchor" href="#_local_tangent_plane_east_north_up_ltp_enu"></a>B.1. Local Tangent Plane - East North Up (LTP-ENU)</h3>
@@ -5841,29 +5839,6 @@ USAGE[
     BBOX[-90,-180,90,180]],
 ]</pre>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_requirement_2"><a class="anchor" href="#_requirement_2"></a>B.1.1. Requirement 2</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/framespec/LTP-ENU</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that&#8230;&#8203;</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect&#8230;&#8203;</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect2">
@@ -5908,107 +5883,52 @@ USAGE[
 ]</pre>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_requirement_1"><a class="anchor" href="#_requirement_1"></a>B.2.1. Requirement 1</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test id:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/conf-class-a/req-name-1</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/req-class-a/req-name-1</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that&#8230;&#8203;</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspect&#8230;&#8203;</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Euler-angle-use"><a class="anchor" href="#Euler-angle-use"></a>Annex C: GeoPose Use and Interpretation of Euler Angles</h2>
+<h2 id="time-use"><a class="anchor" href="#time-use"></a>Annex C: GeoPose Use and Interpretation of UNIX Time</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Euler angles come in two forms: with reference to an initial set of unchanging world coordinates or with reference to local coordinates that undergo each of the rotations. In addition, the order of the axes about which the rotations are performed must be specified. Finally, the unit of measure must be specified for the amount of each of the rotations.</p>
+<p>The GeoPose Standard has adopted a variation UNIX time as the method for denoting the location of Instants on a timeline. The reasons for this specific choice include the widespread availability of UNIX time in computer operating systems, the straightforward conversion to UTC at the level of precision required by the use cases considered in GeoPose 1.0: 1 millisecond.</p>
 </div>
 <div class="paragraph">
-<p>GeoPose shall use rotations about local coordinates, in the axis order z, y, x, and with the degree as the unit of measure.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="quaternion-use"><a class="anchor" href="#quaternion-use"></a>Annex D: GeoPose Use and Interpretation of Quaternions</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This section defines the interpretation of the four numbers representing a quaternion as w, x, y, z and ties back to the Foley and van Dam section on rotations.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="time-use"><a class="anchor" href="#time-use"></a>Annex E: GeoPose Use and Interpretation of UNIX Time</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>GeoPose has adopted a variation UNIX time as the method for denoting the location of Instants on a time line. The reasons for this specific choice include the widespread availability of UNIX time in computer operating systems, the straighforward conversion to UTC at the level of precision required by the use cases considered in GeoPose 1.0: 1 millisecond.</p>
-</div>
-<div class="paragraph">
-<p>Clearly, applications requiring higher precision and the recognition of non-Newtonian physical processes would require a more complex treatment of time. This has been left to possible future versions of the GeoPose standard.</p>
+<p>Clearly, applications requiring higher precision and the recognition of non-Newtonian physical processes would require a more complex treatment of time. This has been left to possible future versions of the GeoPose Standard.</p>
 </div>
 <div class="sect2">
-<h3 id="_intended_precision"><a class="anchor" href="#_intended_precision"></a>E.1. Intended Precision</h3>
+<h3 id="_intended_precision"><a class="anchor" href="#_intended_precision"></a>C.1. Intended Precision</h3>
 <div class="paragraph">
-<p>The intended precision of UNIX time in GeoPose 1.0 is 1 millisecond. Representations and encodings are based on the use of inegral numbers of milleseconds.</p>
+<p>The intended precision of UNIX time in GeoPose 1.0 is 1 millisecond. Representations and encodings are based on the use of integer numbers of milliseconds.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_scaling"><a class="anchor" href="#_scaling"></a>E.2. Scaling</h3>
+<h3 id="_scaling"><a class="anchor" href="#_scaling"></a>C.2. Scaling</h3>
 <div class="paragraph">
 <p>Time vales are represented and encoded as integer values in GeoPose 1.0.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_non_negative_time_positions"><a class="anchor" href="#_non_negative_time_positions"></a>E.3. Non-negative Time Positions</h3>
+<h3 id="_non_negative_time_positions"><a class="anchor" href="#_non_negative_time_positions"></a>C.3. Non-negative Time Positions</h3>
 <div class="paragraph">
-<p>Times at or after the UNIX epoch of 1 January 1970 are represented as though clocks ticked forward with the same duration of a second as at the epoch. Conversion to time reference systems and calendars requires the consideration of the generally decreasing rate of rotation of the earth with time increasing into the future. UTC, for example, makes use of leap seonds applied as needed either at 31 December or 30 June.</p>
+<p>Times at or after the UNIX epoch of 1 January 1970 are represented as though clocks ticked forward with the same duration of a second as at the epoch. Conversion to time reference systems and calendars requires the consideration of the generally decreasing rate of rotation of the earth with time increasing into the future. UTC, for example, makes use of leap seconds applied as needed either at 31 December or 30 June.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_negative_time_positions"><a class="anchor" href="#_negative_time_positions"></a>E.4. Negative Time Positions</h3>
+<h3 id="_negative_time_positions"><a class="anchor" href="#_negative_time_positions"></a>C.4. Negative Time Positions</h3>
 <div class="paragraph">
 <p>Times before the UNIX epoch of 1 January 1970 are represented as though clocks ticked backward with the same duration of a second as at the epoch. Conversion to time reference systems and calendars requires the consideration of the generally increasing rate of rotation of the earth with time decreasing into the past. The rate is about 0.015 millisecond/year. The accumulated time error is about 0.6 second/year in the recent past.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_positive_time_positions_before_1_january_1972_utc"><a class="anchor" href="#_positive_time_positions_before_1_january_1972_utc"></a>E.5. Positive Time Positions before 1 January 1972 UTC</h3>
+<h3 id="_positive_time_positions_before_1_january_1972_utc"><a class="anchor" href="#_positive_time_positions_before_1_january_1972_utc"></a>C.5. Positive Time Positions before 1 January 1972 UTC</h3>
 <div class="paragraph">
-<p>International timekeeping switched from an astronomical basis to a reference based on atomic prosesses in 1967. The details were in flux at the UNIX time epoch of 1 January 1970 until 1972, when the current system relating atomic time and UTC were adopted.</p>
+<p>International timekeeping switched from an astronomical basis to a reference based on atomic processes in 1967. The details were in flux at the UNIX time epoch of 1 January 1970 until 1972, when the current system relating atomic time and UTC were adopted.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_glossary"><a class="anchor" href="#_glossary"></a>Annex F: Glossary</h2>
+<h2 id="_glossary"><a class="anchor" href="#_glossary"></a>Annex D: Glossary</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following terms and concepts have appeared in the discussion of the use cases and design of the GeoPose standard but not part of the terms defined in Terms and Definitions. These</p>
@@ -6142,7 +6062,7 @@ A reference level from which elevation or altitude can be measured. The Topograp
 </div>
 </div>
 <div class="sect1">
-<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Annex G: Revision History</h2>
+<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Annex E: Revision History</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -6202,7 +6122,7 @@ A reference level from which elevation or altitude can be measured. The Topograp
 </div>
 </div>
 <div class="sect1">
-<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex H: Bibliography</h2>
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex F: Bibliography</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).</p>
