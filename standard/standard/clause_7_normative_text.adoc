@@ -65,7 +65,7 @@ image::models/Logical_Target_Sequence.png[align="center"]
 
 ''''
 [[requirements]]
-== Requirements for Structural Data Units and Standardization Targets
+== Structural Data Units and Standardization Targets
 
 === Description (Informative)
 
@@ -92,30 +92,58 @@ The Basic and Advanced Standardization Targets differ in the level of options an
 
 ===  Global Requirements (Normative)
 
+Global requirements apply to all SDUs and Standardization Targets.
+
+[[rc_global]]
+
+[width="100%",%header,cols="4,6"]
+|===
+<|*Requirements Class:* <|*Global* 
+
+<s|ID |<<req_global,/req/global>>
+<s|Target Type|SDU
+<s|Name| Global SDU Requirements
+<s|Dependency| None
+<s|Requirement G-Target|/req/target_dependency
+<s|Requirement G-SDU|/req/sdu_general 
+<s|Requirement G-LM|/req/lm_general 
+
+|===
+
+The individual global requirements are defined as follows:
+
 [[global]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement G-Global* |*/req/global* 
-^|Requirement |There SHALL be no dependency between or among the individual Targets.
-^|ID |<<req_global,/req/global>>
+<s|Requirement:  s|G-Target
+
+<s|ID |<<req_global,/req/target_dependency>>
+2+<|There SHALL be no dependency between or among the individual StTandardization Targets.
+
 |===
 
 [[sdu_confomance]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement G-SDU* |*/req/sdu_general* 
-^|Requirement |Implementations using encoded SDUs SHALL conform to the logical description of the model elements with the "Structural Data Unit - SDU" stereotype. 
-^|ID |<<req_sdu_general,/req/sdu_general>>
+<s|Requirement s|G-SDU 
+
+<s|ID |<<req_sdu_general,/req/sdu_general>>
+2+<|Implementations using encoded SDUs SHALL conform to the logical description of the Logical Model elements with the "Structural Data Unit - SDU" stereotype. 
 |===
 
 
 [[lm_confomance]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement G-LM* |*/req/lm_general* 
-^|Requirement |Implementations of concrete data conforming to this standard SHALL conform to all dependent or inherited classes, attributes, and associations, multiplicities, and data types in the Logical Model.
-^|ID |<<req_lm_general,/req/lm_general>>
+<s|Requirement s|G-LM 
+
+<s|ID |<<req_lm_general,/req/lm_general>>
+2+<|Implementations of concrete data conforming to this standard SHALL conform to all dependent or inherited classes, attributes, and associations, multiplicities, and data types in the Logical Model.
+
 |===
+
+=== Global Requirements Class
+
 
 
 ==== Requirements for Standardization Target 1: Basic-YPR
