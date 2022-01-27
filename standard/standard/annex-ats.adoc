@@ -89,72 +89,85 @@ There are some universal requirements on values that appear in a concrete implem
 <s|Target Type|SDU
 <s|Description|To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
 <s|Dependency| /conf/global
-<s|Test: Basic-YPR|/conf/basic_ypr_sdu
-<s|Test: Tangent-Plane Longitude|/conf/tangent_plane/longitude 
-<s|Test: Tangent-Plane Latitude|/conf/tangent_plane/latitude 
-<s|Test: Tangent-Plane h |/conf/tangent_plane/h 
+<s|Test: B-YPR-SDU|/conf/basic_ypr/sdu 
+<s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
+<s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
+<s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
+<s|Test: YPR-Angles |/conf/ypr_angles/sdu 
 |===
 
 The Basic-YPR SDU member tests are the following:
 
-[[conformance_global]]
-[width="100%",cols="2,6"]
+[[conf_basic_ypr_sdu]]
+[width="100%",cols="3,6"]
 |===
-<s|Test:  s|G-Target
+<s|Test:  s|B-YPR-SDU 
 
-<s|ID |<<at_global,/at/target_dependency>>
-2+<|There SHALL be no dependency between or among the individual Standardization Targets.
+<s|ID |<</conf_basic/ypr/sdu,/conf/basic_ypr/sdu>>
+2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
 <s|Purpose|Verify that this requirement is satisfied
 <s|Method|Inspection
-<s|Reference: G-Target|/req/target_dependency
+<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
 <s|Test Type|Conformance
 |===
 
 
-[[ats_basic_ypr_sdu]]
-[width="90%",cols="2,6"]
+[[conf_tangent_plane_longitude_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/basic/ypr/sdu* 
-^|Test Purpose |To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
-^|Requirement |/req_basic/ypr/sdu
-^|Test Method |Inspection
+<s|Test:  s|B-TP-Lon-SDU 
+
+<s|ID |<</conf_tangent_plane_longitude_sdu,/conf_tangent_plane_longitude_sdu>>
+2+<|To confirm that a GeoPose tangentPoint.longitude attribute is expressed as an angle in decimal degrees.
+<s|Purpose|Verify that this requirement is satisfied
+<s|Method|Inspection
+<s|Reference: Tangent-Plane-Longitude|/req/tangent_plane_longitude_sdu
+<s|Test Type|Conformance
 |===
 
-[[ats_tangent_plane_longitude_sdu]]
-[width="90%",cols="2,6"]
+
+[[conf_tangent_plane_latitude_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/tangent_plane/longitude/sdu* 
-^|Test Purpose |To confirm that a GeoPose tangentPoint.longitude attribute is expressed as a real number.
-^|Requirement |/req/tangent_plane/longitude/sdu
-^|Test Method |Inspection
+<s|Test:  s|B-TP-Lat-SDU 
+
+<s|ID |<</conf_tangent_plane_latitude_sdu,/conf_tangent_plane_latitude_sdu>>
+2+<|To confirm that a GeoPose tangentPoint.latitude attribute is expressed as an angle in decimal degrees.
+<s|Purpose|Verify that this requirement is satisfied
+<s|Method|Inspection
+<s|Reference: Tangent-Plane-Latitude|/req/tangent_plane_latitude_sdu
+<s|Test Type|Conformance
 |===
 
-[[ats_tangent_plane_latitude_sdu]]
-[width="90%",cols="2,6"]
+
+[[conf_tangent_plane_h_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/tangent_plane/latitude/sdu* 
-^|Test Purpose |To confirm that a GeoPose tangentPoint.latitude attribute is expressed as a real number.
-^|Requirement |/req/tangent_plane/latitude/sdu
-^|Test Method |Inspection
+<s|Test:  s|B-TP-h-SDU 
+
+<s|ID |<</conf_tangent_plane_h_sdu,/conf_tangent_plane_h_sdu>>
+2+<|To confirm that a GeoPose tangentPoint.h attribute is expressed as a height in meters above the WGS-84 ellipsoid.
+<s|Purpose|Verify that this requirement is satisfied
+<s|Method|Inspection
+<s|Reference: Tangent-Plane-h|/req/tangent_plane_h_sdu
+<s|Test Type|Conformance
 |===
 
-[[ats_tangent_plane_h_sdu]]
-[width="90%",cols="2,6"]
+
+
+[[conf_ypr_angles_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/tangent_plane/h/sdu* 
-^|Test Purpose |To confirm that a GeoPose tangentPoint.h attribute is expressed as a real number.
-^|Requirement |/req/tangent_plane/h/sdu
-^|Test Method |Inspection
+<s|Test:  s|YPR-Angles 
+
+<s|ID |<</conf_ypr_angles_sdu,/conf_ypr_angles_sdu>>
+2+<|To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree.
+<s|Purpose|Verify that this requirement is satisfied
+<s|Method|Inspection
+<s|Reference: YPR-Angles|/req/ypr_angles_sdu
+<s|Test Type|Conformance
 |===
 
-[[ats_orientation_ypr_angles_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/ats/orientation/ypr/angles/sdu* 
-^|Test Purpose |To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree..
-^|Requirement |/ats/orientation/ypr/angles/sdu
-^|Test Method |Inspection
-|===
 
 ==== Basic-Q SDU Conformance Class
 
@@ -511,11 +524,106 @@ The Basic-YPR SDU member tests are the following:
 |===
 
 
-=== Encodings
+=== Encodings  Conformance
 
-Each encoding technology has its own independent test suite. 
+Each encoding technology has its own independent test suite. The GeoPose Standard 1.0 has one encoding technology: JSON.
 
 ==== JSON Conformance
+
+
+[[conf_basic_ypr_encoding_json]]
+[width="100%",%header,cols="3,6"]
+|===
+<|*Conformance Class:* <|*Basic-YPR Encoding-JSON* 
+
+<s|ID |<<conf_basic_ypr_encoding_json,/conf/basic_ypr_encoding_json>>
+<s|Target Type|JSON object
+<s|Description|To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Dependency| /conf/basic_ypr_sdu
+<s|Test: B-YPR-Encoding-JSON|/conf/basic_ypr/encoding/json 
+
+|===
+
+The Basic-YPR JSON Encoding member test is the following:
+
+[[conf_basic_ypr_encoding_json_test]]
+[width="100%",cols="3,6"]
+|===
+<s|Test:  s|B-YPR-Encoding-JSON 
+
+<s|ID |<</conf_basic/ypr/encoding/json/test,/conf/basic_ypr/encoding/json/test>>
+2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|Method|JSON-Schema validation.
+<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Test Type|Conformance
+|===
+
+
+[[conf_basic_ypr_encoding_json]]
+[width="100%",%header,cols="3,6"]
+|===
+<|*Conformance Class:* <|*Basic-Quaternion Encoding-JSON* 
+
+<s|ID |<<conf_basic_ypr_encoding_json,/conf/basic_ypr_encoding_json>>
+<s|Target Type|JSON object
+<s|Description|To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Dependency| /conf/basic_ypr_sdu
+<s|Test: B-YPR-Encoding-JSON|/conf/basic_ypr/encoding/json 
+
+|===
+
+The Basic-Quaternion JSON Encoding member test is the following:
+
+[[conf_basic_ypr_encoding_json]]
+[width="100%",cols="3,6"]
+|===
+<s|Test:  s|B-YPR-Encoding-JSON 
+
+<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
+2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|Method|JSON-Schema validation.
+<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Test Type|Conformance
+|===
+|===
+
+The 
+
+|===
+
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",%header,cols="3,6"]
+|===
+<|*Conformance Class:* <|*Basic-Quaternion Encoding-JSON (Strict)* 
+
+<s|ID |<<conf_basic_quaternion_encoding_json_strict,/quaternion_encoding_json_strict>>
+<s|Target Type|JSON object
+<s|Description|To confirm that a Basic-Quaternion GeoPose (Strict) consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Dependency| /conf/basic_ypr_sdu
+<s|Test: B-Quaternion-Encoding-JSON-Strict|/conf/basic_ypr/encoding/json 
+
+|===
+
+The Basic-Quaternion JSON (Strict) Encoding member test is the following:
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",cols="3,6"]
+|===
+<s|Test:  s|B-YPR-Encoding-JSON 
+
+<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
+2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|Method|JSON-Schema validation.
+<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Test Type|Conformance
+|===
+
+
+
 
 include::abstract_tests/encodings/json/ATS_Basic.adoc[]
 
