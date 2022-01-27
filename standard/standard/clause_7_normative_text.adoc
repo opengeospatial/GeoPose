@@ -102,7 +102,7 @@ Global requirements apply to all SDUs and Standardization Targets.
 
 <s|ID |<<req_global,/req/global>>
 <s|Target Type|SDU
-<s|Name| Global SDU Requirements
+<s|Description| Global SDU Requirements
 <s|Dependency| None
 <s|Requirement G-Target|/req/target_dependency
 <s|Requirement G-SDU|/req/sdu_general 
@@ -118,7 +118,7 @@ The individual global requirements are defined as follows:
 <s|Requirement:  s|G-Target
 
 <s|ID |<<req_global,/req/target_dependency>>
-2+<|There SHALL be no dependency between or among the individual StTandardization Targets.
+2+<|There SHALL be no dependency between or among the individual Standardization Targets.
 
 |===
 
@@ -142,11 +142,9 @@ The individual global requirements are defined as follows:
 
 |===
 
-=== Global Requirements Class
 
 
-
-==== Requirements for Standardization Target 1: Basic-YPR
+==== Standardization Target 1: Basic-YPR
 
 *Summary (Informative)*
 
@@ -158,50 +156,80 @@ The Basic-YPR Target has a simple structure with no options. Position is specifi
 .Basic YPR SDU
 image::diagram/Basic-YPR_SDU.PNG[align="center"]
 
+*Requirements Class*
+
+|===
+<|*Requirements Class:* <|*Basic-YPR* 
+
+<s|ID |<<req_basic_ypr_sdu,/req/basic/ypr/sdu>>
+<s|Target Type|Implemntation of Logical Model
+<s|Description| Basic-YPR Logical Model SDU
+<s|Dependency| /req/global
+<s|Requirement B-YPR-SDU|/req/basic/ypr/sdu
+<s|Requirement B-TP-Lon-SDU|/req/tangent_plane/longitude/sdu 
+<s|Requirement B-TP-Lat-SDU|/req/tangent_plane/latitude/sdu 
+<s|Requirement B-TP-h-SDU|req/tangent_plane/h/sdu 
+<s|Requirement B-YPR-ANGLES-SDU|/req/orientation/ypr_angles/sdu 
+
+|===
+
+Details of the individual requirements:
+
 [[req_basic_ypr_sdu]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement B-YPR-SDU* |*/req/basic/ypr/sdu* 
-^|Requirement |An implementation of a Basic-YPR Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using Yaw, Pitch, and Roll angles.
-^|ID |<<req_basic_ypr,/req/basic/ypr/sdu>>
+<s|Requirement s|B-YPR-SDU 
+
+<s|ID |<<req_basic_ypr,/req/basic/ypr/sdu>>
+2+<|An implementation of a Basic-YPR Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using Yaw, Pitch, and Roll angles.
+
 |===
 
 [[req_tangent_plane]]
 [[req_tangent_plane_longitude]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement B-TP-Lon-SDU* |*/req/tangent_plane/longitude/sdu* 
-^|Requirement |An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees.
-^|ID |<<req_tangent_plane_parameters_longitude,/req/tangent_plane/longitude/sdu>>
+<s|Requirement s|B-TP-Lon-SDU
+
+<s|ID |<<req_tangent_plane_longitude,/req/tangent_plane/longitude/sdu>>
+2+<|An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees.
+
 |===
 
-[[req_tangent_plane_parameters_latitude]]
+
+[[req_tangent_plane_latitude]]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement B-S-TP-Lat* |*/req/tangent_plane/latitude/sdu* 
-^|Requirement |An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees.
-^|ID |<<req_basic_quaternion,/req/tangent_plane/latitude/sdu>>
+<s|Requirement s|B-TP-Lat-SDU
+
+<s|ID |<<req_tangent_plane_latitude,/req/tangent_plane/latitude/sdu>>
+2+<|An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees.
+
 |===
 
-[[req_tangent_plane_parameters_h]]
+[[req_tangent_plane_h]]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement B-S-TP-h* |*/req/tangent_plane/h/sdu* 
-^|Requirement |An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid.
-^|ID |<<req_basic_quaternion,/req/tangent_plane/h/sdu>>
+<s|Requirement s|B-TP-h-SDU
+
+<s|ID |<<req_tangent_plane_h,/req/tangent_plane/h/sdu>>
+2+<|An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid.
+
 |===
 
 [[req_sdu_orientation_ypr_angles]]
 [width="100%",cols="4,6"]
 |===
-^|*Requirement B-YPR-SDU* |*/req/orientation/ypr_angles/sdu* 
-^|Requirement |Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure SHALL be the degree. 
-^|ID |<<req_sdu_orientation_euler_angles,/req/orientation/ypr_angles/sdu>>
+<s|Requirement s|B-YPR-ANGLES-SDU
+
+<s|ID |<<req_sdu_orientation_ypr_angles,/req/orientation/ypr_angles/sdu>>
+2+<|Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure SHALL be the degree.
+
 |===
 
 <<<
 
-==== Requirements for Standardization Target 2: Basic-Quaternion
+==== Standardization Target 2: Basic-Quaternion
  
 *Summary (Informative)*
 

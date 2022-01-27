@@ -622,17 +622,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#requirements">8. Structural Data Units and Standardization Targets</a>
 <ul class="sectlevel2">
 <li><a href="#_description_informative_2">8.1. Description (Informative)</a></li>
-<li><a href="#_global_requirements_normative">8.2. Global Requirements (Normative)</a></li>
-<li><a href="#_global_requirements_class">8.3. Global Requirements Class</a>
+<li><a href="#_global_requirements_normative">8.2. Global Requirements (Normative)</a>
 <ul class="sectlevel3">
-<li><a href="#_requirements_for_standardization_target_1_basic_ypr">8.3.1. Requirements for Standardization Target 1: Basic-YPR</a></li>
-<li><a href="#_requirements_for_standardization_target_2_basic_quaternion">8.3.2. Requirements for Standardization Target 2: Basic-Quaternion</a></li>
-<li><a href="#_requirements_for_standardization_target_3_advanced">8.3.3. Requirements for Standardization Target 3: Advanced</a></li>
-<li><a href="#_requirements_for_standardization_target_4_graph">8.3.4. Requirements for Standardization Target 4: Graph</a></li>
-<li><a href="#_requirements_for_standardization_target_5_chain">8.3.5. Requirements for Standardization Target 5: Chain</a></li>
-<li><a href="#_requirements_for_standardization_target_6_regular_series">8.3.6. Requirements for Standardization Target 6: Regular Series</a></li>
-<li><a href="#_requirements_for_standardization_target_7_irregular_series">8.3.7. Requirements for Standardization Target 7: Irregular Series</a></li>
-<li><a href="#_requirements_for_standardization_target_8_stream">8.3.8. Requirements for Standardization Target 8: Stream</a></li>
+<li><a href="#_standardization_target_1_basic_ypr">8.2.1. Standardization Target 1: Basic-YPR</a></li>
+<li><a href="#_standardization_target_2_basic_quaternion">8.2.2. Standardization Target 2: Basic-Quaternion</a></li>
+<li><a href="#_requirements_for_standardization_target_3_advanced">8.2.3. Requirements for Standardization Target 3: Advanced</a></li>
+<li><a href="#_requirements_for_standardization_target_4_graph">8.2.4. Requirements for Standardization Target 4: Graph</a></li>
+<li><a href="#_requirements_for_standardization_target_5_chain">8.2.5. Requirements for Standardization Target 5: Chain</a></li>
+<li><a href="#_requirements_for_standardization_target_6_regular_series">8.2.6. Requirements for Standardization Target 6: Regular Series</a></li>
+<li><a href="#_requirements_for_standardization_target_7_irregular_series">8.2.7. Requirements for Standardization Target 7: Irregular Series</a></li>
+<li><a href="#_requirements_for_standardization_target_8_stream">8.2.8. Requirements for Standardization Target 8: Stream</a></li>
 </ul>
 </li>
 </ul>
@@ -658,18 +657,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#abstract-test-suite">Annex A: Abstract Test Suite (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_introduction">A.1. Introduction</a></li>
-<li><a href="#_global_conformance">A.2. Global Conformance</a></li>
+<li><a href="#_global_conformance_class">A.2. Global Conformance Class</a></li>
 <li><a href="#_structural_data_unit_sdu_conformance">A.3. Structural Data Unit (SDU) Conformance</a></li>
-<li><a href="#_basic_sdu_conformance_classes_normative">A.4. Basic SDU Conformance Classes (Normative)</a>
+<li><a href="#_basic_ypr_sdu_conformance_class">A.4. Basic-YPR SDU Conformance Class</a>
 <ul class="sectlevel3">
-<li><a href="#_basic_ypr_sdu_conformance_class">A.4.1. Basic-YPR SDU Conformance Class</a></li>
-<li><a href="#_basic_q_sdu_conformance_class">A.4.2. Basic-Q SDU Conformance Class</a></li>
-<li><a href="#_advanced_sdu_conformance_class">A.4.3. Advanced SDU Conformance Class</a></li>
-<li><a href="#_graph_sdu_conformance_class">A.4.4. Graph SDU Conformance Class</a></li>
-<li><a href="#_chain_sdu_conformance_class">A.4.5. Chain SDU Conformance Class</a></li>
-<li><a href="#_regular_series_sdu_conformance_class">A.4.6. Regular Series SDU Conformance Class</a></li>
-<li><a href="#_irregular_series_sdu_conformance_class">A.4.7. Irregular Series SDU Conformance Class</a></li>
-<li><a href="#_stream_sdu_conformance_class">A.4.8. Stream SDU Conformance Class</a></li>
+<li><a href="#_basic_q_sdu_conformance_class">A.4.1. Basic-Q SDU Conformance Class</a></li>
+<li><a href="#_advanced_sdu_conformance_class">A.4.2. Advanced SDU Conformance Class</a></li>
+<li><a href="#_graph_sdu_conformance_class">A.4.3. Graph SDU Conformance Class</a></li>
+<li><a href="#_chain_sdu_conformance_class">A.4.4. Chain SDU Conformance Class</a></li>
+<li><a href="#_regular_series_sdu_conformance_class">A.4.5. Regular Series SDU Conformance Class</a></li>
+<li><a href="#_irregular_series_sdu_conformance_class">A.4.6. Irregular Series SDU Conformance Class</a></li>
+<li><a href="#_stream_sdu_conformance_class">A.4.7. Stream SDU Conformance Class</a></li>
 </ul>
 </li>
 <li><a href="#_encodings">A.5. Encodings</a>
@@ -1869,7 +1867,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SDU</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Description</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Global SDU Requirements</p></td>
 </tr>
 <tr>
@@ -1910,7 +1908,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_global">/req/target_dependency</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">There SHALL be no dependency between or among the individual StTandardization Targets.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">There SHALL be no dependency between or among the individual Standardization Targets.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1956,11 +1954,8 @@ Basic-YPR, Basic-Quaternion,</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect2">
-<h3 id="_global_requirements_class"><a class="anchor" href="#_global_requirements_class"></a>8.3. Global Requirements Class</h3>
 <div class="sect3">
-<h4 id="_requirements_for_standardization_target_1_basic_ypr"><a class="anchor" href="#_requirements_for_standardization_target_1_basic_ypr"></a>8.3.1. Requirements for Standardization Target 1: Basic-YPR</h4>
+<h4 id="_standardization_target_1_basic_ypr"><a class="anchor" href="#_standardization_target_1_basic_ypr"></a>8.2.1. Standardization Target 1: Basic-YPR</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -1976,23 +1971,80 @@ Basic-YPR, Basic-Quaternion,</p></td>
 </div>
 <div class="title">Figure 14. Basic YPR SDU</div>
 </div>
+<div class="paragraph">
+<p><strong>Requirements Class</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Requirements Class:</strong></th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Basic-YPR</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_ypr_sdu">/req/basic/ypr/sdu</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Target Type</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Implemntation of Logical Model</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Basic-YPR Logical Model SDU</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Dependency</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/global</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-YPR-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/basic/ypr/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-TP-Lon-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/tangent_plane/longitude/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-TP-Lat-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/tangent_plane/latitude/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-TP-h-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">req/tangent_plane/h/sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-YPR-ANGLES-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/orientation/ypr_angles/sdu</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Details of the individual requirements:</p>
+</div>
 <table id="req_basic_ypr_sdu" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Requirement</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">B-YPR-SDU</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-YPR-SDU</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/basic/ypr/sdu</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Basic-YPR Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using Yaw, Pitch, and Roll angles.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_ypr">/req/basic/ypr/sdu</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">An implementation of a Basic-YPR Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using Yaw, Pitch, and Roll angles.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2001,58 +2053,67 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <col style="width: 40%;">
 <col style="width: 60%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Requirement</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">B-TP-Lon-SDU</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-TP-Lon-SDU</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/tangent_plane/longitude/sdu</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_tangent_plane_longitude">/req/tangent_plane/longitude/sdu</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_tangent_plane_parameters_longitude">/req/tangent_plane/longitude/sdu</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees.</p></td>
 </tr>
 </tbody>
 </table>
-<table id="req_tangent_plane_parameters_latitude" class="tableblock frame-all grid-all stretch">
+<div class="paragraph">
+<p><a id="req_tangent_plane_latitude"></a>]</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Requirement</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">B-TP-Lat-SDU</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-S-TP-Lat</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/tangent_plane/latitude/sdu</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_tangent_plane_latitude">/req/tangent_plane/latitude/sdu</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_quaternion">/req/tangent_plane/latitude/sdu</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees.</p></td>
 </tr>
 </tbody>
 </table>
-<table id="req_tangent_plane_parameters_h" class="tableblock frame-all grid-all stretch">
+<div class="paragraph">
+<p><a id="req_tangent_plane_h"></a>]</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Requirement</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">B-TP-h-SDU</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-S-TP-h</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/tangent_plane/h/sdu</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_tangent_plane_h">/req/tangent_plane/h/sdu</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_basic_quaternion">/req/tangent_plane/h/sdu</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2061,25 +2122,26 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <col style="width: 40%;">
 <col style="width: 60%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Requirement</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">B-YPR-ANGLES-SDU</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement B-YPR-SDU</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/orientation/ypr_angles/sdu</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_orientation_ypr_angles">/req/orientation/ypr_angles/sdu</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure SHALL be the degree.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ID</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#req_sdu_orientation_euler_angles">/req/orientation/ypr_angles/sdu</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure SHALL be the degree.</p></td>
 </tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_standardization_target_2_basic_quaternion"><a class="anchor" href="#_requirements_for_standardization_target_2_basic_quaternion"></a>8.3.2. Requirements for Standardization Target 2: Basic-Quaternion</h4>
+<h4 id="_standardization_target_2_basic_quaternion"><a class="anchor" href="#_standardization_target_2_basic_quaternion"></a>8.2.2. Standardization Target 2: Basic-Quaternion</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2198,7 +2260,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_standardization_target_3_advanced"><a class="anchor" href="#_requirements_for_standardization_target_3_advanced"></a>8.3.3. Requirements for Standardization Target 3: Advanced</h4>
+<h4 id="_requirements_for_standardization_target_3_advanced"><a class="anchor" href="#_requirements_for_standardization_target_3_advanced"></a>8.2.3. Requirements for Standardization Target 3: Advanced</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2318,7 +2380,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_standardization_target_4_graph"><a class="anchor" href="#_requirements_for_standardization_target_4_graph"></a>8.3.4. Requirements for Standardization Target 4: Graph</h4>
+<h4 id="_requirements_for_standardization_target_4_graph"><a class="anchor" href="#_requirements_for_standardization_target_4_graph"></a>8.2.4. Requirements for Standardization Target 4: Graph</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2437,7 +2499,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_standardization_target_5_chain"><a class="anchor" href="#_requirements_for_standardization_target_5_chain"></a>8.3.5. Requirements for Standardization Target 5: Chain</h4>
+<h4 id="_requirements_for_standardization_target_5_chain"><a class="anchor" href="#_requirements_for_standardization_target_5_chain"></a>8.2.5. Requirements for Standardization Target 5: Chain</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2535,7 +2597,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_standardization_target_6_regular_series"><a class="anchor" href="#_requirements_for_standardization_target_6_regular_series"></a>8.3.6. Requirements for Standardization Target 6: Regular Series</h4>
+<h4 id="_requirements_for_standardization_target_6_regular_series"><a class="anchor" href="#_requirements_for_standardization_target_6_regular_series"></a>8.2.6. Requirements for Standardization Target 6: Regular Series</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2674,7 +2736,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_standardization_target_7_irregular_series"><a class="anchor" href="#_requirements_for_standardization_target_7_irregular_series"></a>8.3.7. Requirements for Standardization Target 7: Irregular Series</h4>
+<h4 id="_requirements_for_standardization_target_7_irregular_series"><a class="anchor" href="#_requirements_for_standardization_target_7_irregular_series"></a>8.2.7. Requirements for Standardization Target 7: Irregular Series</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -2813,7 +2875,7 @@ Basic-YPR, Basic-Quaternion,</p></td>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_standardization_target_8_stream"><a class="anchor" href="#_requirements_for_standardization_target_8_stream"></a>8.3.8. Requirements for Standardization Target 8: Stream</h4>
+<h4 id="_requirements_for_standardization_target_8_stream"><a class="anchor" href="#_requirements_for_standardization_target_8_stream"></a>8.2.8. Requirements for Standardization Target 8: Stream</h4>
 <div class="paragraph">
 <p><strong>Summary (Informative)</strong></p>
 </div>
@@ -4535,28 +4597,163 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_global_conformance"><a class="anchor" href="#_global_conformance"></a>A.2. Global Conformance</h3>
-<table id="ats_global" class="tableblock frame-all grid-all" style="width: 90%;">
+<h3 id="_global_conformance_class"><a class="anchor" href="#_global_conformance_class"></a>A.2. Global Conformance Class</h3>
+<div class="paragraph">
+<p>Conformance with the Global Requirements is required for all implementations.</p>
+</div>
+<table id="conf_global" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Conformance Class:</strong></th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Global</strong></th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/global</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#conf_global">/conf/global</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To validate Target implementation.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Target Type</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SDU</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ats_global">/ats_global</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance with Global SDU requirements</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Dependency</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test: G-Target</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/target_dependency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test: G-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/sdu_general</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test: G-LM</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/lm_general</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The individual global tests are:</p>
+</div>
+<table id="conformance_global" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Test:</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">G-Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#conf_global">/conf/target_dependency</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">There SHALL be no dependency between or among the individual Standardization Targets.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Purpose</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that this requirement is satisfied</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Method</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Reference: G-Target</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/target_dependency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test Type</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance</p></td>
+</tr>
+</tbody>
+</table>
+<table id="conformance_sdu" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Test:</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">G-SDU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#conf_sdu_general">/conf/sdu_general</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">Implementations using encoded SDUs SHALL conform to the logical description of the Logical Model elements with the "Structural Data Unit - SDU" stereotype.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Purpose</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that this requirement is satisfied</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Method</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Reference: G-SDU</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/sdu_general</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test Type</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance</p></td>
+</tr>
+</tbody>
+</table>
+<table id="conformance_lm" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Test:</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">G-LM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#conf_lm_general">/conf/lm_general</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">Implementations of concrete data conforming to this standard SHALL conform to all dependent or inherited classes, attributes, and associations, multiplicities, and data types in the Logical Model.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Purpose</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that this requirement is satisfied</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Method</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Reference: G-LM</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/lm_general</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test Type</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance</p></td>
 </tr>
 </tbody>
 </table>
@@ -4568,9 +4765,93 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_basic_sdu_conformance_classes_normative"><a class="anchor" href="#_basic_sdu_conformance_classes_normative"></a>A.4. Basic SDU Conformance Classes (Normative)</h3>
-<div class="sect3">
-<h4 id="_basic_ypr_sdu_conformance_class"><a class="anchor" href="#_basic_ypr_sdu_conformance_class"></a>A.4.1. Basic-YPR SDU Conformance Class</h4>
+<h3 id="_basic_ypr_sdu_conformance_class"><a class="anchor" href="#_basic_ypr_sdu_conformance_class"></a>A.4. Basic-YPR SDU Conformance Class</h3>
+<table id="conf_basic_ypr" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Conformance Class:</strong></th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Basic-YPR SDU</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#conf_basic_ypr_sdu">/conf/basic_ypr_sdu</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Target Type</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SDU</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Dependency</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/global</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test: Basic-YPR</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/basic_ypr_sdu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test: Tangent-Plane Longitude</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/tangent_plane/longitude</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test: Tangent-Plane Latitude</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/tangent_plane/latitude</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test: Tangent-Plane h</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/conf/tangent_plane/h</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The Basic-YPR SDU member tests are the following:</p>
+</div>
+<table id="conformance_global" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Test:</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">G-Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>ID</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#at_global">/at/target_dependency</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">There SHALL be no dependency between or among the individual Standardization Targets.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Purpose</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Verify that this requirement is satisfied</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Method</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inspection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Reference: G-Target</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/req/target_dependency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Test Type</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Conformance</p></td>
+</tr>
+</tbody>
+</table>
 <table id="ats_basic_ypr_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4578,7 +4859,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 1</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/ypr/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4602,7 +4883,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 3</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/longitude/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4626,7 +4907,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 4</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/latitude/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4650,7 +4931,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/h/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4674,7 +4955,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/orientation/ypr/angles/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4691,9 +4972,8 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </tr>
 </tbody>
 </table>
-</div>
 <div class="sect3">
-<h4 id="_basic_q_sdu_conformance_class"><a class="anchor" href="#_basic_q_sdu_conformance_class"></a>A.4.2. Basic-Q SDU Conformance Class</h4>
+<h4 id="_basic_q_sdu_conformance_class"><a class="anchor" href="#_basic_q_sdu_conformance_class"></a>A.4.1. Basic-Q SDU Conformance Class</h4>
 <table id="ats_basic_quaternion_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4701,7 +4981,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/quaternion/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4725,7 +5005,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/longitude/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4749,7 +5029,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 9</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/latitude/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4773,7 +5053,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 9</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/tangent_plane/h/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4797,7 +5077,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/orientation/quaternion/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4816,7 +5096,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_advanced_sdu_conformance_class"><a class="anchor" href="#_advanced_sdu_conformance_class"></a>A.4.3. Advanced SDU Conformance Class</h4>
+<h4 id="_advanced_sdu_conformance_class"><a class="anchor" href="#_advanced_sdu_conformance_class"></a>A.4.2. Advanced SDU Conformance Class</h4>
 <table id="ats_geoposeinstant_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4824,7 +5104,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 12</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 11</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/geoposeinstant/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4848,7 +5128,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 13</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4872,7 +5152,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 14</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4896,7 +5176,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 15</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 14</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4920,7 +5200,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 16</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 15</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/orientation/quaternion/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4939,7 +5219,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_graph_sdu_conformance_class"><a class="anchor" href="#_graph_sdu_conformance_class"></a>A.4.4. Graph SDU Conformance Class</h4>
+<h4 id="_graph_sdu_conformance_class"><a class="anchor" href="#_graph_sdu_conformance_class"></a>A.4.3. Graph SDU Conformance Class</h4>
 <table id="ats_geoposeinstant_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4947,7 +5227,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 17</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 16</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/geoposeinstant/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4971,7 +5251,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 18</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 17</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
 </tr>
 <tr>
@@ -4995,7 +5275,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 19</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 18</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5019,7 +5299,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 20</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 19</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5043,7 +5323,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 21</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 20</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/chain/index/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5062,7 +5342,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_chain_sdu_conformance_class"><a class="anchor" href="#_chain_sdu_conformance_class"></a>A.4.5. Chain SDU Conformance Class</h4>
+<h4 id="_chain_sdu_conformance_class"><a class="anchor" href="#_chain_sdu_conformance_class"></a>A.4.4. Chain SDU Conformance Class</h4>
 <table id="ats_geoposeinstant_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5070,7 +5350,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 22</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 21</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/geoposeinstant/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5094,7 +5374,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 23</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 22</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5118,7 +5398,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 24</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 23</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5142,7 +5422,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 25</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 24</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5161,7 +5441,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_regular_series_sdu_conformance_class"><a class="anchor" href="#_regular_series_sdu_conformance_class"></a>A.4.6. Regular Series SDU Conformance Class</h4>
+<h4 id="_regular_series_sdu_conformance_class"><a class="anchor" href="#_regular_series_sdu_conformance_class"></a>A.4.5. Regular Series SDU Conformance Class</h4>
 <table id="ats_series_header_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5169,7 +5449,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 26</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 25</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/header/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5193,7 +5473,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 27</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 26</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/geoposeduration/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5217,7 +5497,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 28</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 27</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5241,7 +5521,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 29</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 28</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5265,7 +5545,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 30</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 29</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5289,7 +5569,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 31</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 30</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/trailer/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5308,7 +5588,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_irregular_series_sdu_conformance_class"><a class="anchor" href="#_irregular_series_sdu_conformance_class"></a>A.4.7. Irregular Series SDU Conformance Class</h4>
+<h4 id="_irregular_series_sdu_conformance_class"><a class="anchor" href="#_irregular_series_sdu_conformance_class"></a>A.4.6. Irregular Series SDU Conformance Class</h4>
 <table id="ats_series_header_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5316,7 +5596,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 32</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 31</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/header/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5340,7 +5620,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 33</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 32</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5364,7 +5644,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 34</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 33</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5388,7 +5668,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 35</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 34</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5412,7 +5692,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 36</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 35</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/frame_and_time/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5436,7 +5716,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 37</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 36</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/Series/trailer/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5455,7 +5735,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_stream_sdu_conformance_class"><a class="anchor" href="#_stream_sdu_conformance_class"></a>A.4.8. Stream SDU Conformance Class</h4>
+<h4 id="_stream_sdu_conformance_class"><a class="anchor" href="#_stream_sdu_conformance_class"></a>A.4.7. Stream SDU Conformance Class</h4>
 <table id="ats_transition_model_sdu" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5463,7 +5743,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 38</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 37</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/transition_model/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5487,7 +5767,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 39</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 38</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_authority/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5511,7 +5791,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 40</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 39</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_id/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5535,7 +5815,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 41</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 40</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/frame_specification_parameters/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5559,7 +5839,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 42</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 41</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/stream/frame_and_time/sdu</strong></p></td>
 </tr>
 <tr>
@@ -5599,7 +5879,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 43</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 42</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/YPRr</strong></p></td>
 </tr>
 <tr>
@@ -5626,7 +5906,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 44</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 43</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/quaternion</strong></p></td>
 </tr>
 <tr>
@@ -5653,7 +5933,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 45</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 44</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/basic/quaternion/permissive</strong></p></td>
 </tr>
 <tr>
@@ -5681,7 +5961,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 46</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 45</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/advanced</strong></p></td>
 </tr>
 <tr>
@@ -5710,7 +5990,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 47</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 46</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/graph</strong></p></td>
 </tr>
 <tr>
@@ -5737,7 +6017,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 48</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 47</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/chain</strong></p></td>
 </tr>
 <tr>
@@ -5772,7 +6052,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 49</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 48</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/series/regular</strong></p></td>
 </tr>
 <tr>
@@ -5799,7 +6079,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 50</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 49</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/series/irregular</strong></p></td>
 </tr>
 <tr>
@@ -5826,7 +6106,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 51</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 50</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/ats/composite/sequence/stream</strong></p></td>
 </tr>
 <tr>
