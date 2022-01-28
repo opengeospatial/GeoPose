@@ -330,11 +330,12 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 |===
  
 
+
 [[req_pose_geopose_instant_sdu]]
 [width="100%",cols="4,6"]
 |===
 <s|Requirement  s|GP-Instant-SDU
-<s|ID |<<req_sdu_pose_geopose_instant,/req/pose/geopose_instant/sdu>>
+<s|ID |<<req_time_geopose_instant_sdu,/req/time/geopose_instant/sdu>>
 2+<|The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 |===
 
@@ -342,8 +343,8 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|FS-Authority-SDU
-<s|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
-2+<|The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
+<s|ID |<<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+2+<|The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
 |===
 
 [[req_frame_specification_id_sdu]]
@@ -351,7 +352,7 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 |===
 <s|*Requirement s| FS-ID-SDU 
 <s|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
-2+<|The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.
+2+<|The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 |===
 
 [[req_frame_specification_parameters_sdu]]
@@ -359,7 +360,7 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 |===
 <s|Requirement s|FS-Parameters-SDU
 <s|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
-2+<|The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
+2+<|The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
 |===
 
 
@@ -390,43 +391,57 @@ The Graph Target supports a network of object relative poses. The graph is a dir
 .Graph SDU
 image::diagram/Graph_SDU.PNG[align="center"]
 
-[[req_sdu_pose_geoposeinstant]]
-[width="100%",cols="4,6"]
+
 |===
-<s|*Requirement GP-Instant-SDU* |*/req/pose/geoposeinstant/sdu* 
-<s|Requirement |The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
-<s|ID |<<req_sdu_pose_geoposeinstant,/req/pose/geoposeinstant/sdu>>
+<s|Requirements Class s|Graph 
+
+<s|ID |<<req_graph_sdu,/req/graph/sdu>>
+<s|Target Type|Implemntation of Logical Model
+<s|Description| Graph Logical Model SDU
+<s|Dependency| /req/global
+<s|Requirement Graph-SDU|/req/graph/sdu
+<s|Requirement B-TP-Lon-SDU|/req/tangent_plane/longitude/sdu 
+<s|Requirement B-TP-Lat-SDU|/req/tangent_plane/latitude/sdu 
+<s|Requirement B-TP-h-SDU|req/tangent_plane/h/sdu 
+<s|Requirement GP-Instant-SDU|/req/time/geopose_instant/sdu 
+
 |===
 
-[[req_sdu_frame_specification_authority]]
+
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
-<s|Requirement |The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
-<s|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+<s|Requirement  s|GP-Instant-SDU
+<s|ID |<<req_time_geopose_instant_sdu,/req/time/geopose_instant/sdu>>
+2+<|The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 |===
 
-[[req_sdu_frame_specification_id]]
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
-<s|Requirement |The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.
+<s|Requirement s|FS-Authority-SDU
+<s|ID |<<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+2+<|The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
+|===
+
+[width="100%",cols="4,6"]
+|===
+<s|*Requirement s| FS-ID-SDU 
 <s|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+2+<|The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 |===
 
-[[req_sdu_frame_specification_parameters]]
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
-<s|Requirement |The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
+<s|Requirement s|FS-Parameters-SDU
 <s|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+2+<|The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
 |===
 
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement GP-Index-SDU* |*/req/Chain/index/SDU* 
-<s|Requirement |Each index vaue in a FrameListTransformPair SHALL be a distinct integer value between 0 and one less than the number of elements in the frameList property.
-<s|ID |<<req_Chain/structure,/req/Chain/index/SDU>>
+<s|Requirement s|GP-Graph-Transform_Index-SDU 
+<s|ID |<<req_transform_index_,/req/chain/transform_index/sdu>>
+2+<|Each index vaue in a FrameListTransformPair SHALL be a distinct integer value between 0 and one less than the number of elements in the frameList property.
 |===
 
 <<<
@@ -443,36 +458,52 @@ The Chain Target supports relationships between a linear sequence of pose relati
 .Chain SDU
 image::diagram/Chain_SDU.PNG[align="center"]
 
-[[req_sdu_pose_geoposeinstant]]
-[width="100%",cols="4,6"]
+
 |===
-<s|*Requirement GP-Instant-SDU* |*/req/pose/geoposeinstant/sdu* 
-<s|Requirement |The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
-<s|ID |<<req_sdu_pose_geoposeinstant,/req/pose/geoposeinstant/sdu>>
+<s|Requirements Class s|Chain 
+
+<s|ID |<<req_chain_sdu,/req/chain/sdu>>
+<s|Target Type|Implemntation of Logical Model
+<s|Description| Chain Logical Model SDU
+<s|Dependency| /req/global
+<s|Requirement Chain-SDU|/req/chain/sdu
+<s|Requirement B-TP-Lon-SDU|/req/tangent_plane/longitude/sdu 
+<s|Requirement B-TP-Lat-SDU|/req/tangent_plane/latitude/sdu 
+<s|Requirement B-TP-h-SDU|req/tangent_plane/h/sdu 
+<s|Requirement GP-Instant-SDU|/req/time/geopose_instant/sdu 
+
 |===
 
-[[req_sdu_frame_specification_authority]]
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
-<s|Requirement |The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
-<s|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+<s|Requirement  s|GP-Instant-SDU
+<s|ID |<<req_time_geopose_instant_sdu,/req/time/geopose_instant/sdu>>
+2+<|The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 |===
 
-[[req_sdu_frame_specification_id]]
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
-<s|Requirement |The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.
+<s|Requirement s|FS-Authority-SDU
+<s|ID |<<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+2+<|The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
+|===
+
+
+[width="100%",cols="4,6"]
+|===
+<s|*Requirement s| FS-ID-SDU 
 <s|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+2+<|The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 |===
 
-[[req_sdu_frame_specification_parameters]]
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
-<s|Requirement |The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
+<s|Requirement s|FS-Parameters-SDU
 <s|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+2+<|The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
 |===
 
 ==== Requirements for Standardization Target 6: Regular Series
@@ -491,47 +522,47 @@ image::diagram/Regular-Series_SDU.PNG[align="center"]
  
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement S-Header-SDU* |*/req/RegularSeries/header/SDU* 
-<s|Requirement |A header property SHALL be implemented as a SeriesHeader.
-<s|ID |<<req_Chain/structure,/req/RegularSeries/header/SDU>>
+<s|Requirement s|S-Header-SDU 
+<s|ID |<<req_Chain/structure,/req/regular_series/header/sdu>>
+2+<|A header property SHALL be implemented as a SeriesHeader structure.
 |===
 
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement GP-Duration-SDU* |*/req/RegularSeries/duration/SDU* 
+<s|Requirement s|GP-Duration-SDU
+<s|ID |<<req_time_geopose_duration,/req/time/geopose_duration/SDU>>
 <s|Requirement |An interposeDuration property SHALL be implemented as a GeoPoseDuration.
-<s|ID |<<req_Chain/structure,/req/RegularSeries/duration/SDU>>
 |===
 
-[[req_sdu_frame_specification_authority]]
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
-<s|Requirement |The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
-<s|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+<s|Requirement s|FS-Authority-SDU
+<s|ID |<<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+2+<|The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
 |===
 
-[[req_sdu_frame_specification_id]]
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
-<s|Requirement |The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.
+<s|*Requirement s| FS-ID-SDU 
 <s|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+2+<|The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 |===
 
-[[req_sdu_frame_specification_parameters]]
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
-<s|Requirement |The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
+<s|Requirement s|FS-Parameters-SDU
 <s|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+2+<|The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
 |===
 
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement S-Trailer-SDU* |*/req/RegularSeries/trailer/SDU* 
-<s|Requirement |A trailer property SHALL be implemented as a SeriesTrailer.
-<s|ID |<<req_Chain/structure,/req/RegularSeries/trailer/SDU>>
+<s|Requirement s|S-Trailer-SDU
+<s|ID |<<req_series_regular_trailer,/req/series/regular/trailer/sdu>>
+2+<|A trailer property SHALL be implemented as a SeriesTrailer structure.
 |===
 
 <<<
@@ -552,33 +583,32 @@ image::diagram/Irregular-Series_SDU.PNG[align="center"]
 
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement S-Header-SDU* |*/req/RegularSeries/header/SDU* 
+<s|Requirement s|S-Header-SDU
+<s|ID |<<req_series_irregular_header_sdu,/req/series/irregular/header/sdu>>
 <s|Requirement |A header property SHALL be implemented as a SeriesHeader.
-<s|ID |<<req_Chain/structure,/req/RegularSeries/header/SDU>>
 |===
 
-[[req_sdu_frame_specification_authority]]
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
-<s|Requirement |The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
-<s|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+<s|Requirement s|FS-Authority-SDU
+<s|ID |<<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+2+<|The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
 |===
 
-[[req_sdu_frame_specification_id]]
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
-<s|Requirement |The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.
+<s|*Requirement s| FS-ID-SDU 
 <s|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+2+<|The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 |===
 
-[[req_sdu_frame_specification_parameters]]
+
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
-<s|Requirement |The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
+<s|Requirement s|FS-Parameters-SDU
 <s|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+2+<|The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
 |===
 
 
@@ -620,40 +650,41 @@ image::diagram/Stream-Element_SDU.PNG[align="center"]
 
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement S-TM-SDU* |*/req/Stream/sdu* 
-<s|Requirement |A TransitionModel property SHALL be implemented as one of the values in the TransitionModel enumeration.
-<s|ID |<<req_Stream/structure,/req/Stream/sdu>>
+<s|Requirement s|S-TM-SDU
+<s|ID |<<req_transition_model,/req/transition_model/sdu>>
+2+<|A TransitionModel property SHALL be implemented as one of the values in the TransitionModel enumeration.
 |===
 
-[[req_sdu_frame_specification_authority]]
+
+[[req_frame_specification_authority_sdu]]
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
-<s|Requirement |The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
-<s|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
+<s|Requirement s|FS-Authority-SDU
+<s|ID |<<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+2+<|The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
 |===
 
-[[req_sdu_frame_specification_id]]
+[[req_frame_specification_id_sdu]]
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
-<s|Requirement |The FrameSpecification.ID attribute SHALL be a string uniquely defining a frame within the authority.
+<s|*Requirement s| FS-ID-SDU 
 <s|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+2+<|The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 |===
 
-[[req_sdu_frame_specification_parameters]]
+[[req_frame_specification_parameters_sdu]]
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
-<s|Requirement |The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
+<s|Requirement s|FS-Parameters-SDU
 <s|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+2+<|The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
 |===
 
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement S-FST-SDU* |*/req/Stream/fst/sdu* 
+<s|Requirement s|S-FST-SDU
+<s|ID |<<req_stream_frame_time_element_sdu_,/req/stream/frame_time_element/sdu>>
 <s|Requirement |A FrameAndTimeElement property SHALL be implemented as as an ExplicitFrameSpec and a GeoPoseInstant.
-<s|ID |<<req_Stream/structure,/req/Stream/fst/sdu>>
 |===
 
 '''
