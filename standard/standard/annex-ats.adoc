@@ -808,10 +808,3 @@ The *GeoPose Stream* JSON Encoding member test is the following:
 
 
 
-
-include::abstract_tests/encodings/json/conf_Basic.adoc[]
-
-include::abstract_tests/encodings/json/conf_Advanced.adoc[]
-
-include::abstract_tests/encodings/json/conf_Composite.adoc[]
-
