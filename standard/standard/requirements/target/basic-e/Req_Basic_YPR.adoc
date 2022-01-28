@@ -1,8 +1,7 @@
-
-[[req_basic_ypr_angle]]
-[width="90%",cols="2,6"]
+[[req_basic_ypr_encoding_json]]
+[width="90%",cols="4,6"]
 |===
-^|*Requirement BE-{counter:req-by-id}* |*/req/basic/YPRAngle/JSON_Encoding* 
-^|Requirement |A JSON-encoded Basic-YPR GeoPose shall conform to the Basic-YPR JSON-Schema 2019-9 definition.
-^|ID |<<req_basic_YPRangle_json,/req/basic/YPRAngle/JSON_Encoding>>
+<s|Requirement  s|B-YPR-Encoding-JSON
+<s|ID |<<req_basic_ypr_encoding__json,/req/basic/ypr/encoding/json>> 
+2+<|A JSON-encoded Basic-YPR GeoPose SHALL conform to the Basic-YPR JSON-Schema 2019-9 definition.
 |===

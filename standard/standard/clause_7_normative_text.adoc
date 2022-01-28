@@ -649,7 +649,15 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 
 ===== JSON Encoding (Normative) 
 
-include::requirements/target/basic-e/req_basic_ypr.adoc[]
+[[req_basic_ypr_encoding_json]]
+[width="90%",cols="4,6"]
+|===
+<s|Requirement  s|B-YPR-Encoding-JSON
+<s|ID |<<req_basic_ypr_encoding__json,/req/basic/ypr/encoding/json>> 
+2+<|A JSON-encoded Basic-YPR GeoPose SHALL conform to the following Basic-YPR JSON-Schema 2019-9 definition.
+|===
+
+*JSON-Schema:*
 
 ----
 include::schemata/GeoPose.Basic.YPR.Schema.json[]
@@ -675,13 +683,15 @@ Two JSON encodings are defined for the Basic-Quaternion Target:
 
 ===== Strict JSON Encoding (Normative)
 
-[[req_basic_quaternion-strict]]
-[width="90%",cols="2,6"]
+[[req_basic_quaternion_encoding_json_strict]]
+[width="90%",cols="4,6"]
 |===
-^|*Requirement BQ-S* |*/req/basic/quaternion-strict/JSON_Encoding* 
-^|Requirement |JSON encoded Basic-quaternion-strict GeoPose data elements as a whole shall conform to the GeoPose Basic-Quaternion-Strict JSON-Schema 2019-9 definition. There shall be no encoded properties not explicitly defined in the JSON-Schema definition.
-^|ID |<<req_basic_quaternion,/req/basic/quaternion-strict/JSON_Encoding>>
+<s|Requirement  s|B-Quaternion-Encoding-JSON-Strict
+<s|ID |<<req_basic_quaternion_encoding_json_strict,/req/basic/quaternion/encoding/json_strict>> 
+2+<|A JSON-encoded Basic-Quaternion (Strict) GeoPose SHALL conform to the following Basic-Quaternion (Strict) JSON-Schema 2019-9 definition. There SHALL be no encoded properties not explicitly defined in the JSON-Schema definition.
 |===
+
+*JSON-Schema:*
 
 ----
 include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
@@ -696,19 +706,19 @@ include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
 ===== Permissive JSON Encoding (Normative) 
 
 [NOTE]
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. This encoding is intended to be the default GeoPose.
+This JSON encoding of the Basic-Quaternion GeoPose is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. This encoding is intended to be the default GeoPose.
 
 
-
-
-[[req_basic_quaternion-permissive]]
-[width="90%",cols="2,6"]
+[[req_basic_quaternion_encoding_json]]
+[width="90%",cols="4,6"]
 |===
-^|*Requirement BQ-P* |*/req/basic/quaternion-permissive/JSON_Encoding* 
-^|Requirement |Basic-quaternion GeoPose data elements as a whole shall conform to the GeoPose Basic-Quaternion JSON-Schema 2019-9 definition.
-^|ID |<<req_basic_quaternion-permissive,/req/basic/quaternion-permissive/JSON_Encoding>>
+<s|Requirement  s|B-Quaternion-Encoding-JSON
+<s|ID |<<req_basic_quaternion_encoding__json,/req/basic/quaternion/encoding/json>> 
+2+<|A JSON-encoded Basic-Quaternion GeoPose SHALL conform to the following Basic-Quaternion JSON-Schema 2019-9 definition.
+
 |===
 
+*JSON-Schema:*
 
 ----
 include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
@@ -729,6 +739,15 @@ include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
 
 ===== JSON Encoding (Normative) 
+
+[[req_advanced_encoding_json]]
+[width="90%",cols="4,6"]
+|===
+<s|Requirement  s|Advanced-Encoding-JSON
+<s|ID |<<req_advanced_encoding__json,/req/advanced/encoding/json>> 
+2+<|A JSON-encoded Advanced GeoPose SHALL conform to the following Advanced JSON-Schema 2019-9 definition.
+
+|===
 
 *JSON-Schema:*
 
@@ -752,6 +771,15 @@ include::instances/GeoPose.Advanced.Instance.json[]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. 
 
 ===== JSON Encoding (Normative) 
+
+
+[[req_graph_encoding_json]]
+[width="90%",cols="4,6"]
+|===
+<s|Requirement  s|Graph-Encoding-JSON
+<s|ID |<<req_graph_encoding__json,/req/graph/encoding/json>> 
+2+<|A JSON-encoded GeoPose Graph SHALL conform to the following GeoPose Graph JSON-Schema 2019-9 definition.
+
 
 *JSON-Schema:*
 
