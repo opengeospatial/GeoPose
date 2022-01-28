@@ -526,10 +526,11 @@ The Basic-YPR SDU member tests are the following:
 
 === Encodings  Conformance
 
-Each encoding technology has its own independent test suite. The GeoPose Standard 1.0 has one encoding technology: JSON.
+Each encoding technology has its own independent test suite. There is one cornformance class per Standardization target per encoding technology. The GeoPose Standard 1.0 has one encoding technology: JSON.
 
 ==== JSON Conformance
 
+The *Basic-YPR GeoPose* is the JSON encoding intended for widest use.
 
 [[conf_basic_ypr_encoding_json]]
 [width="100%",%header,cols="3,6"]
@@ -552,15 +553,16 @@ The Basic-YPR JSON Encoding member test is the following:
 <s|Test:  s|B-YPR-Encoding-JSON 
 
 <s|ID |<</conf_basic/ypr/encoding/json/test,/conf/basic_ypr/encoding/json/test>>
-2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+2+<|To confirm that a JSON encoding of a Basic-YPR GeoPose conforms with the corresponding JSON-Schema definition.
 <s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
 <s|Method|JSON-Schema validation.
 <s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
 <s|Test Type|Conformance
 |===
 
+The *Basic-Quaternion GeoPose* JSON encoding is intended for applications using quaternions. It comes in two sub-versions: normal and strict. The only difference is that a strict sub-version does not allow additional JSON members.
 
-[[conf_basic_ypr_encoding_json]]
+[[conf_basic_quaternion_encoding_json]]
 [width="100%",%header,cols="3,6"]
 |===
 <|*Conformance Class:* <|*Basic-Quaternion Encoding-JSON* 
@@ -569,29 +571,97 @@ The Basic-YPR JSON Encoding member test is the following:
 <s|Target Type|JSON object
 <s|Description|To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
 <s|Dependency| /conf/basic_ypr_sdu
-<s|Test: B-YPR-Encoding-JSON|/conf/basic_ypr/encoding/json 
+<s|Test: B-YPR-Encoding-JSON|/conf/basic_ypr/encoding/jsontest 
 
 |===
 
-The Basic-Quaternion JSON Encoding member test is the following:
+The *Basic-Quaternion* JSON Encoding member test is the following:
 
-[[conf_basic_ypr_encoding_json]]
+[[conf_basic_quaternion_encoding_json_test]]
 [width="100%",cols="3,6"]
 |===
 <s|Test:  s|B-YPR-Encoding-JSON 
 
-<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
+<s|ID |<</conf_basic/ypr/encoding/json/test,/conf/basic_ypr/encoding/json/test>>
 2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
 <s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
 <s|Method|JSON-Schema validation.
 <s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
 <s|Test Type|Conformance
 |===
-|===
-
-The 
 
 |===
+|===
+
+The *Basic-Quaternion (Strict) GeoPose* JSON encoding does not allow additional JSON members.
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",%header,cols="3,6"]
+|===
+<|*Conformance Class:* <|*Basic-Quaternion Encoding-JSON (Strict)* 
+
+<s|ID |<<conf_basic_quaternion_encoding_json_strict,/quaternion_encoding_json_strict>>
+<s|Target Type|JSON object
+<s|Description|To confirm that a Basic-Quaternion GeoPose (Strict) consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Dependency| /conf/basic_ypr_sdu
+<s|Test: B-Quaternion-Encoding-JSON-Strict|/conf/basic_ypr/encoding/json 
+
+|===
+
+The Basic-Quaternion JSON (Strict) Encoding member test is the following:
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",cols="3,6"]
+|===
+<s|Test:  s|B-YPR-Encoding-JSON (Strict)
+
+<s|ID |<</conf_basic/ypr/encoding/json_strict,/conf/basic_ypr/encoding/json_strict>>
+2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Purpose|To confirm that Basic-Quaternion (Strict) GeoPose data objects conform to the Basic-Quaternion (Strict) JSON-Schema definition.
+<s|Method|JSON-Schema validation.
+<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Test Type|Conformance
+|===
+
+|===
+|===
+
+The *Advanced GeoPose* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
+
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",%header,cols="3,6"]
+|===
+<|*Conformance Class:* <|*Basic-Quaternion Encoding-JSON (Strict)* 
+
+<s|ID |<<conf_basic_quaternion_encoding_json_strict,/quaternion_encoding_json_strict>>
+<s|Target Type|JSON object
+<s|Description|To confirm that a Basic-Quaternion GeoPose (Strict) consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Dependency| /conf/basic_ypr_sdu
+<s|Test: B-Quaternion-Encoding-JSON-Strict|/conf/basic_ypr/encoding/json 
+
+|===
+
+The *Advanced GeoPose* JSON (Strict) Encoding member test is the following:
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",cols="3,6"]
+|===
+<s|Test:  s|Advanced-Encoding-JSON 
+
+<s|ID |<</conf/advanced/encoding/json,/conf/advanced/encoding/json>>
+2+<|To confirm that an implementation of an Advanced GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|Method|JSON-Schema validation.
+<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Test Type|Conformance
+|===
+
+
+|===
+|===
+
+The *GeoPose Chain* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
 
 [[conf_basic_quaternion_encoding_json_strict]]
@@ -620,6 +690,120 @@ The Basic-Quaternion JSON (Strict) Encoding member test is the following:
 <s|Method|JSON-Schema validation.
 <s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
 <s|Test Type|Conformance
+|===
+
+
+|===
+|===
+
+The *GeoPose Regular Series* JSON encoding ....
+
+|===
+|===
+
+The *GeoPose Regular Series* JSON encoding ....
+
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",%header,cols="3,6"]
+|===
+<|*Conformance Class:* <|*GeoPose Regular Series* Encoding-JSON (Strict)* 
+
+<s|ID |<<conf_basic_quaternion_encoding_json_strict,/quaternion_encoding_json_strict>>
+<s|Target Type|JSON object
+<s|Description|To confirm that a Basic-Quaternion GeoPose (Strict) consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Dependency| /conf/basic_ypr_sdu
+<s|Test: B-Quaternion-Encoding-JSON-Strict|/conf/basic_ypr/encoding/json 
+
+|===
+
+The *GeoPose Regular Series* JSON Encoding member test is the following:
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",cols="3,6"]
+|===
+<s|Test:  s|GeoPose Regular Series-Encoding-JSON 
+
+<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
+2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|Method|JSON-Schema validation.
+<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Test Type|Conformance
+|===
+
+
+|===
+|===
+
+The *GeoPose Irregular Series* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
+
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",%header,cols="3,6"]
+|===
+<|*Conformance Class:* <|*Irregular GeoPose Series* Encoding-JSON* 
+
+<s|ID |<<conf_basic_quaternion_encoding_json_strict,/quaternion_encoding_json_strict>>
+<s|Target Type|JSON object
+<s|Description|To confirm that a Basic-Quaternion GeoPose (Strict) consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Dependency| /conf/basic_ypr_sdu
+<s|Test: Chain|/conf/basic_ypr/encoding/json 
+
+|===
+
+The *GeoPose Irregular Series* JSON Encoding member test is the following:
+
+[[conf_basic_quaternion_encoding_json_strict]]
+[width="100%",cols="3,6"]
+|===
+<s|Test:  s|Series-Irregular-Encoding-JSON 
+
+<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
+2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|Method|JSON-Schema validation.
+<s|Reference: Series-Irregular|/req/basic/ypr/sdu
+<s|Test Type|Conformance
+|===
+
+
+|===
+|===
+
+The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
+
+
+[[conf_stream_encoding_json]]
+[width="100%",%header,cols="3,6"]
+|===
+<|*Conformance Class:* <|*Stream Encoding-JSON (Strict)* 
+
+<s|ID |<<conf_basic_quaternion_encoding_json_strict,/quaternion_encoding_json_strict>>
+<s|Target Type|JSON object
+<s|Description|To confirm that a Basic-Quaternion GeoPose (Strict) consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Dependency| /conf/basic_ypr_sdu
+<s|Test: Stream-Encoding-JSON-Strict|/conf/basic_ypr/encoding/json 
+
+|===
+
+The *GeoPose Stream* JSON Encoding member test is the following:
+
+[[conf_stream_encoding_json_test]]
+[width="100%",cols="3,6"]
+|===
+<s|Test:  s|Stream-Encoding-JSON 
+
+<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
+2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|Method|JSON-Schema validation.
+<s|Reference: Stream JSON|/req/basic/ypr/sdu
+<s|Test Type|Conformance
+|===
+
+
+|===
 |===
 
 
