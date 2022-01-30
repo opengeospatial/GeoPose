@@ -11,4 +11,6 @@
 |2021-09-08 |0.6.0 |Steve Smyth |all |doc number 21-056r2
 |2021-09-26 |0.6.1 |Steve Smyth  |fix links and minor edits to all - does not include Unix Time in seconds|doc number 21-056r3
 |2021-09-28 |0.6.2 |Steve Smyth  |fix section heading 7.3 (YPR)
+|2022-01-07 |0.6.2 |Steve Smyth  |public review comment resolution
+|2022-01-27 |0.7.0 |Steve Smyth  |late arriving public review comment resolution
 |===

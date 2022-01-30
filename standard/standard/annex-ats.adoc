@@ -174,7 +174,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_basic_quaternion_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/basic/quaternion/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/basic/quaternion/sdu* 
 ^|Test Purpose |To confirm that a Basic-Q GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using a unit quaternion.
 ^|Requirement |/req/basic/quaternion/sdu
 ^|Test Method |Inspection
@@ -183,7 +183,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_tangent_plane_longitude_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/tangent_plane/longitude/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/tangent_plane/longitude/sdu* 
 ^|Test Purpose |To confirm that a GeoPose tangentPoint.longitude attribute is expressed as a real number.
 ^|Requirement |/req/tangent_plane/longitude/sdu
 ^|Test Method |Inspection
@@ -192,7 +192,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_tangent_plane_latitude_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/tangent_plane/latitude/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/tangent_plane/latitude/sdu* 
 ^|Test Purpose |To confirm that a GeoPose tangentPoint.latitude attribute is expressed as a real number.
 ^|Requirement |/req/tangent_plane/latitude/sdu
 ^|Test Method |Inspection
@@ -201,7 +201,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_tangent_plane_h_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/tangent_plane/h/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/tangent_plane/h/sdu* 
 ^|Test Purpose |To confirm that a GeoPose tangentPoint.h attribute is expressed as a real number.
 ^|Requirement |/req/tangent_plane/h/sdu
 ^|Test Method |Inspection
@@ -210,7 +210,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_orientation_quaternion_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/orientation/quaternion/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/orientation/quaternion/sdu* 
 ^|Test Purpose |To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree..
 ^|Requirement |/req/orientation/quaternion/sdu
 ^|Test Method |Inspection
@@ -223,7 +223,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_geoposeinstant_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/geoposeinstant/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/geoposeinstant/sdu* 
 ^|Test Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
 ^|Requirement |/req/geoposeinstant/sdu
 ^|Test Method |Inspection
@@ -232,7 +232,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_authority_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_authority/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
 ^|Requirement |/req/frame_specification_authority/sdu
 ^|Test Method |Inspection
@@ -241,7 +241,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_id_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_id/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
 ^|Requirement |/req/frame_specification_id/sdu
 ^|Test Method |Inspection
@@ -250,7 +250,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_parameters_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_parameters/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
 ^|Requirement |/req/frame_specification_parameters/sdu
 ^|Test Method |Inspection
@@ -260,7 +260,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_orientation_quaternion_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/orientation/quaternion/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/orientation/quaternion/sdu* 
 ^|Test Purpose |To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree..
 ^|Requirement |/req/orientation/quaternion/sdu
 ^|Test Method |Inspection
@@ -272,7 +272,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_geoposeinstant_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/geoposeinstant/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/geoposeinstant/sdu* 
 ^|Test Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
 ^|Requirement |/req/geoposeinstant/sdu
 ^|Test Method |Inspection
@@ -282,7 +282,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_authority_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_authority/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
 ^|Requirement |/req/frame_specification_authority/sdu
 ^|Test Method |Inspection
@@ -291,7 +291,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_id_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_id/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
 ^|Requirement |/req/frame_specification_id/sdu
 ^|Test Method |Inspection
@@ -300,7 +300,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_parameters_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_parameters/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
 ^|Requirement |/req/frame_specification_parameters/sdu
 ^|Test Method |Inspection
@@ -309,7 +309,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_chain_index_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/chain/index/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/chain/index/sdu* 
 ^|Test Purpose |To confirm that each index vaue in a FrameListTransformPair is a distinct integer value between 0 and one less than the number of elements in the frameList property.
 ^|Requirement |/req/Chain/index/sdu
 ^|Test Method |Inspection
@@ -321,7 +321,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_geoposeinstant_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/geoposeinstant/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/geoposeinstant/sdu* 
 ^|Test Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
 ^|Requirement |/req/geoposeinstant/sdu
 ^|Test Method |Inspection
@@ -330,7 +330,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_authority_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_authority/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
 ^|Requirement |/req/frame_specification_authority/sdu
 ^|Test Method |Inspection
@@ -339,7 +339,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_id_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_id/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
 ^|Requirement |/req/frame_specification_id/sdu
 ^|Test Method |Inspection
@@ -348,7 +348,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_parameters_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_parameters/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
 ^|Requirement |/req/frame_specification_parameters/sdu
 ^|Test Method |Inspection
@@ -361,7 +361,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_series_header_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/Series/header/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/Series/header/sdu* 
 ^|Test Purpose |To confirm that a Series Header is implemented in accordance with the Logical Model.
 ^|Requirement |/req/Series/header/sdu
 ^|Test Method |Inspection
@@ -371,7 +371,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_geoposeduration_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/geoposeduration/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/geoposeduration/sdu* 
 ^|Test Purpose |To confirm that a Logical Model attribute GeoPoseduration is expressed in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
 ^|Requirement |/req/RegularSeries/duration/sdu
 ^|Test Method |Inspection
@@ -380,7 +380,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_authority_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_authority/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
 ^|Requirement |/req/frame_specification_authority/sdu
 ^|Test Method |Inspection
@@ -389,7 +389,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_id_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_id/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
 ^|Requirement |/req/frame_specification_id/sdu
 ^|Test Method |Inspection
@@ -398,7 +398,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_parameters_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_parameters/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
 ^|Requirement |/req/frame_specification_parameters/sdu
 ^|Test Method |Inspection
@@ -408,7 +408,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_series_trailer_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/Series/trailer/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/Series/trailer/sdu* 
 ^|Test Purpose |To confirm that a Series Trailer is implemented in accordance with the Logical Model.
 ^|Requirement |/req/Series/trailer/sdu
 ^|Test Method |Inspection
@@ -422,7 +422,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_series_header_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/Series/header/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/Series/header/sdu* 
 ^|Test Purpose |To confirm that a Series Header is implemented in accordance with the Logical Model.
 ^|Requirement |/req/Series/header/sdu
 ^|Test Method |Inspection
@@ -431,7 +431,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_authority_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_authority/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
 ^|Requirement |/req/frame_specification_authority/sdu
 ^|Test Method |Inspection
@@ -440,7 +440,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_id_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_id/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
 ^|Requirement |/req/frame_specification_id/sdu
 ^|Test Method |Inspection
@@ -449,7 +449,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_parameters_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_parameters/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
 ^|Requirement |/req/frame_specification_parameters/sdu
 ^|Test Method |Inspection
@@ -458,7 +458,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_series_frame_and_time_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/Series/frame_and_time/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/Series/frame_and_time/sdu* 
 ^|Test Purpose |To confirm that a Series frame_and_time is implemented as an innerFrameAndTime property with an ExplicitFrameSpec and GeoPoseInstant pair.
 ^|Requirement |/req/Series/frame_and_time/sdu
 ^|Test Method |Inspection
@@ -467,7 +467,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_series_trailer_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/Series/trailer/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/Series/trailer/sdu* 
 ^|Test Purpose |To confirm that a Series Trailer is implemented in accordance with the Logical Model.
 ^|Requirement |/req/Series/trailer/sdu
 ^|Test Method |Inspection
@@ -479,7 +479,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_transition_model_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/transition_model/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/transition_model/sdu* 
 ^|Test Purpose |To confirm that a transition_model attribute is one of the values in the TransitionModel enumeration.
 ^|Requirement |/req/transition_model/sdu
 ^|Test Method |Inspection
@@ -489,7 +489,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_authority_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_authority/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
 ^|Requirement |/req/frame_specification_authority/sdu
 ^|Test Method |Inspection
@@ -498,7 +498,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_id_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_id/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
 ^|Requirement |/req/frame_specification_id/sdu
 ^|Test Method |Inspection
@@ -507,7 +507,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_frame_specification_parameters_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/frame_specification_parameters/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
 ^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
 ^|Requirement |/req/frame_specification_parameters/sdu
 ^|Test Method |Inspection
@@ -517,7 +517,7 @@ The Basic-YPR SDU member tests are the following:
 [[ats_stream_frame_and_time_sdu]]
 [width="90%",cols="2,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/stream/frame_and_time/sdu* 
+^|*Abstract Test {counter:ats-id}* |*/conf/stream/frame_and_time/sdu* 
 ^|Test Purpose |To confirm that a Stream frame_and_time is implemented as an innerFrameAndTime property with an ExplicitFrameSpec and GeoPoseInstant pair.
 ^|Requirement |/req/Stream/fst/sdu
 ^|Test Method |Inspection
@@ -807,11 +807,4 @@ The *GeoPose Stream* JSON Encoding member test is the following:
 |===
 
 
-
-
-include::abstract_tests/encodings/json/ATS_Basic.adoc[]
-
-include::abstract_tests/encodings/json/ATS_Advanced.adoc[]
-
-include::abstract_tests/encodings/json/ATS_Composite.adoc[]
 
