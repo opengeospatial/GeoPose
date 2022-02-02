@@ -79,7 +79,7 @@ The following individuals contributed to the GeoPose 1.0 development:
 |Josh Lieberman | Open Geospatial Consortium 
 |Mikel Salazar |Augmented Interaction
 |Maxime Schoemans |Université Libre de Bruxelles
-|Marco Tillmann |HERE Technologies
+|Marco Tillmann |Blackshark.ai
 
 |===
 
