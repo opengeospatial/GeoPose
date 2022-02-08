@@ -32,8 +32,6 @@ The following normative documents contain provisions that, through reference in 
 
 . OWL Time: https://www.w3.org/TR/2020/CR-owl-time-20200326/
 
-. JSON Schema 2019-09 http://json-schema.org/specification.html 
-
 . ISO 19162:2019
 Geographic information — Well-known text representation of coordinate reference systems
 https://www.iso.org/standard/76496.html

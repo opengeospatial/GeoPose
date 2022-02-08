@@ -211,7 +211,7 @@ The Basic-YPR SDU member tests are the following:
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/orientation/quaternion/sdu* 
-^|Test Purpose |To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree..
+^|Test Purpose |To confirm that the unit quaternion consists of four representations of real number values and that the square root of the sum of the  squares of those numbers is approximately 1.
 ^|Requirement |/req/orientation/quaternion/sdu
 ^|Test Method |Inspection
 |===
@@ -261,7 +261,7 @@ The Basic-YPR SDU member tests are the following:
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/orientation/quaternion/sdu* 
-^|Test Purpose |To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree..
+^|Test Purpose |To confirm that the unit quaternion consists of four representations of real number values and that the square root of the sum of the  squares of those numbers is approximately 1.
 ^|Requirement |/req/orientation/quaternion/sdu
 ^|Test Method |Inspection
 |===
@@ -372,7 +372,7 @@ The Basic-YPR SDU member tests are the following:
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/geoposeduration/sdu* 
-^|Test Purpose |To confirm that a Logical Model attribute GeoPoseduration is expressed in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
+^|Test Purpose |To confirm that a Logical Model attribute GeoPoseDuration is expressed in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
 ^|Requirement |/req/RegularSeries/duration/sdu
 ^|Test Method |Inspection
 |===

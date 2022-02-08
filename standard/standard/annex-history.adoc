@@ -13,4 +13,5 @@
 |2021-09-28 |0.6.2 |Steve Smyth  |fix section heading 7.3 (YPR)
 |2022-01-07 |0.6.2 |Steve Smyth  |public review comment resolution
 |2022-01-27 |0.7.0 |Steve Smyth  |late arriving public review comment resolution
+|2022-02-07 |0.7.3 |Steve Smyth  |late arriving public review comment resolution
 |===

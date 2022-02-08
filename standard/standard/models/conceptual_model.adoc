@@ -56,7 +56,7 @@ In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to
 
 [[def_DerivedSpecification]]A **derived frame specification** relates a <<def_Reference_Frame,**reference frame**>> to another <<def_Reference_Frame, **frame**>> by a <<def_FrameTransform, **frame transform**>> or its inverse.
 
-[[def_FrameGraph]]A **frame graph** is a directed acyclic graph representation of the transformational relationships between <<def_Reference_Frame,**reference frames**>>. <<def_Reference_Frame,**frames**>> are the nodes or vertices of the graph. <<def_FrameTransform,**frame transforms**>> are the edges of the graph, directed from the <<def_OuterFrame,**outer frame**>> to the <<def_InnerFrame,**inner frame**>>. [Note that there may be zero, one, or many paths between two distinct vertices, i.e. <<def_Reference_Frame, **frames**>>. This is by design, even though the corresponding linked <<def_FrameTransform, **frame transforms**>>, when composed into single transformations between the same starting <<def_OuterFrame, **outer frames**>> and the same <<def_InnerFrame, **inner frame**>>. This corresponds to real-world situations with, for example, redundant line-of-sight links in point-to-point radio networks used in communication systems.]
+[[def_FrameGraph]]A **frame graph** is a directed acyclic graph representation of the transformational relationships between <<def_Reference_Frame,**reference frames**>>. <<def_Reference_Frame,**frames**>> are the nodes or vertices of the graph. <<def_FrameTransform,**frame transforms**>> are the edges of the graph, directed from the <<def_OuterFrame,**outer frame**>> to the <<def_InnerFrame,**inner frame**>>. Note that there may be zero, one, or many paths between two distinct vertices, i.e. <<def_Reference_Frame, **frames**>>. Multiple paths correspond to real-world situations with, for example, redundant line-of-sight links in point-to-point radio networks used in communication systems.]
 
 [[def_PoseChain]]A **pose chain** is a directed path in a <<def_FrameGraph, **frame graph**>> connecting an <<def_OutermostFrame,**outermost frame**>> to an <<def_InnermostFrame,**innermost frame**>>.  The sequence of <<def_FrameTransform, **frame transforms**>> in a **pose chain** may be combined in a single composite transformation. [There may exist multiple **pose chains** linking the same <<def_OutermostFrame,**outermost frame**>> and <<def_InnermostFrame,**innermost frame**>> and the corresponding composite transformations may not agree. This is intentional, representing real-world configurations and capabilities of sensors and communication links.]
 
@@ -69,7 +69,7 @@ In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to
 [[def_GeoPoseSequence]]A **(GeoPose) sequence** is a set of <<def_Pose,**(member) poses**>> ordered by <<def_ValidTime, **valid time**>> and pertaining to the same underlying physical object or construct. Each successive <<def_Pose,**(member) pose**>> must have a <<def_ValidTime, **valid time**>> after its predecessor. 
 
 
-[[def_InterPoseDuration]**Inter-pose duration** is the time <<def_Duration,**duration**>> between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>. The member poses in a sequence 
+[[def_InterPoseDuration]**Inter-pose duration** is the time <<def_Duration,**duration**>> between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>. 
 
 [[def_ClosedSequence]]A **closed (pose) sequence** is a <<def_GeoPoseSequence,**GeoPose sequence**>> of fixed length with specific meta-data that fully characterize the sequence and its **members**.
 
@@ -82,8 +82,7 @@ In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to
 
 [[def_TransitionModel]]A **transition model** is metadata that indicates whether or how it may be possible to estimate <<def_Pose,**poses**>> in the interval between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>. 
 
-[NOTE]
-Poses always represent the position and orientation of a real or virtual physical entity. There is temporal continuity of pose for any such entity. On the other hand, there is no condition on consecutive poses in a sequence. There are two causes. First, the poses themselves may be representative of a physical object only at the instant assigned to the pose. Consider a service that provides a sequence of predicted timed poses of a camera that would observe a satellite flare (specular reflection of sunlight) for a specific satellite at a specific earth location. Poses between the member poses of the sequence are meaningless. Second, the sampling of poses may not support computation of intermediate poses. Consider poses that are sampled at a rate much slower than the rate of change of the pose of an underlying externally controlled (such as an airplane controlled by a pilot) physical entity. The sampled poses do not constrain or otherwise provide computational control for estimating intermediate poses. Alternatively, the provider of the sequence may declare via metadata whether it is possible and/or reasonable to compute intermediate poses. The provider is in a position to know this information, which may be binary: "none" => the data do not support the computation of intermediate poses or "interpolate" => the data do support the computation of intermediate poses - though the method is not prescribed. These are the two values in the enumeration in the LM TransitionModel datatype. I know from my experience with the "fair fight" issue in distributed simulations that there are a lot of possibilities in defining how to interpolate and these are themselves as complex as GeoPose. That's why I suggest postponing definition of more comprehensive metadata to a later version but leaving this as an enumeration that we can expand to include additional possibilities beyond the binary "none" and "interpolate". 
+
 
 [[def_Trailer]]A **(sequence) trailer** is metadata essential for validation of the preceding **members** of a **sequence**. 
 
@@ -115,16 +114,16 @@ These terms are intended to align with terms used in OWL-TIME (https://www.w3.or
 
 ***
 
-[[def_ValidTime]]**valid time** is a <<def_TimeLine,**time line**>> where the time of changes in the existence or validity of real-world objects or property values are located. <<def_Instant,**instants**>> in **valid time** mark the temporal location of real-world transitions in existence, property values, or their validity.
+[[def_ValidTime]]**Valid time** is a <<def_TimeLine,**time line**>> where the time of changes in the existence or validity of real-world objects or property values are located. <<def_Instant,**Instants**>> in **valid time** mark the temporal location of real-world transitions in existence, property values, or their validity.
 
-[[def_TransactionTime]]**transaction time** is a <<def_TimeLine,**time line**>> where the time of changes in the presence or validity of the representations of real-world objects or their properties in an information system are located. <<def_Instant,**instants**>> in **transaction time** mark the temporal location of actions that create, update, or delete representations of objects or properties.
+[[def_TransactionTime]]**Transaction time** is a <<def_TimeLine,**time line**>> where the time of changes in the presence or validity of the representations of real-world objects or their properties in an information system are located. <<def_Instant,**Instants**>> in **transaction time** mark the temporal location of actions that create, update, or delete representations of objects or properties.
 
 [NOTE] 
 ====
 Both of the terms <<def_ValidTime,**valid time**>>> and <<def_TransactionTimes,**transaction time**>> are used in ways that can refer to <<def_Instant,**instants**>> or to <<def_TimeLine,**time lines**>>. 
 ====
 
-[[def_Bi-Temporality]]**bitemporality** is a property of a data representation that denotes that it carries both <<def_ValidTime,**valid**>> and <<def_TransactionTime,**transaction times**>>.
+[[def_Bi-Temporality]]**Bitemporality** is a property of a data representation that denotes that it carries both <<def_ValidTime,**valid**>> and <<def_TransactionTime,**transaction times**>>.
 
 
 ***
