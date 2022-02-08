@@ -16,7 +16,7 @@ The intended precision of UNIX time in GeoPose 1.0 is 1 millisecond. Representat
 
 === Scaling
 
-Time vales are represented and encoded as integer values in GeoPose 1.0.
+Time values are represented and encoded as integer values in GeoPose 1.0. Note that a computing environment must support 64-bit signed integers in order to accomodate the range of possible values.  
 
 === Non-negative Time Positions
 
