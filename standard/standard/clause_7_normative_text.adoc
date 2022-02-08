@@ -1,4 +1,4 @@
-== Logical Model
+v== Logical Model
 
 === Description (Informative)
 
@@ -149,7 +149,7 @@ The individual global requirements are defined as follows:
 
 |===
 
-==== Standardization Target 1: Basic-YPR
+==== Requirements for Standardization Target 1: Basic-YPR
 
 *Summary (Informative)*
 
@@ -233,7 +233,7 @@ Details of the individual requirements:
 
 <<<
 
-==== Standardization Target 2: Basic-Quaternion
+==== Requirements for Standardization Target 2: Basic-Quaternion
  
 *Summary (Informative)*
 
@@ -314,7 +314,7 @@ The tangent plane longitude, latitude, and h parameters are specified without an
 
 *Summary (Informative)*
 
-The Advanced Target has a more general structure, allowing flexible specification of Outer Frame and a Valid Time. 
+The Advanced Target has a more general structure, supporting flexible specification of Outer Frame and a Valid Time.
 
 *Structure (Normative)*
 
