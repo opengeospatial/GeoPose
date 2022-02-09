@@ -513,69 +513,88 @@ The Basic-YPR SDU member tests are the following:
 <s|Target Type|SDU
 <s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
 <s|Dependency| /conf/global
-<s|Test: B-YPR-SDU|/conf/basic_ypr/sdu 
-<s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
-<s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
-<s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
-<s|Test: YPR-Angles |/conf/ypr_angles/sdu 
+<s|Test: Series-Header-SDU |/conf/series_header/sdu 
+<s|Test: GP-Duration-SDU |/conf/geopose_duration/sdu 
+<s|Test: FS-Authority-SDU |/conf/frame_specification_authority/sdu 
+<s|Test: FS-ID-SDU |/conf/frame_specification_id/sdu 
+<s|Test: FS-Parameters-SDU |/conf/frame_specification_parameters/sdu 
+<s|Test: Series-Trailer-SDU |/conf/series_trailer/sdu 
 |===
 
 
-
-[[ats_series_header_sdu]]
-[width="90%",cols="2,6"]
+[[conf_series_header_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/Series/header/sdu* 
-^|Test Purpose |To confirm that a Series Header is implemented in accordance with the Logical Model.
-^|Requirement |/req/Series/header/sdu
-^|Test Method |Inspection
-|===
+<s|Test: |Series-Header-SDU
 
+<s|ID |<<conf_series_header_sdu,/conf/series_header/sdu>> 
+2+<| To confirm that an implementation of a Series Header conforms to the Logical Model.
+<s|Purpose |To confirm that a Series Header is implemented in accordance with the Logical Model.
+<s|Reference: Series-Header-SDU |/req/series_header/sdu
+<s|Method |Inspection
 
-[[ats_geoposeduration_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/geoposeduration/sdu* 
-^|Test Purpose |To confirm that a Logical Model attribute GeoPoseDuration is expressed in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-^|Requirement |/req/RegularSeries/duration/sdu
-^|Test Method |Inspection
 |===
 
-
-[width="90%",cols="2,6"]
+[[conf_geoposeduration_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
-^|Requirement |/req/frame_specification_authority/sdu
-^|Test Method |Inspection
-|===
+<s|Test: |GP-Duration-SDU
 
+<s|ID |<<conf_geopose_duration_sdu,/conf/geopose_duration/sdu>> 
+2+<| To confirm the correct properties of a GeoPose Duration.
+<s|Purpose |To confirm that a Logical Model attribute GeoPoseDuration is expressed in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
+<s|Reference: GP-Duration-SDU |/req/geopose_duration/sdu
+<s|Method |Inspection
 
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
-^|Requirement |/req/frame_specification_id/sdu
-^|Test Method |Inspection
 |===
 
-
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
-^|Requirement |/req/frame_specification_parameters/sdu
-^|Test Method |Inspection
+<s|Test: |FS-Authority-SDU
+
+<s|ID |<<conf_frame_specification_authority_sdu,/conf/frame_specification_authority/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification Authority.
+<s|Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
+<s|Reference: FS-Authority-SDU |/req/frame_specification_authority/sdu
+<s|Method |Inspection
+
 |===
 
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-ID-SDU
+
+<s|ID |<<conf_frame_specification_id_sdu,/conf/frame_specification_id/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification ID.
+<s|Purpose |To confirm that a FrameSpecification.id attribute contains a string uniquely specifying the identity of a reference frame specification as defined by that authority.
+<s|Reference: FS-ID-SDU |/req/frame_specification_id/sdu
+<s|Method |Inspection
+
+|===
+
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-Parameters-SDU
+
+<s|ID |<<conf_frame_specification_parameters_sdu,/conf/frame_specification_parameters/sdu>> 
+2+<| To confirm the correct properties of Frame Specification Parameters.
+<s|Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
+<s|Reference: FS-Parameters-SDU |/req/frame_specification_parameters/sdu
+<s|Method |Inspection
+
+|===
 
 [[ats_series_trailer_sdu]]
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/Series/trailer/sdu* 
-^|Test Purpose |To confirm that a Series Trailer is implemented in accordance with the Logical Model.
-^|Requirement |/req/Series/trailer/sdu
-^|Test Method |Inspection
+<s|Test: |Series-Trailer-SDU
+
+<s|ID |<<conf_series_trailer_sdu,/conf/series_trailer/sdu>> 
+2+<| To confirm that an implementation of a Series Trailer conforms to the Logical Model.
+<s|Purpose |To confirm that a Series Trailer is implemented in accordance with the Logical Model.
+<s|Reference: Series-Trailer-SDU |/req/series_trailer/sdu
+<s|Method |Inspection
+
 |===
 
 ==== Irregular Series SDU Conformance Class
@@ -589,11 +608,9 @@ The Basic-YPR SDU member tests are the following:
 <s|Target Type|SDU
 <s|Description|To confirm that a Regular Series conforms to the Logical Model.
 <s|Dependency| /conf/global
-<s|Test: BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-<s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
-<s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
-<s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
-<s|Test: YPR-Angles |/conf/ypr_angles/sdu 
+<s|Test: FS-Authority-SDU |/conf/frame_specification_authority/sdu 
+<s|Test: FS-ID-SDU |/conf/frame_specification_id/sdu 
+<s|Test: FS-Parameters-SDU |/conf/frame_specification_parameters/sdu 
 |===
 
 
@@ -607,28 +624,40 @@ The Basic-YPR SDU member tests are the following:
 ^|Test Method |Inspection
 |===
 
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
-^|Requirement |/req/frame_specification_authority/sdu
-^|Test Method |Inspection
+<s|Test: |FS-Authority-SDU
+
+<s|ID |<<conf_frame_specification_authority_sdu,/conf/frame_specification_authority/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification Authority.
+<s|Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
+<s|Reference: FS-Authority-SDU |/req/frame_specification_authority/sdu
+<s|Method |Inspection
+
 |===
 
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
-^|Requirement |/req/frame_specification_id/sdu
-^|Test Method |Inspection
+<s|Test: |FS-ID-SDU
+
+<s|ID |<<conf_frame_specification_id_sdu,/conf/frame_specification_id/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification ID.
+<s|Purpose |To confirm that a FrameSpecification.id attribute contains a string uniquely specifying the identity of a reference frame specification as defined by that authority.
+<s|Reference: FS-ID-SDU |/req/frame_specification_id/sdu
+<s|Method |Inspection
+
 |===
 
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
-^|Requirement |/req/frame_specification_parameters/sdu
-^|Test Method |Inspection
+<s|Test: |FS-Parameters-SDU
+
+<s|ID |<<conf_frame_specification_parameters_sdu,/conf/frame_specification_parameters/sdu>> 
+2+<| To confirm the correct properties of Frame Specification Parameters.
+<s|Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
+<s|Reference: FS-Parameters-SDU |/req/frame_specification_parameters/sdu
+<s|Method |Inspection
+
 |===
 
 [[ats_series_frame_and_time_sdu]]
@@ -660,11 +689,9 @@ The Basic-YPR SDU member tests are the following:
 <s|Target Type|SDU
 <s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
 <s|Dependency| /conf/global
-<s|Test: B-YPR-SDU|/conf/basic_ypr/sdu 
-<s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
-<s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
-<s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
-<s|Test: YPR-Angles |/conf/ypr_angles/sdu 
+<s|Test: FS-Authority-SDU |/conf/frame_specification_authority/sdu 
+<s|Test: FS-ID-SDU |/conf/frame_specification_id/sdu 
+<s|Test: FS-Parameters-SDU |/conf/frame_specification_parameters/sdu 
 |===
 
 [[ats_transition_model_sdu]]
@@ -676,29 +703,42 @@ The Basic-YPR SDU member tests are the following:
 ^|Test Method |Inspection
 |===
 
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
-^|Requirement |/req/frame_specification_authority/sdu
-^|Test Method |Inspection
+<s|Test: |FS-Authority-SDU
+
+<s|ID |<<conf_frame_specification_authority_sdu,/conf/frame_specification_authority/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification Authority.
+<s|Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
+<s|Reference: FS-Authority-SDU |/req/frame_specification_authority/sdu
+<s|Method |Inspection
+
 |===
 
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
-^|Requirement |/req/frame_specification_id/sdu
-^|Test Method |Inspection
+<s|Test: |FS-ID-SDU
+
+<s|ID |<<conf_frame_specification_id_sdu,/conf/frame_specification_id/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification ID.
+<s|Purpose |To confirm that a FrameSpecification.id attribute contains a string uniquely specifying the identity of a reference frame specification as defined by that authority.
+<s|Reference: FS-ID-SDU |/req/frame_specification_id/sdu
+<s|Method |Inspection
+
 |===
 
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
-^|Requirement |/req/frame_specification_parameters/sdu
-^|Test Method |Inspection
+<s|Test: |FS-Parameters-SDU
+
+<s|ID |<<conf_frame_specification_parameters_sdu,/conf/frame_specification_parameters/sdu>> 
+2+<| To confirm the correct properties of Frame Specification Parameters.
+<s|Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
+<s|Reference: FS-Parameters-SDU |/req/frame_specification_parameters/sdu
+<s|Method |Inspection
+
 |===
+
 
 [[ats_stream_frame_and_time_sdu]]
 [width="90%",cols="2,6"]
