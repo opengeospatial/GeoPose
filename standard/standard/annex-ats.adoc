@@ -584,7 +584,7 @@ The Basic-YPR SDU member tests are the following:
 
 |===
 
-[[ats_series_trailer_sdu]]
+[[conf_series_trailer_sdu]]
 [width="100%",cols="3,6"]
 |===
 <s|Test: |Series-Trailer-SDU
@@ -608,20 +608,29 @@ The Basic-YPR SDU member tests are the following:
 <s|Target Type|SDU
 <s|Description|To confirm that a Regular Series conforms to the Logical Model.
 <s|Dependency| /conf/global
+<s|Test: Series-Header-SDU |/conf/series_header/sdu 
+<s|Test: GP-Duration-SDU |/conf/geopose_duration/sdu 
 <s|Test: FS-Authority-SDU |/conf/frame_specification_authority/sdu 
 <s|Test: FS-ID-SDU |/conf/frame_specification_id/sdu 
 <s|Test: FS-Parameters-SDU |/conf/frame_specification_parameters/sdu 
+<s|Test: Series-Frame-And-Time-SDU |/conf/series_frame_and_time/sdu 
+<s|Test: Series-Trailer-SDU |/conf/series_trailer/sdu 
+
 |===
 
 
 
-[[ats_series_header_sdu]]
-[width="90%",cols="2,6"]
+
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/Series/header/sdu* 
-^|Test Purpose |To confirm that a Series Header is implemented in accordance with the Logical Model.
-^|Requirement |/req/Series/header/sdu
-^|Test Method |Inspection
+<s|Test: |Series-Header-SDU
+
+<s|ID |<<conf_series_header_sdu,/conf/series_header/sdu>> 
+2+<| To confirm that an implementation of a Series Header conforms to the Logical Model.
+<s|Purpose |To confirm that a Series Header is implemented in accordance with the Logical Model.
+<s|Reference: Series-Header-SDU |/req/series_header/sdu
+<s|Method |Inspection
+
 |===
 
 [width="100%",cols="3,6"]
@@ -660,22 +669,31 @@ The Basic-YPR SDU member tests are the following:
 
 |===
 
-[[ats_series_frame_and_time_sdu]]
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/Series/frame_and_time/sdu* 
-^|Test Purpose |To confirm that a Series frame_and_time is implemented as an innerFrameAndTime property with an ExplicitFrameSpec and GeoPoseInstant pair.
-^|Requirement |/req/Series/frame_and_time/sdu
-^|Test Method |Inspection
+<s|Test: |Series-Frame-And-Time-SDU
+
+<s|ID |<<conf_series_frame_and_time_sdu,/conf/series_frame_and_time/sdu>> 
+2+<| To confirm that an implementation of a Series FrameAndTime object conforms to the Logical Model.
+<s|Purpose |To confirm that a Series FrameAndTime is implemented in accordance with the Logical Model.
+<s|Reference: Series-Frame-And-Time-SDU |/req/series_frame_and_time/sdu
+<s|Method |Inspection
+
 |===
 
-[width="90%",cols="2,6"]
+
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/Series/trailer/sdu* 
-^|Test Purpose |To confirm that a Series Trailer is implemented in accordance with the Logical Model.
-^|Requirement |/req/Series/trailer/sdu
-^|Test Method |Inspection
+<s|Test: |Series-Trailer-SDU
+
+<s|ID |<<conf_series_trailer_sdu,/conf/series_trailer/sdu>> 
+2+<| To confirm that an implementation of a Series Trailer conforms to the Logical Model.
+<s|Purpose |To confirm that a Series Trailer is implemented in accordance with the Logical Model.
+<s|Reference: Series-Trailer-SDU |/req/series_trailer/sdu
+<s|Method |Inspection
+
 |===
+
 
 ==== Stream SDU Conformance Class
 
