@@ -85,7 +85,7 @@ There are some universal requirements on values that appear in a concrete implem
 |===
 <|*Conformance Class:* <|*Basic-YPR SDU* 
 
-<s|ID |<<conf_class_basic_ypr_sdu,/conf/class/basic_ypr_sdu>>
+<s|ID |<<conf_class_basic_ypr_sdu,/conf/class/basic_ypr/sdu>>
 <s|Target Type|SDU
 <s|Description|To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
 <s|Dependency| /conf/global
@@ -103,11 +103,11 @@ The Basic-YPR SDU member tests are the following:
 |===
 <s|Test:  s|B-YPR-SDU 
 
-<s|ID |<</conf_basic/ypr/sdu,/conf/basic_ypr/sdu>>
+<s|ID |<<conf_basic_ypr_/_sdu,/conf/basic_ypr/sdu>>
 2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
 <s|Purpose|Verify that this requirement is satisfied
 <s|Method|Inspection
-<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Reference: Basic-YPR-SDU|/req/basic_ypr/sdu
 <s|Test Type|Conformance
 |===
 
@@ -117,11 +117,11 @@ The Basic-YPR SDU member tests are the following:
 |===
 <s|Test:  s|B-TP-Lon-SDU 
 
-<s|ID |<</conf_tangent_plane_longitude_sdu,/conf_tangent_plane_longitude_sdu>>
+<s|ID |<</conf_tangent_plane_longitude_sdu,/conf/tangent_plane_longitude/sdu>>
 2+<|To confirm that a GeoPose tangentPoint.longitude attribute is expressed as an angle in decimal degrees.
 <s|Purpose|Verify that this requirement is satisfied
 <s|Method|Inspection
-<s|Reference: Tangent-Plane-Longitude|/req/tangent_plane_longitude_sdu
+<s|Reference: Tangent-Plane-Longitude-SDU|/req/tangent_plane_longitude/sdu
 <s|Test Type|Conformance
 |===
 
@@ -131,11 +131,11 @@ The Basic-YPR SDU member tests are the following:
 |===
 <s|Test:  s|B-TP-Lat-SDU 
 
-<s|ID |<</conf_tangent_plane_latitude_sdu,/conf_tangent_plane_latitude_sdu>>
+<s|ID |<<conf_tangent_plane_latitude_sdu,/conf/tangent_plane_latitude/sdu>>
 2+<|To confirm that a GeoPose tangentPoint.latitude attribute is expressed as an angle in decimal degrees.
 <s|Purpose|Verify that this requirement is satisfied
 <s|Method|Inspection
-<s|Reference: Tangent-Plane-Latitude|/req/tangent_plane_latitude_sdu
+<s|Reference: Tangent-Plane-Latitude SDU|/req/tangent_plane_latitude/sdu
 <s|Test Type|Conformance
 |===
 
@@ -145,11 +145,11 @@ The Basic-YPR SDU member tests are the following:
 |===
 <s|Test:  s|B-TP-h-SDU 
 
-<s|ID |<</conf_tangent_plane_h_sdu,/conf_tangent_plane_h_sdu>>
+<s|ID |<<conf_tangent_plane_h_sdu,/conf/tangent_plane_h/sdu>>
 2+<|To confirm that a GeoPose tangentPoint.h attribute is expressed as a height in meters above the WGS-84 ellipsoid.
 <s|Purpose|Verify that this requirement is satisfied
 <s|Method|Inspection
-<s|Reference: Tangent-Plane-h|/req/tangent_plane_h_sdu
+<s|Reference: Tangent-Plane-h-SDU|/req/tangent_plane_h/sdu
 <s|Test Type|Conformance
 |===
 
@@ -158,13 +158,13 @@ The Basic-YPR SDU member tests are the following:
 [[conf_ypr_angles_sdu]]
 [width="100%",cols="3,6"]
 |===
-<s|Test:  s|YPR-Angles 
+<s|Test:  s|YPR-Angles-SDU 
 
-<s|ID |<</conf_ypr_angles_sdu,/conf_ypr_angles_sdu>>
+<s|ID |<</conf_ypr_angles_sdu,/conf/ypr_angles/sdu>>
 2+<|To confirm that GeoPose YPR angles are expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree.
 <s|Purpose|Verify that this requirement is satisfied
 <s|Method|Inspection
-<s|Reference: YPR-Angles|/req/ypr_angles_sdu
+<s|Reference: YPR-Angles-SDU|/req/ypr_angles/sdu
 <s|Test Type|Conformance
 |===
 
@@ -185,11 +185,11 @@ The Basic-YPR SDU member tests are the following:
 <s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
 <s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
 <s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
-<s|Test: YPR-Angles |/conf/ypr_angles/sdu 
+<s|Test: Quaternion-SDU |/conf/quaternion/sdu 
 |===
 
 
-[[ats_basic_quaternion_sdu]]
+[[conf_basic_quaternion_sdu]]
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/basic/quaternion/sdu* 
@@ -198,40 +198,57 @@ The Basic-YPR SDU member tests are the following:
 ^|Test Method |Inspection
 |===
 
-[[ats_tangent_plane_longitude_sdu]]
-[width="90%",cols="2,6"]
+
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/tangent_plane/longitude/sdu* 
-^|Test Purpose |To confirm that a GeoPose tangentPoint.longitude attribute is expressed as a real number.
-^|Requirement |/req/tangent_plane/longitude/sdu
-^|Test Method |Inspection
+<s|Test:  s|B-TP-Lon-SDU 
+
+<s|ID |<</conf_tangent_plane_longitude_sdu,/conf/tangent_plane_longitude/sdu>>
+2+<|To confirm that a GeoPose tangentPoint.longitude attribute is expressed as an angle in decimal degrees.
+<s|Purpose|Verify that this requirement is satisfied
+<s|Method|Inspection
+<s|Reference: Tangent-Plane-Longitude-SDU|/req/tangent_plane_longitude/sdu
+<s|Test Type|Conformance
 |===
 
-[[ats_tangent_plane_latitude_sdu]]
-[width="90%",cols="2,6"]
+
+
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/tangent_plane/latitude/sdu* 
-^|Test Purpose |To confirm that a GeoPose tangentPoint.latitude attribute is expressed as a real number.
-^|Requirement |/req/tangent_plane/latitude/sdu
-^|Test Method |Inspection
+<s|Test:  s|B-TP-Lat-SDU 
+
+<s|ID |<<conf_tangent_plane_latitude_sdu,/conf/tangent_plane_latitude/sdu>>
+2+<|To confirm that a GeoPose tangentPoint.latitude attribute is expressed as an angle in decimal degrees.
+<s|Purpose|Verify that this requirement is satisfied
+<s|Method|Inspection
+<s|Reference: Tangent-Plane-Latitude SDU|/req/tangent_plane_latitude/sdu
+<s|Test Type|Conformance
 |===
 
-[[ats_tangent_plane_h_sdu]]
-[width="90%",cols="2,6"]
+
+
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/tangent_plane/h/sdu* 
-^|Test Purpose |To confirm that a GeoPose tangentPoint.h attribute is expressed as a real number.
-^|Requirement |/req/tangent_plane/h/sdu
-^|Test Method |Inspection
+<s|Test:  s|B-TP-h-SDU 
+
+<s|ID |<<conf_tangent_plane_h_sdu,/conf/tangent_plane_h/sdu>>
+2+<|To confirm that a GeoPose tangentPoint.h attribute is expressed as a height in meters above the WGS-84 ellipsoid.
+<s|Purpose|Verify that this requirement is satisfied
+<s|Method|Inspection
+<s|Reference: Tangent-Plane-h-SDU|/req/tangent_plane_h/sdu
+<s|Test Type|Conformance
 |===
 
-[[ats_orientation_quaternion_sdu]]
-[width="90%",cols="2,6"]
+[[conf_quaternion_sdu]]
+[width="90%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/orientation/quaternion/sdu* 
-^|Test Purpose |To confirm that the unit quaternion consists of four representations of real number values and that the square root of the sum of the  squares of those numbers is approximately 1.
-^|Requirement |/req/orientation/quaternion/sdu
-^|Test Method |Inspection
+<s|Test: |Quaternion-SDU
+
+<s|ID |<<conf_quaternion_sdu,/conf/quaternion/sdu>> 
+2+<| To confirm the correct properties of a quaternion.
+<s|Purpose |To confirm that the unit quaternion consists of four representations of real number values and that the square root of the sum of the  squares of those numbers is approximately 1.
+<s|Reference: Quaternion-SDU |/req/quaternion/sdu
+<s|Method |Inspection
 |===
 
 ==== Advanced SDU Conformance Class
@@ -241,129 +258,160 @@ The Basic-YPR SDU member tests are the following:
 |===
 <|*Conformance Class:* <|*Advanced SDU* 
 
-<s|ID |<<conf_class_advanced_sdu,/conf/class/advanced_sdu>>
+<s|ID |<<conf_class_advanced_sdu,/conf/class/advanced/sdu>>
 <s|Target Type|SDU
-<s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+<s|Description|To confirm that an implementation of the Advanced GeoPose conforms to the Logical Model.
 <s|Dependency| /conf/global
-<s|Test: B-YPR-SDU|/conf/basic_ypr/sdu 
-<s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
-<s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
-<s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
-<s|Test: YPR-Angles |/conf/ypr_angles/sdu 
+<s|Test: GP-Instant-SDU|/conf/geopose_instant/sdu 
+<s|Test: FS-Authority-SDU |/conf/frame_specification_authority/sdu 
+<s|Test: FS-ID-SDU |/conf/frame_specification_id/sdu 
+<s|Test: FS-Parameters-SDU |/conf/frame_specification_parameters/sdu 
+<s|Test: Quaternion-SDU |/conf/quaternion/sdu 
 |===
 
-[[ats_geoposeinstant_sdu]]
-[width="90%",cols="2,6"]
+[[conf_geopose_instant_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/geoposeinstant/sdu* 
-^|Test Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-^|Requirement |/req/geoposeinstant/sdu
-^|Test Method |Inspection
+<s|Test: |GP-Instant-SDU
+
+<s|ID |<<conf_geopose_instant_sdu,/conf/geopose_instant/sdu>> 
+2+<| To confirm the correct properties of a GeoPose Instant.
+<s|Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
+<s|Reference: GP-Instant-SDU |/req/geopose_instant/sdu
+<s|Method |Inspection
+
 |===
 
-[[ats_frame_specification_authority_sdu]]
-[width="90%",cols="2,6"]
+[[conf_frame_specification_authority_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
-^|Requirement |/req/frame_specification_authority/sdu
-^|Test Method |Inspection
-|===
+<s|Test: |FS-Authority-SDU
 
-[[ats_frame_specification_id_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
-^|Requirement |/req/frame_specification_id/sdu
-^|Test Method |Inspection
-|===
+<s|ID |<<conf_frame_specification_authority_sdu,/conf/frame_specification_authority/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification Authority.
+<s|Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
+<s|Reference: FS-Authority-SDU |/req/frame_specification_authority/sdu
+<s|Method |Inspection
 
-[[ats_frame_specification_parameters_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
-^|Requirement |/req/frame_specification_parameters/sdu
-^|Test Method |Inspection
 |===
 
 
-[[ats_orientation_quaternion_sdu]]
-[width="90%",cols="2,6"]
+[[conf_frame_specification_id_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/orientation/quaternion/sdu* 
-^|Test Purpose |To confirm that the unit quaternion consists of four representations of real number values and that the square root of the sum of the  squares of those numbers is approximately 1.
-^|Requirement |/req/orientation/quaternion/sdu
-^|Test Method |Inspection
+<s|Test: |FS-ID-SDU
+
+<s|ID |<<conf_frame_specification_id_sdu,/conf/frame_specification_id/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification ID.
+<s|Purpose |To confirm that a FrameSpecification.id attribute contains a string uniquely specifying the identity of a reference frame specification as defined by that authority.
+<s|Reference: FS-ID-SDU |/req/frame_specification_id/sdu
+<s|Method |Inspection
+
+|===
+
+
+[[conf_frame_specification_parameters_sdu]]
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-Parameters-SDU
+
+<s|ID |<<conf_frame_specification_parameters_sdu,/conf/frame_specification_parameters/sdu>> 
+2+<| To confirm the correct properties of Frame Specification Parameters.
+<s|Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
+<s|Reference: FS-Parameters-SDU |/req/frame_specification_parameters/sdu
+<s|Method |Inspection
+
+|===
+
+[width="100%",cols="3,6"]
+|===
+<s|Test: |Quaternion-SDU
+
+<s|ID |<<conf_quaternion_sdu,/conf/quaternion/sdu>> 
+2+<| To confirm the correct properties of a quaternion.
+<s|Purpose |To confirm that the unit quaternion consists of four representations of real number values and that the square root of the sum of the  squares of those numbers is approximately 1.
+<s|Reference: Quaternion-SDU |/req/quaternion/sdu
+<s|Method |Inspection
 |===
 
 ==== Graph SDU Conformance Class
-
-
 
 [[conf_class_graph_sdu]]
 [width="100%",%header,cols="3,6"]
 |===
 <|*Conformance Class:* <|*Graph SDU* 
 
-<s|ID |<<conf_class_graph_sdu,/conf/class/graph_sdu>>
+<s|ID |<<conf_class_graph_sdu,/conf/class/graph/sdu>>
 <s|Target Type|SDU
-<s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+<s|Description|To confirm that an implementation of the GeoPose Graph conforms to the Logical Model.
 <s|Dependency| /conf/global
-<s|Test: B-YPR-SDU|/conf/basic_ypr/sdu 
-<s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
-<s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
-<s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
-<s|Test: YPR-Angles |/conf/ypr_angles/sdu 
+<s|Test: GP-Instant-SDU|/conf/geopose_instant/sdu 
+<s|Test: FS-Authority-SDU |/conf/frame_specification_authority/sdu 
+<s|Test: FS-ID-SDU |/conf/frame_specification_id/sdu 
+<s|Test: FS-Parameters-SDU |/conf/frame_specification_parameters/sdu 
+<s|Test: Graph-Index-SDU |/conf/graph_index/sdu 
+
+|===
+
+[width="100%",cols="3,6"]
+|===
+<s|Test: |GP-Instant-SDU
+
+<s|ID |<<conf_geopose_instant_sdu,/conf/geopose_instant/sdu>> 
+2+<| To confirm the correct properties of a GeoPose Instant.
+<s|Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
+<s|Reference: GP-Instant-SDU |/req/geopose_instant/sdu
+<s|Method |Inspection
+
+|===
+
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-Authority-SDU
+
+<s|ID |<<conf_frame_specification_authority_sdu,/conf/frame_specification_authority/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification Authority.
+<s|Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
+<s|Reference: FS-Authority-SDU |/req/frame_specification_authority/sdu
+<s|Method |Inspection
+
+|===
+
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-ID-SDU
+
+<s|ID |<<conf_frame_specification_id_sdu,/conf/frame_specification_id/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification ID.
+<s|Purpose |To confirm that a FrameSpecification.id attribute contains a string uniquely specifying the identity of a reference frame specification as defined by that authority.
+<s|Reference: FS-ID-SDU |/req/frame_specification_id/sdu
+<s|Method |Inspection
+
+|===
+
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-Parameters-SDU
+
+<s|ID |<<conf_frame_specification_parameters_sdu,/conf/frame_specification_parameters/sdu>> 
+2+<| To confirm the correct properties of Frame Specification Parameters.
+<s|Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
+<s|Reference: FS-Parameters-SDU |/req/frame_specification_parameters/sdu
+<s|Method |Inspection
+
 |===
 
 
+[width="100%",cols="3,6"]
+|===
+<s|Test: |Graph-Index-SDU
 
-[[ats_geoposeinstant_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/geoposeinstant/sdu* 
-^|Test Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-^|Requirement |/req/geoposeinstant/sdu
-^|Test Method |Inspection
-|===
+<s|ID |<<conf_graph_index_sdu,/conf/graph_index/sdu>> 
+2+<| To confirm that an implementation of Graph Index conforms to the Logical Model.
+<s|Purpose |To confirm that each index value in a FrameListTransformPair is a distinct integer value between 0 and one less than the number of elements in the frameList property.
+<s|Reference: FS-Graph-Index-SDU |/req/graph_index/sdu
+<s|Method |Inspection
 
-
-[[ats_frame_specification_authority_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
-^|Requirement |/req/frame_specification_authority/sdu
-^|Test Method |Inspection
-|===
-
-[[ats_frame_specification_id_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
-^|Requirement |/req/frame_specification_id/sdu
-^|Test Method |Inspection
-|===
-
-[[ats_frame_specification_parameters_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
-^|Requirement |/req/frame_specification_parameters/sdu
-^|Test Method |Inspection
-|===
-
-[[ats_chain_index_sdu]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/chain/index/sdu* 
-^|Test Purpose |To confirm that each index vaue in a FrameListTransformPair is a distinct integer value between 0 and one less than the number of elements in the frameList property.
-^|Requirement |/req/Chain/index/sdu
-^|Test Method |Inspection
 |===
 
 
@@ -377,52 +425,79 @@ The Basic-YPR SDU member tests are the following:
 
 <s|ID |<<conf_class_chain_sdu,/conf/class/chain_sdu>>
 <s|Target Type|SDU
-<s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+<s|Description|To confirm that an implementation of the GeoPose Chain conforms to the Logical Model.
 <s|Dependency| /conf/global
-<s|Test: B-YPR-SDU|/conf/basic_ypr/sdu 
-<s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
-<s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
-<s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
-<s|Test: YPR-Angles |/conf/ypr_angles/sdu 
+<s|Test: GP-Instant-SDU|/conf/geopose_instant/sdu 
+<s|Test: FS-Authority-SDU |/conf/frame_specification_authority/sdu 
+<s|Test: FS-ID-SDU |/conf/frame_specification_id/sdu 
+<s|Test: FS-Parameters-SDU |/conf/frame_specification_parameters/sdu 
+<s|Test: Chain-Index-SDU |/conf/chain_index/sdu 
+
 |===
 
 
 
-
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/geoposeinstant/sdu* 
-^|Test Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-^|Requirement |/req/geoposeinstant/sdu
-^|Test Method |Inspection
-|===
+<s|Test: |GP-Instant-SDU
 
+<s|ID |<<conf_geopose_instant_sdu,/conf/geopose_instant/sdu>> 
+2+<| To confirm the correct properties of a GeoPose Instant.
+<s|Purpose |To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
+<s|Reference: GP-Instant-SDU |/req/geopose_instant/sdu
+<s|Method |Inspection
 
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_authority/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
-^|Requirement |/req/frame_specification_authority/sdu
-^|Test Method |Inspection
 |===
 
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-Authority-SDU
 
-[width="90%",cols="2,6"]
+<s|ID |<<conf_frame_specification_authority_sdu,/conf/frame_specification_authority/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification Authority.
+<s|Purpose |To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
+<s|Reference: FS-Authority-SDU |/req/frame_specification_authority/sdu
+<s|Method |Inspection
+
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_id/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.id attribute is a string uniquely defining a frame within the authority.
-^|Requirement |/req/frame_specification_id/sdu
-^|Test Method |Inspection
+
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-ID-SDU
+
+<s|ID |<<conf_frame_specification_id_sdu,/conf/frame_specification_id/sdu>> 
+2+<| To confirm the correct properties of a Frame Specification ID.
+<s|Purpose |To confirm that a FrameSpecification.id attribute contains a string uniquely specifying the identity of a reference frame specification as defined by that authority.
+<s|Reference: FS-ID-SDU |/req/frame_specification_id/sdu
+<s|Method |Inspection
+
+|===
+
+[width="100%",cols="3,6"]
+|===
+<s|Test: |FS-Parameters-SDU
+
+<s|ID |<<conf_frame_specification_parameters_sdu,/conf/frame_specification_parameters/sdu>> 
+2+<| To confirm the correct properties of Frame Specification Parameters.
+<s|Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
+<s|Reference: FS-Parameters-SDU |/req/frame_specification_parameters/sdu
+<s|Method |Inspection
+
 |===
 
 
-[width="90%",cols="2,6"]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/frame_specification_parameters/sdu* 
-^|Test Purpose |To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
-^|Requirement |/req/frame_specification_parameters/sdu
-^|Test Method |Inspection
+<s|Test: |Chain-Index-SDU
+
+<s|ID |<<conf_chain_index_sdu,/conf/chain_index/sdu>> 
+2+<| To confirm that an implementation of Chain Index conforms to the Logical Model.
+<s|Purpose |To confirm that each index value is a distinct integer value between 0 and one less than the number of elements in the frameList property.
+<s|Reference: FS-Chain-Index-SDU |/req/chain_index/sdu
+<s|Method |Inspection
+
 |===
+
 
 
 
@@ -512,9 +587,9 @@ The Basic-YPR SDU member tests are the following:
 
 <s|ID |<<conf_class_irregular_series_sdu,/conf/class/irregular_series/sdu>>
 <s|Target Type|SDU
-<s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+<s|Description|To confirm that a Regular Series conforms to the Logical Model.
 <s|Dependency| /conf/global
-<s|Test: B-YPR-SDU|/conf/basic_ypr/sdu 
+<s|Test: BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 <s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
 <s|Test: B-TP-Lat-SDU |/conf/tangent_plane/latitude/sdu 
 <s|Test: B-TP-h-SDU |/conf/tangent_plane/h/sdu 
@@ -592,8 +667,6 @@ The Basic-YPR SDU member tests are the following:
 <s|Test: YPR-Angles |/conf/ypr_angles/sdu 
 |===
 
-
-
 [[ats_transition_model_sdu]]
 [width="90%",cols="2,6"]
 |===
@@ -602,7 +675,6 @@ The Basic-YPR SDU member tests are the following:
 ^|Requirement |/req/transition_model/sdu
 ^|Test Method |Inspection
 |===
-
 
 [width="90%",cols="2,6"]
 |===
@@ -651,11 +723,11 @@ The *Basic-YPR GeoPose* is the JSON encoding intended for widest use.
 |===
 <|*Conformance Class:* <|*Basic-YPR Encoding-JSON* 
 
-<s|ID |<<conf_class_basic_ypr_encoding_json,/conf/class/basic_ypr_encoding_json>>
+<s|ID |<<conf_class_basic_ypr_encoding_json,/conf/class/basic_ypr/encoding/json>>
 <s|Target Type|JSON object
 <s|Description|To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
 <s|Dependency| /conf/basic_ypr_sdu
-<s|Test: B-YPR-Encoding-JSON|/conf/basic_ypr/encoding/json 
+<s|Test: B-YPR-Encoding-JSON|/conf/basic_ypr/encoding/json/test 
 
 |===
 
@@ -666,11 +738,11 @@ The Basic-YPR JSON Encoding member test is the following:
 |===
 <s|Test:  s|B-YPR-Encoding-JSON 
 
-<s|ID |<</conf_basic/ypr/encoding/json/test,/conf/basic_ypr/encoding/json/test>>
+<s|ID |<</conf_basic_ypr_encoding_json_test,/conf/basic_ypr/encoding/json/test>>
 2+<|To confirm that a JSON encoding of a Basic-YPR GeoPose conforms with the corresponding JSON-Schema definition.
 <s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
 <s|Method|JSON-Schema validation.
-<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Reference: Basic-YPR-SDU|/req/basic_ypr/sdu
 <s|Test Type|Conformance
 |===
 
@@ -681,9 +753,9 @@ The *Basic-Quaternion GeoPose* JSON encoding is intended for applications using 
 |===
 <|*Conformance Class:* <|*Basic-Quaternion Encoding-JSON* 
 
-<s|ID |<<conf_class_basic_ypr_encoding_json,/conf/class/basic_ypr_encoding_json>>
+<s|ID |<<conf_class_basic_quaternion_encoding_json,/conf/class/basic_quaternion/encoding/json>>
 <s|Target Type|JSON object
-<s|Description|To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|Description|Confirm that a JSON-encoded Basic-Quaternion GeoPose conforms to the relevant elements of the Logical Model and a corresponding JSON-Schema document.
 <s|Dependency| /conf/basic_ypr_sdu
 <s|Test: B-YPR-Encoding-JSON|/conf/basic_ypr/encoding/json/test 
 
@@ -697,10 +769,10 @@ The *Basic-Quaternion* JSON Encoding member test is the following:
 <s|Test:  s|B-Quaternion-Encoding-JSON 
 
 <s|ID |<</conf/basic_ypr/encoding/json/test,/conf/basic_ypr/encoding/json/test>>
-2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
-<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+2+<|Confirm that Basic-Quaternion GeoPose data objects conform to the Basic-Quaternion JSON-Schema definition.
+<s|Purpose|To confirm that Basic-Quaternion GeoPose data objects conform to the Basic-Quaternion JSON-Schema definition.
 <s|Method|JSON-Schema validation.
-<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Reference: Basic-YPR-SDU|/req/basic_quaternion/sdu
 <s|Test Type|Conformance
 |===
 
@@ -717,24 +789,24 @@ The *Basic-Quaternion (Strict) GeoPose* JSON encoding does not allow additional 
 
 <s|ID |<<conf_class_basic_quaternion_encoding_json_strict,/conf/class/quaternion/encoding/json_strict>>
 <s|Target Type|JSON object
-<s|Description|To confirm that a Basic-Quaternion GeoPose (Strict) consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
-<s|Dependency| /conf/basic_ypr_sdu
-<s|Test: B-Quaternion-Encoding-JSON-Strict|/conf/basic_ypr/encoding/json 
+<s|Description|Confirm that a strict JSON-encoded Basic-Quaternion GeoPose conforms to the relevant elements of the Logical Model and a corresponding JSON-Schema document.
+<s|Dependency| /conf/basic_quaternion_sdu
+<s|Test: B-Quaternion-Encoding-JSON-Strict|/conf/basic_quaternion/encoding/json_strict 
 
 |===
 
 The Basic-Quaternion JSON (Strict) Encoding member test is the following:
 
-[[conf_basic_quaternion_encoding_json_strict]]
+[[conf_basic_quaternion_encoding_json_strict_test]]
 [width="100%",cols="3,6"]
 |===
-<s|Test:  s|B-YPR-Encoding-JSON (Strict)
+<s|Test:  s|B-Quaternion-Encoding-JSON (Strict)
 
-<s|ID |<</conf_basic/ypr/encoding/json_strict,/conf/basic_ypr/encoding/json_strict>>
-2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
+<s|ID |<</conf_basic_quaternion_encoding/json_strict,/conf/basic_quaternion/encoding/json_strict>>
+2+<|Confirm that Basic-Quaternion (Strict) GeoPose data objects conform to the Basic-Quaternion (Strict) JSON-Schema definition.
 <s|Purpose|To confirm that Basic-Quaternion (Strict) GeoPose data objects conform to the Basic-Quaternion (Strict) JSON-Schema definition.
 <s|Method|JSON-Schema validation.
-<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Reference: Basic-Quaternion-SDU|/req/basic_quaternion/sdu
 <s|Test Type|Conformance
 |===
 
@@ -764,8 +836,8 @@ The *Advanced GeoPose* JSON Encoding member test is the following:
 <s|Test:  s|Advanced-Encoding-JSON 
 
 <s|ID |<<conf_advanced_encoding_json_test,/conf/advanced/encoding/json/test>>
-2+<|Confirm that a JSON-encoded Advanced GeoPose conforms to the specified JSON-Schema document.
-<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+2+<|Confirm that a JSON-encoded Advanced GeoPose conforms to the corresponding JSON-Schema document.
+<s|Purpose|To confirm that Advanced GeoPose data objects conform to the Advanced JSON-Schema definition.
 <s|Method|JSON-Schema validation.
 <s|Reference: Advanced-SDU|/req/advanced/sdu
 <s|Test Type|Conformance
@@ -830,7 +902,7 @@ The Graph Encoding member test is the following:
 <s|Test:  s|Graph-Encoding-JSON 
 
 <s|ID |<<conf_graph_encoding_json_test,/conf/graph/encoding/json/test>>
-2+<|To confirm that GeoPose Graph data objects conform to the Graph JSON-Schema definition.
+2+<|Confirm that GeoPose Graph data objects conform to the Graph JSON-Schema definition.
 <s|Purpose|To confirm that Graph GeoPose data objects conform to the Graph JSON-Schema definition.
 <s|Method|JSON-Schema validation.
 <s|Reference: Graph-Encoding-JSON|/req/graph/sdu
@@ -847,11 +919,11 @@ The *GeoPose Regular Series* JSON encoding supports a time series of equally-spa
 |===
 <|*Conformance Class:* <|*GeoPose Regular Series* Encoding-JSON* 
 
-<s|ID |<<conf_class_regular_series_encoding_json,/conf/class/regular_series_encoding_json>>
+<s|ID |<<conf_class_regular_series_encoding_json,/conf/class/regular_series/encoding/json>>
 <s|Target Type|JSON object
 <s|Description|To confirm that a JSON-encoded Regular Series conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
 <s|Dependency| /conf/regular_series/sdu
-<s|Test: B-Quaternion-Encoding-JSON-Strict|/conf/basic_ypr/encoding/json 
+<s|Test: Regular-Series-Encoding-JSON|/conf/regular_series/encoding/json 
 
 |===
 
@@ -862,11 +934,11 @@ The *GeoPose Regular Series* JSON Encoding member test is the following:
 |===
 <s|Test:  s|GeoPose Regular Series-Encoding-JSON 
 
-<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
-2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
-<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|ID |<</conf_regular_series_encoding_json,/conf/regular_series/encoding/json>>
+2+<|Confirm that GeoPose Regular Series data objects conform to the Regular Series JSON-Schema definition.
+<s|Purpose|To confirm that Regular Series GeoPose data objects conform to the Regular Series JSON-Schema definition.
 <s|Method|JSON-Schema validation.
-<s|Reference: Basic-YPR-SDU|/req/basic/ypr/sdu
+<s|Reference: Regular-Series-SDU|/req/regular_series/sdu
 <s|Test Type|Conformance
 |===
 
@@ -882,26 +954,26 @@ The *GeoPose Irregular Series* JSON encoding has an optional time stamp and a fl
 |===
 <|*Conformance Class:* <|*Irregular Series* Encoding-JSON* 
 
-<s|ID |<<conf_basic_quaternion_encoding_json,/quaternion_encoding_json_strict>>
+<s|ID |<<conf_class_irregular_series_encoding_json,/conf/class/irregular_series/encoding/json>>
 <s|Target Type|JSON object
 <s|Description|To confirm that a JSON-encoded Irregular Series conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
-<s|Dependency| /conf/basic_ypr_sdu
-<s|Test: Chain|/conf/basic_ypr/encoding/json 
+<s|Dependency| /conf/irregular_series/sdu
+<s|Test: Chain|/conf/irregular_series/encoding/json/test 
 
 |===
 
 The *GeoPose Irregular Series* JSON Encoding member test is the following:
 
-[[conf_basic_quaternion_encoding_json_strict]]
+[[conf_irregular_series_encoding_json_test]]
 [width="100%",cols="3,6"]
 |===
 <s|Test:  s|Series-Irregular-Encoding-JSON 
 
-<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
-2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
-<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|ID |<<conf_irregular_series_encoding_json,/conf/irregular_series/encoding/json/test>>
+2+<|Confirm that GeoPose Irregular Series data objects conform to the Regular Series JSON-Schema definition.
+<s|Purpose|To confirm that GeoPose Irregular Series data objects conform to the Regular Series JSON-Schema definition.
 <s|Method|JSON-Schema validation.
-<s|Reference: Series-Irregular|/req/basic/ypr/sdu
+<s|Reference: Irregular-Series|/req/irregular_series/sdu
 <s|Test Type|Conformance
 |===
 
@@ -912,16 +984,16 @@ The *GeoPose Irregular Series* JSON Encoding member test is the following:
 The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
 
-[[conf_stream_encoding_json]]
+[[conf_class_stream_encoding_json]]
 [width="100%",%header,cols="3,6"]
 |===
-<|*Conformance Class:* <|*Stream Encoding-JSON (Strict)* 
+<|*Conformance Class:* <|*Stream Encoding-JSON* 
 
-<s|ID |<<conf_basic_quaternion_encoding_json_strict,/quaternion_encoding_json_strict>>
+<s|ID |<<conf_clas_stream_encoding_json,/conf/class/stream/encoding/json>>
 <s|Target Type|JSON object
-<s|Description|To confirm that a Basic-Quaternion GeoPose (Strict) consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
-<s|Dependency| /conf/basic_ypr_sdu
-<s|Test: Stream-Encoding-JSON-Strict|/conf/basic_ypr/encoding/json 
+<s|Description|Confirm that GeoPose Stream data objects conform to the corresponding Stream JSON-Schema requirement.
+<s|Dependency| /conf/stream/sdu
+<s|Test: Stream-Encoding-JSON|/conf/stream/encoding/json/test 
 
 |===
 
@@ -932,11 +1004,11 @@ The *GeoPose Stream* JSON Encoding member test is the following:
 |===
 <s|Test:  s|Stream-Encoding-JSON 
 
-<s|ID |<</conf_basic/ypr/encoding/json,/conf/basic_ypr/encoding/json>>
-2+<|To confirm that an implementation of a Basic-YPR consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. To confirm that the Inner Frame is expressed as a rotation-only transformation using Yaw, Pitch, and Roll angles.
-<s|Purpose|To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+<s|ID |<</conf_stream_encoding_json_test,/conf/stream/encoding/json/test>>
+2+<|Confirm that GeoPose Stream data objects conform to the Stream JSON-Schema requirement.
+<s|Purpose|To confirm that Stream data objects conform to the corresponding Stream JSON-Schema definition.
 <s|Method|JSON-Schema validation.
-<s|Reference: Stream JSON|/req/basic/ypr/sdu
+<s|Reference: Stream|/req/stream/sdu
 <s|Test Type|Conformance
 |===
 
