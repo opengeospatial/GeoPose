@@ -179,7 +179,7 @@ The Basic-YPR SDU member tests are the following:
 
 <s|ID |<<conf_class/basic_quaternion_sdu,/conf/class/basic_quaternion_sdu>>
 <s|Target Type|SDU
-<s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+<s|Description|To confirm that components of a Basic Quaternion GeoPose conform to the Logical Model.
 <s|Dependency| /conf/global
 <s|Test: B-Q-SDU|/conf/basic_quaternion/sdu 
 <s|Test: B-TP-Lon-SDU |/conf/tangent_plane/longitude/sdu 
@@ -511,7 +511,7 @@ The Basic-YPR SDU member tests are the following:
 
 <s|ID |<<conf_class_regular_series_sdu,/conf/class/regular_series/sdu>>
 <s|Target Type|SDU
-<s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+<s|Description|To confirm that components of a Regular Series conform to the Logical Model.
 <s|Dependency| /conf/global
 <s|Test: Series-Header-SDU |/conf/series_header/sdu 
 <s|Test: GP-Duration-SDU |/conf/geopose_duration/sdu 
