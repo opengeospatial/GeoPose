@@ -772,7 +772,9 @@ SDU requirements are abstract in the sense that SDUs are implemented as concrete
 
 === JSON Encoding
 
+==== Description (Informative)
 
+The JSON encoding is one of many possible ways of implementing a concrete representation of any one or more of the GeoPose Standardization Targets. The specific JSON encoding in this section follows all of the normal rules and conventions of JSON. For example, the order of named properties is not significant and, except in the case of the "strict" Basic-Quaternion object, there is no restriction on adding additional properties not specified in the GeoPose 1.0 Standard. In addition to supporting specific application requirements outside the GeoPose 1.0 scope, this flexibility enables experimentation with useful properties that might be part of a future version of the OGC GeoPose Standard.
 
 ==== Standardization Target 1: Basic-YPR (Normative)
 
