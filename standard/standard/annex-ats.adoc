@@ -705,20 +705,27 @@ The Basic-YPR SDU member tests are the following:
 
 <s|ID |<<conf_class_stream_sdu,/conf/class/stream/sdu>>
 <s|Target Type|SDU
-<s|Description|To confirm AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+<s|Description|To confirm that a GeoPose Stream conforms to the Logical Model.
 <s|Dependency| /conf/global
+<s|Test: Transition-Model-SDU |/conf/transition_model/sdu 
 <s|Test: FS-Authority-SDU |/conf/frame_specification_authority/sdu 
 <s|Test: FS-ID-SDU |/conf/frame_specification_id/sdu 
 <s|Test: FS-Parameters-SDU |/conf/frame_specification_parameters/sdu 
+<s|Test: Stream-Frame-And-Time-SDU |/conf/stream_frame_and_time/sdu 
+ 
 |===
 
-[[ats_transition_model_sdu]]
-[width="90%",cols="2,6"]
+[[conf_transition_model_sdu]]
+[width="100%",cols="3,6"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/transition_model/sdu* 
-^|Test Purpose |To confirm that a transition_model attribute is one of the values in the TransitionModel enumeration.
-^|Requirement |/req/transition_model/sdu
-^|Test Method |Inspection
+<s|Test: |Transition-Model-SDU
+
+<s|ID |<<conf_frame_specification_authority_sdu,/conf/frame_specification_authority/sdu>> 
+2+<| To confirm that a TransitionModel attribute conforms to the Logical Model.
+<s|Purpose |To confirm that a transition_model attribute is one of the values in the TransitionModel enumeration.
+<s|Reference: Transition-Model-SDU |/req/transition_model/sdu
+<s|Method |Inspection
+
 |===
 
 [width="100%",cols="3,6"]
@@ -758,7 +765,7 @@ The Basic-YPR SDU member tests are the following:
 |===
 
 
-[[ats_stream_frame_and_time_sdu]]
+[[conf_stream_frame_and_time_sdu]]
 [width="90%",cols="2,6"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/stream/frame_and_time/sdu* 
