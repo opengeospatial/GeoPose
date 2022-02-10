@@ -15,4 +15,5 @@
 |2022-01-27 |0.7.0 |Steve Smyth  |late arriving public review comment resolution
 |2022-02-07 |0.7.3 |Steve Smyth  |late arriving public review comment resolution
 |2022-02-07 |0.9.0 |Steve Smyth  |final bit addressing late arriving public review comment resolution - all issues labelled "Public Review Comment" closed after this edit
+|2022-02-07 |0.9.1 |Steve Smyth  |added a paragraph that was on another branch and part of RFC resolution - informative regarding JSON conventions and usage.
 |===
