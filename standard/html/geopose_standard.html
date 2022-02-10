@@ -2175,7 +2175,7 @@ p {
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}" class="bare">http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    21-056r8</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    21-056r9</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0</p></td>
@@ -2345,14 +2345,15 @@ p {
 <li><a href="#_description_informative_3">8.1. Description (Informative)</a></li>
 <li><a href="#_json_encoding">8.2. JSON Encoding</a>
 <ul class="sectlevel3">
-<li><a href="#_standardization_target_1_basic_ypr_normative">8.2.1. Standardization Target 1: Basic-YPR (Normative)</a></li>
-<li><a href="#_standardization_target_2_basic_quaternion_normative">8.2.2. Standardization Target 2: Basic-Quaternion (Normative)</a></li>
-<li><a href="#_standardization_target_3_advanced_geopose_normative">8.2.3. Standardization Target 3: Advanced GeoPose (Normative)</a></li>
-<li><a href="#_standardization_target_4_graph_normative">8.2.4. Standardization Target 4: Graph (Normative)</a></li>
-<li><a href="#_standardization_target_5_chain_normative">8.2.5. Standardization Target 5: Chain (Normative)</a></li>
-<li><a href="#_standardization_target_6_regular_series_normative">8.2.6. Standardization Target 6: Regular Series (Normative)</a></li>
-<li><a href="#_standardization_target_7_irregular_series_normative">8.2.7. Standardization Target 7: Irregular Series (Normative)</a></li>
-<li><a href="#_standardization_target_8_stream_normative">8.2.8. Standardization Target 8: Stream (Normative)</a></li>
+<li><a href="#_description_informative_4">8.2.1. Description (Informative)</a></li>
+<li><a href="#_standardization_target_1_basic_ypr_normative">8.2.2. Standardization Target 1: Basic-YPR (Normative)</a></li>
+<li><a href="#_standardization_target_2_basic_quaternion_normative">8.2.3. Standardization Target 2: Basic-Quaternion (Normative)</a></li>
+<li><a href="#_standardization_target_3_advanced_geopose_normative">8.2.4. Standardization Target 3: Advanced GeoPose (Normative)</a></li>
+<li><a href="#_standardization_target_4_graph_normative">8.2.5. Standardization Target 4: Graph (Normative)</a></li>
+<li><a href="#_standardization_target_5_chain_normative">8.2.6. Standardization Target 5: Chain (Normative)</a></li>
+<li><a href="#_standardization_target_6_regular_series_normative">8.2.7. Standardization Target 6: Regular Series (Normative)</a></li>
+<li><a href="#_standardization_target_7_irregular_series_normative">8.2.8. Standardization Target 7: Irregular Series (Normative)</a></li>
+<li><a href="#_standardization_target_8_stream_normative">8.2.9. Standardization Target 8: Stream (Normative)</a></li>
 </ul>
 </li>
 </ul>
@@ -5044,7 +5045,13 @@ SDU requirements are abstract in the sense that SDUs are implemented as concrete
 <div class="sect2">
 <h3 id="_json_encoding"><a class="anchor" href="#_json_encoding"></a>8.2. JSON Encoding</h3>
 <div class="sect3">
-<h4 id="_standardization_target_1_basic_ypr_normative"><a class="anchor" href="#_standardization_target_1_basic_ypr_normative"></a>8.2.1. Standardization Target 1: Basic-YPR (Normative)</h4>
+<h4 id="_description_informative_4"><a class="anchor" href="#_description_informative_4"></a>8.2.1. Description (Informative)</h4>
+<div class="paragraph">
+<p>The JSON encoding is one of many possible ways of implementing a concrete representation of any one or more of the GeoPose Standardization Targets. The specific JSON encoding in this section follows all of the normal rules and conventions of JSON. For example, the order of named properties is not significant and, except in the case of the "strict" Basic-Quaternion object, there is no restriction on adding additional properties not specified in the GeoPose 1.0 Standard. In addition to supporting specific application requirements outside the GeoPose 1.0 scope, this flexibility enables experimentation with useful properties that might be part of a future version of the OGC GeoPose Standard.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_standardization_target_1_basic_ypr_normative"><a class="anchor" href="#_standardization_target_1_basic_ypr_normative"></a>8.2.2. Standardization Target 1: Basic-YPR (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5165,7 +5172,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_2_basic_quaternion_normative"><a class="anchor" href="#_standardization_target_2_basic_quaternion_normative"></a>8.2.2. Standardization Target 2: Basic-Quaternion (Normative)</h4>
+<h4 id="_standardization_target_2_basic_quaternion_normative"><a class="anchor" href="#_standardization_target_2_basic_quaternion_normative"></a>8.2.3. Standardization Target 2: Basic-Quaternion (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5415,7 +5422,7 @@ This JSON encoding of the Basic-Quaternion GeoPose is extensible because the JSO
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_3_advanced_geopose_normative"><a class="anchor" href="#_standardization_target_3_advanced_geopose_normative"></a>8.2.3. Standardization Target 3: Advanced GeoPose (Normative)</h4>
+<h4 id="_standardization_target_3_advanced_geopose_normative"><a class="anchor" href="#_standardization_target_3_advanced_geopose_normative"></a>8.2.4. Standardization Target 3: Advanced GeoPose (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5545,7 +5552,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_4_graph_normative"><a class="anchor" href="#_standardization_target_4_graph_normative"></a>8.2.4. Standardization Target 4: Graph (Normative)</h4>
+<h4 id="_standardization_target_4_graph_normative"><a class="anchor" href="#_standardization_target_4_graph_normative"></a>8.2.5. Standardization Target 4: Graph (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5748,7 +5755,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_5_chain_normative"><a class="anchor" href="#_standardization_target_5_chain_normative"></a>8.2.5. Standardization Target 5: Chain (Normative)</h4>
+<h4 id="_standardization_target_5_chain_normative"><a class="anchor" href="#_standardization_target_5_chain_normative"></a>8.2.6. Standardization Target 5: Chain (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5892,7 +5899,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_6_regular_series_normative"><a class="anchor" href="#_standardization_target_6_regular_series_normative"></a>8.2.6. Standardization Target 6: Regular Series (Normative)</h4>
+<h4 id="_standardization_target_6_regular_series_normative"><a class="anchor" href="#_standardization_target_6_regular_series_normative"></a>8.2.7. Standardization Target 6: Regular Series (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6125,7 +6132,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_7_irregular_series_normative"><a class="anchor" href="#_standardization_target_7_irregular_series_normative"></a>8.2.7. Standardization Target 7: Irregular Series (Normative)</h4>
+<h4 id="_standardization_target_7_irregular_series_normative"><a class="anchor" href="#_standardization_target_7_irregular_series_normative"></a>8.2.8. Standardization Target 7: Irregular Series (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6357,7 +6364,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standardization_target_8_stream_normative"><a class="anchor" href="#_standardization_target_8_stream_normative"></a>8.2.8. Standardization Target 8: Stream (Normative)</h4>
+<h4 id="_standardization_target_8_stream_normative"><a class="anchor" href="#_standardization_target_8_stream_normative"></a>8.2.9. Standardization Target 8: Stream (Normative)</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -9891,7 +9898,7 @@ A reference level from which elevation or altitude can be measured. The Topograp
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-09 21:39:24 -0800
+Last updated 2022-02-10 00:15:57 -0800
 </div>
 </div>
 </body>
