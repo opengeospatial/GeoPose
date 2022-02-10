@@ -166,15 +166,15 @@ image::diagram/Basic-YPR_SDU.PNG[align="center"]
 |===
 <|*Requirements Class:* <|*Basic-YPR* 
 
-<s|ID |<<req_basic_ypr_sdu,/req/basic/ypr/sdu>>
+<s|ID |<<req_basic_ypr_sdu,/req/basic_ypr/sdu>>
 <s|Target Type|Implemntation of Logical Model
 <s|Description| Basic-YPR Logical Model SDU
 <s|Dependency| /req/global
-<s|Requirement B-YPR-SDU|/req/basic/ypr/sdu
-<s|Requirement B-TP-Lon-SDU|/req/tangent_plane/longitude/sdu 
-<s|Requirement B-TP-Lat-SDU|/req/tangent_plane/latitude/sdu 
-<s|Requirement B-TP-h-SDU|req/tangent_plane/h/sdu 
-<s|Requirement B-YPR-ANGLES-SDU|/req/orientation/ypr_angles/sdu 
+<s|Requirement B-YPR-SDU|/req/basic_ypr/sdu
+<s|Requirement B-TP-Lon-SDU|/req/tangent_plane_longitude/sdu 
+<s|Requirement B-TP-Lat-SDU|/req/tangent_plane_latitude/sdu 
+<s|Requirement B-TP-h-SDU|req/tangent_plane_h/sdu 
+<s|Requirement B-YPR-ANGLES-SDU|/req/orientation_ypr_angles/sdu 
 
 |===
 
@@ -185,7 +185,7 @@ Details of the individual requirements:
 |===
 <s|Requirement s|B-YPR-SDU 
 
-<s|ID |<<req_basic_ypr,/req/basic/ypr/sdu>>
+<s|ID |<<req_basic_ypr,/req/basic_ypr/sdu>>
 2+<|An implementation of a Basic-YPR Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using Yaw, Pitch, and Roll angles specified in degrees and represented as signed real number values.
 
 |===
@@ -195,7 +195,7 @@ Details of the individual requirements:
 |===
 <s|Requirement s|B-TP-Lon-SDU
 
-<s|ID |<<req_tangent_plane_longitude,/req/tangent_plane/longitude/sdu>>
+<s|ID |<<req_tangent_plane_longitude,/req/tangent_plane_longitude/sdu>>
 2+<|An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
 
 |===
@@ -206,7 +206,7 @@ Details of the individual requirements:
 |===
 <s|Requirement s|B-TP-Lat-SDU
 
-<s|ID |<<req_tangent_plane_latitude,/req/tangent_plane/latitude/sdu>>
+<s|ID |<<req_tangent_plane_latitude,/req/tangent_plane_latitude/sdu>>
 2+<|An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
 
 |===
@@ -216,7 +216,7 @@ Details of the individual requirements:
 |===
 <s|Requirement s|B-TP-h-SDU
 
-<s|ID |<<req_tangent_plane_h,/req/tangent_plane/h/sdu>>
+<s|ID |<<req_tangent_plane_h,/req/tangent_plane_h/sdu>>
 2+<|An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid and represented as a signed real number value.
 
 |===
@@ -226,7 +226,7 @@ Details of the individual requirements:
 |===
 <s|Requirement s|B-YPR-ANGLES-SDU
 
-<s|ID |<<req_sdu_orientation_ypr_angles,/req/orientation/ypr_angles/sdu>>
+<s|ID |<<req_sdu_orientation_ypr_angles,/req/orientation_ypr_angles/sdu>>
 2+<|Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure SHALL be the degree and the angles represented as signed real number values.
 
 |===
@@ -248,47 +248,47 @@ image::diagram/Basic-Quaternion_SDU.PNG[align="center"]
 *Requirements Class*
 
 |===
-<|*Requirements Class:* <|*Basic-Quaternion* 
+<|*Requirements Class:* <|*Basic-Quaternion-SDU* 
 
-<s|ID |<<req_basic_quaternion_sdu,/req/basic/quaternion/sdu>>
+<s|ID |<<req_basic_quaternion_sdu,/req/basic_quaternion/sdu>>
 <s|Target Type|Implemntation of Logical Model
 <s|Description| Basic-Quaternion Logical Model SDU
 <s|Dependency| /req/global
-<s|Requirement B-TP-Lon-SDU|/req/tangent_plane/longitude/sdu 
-<s|Requirement B-TP-Lat-SDU|/req/tangent_plane/latitude/sdu 
-<s|Requirement B-TP-h-SDU|req/tangent_plane/h/sdu 
-<s|Requirement B-Quaternion-SDU|/req/orientation/quaternion/sdu 
+<s|Requirement B-TP-Lon-SDU|/req/tangent_plane_longitude/sdu 
+<s|Requirement B-TP-Lat-SDU|/req/tangent_plane_latitude/sdu 
+<s|Requirement B-TP-h-SDU|req/tangent_plane_h/sdu 
+<s|Requirement B-Quaternion-SDU|/req/orientation_quaternion/sdu 
 
 |===
  
 
-[[req_tangent_plane_longitude]]
+
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|B-TP-Lon-SDU
 
-<s|ID |<<req_tangent_plane_longitude,/req/tangent_plane/longitude/sdu>>
+<s|ID |<<req_tangent_plane_longitude,/req/tangent_plane_longitude/sdu>>
 2+<|An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees, represented as a signed real number.
 
 |===
 
 
-[[req_tangent_plane_latitude]]
+
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|B-TP-Lat-SDU
 
-<s|ID |<<req_tangent_plane_latitude,/req/tangent_plane/latitude/sdu>>
+<s|ID |<<req_tangent_plane_latitude,/req/tangent_plane_latitude/sdu>>
 2+<|An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees, represented as a signed real number.
 
 |===
 
-[[req_tangent_plane_h]]
+
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|B-TP-h-SDU
 
-<s|ID |<<req_tangent_plane_h,/req/tangent_plane/h/sdu>>
+<s|ID |<<req_tangent_plane_h,/req/tangent_plane_h/sdu>>
 2+<|An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid, represented as a signed real number. If the tangent point is above the WGS-84 ellipsoid, the value SHALL be positive. If the tangent point is below the WGS-84 ellipsoid, the value SHALL be negative. 
 
 |===
@@ -303,7 +303,7 @@ The tangent plane longitude, latitude, and h parameters are specified without an
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|Quaternion-SDU
-<s|ID |<<req_orientation_quaternion_sdu,/req/orientation/quaternion/sdu>>
+<s|ID |<<req_orientation_quaternion_sdu,/req/orientation_quaternion/sdu>>
 2+<|An instance of a GeoPose Logical Model quaternion datatype value SHALL be expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order. The sum of the squares of the individual components SHALL be as close to 1.0 as the real number representation allows. The quaternion SHALL be applied to an initial reference frame oriented East-North-Up (ENU) coordinate system where the coordinate axes East, North, and Up correspond to the axes X, Y, Z.
 |===
 
@@ -327,17 +327,18 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 *Requirements Class*
 
 |===
-<|*Requirements Class:* <|*Advanced* 
+<|*Requirements Class:* <|*Advanced-SDU* 
 
 <s|ID |<<req_advanced_sdu,/req/advanced/sdu>>
 <s|Target Type|Implemntation of Logical Model
 <s|Description| Advanced Logical Model SDU
 <s|Dependency| /req/global
-<s|Requirement B-YPR-SDU|/req/advanced/sdu
-<s|Requirement B-TP-Lon-SDU|/req/tangent_plane/longitude/sdu 
-<s|Requirement B-TP-Lat-SDU|/req/tangent_plane/latitude/sdu 
-<s|Requirement B-TP-h-SDU|req/tangent_plane/h/sdu 
-<s|Requirement B-Quaternion-SDU|/req/orientation/quaternion/sdu 
+<s|Requirement Advanced-SDU|/req/advanced/sdu
+<s|Requirement GP-Instant-SDU|/req/geopose_instant/sdu 
+<s|Requirement FS-Authority-SDU|/req/frame_specification_authority/sdu 
+<s|Requirement FS-ID-SDU|/req/frame_specification_id/sdu 
+<s|Requirement FS-Parameters-SDU|/req/frame_specification_parameters/sdu 
+<s|Requirement Quaternion-SDU|/req/orientation_quaternion/sdu 
 
 |===
  
@@ -376,7 +377,6 @@ image::diagram/Advanced_SDU.PNG[align="center"]
 |===
 
 
-[[req_sdu_orientation_quaternion]]
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|Quaternion-SDU
@@ -412,10 +412,11 @@ image::diagram/Graph_SDU.PNG[align="center"]
 <s|Description| Graph Logical Model SDU
 <s|Dependency| /req/global
 <s|Requirement Graph-SDU|/req/graph/sdu
-<s|Requirement B-TP-Lon-SDU|/req/tangent_plane/longitude/sdu 
-<s|Requirement B-TP-Lat-SDU|/req/tangent_plane/latitude/sdu 
-<s|Requirement B-TP-h-SDU|req/tangent_plane/h/sdu 
-<s|Requirement GP-Instant-SDU|/req/time/geopose_instant/sdu 
+<s|Requirement GP-Instant-SDU|/req/geopose_instant/sdu 
+<s|Requirement FS-Authority-SDU|/req/frame_specification_authority/sdu 
+<s|Requirement FS-ID-SDU|/req/frame_specification_id/sdu 
+<s|Requirement FS-Parameters-SDU|/req/frame_specification_parameters/sdu 
+<s|Requirement Transfom-Index-SDU|/req/transform_index/sdu 
 
 |===
 
@@ -451,7 +452,7 @@ image::diagram/Graph_SDU.PNG[align="center"]
 
 [width="100%",cols="4,6"]
 |===
-<s|Requirement s|GP-Graph-Transform_Index-SDU 
+<s|Requirement s|Transform_Index-SDU 
 <s|ID |<<req_transform_index_,/req/chain/transform_index/sdu>>
 2+<|Each index vaue in a FrameListTransformPair SHALL be a distinct integer value between 0 and one less than the number of elements in the frameList property.
 |===
@@ -479,10 +480,10 @@ image::diagram/Chain_SDU.PNG[align="center"]
 <s|Description| Chain Logical Model SDU
 <s|Dependency| /req/global
 <s|Requirement Chain-SDU|/req/chain/sdu
-<s|Requirement B-TP-Lon-SDU|/req/tangent_plane/longitude/sdu 
-<s|Requirement B-TP-Lat-SDU|/req/tangent_plane/latitude/sdu 
-<s|Requirement B-TP-h-SDU|req/tangent_plane/h/sdu 
-<s|Requirement GP-Instant-SDU|/req/time/geopose_instant/sdu 
+<s|Requirement GP-Instant-SDU|/req/geopose_instant/sdu 
+<s|Requirement FS-Authority-SDU|/req/frame_specification_authority/sdu 
+<s|Requirement FS-ID-SDU|/req/frame_specification_id/sdu 
+<s|Requirement FS-Parameters-SDU|/req/frame_specification_parameters/sdu 
 
 |===
 
@@ -535,18 +536,18 @@ image::diagram/Regular-Series_SDU.PNG[align="center"]
 
 
 |===
-<s|Requirements Class s|Regular Series 
+<s|Requirements Class s|Regular Series SDU
 
-<s|ID |<<req_series_regular_sdu,/req/regular_series/sdu>>
+<s|ID |<<req_regular_series_sdu,/req/regular_series/sdu>>
 <s|Target Type|Implemntation of Logical Model
 <s|Description| Regular Series Logical Model SDU
 <s|Dependency| /req/global
-<s|Requirement S-Header-SDU|/req/regular_series/header/sdu
+<s|Requirement S-Header-SDU|/req/regular_series_header/sdu
 <s|Requirement GP-Duration-SDU|/req/time/geopose_duration/SDU 
-<s|Requirement FS-Authority-SDU|/req/frame_specification/authority/sdu 
-<s|Requirement FS-ID-SDU|/req/frame_specification/id/sdu
-<s|Requirement FS-Parameters-SDU|/req/frame_specification/parameters/sdu 
-<s|Requirement S-Trailer-SDU|/req/series/regular/trailer/sdu
+<s|Requirement FS-Authority-SDU|/req/frame_specification_authority/sdu 
+<s|Requirement FS-ID-SDU|/req/frame_specification_id/sdu
+<s|Requirement FS-Parameters-SDU|/req/frame_specification_parameters/sdu 
+<s|Requirement S-Trailer-SDU|/req/regular_series_trailer/sdu
 
 |===
  
@@ -615,16 +616,16 @@ image::diagram/Irregular-Series_SDU.PNG[align="center"]
 |===
 <s|Requirements Class s|Irregular Series 
 
-<s|ID |<<req_series_irregular_sdu,/req/irregular_series/sdu>>
+<s|ID |<<req_irregular_series_sdu,/req/irregular_series/sdu>>
 <s|Target Type|Implemntation of Logical Model
 <s|Description| Irregular Series Logical Model SDU
 <s|Dependency| /req/global
-<s|Requirement S-IHeader-SDU|/req/series/irregular/header/sdu
-<s|Requirement FS-Authority-SDU|/req/frame_specification/authority/sdu 
-<s|Requirement FS-ID-SDU|/req/frame_specification/id/sdu
-<s|Requirement FS-Parameters-SDU|/req/frame_specification/parameters/sdu 
-<s|Requirement S-FT-Element-SDU|/req/IrregularSeries/frameandtime/SDU
-<s|Requirement S-Trailer-SDU|/req/series/regular/trailer/sdu
+<s|Requirement S-IHeader-SDU|/req/irregular_series_header/sdu
+<s|Requirement FS-Authority-SDU|/req/frame_specification_authority/sdu 
+<s|Requirement FS-ID-SDU|/req/frame_specification_id/sdu
+<s|Requirement FS-Parameters-SDU|/req/frame_specification_parameters/sdu 
+<s|Requirement S-FT-Element-SDU|/req/irregular_series_frame_and_time/SDU
+<s|Requirement S-Trailer-SDU|/req/regular_series_trailer/sdu
 
 |===
 
@@ -633,14 +634,14 @@ image::diagram/Irregular-Series_SDU.PNG[align="center"]
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|S-IHeader-SDU
-<s|ID |<<req_series_irregular_header_sdu,/req/series/irregular/header/sdu>>
+<s|ID |<<req_irregular_series_header_sdu,/req/irregular_series_header/sdu>>
 <s|Requirement |A header property SHALL be implemented as a SeriesHeader.
 |===
 
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|FS-Authority-SDU
-<s|ID |<<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+<s|ID |<<req_sdu_frame_specification_authority,/req/frame_specification_authority/sdu>>
 2+<|The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
 |===
 
@@ -648,7 +649,7 @@ image::diagram/Irregular-Series_SDU.PNG[align="center"]
 [width="100%",cols="4,6"]
 |===
 <s|*Requirement s| FS-ID-SDU 
-<s|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+<s|ID |<<req_sdu_frame_specification_id,/req/frame_specification_id/sdu>>
 2+<|The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 |===
 
@@ -656,23 +657,23 @@ image::diagram/Irregular-Series_SDU.PNG[align="center"]
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|FS-Parameters-SDU
-<s|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+<s|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification_parameters/sdu>>
 2+<|The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
 |===
 
 
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement S-FT-Element-SDU* |*/req/IrregularSeries/frameandtime/SDU* 
+<s|*Requirement S-FT-Element-SDU* |*/req/irregular_series_frame_and_time/SDU* 
 <s|Requirement |An innerFrameAndTime property SHALL be implemented as an ExplicitFrameSpec and GeoPoseInstant pair.
 <s|ID |<<req_Chain/structure,/req/IrregularSeries/frameandtime/SDU>>
 |===
 
 [width="100%",cols="4,6"]
 |===
-<s|*Requirement S-Trailer-SDU* |*/req/RegularSeries/trailer/SDU* 
+<s|*Requirement S-Trailer-SDU* |*/req/regular_series_trailer/SDU* 
 <s|Requirement |A trailer property SHALL be implemented as a SeriesTrailer.
-<s|ID |<<req_Chain/structure,/req/RegularSeries/trailer/SDU>>
+<s|ID |<<req_Chain/structure,/req/regular_series_trailer/SDU>>
 |===
 
 <<<
@@ -705,12 +706,12 @@ image::diagram/Stream-Element_SDU.PNG[align="center"]
 <s|Target Type|Implemntation of Logical Model
 <s|Description| Stream Logical Model SDU
 <s|Dependency| /req/global
-<s|Requirement S-IHeader-SDU|/req/series/irregular/header/sdu
+<s|Requirement S-IHeader-SDU|/req/series_irregular_header/sdu
 <s|Requirement FS-Authority-SDU|/req/frame_specification/authority/sdu 
 <s|Requirement FS-ID-SDU|/req/frame_specification/id/sdu
 <s|Requirement FS-Parameters-SDU|/req/frame_specification/parameters/sdu 
-<s|Requirement S-FT-Element-SDU|/req/IrregularSeries/frameandtime/SDU
-<s|Requirement S-Trailer-SDU|/req/series/regular/trailer/sdu
+<s|Requirement S-FT-Element-SDU|/req/irregular_series_frame_and_time/SDU
+<s|Requirement S-Trailer-SDU|/req/regular_series_trailer/sdu
 
 |===
 
@@ -723,7 +724,7 @@ image::diagram/Stream-Element_SDU.PNG[align="center"]
 |===
 
 
-[[req_frame_specification_authority_sdu]]
+
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|FS-Authority-SDU
@@ -731,7 +732,7 @@ image::diagram/Stream-Element_SDU.PNG[align="center"]
 2+<|The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
 |===
 
-[[req_frame_specification_id_sdu]]
+
 [width="100%",cols="4,6"]
 |===
 <s|*Requirement s| FS-ID-SDU 
@@ -739,7 +740,7 @@ image::diagram/Stream-Element_SDU.PNG[align="center"]
 2+<|The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 |===
 
-[[req_frame_specification_parameters_sdu]]
+
 [width="100%",cols="4,6"]
 |===
 <s|Requirement s|FS-Parameters-SDU

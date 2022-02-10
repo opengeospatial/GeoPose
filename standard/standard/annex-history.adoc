@@ -14,4 +14,5 @@
 |2022-01-07 |0.6.2 |Steve Smyth  |public review comment resolution
 |2022-01-27 |0.7.0 |Steve Smyth  |late arriving public review comment resolution
 |2022-02-07 |0.7.3 |Steve Smyth  |late arriving public review comment resolution
+|2022-02-07 |0.9.0 |Steve Smyth  |final bit addressing late arriving public review comment resolution - all issues labelled "Public Review Comment" closed after this edit
 |===
