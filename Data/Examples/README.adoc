@@ -2,15 +2,31 @@
 
 This folder contains schemata and JSON-encoded datasets conforming to the GeoPose 1.0 standard. 
 
-## Examples
-This folder has one or more examples of every JSON object defined in the GeoPose 1.0 draft standard.
 
-## Schemata
-This folder has a JSON-Schema definition for every JSON object defined in the GeoPose 1.0 draft standard.
+## GNWind
+
+This folder has fields of GeoPoses giving wind speed and direction.
 
 ## Images
+
 This folder contains a set of 170 images and corresponding Basic-Quaternion and Basic-YPR GeoPoses as defined by the GeoPose 1.0 draft standard.
 
 ## Video
 
 This folder contains an mp4 video and corresponding frame-synchronised  GeoPoses as defined in the GeoPose 1.0 draft standard. The video covers the same area as the image samples.
+
+## ROS-GeoPose
+
+This folder has data from an experimental excursion of the Ordnance Survey Street Drone near the OS headquarters in Southampton, UK. The data includes both video and sensor data which express GeoPose time series or from which GeoPose time series may be extracted.
+
+## SolarPose
+
+SolarPose is a service that can supply a GeoPose or a composite structure for any UNIX time and location on the earth. SolarPose supports the full range of GeoPose 1.0 standardization targets.
+
+## Video
+
+Video frames each have a GeoPose. This example is of the same subject as the "Images" collection and the purpose is also to extract and display the GeoPose for each frame.
+
+## Visual Velocimetry
+
+Visual velocimetry is a method for measuring fluid flow veolocity by tracking visual tracer particles from frame to frame in a video. In natural water bodies, it is often possible to use naturally-occuring debris and foam as tracer particles. This example is intended to show the extracted 2D surface velocity vectors as a field of GeoPoses.
