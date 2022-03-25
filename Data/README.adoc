@@ -7,11 +7,3 @@ This folder has one or more examples of every JSON object defined in the GeoPose
 
 ## Schemata
 This folder has a JSON-Schema definition for every JSON object defined in the GeoPose 1.0 draft standard.
-
-## Real World Images
-
-This folder will have (ETA 3 May 2021) a set of approximately 170 images and corresponding Basic-Quaternion and Basic-YPR GeoPoses as defined in the GeoPose 1.0 draft standard.
-
-## Real World Video
-
-This folder will have (ETA 6 May 2021) an mp4 video and corresponding frame-synchronised  GeoPoses as defined in the GeoPose 1.0 draft standard. The video covers the same area as the image samples.
