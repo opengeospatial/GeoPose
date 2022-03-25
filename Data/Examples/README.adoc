@@ -1,6 +1,6 @@
-# GeoPose Sample Data
+# GeoPose Data Objects
 
-This folder contains schemata and datasets conforming to the current state of the GeoPose 1.0 standard. It is not very organized yet, but will be soon.
+This folder contains schemata and JSON-encoded datasets conforming to the GeoPose 1.0 standard. 
 
 ## Examples
 This folder has one or more examples of every JSON object defined in the GeoPose 1.0 draft standard.
@@ -8,10 +8,9 @@ This folder has one or more examples of every JSON object defined in the GeoPose
 ## Schemata
 This folder has a JSON-Schema definition for every JSON object defined in the GeoPose 1.0 draft standard.
 
-## Real World Images
+## Images
+This folder contains a set of 170 images and corresponding Basic-Quaternion and Basic-YPR GeoPoses as defined by the GeoPose 1.0 draft standard.
 
-This folder will have (ETA 3 May 2021) a set of approximately 170 images and corresponding Basic-Quaternion and Basic-YPR GeoPoses as defined in the GeoPose 1.0 draft standard.
+## Video
 
-## Real World Video
-
-This folder will have (ETA 6 May 2021) an mp4 video and corresponding frame-synchronised  GeoPoses as defined in the GeoPose 1.0 draft standard. The video covers the same area as the image samples.
+This folder contains an mp4 video and corresponding frame-synchronised  GeoPoses as defined in the GeoPose 1.0 draft standard. The video covers the same area as the image samples.
