@@ -1,11 +1,10 @@
 # GeoPose Data Objects
 
-This folder contains schemata and JSON-encoded datasets conforming to the GeoPose 1.0 standard. 
-
+This folder contains video, imagery, GPS and IMU source data and JSON-encoded datasets conforming to the GeoPose 1.0 standard. 
 
 ## GNWind
 
-This folder has fields of GeoPoses giving wind speed and direction.
+This folder has fields of GeoPoses giving wind speed and direction provided by Global Nomad.
 
 ## Images
 
