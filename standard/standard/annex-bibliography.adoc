@@ -16,5 +16,24 @@
 
 [6] GeoVolumes charter ( https://portal.ogc.org/files/97171 )
 
+[7] Ref frame  https://en.wikipedia.org/wiki/Frame_of_reference
+
+[8] Pose https://en.wikipedia.org/wiki/Pose_(computer_vision) 
+
+[9] OWL Time: https://www.w3.org/TR/2020/CR-owl-time-20200326/
+
+[10] ISO 19162:2019
+Geographic information — Well-known text representation of coordinate reference systems
+https://www.iso.org/standard/76496.html
+
+[11] ISO 19111:2019 Geographic information — Referencing by coordinates https://www.iso.org/standard/74039.html 
+
+[12] EPSG https://epsg.org
+
+[13] NASA SPICE https://naif.jpl.nasa.gov/naif/  Navigation and ancillary information facility
+
+[14] YPR https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf 
+
+
 
 
