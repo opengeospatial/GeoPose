@@ -10,7 +10,7 @@ Implementation #2:
 
 Implementation #3:
 
-## Basic-Euler
+## Basic-Yaw-Pitch-Roll (Angles)
 
 Implementation #1:
 
