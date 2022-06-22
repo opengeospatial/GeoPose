@@ -4,17 +4,15 @@
 
 Conformance with this standard shall be checked using all the relevant tests specified in Annex A (Normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies (https://portal.ogc.org/files/?artifact_id=55234) and Procedures and the OGC Compliance Testing web site (https://www.ogc.org/compliance). GeoPose 1.0 JSON encodings are specified via JSON-Schema:2019-9 and most of the requirements are that conforming encoded data objects shall validate against the corresponding schema.
 
-In order to conform to this OGC® Standard, a software implementation shall choose to implement any one or more of the eight Standardization Targets specified in Annex A (normative).
-
 All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
 
 === Modularity
 
-This standard describes eight Standardization Targets. These targets are independent and a conforming implementation may implement one or more of the targets.
+This standard describes eight standardization targets. These targets are independent and a conforming implementation may implement one or more of the targets.
 
 === Conformance Classes
 
-This standard identifies eight conformance classes. One conformance class is defined for each corresponding set of Structural Data Units (SDUs) where each SDU is linked to the Logical Model as an alias for a class or attribute. Additionally, each of the eight standardization targets is represented by a conformance class as defined by a corresponding requirements class.
+This OGC® standard identifies eight conformance classes. One conformance class is defined for each corresponding set of Structural Data Units (SDUs) where each SDU is linked to the Logical Model as an alias for a class or attribute. Additionally, each of the eight standardization targets is represented by a conformance class as defined by a corresponding requirements class.
 The tests in <<abstract-test-suite,Annex A>> are organized by requirements class. An implementation of a conformance class must pass all tests specified in Annex A for the corresponding requirements class.
 
 No conformance class has a dependency on another conformance class.
