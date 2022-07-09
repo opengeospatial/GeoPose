@@ -1,17 +1,15 @@
-[appendix]
-:appendix-caption: Annex
-[[example-reference-frame-specification]]
-
-
-== GeoPose Local Frame of Reference Specifications (Informative)
+[[annex-D]]
+[appendix,obligation=informative]
+== GeoPose Local Frame of Reference Specifications
 
 This annex has example Frame Specifications for the LTP-ENU and LTP-NED Reference Frames.
 
 === Local Tangent Plane - East North Up (LTP-ENU)
 
 LTP-ENU ISO 19162 WKT
----- 
 
+[%unnumbered]
+----
 BASEGEOGCRS["WGS 84",
     DATUM["World Geodetic System 1984",
         ELLIPSOID["WGS 84",6378137,298.257223563,
@@ -45,16 +43,14 @@ USAGE[
     AREA["To be specified"],
     BBOX[-90,-180,90,180]],
 ]
-
 ----
-
-
 
 === Local Tangent Plane - North East Down (LTP-NED)
 
 LTP-NED ISO 19162 WKT
----- 
 
+[%unnumbered]
+----
 BASEGEOGCRS["WGS 84",
     DATUM["World Geodetic System 1984",
         ELLIPSOID["WGS 84",6378137,298.257223563,
@@ -88,6 +84,4 @@ USAGE[
     AREA["To be specified"],
     BBOX[-90,-180,90,180]],
 ]
-
 ----
-

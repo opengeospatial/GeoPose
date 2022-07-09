@@ -1,8 +1,8 @@
-[appendix]
-:appendix-caption: Annex
+[[annex-H]]
+[appendix,obligation=informative]
 == Revision History
 
-[width="90%",options="header"]
+[%unnumbered,options="header"]
 |===
 |Date |Release |Editor | Primary clauses modified |Description
 |2020-11-21 |0.1.0 |Steve Smyth |all |initial integrated version

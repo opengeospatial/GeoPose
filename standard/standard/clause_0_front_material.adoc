@@ -1,89 +1,98 @@
-[big]*i.     Abstract*
+[abstract]
+== Abstract
 
-GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The standard specifies two Basic forms with no configuration options for common use cases, an Advanced form with more flexibility for more complex applications, and five composite GeoPose structures that support time series plus chain and graph structures.
+GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and
+orientation of real or virtual geometric objects (Poses) within reference frames
+anchored to the earth's surface (Geo) or within other astronomical coordinate
+systems. The standard specifies two Basic forms with no configuration options for
+common use cases, an Advanced form with more flexibility for more complex
+applications, and five composite GeoPose structures that support time series plus
+chain and graph structures.
 
-These eight Standardization Targets are independent. There are no dependencies between Targets and each may be implemented as needed to support a specific use case. 
+These eight Standardization Targets are independent. There are no dependencies
+between Targets and each may be implemented as needed to support a specific use case.
 
-The Standardization Targets share an implementation-neutral Logical Model which establishes the structure and relationships between GeoPose components and also between GeoPose data objects themselves in composite structures. Not all of the classes and properties of the Logical Model are expressed in individual Standardization Targets nor in the specific concrete data objects defined by this standard. Those elements that are expressed are denoted as implementation-neutral Structural Data Units (SDUs). SDUs are aliases for elements of the Logical Model, isolated to facilitate specification of their use in encoded GeoPose data objects for a specific Standardization Target. 
+The Standardization Targets share an implementation-neutral Logical Model which
+establishes the structure and relationships between GeoPose components and also
+between GeoPose data objects themselves in composite structures. Not all of the
+classes and properties of the Logical Model are expressed in individual
+Standardization Targets nor in the specific concrete data objects defined by this
+standard. Those elements that are expressed are denoted as implementation-neutral
+Structural Data Units (SDUs). SDUs are aliases for elements of the Logical Model,
+isolated to facilitate specification of their use in encoded GeoPose data objects for
+a specific Standardization Target.
 
-For each Standardization Target, each implementation technology and corresponding encoding format defines the encoding or serialization specified in a manner appropriate to that technology.
+For each Standardization Target, each implementation technology and corresponding
+encoding format defines the encoding or serialization specified in a manner
+appropriate to that technology.
 
-GeoPose Version 1.0 specifies a single encoding: http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf[IETF RFC 8259 / ECMA JavaScript Object Notation (JSON)]. Each Standardization Target has a JSON-Schema:2019-9 encoding specification. The key standardization requirements specify that concrete JSON-encoded GeoPose data objects must conform to the corresponding JSON-Schema definition. The individual elements identified in the encoding specification are composed of SDUs, tying the specifications back to the Logical Model.
+GeoPose Version 1.0 specifies a single encoding:
+http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf[IETF RFC
+8259 / ECMA JavaScript Object Notation (JSON)]. Each Standardization Target has a
+JSON-Schema:2019-9 encoding specification. The key standardization requirements
+specify that concrete JSON-encoded GeoPose data objects must conform to the
+corresponding JSON-Schema definition. The individual elements identified in the
+encoding specification are composed of SDUs, tying the specifications back to the
+Logical Model.
 
-The GeoPose 1.0 Standard makes no assumptions about the interpretation of external specifications, for example, of reference frames. Nor does it assume or constrain services or interfaces providing conversion between GeoPoses of difference types or relying on different external reference frame definitions.
+The GeoPose 1.0 Standard makes no assumptions about the interpretation of external
+specifications, for example, of reference frames. Nor does it assume or constrain
+services or interfaces providing conversion between GeoPoses of difference types or
+relying on different external reference frame definitions.
 
-[big]*ii.    Keywords*
-
-The following are keywords to be used by search engines and document catalogues.
-
-ogc, ogcdoc, OGC document,  pose, geopose, ar, reference frame
-
-[big]*iii.   Preface*
+== Preface
 
 [NOTE]
 ====
-This is a draft implementation specification for GeoPose 1.0. 
-Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+This is a draft implementation specification for GeoPose 1.0.
+Attention is drawn to the possibility that some of the elements of this document may
+be the subject of patent rights. The Open Geospatial Consortium shall not be held
+responsible for identifying any or all such patent rights.
 
-Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+Recipients of this document are requested to submit, with their comments,
+notification of any relevant patent claims or other intellectual property rights of
+which they may be aware that might be infringed by any implementation of the standard
+set forth in this document, and to provide supporting documentation.
 ====
-[big]*iv.    Submitting organizations*
 
-The following organizations submitted this Document to the Open Geospatial Consortium (OGC):
+== Submitters
 
-[NOTE]
-The organizations, submitters, participants, and acknowledgements are open to changes and additions - just email a chair or editor.
+All questions regarding this submission should be directed to the editors or the
+submitters:
 
-Organization name(s)
-
-This Document was submitted to the Open Geospatial Consortium (OGC) by the members of the GeoPose Standards Working Group of the OGC. Amongst others, this comprises the following organizations:
-
-* Norkart AS
-* Open Site Plan
-* Open AR Cloud Association
-* Ordnance Survey
-* School of Management and Engineering Vaud, HES-SO University of Applied Sciences and Arts Western Switzerland
-
-
-
-[big]*v.     Submitters*
-
-All questions regarding this submission should be directed to the editors or the submitters:
-
-[#submission_contact_points,reftext='{table-caption} {counter:table-num}']
 .Submission Contact Points
-[width="100%",cols="5,10",options="header"]
+[cols="5,10",options="header"]
 |===
 |Name |Institution
-|Nicolas Blanc|School of Management and Engineering Vaud, HES-SO University of Applied Sciences and Arts Western Switzerland
+|Nicolas Blanc|School of Management and Engineering Vaud, HES-SO University of
+Applied Sciences and Arts Western Switzerland
 |Kyoung-Sook Kim |National Institute of Advanced Industrial Science and Technology
 |Jeremy Morley | Ordnance Survey
 |Christine Perey |Open AR Cloud Association
-|Mahmoud SAKR |Université Libre de BRUXELLES 
+|Mahmoud SAKR |Université Libre de BRUXELLES
 |Scott Simmons |Open Geospatial Consortium
-|Carl Stephen Smyth |OpenSitePlan, USA 
+|Carl Stephen Smyth |OpenSitePlan, USA
 |Jan-Erik Vinje |Open AR Cloud Association
 |===
 
-
-[big]*vi.     Participants in development*
+[.preface]
+== Participants in development
 
 The following individuals contributed to the GeoPose 1.0 development:
 
-[#participants_in_development,reftext='{table-caption} {counter:table-num}']
 .Participants in Development
-[width="100%",cols="1,2",options="header"]
+[cols="1,2",options="header"]
 |===
 |Name |Institution
-|Nazih Fino |Global Nomad 
-|Josh Lieberman | Open Geospatial Consortium 
+|Nazih Fino |Global Nomad
+|Josh Lieberman | Open Geospatial Consortium
 |Mikel Salazar |Augmented Interaction
 |Maxime Schoemans |Université Libre de Bruxelles
 |Marco Tillmann |Blackshark.ai
-
 |===
 
+== Acknowledgements
 
-[big]*vii.    Acknowledgements*
-
-The GeoPose SWG wishes to thank the 3D Information Management (3DIM) Working Group of the OGC as well as Augmented City, Immersal, Trevor F. Smith, Transmutable, Khronos Group, SEDRIS, Roger Lott and Chris Little for their support and insight.
+The GeoPose SWG wishes to thank the 3D Information Management (3DIM) Working Group of
+the OGC as well as Augmented City, Immersal, Trevor F. Smith, Transmutable, Khronos
+Group, SEDRIS, Roger Lott and Chris Little for their support and insight.

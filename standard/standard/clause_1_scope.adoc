@@ -1,16 +1,40 @@
 == Scope
 
+The OGC GeoPose 1.0 Standard defines requirements (rules) for the interoperable
+exchange of the location and orientation of real or virtual geometric objects (poses)
+within reference frames anchored to the earth's surface (Geo) or within other
+astronomical coordinate systems. The Standard specifies
 
-The OGC GeoPose 1.0 Standard defines requirements (rules) for the interoperable exchange of the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The Standard specifies 
-
-* A basic form with no configuration options for common use cases, 
-* An advanced form with more flexibility for more complex applications, and 
+* A basic form with no configuration options for common use cases,
+* An advanced form with more flexibility for more complex applications, and
 * Composite GeoPose structures to support time series chain, and graph structures.
 
-The GeoPose Standard is based on an implementation-neutral Logical Model (LM). This LM is a formalization of a Conceptual Model (CM). The CM consists of a linked set of terms and definitons, defining a domain odf discourse for the various geometrric, geographic, and physical concepts related to GeoPoses. The LM formalizes the relationships between the implementable parts and aspects of the CM. The LM further establishes the structure and relationships between GeoPose components and also between GeoPoses data objects themselves in composite structures. 
+The GeoPose Standard is based on an implementation-neutral Logical Model (LM). This LM
+is a formalization of a Conceptual Model (CM). The CM consists of a linked set of terms
+and definitons, defining a domain odf discourse for the various geometrric, geographic,
+and physical concepts related to GeoPoses. The LM formalizes the relationships between
+the implementable parts and aspects of the CM. The LM further establishes the structure
+and relationships between GeoPose components and also between GeoPoses data objects
+themselves in composite structures.
 
-Note that the concrete GeoPose data objects defined by this standard correspond to only certain classes and properties of the LM. These classes and properties are identified as implementation-neutral Structural Data Units (SDUs). SDUs are  aliases for the implementable elements of the LM. SDUs are grouped to define the implementation-neutral form of the GeoPose Standardization Targets: the specific implementation that the Standard addresses. For each Standardization Target, each implementation technology will have the definition of the encoding or serialization specified in a manner appropriate to that technology.
+Note that the concrete GeoPose data objects defined by this standard correspond to only
+certain classes and properties of the LM. These classes and properties are identified
+as implementation-neutral Structural Data Units (SDUs). SDUs are  aliases for the
+implementable elements of the LM. SDUs are grouped to define the implementation-neutral
+form of the GeoPose Standardization Targets: the specific implementation that the
+Standard addresses. For each Standardization Target, each implementation technology
+will have the definition of the encoding or serialization specified in a manner
+appropriate to that technology.
 
-GeoPose Version 1.0 defines only one of many possible encoding methods for implementation of any or all of the eight STandardization Targets: JavaScript Object Notation (JSON). Each Standardization Target has a JSON-Schema:2019-9 definition. Most of the GeoPose standardization requirements are that concrete JSON GeoPose data objects shall conform to the corresponding JSON-Schema definition. The individual elements identified in the encoding specifications are SDUs that refer to one or more classes or attributes of the LM.
+GeoPose Version 1.0 defines only one of many possible encoding methods for
+implementation of any or all of the eight STandardization Targets: JavaScript Object
+Notation (JSON). Each Standardization Target has a JSON-Schema:2019-9 definition. Most
+of the GeoPose standardization requirements are that concrete JSON GeoPose data objects
+shall conform to the corresponding JSON-Schema definition. The individual elements
+identified in the encoding specifications are SDUs that refer to one or more classes or
+attributes of the LM.
 
-The GeoPose 1.0 Standard excludes assumptions about the interpretation of external specifications such as reference frames. Further, the Standard does not assume or constrain services or interfaces providing conversion between GeoPoses of difference types or relying on different external reference frame definitions.
+The GeoPose 1.0 Standard excludes assumptions about the interpretation of external
+specifications such as reference frames. Further, the Standard does not assume or
+constrain services or interfaces providing conversion between GeoPoses of difference
+types or relying on different external reference frame definitions.
