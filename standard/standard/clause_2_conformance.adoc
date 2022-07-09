@@ -1,19 +1,32 @@
 == Conformance
 
+Conformance with this standard shall be checked using all the relevant tests
+specified in <<annex-A>> (Normative) of this document. The framework, concepts, and
+methodology for testing, and the criteria to be achieved to claim conformance are
+specified in the OGC Compliance Testing Policies
+(https://portal.ogc.org/files/?artifact_id=55234) and Procedures and the OGC
+Compliance Testing web site (https://www.ogc.org/compliance). GeoPose 1.0 JSON
+encodings are specified via JSON-Schema:2019-9 and most of the requirements are that
+conforming encoded data objects shall validate against the corresponding schema.
 
-
-Conformance with this standard shall be checked using all the relevant tests specified in Annex A (Normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies (https://portal.ogc.org/files/?artifact_id=55234) and Procedures and the OGC Compliance Testing web site (https://www.ogc.org/compliance). GeoPose 1.0 JSON encodings are specified via JSON-Schema:2019-9 and most of the requirements are that conforming encoded data objects shall validate against the corresponding schema.
-
-All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
+All requirements-classes and conformance-classes described in this document are owned
+by the standard(s) identified.
 
 === Modularity
 
-This standard describes eight standardization targets. These targets are independent and a conforming implementation may implement one or more of the targets.
+This standard describes eight standardization targets. These targets are independent
+and a conforming implementation may implement one or more of the targets.
 
 === Conformance Classes
 
-This OGC® standard identifies eight conformance classes. One conformance class is defined for each corresponding set of Structural Data Units (SDUs) where each SDU is linked to the Logical Model as an alias for a class or attribute. Additionally, each of the eight standardization targets is represented by a conformance class as defined by a corresponding requirements class.
-The tests in <<abstract-test-suite,Annex A>> are organized by requirements class. An implementation of a conformance class must pass all tests specified in Annex A for the corresponding requirements class.
+This OGC® standard identifies eight conformance classes. One conformance class is
+defined for each corresponding set of Structural Data Units (SDUs) where each SDU is
+linked to the Logical Model as an alias for a class or attribute. Additionally, each
+of the eight standardization targets is represented by a conformance class as defined
+by a corresponding requirements class.
+The tests in <<annex-A>> are organized by requirements class. An implementation of a
+conformance class must pass all tests specified in <<annex-A>> for the corresponding
+requirements class.
 
 No conformance class has a dependency on another conformance class.
 
@@ -21,12 +34,21 @@ The Logical Model is the root normative part of this standard.
 
 === Standardization Targets
 
-There are eight independent standardization targets. Each addresses the specific requirements of one or more individual use cases. The Basic and Advanced Targets share in the use of an EPSG 4979/3D WGS-84 <<def_Outer_Frame, **Outer Frame**>> but differ in the level of options and flexibility in specication of the <<def_Inner_Frame,**Inner Frame**>>. The Composite Targets offer approaches to packaging sequenced or linked Frame Transforms.  The eight targets are denoted by bold terms in the following categories:
+There are eight independent standardization targets. Each addresses the specific
+requirements of one or more individual use cases. The Basic and Advanced Targets
+share in the use of an EPSG 4979/3D WGS-84 <<def_Outer_Frame,*Outer Frame*>> but
+differ in the level of options and flexibility in specication of the
+<<def_Inner_Frame,*Inner Frame*>>. The Composite Targets offer approaches to
+packaging sequenced or linked Frame Transforms.  The eight targets are denoted by
+bold terms in the following categories:
 
 . Basic - Satisfy most use cases - EPSG 4979 Outer Frame
-.. Local Tangent Plane East, North, Up(LTP-ENU) <<def_Inner_Frame,**Inner Frame**>> oriented by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
-.. LTP-ENU <<def_Inner_Frame,**Inner Frame**>> oriented by unit quaternion: *Basic-Quaternion* Target
-. Configurable <<def_Inner_Frame,**Inner Frame**>> oriented by unit quaternion - Flexible enough for complex use cases: *Advanced* Target
+.. Local Tangent Plane East, North, Up(LTP-ENU) <<def_Inner_Frame,*Inner Frame*>>
+oriented by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
+.. LTP-ENU <<def_Inner_Frame,*Inner Frame*>> oriented by unit quaternion:
+*Basic-Quaternion* Target
+. Configurable <<def_Inner_Frame,*Inner Frame*>> oriented by unit quaternion -
+Flexible enough for complex use cases: *Advanced* Target
 . Composite - Efficient structures for linked and sequential GeoPoses
 .. Linked linear sequence of poses: *Chain* Target
 .. General linked poses: *Graph* Target
@@ -35,5 +57,3 @@ There are eight independent standardization targets. Each addresses the specific
 .... Timeseries with constant time spacing: *Regular* Timeseries Target
 .... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
 ... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
-
-

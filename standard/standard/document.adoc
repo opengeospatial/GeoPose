@@ -1,0 +1,61 @@
+= Draft OGC GeoPose 1.0 Data Exchange Standard
+:doctype: standard
+:docsubtype: implementation
+:status: draft
+:language: en
+:committee:
+:docnumber: 21-056r10
+:edition: 1
+:received-date: 2022-02-08
+:issued-date:
+:published-date:
+:copyright-year: 2022
+:external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
+:fullname: Carl Stephen Smyth
+:role: editor
+:keywords: ogc, ogcdoc, OGC document, pose, geopose, ar, reference frame
+:submitting-organizations: Norkart AS; Open Site Plan; Open AR Cloud Association; Ordnance Survey; School of Management and Engineering Vaud, HES-SO University of Applied Sciences and Arts Western Switzerland
+:toclevels: 3
+:mn-document-class: ogc
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+include::clause_0_front_material.adoc[]
+
+include::clause_1_scope.adoc[]
+
+include::clause_2_conformance.adoc[]
+
+include::clause_3_references.adoc[]
+
+include::clause_4_terms_and_definitions.adoc[]
+
+include::clause_5_conventions.adoc[]
+
+include::clause_6_informative_text.adoc[]
+
+include::clause_7_normative_text.adoc[]
+
+include::clause_8_media_types.adoc[]
+
+include::annex-ats.adoc[]
+
+//include::annex-b-sdu-definitions.adoc[]
+
+//include::annex-c-json-schema-specifications.adoc[]
+
+include::annex-d-geopose-frame-specs.adoc[]
+
+//include::annex-e-euler-angles.adoc[]
+
+//include::annex-f-quaternions.adoc[]
+
+include::annex-g-time.adoc[]
+
+include::annex-glossary.adoc[]
+
+include::annex-history.adoc[]
+
+include::annex-bibliography.adoc[]

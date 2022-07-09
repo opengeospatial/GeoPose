@@ -2,26 +2,34 @@
 
 === Document Structure
 
-The structure of the GeoPose Standard document flows from 
+The structure of the GeoPose Standard document flows from
 
-* use cases to the definition of a conceptual domain of discourse comprehensive enough to support those use cases, 
+* use cases to the definition of a conceptual domain of discourse comprehensive enough
+to support those use cases,
 
-* a realization of a portion of that conceptual domain with an implementation-neutral but specific and normative logical data model expressed in UML, and 
+* a realization of a portion of that conceptual domain with an implementation-neutral
+but specific and normative logical data model expressed in UML, and
 
-* the normative derivation of specific structural data units that represent abstract implementation and standardization targets. 
+* the normative derivation of specific structural data units that represent abstract
+implementation and standardization targets.
 
-These Structural Data Units(SDU)s are abstract: they are independent of implementation or delivery technology and serialization or encoding formats. GeoPose Version 1.0 specifies one of many possible realizations of the structural data units in JSON.
+These Structural Data Units(SDU)s are abstract: they are independent of implementation
+or delivery technology and serialization or encoding formats. GeoPose Version 1.0
+specifies one of many possible realizations of the structural data units in JSON.
 
-A key aspect of the GeoPose Standard is that specific use cases are tied to the standardization targets, which prescribe the structure and content of GeoPose data objects. Corresponding implementation examples appear in other documents.
+A key aspect of the GeoPose Standard is that specific use cases are tied to the
+standardization targets, which prescribe the structure and content of GeoPose data
+objects. Corresponding implementation examples appear in other documents.
 
-Of course, GeoPose must incorporate or align with other relevant existing standards and common practices. The goal is to fill an interoperability gap in existing standards without reinventing technology in a way that encourages interoperability. 
+Of course, GeoPose must incorporate or align with other relevant existing standards and
+common practices. The goal is to fill an interoperability gap in existing standards
+without reinventing technology in a way that encourages interoperability.
 
-[[]]
+[[fig7]]
 .Document Structure Overview
 image::diagram/OGC_Process_Detail.png[align="center"]
 
 [[use_case_summary]]
-
 === Use Case Summary
 
 include::use_cases/use_cases.adoc[]

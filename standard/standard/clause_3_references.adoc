@@ -1,32 +1,57 @@
+[bibliography]
 == References
 
-The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+The following normative documents contain provisions that, through reference in this 
+text, constitute provisions of this document. For dated references, subsequent 
+amendments to, or revisions of, any of these publications do not apply. For undated 
+references, the latest edition of the normative document referred to applies.
 
+* [[[json2017,JSON]]], Bray, T., Ed., "The JavaScript Object Notation (JSON) Data Interchange Format", STD 90, RFC 8259, December 2017, https://www.rfc-editor.org/info/std90
 
+* [[[jsonschema2019,JSON-Schema 2019-09]]], H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09" https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8
 
+* [[[jsonschemavalidation2019,JSON-Schema Validation 2019-09]]], A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. https://tools.ietf.org/html/draft-handrews-json-schema-validation-02
 
-* [[json2017,JSON]] Bray, T., Ed., "The JavaScript Object Notation (JSON) Data Interchange Format", STD 90, RFC 8259, December 2017, https://www.rfc-editor.org/info/std90
-* [[jsonschema2019,JSON-Schema 2019-09]]H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09"  https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8 
-* [[jsonschemavalidation2019,JSON-Schema Validation 2019-09]]A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. https://tools.ietf.org/html/draft-handrews-json-schema-validation-02
-* [[iso19101, ISO 19101]]ISO 19101 Conceptual Modelling
-* [[iso19103,ISO 19103:2015]] ISO: ISO 19103:2015, Geographic Information – Conceptual Schema Language
-* [[iso19109,ISO 19109:2015]] ISO: ISO 19109:2015, Geographic Information – Rules for Application Schemas
-* [[iso19111,ISO 19111:2019]] ISO: ISO 19111:2019, Geographic information – Referencing by coordinates
-* [[iso19115,ISO 19115-1]]ISO / TC 211: ISO 19115-1:2014 Geographic information -- Metadata -- Part 1: Fundamentals (2014)
-* [[iso19157,ISO 19157:2013]]ISO / TC 211: ISO 19157:2013 Geographic information -- Data quality (2013)
-* [[iso19139,ISO 19139:2007]]ISO / TC 211: ISO 19139:2007 Geographic information -- Metadata -- XML schema implementation (2007)
-* [[iso86011,ISO 8601-1:2019]]ISO / TC 154: ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules (2019)
-* [[iso86012,ISO 8601-2:2019]]ISO / TC 154: ISO 8601-2:2019 Date and time — Representations for information interchange — Part 1: Extensions (2019)
-* [[ogc15097,OGC 15-097]]OGC: OGC 15-097 OGC Geospatial User Feedback Standard. Conceptual Model (2016)
-* [[ogc12019,OGC 12-019]]OGC: OGC 12-019, OGC City Geography Markup Language (CityGML) Encoding Standard (2012)
-* [[ogc14005,OGC 14-005]]OGC: OGC 14-005, OGC IndoorGML (2014)
-* [[rfc2045,RFC 2045]] IETF: RFC 2045 & 2046, Multipurpose Internet Mail Extensions (MIME). (November 1996),
-* [[rfc3986,RFC 3986]] IETF: RFC 3986, Uniform Resource Identifier (URI): Generic Syntax. (January 2005)
-* [[inspirebu,INSPIRE: D2.8.III.2]] INSPIRE: D2.8.III.2 Data Specification on Buildings – Technical Guidelines. European Commission Joint Research Centre.
-* [[iso19505,ISO/IEC 19505-2:2012]] ISO: ISO/IEC 19505-2:2012, Information technology — Object Management Group Unified Modeling Language (OMG UML) — Part 2: Superstructure
-* [[iso19507,ISO/IEC 19507:2012]] ISO/IEC 19507:2012, Information technology — Object Management Group Object Constraint Language (OCL)
-* [[collada,COLLADA]] Khronos Group Inc.: COLLADA – Digital Asset Schema Release 1.5.0
-* [[topic5,OGC Topic 5]] OGC: The OpenGIS® Abstract Specification Topic 5: Features, OGC document 08-126
-* [[topic8,OGC Topic 8]] OGC: The OpenGIS™ Abstract Specification Topic 8: Relationships Between Features, OGC document 99-108r2
-* [[ogc20-010, OGC 20-010]] OGC: OGC 20-010, OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard, v3.0, 2021.
-* [[ogc07-036, OGC 07-036]] OGC: OGC 07-036, OpenGIS® Geography Markup Language (GML) Encoding Standard, v3.2.1, 2007.
+* [[[iso19101, ISO 19101]]]
+
+* [[[iso19103,ISO 19103:2015]]]
+
+* [[[iso19109,ISO 19109:2015]]]
+
+* [[[iso19111,ISO 19111:2019]]]
+
+* [[[iso19115,ISO 19115-1:2014]]]
+
+* [[[iso19157,ISO 19157:2013]]]
+
+* [[[iso19139,ISO/TC 211 19139:2007]]]
+
+* [[[iso86011,ISO 8601-1:2019]]]
+
+* [[[iso86012,ISO 8601-2:2019]]]
+
+* [[[ogc15097,OGC 15-097]]]
+
+* [[[ogc12019,OGC 12-019]]]
+
+* [[[ogc14005,OGC 14-005]]]
+
+* [[[rfc2045,RFC 2045]]]
+
+* [[[rfc3986,RFC 3986]]]
+
+* [[[inspirebu,INSPIRE: D2.8.III.2]]], INSPIRE: D2.8.III.2 Data Specification on Buildings - Technical Guidelines. European Commission Joint Research Centre.
+
+* [[[iso19505,ISO/IEC 19505-2:2012]]]
+
+* [[[iso19507,ISO/IEC 19507:2012]]]
+
+* [[[collada,COLLADA]]], Khronos Group Inc.: COLLADA - Digital Asset Schema Release 1.5.0
+
+* [[[topic5,OGC Topic 5]]], OGC: The OpenGIS® Abstract Specification Topic 5: Features, OGC document 08-126
+
+* [[[topic8,OGC Topic 8]]], OGC: The OpenGIS™ Abstract Specification Topic 8: Relationships Between Features, OGC document 99-108r2
+
+* [[[ogc20-010, OGC 20-010]]]
+
+* [[[ogc07-036, OGC 07-036]]]

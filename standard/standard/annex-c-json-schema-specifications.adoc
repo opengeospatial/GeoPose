@@ -1,23 +1,21 @@
-[appendix]
-:appendix-caption: Annex
-[[json-schema-use]]
-
-== JSON Encoding Specifications (Normative)
+[[annex-C]]
+[appendix,obligation=normative]
+== JSON Encoding Specifications
 
 [NOTE]
 Each Standardization Target has its requirements class here as a JSON-Schema spec 
 
 === Basic-Euler JSON Encoding Requirements
 
-
-
 ==== Requirement 1
-[cols=">20h,<80d",width="100%"]
-|===
-|Test id: |/conf/conf-class-a/req-name-1
-|Requirement: |/req/req-class-a/req-name-1
-|Test purpose: | Verify that...
-|Test method: | Inspect...
-|===
+
+[requirement]
+====
+[%metadata]
+label:: /conf/conf-class-a/req-name-1
+requirement:: /req/req-class-a/req-name-1
+purpose:: Verify that...
+method:: Inspect...
+====
 
 ==== Requirement 2

@@ -1,22 +1,21 @@
-[appendix]
-:appendix-caption: Annex 
-[[sdu-use]]
-
-
-== Definition of Structural Data Units (Normative)
+[[annex-B]]
+[appendix,obligation=normative]
+== Definition of Structural Data Units
 
 [NOTE]
-Each of the SDUs is specified here 
+Each of the SDUs is specified here
 
 === Conformance Class SDU
 
 ==== Requirement 1
-[cols=">20h,<80d",width="100%"]
-|===
-|Test id: |/conf/conf-class-a/req-name-1
-|Requirement: |/req/req-class-a/req-name-1
-|Test purpose: | Verify that...
-|Test method: | Inspect...
-|===
+
+[requirement]
+====
+[%metadata]
+label:: /conf/conf-class-a/req-name-1
+requirement:: /req/req-class-a/req-name-1
+purpose:: Verify that...
+method:: Inspect...
+====
 
 ==== Requirement 2
