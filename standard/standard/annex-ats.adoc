@@ -30,20 +30,30 @@ Conformance with the Global Requirements is required for all implementations.
 ====
 [%metadata]
 label:: <<conf_global,/conf/global>>
+subject:: <<rc_global,Requirement Class "Global">>
 classification:: Target Type:SDU
 description:: Conformance with Global SDU requirements
 inherit:: None
 
-[conformance_test,label="/conf/target_dependency",name="G-Target",id="rta1"]
+[conformance_test,id="rta1"]
 ======
+[%metadata]
+label:: <<conformance_global,/conf/target_dependency>>
+name:: G-Target
 ======
 
-[conformance_test,label="/conf/sdu_general",name="G-SDU",id="rta2"]
+[conformance_test,id="rta2"]
 ======
+[%metadata]
+label:: <<conformance_sdu,/conf/sdu_general>>
+name:: G-SDU
 ======
 
-[conformance_test,label="/conf/lm_general",name="G-LM",id="rta3"]
+[conformance_test,id="rta3"]
 ======
+[%metadata]
+label:: <<conformance_lm,/conf/lm_general>>
+name:: G-LM
 ======
 ====
 
@@ -59,7 +69,7 @@ description:: There SHALL be no dependency between or among the individual
 Standardization Targets.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/target_dependency
+reference:: <<global,/req/target_dependency>>
 classification:: Test Type:Conformance
 ====
 
@@ -74,7 +84,7 @@ description of the Logical Model elements with the "Structural Data Unit - SDU"
 stereotype.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/sdu_general
+reference:: <<sdu_confomance,/req/sdu_general>>
 classification:: Test Type:Conformance
 ====
 
@@ -89,7 +99,7 @@ conform to all dependent or inherited classes, attributes, and associations,
 multiplicities, and data types in the Logical Model.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/lm_general
+reference:: <<lm_confomance,/req/lm_general>>
 classification:: Test Type:Conformance
 ====
 

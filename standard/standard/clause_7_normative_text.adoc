@@ -148,9 +148,9 @@ label:: <<req_global,/req/global>>
 subject:: SDU
 description:: Global SDU Requirements
 inherit:: None
-requirement:: /req/target_dependency
-requirement:: /req/sdu_general
-requirement:: /req/lm_general
+requirement:: <<global,/req/target_dependency>>
+requirement:: <<sdu_confomance,/req/sdu_general>>
+requirement:: <<lm_confomance,/req/lm_general>>
 ====
 
 The individual global requirements are defined as follows:
