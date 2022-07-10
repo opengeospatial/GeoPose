@@ -386,7 +386,7 @@ inherit:: /req/global
 ======
 ======
 
-[requirement,label="/req/geopose_instant/sdu",name="GP-Instant-SDU",id="req6"]
+[requirement,label="/req/time/geopose_instant/sdu",name="GP-Instant-SDU",id="req6"]
 ======
 ======
 
