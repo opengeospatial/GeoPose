@@ -580,19 +580,19 @@ inherit:: /req/global
 ======
 ======
 
-[requirement,label="/req/geopose_instant/sdu",name="GP-Instant-SDU",id="req18"]
+[requirement,label="/req/time/geopose_instant/sdu",name="GP-Instant-SDU",id="req17"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU",id="req19"]
+[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU",id="req18"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU",id="req20"]
+[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU",id="req19"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU",id="req21"]
+[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU",id="req20"]
 ======
 ======
 ====
