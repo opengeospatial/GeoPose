@@ -146,7 +146,7 @@ Global requirements apply to all SDUs and Standardization Targets.
 [requirement,type="class"]
 ====
 [%metadata]
-label:: <<req_global,/req/global>>
+label:: /req/global
 subject:: SDU
 description:: Global SDU Requirements
 inherit:: None
@@ -170,7 +170,7 @@ Standardization Targets.
 [requirement]
 ====
 [%metadata]
-label:: <<req_sdu_general,/req/sdu_general>>
+label:: /req/sdu_general
 description:: Implementations using encoded SDUs SHALL conform to the logical
 description of the Logical Model elements with the "Structural Data Unit - SDU"
 stereotype.
@@ -180,7 +180,7 @@ stereotype.
 [requirement]
 ====
 [%metadata]
-label:: <<req_lm_general,/req/lm_general>>
+label:: /req/lm_general
 description:: Implementations of concrete data conforming to this standard SHALL
 conform to all dependent or inherited classes, attributes, and associations,
 multiplicities, and data types in the Logical Model.
@@ -205,7 +205,7 @@ image::diagram/Basic-YPR_SDU.PNG[]
 [requirement,type="class"]
 ====
 [%metadata]
-label:: <<req_basic_ypr_sdu,/req/basic_ypr/sdu>>
+label:: /req/basic_ypr/sdu
 subject:: Implementation of Logical Model
 description:: Basic-YPR Logical Model SDU
 inherit:: /req/global
@@ -222,7 +222,7 @@ Details of the individual requirements:
 [requirement]
 ====
 [%metadata]
-label:: <<req_basic_ypr,/req/basic_ypr/sdu>>
+label:: /req/basic_ypr/sdu
 description:: An implementation of a Basic-YPR Target SHALL consist of an Outer Frame
 specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate
 system and explicit parameters to define the tangent point. The Inner Frame SHALL be a
@@ -234,7 +234,7 @@ and represented as signed real number values.
 [requirement]
 ====
 [%metadata]
-label:: <<req_tangent_plane_longitude,/req/tangent_plane_longitude/sdu>>
+label:: /req/tangent_plane_longitude/sdu
 description:: An instance of a GeoPose tangentPoint.longitude attribute SHALL be
 expressed as decimal degrees and represented as signed real number values.
 ====
@@ -243,7 +243,7 @@ expressed as decimal degrees and represented as signed real number values.
 [requirement]
 ====
 [%metadata]
-label:: <<req_tangent_plane_latitude,/req/tangent_plane_latitude/sdu>>
+label:: /req/tangent_plane_latitude/sdu
 description:: An instance of GeoPose tangentPoint.latitude attribute SHALL be
 expressed as decimal degrees and represented as signed real number values.
 ====
@@ -252,7 +252,7 @@ expressed as decimal degrees and represented as signed real number values.
 [requirement]
 ====
 [%metadata]
-label:: <<req_tangent_plane_h,/req/tangent_plane_h/sdu>>
+label:: /req/tangent_plane_h/sdu
 description:: An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as
 a height in meters above the WGS-84 ellipsoid and represented as a signed real number
 value.
@@ -262,7 +262,7 @@ value.
 [requirement]
 ====
 [%metadata]
-label:: <<req_sdu_orientation_ypr_angles,/req/orientation_ypr_angles/sdu>>
+label:: /req/orientation_ypr_angles/sdu
 description:: Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three consecutive
 rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where
 the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the
@@ -290,7 +290,7 @@ image::diagram/Basic-Quaternion_SDU.PNG[]
 [requirements_class]
 ====
 [%metadata]
-label:: <<req_basic_quaternion_sdu,/req/basic_quaternion/sdu>>
+label:: /req/basic_quaternion/sdu
 subject:: Implementation of Logical Model
 inherit:: /req/global
 description:: Basic-Quaternion Logical Model SDU
@@ -316,7 +316,7 @@ description:: Basic-Quaternion Logical Model SDU
 ====
 [%metadata]
 name:: B-TP-Lon-SDU
-label:: <<req_tangent_plane_longitude,/req/tangent_plane_longitude/sdu>>
+label:: /req/tangent_plane_longitude/sdu
 description:: An instance of a GeoPose tangentPoint.longitude attribute SHALL be
 expressed as decimal degrees, represented as a signed real number.
 ====
@@ -325,7 +325,7 @@ expressed as decimal degrees, represented as a signed real number.
 ====
 [%metadata]
 name:: B-TP-Lat-SDU
-label:: <<req_tangent_plane_latitude,/req/tangent_plane_latitude/sdu>>
+label:: /req/tangent_plane_latitude/sdu
 description:: An instance of GeoPose tangentPoint.latitude attribute SHALL be
 expressed as decimal degrees, represented as a signed real number.
 ====
@@ -334,7 +334,7 @@ expressed as decimal degrees, represented as a signed real number.
 ====
 [%metadata]
 name:: B-TP-h-SDU
-label:: <<req_tangent_plane_h,/req/tangent_plane_h/sdu>>
+label:: /req/tangent_plane_h/sdu
 description:: An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as
 a height in meters above the WGS-84 ellipsoid, represented as a signed real number.
 If the tangent point is above the WGS-84 ellipsoid, the value SHALL be positive. If the
@@ -351,7 +351,7 @@ constraints would be found as reuirments on a specific implementation as an enco
 ====
 [%metadata]
 name:: B-Quaternion-SDU
-label:: <<req_orientation_quaternion_sdu,/req/orientation_quaternion/sdu>>
+label:: /req/orientation_quaternion/sdu
 description:: An instance of a GeoPose Logical Model quaternion datatype value SHALL be
 expressed as four real numbers, representing four quaternion components w, x, y, z,
 in that sequential order. The sum of the squares of the individual components SHALL
@@ -379,7 +379,7 @@ image::diagram/Advanced_SDU.PNG[]
 [requirements_class]
 ====
 [%metadata]
-label:: <<req_advanced_sdu,/req/advanced/sdu>>
+label:: /req/advanced/sdu
 subject:: Implementation of Logical Model
 description:: Advanced Logical Model SDU
 inherit:: /req/global
@@ -414,7 +414,7 @@ inherit:: /req/global
 ====
 [%metadata]
 name:: GP-Instant-SDU
-label:: <<req_time_geopose_instant_sdu,/req/time/geopose_instant/sdu>>
+label:: /req/time/geopose_instant/sdu
 description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix
 Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
@@ -424,7 +424,7 @@ Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
 [%metadata]
 name:: FS-Authority-SDU
-label:: <<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+label:: /req/frame_specification/authority/sdu
 description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
@@ -434,7 +434,7 @@ uniquely specifying a source of reference frame specifications.
 ====
 [%metadata]
 name:: FS-ID-SDU
-label:: <<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+label:: /req/frame_specification/id/sdu
 description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
@@ -444,7 +444,7 @@ defining a frame within the authority.
 ====
 [%metadata]
 name:: FS-Parameters-SDU
-label:: <<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+label:: /req/frame_specification/parameters/sdu
 description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID. The definition of these
 parameters is outside the scope of GeoPose.
@@ -454,7 +454,7 @@ parameters is outside the scope of GeoPose.
 ====
 [%metadata]
 name:: Quaternion-SDU
-label:: <<req_orientation_quaternion_sdu,/req/orientation/quaternion/sdu>>
+label:: /req/orientation/quaternion/sdu
 description:: An instance of a GeoPose Logical Model quaternion datatype value SHALL be
 expressed as four real numbers, representing four quaternion components w, x, y, z,
 in that sequential order. The sum of the squares of the individual components SHALL
@@ -482,7 +482,7 @@ image::diagram/Graph_SDU.PNG[]
 [requirements_class]
 ====
 [%metadata]
-label:: <<req_graph_sdu,/req/graph/sdu>>
+label:: /req/graph/sdu
 subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global
@@ -516,7 +516,7 @@ inherit:: /req/global
 ====
 [%metadata]
 name:: Graph-SDU
-label:: <<req_time_geopose_instant_sdu,/req/time/geopose_instant/sdu>>
+label:: /req/time/geopose_instant/sdu
 description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix
 Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
@@ -525,7 +525,7 @@ Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
 [%metadata]
 name:: FS-Authority-SDU
-label:: <<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+label:: /req/frame_specification/authority/sdu
 description:: The frame_specification.authority attribute SHALL contain a
 string uniquely specifying a source of reference frame specifications.
 ====
@@ -534,7 +534,7 @@ string uniquely specifying a source of reference frame specifications.
 ====
 [%metadata]
 name:: FS-ID-SDU
-label:: <<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+label:: /req/frame_specification/id/sdu
 description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
@@ -543,7 +543,7 @@ defining a frame within the authority.
 ====
 [%metadata]
 name:: FS-Parameters-SDU
-label:: <<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+label:: /req/frame_specification/parameters/sdu
 description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
@@ -552,7 +552,7 @@ parameters needed for the corresponding authority and ID.
 ====
 [%metadata]
 name:: Transform_Index-SDU
-label:: <<req_transform_index_,/req/chain/transform_index/sdu>>
+label:: /req/chain/transform_index/sdu
 description:: Each index vaue in a FrameListTransformPair SHALL be a distinct integer
 value between 0 and one less than the number of elements in the frameList property.
 ====
@@ -573,7 +573,7 @@ image::diagram/Chain_SDU.PNG[]
 [requirements_class]
 ====
 [%metadata]
-label:: <<req_chain_sdu,/req/chain/sdu>>
+label:: /req/chain/sdu
 subject:: Implementation of Logical Model
 description:: Chain Logical Model SDU
 inherit:: /req/global
@@ -603,7 +603,7 @@ inherit:: /req/global
 ====
 [%metadata]
 name:: GP-Instant-SDU
-label:: <<req_time_geopose_instant_sdu,/req/time/geopose_instant/sdu>>
+label:: /req/time/geopose_instant/sdu
 description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix
 Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
@@ -612,7 +612,7 @@ Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
 [%metadata]
 name:: FS-Authority-SDU
-label:: <<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+label:: /req/frame_specification/authority/sdu
 description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
@@ -621,7 +621,7 @@ uniquely specifying a source of reference frame specifications.
 ====
 [%metadata]
 name:: FS-ID-SDU
-label:: <<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+label:: /req/frame_specification/id/sdu
 description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
@@ -630,7 +630,7 @@ defining a frame within the authority.
 ====
 [%metadata]
 name:: FS-Parameters-SDU
-label:: <<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+label:: /req/frame_specification/parameters/sdu
 description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
@@ -653,7 +653,7 @@ image::diagram/Regular-Series_SDU.PNG[]
 [requirements_class]
 ====
 [%metadata]
-label:: <<req_regular_series_sdu,/req/regular_series/sdu>>
+label:: /req/regular_series/sdu
 subject:: Implementation of Logical Model
 description:: Regular Series Logical Model SDU
 inherit:: /req/global
@@ -687,7 +687,7 @@ inherit:: /req/global
 ====
 [%metadata]
 name:: S-Header-SDU
-label:: <<req_regular_series_header/structure,/req/regular_series/header/sdu>>
+label:: /req/regular_series/header/sdu
 description:: A header property SHALL be implemented as a SeriesHeader structure.
 ====
 
@@ -695,7 +695,7 @@ description:: A header property SHALL be implemented as a SeriesHeader structure
 ====
 [%metadata]
 name:: GP-Duration-SDU
-label:: <<req_time_geopose_duration,/req/time/geopose_duration/SDU>>
+label:: /req/time/geopose_duration/SDU
 description:: An interposeDuration property SHALL be implemented as a
 GeoPoseDuration.
 ====
@@ -704,7 +704,7 @@ GeoPoseDuration.
 ====
 [%metadata]
 name:: FS-Authority-SDU
-label:: <<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+label:: /req/frame_specification/authority/sdu
 description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
@@ -713,7 +713,7 @@ uniquely specifying a source of reference frame specifications.
 ====
 [%metadata]
 name:: FS-ID-SDU
-label:: <<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+label:: /req/frame_specification/id/sdu
 description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
@@ -722,7 +722,7 @@ defining a frame within the authority.
 ====
 [%metadata]
 name:: FS-Parameters-SDU
-label:: <<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+label:: /req/frame_specification/parameters/sdu
 description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
@@ -731,7 +731,7 @@ parameters needed for the corresponding authority and ID.
 ====
 [%metadata]
 name:: S-Trailer-SDU
-label:: <<req_series_regular_trailer,/req/series/regular/trailer/sdu>>
+label:: /req/series/regular/trailer/sdu
 description:: A trailer property SHALL be implemented as a SeriesTrailer structure.
 ====
 
@@ -753,7 +753,7 @@ image::diagram/Irregular-Series_SDU.PNG[]
 [requirements_class]
 ====
 [%metadata]
-label:: <<req_irregular_series_sdu,/req/irregular_series/sdu>>
+label:: /req/irregular_series/sdu
 subject:: Implementation of Logical Model
 description:: Irregular Series Logical Model SDU
 inherit:: /req/global
@@ -787,7 +787,7 @@ inherit:: /req/global
 ====
 [%metadata]
 name:: S-IHeader-SDU
-label:: <<req_irregular_series_header_sdu,/req/irregular_series_header/sdu>>
+label:: /req/irregular_series_header/sdu
 description:: A header property SHALL be implemented as a SeriesHeader.
 ====
 
@@ -795,7 +795,7 @@ description:: A header property SHALL be implemented as a SeriesHeader.
 ====
 [%metadata]
 name:: FS-Authority-SDU
-label:: <<req_sdu_frame_specification_authority,/req/frame_specification_authority/sdu>>
+label:: /req/frame_specification_authority/sdu
 description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
@@ -804,7 +804,7 @@ uniquely specifying a source of reference frame specifications.
 ====
 [%metadata]
 name:: FS-ID-SDU
-label:: <<req_sdu_frame_specification_id,/req/frame_specification_id/sdu>>
+label:: /req/frame_specification_id/sdu
 description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
@@ -813,7 +813,7 @@ defining a frame within the authority.
 ====
 [%metadata]
 name:: FS-Parameters-SDU
-label:: <<req_sdu_frame_specification_parameter,/req/frame_specification_parameters/sdu>>
+label:: /req/frame_specification_parameters/sdu
 description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
@@ -822,7 +822,7 @@ parameters needed for the corresponding authority and ID.
 ====
 [%metadata]
 name:: S-FT-Element-SDU
-label:: <<req_Chain/structure,/req/irregular_series_frame_and_time/SDU>>
+label:: /req/irregular_series_frame_and_time/SDU
 description:: An innerFrameAndTime property SHALL be implemented as an
 ExplicitFrameSpec and GeoPoseInstant pair.
 ====
@@ -831,7 +831,7 @@ ExplicitFrameSpec and GeoPoseInstant pair.
 ====
 [%metadata]
 name:: S-Trailer-SDU
-label:: <<req_Chain/structure,/req/regular_series_trailer/SDU>>
+label:: /req/regular_series_trailer/SDU
 description:: A trailer property SHALL be implemented as a SeriesTrailer.
 ====
 
@@ -862,7 +862,7 @@ image::diagram/Stream-Element_SDU.PNG[]
 [requirements_class]
 ====
 [%metadata]
-label:: <<req_stream_sdu,/req/stream/sdu>>
+label:: /req/stream/sdu
 subject:: Implementation of Logical Model
 description:: Stream Logical Model SDU
 inherit:: /req/global
@@ -896,7 +896,7 @@ inherit:: /req/global
 ====
 [%metadata]
 name:: S-TM-SDU
-label:: <<req_transition_model,/req/transition_model/sdu>>
+label:: /req/transition_model/sdu
 description:: A TransitionModel property SHALL be implemented as one of the values in
 the TransitionModel enumeration.
 ====
@@ -905,7 +905,7 @@ the TransitionModel enumeration.
 ====
 [%metadata]
 name:: FS-Authority-SDU
-label:: <<req_sdu_frame_specification_authority,/req/frame_specification/authority/sdu>>
+label:: /req/frame_specification/authority/sdu
 description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
@@ -914,7 +914,7 @@ uniquely specifying a source of reference frame specifications.
 ====
 [%metadata]
 name:: FS-ID-SDU
-label:: <<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
+label:: /req/frame_specification/id/sdu
 description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
@@ -923,7 +923,7 @@ defining a frame within the authority.
 ====
 [%metadata]
 name:: FS-Parameters-SDU
-label:: <<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
+label:: /req/frame_specification/parameters/sdu
 description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
@@ -932,7 +932,7 @@ parameters needed for the corresponding authority and ID.
 ====
 [%metadata]
 name:: S-FST-SDU
-label:: <<req_stream_frame_time_element_sdu_,/req/stream/frame_time_element/sdu>>
+label:: /req/stream/frame_time_element/sdu
 description:: A FrameAndTimeElement property SHALL be implemented as as an
 ExplicitFrameSpec and a GeoPoseInstant.
 ====
@@ -977,7 +977,7 @@ property is set to the default value of *true*.
 [requirement]
 ====
 [%metadata]
-label:: <<req_basic_ypr_encoding__json,/req/basic/ypr/encoding/json>>
+label:: /req/basic/ypr/encoding/json
 description:: A JSON-encoded Basic-YPR GeoPose SHALL conform to the following Basic-YPR
 JSON-Schema 2019-9 definition.
 ====
@@ -1010,7 +1010,7 @@ the schema. All other targets follow the default and permit additional JSON prop
 [requirement]
 ====
 [%metadata]
-label:: <<req_basic_quaternion_encoding_json_strict,/req/basic/quaternion/encoding/json_strict>>
+label:: /req/basic/quaternion/encoding/json_strict
 description:: A JSON-encoded Basic-Quaternion (Strict) GeoPose SHALL conform to the
 following Basic-Quaternion (Strict) JSON-Schema 2019-9 definition. There SHALL be no
 encoded properties not explicitly defined in the JSON-Schema definition.
@@ -1042,7 +1042,7 @@ This encoding is intended to be the default GeoPose.
 [requirement]
 ====
 [%metadata]
-label:: <<req_basic_quaternion_encoding__json,/req/basic/quaternion/encoding/json>>
+label:: /req/basic/quaternion/encoding/json
 description:: A JSON-encoded Basic-Quaternion GeoPose SHALL conform to the following
 Basic-Quaternion JSON-Schema 2019-9 definition.
 ====
@@ -1073,7 +1073,7 @@ property is set to the default value of *true*.
 [requirement]
 ====
 [%metadata]
-label:: <<req_advanced_encoding__json,/req/advanced/encoding/json>>
+label:: /req/advanced/encoding/json
 description:: A JSON-encoded Advanced GeoPose SHALL conform to the following Advanced
 JSON-Schema 2019-9 definition.
 ====
@@ -1104,7 +1104,7 @@ property is set to the default value of *true*.
 [requirement]
 ====
 [%metadata]
-label:: <<req_graph_encoding__json,/req/graph/encoding/json>>
+label:: /req/graph/encoding/json
 description:: A JSON-encoded GeoPose Graph SHALL conform to the following GeoPose Graph
 JSON-Schema 2019-9 definition.
 ====
@@ -1137,7 +1137,7 @@ property is set to the default value of *true*.
 [requirement]
 ====
 [%metadata]
-label:: <<req_chain_encoding__json,/req/chain/encoding/json>>
+label:: /req/chain/encoding/json
 description:: A JSON-encoded GeoPose Chain SHALL conform to the following GeoPose
 Chain JSON-Schema 2019-9 definition.
 ====
@@ -1168,7 +1168,7 @@ property is set to the default value of *true*.
 [requirement]
 ====
 [%metadata]
-label:: <<req_series_regular_encoding__json,/req/series/regular/encoding/json>>
+label:: /req/series/regular/encoding/json
 description:: A JSON-encoded GeoPose Regular Series SHALL conform to the following
 GeoPose Regular JSON-Schema 2019-9 definition.
 ====
@@ -1198,7 +1198,7 @@ property is set to the default value of *true*.
 [requirement]
 ====
 [%metadata]
-label:: <<req_series_irregular_encoding__json,/req/series/irregular/encoding/json>>
+label:: /req/series/irregular/encoding/json
 description:: A JSON-encoded GeoPose Irregular Series SHALL conform to the following
 GeoPose Irregular JSON-Schema 2019-9 definition.
 ====
@@ -1229,7 +1229,7 @@ property is set to the default value of *true*.
 [requirement]
 ====
 [%metadata]
-label:: <<req_stream_header_encoding__json,/req/stream/header/encoding/json>>
+label:: /req/stream/header/encoding/json
 description:: A JSON-encoded GeoPose Stream Header SHALL conform to the following
 GeoPose Stream Header JSON-Schema 2019-9 definition.
 ====
@@ -1243,7 +1243,7 @@ include::schemata/GeoPose.Composite.Sequence.StreamHeader.Schema.json[]
 [requirement]
 ====
 [%metadata]
-label:: <<req_stream_element_encoding__json,/req/stream/element/encoding/json>>
+label:: /req/stream/element/encoding/json
 description:: A JSON-encoded GeoPose Stream Element SHALL conform to the following
 GeoPose Stream Element JSON-Schema 2019-9 definition.
 ====
@@ -1257,7 +1257,7 @@ include::schemata/GeoPose.Composite.Sequence.StreamElement.Schema.json[]
 [requirement]
 ====
 [%metadata]
-label:: <<req_stream_record_encoding__json,/req/stream/record/encoding/json>>
+label:: /req/stream/record/encoding/json
 description:: A JSON-encoded GeoPose Stream Record (a recorded Stream) SHALL conform
 to the following GeoPose Stream Record JSON-Schema 2019-9 definition.
 ====
