@@ -3,9 +3,14 @@
 [.boilerplate]
 === {blank}
 
-This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "shall" (not "must") is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
+This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8],
+which is based on the ISO/IEC Directives, Part 2, Rules for the structure
+and drafting of International Standards. In particular, the word "shall"
+(not "must") is the verb form used to indicate a requirement to be strictly
+followed to conform to this standard.
 
-For the purposes of this document, the following additional terms and definitions apply.
+For the purposes of this document, the following additional terms and
+definitions apply.
 
 [[geopose_conceptual_model]]
 include::models/conceptual_model.adoc[]
