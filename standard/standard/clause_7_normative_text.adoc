@@ -36,7 +36,7 @@ Inner Frames.
 
 [[metadata_governance]]
 .Core Logical Model
-image::models/Logical_Core.png[align="center"]
+image::models/Logical_Core.png[]
 
 ==== Time
 
@@ -48,7 +48,7 @@ very restricted idea of time position, limited to seconds of UNIX Time.
 
 [[core_logical_model]]
 .Time Logical model
-image::models/Logical_time.png[align="center"]
+image::models/Logical_time.png[]
 
 ==== Sequence
 
@@ -58,7 +58,7 @@ and there is a time-dependent changing <<def_Inner_Frame,*Inner Frame*>>.
 
 [[sequence_logical_model]]
 .Sequence Logical Model
-image::models/Logical_Sequence.png[align="center"]
+image::models/Logical_Sequence.png[]
 
 ==== Targets
 
@@ -70,21 +70,21 @@ GeoPose objects.
 
 [[basic_advanced_logical_model]]
 .Basic and Advanced Structural Data Units
-image::models/Logical_Target_Basic_Advanced.png[align="center"]
+image::models/Logical_Target_Basic_Advanced.png[]
 
 The Chain and the Graph GeoPose composite structures respectively represent linear or
 branching frame transformation relationships.
 
 [[chain_graph_logical_model]]
 .Chain and Graph Structural Data Units
-image::models/Logical_Target_Linked.png[Linked,align="center"]
+image::models/Logical_Target_Linked.png[Linked,]
 
 The Stream and each of the two Series composite structures represent time series of a
 single evolving GeoPose.
 
 [[series_and_stream_model]]
 .Series and Stream Structural Data Units
-image::models/Logical_Target_Sequence.png[align="center"]
+image::models/Logical_Target_Sequence.png[]
 
 [NOTE]
 The _integrityCheck_ attributes in the SeriesHeader and SeriesTrailer classes are
@@ -161,7 +161,7 @@ The individual global requirements are defined as follows:
 [requirement]
 ====
 [%metadata]
-label:: <<req_global,/req/target_dependency>>
+label:: /req/target_dependency
 description:: There SHALL be no dependency between or among the individual
 Standardization Targets.
 ====
@@ -198,7 +198,7 @@ specified in decimal degrees.
 
 [[basic_ypr_sdu]]
 .Basic YPR SDU
-image::diagram/Basic-YPR_SDU.PNG[align="center"]
+image::diagram/Basic-YPR_SDU.PNG[]
 
 *Requirements Class*
 
@@ -283,7 +283,7 @@ quaternion.
 
 [[basic_quaternion_sdu]]
 .Basic Quaternion SDU
-image::diagram/Basic-Quaternion_SDU.PNG[align="center"]
+image::diagram/Basic-Quaternion_SDU.PNG[]
 
 *Requirements Class*
 
@@ -371,7 +371,7 @@ of Outer Frame and a Valid Time.
 
 [[advanced_sdu]]
 .Basic Advanced SDU
-image::diagram/Advanced_SDU.PNG[align="center"]
+image::diagram/Advanced_SDU.PNG[]
 
 [[req_advanced]]
 *Requirements Class*
@@ -477,7 +477,7 @@ Extrinsic Frame.
 
 [[graph_sdu]]
 .Graph SDU
-image::diagram/Graph_SDU.PNG[align="center"]
+image::diagram/Graph_SDU.PNG[]
 
 [requirements_class]
 ====
@@ -568,7 +568,7 @@ relationships. The first frame in the sequence must be an Outer Frame.
 
 [[chain_sdu]]
 .Chain SDU
-image::diagram/Chain_SDU.PNG[align="center"]
+image::diagram/Chain_SDU.PNG[]
 
 [requirements_class]
 ====
@@ -648,7 +648,7 @@ with a constant time duration between successive inner frames.
 
 [[regular_series_sdu]]
 .Regular Series SDU
-image::diagram/Regular-Series_SDU.PNG[align="center"]
+image::diagram/Regular-Series_SDU.PNG[]
 
 [requirements_class]
 ====
@@ -748,7 +748,7 @@ with a variable time duration between successive inner frames.
 
 [[irregular_series_sdu]]
 .Irregular Series SDU
-image::diagram/Irregular-Series_SDU.PNG[align="center"]
+image::diagram/Irregular-Series_SDU.PNG[]
 
 [requirements_class]
 ====
@@ -853,11 +853,11 @@ and a third kind of object that represents a Recorded Stream.
 [[req_sequence_stream]]
 [[stream_header_sdu]]
 .Stream Header SDU
-image::diagram/Stream-Header_SDU.PNG[align="center"]
+image::diagram/Stream-Header_SDU.PNG[]
 
 [[stream_trailer_sdu]]
 .Stream Element SDU
-image::diagram/Stream-Element_SDU.PNG[align="center"]
+image::diagram/Stream-Element_SDU.PNG[]
 
 [requirements_class]
 ====

@@ -24,7 +24,7 @@ described in the diagram in <<figure-1>>.
 
 [[figure-1]]
 .UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
-image::images/UML_Notation.png[align ="center"]
+image::images/UML_Notation.png[]
 
 All associations between model elements in GeoPose are uni-directional. Thus,
 associations in GeoPose are navigable in only one direction. The direction of
@@ -38,20 +38,20 @@ in different colors. The following coloring scheme is applied:
 
 [[fig2]]
 .Data Types
-image::images/Grey_UML.png[align="center"]
+image::images/Grey_UML.png[]
 
 Classes painted in grey represent data types.
 
 [[fig3]]
 .Blue color Denotes Abstract or More General Classes
-image::images/Blue_UML.png[align="center"]
+image::images/Blue_UML.png[]
 
 Classes painted in blue are internal less-derived elements that are not themselves
 directly encoded as concrete data objects.
 
 [[fig4]]
 .Yellow Color Denotes Structural Data Units
-image::images/Yellow_UML.png[align="center"]
+image::images/Yellow_UML.png[]
 
 Classes painted in yellow correspond to Structural Data Units or have properties that
 are represented in Structural Data Units and in encodings of those SDUs. Only data
@@ -59,13 +59,13 @@ types and classes painted yellow are encoded as concrete data objects.
 
 [[fig5]]
 .Green Color Denotes Enumeration
-image::images/Green_UML.png[align="center"]
+image::images/Green_UML.png[]
 
 Enumerations are painted in green.
 
 [[fig6]]
 .White Color Denotes a Note or Constraint
-image::images/White_UML.png[white,256,400,align="center"]
+image::images/White_UML.png[white,256,400,]
 
 The color white is used for notes and OCL constraints that are provided in the UML
 diagrams.
