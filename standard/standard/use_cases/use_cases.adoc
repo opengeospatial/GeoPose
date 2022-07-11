@@ -18,7 +18,7 @@ to support integration in AR.
 
 ===== Use Cases:
 
-[%unnumbered,%header,cols="2,5,2"]
+[%header,cols="2,5,2"]
 |===
 |ID
 |Description
@@ -64,7 +64,7 @@ of reference frame transformations enables common reference frames to be used fo
 data fusion. The possibility of relating the vehicle to other elements of the
 environment via a common reference frame is essential.
 
-[%unnumbered,%header,cols="2,5,2"]
+[%header,cols="2,5,2"]
 |===
 |ID
 |Description
@@ -93,7 +93,7 @@ information needed for human interaction with the built environment. A common
 reference frame tied to the earth's surface facilitates the integration of these
 objects when their representations are supplied by different sources.
 
-[%unnumbered,%header,cols="2,5,2"]
+[%header,cols="2,5,2"]
 |===
 |ID
 |Description
@@ -124,7 +124,7 @@ implements is a direct and compact way of representing the variable aspects of t
 event. Access to one or more common reference frames through a graph of frame
 transformations make a coherent assembly possible
 
-[%unnumbered,%header,cols="2,5,2"]
+[%header,cols="2,5,2"]
 |===
 |ID
 |Description
@@ -150,7 +150,7 @@ element. In addition to moving elements sensed by an imaging device, it is often
 useful to know the pose of the sensor or imaging device itself. A common geographic
 reference frame integrates the objects into a single environment.
 
-[%unnumbered,%header,cols="2,5,2"]
+[%header,cols="2,5,2"]
 |===
 |ID
 |Description
