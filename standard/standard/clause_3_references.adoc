@@ -1,7 +1,7 @@
 [bibliography]
 == References
 
-* [[[json2017,JSON]]], Bray, T., Ed., "The JavaScript Object Notation (JSON) Data Interchange Format", STD 90, RFC 8259, December 2017, https://www.rfc-editor.org/info/std90
+* [[[json2017,RFC 8259]]]
 
 * [[[jsonschema2019,IETF draft-handrews-json-schema-validation-02]]], H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09" https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8
 
