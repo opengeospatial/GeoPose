@@ -18,7 +18,7 @@
 
 * [[[pose,8]]], Pose https://en.wikipedia.org/wiki/Pose_(computer_vision) 
 
-* [[[owl-time,9]]], OWL Time: https://www.w3.org/TR/2020/CR-owl-time-20200326/
+* [[[owl-time,W3C CR-owl-time-20200326]]]
 
 * [[[iso-19162, ISO 19162:2019]]]
 
