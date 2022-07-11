@@ -1,4 +1,4 @@
-[[annex-bibliography]]
+
 [bibliography]
 == Bibliography
 
@@ -6,9 +6,9 @@
 
 * [[[geometric-tools,2]]], PHILIP J. SCHNEIDER, DAVID H. EBERLY, Geometric Tools for Computer Graphics, Morgan Kaufmann, 2003.
 
-* [[[ogc-testbed14,3]]], OGC Testbed-14: CityGML and AR Engineering Report ( https://docs.ogc.org/per/18-025.html )
+* [[[ogc-testbed14,OGC 18-025]]]
 
-* [[[simulation,4]]], Interoperable Simulation and Gaming Sprint Engineering Report ( http://docs.ogc.org/per/20-087.html )
+* [[[simulation,OGC 20-087]]]
 
 * [[[isg,5]]], ISG Year 2 ER ( https://github.com/opengeospatial/OGC-ISG-Sprint-Sep-2020/tree/master/Sprint%20Report )
 

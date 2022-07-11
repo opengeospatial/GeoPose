@@ -1,16 +1,11 @@
 [bibliography]
 == References
 
-The following normative documents contain provisions that, through reference in this 
-text, constitute provisions of this document. For dated references, subsequent 
-amendments to, or revisions of, any of these publications do not apply. For undated 
-references, the latest edition of the normative document referred to applies.
-
 * [[[json2017,JSON]]], Bray, T., Ed., "The JavaScript Object Notation (JSON) Data Interchange Format", STD 90, RFC 8259, December 2017, https://www.rfc-editor.org/info/std90
 
-* [[[jsonschema2019,JSON-Schema 2019-09]]], H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09" https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8
+* [[[jsonschema2019,IETF draft-handrews-json-schema-validation-02]]], H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09" https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8
 
-* [[[jsonschemavalidation2019,JSON-Schema Validation 2019-09]]], A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. https://tools.ietf.org/html/draft-handrews-json-schema-validation-02
+* [[[jsonschemavalidation2019,IETF draft-handrews-json-schema-validation-02]]], A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. https://tools.ietf.org/html/draft-handrews-json-schema-validation-02
 
 * [[[iso19101, ISO 19101]]]
 
@@ -30,11 +25,11 @@ references, the latest edition of the normative document referred to applies.
 
 * [[[iso86012,ISO 8601-2:2019]]]
 
-* [[[ogc15097,OGC 15-097]]]
+* [[[ogc15097,OGC 15-097r1]]]
 
 * [[[ogc12019,OGC 12-019]]]
 
-* [[[ogc14005,OGC 14-005]]]
+* [[[ogc14005,OGC 14-005r3]]]
 
 * [[[rfc2045,RFC 2045]]]
 
@@ -48,10 +43,10 @@ references, the latest edition of the normative document referred to applies.
 
 * [[[collada,COLLADA]]], Khronos Group Inc.: COLLADA - Digital Asset Schema Release 1.5.0
 
-* [[[topic5,OGC Topic 5]]], OGC: The OpenGIS® Abstract Specification Topic 5: Features, OGC document 08-126
+* [[[topic5,OGC 08-126]]]
 
-* [[[topic8,OGC Topic 8]]], OGC: The OpenGIS™ Abstract Specification Topic 8: Relationships Between Features, OGC document 99-108r2
+* [[[topic8,OGC 99-108r2]]]
 
-* [[[ogc20-010, OGC 20-010]]]
+* [[[ogc20-010, OGC 20-010]]], OGC: OGC 20-010, OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard, v3.0, 2021.
 
 * [[[ogc07-036, OGC 07-036]]]
