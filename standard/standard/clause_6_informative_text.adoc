@@ -27,7 +27,7 @@ without reinventing technology in a way that encourages interoperability.
 
 [[fig7]]
 .Document Structure Overview
-image::diagram/OGC_Process_Detail.png[align="center"]
+image::diagram/OGC_Process_Detail.png[]
 
 [[use_case_summary]]
 === Use Case Summary
