@@ -202,6 +202,7 @@ image::diagram/Basic-YPR_SDU.PNG[]
 
 *Requirements Class*
 
+[[req_class_basic_ypr_sdu]]
 [requirement,type="class"]
 ====
 [%metadata]
@@ -287,6 +288,7 @@ image::diagram/Basic-Quaternion_SDU.PNG[]
 
 *Requirements Class*
 
+[[req_basic_quaternion_sdu]]
 [requirements_class]
 ====
 [%metadata]
@@ -376,6 +378,7 @@ image::diagram/Advanced_SDU.PNG[]
 [[req_advanced]]
 *Requirements Class*
 
+[[req_advanced_sdu]]
 [requirements_class]
 ====
 [%metadata]
@@ -479,6 +482,7 @@ Extrinsic Frame.
 .Graph SDU
 image::diagram/Graph_SDU.PNG[]
 
+[[req_graph_sdu]]
 [requirements_class]
 ====
 [%metadata]
@@ -570,6 +574,7 @@ relationships. The first frame in the sequence must be an Outer Frame.
 .Chain SDU
 image::diagram/Chain_SDU.PNG[]
 
+[[req_chain_sdu]]
 [requirements_class]
 ====
 [%metadata]
@@ -650,6 +655,7 @@ with a constant time duration between successive inner frames.
 .Regular Series SDU
 image::diagram/Regular-Series_SDU.PNG[]
 
+[[req_regular_series_sdu]]
 [requirements_class]
 ====
 [%metadata]
@@ -750,6 +756,7 @@ with a variable time duration between successive inner frames.
 .Irregular Series SDU
 image::diagram/Irregular-Series_SDU.PNG[]
 
+[[req_irregular_series_sdu]]
 [requirements_class]
 ====
 [%metadata]
@@ -859,6 +866,7 @@ image::diagram/Stream-Header_SDU.PNG[]
 .Stream Element SDU
 image::diagram/Stream-Element_SDU.PNG[]
 
+[[req_stream_sdu]]
 [requirements_class]
 ====
 [%metadata]
