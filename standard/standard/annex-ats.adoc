@@ -119,6 +119,7 @@ Tests of an implementation at the SDU level generally only be done by inspection
 [%metadata]
 name:: Basic-YPR SDU
 label:: /conf/class/basic_ypr/sdu
+subject:: <<req_class_basic_ypr_sdu,Requirements Class "Basic YPR SDU">>
 classification:: Target Type:SDU
 description:: To confirm that a Basic-YPR GeoPose consists of an Outer Frame
 specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate
@@ -231,6 +232,7 @@ classification:: Test Type:Conformance
 [%metadata]
 name:: Basic-Q SDU
 label:: /conf/class/basic_quaternion_sdu
+subject:: <<req_basic_quaternion_sdu,Requirements Class "Basic Quaternion SDU">>
 classification:: Target Type:SDU
 description:: To confirm that components of a Basic Quaternion GeoPose conform to the
 Logical Model.
@@ -331,6 +333,7 @@ test-method:: Inspection
 [%metadata]
 name:: Advanced SDU
 label:: /conf/class/advanced/sdu
+subject:: <<req_advanced_sdu,Requirements Class "Basic Advanced SDU">>
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the Advanced GeoPose conforms to
 the Logical Model.
@@ -431,6 +434,7 @@ test-method:: Inspection
 [%metadata]
 name:: Graph SDU
 label:: /conf/class/graph/sdu
+subject:: <<req_graph_sdu,Requirements Class "Graph SDU">>
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the GeoPose Graph conforms to the
 Logical Model.
@@ -528,6 +532,7 @@ test-method:: Inspection
 [%metadata]
 name:: Chain SDU
 label:: /conf/class/chain_sdu
+subject:: <<req_chain_sdu,Requirements Class "Chain SDU">>
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the GeoPose Chain conforms to the
 Logical Model.
@@ -624,6 +629,7 @@ test-method:: Inspection
 [%metadata]
 name:: Regular Series SDU
 label:: /conf/class/regular_series/sdu
+subject:: <<req_regular_series_sdu,Requirements Class "Regular Series SDU">>
 classification:: Target Type:SDU
 description:: To confirm that components of a Regular Series conform to the Logical
 Model.
@@ -740,6 +746,7 @@ test-method:: Inspection
 [%metadata]
 name:: Irregular Series SDU
 label:: /conf/class/irregular_series/sdu
+subject:: <<req_irregular_series_sdu,Requirements Class "Irregular Series SDU">>
 classification:: Target Type:SDU
 description:: To confirm that a Regular Series conforms to the Logical Model.
 inherit:: /conf/global
@@ -857,6 +864,7 @@ test-method:: Inspection
 [%metadata]
 name:: Stream SDU
 label:: /conf/class/stream/sdu
+subject:: <<req_stream_sdu,Requirements Class "Stream SDU">>
 classification:: Target Type:SDU
 description:: To confirm that a GeoPose Stream conforms to the Logical Model.
 inherit:: /conf/global
