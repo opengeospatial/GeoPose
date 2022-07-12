@@ -39,6 +39,7 @@ inherit:: None
 ======
 [%metadata]
 label:: /conf/target_dependency
+subject:: <<global,Requirement "Target Dependency">>
 name:: G-Target
 ======
 
