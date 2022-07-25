@@ -297,24 +297,24 @@ subject:: Implementation of Logical Model
 inherit:: /req/global
 description:: Basic-Quaternion Logical Model SDU
 
-[requirement,name="B-TP-Lon-SDU",label="/req/tangent_plane_longitude/sdu",id="req1"]
+[requirement,name="B-TP-Lon-SDU",label="/req/tangent_plane_longitude/sdu"]
 ======
 ======
 
-[requirement,name="B-TP-Lat-SDU",label="/req/tangent_plane_latitude/sdu",id="req2"]
+[requirement,name="B-TP-Lat-SDU",label="/req/tangent_plane_latitude/sdu"]
 ======
 ======
 
-[requirement,name="B-TP-h-SDU",label="/req/tangent_plane_h/sdu",id="req3"]
+[requirement,name="B-TP-h-SDU",label="/req/tangent_plane_h/sdu"]
 ======
 ======
 
-[requirement,name="B-Quaternion-SDU",label="/req/orientation_quaternion/sdu",id="req4"]
+[requirement,name="B-Quaternion-SDU",label="/req/orientation_quaternion/sdu"]
 ======
 ======
 ====
 
-[requirement,id="req1"]
+[requirement]
 ====
 [%metadata]
 name:: B-TP-Lon-SDU
@@ -323,7 +323,7 @@ description:: An instance of a GeoPose tangentPoint.longitude attribute SHALL be
 expressed as decimal degrees, represented as a signed real number.
 ====
 
-[requirement,id="req2"]
+[requirement]
 ====
 [%metadata]
 name:: B-TP-Lat-SDU
@@ -332,7 +332,7 @@ description:: An instance of GeoPose tangentPoint.latitude attribute SHALL be
 expressed as decimal degrees, represented as a signed real number.
 ====
 
-[requirement,id="req3"]
+[requirement]
 ====
 [%metadata]
 name:: B-TP-h-SDU
@@ -349,7 +349,7 @@ conditions or constraints on precision to be used in an impolementation. Any suc
 constraints would be found as reuirments on a specific implementation as an encoding.
 
 [[req_sdu_orientation_quaternion]]
-[requirement,id="req4"]
+[requirement]
 ====
 [%metadata]
 name:: B-Quaternion-SDU
@@ -387,33 +387,33 @@ subject:: Implementation of Logical Model
 description:: Advanced Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/advanced/sdu",name="Advanced-SDU",id="req5"]
+[requirement,label="/req/advanced/sdu",name="Advanced-SDU"]
 ======
 ======
 
-[requirement,label="/req/time/geopose_instant/sdu",name="GP-Instant-SDU",id="req6"]
+[requirement,label="/req/time/geopose_instant/sdu",name="GP-Instant-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU",id="req7"]
+[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU",id="req8"]
+[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU",id="req9"]
+[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
 ======
 ======
 
-[requirement,label="/req/orientation_quaternion/sdu",name="Quaternion-SDU",id="req10"]
+[requirement,label="/req/orientation_quaternion/sdu",name="Quaternion-SDU"]
 ======
 ======
 ====
 
 [[req_pose_geopose_instant_sdu]]
-[requirement,id="req6"]
+[requirement]
 ====
 [%metadata]
 name:: GP-Instant-SDU
@@ -423,7 +423,7 @@ Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
 
 [[req_frame_specification_authority_sdu]]
-[requirement,id="req7"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Authority-SDU
@@ -433,7 +433,7 @@ uniquely specifying a source of reference frame specifications.
 ====
 
 [[req_frame_specification_id_sdu]]
-[requirement,id="req8"]
+[requirement]
 ====
 [%metadata]
 name:: FS-ID-SDU
@@ -443,7 +443,7 @@ defining a frame within the authority.
 ====
 
 [[req_frame_specification_parameters_sdu]]
-[requirement,id="req9"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Parameters-SDU
@@ -453,7 +453,7 @@ parameters needed for the corresponding authority and ID. The definition of thes
 parameters is outside the scope of GeoPose.
 ====
 
-[requirement,id="req10"]
+[requirement]
 ====
 [%metadata]
 name:: Quaternion-SDU
@@ -491,32 +491,32 @@ subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/graph/sdu",name="Graph-SDU",id="req11"]
+[requirement,label="/req/graph/sdu",name="Graph-SDU"]
 ======
 ======
 
-[requirement,label="/req/geopose_instant/sdu",name="GP-Instant-SDU",id="req12"]
+[requirement,label="/req/geopose_instant/sdu",name="GP-Instant-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU",id="req13"]
+[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU",id="req14"]
+[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU",id="req15"]
+[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
 ======
 ======
 
-[requirement,label="/req/transform_index/sdu",name="Transfom-Index-SDU",id="req16"]
+[requirement,label="/req/transform_index/sdu",name="Transfom-Index-SDU"]
 ======
 ======
 ====
 
-[requirement,id="req11"]
+[requirement]
 ====
 [%metadata]
 name:: Graph-SDU
@@ -525,7 +525,7 @@ description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in U
 Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
 
-[requirement,id="req13"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Authority-SDU
@@ -534,7 +534,7 @@ description:: The frame_specification.authority attribute SHALL contain a
 string uniquely specifying a source of reference frame specifications.
 ====
 
-[requirement,id="req14"]
+[requirement]
 ====
 [%metadata]
 name:: FS-ID-SDU
@@ -543,7 +543,7 @@ description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
 
-[requirement,id="req15"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Parameters-SDU
@@ -552,7 +552,7 @@ description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
 
-[requirement,id="req16"]
+[requirement]
 ====
 [%metadata]
 name:: Transform_Index-SDU
@@ -583,28 +583,28 @@ subject:: Implementation of Logical Model
 description:: Chain Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/chain/sdu",name="Chain-SDU",id="req17"]
+[requirement,label="/req/chain/sdu",name="Chain-SDU"]
 ======
 ======
 
-[requirement,label="/req/time/geopose_instant/sdu",name="GP-Instant-SDU",id="req17"]
+[requirement,label="/req/time/geopose_instant/sdu",name="GP-Instant-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU",id="req18"]
+[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU",id="req19"]
+[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU",id="req20"]
+[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
 ======
 ======
 ====
 
-[requirement,id="req17"]
+[requirement]
 ====
 [%metadata]
 name:: GP-Instant-SDU
@@ -613,7 +613,7 @@ description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in U
 Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
 
-[requirement,id="req18"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Authority-SDU
@@ -622,7 +622,7 @@ description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
 
-[requirement,id="req19"]
+[requirement]
 ====
 [%metadata]
 name:: FS-ID-SDU
@@ -631,7 +631,7 @@ description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
 
-[requirement,id="req20"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Parameters-SDU
@@ -664,32 +664,32 @@ subject:: Implementation of Logical Model
 description:: Regular Series Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/regular_series_header/sdu",name="",id="req22"]
+[requirement,label="/req/regular_series_header/sdu",name=""]
 ======
 ======
 
-[requirement,label="/req/time/geopose_duration/SDU",name="",id="req23"]
+[requirement,label="/req/time/geopose_duration/SDU",name=""]
 ======
 ======
 
-[requirement,label="/req/frame_specification_authority/sdu",name="",id="req24"]
+[requirement,label="/req/frame_specification_authority/sdu",name=""]
 ======
 ======
 
-[requirement,label="/req/frame_specification_id/sdu",name="",id="req25"]
+[requirement,label="/req/frame_specification_id/sdu",name=""]
 ======
 ======
 
-[requirement,label="/req/frame_specification_parameters/sdu",name="",id="req26"]
+[requirement,label="/req/frame_specification_parameters/sdu",name=""]
 ======
 ======
 
-[requirement,label="/req/regular_series_trailer/sdu",name="",id="req27"]
+[requirement,label="/req/regular_series_trailer/sdu",name=""]
 ======
 ======
 ====
 
-[requirement,id="req22"]
+[requirement]
 ====
 [%metadata]
 name:: S-Header-SDU
@@ -697,7 +697,7 @@ label:: /req/regular_series/header/sdu
 description:: A header property SHALL be implemented as a SeriesHeader structure.
 ====
 
-[requirement,id="req23"]
+[requirement]
 ====
 [%metadata]
 name:: GP-Duration-SDU
@@ -706,7 +706,7 @@ description:: An interposeDuration property SHALL be implemented as a
 GeoPoseDuration.
 ====
 
-[requirement,id="req24"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Authority-SDU
@@ -715,7 +715,7 @@ description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
 
-[requirement,id="req25"]
+[requirement]
 ====
 [%metadata]
 name:: FS-ID-SDU
@@ -724,7 +724,7 @@ description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
 
-[requirement,id="req26"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Parameters-SDU
@@ -733,7 +733,7 @@ description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
 
-[requirement,id="req27"]
+[requirement]
 ====
 [%metadata]
 name:: S-Trailer-SDU
@@ -765,32 +765,32 @@ subject:: Implementation of Logical Model
 description:: Irregular Series Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/irregular_series_header/sdu",name="S-IHeader-SDU",id="req28"]
+[requirement,label="/req/irregular_series_header/sdu",name="S-IHeader-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU",id="req29"]
+[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU",id="req30"]
+[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU",id="req31"]
+[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
 ======
 ======
 
-[requirement,label="/req/irregular_series_frame_and_time/SDU",name="S-FT-Element-SDU",id="req32"]
+[requirement,label="/req/irregular_series_frame_and_time/SDU",name="S-FT-Element-SDU"]
 ======
 ======
 
-[requirement,label="/req/regular_series_trailer/sdu",name="S-Trailer-SDU",id="req33"]
+[requirement,label="/req/regular_series_trailer/sdu",name="S-Trailer-SDU"]
 ======
 ======
 ====
 
-[requirement,id="req28"]
+[requirement]
 ====
 [%metadata]
 name:: S-IHeader-SDU
@@ -798,7 +798,7 @@ label:: /req/irregular_series_header/sdu
 description:: A header property SHALL be implemented as a SeriesHeader.
 ====
 
-[requirement,id="req29"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Authority-SDU
@@ -807,7 +807,7 @@ description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
 
-[requirement,id="req30"]
+[requirement]
 ====
 [%metadata]
 name:: FS-ID-SDU
@@ -816,7 +816,7 @@ description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
 
-[requirement,id="req31"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Parameters-SDU
@@ -825,7 +825,7 @@ description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
 
-[requirement,id="req32"]
+[requirement]
 ====
 [%metadata]
 name:: S-FT-Element-SDU
@@ -834,7 +834,7 @@ description:: An innerFrameAndTime property SHALL be implemented as an
 ExplicitFrameSpec and GeoPoseInstant pair.
 ====
 
-[requirement,id="req33"]
+[requirement]
 ====
 [%metadata]
 name:: S-Trailer-SDU
@@ -875,27 +875,27 @@ subject:: Implementation of Logical Model
 description:: Stream Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/series_irregular_header/sdu",name="S-IHeader-SDU",id="req34"]
+[requirement,label="/req/series_irregular_header/sdu",name="S-IHeader-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification/authority/sdu",name="FS-Authority-SDU",id="req35"]
+[requirement,label="/req/frame_specification/authority/sdu",name="FS-Authority-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification/id/sdu",name="FS-ID-SDU",id="req36"]
+[requirement,label="/req/frame_specification/id/sdu",name="FS-ID-SDU"]
 ======
 ======
 
-[requirement,label="/req/frame_specification/parameters/sdu",name="FS-Parameters-SDU",id="req37"]
+[requirement,label="/req/frame_specification/parameters/sdu",name="FS-Parameters-SDU"]
 ======
 ======
 
-[requirement,label="/req/irregular_series_frame_and_time/SDU",name="S-FT-Element-SDU",id="req38"]
+[requirement,label="/req/irregular_series_frame_and_time/SDU",name="S-FT-Element-SDU"]
 ======
 ======
 
-[requirement,label="/req/regular_series_trailer/sdu",name="S-Trailer-SDU",id="req39"]
+[requirement,label="/req/regular_series_trailer/sdu",name="S-Trailer-SDU"]
 ======
 ======
 ====
@@ -909,7 +909,7 @@ description:: A TransitionModel property SHALL be implemented as one of the valu
 the TransitionModel enumeration.
 ====
 
-[requirement,id="req35"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Authority-SDU
@@ -918,7 +918,7 @@ description:: The frame_specification.authority attribute SHALL contain a string
 uniquely specifying a source of reference frame specifications.
 ====
 
-[requirement,id="req36"]
+[requirement]
 ====
 [%metadata]
 name:: FS-ID-SDU
@@ -927,7 +927,7 @@ description:: The frame_specification.ID attribute SHALL be a string uniquely
 defining a frame within the authority.
 ====
 
-[requirement,id="req37"]
+[requirement]
 ====
 [%metadata]
 name:: FS-Parameters-SDU
@@ -936,7 +936,7 @@ description:: The frame_specification.parameter attribute SHALL contain all
 parameters needed for the corresponding authority and ID.
 ====
 
-[requirement,id="req38"]
+[requirement]
 ====
 [%metadata]
 name:: S-FST-SDU
