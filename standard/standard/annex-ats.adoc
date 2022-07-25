@@ -30,16 +30,15 @@ Conformance with the Global Requirements is required for all implementations.
 ====
 [%metadata]
 label:: /conf/global
-subject:: <<rc_global,Requirement Class "Global">>
+subject:: /req/global
 classification:: Target Type:SDU
 description:: Conformance with Global SDU requirements
-inherit:: None
 
 [conformance_test]
 ======
 [%metadata]
 label:: /conf/target_dependency
-subject:: <<global,Requirement "Target Dependency">>
+subject:: /req/target_dependency
 name:: G-Target
 ======
 
@@ -70,7 +69,7 @@ description:: There SHALL be no dependency between or among the individual
 Standardization Targets.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: <<global,/req/target_dependency>>
+subject:: /req/target_dependency
 classification:: Test Type:Conformance
 ====
 
@@ -85,7 +84,7 @@ description of the Logical Model elements with the "Structural Data Unit - SDU"
 stereotype.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: <<sdu_confomance,/req/sdu_general>>
+subject:: /req/sdu_general
 classification:: Test Type:Conformance
 ====
 
@@ -100,7 +99,7 @@ conform to all dependent or inherited classes, attributes, and associations,
 multiplicities, and data types in the Logical Model.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: <<lm_confomance,/req/lm_general>>
+subject:: /req/lm_general
 classification:: Test Type:Conformance
 ====
 
@@ -120,7 +119,7 @@ Tests of an implementation at the SDU level generally only be done by inspection
 [%metadata]
 name:: Basic-YPR SDU
 label:: /conf/class/basic_ypr/sdu
-subject:: <<req_class_basic_ypr_sdu,Requirements Class "Basic YPR SDU">>
+subject:: req_class_basic_ypr_sdu
 classification:: Target Type:SDU
 description:: To confirm that a Basic-YPR GeoPose consists of an Outer Frame
 specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate
@@ -164,7 +163,7 @@ that the Inner Frame is expressed as a rotation-only transformation using Yaw, P
 and Roll angles.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/basic_ypr/sdu
+subject:: /req/basic_ypr/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -178,7 +177,7 @@ description:: To confirm that a GeoPose tangentPoint.longitude attribute is expr
 as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/tangent_plane_longitude/sdu
+subject:: /req/tangent_plane_longitude/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -192,7 +191,7 @@ description:: To confirm that a GeoPose tangentPoint.latitude attribute is expre
 as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/tangent_plane_latitude/sdu
+subject:: /req/tangent_plane_latitude/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -206,7 +205,7 @@ description:: To confirm that a GeoPose tangentPoint.h attribute is expressed as
 height in meters above the WGS-84 ellipsoid.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/tangent_plane_h/sdu
+subject:: /req/tangent_plane_h/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -221,7 +220,7 @@ rotations about the local axes Z, Y, and X, in that order, corresponding to the
 conventional Yaw, Pitch, and Roll angles and that the unit of measure is the degree.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/ypr_angles/sdu
+subject:: /req/ypr_angles/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -233,7 +232,7 @@ classification:: Test Type:Conformance
 [%metadata]
 name:: Basic-Q SDU
 label:: /conf/class/basic_quaternion_sdu
-subject:: <<req_basic_quaternion_sdu,Requirements Class "Basic Quaternion SDU">>
+subject:: req_basic_quaternion_sdu
 classification:: Target Type:SDU
 description:: To confirm that components of a Basic Quaternion GeoPose conform to the
 Logical Model.
@@ -282,7 +281,7 @@ description:: To confirm that a GeoPose tangentPoint.longitude attribute is expr
 as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/tangent_plane_longitude/sdu
+subject:: /req/tangent_plane_longitude/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -295,7 +294,7 @@ description:: To confirm that a GeoPose tangentPoint.latitude attribute is expre
 as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/tangent_plane_latitude/sdu
+subject:: /req/tangent_plane_latitude/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -308,7 +307,7 @@ description:: To confirm that a GeoPose tangentPoint.h attribute is expressed as
 height in meters above the WGS-84 ellipsoid.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-reference:: /req/tangent_plane_h/sdu
+subject:: /req/tangent_plane_h/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -322,7 +321,7 @@ description:: To confirm the correct properties of a quaternion.
 test-purpose:: To confirm that the unit quaternion consists of four representations of
 real number values and that the square root of the sum of the squares of those
 numbers is approximately 1.
-reference:: /req/quaternion/sdu
+subject:: /req/quaternion/sdu
 test-method:: Inspection
 ====
 
@@ -334,7 +333,7 @@ test-method:: Inspection
 [%metadata]
 name:: Advanced SDU
 label:: /conf/class/advanced/sdu
-subject:: <<req_advanced_sdu,Requirements Class "Basic Advanced SDU">>
+subject:: req_advanced_sdu
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the Advanced GeoPose conforms to
 the Logical Model.
@@ -370,7 +369,7 @@ label:: /conf/geopose_instant/sdu
 description:: To confirm the correct properties of a GeoPose Instant.
 test-purpose:: To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in
 seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-reference:: /req/geopose_instant/sdu
+subject:: /req/geopose_instant/sdu
 test-method:: Inspection
 ====
 
@@ -383,7 +382,7 @@ label:: /conf/frame_specification_authority/sdu
 description:: To confirm the correct properties of a Frame Specification Authority.
 test-purpose:: To confirm that a FrameSpecification.authority attribute contains a string
 uniquely specifying a source of reference frame specifications.
-reference:: /req/frame_specification_authority/sdu
+subject:: /req/frame_specification_authority/sdu
 test-method:: Inspection
 ====
 
@@ -397,7 +396,7 @@ description:: To confirm the correct properties of a Frame Specification ID.
 test-purpose:: To confirm that a FrameSpecification.id attribute contains a string
 uniquely specifying the identity of a reference frame specification as defined by
 that authority.
-reference:: /req/frame_specification_id/sdu
+subject:: /req/frame_specification_id/sdu
 test-method:: Inspection
 ====
 
@@ -410,7 +409,7 @@ label:: /conf/frame_specification_parameters/sdu
 description:: To confirm the correct properties of Frame Specification Parameters.
 test-purpose:: To confirm that a FrameSpecification.parameters attribute contains contain
 all parameters needed for the corresponding authority and ID.
-reference:: /req/frame_specification_parameters/sdu
+subject:: /req/frame_specification_parameters/sdu
 test-method:: Inspection
 ====
 
@@ -423,7 +422,7 @@ description:: To confirm the correct properties of a quaternion.
 test-purpose:: To confirm that the unit quaternion consists of four representations of
 real number values and that the square root of the sum of the squares of those
 numbers is approximately 1.
-reference:: /req/quaternion/sdu
+subject:: /req/quaternion/sdu
 test-method:: Inspection
 ====
 
@@ -435,7 +434,7 @@ test-method:: Inspection
 [%metadata]
 name:: Graph SDU
 label:: /conf/class/graph/sdu
-subject:: <<req_graph_sdu,Requirements Class "Graph SDU">>
+subject:: req_graph_sdu
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the GeoPose Graph conforms to the
 Logical Model.
@@ -470,7 +469,7 @@ label:: /conf/geopose_instant/sdu
 description:: To confirm the correct properties of a GeoPose Instant.
 test-purpose:: To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in
 seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-reference:: /req/geopose_instant/sdu
+subject:: /req/geopose_instant/sdu
 test-method:: Inspection
 ====
 
@@ -482,7 +481,7 @@ label:: /conf/frame_specification_authority/sdu
 description:: To confirm the correct properties of a Frame Specification Authority.
 test-purpose:: To confirm that a FrameSpecification.authority attribute contains a string
 uniquely specifying a source of reference frame specifications.
-reference:: /req/frame_specification_authority/sdu
+subject:: /req/frame_specification_authority/sdu
 test-method:: Inspection
 ====
 
@@ -495,7 +494,7 @@ description:: To confirm the correct properties of a Frame Specification ID.
 test-purpose:: To confirm that a FrameSpecification.id attribute contains a string
 uniquely specifying the identity of a reference frame specification as defined by
 that authority.
-reference:: /req/frame_specification_id/sdu
+subject:: /req/frame_specification_id/sdu
 test-method:: Inspection
 ====
 
@@ -507,7 +506,7 @@ label:: /conf/frame_specification_parameters/sdu
 description:: To confirm the correct properties of Frame Specification Parameters.
 test-purpose:: To confirm that a FrameSpecification.parameters attribute contains contain
 all parameters needed for the corresponding authority and ID.
-reference:: /req/frame_specification_parameters/sdu
+subject:: /req/frame_specification_parameters/sdu
 test-method:: Inspection
 ====
 
@@ -521,7 +520,7 @@ Logical Model.
 test-purpose:: To confirm that each index value in a FrameListTransformPair is a distinct
 integer value between 0 and one less than the number of elements in the frameList
 property.
-reference:: /req/graph_index/sdu
+subject:: /req/graph_index/sdu
 test-method:: Inspection
 ====
 
@@ -533,7 +532,7 @@ test-method:: Inspection
 [%metadata]
 name:: Chain SDU
 label:: /conf/class/chain_sdu
-subject:: <<req_chain_sdu,Requirements Class "Chain SDU">>
+subject:: req_chain_sdu
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the GeoPose Chain conforms to the
 Logical Model.
@@ -568,7 +567,7 @@ label:: /conf/geopose_instant/sdu
 description:: To confirm the correct properties of a GeoPose Instant.
 test-purpose:: To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in
 seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-reference:: /req/geopose_instant/sdu
+subject:: /req/geopose_instant/sdu
 test-method:: Inspection
 ====
 
@@ -580,7 +579,7 @@ label:: /conf/frame_specification_authority/sdu
 description:: To confirm the correct properties of a Frame Specification Authority.
 test-purpose:: To confirm that a FrameSpecification.authority attribute contains a string
 uniquely specifying a source of reference frame specifications.
-reference:: /req/frame_specification_authority/sdu
+subject:: /req/frame_specification_authority/sdu
 test-method:: Inspection
 ====
 
@@ -593,7 +592,7 @@ description:: To confirm the correct properties of a Frame Specification ID.
 test-purpose:: To confirm that a FrameSpecification.id attribute contains a string
 uniquely specifying the identity of a reference frame specification as defined by
 that authority.
-reference:: /req/frame_specification_id/sdu
+subject:: /req/frame_specification_id/sdu
 test-method:: Inspection
 ====
 
@@ -605,7 +604,7 @@ label:: /conf/frame_specification_parameters/sdu
 description:: To confirm the correct properties of Frame Specification Parameters.
 test-purpose:: To confirm that a FrameSpecification.parameters attribute contains contain
 all parameters needed for the corresponding authority and ID.
-reference:: /req/frame_specification_parameters/sdu
+subject:: /req/frame_specification_parameters/sdu
 test-method:: Inspection
 ====
 
@@ -618,7 +617,7 @@ description:: To confirm that an implementation of Chain Index conforms to the
 Logical Model.
 test-purpose:: To confirm that each index value is a distinct integer value between 0 and
 one less than the number of elements in the frameList property.
-reference:: /req/chain_index/sdu
+subject:: /req/chain_index/sdu
 test-method:: Inspection
 ====
 
@@ -630,7 +629,7 @@ test-method:: Inspection
 [%metadata]
 name:: Regular Series SDU
 label:: /conf/class/regular_series/sdu
-subject:: <<req_regular_series_sdu,Requirements Class "Regular Series SDU">>
+subject:: req_regular_series_sdu
 classification:: Target Type:SDU
 description:: To confirm that components of a Regular Series conform to the Logical
 Model.
@@ -671,7 +670,7 @@ description:: To confirm that an implementation of a Series Header conforms to t
 Logical Model.
 test-purpose:: To confirm that a Series Header is implemented in accordance with the
 Logical Model.
-reference:: /req/series_header/sdu
+subject:: /req/series_header/sdu
 test-method:: Inspection
 ====
 
@@ -684,7 +683,7 @@ label:: /conf/geopose_duration/sdu
 description:: To confirm the correct properties of a GeoPose Duration.
 test-purpose:: To confirm that a Logical Model attribute GeoPoseDuration is expressed in
 seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-reference:: /req/geopose_duration/sdu
+subject:: /req/geopose_duration/sdu
 test-method:: Inspection
 ====
 
@@ -696,7 +695,7 @@ label:: /conf/frame_specification_authority/sdu
 description:: To confirm the correct properties of a Frame Specification Authority.
 test-purpose:: To confirm that a FrameSpecification.authority attribute contains a string
 uniquely specifying a source of reference frame specifications.
-reference:: /req/frame_specification_authority/sdu
+subject:: /req/frame_specification_authority/sdu
 test-method:: Inspection
 ====
 
@@ -709,7 +708,7 @@ description:: To confirm the correct properties of a Frame Specification ID.
 test-purpose:: To confirm that a FrameSpecification.id attribute contains a string
 uniquely specifying the identity of a reference frame specification as defined by
 that authority.
-reference:: /req/frame_specification_id/sdu
+subject:: /req/frame_specification_id/sdu
 test-method:: Inspection
 ====
 
@@ -721,7 +720,7 @@ label:: /conf/frame_specification_parameters/sdu
 description:: To confirm the correct properties of Frame Specification Parameters.
 test-purpose:: To confirm that a FrameSpecification.parameters attribute contains contain
 all parameters needed for the corresponding authority and ID.
-reference:: /req/frame_specification_parameters/sdu
+subject:: /req/frame_specification_parameters/sdu
 test-method:: Inspection
 ====
 
@@ -735,7 +734,7 @@ description:: To confirm that an implementation of a Series Trailer conforms to 
 Logical Model.
 test-purpose:: To confirm that a Series Trailer is implemented in accordance with the
 Logical Model.
-reference:: /req/series_trailer/sdu
+subject:: /req/series_trailer/sdu
 test-method:: Inspection
 ====
 
@@ -747,7 +746,7 @@ test-method:: Inspection
 [%metadata]
 name:: Irregular Series SDU
 label:: /conf/class/irregular_series/sdu
-subject:: <<req_irregular_series_sdu,Requirements Class "Irregular Series SDU">>
+subject:: req_irregular_series_sdu
 classification:: Target Type:SDU
 description:: To confirm that a Regular Series conforms to the Logical Model.
 inherit:: /conf/global
@@ -790,7 +789,7 @@ description:: To confirm that an implementation of a Series Header conforms to t
 Logical Model.
 test-purpose:: To confirm that a Series Header is implemented in accordance with the
 Logical Model.
-reference:: /req/series_header/sdu
+subject:: /req/series_header/sdu
 test-method:: Inspection
 ====
 
@@ -802,7 +801,7 @@ label:: /conf/frame_specification_authority/sdu
 description:: To confirm the correct properties of a Frame Specification Authority.
 test-purpose:: To confirm that a FrameSpecification.authority attribute contains a string
 uniquely specifying a source of reference frame specifications.
-reference:: /req/frame_specification_authority/sdu
+subject:: /req/frame_specification_authority/sdu
 test-method:: Inspection
 ====
 
@@ -815,7 +814,7 @@ description:: To confirm the correct properties of a Frame Specification ID.
 test-purpose:: To confirm that a FrameSpecification.id attribute contains a string
 uniquely specifying the identity of a reference frame specification as defined by
 that authority.
-reference:: /req/frame_specification_id/sdu
+subject:: /req/frame_specification_id/sdu
 test-method:: Inspection
 ====
 
@@ -827,7 +826,7 @@ label:: /conf/frame_specification_parameters/sdu
 description:: To confirm the correct properties of Frame Specification Parameters.
 test-purpose:: To confirm that a FrameSpecification.parameters attribute contains contain
 all parameters needed for the corresponding authority and ID.
-reference:: /req/frame_specification_parameters/sdu
+subject:: /req/frame_specification_parameters/sdu
 test-method:: Inspection
 ====
 
@@ -840,7 +839,7 @@ description:: To confirm that an implementation of a Series FrameAndTime object
 conforms to the Logical Model.
 test-purpose:: To confirm that a Series FrameAndTime is implemented in accordance with the
 Logical Model.
-reference:: /req/series_frame_and_time/sdu
+subject:: /req/series_frame_and_time/sdu
 test-method:: Inspection
 ====
 
@@ -853,7 +852,7 @@ description:: To confirm that an implementation of a Series Trailer conforms to 
 Logical Model.
 test-purpose:: To confirm that a Series Trailer is implemented in accordance with the
 Logical Model.
-reference:: /req/series_trailer/sdu
+subject:: /req/series_trailer/sdu
 test-method:: Inspection
 ====
 
@@ -865,7 +864,7 @@ test-method:: Inspection
 [%metadata]
 name:: Stream SDU
 label:: /conf/class/stream/sdu
-subject:: <<req_stream_sdu,Requirements Class "Stream SDU">>
+subject:: req_stream_sdu
 classification:: Target Type:SDU
 description:: To confirm that a GeoPose Stream conforms to the Logical Model.
 inherit:: /conf/global
@@ -901,7 +900,7 @@ description:: To confirm that a TransitionModel attribute conforms to the Logica
 Model.
 test-purpose:: To confirm that a transition_model attribute is one of the values in the
 TransitionModel enumeration.
-reference:: /req/transition_model/sdu
+subject:: /req/transition_model/sdu
 test-method:: Inspection
 ====
 
@@ -913,7 +912,7 @@ label:: /conf/frame_specification_authority/sdu
 description:: To confirm the correct properties of a Frame Specification Authority.
 test-purpose:: To confirm that a FrameSpecification.authority attribute contains a string
 uniquely specifying a source of reference frame specifications.
-reference:: /req/frame_specification_authority/sdu
+subject:: /req/frame_specification_authority/sdu
 test-method:: Inspection
 ====
 
@@ -926,7 +925,7 @@ description:: To confirm the correct properties of a Frame Specification ID.
 test-purpose:: To confirm that a FrameSpecification.id attribute contains a string
 uniquely specifying the identity of a reference frame specification as defined by
 that authority.
-reference:: /req/frame_specification_id/sdu
+subject:: /req/frame_specification_id/sdu
 test-method:: Inspection
 ====
 
@@ -938,7 +937,7 @@ label:: /conf/frame_specification_parameters/sdu
 description:: To confirm the correct properties of Frame Specification Parameters.
 test-purpose:: To confirm that a FrameSpecification.parameters attribute contains contain
 all parameters needed for the corresponding authority and ID.
-reference:: /req/frame_specification_parameters/sdu
+subject:: /req/frame_specification_parameters/sdu
 test-method:: Inspection
 ====
 
@@ -994,7 +993,7 @@ the corresponding JSON-Schema definition.
 test-purpose:: To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR
 JSON-Schema definition.
 test-method:: JSON-Schema validation.
-reference:: /req/basic_ypr/sdu
+subject:: /req/basic_ypr/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -1031,7 +1030,7 @@ Basic-Quaternion JSON-Schema definition.
 test-purpose:: To confirm that Basic-Quaternion GeoPose data objects conform to the
 Basic-Quaternion JSON-Schema definition.
 test-method:: JSON-Schema validation.
-reference:: /req/basic_quaternion/sdu
+subject:: /req/basic_quaternion/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -1068,7 +1067,7 @@ the Basic-Quaternion (Strict) JSON-Schema definition.
 test-purpose:: To confirm that Basic-Quaternion (Strict) GeoPose data objects conform to
 the Basic-Quaternion (Strict) JSON-Schema definition.
 test-method:: JSON-Schema validation.
-reference:: /req/basic_quaternion/sdu
+subject:: /req/basic_quaternion/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -1104,7 +1103,7 @@ corresponding JSON-Schema document.
 test-purpose:: To confirm that Advanced GeoPose data objects conform to the Advanced
 JSON-Schema definition.
 test-method:: JSON-Schema validation.
-reference:: /req/advanced/sdu
+subject:: /req/advanced/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -1140,7 +1139,7 @@ JSON-Schema document.
 test-purpose:: To confirm that Chain GeoPose data objects conform to the Chain JSON-Schema
 definition.
 test-method:: JSON-Schema validation.
-reference:: /req/chain/sdu
+subject:: /req/chain/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -1175,7 +1174,7 @@ JSON-Schema definition.
 test-purpose:: To confirm that Graph GeoPose data objects conform to the Graph JSON-Schema
 definition.
 test-method:: JSON-Schema validation.
-reference:: /req/graph/sdu
+subject:: /req/graph/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -1211,7 +1210,7 @@ Series JSON-Schema definition.
 test-purpose:: To confirm that Regular Series GeoPose data objects conform to the Regular
 Series JSON-Schema definition.
 test-method:: JSON-Schema validation.
-reference:: /req/regular_series/sdu
+subject:: /req/regular_series/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -1247,7 +1246,7 @@ Regular Series JSON-Schema definition.
 test-purpose:: To confirm that GeoPose Irregular Series data objects conform to the
 Regular Series JSON-Schema definition.
 test-method:: JSON-Schema validation.
-reference:: /req/irregular_series/sdu
+subject:: /req/irregular_series/sdu
 classification:: Test Type:Conformance
 ====
 
@@ -1283,6 +1282,6 @@ JSON-Schema requirement.
 test-purpose:: To confirm that Stream data objects conform to the corresponding Stream
 JSON-Schema definition.
 test-method:: JSON-Schema validation.
-reference:: /req/stream/sdu
+subject:: /req/stream/sdu
 classification:: Test Type:Conformance
 ====
