@@ -37,7 +37,7 @@ The Logical Model is the root normative part of this standard.
 There are eight independent standardization targets. Each addresses the specific
 requirements of one or more individual use cases. The Basic and Advanced Targets
 share in the use of an EPSG 4979/3D WGS-84 <<def_Outer_Frame,*Outer Frame*>> but
-differ in the level of options and flexibility in specication of the
+differ in the level of options and flexibility in specification of the
 <<def_Inner_Frame,*Inner Frame*>>. The Composite Targets offer approaches to
 packaging sequenced or linked Frame Transforms.  The eight targets are denoted by
 bold terms in the following categories:
@@ -54,6 +54,6 @@ Flexible enough for complex use cases: *Advanced* Target
 .. General linked poses: *Graph* Target
 .. Sequence
 ... Series
-.... Timeseries with constant time spacing: *Regular* Timeseries Target
-.... Timeseries with per-GeoPose time: *Irregular* Timeseries Target
+.... Time series with constant time spacing: *Regular* Time series Target
+.... Time series with per-GeoPose time: *Irregular* Time series Target
 ... Open-ended sequence of time-stamped GeoPoses: *Stream* Target

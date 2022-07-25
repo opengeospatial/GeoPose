@@ -11,7 +11,7 @@ astronomical coordinate systems. The Standard specifies
 
 The GeoPose Standard is based on an implementation-neutral Logical Model (LM). This LM
 is a formalization of a Conceptual Model (CM). The CM consists of a linked set of terms
-and definitons, defining a domain odf discourse for the various geometrric, geographic,
+and definitions, defining a domain of discourse for the various geometric, geographic,
 and physical concepts related to GeoPoses. The LM formalizes the relationships between
 the implementable parts and aspects of the CM. The LM further establishes the structure
 and relationships between GeoPose components and also between GeoPoses data objects

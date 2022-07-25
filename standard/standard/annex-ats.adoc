@@ -108,7 +108,7 @@ classification:: Test Type:Conformance
 
 There are some universal requirements on values that appear in a concrete
 implementation using a specific encoding technology. For example, angles may be
-constrainted to fall within a range of values correponding to a circle. Because these
+constrained to fall within a range of values corresponding to a circle. Because these
 are independent of encoding technology, they are specified here at a logical level.
 Tests of an implementation at the SDU level generally only be done by inspection.
 
@@ -956,7 +956,7 @@ test-method:: Inspection
 === Encodings Conformance
 
 Each encoding technology has its own independent test suite. There is one
-cornformance class per Standardization target per encoding technology. The GeoPose
+conformance class per Standardization target per encoding technology. The GeoPose
 Standard 1.0 has one encoding technology: JSON.
 
 ==== JSON Conformance
