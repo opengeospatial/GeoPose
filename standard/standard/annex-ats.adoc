@@ -119,7 +119,7 @@ Tests of an implementation at the SDU level generally only be done by inspection
 [%metadata]
 name:: Basic-YPR SDU
 label:: /conf/class/basic_ypr/sdu
-subject:: req_class_basic_ypr_sdu
+subject:: /req/class/basic_ypr/sdu
 classification:: Target Type:SDU
 description:: To confirm that a Basic-YPR GeoPose consists of an Outer Frame
 specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate
@@ -232,7 +232,7 @@ classification:: Test Type:Conformance
 [%metadata]
 name:: Basic-Q SDU
 label:: /conf/class/basic_quaternion_sdu
-subject:: req_basic_quaternion_sdu
+subject:: /req/class/basic_quaternion_sdu
 classification:: Target Type:SDU
 description:: To confirm that components of a Basic Quaternion GeoPose conform to the
 Logical Model.
@@ -333,7 +333,7 @@ test-method:: Inspection
 [%metadata]
 name:: Advanced SDU
 label:: /conf/class/advanced/sdu
-subject:: req_advanced_sdu
+subject:: /req/class/advanced/sdu
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the Advanced GeoPose conforms to
 the Logical Model.
@@ -434,7 +434,7 @@ test-method:: Inspection
 [%metadata]
 name:: Graph SDU
 label:: /conf/class/graph/sdu
-subject:: req_graph_sdu
+subject:: /req/class/graph/sdu
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the GeoPose Graph conforms to the
 Logical Model.
@@ -532,7 +532,7 @@ test-method:: Inspection
 [%metadata]
 name:: Chain SDU
 label:: /conf/class/chain_sdu
-subject:: req_chain_sdu
+subject:: /req/class/chain_sdu
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the GeoPose Chain conforms to the
 Logical Model.
@@ -629,7 +629,7 @@ test-method:: Inspection
 [%metadata]
 name:: Regular Series SDU
 label:: /conf/class/regular_series/sdu
-subject:: req_regular_series_sdu
+subject:: /req/class/regular_series/sdu
 classification:: Target Type:SDU
 description:: To confirm that components of a Regular Series conform to the Logical
 Model.
@@ -746,7 +746,7 @@ test-method:: Inspection
 [%metadata]
 name:: Irregular Series SDU
 label:: /conf/class/irregular_series/sdu
-subject:: req_irregular_series_sdu
+subject:: /req/class/irregular_series/sdu
 classification:: Target Type:SDU
 description:: To confirm that a Regular Series conforms to the Logical Model.
 inherit:: /conf/global
@@ -864,7 +864,7 @@ test-method:: Inspection
 [%metadata]
 name:: Stream SDU
 label:: /conf/class/stream/sdu
-subject:: req_stream_sdu
+subject:: /req/class/stream/sdu
 classification:: Target Type:SDU
 description:: To confirm that a GeoPose Stream conforms to the Logical Model.
 inherit:: /conf/global
@@ -968,7 +968,7 @@ The *Basic-YPR GeoPose* is the JSON encoding intended for widest use.
 [%metadata]
 name:: Basic-YPR Encoding-JSON
 label:: /conf/class/basic_ypr/encoding/json
-subject:: JSON object
+subject:: /req/class/basic_ypr/encoding/json
 description:: To confirm that a Basic-YPR GeoPose consists of an Outer Frame
 specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate
 system and explicit parameters defining the tangent point and that the Inner Frame is
@@ -1007,7 +1007,7 @@ that a strict sub-version does not allow additional JSON members.
 [%metadata]
 name:: Basic-Quaternion Encoding-JSON
 label:: /conf/class/basic_quaternion/encoding/json
-subject:: JSON object
+subject:: /req/class/basic_quaternion/encoding/json
 description:: Confirm that a JSON-encoded Basic-Quaternion GeoPose conforms to the
 relevant elements of the Logical Model and a corresponding JSON-Schema document.
 inherit:: /conf/basic_ypr_sdu
@@ -1044,7 +1044,7 @@ members.
 [%metadata]
 name:: Basic-Quaternion Encoding-JSON (Strict)
 label:: /conf/class/quaternion/encoding/json_strict
-subject:: JSON object
+subject:: /req/class/quaternion/encoding/json_strict
 description:: Confirm that a strict JSON-encoded Basic-Quaternion GeoPose conforms to
 the relevant elements of the Logical Model and a corresponding JSON-Schema document.
 inherit:: /conf/basic_quaternion_sdu
@@ -1080,7 +1080,7 @@ Frame specification.
 [%metadata]
 name:: Advanced Encoding-JSON
 label:: /conf/class/advanced/encoding/json
-subject:: JSON object
+subject:: /req/class/advanced/encoding/json
 description:: To confirm that a JSON-encoded Advanced GeoPose conforms to the
 relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/advanced_sdu
@@ -1116,7 +1116,7 @@ for modelling articulated structures.
 [%metadata]
 name:: Chain Encoding-JSON
 label:: /conf/class/chain/encoding/json
-subject:: JSON object
+subject:: /req/class/chain/encoding/json
 description:: To confirm that a JSON-encoded GeoPose Chain conforms to the relevant
 elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/chain/sdu
@@ -1151,7 +1151,7 @@ The *GeoPose Graph* JSON encoding supports a directed graph stucture.
 [%metadata]
 name:: Graph Encoding-JSON
 label:: /conf/class/graph/encoding/json
-subject:: JSON object
+subject:: /req/class/graph/encoding/json
 description:: To confirm that a JSON-encoded GeoPose Graph conforms to the relevant
 elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/graph/sdu
@@ -1187,7 +1187,7 @@ GeoPoses.
 [%metadata]
 name:: GeoPose Regular Series Encoding-JSON
 label:: /conf/class/regular_series/encoding/json
-subject:: JSON object
+subject:: /req/class/regular_series/encoding/json
 description:: To confirm that a JSON-encoded Regular Series conforms to the relevant
 elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/regular_series/sdu
@@ -1223,7 +1223,7 @@ flexible Outer Frame specification.
 [%metadata]
 name:: Irregular Series Encoding-JSON
 label:: /conf/class/irregular_series/encoding/json
-subject:: JSON object
+subject:: /req/class/irregular_series/encoding/json
 description:: To confirm that a JSON-encoded Irregular Series conforms to the
 relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/irregular_series/sdu
@@ -1259,7 +1259,7 @@ Frame specification.
 [%metadata]
 name:: Stream Encoding-JSON
 label:: /conf/class/stream/encoding/json
-subject:: JSON object
+subject:: /req/class/stream/encoding/json
 description:: Confirm that GeoPose Stream data objects conform to the corresponding
 Stream JSON-Schema requirement.
 inherit:: /conf/stream/sdu
