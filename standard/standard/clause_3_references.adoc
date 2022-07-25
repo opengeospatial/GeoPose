@@ -3,11 +3,11 @@
 
 * [[[json2017,RFC 8259]]]
 
-* [[[jsonschema2019,IETF draft-handrews-json-schema-validation-02]]], H. Andrews, Ed. 2019. "JSON-Schema Specification", Draft 2019-09" https://json-schema.org/specification-links.html#draft-2019-09-formerly-known-as-draft-8
+* [[[jsonschema2019,IETF I-D.draft-handrews-json-schema-02]]]
 
-* [[[jsonschemavalidation2019,IETF draft-handrews-json-schema-validation-02]]], A. Wright, Ed. 2019. "JSON-Schema Validation Recommendation", Draft 2019-09. https://tools.ietf.org/html/draft-handrews-json-schema-validation-02
+* [[[jsonschemavalidation2019,IETF I-D.draft-handrews-json-schema-validation-02]]]
 
-* [[[iso19101, ISO 19101]]]
+* [[[iso19101,ISO 19101]]]
 
 * [[[iso19103,ISO 19103:2015]]]
 
@@ -19,7 +19,7 @@
 
 * [[[iso19157,ISO 19157:2013]]]
 
-* [[[iso19139,ISO/TC 211 19139:2007]]]
+* [[[iso19139,ISO 19139:2007]]]
 
 * [[[iso86011,ISO 8601-1:2019]]]
 
