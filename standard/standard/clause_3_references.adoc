@@ -47,6 +47,6 @@
 
 * [[[topic8,OGC 99-108r2]]]
 
-* [[[ogc20-010, OGC 20-010]]], OGC: OGC 20-010, OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard, v3.0, 2021.
+* [[[ogc20-010,OGC 20-010]]], OGC: OGC 20-010, OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard, v3.0, 2021.
 
-* [[[ogc07-036, OGC 07-036]]]
+* [[[ogc07-036,OGC 07-036]]]
