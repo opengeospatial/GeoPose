@@ -20,7 +20,7 @@ and encodings are based on the use of integer numbers of milliseconds.
 === Scaling
 
 Time values are represented and encoded as integer values in GeoPose 1.0. Note that a
-computing environment must support 64-bit signed integers in order to accomodate the
+computing environment must support 64-bit signed integers in order to accommodate the
 range of possible values.
 
 === Non-negative Time Positions

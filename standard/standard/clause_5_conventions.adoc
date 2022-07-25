@@ -43,7 +43,7 @@ image::images/Grey_UML.png[]
 Classes painted in grey represent data types.
 
 [[fig3]]
-.Blue color Denotes Abstract or More General Classes
+.Blue Color Denotes Abstract or More General Classes
 image::images/Blue_UML.png[]
 
 Classes painted in blue are internal less-derived elements that are not themselves
