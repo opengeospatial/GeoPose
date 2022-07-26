@@ -82,9 +82,9 @@ description:: To confirm that a Basic-YPR GeoPose consists of an Outer Frame spe
 inherit:: /conf/global
 
 conformance-test:: /conf/basic_ypr/sdu
-conformance-test:: /conf/tangent_plane/longitude/sdu
-conformance-test:: /conf/tangent_plane/latitude/sdu
-conformance-test:: /conf/tangent_plane/h/sdu
+conformance-test:: /conf/tangent_plane_longitude/sdu
+conformance-test:: /conf/tangent_plane_latitude/sdu
+conformance-test:: /conf/tangent_plane_h/sdu
 conformance-test:: /conf/ypr_angles/sdu
 ====
 
@@ -163,10 +163,10 @@ classification:: Target Type:SDU
 description:: To confirm that components of a Basic Quaternion GeoPose conform to the Logical Model.
 inherit:: /conf/global
 
-abstract-test:: /conf/basic_quaternion/sdu"
-conformance-test:: /conf/tangent_plane/longitude/sdu
-conformance-test:: /conf/tangent_plane/latitude/sdu
-conformance-test:: /conf/tangent_plane/h/sdu
+abstract-test:: /conf/basic/quaternion/sdu
+conformance-test:: /conf/tangent_plane_longitude/sdu
+conformance-test:: /conf/tangent_plane_latitude/sdu
+conformance-test:: /conf/tangent_plane_h/sdu
 conformance-test:: /conf/quaternion/sdu
 ====
 
@@ -651,7 +651,7 @@ conformance-test:: /conf/transition_model/sdu
 conformance-test:: /conf/frame_specification_authority/sdu
 conformance-test:: /conf/frame_specification_id/sdu
 conformance-test:: /conf/frame_specification_parameters/sdu
-abstract-test:: /conf/stream_frame_and_time/sdu
+abstract-test:: /conf/stream/frame_and_time/sdu
 ====
 
 [[conf_transition_model_sdu]]
@@ -659,7 +659,7 @@ abstract-test:: /conf/stream_frame_and_time/sdu
 .Transition-Model-SDU
 ====
 [%metadata]
-label:: /conf/frame_specification_authority/sdu
+label:: /conf/transition_model/sdu
 description:: To confirm that a TransitionModel attribute conforms to the Logical Model.
 test-purpose:: To confirm that a transition_model attribute is one of the values in the TransitionModel enumeration.
 subject:: /req/transition_model/sdu
@@ -854,7 +854,7 @@ The Chain Encoding member test is the following:
 .Chain-Encoding-JSON
 ====
 [%metadata]
-label:: /conf/chain/encoding/json
+label:: /conf/chain/encoding/json/test
 description:: Confirm that a JSON-encoded GeoPose Chain conforms to the specified JSON-Schema document.
 test-purpose:: To confirm that Chain GeoPose data objects conform to the Chain JSON-Schema definition.
 test-method:: JSON-Schema validation.
