@@ -293,12 +293,11 @@ subject:: Implementation of Logical Model
 description:: Advanced Logical Model SDU
 inherit:: /req/global
 
-requirement:: /req/advanced/sdu
 requirement:: /req/time/geopose_instant/sdu
-requirement:: /req/frame_specification_authority/sdu
-requirement:: /req/frame_specification_id/sdu
-requirement:: /req/frame_specification_parameters/sdu
-requirement:: /req/orientation_quaternion/sdu
+requirement:: /req/frame_specification/authority/sdu
+requirement:: /req/frame_specification/id/sdu
+requirement:: /req/frame_specification/parameters/sdu
+requirement:: /req/orientation/quaternion/sdu
 ====
 
 [[req_pose_geopose_instant_sdu]]
@@ -368,11 +367,10 @@ subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global
 
-requirement:: /req/graph/sdu
-requirement:: /req/geopose_instant/sdu
-requirement:: /req/frame_specification_authority/sdu
-requirement:: /req/frame_specification_id/sdu
-requirement:: /req/frame_specification_parameters/sdu
+requirement:: /req/time/geopose_instant/sdu
+requirement:: /req/frame_specification/authority/sdu
+requirement:: /req/frame_specification/id/sdu
+requirement:: /req/frame_specification/parameters/sdu
 requirement:: /req/transform_index/sdu
 ====
 
@@ -437,11 +435,10 @@ subject:: Implementation of Logical Model
 description:: Chain Logical Model SDU
 inherit:: /req/global
 
-requirement:: /req/chain/sdu
 requirement:: /req/time/geopose_instant/sdu
-requirement:: /req/frame_specification_authority/sdu
-requirement:: /req/frame_specification_id/sdu
-requirement:: /req/frame_specification_parameters/sdu
+requirement:: /req/frame_specification/authority/sdu
+requirement:: /req/frame_specification/id/sdu
+requirement:: /req/frame_specification/parameters/sdu
 ====
 
 [requirement]
@@ -499,12 +496,12 @@ subject:: Implementation of Logical Model
 description:: Regular Series Logical Model SDU
 inherit:: /req/global
 
-requirement:: /req/regular_series_header/sdu
+requirement:: /req/regular_series/header/sdu
 requirement:: /req/time/geopose_duration/SDU
-requirement:: /req/frame_specification_authority/sdu
-requirement:: /req/frame_specification_id/sdu
-requirement:: /req/frame_specification_parameters/sdu
-requirement:: /req/regular_series_trailer/sdu
+requirement:: /req/frame_specification/authority/sdu
+requirement:: /req/frame_specification/id/sdu
+requirement:: /req/frame_specification/parameters/sdu
+requirement:: /req/series/regular/trailer/sdu
 ====
 
 [requirement]
@@ -582,8 +579,8 @@ requirement:: /req/irregular_series_header/sdu
 requirement:: /req/frame_specification_authority/sdu
 requirement:: /req/frame_specification_id/sdu
 requirement:: /req/frame_specification_parameters/sdu
-requirement:: /req/irregular_series_frame_and_time/SDU
-requirement:: /req/regular_series_trailer/sdu
+requirement:: /req/IrregularSeries/frameandtime/SDU
+requirement:: /req/regular_series_trailer/SDU
 ====
 
 [requirement]
@@ -668,8 +665,8 @@ requirement:: /req/irregular_series_frame_and_time/SDU
 requirement:: /req/regular_series_trailer/sdu
 ====
 
-[reS-TM-SDUquirement]
-.
+[requirement]
+.S-TM-SDU
 ====
 [%metadata]
 label:: /req/transition_model/sdu
