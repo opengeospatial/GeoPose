@@ -1,5 +1,4 @@
 [appendix]
-:appendix-caption: Annex
 == Title ( {Normative/Informative} )
 
 [NOTE]

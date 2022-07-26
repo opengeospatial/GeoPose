@@ -8,8 +8,7 @@ The normative provisions in this document are denoted by the URI
 
 http://www.opengis.net/spec/GeoPose/1.0
 
-All requirements and conformance tests that appear in this document are denoted by
-partial URIs which are relative to this base.
+All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
 [[conventions-section]]
 === Use Cases, Concepts, Logical Model, Standardization Targets, Encodings
@@ -17,24 +16,15 @@ partial URIs which are relative to this base.
 [[uml_notation_section]]
 === UML Notation
 
-The logical structure of the elements used in the GeoPose Standard is presented in
-this document in diagrams using the Unified Modeling Language (UML) static structure
-diagram (see Booch et al. 1997). The UML notations used in this standard are
-described in the diagram in <<figure-1>>.
+The logical structure of the elements used in the GeoPose Standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. 1997). The UML notations used in this standard are described in the diagram in <<figure-1>>.
 
 [[figure-1]]
 .UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
 image::images/UML_Notation.png[]
 
-All associations between model elements in GeoPose are uni-directional. Thus,
-associations in GeoPose are navigable in only one direction. The direction of
-navigation is depicted by an arrowhead. In general, the context an element takes
-within the association is indicated by its role. The role is displayed near the
-target of the association. If the graphical representation is ambiguous though, the
-position of the role has to be drawn to the element the association points to.
+All associations between model elements in GeoPose are uni-directional. Thus, associations in GeoPose are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
 
-In order to enhance the readability of the GeoPose UML diagrams, classes are depicted
-in different colors. The following coloring scheme is applied:
+In order to enhance the readability of the GeoPose UML diagrams, classes are depicted in different colors. The following coloring scheme is applied:
 
 [[fig2]]
 .Data Types
@@ -46,16 +36,13 @@ Classes painted in grey represent data types.
 .Blue Color Denotes Abstract or More General Classes
 image::images/Blue_UML.png[]
 
-Classes painted in blue are internal less-derived elements that are not themselves
-directly encoded as concrete data objects.
+Classes painted in blue are internal less-derived elements that are not themselves directly encoded as concrete data objects.
 
 [[fig4]]
 .Yellow Color Denotes Structural Data Units
 image::images/Yellow_UML.png[]
 
-Classes painted in yellow correspond to Structural Data Units or have properties that
-are represented in Structural Data Units and in encodings of those SDUs. Only data
-types and classes painted yellow are encoded as concrete data objects.
+Classes painted in yellow correspond to Structural Data Units or have properties that are represented in Structural Data Units and in encodings of those SDUs. Only data types and classes painted yellow are encoded as concrete data objects.
 
 [[fig5]]
 .Green Color Denotes Enumeration
@@ -67,20 +54,13 @@ Enumerations are painted in green.
 .White Color Denotes a Note or Constraint
 image::images/White_UML.png[white,256,400,]
 
-The color white is used for notes and OCL constraints that are provided in the UML
-diagrams.
+The color white is used for notes and OCL constraints that are provided in the UML diagrams.
 
 [[conceptual-modeling-description]]
 === Conceptual Modelling
 
-<<iso19101>> defines universe of discourse to be a view of the real or
-hypothetical world that includes everything of interest. That standard then defines
-conceptual model to be a model that defines concepts of a universe of discourse.
+<<iso19101>> defines universe of discourse to be a view of the real or hypothetical world that includes everything of interest. That standard then defines conceptual model to be a model that defines concepts of a universe of discourse.
 
-The goal of this GeoPose Standard is to establish and document a common set of
-concepts that spans the targeted use cases. This does not attempt to redefine
-application concepts, but merely present a common set of concepts from and to which
-their concepts can be understood and mapped.
+The goal of this GeoPose Standard is to establish and document a common set of concepts that spans the targeted use cases. This does not attempt to redefine application concepts, but merely present a common set of concepts from and to which their concepts can be understood and mapped.
 
-The GeoPose conceptual model is a graph of related concepts. One
-technology-independent realization is given by the GeoPose Logical Model.
+The GeoPose conceptual model is a graph of related concepts. One technology-independent realization is given by the GeoPose Logical Model.

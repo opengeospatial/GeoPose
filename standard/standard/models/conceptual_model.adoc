@@ -1,9 +1,9 @@
 The GeoPose Conceptual Model(CM) consists of linked definitions of terms denoting concepts expressed in the GeoPose LM and structural data unit(SDU) specifications for the standardization targets. The CM describes a (non-normative) domain of discourse for terms used in defining a precise and normative Logical Model(LM) expressed as a Unified Modelling Language (UML) class diagram.
 
-The scope of the standardization targets is a subset of the scope of the LM. The scope of the LM is a subset of the scope of the Conceptual Model. The standardization targets are mutually independent implementations of subsets of the LM. 
+The scope of the standardization targets is a subset of the scope of the LM. The scope of the LM is a subset of the scope of the Conceptual Model. The standardization targets are mutually independent implementations of subsets of the LM.
 
 
-“Conceptual model: a description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain [CEN ENV 1613:1994]. A conceptual model is explicitly chosen to be may be informed by, but independent of design or implementation concerns.”
+"Conceptual model: a description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain [CEN ENV 1613:1994]. A conceptual model is explicitly chosen to be may be informed by, but independent of design or implementation concerns."
 
 ***
 
@@ -23,15 +23,15 @@ Defined terms are in bold caps. Underlined and bolded terms are linked to the de
 
 [[def_Orientation]]**Orientation** is the rotational relationship between two <<def_Reference_Frame,**reference frames**>>.
 
-[[def_Pose]]A **pose** is a representation of a <<def_FrameTransform, **frame transform**>>  mapping the space of an <<def_OuterFrame, **outer (reference) frame**>> to the space of an <<def_InnerFrame,**inner (reference) frame**>>. A **pose** may be associated with additional non-geometrical properties such as time of observation or validity. <<def_Pose,**Poses**>> in computer graphics often have an <<def_OuterFrame, **Outer Frame**>> defined by a parent node in a scenegraph and an <<def_InnerFrame, **Inner Frame**>> define by a <<def_Position, **position**>> and an orientation.
+[[def_Pose]]A **pose** is a representation of a <<def_FrameTransform, **frame transform**>>  mapping the space of an <<def_OuterFrame, **outer (reference) frame**>> to the space of an <<def_InnerFrame,**inner (reference) frame**>>. A **pose** may be associated with additional non-geometrical properties such as time of observation or validity. <<def_Pose,**Poses**>> in computer graphics often have an <<def_OuterFrame, **Outer Frame**>> defined by a parent node in a scene graph and an <<def_InnerFrame, **Inner Frame**>> define by a <<def_Position, **position**>> and an orientation.
 
 [[def_GeoPose]]A **GeoPose** is a <<def_Pose,**pose**>> whose associated <<defOuterFrame, **outer frame**>> or a <<def_PoseChain, **pose chain**>> whose associated <<def_OutermostFrame, **outermost frame**>> is a <<def_TopoCentric,**topocentric**>> <<def_Reference_Frame,**reference frame**>> defined by an <<def_ExtrinsicSpecification, **extrinsic specification**>> related to the <<def_Ephemeris_Object, **ephemeris object**>> planet Earth.
 
-[[def_Reference_Frame]]A **(reference) frame** is a system of location and measurement often defined by a <<def_Frame_Specification,**frame specification**>> usually including a coordinate system to be used within a corresponding space. 
+[[def_Reference_Frame]]A **(reference) frame** is a system of location and measurement often defined by a <<def_Frame_Specification,**frame specification**>> usually including a coordinate system to be used within a corresponding space.
 
 [[def_FrameTransform]]A **frame transform** consists of a pair of <<def_Reference_Frame, **reference frames**>> and a bi-continuous coordinate transformation relating points in the corresponding spaces. The two **frames** are called <<def_OuterFrame,**outer frame**>> (domain) and <<def_InnerFrame,**inner frame**>> (range).  Only an <<def_OuterFrame,**outer frame**>> may have an <<def_ExtrinsicSpecification, **extrinsic specification**>>. [A **frame transform** functions as a directed edge in a <<def_FrameGraph, **frame graph**>> representation of the transformational relationship between <<def_Reference_Frame, **frames**>>.]
 
-[[def_OuterFrame]]An **outer frame** is the first of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>. 
+[[def_OuterFrame]]An **outer frame** is the first of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>.
 
 [NOTE]
 In the NASA SPICE system, the <<def_OuterFrame, **outer frame**>> is referred to as the *from* <<def_Frame, **frame**>>. In the ROS SDF documentation, the <<def_OuterFrame, **outer frame**>> is referred to as the *Parent* <<def_Frame, **frame**>>. In ISO 19162, the <<def_OuterFrame, **outer frame**>> is referred to as the *base* <<def_Frame, **frame**>>.
@@ -47,7 +47,7 @@ In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to
 
 [[def_Ephemeris_Object]]An **ephemeris object** is a physical object or manifestation of a physical object that can be characterized by an externally-defined (possibly time-dependent) location and orientation in a 3-dimensional space.
 
-[[def_TopocentricCoordinates]]A **topocentric (reference) frame** is a <<def_Reference_Frame,**frame**>> that has an <<def_ExtrinsicSpecification,**extrinsic specification**>> associated with a location on or near the surface of a natural body, such as planet Earth. [This is the definition used in the NASA SPICE system.] In connection with a GeoPose, one way that a **topocentric frame** may be realized is by a <<def_LTPENU,**local tangent plane east-north-up frame (LTP-ENU)**>> attached to the surface of a body, to a gravitational equipotential surface (<<def_Geoid,**geoid**>> in the case of planet Earth), or to a mathematical surface such as an <<def_Ellipsoid,**ellipsoid**>> approximating a <<def_Geoid,**geoid**>>. 
+[[def_TopocentricCoordinates]]A **topocentric (reference) frame** is a <<def_Reference_Frame,**frame**>> that has an <<def_ExtrinsicSpecification,**extrinsic specification**>> associated with a location on or near the surface of a natural body, such as planet Earth. [This is the definition used in the NASA SPICE system.] In connection with a GeoPose, one way that a **topocentric frame** may be realized is by a <<def_LTPENU,**local tangent plane east-north-up frame (LTP-ENU)**>> attached to the surface of a body, to a gravitational equipotential surface (<<def_Geoid,**geoid**>> in the case of planet Earth), or to a mathematical surface such as an <<def_Ellipsoid,**ellipsoid**>> approximating a <<def_Geoid,**geoid**>>.
 
 [[def_Frame_Specification]]A **frame specification** is data that completely and uniquely defines a <<def_Reference_Frame, **reference frame**>>. In the context of Poses, there are <<def_ExtrinsicSpecification, **extrinsic specifications**>> defined by an external data source, and <<def_DerivedSpecification, **derived specifications**>> defined by a transformation from another <<def_Reference_Frame, **reference frame**>>.
 
@@ -66,10 +66,9 @@ In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to
 
 ***
 
-[[def_GeoPoseSequence]]A **(GeoPose) sequence** is a set of <<def_Pose,**(member) poses**>> ordered by <<def_ValidTime, **valid time**>> and pertaining to the same underlying physical object or construct. Each successive <<def_Pose,**(member) pose**>> must have a <<def_ValidTime, **valid time**>> after its predecessor. 
+[[def_GeoPoseSequence]]A **(GeoPose) sequence** is a set of <<def_Pose,**(member) poses**>> ordered by <<def_ValidTime, **valid time**>> and pertaining to the same underlying physical object or construct. Each successive <<def_Pose,**(member) pose**>> must have a <<def_ValidTime, **valid time**>> after its predecessor.
 
-
-[[def_InterPoseDuration]**Inter-pose duration** is the time <<def_Duration,**duration**>> between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>. 
+[[def_InterPoseDuration]**Inter-pose duration** is the time <<def_Duration,**duration**>> between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>.
 
 [[def_ClosedSequence]]A **closed (pose) sequence** is a <<def_GeoPoseSequence,**GeoPose sequence**>> of fixed length with specific meta-data that fully characterize the sequence and its **members**.
 
@@ -80,9 +79,7 @@ In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to
 
 [[def_Header]]A **(sequence) header** is metadata essential for interpretation of the following **members** of a **sequence**.
 
-[[def_TransitionModel]]A **transition model** is metadata that indicates whether or how it may be possible to estimate <<def_Pose,**poses**>> in the interval between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>. 
-
-
+[[def_TransitionModel]]A **transition model** is metadata that indicates whether or how it may be possible to estimate <<def_Pose,**poses**>> in the interval between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>.
 
 [[def_Trailer]]A **(sequence) trailer** is metadata essential for validation of the preceding **members** of a **sequence**. 
 
@@ -96,11 +93,11 @@ These terms are intended to align with terms used in OWL-TIME (https://www.w3.or
 
 [[def_TemporalFrame]]A **temporal frame** is a specification for the interpretation of points on a <<def_TimeLine,**Time Line**>> as <<def_Instant,**Instants**>> in relation to a specified <<def_Epoch,**epoch**>>.
 
-[[def_TimeLine]]A **time line (time axis)** is a one-dimensional <<def_EuclideanSpace,**euclidean space**>> whose points represent an ordered sequence of <<def_Instant, **instants**>> directed from the past to the future. 
+[[def_TimeLine]]A **time line (time axis)** is a one-dimensional <<def_EuclideanSpace,**euclidean space**>> whose points represent an ordered sequence of <<def_Instant, **instants**>> directed from the past to the future.
 
 [[def_Instant]]An **instant** is a specific point on a <<def_TimeLine,**time line**>>.
 
-[[def_Duration]]An **interval** is the timespan between two <<def_Instant, **Instants**>> on a <<def_TimeLine,**time line**>>, interpreted in context of the associated  <<def_TemporalFrame, **temporal frame**>>. A <<def_Durations,**duration**>> is semi-open: It includes the earlier <<def_Instant,**instant**>> but not the later <<def_Instant,**instant**>>. 
+[[def_Duration]]An **interval** is the timespan between two <<def_Instant, **Instants**>> on a <<def_TimeLine,**time line**>>, interpreted in context of the associated  <<def_TemporalFrame, **temporal frame**>>. A <<def_Durations,**duration**>> is semi-open: It includes the earlier <<def_Instant,**instant**>> but not the later <<def_Instant,**instant**>>.
 
 [[def_DurationLength]]The **duration** of an <<def_Interval,**interval**>> is the one-dimensional signed distance between its bounding <<def_Instant,**instants**>>. The magnitude of a **length** value depends on the <<def_TemporalFrame, **temporal frame**>>.
 
@@ -118,9 +115,9 @@ These terms are intended to align with terms used in OWL-TIME (https://www.w3.or
 
 [[def_TransactionTime]]**Transaction time** is a <<def_TimeLine,**time line**>> where the time of changes in the presence or validity of the representations of real-world objects or their properties in an information system are located. <<def_Instant,**Instants**>> in **transaction time** mark the temporal location of actions that create, update, or delete representations of objects or properties.
 
-[NOTE] 
+[NOTE]
 ====
-Both of the terms <<def_ValidTime,**valid time**>>> and <<def_TransactionTimes,**transaction time**>> are used in ways that can refer to <<def_Instant,**instants**>> or to <<def_TimeLine,**time lines**>>. 
+Both of the terms <<def_ValidTime,**valid time**>>> and <<def_TransactionTimes,**transaction time**>> are used in ways that can refer to <<def_Instant,**instants**>> or to <<def_TimeLine,**time lines**>>.
 ====
 
 [[def_Bi-Temporality]]**Bitemporality** is a property of a data representation that denotes that it carries both <<def_ValidTime,**valid**>> and <<def_TransactionTime,**transaction times**>>.
