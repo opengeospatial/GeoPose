@@ -2,131 +2,66 @@
 [appendix,obligation=informative]
 == Glossary
 
-The following terms and concepts have appeared in the discussion of the use cases and
-design of the GeoPose standard but not part of the terms defined in Terms and
-Definitions. These
+The following terms and concepts have appeared in the discussion of the use cases and design of the GeoPose standard but not part of the terms defined in Terms and Definitions. These
 
 * *Acceleration*: The time rate of change of velocity.
 
-* *Accelerometer*: A sensor that can measure Acceleration. Low cost, accurate
-sensors for measuring 3 mutually perpendicular components of acceleration are widely
-deployed in vehicles, communications devices, and other connected devices.
+* *Accelerometer*: A sensor that can measure Acceleration. Low cost, accurate sensors for measuring 3 mutually perpendicular components of acceleration are widely deployed in vehicles, communications devices, and other connected devices.
 
 * *Angular Acceleration*: The time rate of change of rotational velocity.
 
-* *Application Domain*: A context within which some technology or device is usefully
-applied.
+* *Application Domain*: A context within which some technology or device is usefully applied.
 
-* *Associated Reference Frame (Pose Frame)*: A Euclidean reference frame that is
-defined by the location and orientation of a Pose. A Pose defines the origin of its
-Associated Reference Frame, and its Orientation defines the orientation of its
-Associated Reference Frame. Associated Reference Frames are useful in many simulation
-and graphics applications where Poses are most naturally defined in terms of another
-(parent) object's pose.
+* *Associated Reference Frame (Pose Frame)*: A Euclidean reference frame that is defined by the location and orientation of a Pose. A Pose defines the origin of its Associated Reference Frame, and its Orientation defines the orientation of its Associated Reference Frame. Associated Reference Frames are useful in many simulation and graphics applications where Poses are most naturally defined in terms of another (parent) object's pose.
 
-* *Attribute*: A property associated with an object. In object modelling, it is the
-same as a property or data member.
+* *Attribute*: A property associated with an object. In object modelling, it is the same as a property or data member.
 
-* *Barometric Pressure*: The ambient pressure of the atmosphere at a location. Low
-cost, accurate sensors for barometric pressure are widely deployed in connected
-devices. Sensing of changes in Barometric Pressure over time periods of minutes or
-less is enables estimation of vertical relative position.
+* *Barometric Pressure*: The ambient pressure of the atmosphere at a location. Low cost, accurate sensors for barometric pressure are widely deployed in connected devices. Sensing of changes in Barometric Pressure over time periods of minutes or less is enables estimation of vertical relative position.
 
-* *Bluetooth Indoor Positioning Services*: Indoor Positioning Services based on
-Bluetooth signal strength and/or triangulation allow precise determination of
-location and orientation inside smaller spaces. The location of a Bluetooth
-transceiver may be specified with respect to a Geographic Coordinate System and it
-may be possible to compute a GeoPose from interactions with multiple BT transceivers
-or other sensors.
+* *Bluetooth Indoor Positioning Services*: Indoor Positioning Services based on Bluetooth signal strength and/or triangulation allow precise determination of location and orientation inside smaller spaces. The location of a Bluetooth transceiver may be specified with respect to a Geographic Coordinate System and it may be possible to compute a GeoPose from interactions with multiple BT transceivers or other sensors.
 
-* *(3D) Cartesian Coordinate System*: A system of geometrical reference using three
-mutually perpendicular axes where a point location is described by three numbers
-giving the perpendicular distance to each of the axes, all in the same numerical scale.
+* *(3D) Cartesian Coordinate System*: A system of geometrical reference using three mutually perpendicular axes where a point location is described by three numbers giving the perpendicular distance to each of the axes, all in the same numerical scale.
 
-* *Class*: A template for the data structure and methods for operating on those data
-structures for objects belonging to the Class.
+* *Class*: A template for the data structure and methods for operating on those data structures for objects belonging to the Class.
 
-* *Compass*: A sensor for measuring the relative orientation of a device to an
-ambient magnetic field. Accurate and low-cost Compasses are widely deployed in
-connected devices.
+* *Compass*: A sensor for measuring the relative orientation of a device to an ambient magnetic field. Accurate and low-cost Compasses are widely deployed in connected devices.
 
-* *Coordinate Reference System*: A coordinate reference system is a coordinate
-system referenced to a Datum.
+* *Coordinate Reference System*: A coordinate reference system is a coordinate system referenced to a Datum.
 
-* *Data Type*: A representational form for a concrete data element such as a number,
-character, or colour.
+* *Data Type*: A representational form for a concrete data element such as a number, character, or colour.
 
-* *Datum*: A reference point, line or surface used to establish measurements of
-position. A geodetic datum defines the measurement of horizontal position (latitude
-and longitude) and/or vertical position (height). datum is a set of parameters that
-define the position of the origin, the scale, and the orientation of a coordinate
-system.
+* *Datum*: A reference point, line or surface used to establish measurements of position. A geodetic datum defines the measurement of horizontal position (latitude and longitude) and/or vertical position (height). datum is a set of parameters that define the position of the origin, the scale, and the orientation of a coordinate system.
 
-* *Ellipsoid*: A mathematical surface that may be used as a datum in defining a
-Geographic Coordinate System. An ellipsoid is usually established by fitting the
-parameters of the ellipsoid to measurements of a gravitational equipotential surface
-(Geoid) that approximates mean sea level.
+* [[def_Ellipsoid]]*Ellipsoid*: A mathematical surface that may be used as a datum in defining a Geographic Coordinate System. An ellipsoid is usually established by fitting the parameters of the ellipsoid to measurements of a gravitational equipotential surface (Geoid) that approximates mean sea level.
 
-* *East-North-Up Local Tangent Plane Coordinate System*: A Euclidean 3-dimensional
-coordinate system aligned with the Z axis increasing upward, the X axis aligned
-toward the direction east, and the Y axis aligned toward north. Not defined at the
-poles because there is no inherent orientation.
+* *East-North-Up Local Tangent Plane Coordinate System*: A Euclidean 3-dimensional coordinate system aligned with the Z axis increasing upward, the X axis aligned toward the direction east, and the Y axis aligned toward north. Not defined at the poles because there is no inherent orientation.
 
-* *Euler Angles*: A simple way to describe the orientation of one Euclidean
-Reference Frame to another by specifying the rotations about each of the three axes
-respectively to bring one in alignment with the other.
+* *Euler Angles*: A simple way to describe the orientation of one Euclidean Reference Frame to another by specifying the rotations about each of the three axes respectively to bring one in alignment with the other.
 
-* *Geographic Coordinates*: A 3-dimensional reference system based on a reference
-ellipsoid. Two of the coordinates are angles with respect to the axis of the
-ellipsoid and to a plane containing the axis of the ellipsoid and a specified point
-(principle point) on the ellipsoid surface. The third coordinate is a linear measure
-of height above the ellipsoidal surface.
+* *Geographic Coordinates*: A 3-dimensional reference system based on a reference ellipsoid. Two of the coordinates are angles with respect to the axis of the ellipsoid and to a plane containing the axis of the ellipsoid and a specified point (principle point) on the ellipsoid surface. The third coordinate is a linear measure of height above the ellipsoidal surface.
 
 * *Geographic Position*: A point defined in Geographic Coordinates.
 
-* *Geoid*: An approximation of surface of equal gravitational force, usually
-attempting to match average sea-level. A Geoid is defined by measurements and is
-always inexact. The Ellipsoid used in Geographic Coordinate Systems is usually a
-mathematical approximation to a specific Geoid.
+* [[def_Geoid]]*Geoid*: An approximation of surface of equal gravitational force, usually attempting to match average sea-level. A Geoid is defined by measurements and is always inexact. The Ellipsoid used in Geographic Coordinate Systems is usually a mathematical approximation to a specific Geoid.
 
-* *Gyro*: A sensor that measures the rate of rotation. Low-cost, accurate Gyros are
-widely deployed in connected devices.
+* *Gyro*: A sensor that measures the rate of rotation. Low-cost, accurate Gyros are widely deployed in connected devices.
 
-* *Kinematics*: The properties of location, velocity, and acceleration of a body
-without regard to any forces acting on the body.
+* *Kinematics*: The properties of location, velocity, and acceleration of a body without regard to any forces acting on the body.
 
-* *Local Tangent Plane (LTP) Coordinate System*: A right-hand Euclidean Coordinate
-System with a vertical (Z) axis extending from an origin at a point defined by
-Geographic Coordinates with respect to an Ellipsoid. Often specialized to an
-east-north-up (ENU) system, where the X axis is aligned toward east and the Y axis
-toward north. While a LTP Coordinate System can be established at any location, an
-ENU cannot be defined at the poles because it cannot be oriented.
+* [[def_LTPENU]]*Local Tangent Plane (LTP) Coordinate System*: A right-hand Euclidean Coordinate System with a vertical (Z) axis extending from an origin at a point defined by Geographic Coordinates with respect to an Ellipsoid. Often specialized to an east-north-up (ENU) system, where the X axis is aligned toward east and the Y axis toward north. While a LTP Coordinate System can be established at any location, an ENU cannot be defined at the poles because it cannot be oriented.
 
-* *Position*: The location of a point with respect to the Origin of a specific
-Reference Frame.
+* *Position*: The location of a point with respect to the Origin of a specific Reference Frame.
 
-* *Property*: An attribute associated with an object. In object modelling, it is the
-same as an Attribute or data member.
+* *Property*: An attribute associated with an object. In object modelling, it is the same as an Attribute or data member.
 
-* *Quaternion*: Quaternions are an extension of complex numbers that have (among
-many other things) some convenient properties for computing with rotations, in
-particular smooth interpolation and avoidance of "gimbal lock" possible with Euler
-Angles.
+* *Quaternion*: Quaternions are an extension of complex numbers that have (among many other things) some convenient properties for computing with rotations, in particular smooth interpolation and avoidance of "gimbal lock" possible with Euler Angles.
 
-* *Rotation*: The angular relationship between a reference frame's axes and a
-direction in that reference frame. Euler Angles, Rotation Matrices, and Quaternions
-are three ways to specify a rotation.
+* *Rotation*: The angular relationship between a reference frame's axes and a direction in that reference frame. Euler Angles, Rotation Matrices, and Quaternions are three ways to specify a rotation.
 
-* *(Digital) Sensor*: A device that converts environmental properties into data
-suitable for computation.
+* *(Digital) Sensor*: A device that converts environmental properties into data suitable for computation.
 
-* *Topographic Surface*: The interface between the liquid or solid surface of a
-planet and its atmosphere or surrounding empty space. This surface is always
-approximate. It may be measure with reference to a gravitational equipotential
-surface (such as a Geoid) or a mathematical reference surface (such as an Ellipsoid).
+* *Topographic Surface*: The interface between the liquid or solid surface of a planet and its atmosphere or surrounding empty space. This surface is always approximate. It may be measure with reference to a gravitational equipotential surface (such as a Geoid) or a mathematical reference surface (such as an Ellipsoid).
 
 * *Velocity*: The time rate of change of Position.
 
-* *Vertical datum*: A reference level from which elevation or altitude can be
-measured. The Topographic Surface, a Geoid, a level of constant Barometric Pressure,
-or an Ellipsoid are examples.
+* *Vertical datum*: A reference level from which elevation or altitude can be measured. The Topographic Surface, a Geoid, a level of constant Barometric Pressure, or an Ellipsoid are examples.
