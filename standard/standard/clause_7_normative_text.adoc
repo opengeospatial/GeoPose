@@ -149,9 +149,9 @@ Global requirements apply to all SDUs and Standardization Targets.
 label:: /req/global
 subject:: SDU
 description:: Global SDU Requirements
-requirement:: <<global,/req/target_dependency>>
-requirement:: <<sdu_confomance,/req/sdu_general>>
-requirement:: <<lm_confomance,/req/lm_general>>
+requirement:: /req/target_dependency
+requirement:: /req/sdu_general
+requirement:: /req/lm_general
 ====
 
 The individual global requirements are defined as follows:
