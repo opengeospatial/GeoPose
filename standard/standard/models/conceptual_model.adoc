@@ -23,27 +23,27 @@ Defined terms are in bold caps. Underlined and bolded terms are linked to the de
 
 [[def_Orientation]]**Orientation** is the rotational relationship between two <<def_Reference_Frame,**reference frames**>>.
 
-[[def_Pose]]A **pose** is a representation of a <<def_FrameTransform, **frame transform**>>  mapping the space of an <<def_OuterFrame, **outer (reference) frame**>> to the space of an <<def_InnerFrame,**inner (reference) frame**>>. A **pose** may be associated with additional non-geometrical properties such as time of observation or validity. <<def_Pose,**Poses**>> in computer graphics often have an <<def_OuterFrame, **Outer Frame**>> defined by a parent node in a scene graph and an <<def_InnerFrame, **Inner Frame**>> define by a <<def_Position, **position**>> and an orientation.
+[[def_Pose]]A **pose** is a representation of a <<def_FrameTransform, **frame transform**>>  mapping the space of an <<def_Outer_Frame, **outer (reference) frame**>> to the space of an <<def_Inner_Frame,**inner (reference) frame**>>. A **pose** may be associated with additional non-geometrical properties such as time of observation or validity. <<def_Pose,**Poses**>> in computer graphics often have an <<def_Outer_Frame, **Outer Frame**>> defined by a parent node in a scene graph and an <<def_Inner_Frame, **Inner Frame**>> define by a <<def_Position, **position**>> and an orientation.
 
-[[def_GeoPose]]A **GeoPose** is a <<def_Pose,**pose**>> whose associated <<defOuterFrame, **outer frame**>> or a <<def_PoseChain, **pose chain**>> whose associated <<def_OutermostFrame, **outermost frame**>> is a <<def_TopoCentric,**topocentric**>> <<def_Reference_Frame,**reference frame**>> defined by an <<def_ExtrinsicSpecification, **extrinsic specification**>> related to the <<def_Ephemeris_Object, **ephemeris object**>> planet Earth.
+[[def_GeoPose]]A **GeoPose** is a <<def_Pose,**pose**>> whose associated <<def_Outer_Frame,**outer frame**>> or a <<def_PoseChain, **pose chain**>> whose associated <<def_OutermostFrame, **outermost frame**>> is a <<def_TopocentricCoordinates,**topocentric**>> <<def_Reference_Frame,**reference frame**>> defined by an <<def_ExtrinsicSpecification, **extrinsic specification**>> related to the <<def_Ephemeris_Object, **ephemeris object**>> planet Earth.
 
 [[def_Reference_Frame]]A **(reference) frame** is a system of location and measurement often defined by a <<def_Frame_Specification,**frame specification**>> usually including a coordinate system to be used within a corresponding space.
 
-[[def_FrameTransform]]A **frame transform** consists of a pair of <<def_Reference_Frame, **reference frames**>> and a bi-continuous coordinate transformation relating points in the corresponding spaces. The two **frames** are called <<def_OuterFrame,**outer frame**>> (domain) and <<def_InnerFrame,**inner frame**>> (range).  Only an <<def_OuterFrame,**outer frame**>> may have an <<def_ExtrinsicSpecification, **extrinsic specification**>>. [A **frame transform** functions as a directed edge in a <<def_FrameGraph, **frame graph**>> representation of the transformational relationship between <<def_Reference_Frame, **frames**>>.]
+[[def_FrameTransform]]A **frame transform** consists of a pair of <<def_Reference_Frame, **reference frames**>> and a bi-continuous coordinate transformation relating points in the corresponding spaces. The two **frames** are called <<def_Outer_Frame,**outer frame**>> (domain) and <<def_Inner_Frame,**inner frame**>> (range).  Only an <<def_Outer_Frame,**outer frame**>> may have an <<def_ExtrinsicSpecification, **extrinsic specification**>>. [A **frame transform** functions as a directed edge in a <<def_FrameGraph, **frame graph**>> representation of the transformational relationship between <<def_Reference_Frame, **frames**>>.]
 
-[[def_OuterFrame]]An **outer frame** is the first of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>.
-
-[NOTE]
-In the NASA SPICE system, the <<def_OuterFrame, **outer frame**>> is referred to as the *from* <<def_Frame, **frame**>>. In the ROS SDF documentation, the <<def_OuterFrame, **outer frame**>> is referred to as the *Parent* <<def_Frame, **frame**>>. In ISO 19162, the <<def_OuterFrame, **outer frame**>> is referred to as the *base* <<def_Frame, **frame**>>.
-
-[[def_InnerFrame]]An **inner frame** is the second of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>.   An **inner frame** may not be a <<def_TopocentricCoordinates, **topocentric frame**>>.
+[[def_Outer_Frame]]An **outer frame** is the first of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>.
 
 [NOTE]
-In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to as the *to* <<def_Frame, **frame**>>. In the ROS SDF documentation, the <<def_InnerFrame, **inner frame**>> is referred to as the *child* <<def_Frame, **frame**>>. In ISO 19162, the <<def_InnerFrame, **inner frame**>> is referred to as the *derived* <<def_Frame, **frame**>>.
+In the NASA SPICE system, the <<def_Outer_Frame, **outer frame**>> is referred to as the *from* **frame**. In the ROS SDF documentation, the <<def_Outer_Frame, **outer frame**>> is referred to as the *Parent* **frame**. In ISO 19162, the <<def_Outer_Frame, **outer frame**>> is referred to as the *base* **frame**.
 
-[[def_OutermostFrame]]An **outermost frame** is the <<def_OuterFrame,**outer frame**>> of the first <<def_FrameTransform,**frame transform**>> in a <<def_PoseChain,**pose chain**>>.
+[[def_Inner_Frame]]An **inner frame** is the second of two <<def_Reference_Frame,**reference frames**>> associated with a <<def_FrameTransform, **frame transform**>>.   An **inner frame** may not be a <<def_TopocentricCoordinates, **topocentric frame**>>.
 
-[[def_InnermostFrame]]An **Innermost frame** is the <<def_InnerFrame,**inner frame**>> of the last <<def_FrameTransform,**frame transform**>> in a <<def_PoseChain,**pose chain**>>.
+[NOTE]
+In the NASA SPICE system, the <<def_Inner_Frame, **inner frame**>> is referred to as the *to* **frame**. In the ROS SDF documentation, the <<def_Inner_Frame, **inner frame**>> is referred to as the *child* **frame**. In ISO 19162, the <<def_Inner_Frame, **inner frame**>> is referred to as the *derived* **frame**.
+
+[[def_OutermostFrame]]An **outermost frame** is the <<def_Outer_Frame,**outer frame**>> of the first <<def_FrameTransform,**frame transform**>> in a <<def_PoseChain,**pose chain**>>.
+
+[[def_InnermostFrame]]An **Innermost frame** is the <<def_Inner_Frame,**inner frame**>> of the last <<def_FrameTransform,**frame transform**>> in a <<def_PoseChain,**pose chain**>>.
 
 [[def_Ephemeris_Object]]An **ephemeris object** is a physical object or manifestation of a physical object that can be characterized by an externally-defined (possibly time-dependent) location and orientation in a 3-dimensional space.
 
@@ -52,11 +52,11 @@ In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to
 [[def_Frame_Specification]]A **frame specification** is data that completely and uniquely defines a <<def_Reference_Frame, **reference frame**>>. In the context of Poses, there are <<def_ExtrinsicSpecification, **extrinsic specifications**>> defined by an external data source, and <<def_DerivedSpecification, **derived specifications**>> defined by a transformation from another <<def_Reference_Frame, **reference frame**>>.
 
 
-[[def_ExtrinsicSpecification]]An **extrinsic frame specification** relates a <<def_Reference_Frame,**reference frame**>> to an <<def_EphemerisObject,**ephemeris object**>> or other external reference, which may be based on joint properties of a group of objects, such as the center of mass of the Earth-Moon system.
+[[def_ExtrinsicSpecification]]An **extrinsic frame specification** relates a <<def_Reference_Frame,**reference frame**>> to an <<def_Ephemeris_Object,**ephemeris object**>> or other external reference, which may be based on joint properties of a group of objects, such as the center of mass of the Earth-Moon system.
 
 [[def_DerivedSpecification]]A **derived frame specification** relates a <<def_Reference_Frame,**reference frame**>> to another <<def_Reference_Frame, **frame**>> by a <<def_FrameTransform, **frame transform**>> or its inverse.
 
-[[def_FrameGraph]]A **frame graph** is a directed acyclic graph representation of the transformational relationships between <<def_Reference_Frame,**reference frames**>>. <<def_Reference_Frame,**frames**>> are the nodes or vertices of the graph. <<def_FrameTransform,**frame transforms**>> are the edges of the graph, directed from the <<def_OuterFrame,**outer frame**>> to the <<def_InnerFrame,**inner frame**>>. Note that there may be zero, one, or many paths between two distinct vertices, i.e. <<def_Reference_Frame, **frames**>>. Multiple paths correspond to real-world situations with, for example, redundant line-of-sight links in point-to-point radio networks used in communication systems.]
+[[def_FrameGraph]]A **frame graph** is a directed acyclic graph representation of the transformational relationships between <<def_Reference_Frame,**reference frames**>>. <<def_Reference_Frame,**frames**>> are the nodes or vertices of the graph. <<def_FrameTransform,**frame transforms**>> are the edges of the graph, directed from the <<def_Outer_Frame,**outer frame**>> to the <<def_Inner_Frame,**inner frame**>>. Note that there may be zero, one, or many paths between two distinct vertices, i.e. <<def_Reference_Frame, **frames**>>. Multiple paths correspond to real-world situations with, for example, redundant line-of-sight links in point-to-point radio networks used in communication systems.]
 
 [[def_PoseChain]]A **pose chain** is a directed path in a <<def_FrameGraph, **frame graph**>> connecting an <<def_OutermostFrame,**outermost frame**>> to an <<def_InnermostFrame,**innermost frame**>>.  The sequence of <<def_FrameTransform, **frame transforms**>> in a **pose chain** may be combined in a single composite transformation. [There may exist multiple **pose chains** linking the same <<def_OutermostFrame,**outermost frame**>> and <<def_InnermostFrame,**innermost frame**>> and the corresponding composite transformations may not agree. This is intentional, representing real-world configurations and capabilities of sensors and communication links.]
 
@@ -68,13 +68,13 @@ In the NASA SPICE system, the <<def_InnerFrame, **inner frame**>> is referred to
 
 [[def_GeoPoseSequence]]A **(GeoPose) sequence** is a set of <<def_Pose,**(member) poses**>> ordered by <<def_ValidTime, **valid time**>> and pertaining to the same underlying physical object or construct. Each successive <<def_Pose,**(member) pose**>> must have a <<def_ValidTime, **valid time**>> after its predecessor.
 
-[[def_InterPoseDuration]**Inter-pose duration** is the time <<def_Duration,**duration**>> between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>.
+[[def_InterPoseDuration]]**Inter-pose duration** is the time <<def_Duration,**duration**>> between consecutive <<def_Pose,**poses**>> in a <<def_GeoPoseSequence, **sequence**>>.
 
 [[def_ClosedSequence]]A **closed (pose) sequence** is a <<def_GeoPoseSequence,**GeoPose sequence**>> of fixed length with specific meta-data that fully characterize the sequence and its **members**.
 
-[[def_RegularSequence]]A **regular (GeoPose) sequence** is a <<defClosedSequence,**closed sequence**>> with a constant <<def_InterPoseDuration,**inter-pose duration**>>.
+[[def_RegularSequence]]A **regular (GeoPose) sequence** is a <<def_ClosedSequence,**closed sequence**>> with a constant <<def_InterPoseDuration,**inter-pose duration**>>.
 
-[[def_IrregularSequence]]An **irregular (GeoPose) sequence** is a <<defClosedSequence,**closed sequence**>> with a variable <<def_InterPoseDuration,**inter-pose duration**>>. Each <<def_Pose,**pose**>> in an **irregular sequence** has an associated <<def_ValidTime,**valid time**>>.
+[[def_IrregularSequence]]An **irregular (GeoPose) sequence** is a <<def_ClosedSequence,**closed sequence**>> with a variable <<def_InterPoseDuration,**inter-pose duration**>>. Each <<def_Pose,**pose**>> in an **irregular sequence** has an associated <<def_ValidTime,**valid time**>>.
 [[def_Stream]]A **GeoPose stream** is an <<def_IrregularSequence,**irregular sequence**>> of unbounded length.
 
 [[def_Header]]A **(sequence) header** is metadata essential for interpretation of the following **members** of a **sequence**.
@@ -93,15 +93,17 @@ These terms are intended to align with terms used in OWL-TIME (https://www.w3.or
 
 [[def_TemporalFrame]]A **temporal frame** is a specification for the interpretation of points on a <<def_TimeLine,**Time Line**>> as <<def_Instant,**Instants**>> in relation to a specified <<def_Epoch,**epoch**>>.
 
-[[def_TimeLine]]A **time line (time axis)** is a one-dimensional <<def_EuclideanSpace,**euclidean space**>> whose points represent an ordered sequence of <<def_Instant, **instants**>> directed from the past to the future.
+[[def_TimeLine]]A **time line (time axis)** is a one-dimensional **euclidean space** whose points represent an ordered sequence of <<def_Instant, **instants**>> directed from the past to the future.
 
 [[def_Instant]]An **instant** is a specific point on a <<def_TimeLine,**time line**>>.
 
-[[def_Duration]]An **interval** is the timespan between two <<def_Instant, **Instants**>> on a <<def_TimeLine,**time line**>>, interpreted in context of the associated  <<def_TemporalFrame, **temporal frame**>>. A <<def_Durations,**duration**>> is semi-open: It includes the earlier <<def_Instant,**instant**>> but not the later <<def_Instant,**instant**>>.
+[[def_Interval]]An **interval** is the timespan between two <<def_Instant, **Instants**>> on a <<def_TimeLine,**time line**>>, interpreted in context of the associated  <<def_TemporalFrame, **temporal frame**>>
+
+[[def_Duration]]A <<def_Duration,**duration**>> is semi-open: It includes the earlier <<def_Instant,**instant**>> but not the later <<def_Instant,**instant**>>.
 
 [[def_DurationLength]]The **duration** of an <<def_Interval,**interval**>> is the one-dimensional signed distance between its bounding <<def_Instant,**instants**>>. The magnitude of a **length** value depends on the <<def_TemporalFrame, **temporal frame**>>.
 
-[[def_Epoch]]An **epoch** is a specified <<def_Instant, **instant**>> that can be used as a reference point to calculate <<def_TemporalRelationShip, **temporal relationships**>> and <<def_Durations,**durations**>> between <<def_Instant,**instants**>>.
+[[def_Epoch]]An **epoch** is a specified <<def_Instant, **instant**>> that can be used as a reference point to calculate <<def_TemporalRelationship,**temporal relationships**>> and <<def_Duration,**durations**>> between <<def_Instant,**instants**>>.
 
 [[def_TemporalRelationship]]A **temporal relationship** between two <<def_Instant,**instants**>> is one of:  **before**, **coincident**, or **after**. <<def_TemporalRelationship,**temporal relationships**>> are only valid within the context of a specific <<def_TemporalFrame,**temporal frame**>>.
 
@@ -117,7 +119,7 @@ These terms are intended to align with terms used in OWL-TIME (https://www.w3.or
 
 [NOTE]
 ====
-Both of the terms <<def_ValidTime,**valid time**>>> and <<def_TransactionTimes,**transaction time**>> are used in ways that can refer to <<def_Instant,**instants**>> or to <<def_TimeLine,**time lines**>>.
+Both of the terms <<def_ValidTime,**valid time**>>> and <<def_TransactionTime,**transaction time**>> are used in ways that can refer to <<def_Instant,**instants**>> or to <<def_TimeLine,**time lines**>>.
 ====
 
 [[def_Bi-Temporality]]**Bitemporality** is a property of a data representation that denotes that it carries both <<def_ValidTime,**valid**>> and <<def_TransactionTime,**transaction times**>>.
