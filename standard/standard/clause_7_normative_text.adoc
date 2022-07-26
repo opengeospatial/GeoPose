@@ -12,7 +12,7 @@ Outer and Inner, each defined by a Frame Specification. The Logical Model relate
 these elements to represent different types of GeoPose data objects and also defines
 structures built of time series and linked GeoPoses.
 
-=== UML Logical Model (Normative)
+=== UML Logical Model
 
 The normative expression of the UML model is a Sparx Systems Enterprise Explorer
 link:https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/Model.eapx[project ("eapx")file].
@@ -138,7 +138,7 @@ GeoPose does use a three-part designation of an external frame specification usi
 the three fields _authority_, _ID_, and _parameters_. The interpretation of the
 contents of these fields is outside the scope of GeoPose.
 
-=== Global Requirements (Normative)
+=== Global Requirements
 
 Global requirements apply to all SDUs and Standardization Targets.
 
@@ -193,7 +193,7 @@ The Basic-YPR Target has a simple structure with no options. Position is specifi
 a point in an LTP-ENU frame and rotation is specified by yaw, pitch, and roll angles
 specified in decimal degrees.
 
-*Structure (Normative)*
+*Structure*
 
 [[basic_ypr_sdu]]
 .Basic YPR SDU
@@ -279,7 +279,7 @@ The Basic-Quaternion Target has a simple structure with no options. Position is
 specified as a point in an LTP-ENU frame and rotation is specified as a unit
 quaternion.
 
-*Structure (Normative)*
+*Structure*
 
 [[basic_quaternion_sdu]]
 .Basic Quaternion SDU
@@ -357,7 +357,7 @@ where the coordinate axes East, North, and Up correspond to the axes X, Y, Z.
 The Advanced Target has a more general structure, supporting flexible specification
 of Outer Frame and a Valid Time.
 
-*Structure (Normative)*
+*Structure*
 
 [[advanced_sdu]]
 .Basic Advanced SDU
@@ -447,7 +447,7 @@ Extrinsic Frame.
 
 [[req_graph]]
 
-*Structure (Normative)*
+*Structure*
 
 [[graph_sdu]]
 .Graph SDU
@@ -587,7 +587,7 @@ parameters needed for the corresponding authority and ID.
 The Regular (Time) Series Target represents the time evolution of a single GeoPose,
 with a constant time duration between successive inner frames.
 
-*Structure (Normative)*
+*Structure*
 
 [[req_sequence_series_regular]]
 
@@ -671,7 +671,7 @@ description:: A trailer property SHALL be implemented as a SeriesTrailer structu
 The Irregular (Time) Series Target represents the time evolution of a single GeoPose,
 with a variable time duration between successive inner frames.
 
-*Structure (Normative)*
+*Structure*
 
 [[req_sequence_series_irregular]]
 
@@ -761,7 +761,7 @@ in time in a single structure is possible. The result is that there are two kind
 data objects that may be involved in transmission of a stream: Headers and Elements
 and a third kind of object that represents a Recorded Stream.
 
-*Structure (Normative)*
+*Structure*
 
 [[req_sequence_stream]]
 [[stream_header_sdu]]
@@ -862,13 +862,13 @@ Standard. In addition to supporting specific application requirements outside th
 GeoPose 1.0 scope, this flexibility enables experimentation with useful properties
 that might be part of a future version of the OGC GeoPose Standard.
 
-==== Standardization Target 1: Basic-YPR (Normative)
+==== Standardization Target 1: Basic-YPR
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties"
 property is set to the default value of *true*.
 
-===== JSON Encoding (Normative)
+===== JSON Encoding
 
 [[req_basic_ypr_encoding_json]]
 [requirement]
@@ -893,7 +893,7 @@ include::schemata/GeoPose.Basic.YPR.Schema.json[]
 include::instances/GeoPose.Basic.YPR.Instance.00.json[]
 ----
 
-==== Standardization Target 2: Basic-Quaternion (Normative)
+==== Standardization Target 2: Basic-Quaternion
 
 [NOTE]
 Two JSON encodings are defined for the Basic-Quaternion Target:
@@ -901,7 +901,7 @@ Two JSON encodings are defined for the Basic-Quaternion Target:
 *Extensible*, allowing additional JSON properties in addition to those required by
 the schema. All other targets follow the default and permit additional JSON properties.
 
-===== Strict JSON Encoding (Normative)
+===== Strict JSON Encoding
 
 [[req_basic_quaternion_encoding_json_strict]]
 [requirement]
@@ -927,7 +927,7 @@ include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
 include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
 ----
 
-===== Permissive JSON Encoding (Normative)
+===== Permissive JSON Encoding
 
 [NOTE]
 This JSON encoding of the Basic-Quaternion GeoPose is extensible because the
@@ -958,13 +958,13 @@ include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
 include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
 ----
 
-==== Standardization Target 3: Advanced GeoPose (Normative)
+==== Standardization Target 3: Advanced GeoPose
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties"
 property is set to the default value of *true*.
 
-===== JSON Encoding (Normative)
+===== JSON Encoding
 
 [[req_advanced_encoding_json]]
 [requirement]
@@ -989,13 +989,13 @@ include::schemata/GeoPose.Advanced.Schema.json[]
 include::instances/GeoPose.Advanced.Instance.json[]
 ----
 
-==== Standardization Target 4: Graph (Normative)
+==== Standardization Target 4: Graph
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties"
 property is set to the default value of *true*.
 
-===== JSON Encoding (Normative)
+===== JSON Encoding
 
 [[req_graph_encoding_json]]
 [requirement]
@@ -1020,13 +1020,13 @@ include::schemata/GeoPose.Composite.Graph.Schema.json[]
 include::instances/GeoPose.Composite.Graph.Instance.json[]
 ----
 
-==== Standardization Target 5: Chain (Normative)
+==== Standardization Target 5: Chain
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties"
 property is set to the default value of *true*.
 
-===== JSON Encoding (Normative)
+===== JSON Encoding
 
 *JSON-Schema:*
 
@@ -1051,13 +1051,13 @@ include::schemata/GeoPose.Composite.Chain.Schema.json[]
 include::instances/GeoPose.Composite.Chain.Instance.json[]
 ----
 
-==== Standardization Target 6: Regular Series (Normative)
+==== Standardization Target 6: Regular Series
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties"
 property is set to the default value of *true*.
 
-===== JSON Encoding (Normative)
+===== JSON Encoding
 
 *JSON-Schema:*
 
@@ -1082,12 +1082,12 @@ include::schemata/GeoPose.Composite.Sequence.Series.Regular.Schema.json[]
 include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 ----
 
-==== Standardization Target 7: Irregular Series (Normative)
+==== Standardization Target 7: Irregular Series
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties"
 property is set to the default value of *true*.
 
-===== JSON Encoding (Normative)
+===== JSON Encoding
 
 *JSON-Schema:*
 
@@ -1112,13 +1112,13 @@ include::schemata/GeoPose.Composite.Sequence.Series.Irregular.Schema.json[]
 include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
 ----
 
-==== Standardization Target 8: Stream (Normative)
+==== Standardization Target 8: Stream
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "addtionalProperties"
 property is set to the default value of *true*.
 
-===== JSON Encoding (Normative)
+===== JSON Encoding
 
 *JSON-Schemata:*
 
