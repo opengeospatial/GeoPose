@@ -1,7 +1,7 @@
 == Conformance
 
 Conformance with this standard shall be checked using all the relevant tests
-specified in <<annex-A>> (Normative) of this document. The framework, concepts, and
+specified in <<annex-A>> of this document. The framework, concepts, and
 methodology for testing, and the criteria to be achieved to claim conformance are
 specified in the OGC Compliance Testing Policies
 (https://portal.ogc.org/files/?artifact_id=55234) and Procedures and the OGC
