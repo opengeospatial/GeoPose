@@ -34,27 +34,9 @@ subject:: /req/global
 classification:: Target Type:SDU
 description:: Conformance with Global SDU requirements
 
-[conformance_test]
-======
-[%metadata]
-label:: /conf/target_dependency
-subject:: /req/target_dependency
-name:: G-Target
-======
-
-[conformance_test]
-======
-[%metadata]
-label:: /conf/sdu_general
-name:: G-SDU
-======
-
-[conformance_test]
-======
-[%metadata]
-label:: /conf/lm_general
-name:: G-LM
-======
+conformance-test:: /conf/target_dependency
+conformance-test:: /conf/sdu_general
+conformance-test:: /conf/lm_general
 ====
 
 The individual global tests are:
@@ -127,25 +109,11 @@ system and explicit parameters defining the tangent point and that the Inner Fra
 a rotation-only transformation using Yaw, Pitch, and Roll angles.
 inherit:: /conf/global
 
-[conformance_test,label="/conf/basic_ypr/sdu",name="B-YPR-SDU"]
-======
-======
-
-[conformance_test,label="/conf/tangent_plane/longitude/sdu",name="B-TP-Lon-SDU"]
-======
-======
-
-[conformance_test,label="/conf/tangent_plane/latitude/sdu",name="B-TP-Lat-SDU"]
-======
-======
-
-[conformance_test,label="/conf/tangent_plane/h/sdu",name="B-TP-h-SDU"]
-======
-======
-
-[conformance_test,label="/conf/ypr_angles/sdu",name="YPR-Angles-SDU"]
-======
-======
+conformance-test:: /conf/basic_ypr/sdu
+conformance-test:: /conf/tangent_plane/longitude/sdu
+conformance-test:: /conf/tangent_plane/latitude/sdu
+conformance-test:: /conf/tangent_plane/h/sdu
+conformance-test:: /conf/ypr_angles/sdu
 ====
 
 The Basic-YPR SDU member tests are the following:
@@ -238,25 +206,11 @@ description:: To confirm that components of a Basic Quaternion GeoPose conform t
 Logical Model.
 inherit:: /conf/global
 
-[abstract_test,label="/conf/basic_quaternion/sdu"]
-======
-======
-
-[conformance_test,label="/conf/tangent_plane/longitude/sdu",name="B-TP-Lon-SDU"]
-======
-======
-
-[conformance_test,label="/conf/tangent_plane/latitude/sdu",name="B-TP-Lat-SDU"]
-======
-======
-
-[conformance_test,label="/conf/tangent_plane/h/sdu",name="B-TP-h-SDU"]
-======
-======
-
-[conformance_test,label="/conf/quaternion/sdu",name="Quaternion-SDU"]
-======
-======
+abstract-test:: /conf/basic_quaternion/sdu"
+conformance-test:: /conf/tangent_plane/longitude/sdu
+conformance-test:: /conf/tangent_plane/latitude/sdu
+conformance-test:: /conf/tangent_plane/h/sdu
+conformance-test:: /conf/quaternion/sdu
 ====
 
 [[conf_basic_quaternion_sdu]]
@@ -339,25 +293,11 @@ description:: To confirm that an implementation of the Advanced GeoPose conforms
 the Logical Model.
 inherit:: /conf/global
 
-[conformance_test,label="/conf/geopose_instant/sdu",name="GP-Instant-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[conformance_test,label="/conf/quaternion/sdu",name="Quaternion-SDU"]
-======
-======
+conformance-test:: /conf/geopose_instant/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+conformance-test:: /conf/quaternion/sdu
 ====
 
 [[conf_geopose_instant_sdu]]
@@ -440,25 +380,11 @@ description:: To confirm that an implementation of the GeoPose Graph conforms to
 Logical Model.
 inherit:: /conf/global
 
-[conformance_test,label="/conf/geopose_instant/sdu",name="GP-Instant-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[conformance_test,label="/conf/graph_index/sdu",name="Graph-Index-SDU"]
-======
-======
+conformance-test:: /conf/geopose_instant/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+conformance-test:: /conf/graph_index/sdu
 ====
 
 [conformance_test]
@@ -538,25 +464,11 @@ description:: To confirm that an implementation of the GeoPose Chain conforms to
 Logical Model.
 inherit:: /conf/global
 
-[conformance_test,label="/conf/geopose_instant/sdu",name="GP-Instant-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[conformance_test,label="/conf/chain_index/sdu",name="Chain-Index-SDU"]
-======
-======
+conformance-test:: /conf/geopose_instant/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+conformance-test:: /conf/chain_index/sdu
 ====
 
 [conformance_test]
@@ -635,29 +547,12 @@ description:: To confirm that components of a Regular Series conform to the Logi
 Model.
 inherit:: /conf/global
 
-[conformance_test,label="/conf/series_header/sdu",name="Series-Header-SDU"]
-======
-======
-
-[conformance_test,label="/conf/geopose_duration/sdu",name="GP-Duration-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[conformance_test,label="/conf/series_trailer/sdu",name="Series-Trailer-SDU"]
-======
-======
+conformance-test:: /conf/series_header/sdu
+conformance-test:: /conf/geopose_duration/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+conformance-test:: /conf/series_trailer/sdu
 ====
 
 [[conf_series_header_sdu]]
@@ -751,33 +646,13 @@ classification:: Target Type:SDU
 description:: To confirm that a Regular Series conforms to the Logical Model.
 inherit:: /conf/global
 
-[conformance_test,label="/conf/series_header/sdu",name="Series-Header-SDU"]
-======
-======
-
-[conformance_test,label="/conf/geopose_duration/sdu",name="GP-Duration-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[conformance_test,label="/conf/series_frame_and_time/sdu",name="Series-Frame-And-Time-SDU"]
-======
-======
-
-[conformance_test,label="/conf/series_trailer/sdu",name="Series-Trailer-SDU"]
-======
-======
+conformance-test:: /conf/series_header/sdu
+conformance-test:: /conf/geopose_duration/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+conformance-test:: /conf/series_frame_and_time/sdu
+conformance-test:: /conf/series_trailer/sdu
 ====
 
 [conformance_test]
@@ -869,25 +744,11 @@ classification:: Target Type:SDU
 description:: To confirm that a GeoPose Stream conforms to the Logical Model.
 inherit:: /conf/global
 
-[conformance_test,label="/conf/transition_model/sdu",name="Transition-Model-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[conformance_test,label="/conf/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[abstract_test,label="/conf/stream_frame_and_time/sdu",name="Stream-Frame-And-Time-SDU"]
-======
-======
+conformance-test:: /conf/transition_model/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+abstract-test:: /conf/stream_frame_and_time/sdu
 ====
 
 [[conf_transition_model_sdu]]
@@ -975,9 +836,7 @@ system and explicit parameters defining the tangent point and that the Inner Fra
 a rotation-only transformation using Yaw, Pitch, and Roll angles.
 inherit:: /conf/basic_ypr_sdu
 
-[conformance_test,label="/conf/basic_ypr/encoding/json/test",name="B-YPR-Encoding-JSON"]
-======
-======
+conformance-test:: /conf/basic_ypr/encoding/json/test
 ====
 
 The Basic-YPR JSON Encoding member test is the following:
@@ -1012,9 +871,7 @@ description:: Confirm that a JSON-encoded Basic-Quaternion GeoPose conforms to t
 relevant elements of the Logical Model and a corresponding JSON-Schema document.
 inherit:: /conf/basic_ypr_sdu
 
-[conformance_test,label="/conf/basic_ypr/encoding/json/test"]
-======
-======
+conformance-test:: /conf/basic_ypr/encoding/json/test
 ====
 
 The *Basic-Quaternion* JSON Encoding member test is the following:
@@ -1049,9 +906,7 @@ description:: Confirm that a strict JSON-encoded Basic-Quaternion GeoPose confor
 the relevant elements of the Logical Model and a corresponding JSON-Schema document.
 inherit:: /conf/basic_quaternion_sdu
 
-[conformance_test,label="/conf/basic_quaternion/encoding/json_strict",name="B-Quaternion-Encoding-JSON-Strict"]
-======
-======
+conformance-test:: /conf/basic_quaternion/encoding/json_strict
 ====
 
 The Basic-Quaternion JSON (Strict) Encoding member test is the following:
@@ -1085,9 +940,7 @@ description:: To confirm that a JSON-encoded Advanced GeoPose conforms to the
 relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/advanced_sdu
 
-[conformance_test,label="/conf/advanced/encoding/json/test",name="Advanced-Encoding-JSON"]
-======
-======
+conformance-test:: /conf/advanced/encoding/json/test
 ====
 
 The *Advanced GeoPose* JSON Encoding member test is the following:
@@ -1121,9 +974,7 @@ description:: To confirm that a JSON-encoded GeoPose Chain conforms to the relev
 elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/chain/sdu
 
-[conformance_test,label="/conf/chain/encoding/json/test",name="Chain-Encoding-JSON"]
-======
-======
+conformance-test:: /conf/chain/encoding/json/test
 ====
 
 The Chain Encoding member test is the following:
@@ -1156,9 +1007,7 @@ description:: To confirm that a JSON-encoded GeoPose Graph conforms to the relev
 elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/graph/sdu
 
-[conformance_test,label="/conf/graph/encoding/json/test",name="Graph-Encoding-JSON"]
-======
-======
+conformance-test:: /conf/graph/encoding/json/test
 ====
 
 The Graph Encoding member test is the following:
@@ -1192,9 +1041,7 @@ description:: To confirm that a JSON-encoded Regular Series conforms to the rele
 elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/regular_series/sdu
 
-[conformance_test,label="/conf/regular_series/encoding/json",name="Regular-Series-Encoding-JSON"]
-======
-======
+conformance-test:: /conf/regular_series/encoding/json
 ====
 
 The *GeoPose Regular Series* JSON Encoding member test is the following:
@@ -1228,9 +1075,7 @@ description:: To confirm that a JSON-encoded Irregular Series conforms to the
 relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/irregular_series/sdu
 
-[conformance_test,label="/conf/irregular_series/encoding/json/test",name="Chain"]
-======
-======
+conformance-test:: /conf/irregular_series/encoding/json/test
 ====
 
 The *GeoPose Irregular Series* JSON Encoding member test is the following:
@@ -1264,9 +1109,7 @@ description:: Confirm that GeoPose Stream data objects conform to the correspond
 Stream JSON-Schema requirement.
 inherit:: /conf/stream/sdu
 
-[conformance_test,label="/conf/stream/encoding/json/test",name="Stream-Encoding-JSON"]
-======
-======
+conformance-test:: /conf/stream/encoding/json/test
 ====
 
 The *GeoPose Stream* JSON Encoding member test is the following:
