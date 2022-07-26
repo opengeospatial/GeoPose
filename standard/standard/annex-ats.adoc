@@ -52,7 +52,6 @@ Standardization Targets.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/target_dependency
-classification:: Test Type:Conformance
 ====
 
 [[conformance_sdu]]
@@ -67,7 +66,6 @@ stereotype.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/sdu_general
-classification:: Test Type:Conformance
 ====
 
 [[conformance_lm]]
@@ -82,7 +80,6 @@ multiplicities, and data types in the Logical Model.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/lm_general
-classification:: Test Type:Conformance
 ====
 
 === Structural Data Unit (SDU) Conformance
@@ -132,7 +129,6 @@ and Roll angles.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/basic_ypr/sdu
-classification:: Test Type:Conformance
 ====
 
 [[conf_tangent_plane_longitude_sdu]]
@@ -146,7 +142,6 @@ as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/tangent_plane_longitude/sdu
-classification:: Test Type:Conformance
 ====
 
 [[conf_tangent_plane_latitude_sdu]]
@@ -160,7 +155,6 @@ as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/tangent_plane_latitude/sdu
-classification:: Test Type:Conformance
 ====
 
 [[conf_tangent_plane_h_sdu]]
@@ -174,7 +168,6 @@ height in meters above the WGS-84 ellipsoid.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/tangent_plane_h/sdu
-classification:: Test Type:Conformance
 ====
 
 [[conf_ypr_angles_sdu]]
@@ -189,7 +182,6 @@ conventional Yaw, Pitch, and Roll angles and that the unit of measure is the deg
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/ypr_angles/sdu
-classification:: Test Type:Conformance
 ====
 
 ==== Basic-Q SDU Conformance Class
@@ -236,7 +228,6 @@ as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/tangent_plane_longitude/sdu
-classification:: Test Type:Conformance
 ====
 
 [conformance_test]
@@ -249,7 +240,6 @@ as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/tangent_plane_latitude/sdu
-classification:: Test Type:Conformance
 ====
 
 [conformance_test]
@@ -262,7 +252,6 @@ height in meters above the WGS-84 ellipsoid.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 subject:: /req/tangent_plane_h/sdu
-classification:: Test Type:Conformance
 ====
 
 [[conf_quaternion_sdu]]
@@ -853,7 +842,6 @@ test-purpose:: To confirm that Basic-YPR GeoPose data objects conform to the Bas
 JSON-Schema definition.
 test-method:: JSON-Schema validation.
 subject:: /req/basic_ypr/sdu
-classification:: Test Type:Conformance
 ====
 
 The *Basic-Quaternion GeoPose* JSON encoding is intended for applications using
@@ -888,7 +876,6 @@ test-purpose:: To confirm that Basic-Quaternion GeoPose data objects conform to 
 Basic-Quaternion JSON-Schema definition.
 test-method:: JSON-Schema validation.
 subject:: /req/basic_quaternion/sdu
-classification:: Test Type:Conformance
 ====
 
 [NOTE]
@@ -923,7 +910,6 @@ test-purpose:: To confirm that Basic-Quaternion (Strict) GeoPose data objects co
 the Basic-Quaternion (Strict) JSON-Schema definition.
 test-method:: JSON-Schema validation.
 subject:: /req/basic_quaternion/sdu
-classification:: Test Type:Conformance
 ====
 
 The *Advanced GeoPose* JSON encoding has an optional time stamp and a flexible Outer
@@ -957,7 +943,6 @@ test-purpose:: To confirm that Advanced GeoPose data objects conform to the Adva
 JSON-Schema definition.
 test-method:: JSON-Schema validation.
 subject:: /req/advanced/sdu
-classification:: Test Type:Conformance
 ====
 
 The *GeoPose Chain* JSON encoding supports a linear sequence of frame transformations
@@ -991,7 +976,6 @@ test-purpose:: To confirm that Chain GeoPose data objects conform to the Chain J
 definition.
 test-method:: JSON-Schema validation.
 subject:: /req/chain/sdu
-classification:: Test Type:Conformance
 ====
 
 The *GeoPose Graph* JSON encoding supports a directed graph stucture.
@@ -1024,7 +1008,6 @@ test-purpose:: To confirm that Graph GeoPose data objects conform to the Graph J
 definition.
 test-method:: JSON-Schema validation.
 subject:: /req/graph/sdu
-classification:: Test Type:Conformance
 ====
 
 The *GeoPose Regular Series* JSON encoding supports a time series of equally-spaced
@@ -1058,7 +1041,6 @@ test-purpose:: To confirm that Regular Series GeoPose data objects conform to th
 Series JSON-Schema definition.
 test-method:: JSON-Schema validation.
 subject:: /req/regular_series/sdu
-classification:: Test Type:Conformance
 ====
 
 The *GeoPose Irregular Series* JSON encoding has an optional time stamp and a
@@ -1092,7 +1074,6 @@ test-purpose:: To confirm that GeoPose Irregular Series data objects conform to 
 Regular Series JSON-Schema definition.
 test-method:: JSON-Schema validation.
 subject:: /req/irregular_series/sdu
-classification:: Test Type:Conformance
 ====
 
 The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Outer
@@ -1126,5 +1107,4 @@ test-purpose:: To confirm that Stream data objects conform to the corresponding 
 JSON-Schema definition.
 test-method:: JSON-Schema validation.
 subject:: /req/stream/sdu
-classification:: Test Type:Conformance
 ====
