@@ -143,13 +143,12 @@ contents of these fields is outside the scope of GeoPose.
 Global requirements apply to all SDUs and Standardization Targets.
 
 [[rc_global]]
-[requirement,type="class"]
+[requirements_class]
 ====
 [%metadata]
 label:: /req/global
 subject:: SDU
 description:: Global SDU Requirements
-inherit:: None
 requirement:: <<global,/req/target_dependency>>
 requirement:: <<sdu_confomance,/req/sdu_general>>
 requirement:: <<lm_confomance,/req/lm_general>>
@@ -203,7 +202,7 @@ image::diagram/Basic-YPR_SDU.PNG[]
 *Requirements Class*
 
 [[req_class_basic_ypr_sdu]]
-[requirement,type="class"]
+[requirements_class]
 ====
 [%metadata]
 label:: /req/basic_ypr/sdu
@@ -297,21 +296,10 @@ subject:: Implementation of Logical Model
 inherit:: /req/global
 description:: Basic-Quaternion Logical Model SDU
 
-[requirement,name="B-TP-Lon-SDU",label="/req/tangent_plane_longitude/sdu"]
-======
-======
-
-[requirement,name="B-TP-Lat-SDU",label="/req/tangent_plane_latitude/sdu"]
-======
-======
-
-[requirement,name="B-TP-h-SDU",label="/req/tangent_plane_h/sdu"]
-======
-======
-
-[requirement,name="B-Quaternion-SDU",label="/req/orientation_quaternion/sdu"]
-======
-======
+requirement:: /req/tangent_plane_longitude/sdu
+requirement:: /req/tangent_plane_latitude/sdu
+requirement:: /req/tangent_plane_h/sdu
+requirement:: /req/orientation_quaternion/sdu
 ====
 
 [requirement]
@@ -387,29 +375,12 @@ subject:: Implementation of Logical Model
 description:: Advanced Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/advanced/sdu",name="Advanced-SDU"]
-======
-======
-
-[requirement,label="/req/time/geopose_instant/sdu",name="GP-Instant-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[requirement,label="/req/orientation_quaternion/sdu",name="Quaternion-SDU"]
-======
-======
+requirement:: /req/advanced/sdu
+requirement:: /req/time/geopose_instant/sdu
+requirement:: /req/frame_specification_authority/sdu
+requirement:: /req/frame_specification_id/sdu
+requirement:: /req/frame_specification_parameters/sdu
+requirement:: /req/orientation_quaternion/sdu
 ====
 
 [[req_pose_geopose_instant_sdu]]
@@ -491,29 +462,12 @@ subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/graph/sdu",name="Graph-SDU"]
-======
-======
-
-[requirement,label="/req/geopose_instant/sdu",name="GP-Instant-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[requirement,label="/req/transform_index/sdu",name="Transfom-Index-SDU"]
-======
-======
+requirement:: /req/graph/sdu
+requirement:: /req/geopose_instant/sdu
+requirement:: /req/frame_specification_authority/sdu
+requirement:: /req/frame_specification_id/sdu
+requirement:: /req/frame_specification_parameters/sdu
+requirement:: /req/transform_index/sdu
 ====
 
 [requirement]
@@ -583,25 +537,11 @@ subject:: Implementation of Logical Model
 description:: Chain Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/chain/sdu",name="Chain-SDU"]
-======
-======
-
-[requirement,label="/req/time/geopose_instant/sdu",name="GP-Instant-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
+requirement:: /req/chain/sdu
+requirement:: /req/time/geopose_instant/sdu
+requirement:: /req/frame_specification_authority/sdu
+requirement:: /req/frame_specification_id/sdu
+requirement:: /req/frame_specification_parameters/sdu
 ====
 
 [requirement]
@@ -664,29 +604,12 @@ subject:: Implementation of Logical Model
 description:: Regular Series Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/regular_series_header/sdu",name=""]
-======
-======
-
-[requirement,label="/req/time/geopose_duration/SDU",name=""]
-======
-======
-
-[requirement,label="/req/frame_specification_authority/sdu",name=""]
-======
-======
-
-[requirement,label="/req/frame_specification_id/sdu",name=""]
-======
-======
-
-[requirement,label="/req/frame_specification_parameters/sdu",name=""]
-======
-======
-
-[requirement,label="/req/regular_series_trailer/sdu",name=""]
-======
-======
+requirement:: /req/regular_series_header/sdu
+requirement:: /req/time/geopose_duration/SDU
+requirement:: /req/frame_specification_authority/sdu
+requirement:: /req/frame_specification_id/sdu
+requirement:: /req/frame_specification_parameters/sdu
+requirement:: /req/regular_series_trailer/sdu
 ====
 
 [requirement]
@@ -765,29 +688,12 @@ subject:: Implementation of Logical Model
 description:: Irregular Series Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/irregular_series_header/sdu",name="S-IHeader-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification_parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[requirement,label="/req/irregular_series_frame_and_time/SDU",name="S-FT-Element-SDU"]
-======
-======
-
-[requirement,label="/req/regular_series_trailer/sdu",name="S-Trailer-SDU"]
-======
-======
+requirement:: /req/irregular_series_header/sdu
+requirement:: /req/frame_specification_authority/sdu
+requirement:: /req/frame_specification_id/sdu
+requirement:: /req/frame_specification_parameters/sdu
+requirement:: /req/irregular_series_frame_and_time/SDU
+requirement:: /req/regular_series_trailer/sdu
 ====
 
 [requirement]
@@ -875,29 +781,12 @@ subject:: Implementation of Logical Model
 description:: Stream Logical Model SDU
 inherit:: /req/global
 
-[requirement,label="/req/series_irregular_header/sdu",name="S-IHeader-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification/authority/sdu",name="FS-Authority-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification/id/sdu",name="FS-ID-SDU"]
-======
-======
-
-[requirement,label="/req/frame_specification/parameters/sdu",name="FS-Parameters-SDU"]
-======
-======
-
-[requirement,label="/req/irregular_series_frame_and_time/SDU",name="S-FT-Element-SDU"]
-======
-======
-
-[requirement,label="/req/regular_series_trailer/sdu",name="S-Trailer-SDU"]
-======
-======
+requirement:: /req/series_irregular_header/sdu
+requirement:: /req/frame_specification/authority/sdu
+requirement:: /req/frame_specification/id/sdu
+requirement:: /req/frame_specification/parameters/sdu
+requirement:: /req/irregular_series_frame_and_time/SDU
+requirement:: /req/regular_series_trailer/sdu
 ====
 
 [requirement]
