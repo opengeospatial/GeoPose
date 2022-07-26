@@ -61,7 +61,7 @@ All questions regarding this submission should be directed to the editors or the
 submitters:
 
 .Submission Contact Points
-[cols="5,10",options="header"]
+[options="header"]
 |===
 |Name |Institution
 |Nicolas Blanc|School of Management and Engineering Vaud, HES-SO University of
@@ -81,7 +81,7 @@ Applied Sciences and Arts Western Switzerland
 The following individuals contributed to the GeoPose 1.0 development:
 
 .Participants in Development
-[cols="1,2",options="header"]
+[options="header"]
 |===
 |Name |Institution
 |Nazih Fino |Global Nomad
