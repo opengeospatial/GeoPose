@@ -12,7 +12,6 @@ Although implementation of the Standardization Targets, expressed as SDUs, is in
 
 Conformance with the Global Requirements is required for all implementations.
 
-[[conf_global]]
 [conformance_class]
 ====
 [%metadata]
@@ -28,7 +27,6 @@ conformance-test:: /conf/lm_general
 
 The individual global tests are:
 
-[[conformance_global]]
 [conformance_test]
 .G-Target
 ====
@@ -40,7 +38,6 @@ test-method:: Inspection
 subject:: /req/target_dependency
 ====
 
-[[conformance_sdu]]
 [conformance_test]
 .G-SDU
 ====
@@ -52,7 +49,6 @@ test-method:: Inspection
 subject:: /req/sdu_general
 ====
 
-[[conformance_lm]]
 [conformance_test]
 .G-LM
 ====
@@ -64,13 +60,13 @@ test-method:: Inspection
 subject:: /req/lm_general
 ====
 
+
 === Structural Data Unit (SDU) Conformance
 
 There are some universal requirements on values that appear in a concrete implementation using a specific encoding technology. For example, angles may be constrained to fall within a range of values corresponding to a circle. Because these are independent of encoding technology, they are specified here at a logical level. Tests of an implementation at the SDU level generally only be done by inspection.
 
 === Basic-YPR SDU Conformance Class
 
-[[conf_class_basic_ypr_sdu]]
 [conformance_class]
 .Basic-YPR SDU
 ====
@@ -152,7 +148,6 @@ subject:: /req/ypr_angles/sdu
 
 ==== Basic-Q SDU Conformance Class
 
-[[conf_class_basic_quaternion_sdu]]
 [conformance_class]
 .Basic-Q SDU
 ====
@@ -227,7 +222,6 @@ test-method:: Inspection
 
 ==== Advanced SDU Conformance Class
 
-[[conf_class_advanced_sdu]]
 [conformance_class]
 .Advanced SDU
 ====
@@ -308,7 +302,6 @@ test-method:: Inspection
 
 ==== Graph SDU Conformance Class
 
-[[conf_class_graph_sdu]]
 [conformance_class]
 .Graph SDU
 ====
@@ -383,7 +376,6 @@ test-method:: Inspection
 
 ==== Chain SDU Conformance Class
 
-[[conf_class_chain_sdu]]
 [conformance_class]
 .Chain SDU
 ====
@@ -458,7 +450,6 @@ test-method:: Inspection
 
 ==== Regular Series SDU Conformance Class
 
-[[conf_class_regular_series_sdu]]
 [conformance_class]
 .Regular Series SDU
 ====
@@ -548,7 +539,6 @@ test-method:: Inspection
 
 ==== Irregular Series SDU Conformance Class
 
-[[conf_class_irregular_series_sdu]]
 [conformance_class]
 .Irregular Series SDU
 ====
@@ -636,7 +626,6 @@ test-method:: Inspection
 
 ==== Stream SDU Conformance Class
 
-[[conf_class_stream_sdu]]
 [conformance_class]
 .Stream SDU
 ====
@@ -717,7 +706,6 @@ Each encoding technology has its own independent test suite. There is one confor
 
 The *Basic-YPR GeoPose* is the JSON encoding intended for widest use.
 
-[[conf_class_basic_ypr_encoding_json]]
 [conformance_class]
 .Basic-YPR Encoding-JSON
 ====
@@ -776,7 +764,6 @@ subject:: /req/basic_quaternion/sdu
 [NOTE]
 The *Basic-Quaternion (Strict) GeoPose* JSON encoding does not allow additional JSON members.
 
-[[conf_class_basic_quaternion_encoding_json]]
 [conformance_class]
 .Basic-Quaternion Encoding-JSON (Strict)
 ====
@@ -805,7 +792,6 @@ subject:: /req/basic_quaternion/sdu
 
 The *Advanced GeoPose* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-[[conf_class_advanced_encoding_json]]
 [conformance_class]
 .Advanced Encoding-JSON
 ====
@@ -834,7 +820,6 @@ subject:: /req/advanced/sdu
 
 The *GeoPose Chain* JSON encoding supports a linear sequence of frame transformations for modelling articulated structures.
 
-[[conf_class_chain_encoding_json]]
 [conformance_class]
 .Chain Encoding-JSON
 ====
@@ -863,7 +848,6 @@ subject:: /req/chain/sdu
 
 The *GeoPose Graph* JSON encoding supports a directed graph stucture.
 
-[[conf_class_graph_encoding_json]]
 [conformance_class]
 .Graph Encoding-JSON
 ====
@@ -892,7 +876,6 @@ subject:: /req/graph/sdu
 
 The *GeoPose Regular Series* JSON encoding supports a time series of equally-spaced GeoPoses.
 
-[[conf_class_regular_series_encoding_json]]
 [conformance_class]
 .GeoPose Regular Series Encoding-JSON
 ====
@@ -921,7 +904,6 @@ subject:: /req/regular_series/sdu
 
 The *GeoPose Irregular Series* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-[[conf_class_irregular_series_encoding_json]]
 [conformance_class]
 .Irregular Series Encoding-JSON
 ====
@@ -950,7 +932,6 @@ subject:: /req/irregular_series/sdu
 
 The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-[[conf_class_stream_encoding_json]]
 [conformance_class]
 .Stream Encoding-JSON
 ====
