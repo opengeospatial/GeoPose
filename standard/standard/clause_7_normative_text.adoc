@@ -518,7 +518,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 
 ===== JSON Encoding
 
-include::requirements/Graph/Req_Graph_EncodingJson.adoc[]
+include::requirements/Composite/Graph/Req_Graph_EncodingJson.adoc[]
 
 *JSON-Schema:*
 
@@ -543,7 +543,7 @@ This JSON encoding is extensible because the JSON-Schema "addtionalProperties" p
 
 *JSON-Schema:*
 
-include::requirements/Chain/Req_Chain_EncodingJSON.adoc[]
+include::requirements/Composite/Chain/Req_Chain_EncodingJSON.adoc[]
 
 [%unnumbered]
 ----
