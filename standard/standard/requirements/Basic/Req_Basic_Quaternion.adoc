@@ -1,3 +1,5 @@
+
+////
 *Implementaion-Neutral SDUs (Normative)*
 
 [[req_basic_quaternion]]
@@ -37,3 +39,11 @@ include::../sdu/req_sdu_quaternion.adoc[]
 ^|Requirement |Basic-quaternion GeoPose data elements as a whole shall conform to the Basic-quaternion JSON-Schema 2019-9 definition.
 ^|ID |<<req_basic_quaternion,/req/basic/quaternion/JSON_Encoding>>
 |===
+////
+
+[requirement]
+====
+[%metadata]
+label:: /req/basic/quaternion/encoding/json
+description:: A JSON-encoded Basic-Quaternion GeoPose SHALL conform to the following Basic-Quaternion JSON-Schema 2019-9 definition.
+====
