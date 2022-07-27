@@ -1,0 +1,8 @@
+
+[[req_stream_header_encoding_json]]
+[requirement]
+====
+[%metadata]
+label:: /req/stream/header/encoding/json
+description:: A JSON-encoded GeoPose Stream Header SHALL conform to the following GeoPose Stream Header JSON-Schema 2019-9 definition.
+====
