@@ -1,0 +1,8 @@
+
+[[req_stream_record_encoding_json]]
+[requirement]
+====
+[%metadata]
+label:: /req/stream/record/encoding/json
+description:: A JSON-encoded GeoPose Stream Record (a recorded Stream) SHALL conform to the following GeoPose Stream Record JSON-Schema 2019-9 definition.
+====
