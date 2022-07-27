@@ -32,7 +32,7 @@ image::models/Logical_time.png[]
 
 ==== Sequence
 
-The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same <<def_Outer_Frame,*Outer Frame*>> and there is a time-dependent changing <<def_Inner_Frame,*Inner Frame*>>.
+The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same {{outer frame,options="noref"}} and there is a time-dependent changing {{inner frame,options="noref"}}.
 
 [[sequence_logical_model]]
 .Sequence Logical Model
