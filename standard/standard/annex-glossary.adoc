@@ -2,66 +2,233 @@
 [appendix,obligation=informative]
 == Glossary
 
-The following terms and concepts have appeared in the discussion of the use cases and design of the GeoPose standard but not part of the terms defined in Terms and Definitions. These
+// The following terms and concepts have appeared in the discussion of the use cases and design of the GeoPose standard but not part of the terms defined in Terms and Definitions.
 
-* *Acceleration*: The time rate of change of velocity.
+=== acceleration
 
-* *Accelerometer*: A sensor that can measure Acceleration. Low cost, accurate sensors for measuring 3 mutually perpendicular components of acceleration are widely deployed in vehicles, communications devices, and other connected devices.
+time rate of change of velocity
 
-* *Angular Acceleration*: The time rate of change of rotational velocity.
+=== accelerometer
 
-* *Application Domain*: A context within which some technology or device is usefully applied.
+sensor that can measure Acceleration.
 
-* *Associated Reference Frame (Pose Frame)*: A Euclidean reference frame that is defined by the location and orientation of a Pose. A Pose defines the origin of its Associated Reference Frame, and its Orientation defines the orientation of its Associated Reference Frame. Associated Reference Frames are useful in many simulation and graphics applications where Poses are most naturally defined in terms of another (parent) object's pose.
+NOTE: Low cost, accurate sensors for measuring 3 mutually perpendicular
+components of acceleration are widely deployed in vehicles, communications
+devices, and other connected devices.
 
-* *Attribute*: A property associated with an object. In object modelling, it is the same as a property or data member.
+=== angular acceleration
 
-* *Barometric Pressure*: The ambient pressure of the atmosphere at a location. Low cost, accurate sensors for barometric pressure are widely deployed in connected devices. Sensing of changes in Barometric Pressure over time periods of minutes or less is enables estimation of vertical relative position.
+time rate of change of rotational velocity
 
-* *Bluetooth Indoor Positioning Services*: Indoor Positioning Services based on Bluetooth signal strength and/or triangulation allow precise determination of location and orientation inside smaller spaces. The location of a Bluetooth transceiver may be specified with respect to a Geographic Coordinate System and it may be possible to compute a GeoPose from interactions with multiple BT transceivers or other sensors.
+=== application domain
 
-* *(3D) Cartesian Coordinate System*: A system of geometrical reference using three mutually perpendicular axes where a point location is described by three numbers giving the perpendicular distance to each of the axes, all in the same numerical scale.
+context within which some technology or device is usefully applied
 
-* *Class*: A template for the data structure and methods for operating on those data structures for objects belonging to the Class.
+=== associated reference frame
+admitted:[pose frame]
 
-* *Compass*: A sensor for measuring the relative orientation of a device to an ambient magnetic field. Accurate and low-cost Compasses are widely deployed in connected devices.
+euclidean reference frame that is defined by the location and orientation of a
+{{pose}}
 
-* *Coordinate Reference System*: A coordinate reference system is a coordinate system referenced to a Datum.
+NOTE: A pose defines the origin of its associated reference frame, and its
+{{orientation}} defines the orientation of its associated reference frame.
 
-* *Data Type*: A representational form for a concrete data element such as a number, character, or colour.
+NOTE: Associated reference frames are useful in many simulation and graphics
+applications where poses are most naturally defined in terms of another (parent)
+object's pose.
 
-* *Datum*: A reference point, line or surface used to establish measurements of position. A geodetic datum defines the measurement of horizontal position (latitude and longitude) and/or vertical position (height). datum is a set of parameters that define the position of the origin, the scale, and the orientation of a coordinate system.
+=== attribute
 
-* [[def_Ellipsoid]]*Ellipsoid*: A mathematical surface that may be used as a datum in defining a Geographic Coordinate System. An ellipsoid is usually established by fitting the parameters of the ellipsoid to measurements of a gravitational equipotential surface (Geoid) that approximates mean sea level.
+property associated with an object
 
-* *East-North-Up Local Tangent Plane Coordinate System*: A Euclidean 3-dimensional coordinate system aligned with the Z axis increasing upward, the X axis aligned toward the direction east, and the Y axis aligned toward north. Not defined at the poles because there is no inherent orientation.
+NOTE: In object modelling, an attribute is the same as a property or data member.
 
-* *Euler Angles*: A simple way to describe the orientation of one Euclidean Reference Frame to another by specifying the rotations about each of the three axes respectively to bring one in alignment with the other.
+=== barometric pressure
 
-* *Geographic Coordinates*: A 3-dimensional reference system based on a reference ellipsoid. Two of the coordinates are angles with respect to the axis of the ellipsoid and to a plane containing the axis of the ellipsoid and a specified point (principle point) on the ellipsoid surface. The third coordinate is a linear measure of height above the ellipsoidal surface.
+ambient pressure of the atmosphere at a location
 
-* *Geographic Position*: A point defined in Geographic Coordinates.
+NOTE: Low cost, accurate sensors for barometric pressure are widely deployed in
+connected devices.
 
-* [[def_Geoid]]*Geoid*: An approximation of surface of equal gravitational force, usually attempting to match average sea-level. A Geoid is defined by measurements and is always inexact. The Ellipsoid used in Geographic Coordinate Systems is usually a mathematical approximation to a specific Geoid.
+NOTE: Sensing of changes in barometric pressure over time periods of minutes or
+less is enables estimation of vertical relative position.
 
-* *Gyro*: A sensor that measures the rate of rotation. Low-cost, accurate Gyros are widely deployed in connected devices.
+=== Bluetooth indoor positioning service
 
-* *Kinematics*: The properties of location, velocity, and acceleration of a body without regard to any forces acting on the body.
+indoor positioning service based on Bluetooth signal strength and/or triangulation
 
-* [[def_LTPENU]]*Local Tangent Plane (LTP) Coordinate System*: A right-hand Euclidean Coordinate System with a vertical (Z) axis extending from an origin at a point defined by Geographic Coordinates with respect to an Ellipsoid. Often specialized to an east-north-up (ENU) system, where the X axis is aligned toward east and the Y axis toward north. While a LTP Coordinate System can be established at any location, an ENU cannot be defined at the poles because it cannot be oriented.
+NOTE: A Bluetooth indoor positioning service allows precise determination of
+location and orientation inside smaller spaces.
 
-* *Position*: The location of a point with respect to the Origin of a specific Reference Frame.
+NOTE: The location of a Bluetooth transceiver may be specified with respect to a
+geographic coordinate system and it may be possible to compute a GeoPose from
+interactions with multiple Bluetooth transceivers or other sensors.
 
-* *Property*: An attribute associated with an object. In object modelling, it is the same as an Attribute or data member.
+=== 3-D cartesian coordinate system
+admitted:[cartesian coordinate system]
 
-* *Quaternion*: Quaternions are an extension of complex numbers that have (among many other things) some convenient properties for computing with rotations, in particular smooth interpolation and avoidance of "gimbal lock" possible with Euler Angles.
+system of geometrical reference using three mutually perpendicular axes where a
+point location is described by three numbers giving the perpendicular distance
+to each of the axes, all in the same numerical scale
 
-* *Rotation*: The angular relationship between a reference frame's axes and a direction in that reference frame. Euler Angles, Rotation Matrices, and Quaternions are three ways to specify a rotation.
+=== class
 
-* *(Digital) Sensor*: A device that converts environmental properties into data suitable for computation.
+template for the data structure and methods for operating on those data
+structures for objects sharing common characteristics
 
-* *Topographic Surface*: The interface between the liquid or solid surface of a planet and its atmosphere or surrounding empty space. This surface is always approximate. It may be measure with reference to a gravitational equipotential surface (such as a Geoid) or a mathematical reference surface (such as an Ellipsoid).
+=== compass
 
-* *Velocity*: The time rate of change of Position.
+sensor for measuring the relative orientation of a device to an ambient magnetic
+field
 
-* *Vertical datum*: A reference level from which elevation or altitude can be measured. The Topographic Surface, a Geoid, a level of constant Barometric Pressure, or an Ellipsoid are examples.
+NOTE: Accurate and low-cost compasses are widely deployed in connected devices.
+
+=== coordinate reference system
+
+coordinate system referenced to a {{datum}}
+
+=== data type
+
+representational form for a concrete data element such as a number, character,
+or colour
+
+=== datum
+
+reference point, line or surface used to establish measurements of position
+
+NOTE: A datum is typically specified as a set of parameters that define the
+position of the origin, the scale, and the orientation of a coordinate system.
+
+
+=== geodetic datum
+
+datum that defines the measurement of horizontal position (latitude and
+longitude) and/or vertical position (height)
+
+
+=== ellipsoid
+
+mathematical surface that may be used as a {{datum}} in defining a {{geographic
+coordinate system}}
+
+NOTE: An ellipsoid is usually established by fitting the parameters of the
+ellipsoid to measurements of a gravitational equipotential surface ({{geoid}})
+that approximates mean sea level.
+
+=== east-north-up local tangent plane coordinate system
+admitted:[ENU coordinate system]
+
+euclidean 3-D coordinate system aligned with the Z-axis increasing
+upward, the X-axis aligned toward the direction east, and the Y-axis aligned
+toward north
+
+NOTE: An ENU coordinate system is not defined at the poles because there is no
+inherent orientation.
+
+=== euler angles
+
+description of the orientation of one euclidean reference frame to another by
+specifying the rotations about each of the three axes respectively to bring one
+in alignment with the other
+
+=== geographic coordinates
+
+3-dimensional reference system based on a reference ellipsoid
+
+NOTE: Two of the coordinates are angles with respect to the axis of the
+ellipsoid and to a plane containing the axis of the ellipsoid and a specified
+point (principle point) on the ellipsoid surface. The third coordinate is a
+linear measure of height above the ellipsoidal surface.
+
+=== geographic position
+
+point defined in geographic coordinates
+
+=== geoid
+
+approximation of surface of equal gravitational force, usually attempting to
+match average sea-level
+
+NOTE: A geoid is defined by measurements and is always inexact. The {{ellipsoid}}
+used in {{geographic coordinate system,geographic coordinate systems}} is
+usually a mathematical approximation to a specific geoid.
+
+=== gyro
+
+sensor that measures the rate of rotation
+
+NOTE: Low-cost, accurate Gyros are widely deployed in connected devices.
+
+=== kinematics
+
+properties of location, velocity, and acceleration of a body without regard to
+any forces acting on the body
+
+=== local tangent plane coordinate system
+admitted:[LTP coordinate system]
+
+right-hand {{euclidean coordinate system}} with a vertical (Z) axis extending
+from an origin at a point defined by geographic coordinates with respect to an
+{{ellipsoid}}
+
+
+=== local tangent plane east-north-up coordinate system
+admitted:[local tangent plane east-north-up frame]
+admitted:[LTP-ENU coordinate system]
+
+{{local tangent plane coordinate system}} specialized to an east-north-up system,
+where the X axis is aligned toward east and the Y axis toward north.
+
+NOTE: While a {{LTP coordinate system}} can be established at any location, an
+ENU cannot be defined at the poles because it cannot be oriented.
+
+=== position
+
+location of a point with respect to the origin of a specific reference frame
+
+=== property
+
+attribute associated with an object
+
+NOTE: In object modelling, it is the same as an {{attribute}} or data member.
+
+=== quaternions
+
+extension of complex numbers
+
+NOTE: Quaternions provide convenient properties for computing with rotations, in
+particular smooth interpolation and avoidance of "gimbal lock" possible with
+Euler Angles.
+
+=== Rotation
+
+angular relationship between a reference frame's axes and a direction in that
+reference frame
+
+NOTE: {{euler angle,Euler angles}}, {{rotation matrix,rotation matrices}}, and
+{{quaternions}} are three ways to specify a rotation.
+
+=== digital sensor
+admitted:[sensor]
+
+device that converts environmental properties into data suitable for computation
+
+=== topographic surface
+
+interface between the liquid or solid surface of a planet and its atmosphere or
+surrounding empty space
+
+NOTE: The topographic surface is always approximate. It may be measured with
+reference to a gravitational equipotential surface (such as a {{geoid}}) or a
+mathematical reference surface (such as an {{ellipsoid}}).
+
+=== velocity
+
+time rate of change of {{position}}
+
+=== vertical datum
+
+reference level from which elevation or altitude can be measured
+
+NOTE: The {{topographic surface}}, a {{geoid}}, a level of constant
+{{barometric pressure}}, or an {{ellipsoid}} are examples.
