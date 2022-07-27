@@ -1,0 +1,9 @@
+
+[[req_graph_encoding_json]]
+[requirement]
+====
+[%metadata]
+label:: /req/graph/encoding/json
+description:: A JSON-encoded GeoPose Graph SHALL conform to the following GeoPose Graph JSON-Schema 2019-9 definition.
+====
+
