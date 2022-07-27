@@ -1,24 +1,24 @@
-[[req_tangent_plane]]
-[[req_tangent_plane_longitude]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement B-TP-Lon-SDU* |*/req/tangent_plane/longitude/sdu* 
-^|Requirement |An instance of a GeoPose tangentPoint.longitude attribute shall be expressed as a real number.
-^|ID |<<req_tangent_plane_parameters_longitude,/req/tangent_plane/longitude/sdu>>
-|===
 
-[[req_tangent_plane_parameters_latitude]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement B-S-TP-Lat* |*/req/tangent_plane/latitude/sdu* 
-^|Requirement |An instance of GeoPose tangentPoint.latitude attribute shall be expressed as a real number.
-^|ID |<<req_basic_quaternion,/req/tangent_plane/latitude/sdu>>
-|===
+[requirement]
+.B-TP-Lon-SDU
+====
+[%metadata]
+label:: /req/tangent_plane_longitude/sdu
+description:: An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
+====
 
-[[req_tangent_plane_parameters_h]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement B-S-TP-h* |*/req/tangent_plane/h/sdu* 
-^|Requirement |An instance of a GeoPose tangentPoint.h attribute shall be expressed as a real number.
-^|ID |<<req_basic_quaternion,/req/tangent_plane/h/sdu>>
-|===
+[requirement]
+.B-TP-Lat-SDU
+====
+[%metadata]
+label:: /req/tangent_plane_latitude/sdu
+description:: An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
+====
+
+[requirement]
+.B-TP-h-SDU
+====
+[%metadata]
+label:: /req/tangent_plane_h/sdu
+description:: An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid and represented as a signed real number value.
+====
