@@ -1,0 +1,22 @@
+[[req_class_basic_ypr_sdu]]
+[requirements_class]
+====
+[%metadata]
+label:: /req/basic_ypr/sdu
+subject:: Implementation of Logical Model
+description:: Basic-YPR Logical Model SDU
+inherit:: /req/global
+requirement:: /req/basic_ypr/sdu
+requirement:: /req/tangent_plane_longitude/sdu
+requirement:: /req/tangent_plane_latitude/sdu
+requirement:: /req/tangent_plane_h/sdu
+requirement:: /req/orientation_ypr_angles/sdu
+====
+
+Details of the individual requirements:
+
+include::../SDU/Req_SDU_Basic_YPR.adoc[]
+
+include::../SDU/Req_SDU_TangentPlaneParameters.adoc[]
+
+include::../SDU/Req_SDU_YPR_Angles.adoc[]
