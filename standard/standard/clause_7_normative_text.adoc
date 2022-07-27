@@ -125,7 +125,7 @@ image::diagram/Basic-YPR_SDU.PNG[]
 
 *Requirements Class*
 
-include::requirements/requirements_class/RC_Global.adoc[]
+include::requirements/requirements_class/Basic-YPR.adoc[]
 
 ==== Requirements for Standardization Target 2: Basic-Quaternion
 
