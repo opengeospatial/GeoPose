@@ -1,23 +1,24 @@
-[[req_sdu_frame_specification_authority]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement FS-Authority-SDU* |*/req/frame_specification/authority/sdu* 
-^|Requirement |The FrameSpecification.authority attribute shall contain a string uniquely specifying a source of reference frame specifications.
-^|ID |<<req_sdu_frame_specification_authority,/req/framespecification/authority/sdu>>
-|===
 
-[[req_sdu_frame_specification_id]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement FS-ID-SDU* |*/req/frame_specification/id/sdu* 
-^|Requirement |The FrameSpecification.ID attribute shall be a string uniquely defining a frame within the authority.
-^|ID |<<req_sdu_frame_specification_id,/req/frame_specification/id/sdu>>
-|===
+[requirement]
+.FS-Authority-SDU
+====
+[%metadata]
+label:: /req/frame_specification/authority/sdu
+description:: The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
+====
 
-[[req_sdu_frame_specification_parameters]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement FS-Parameters-SDU* |*/req/frame_specification/parameters/sdu* 
-^|Requirement |The FrameSpecification.parameter attribute shall contain all parameters needed for the corresponding authority and ID.
-^|ID |<<req_sdu_frame_specification_parameter,/req/frame_specification/parameters/sdu>>
-|===
+[requirement]
+.FS-ID-SDU
+====
+[%metadata]
+label:: /req/frame_specification/id/sdu
+description:: The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
+====
+
+[requirement]
+.FS-Parameters-SDU
+====
+[%metadata]
+label:: /req/frame_specification/parameters/sdu
+description:: The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID. The definition of these parameters is outside the scope of GeoPose.
+====
