@@ -710,7 +710,7 @@ The JSON encoding is one of many possible ways of implementing a concrete repres
 ==== Standardization Target 1: Basic-YPR
 
 [NOTE]
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*.
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
 ===== JSON Encoding
 
@@ -768,7 +768,7 @@ include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
 ===== Permissive JSON Encoding
 
 [NOTE]
-This JSON encoding of the Basic-Quaternion GeoPose is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*. This encoding is intended to be the default GeoPose.
+This JSON encoding of the Basic-Quaternion GeoPose is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*. This encoding is intended to be the default GeoPose.
 
 
 [[req_basic_quaternion_encoding_json]]
@@ -796,7 +796,7 @@ include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
 ==== Standardization Target 3: Advanced GeoPose
 
 [NOTE]
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*.
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
 ===== JSON Encoding
 
@@ -825,7 +825,7 @@ include::instances/GeoPose.Advanced.Instance.json[]
 ==== Standardization Target 4: Graph
 
 [NOTE]
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*.
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
 ===== JSON Encoding
 
@@ -854,7 +854,7 @@ include::instances/GeoPose.Composite.Graph.Instance.json[]
 ==== Standardization Target 5: Chain
 
 [NOTE]
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*.
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
 ===== JSON Encoding
 
@@ -883,7 +883,7 @@ include::instances/GeoPose.Composite.Chain.Instance.json[]
 ==== Standardization Target 6: Regular Series
 
 [NOTE]
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*.
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
 ===== JSON Encoding
 
@@ -912,7 +912,7 @@ include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 ==== Standardization Target 7: Irregular Series
 
 [NOTE]
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*.
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
 ===== JSON Encoding
 
@@ -941,7 +941,7 @@ include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
 ==== Standardization Target 8: Stream
 
 [NOTE]
-This JSON encoding is extensible because the JSON-Schema "addtionalProperties" property is set to the default value of *true*.
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
 ===== JSON Encoding
 
