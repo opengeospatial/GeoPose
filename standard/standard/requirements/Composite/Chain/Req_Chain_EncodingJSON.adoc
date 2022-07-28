@@ -1,8 +1,0 @@
-
-[[req_chain_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/chain/encoding/json
-description:: A JSON-encoded GeoPose Chain SHALL conform to the following GeoPose Chain JSON-Schema 2019-9 definition.
-====

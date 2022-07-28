@@ -1,8 +1,0 @@
-
-[[req_series_irregular_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/series/irregular/encoding/json
-description:: A JSON-encoded GeoPose Irregular Series SHALL conform to the following GeoPose Irregular JSON-Schema 2019-9 definition.
-====

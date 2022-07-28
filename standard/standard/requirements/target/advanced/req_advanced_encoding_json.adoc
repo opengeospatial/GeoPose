@@ -1,8 +1,0 @@
-[[req_advanced_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/advanced/encoding/json
-description:: A JSON-encoded Advanced GeoPose SHALL conform to the following Advanced JSON-Schema 2019-9 definition.
-====
-
