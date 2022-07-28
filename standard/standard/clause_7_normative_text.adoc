@@ -123,8 +123,6 @@ The Basic-YPR Target has a simple structure with no options. Position is specifi
 .Basic YPR SDU
 image::diagram/Basic-YPR_SDU.PNG[]
 
-*Requirements Class*
-
 include::requirements/requirements_class/Basic-YPR.adoc[]
 
 ==== Requirements for Standardization Target 2: Basic-Quaternion
@@ -139,7 +137,6 @@ The Basic-Quaternion Target has a simple structure with no options. Position is 
 .Basic Quaternion SDU
 image::diagram/Basic-Quaternion_SDU.PNG[]
 
-*Requirements Class*
 
 [[req_basic_quaternion_sdu]]
 [requirements_class]
@@ -175,8 +172,6 @@ The Advanced Target has a more general structure, supporting flexible specificat
 .Basic Advanced SDU
 image::diagram/Advanced_SDU.PNG[]
 
-[[req_advanced]]
-*Requirements Class*
 
 [[req_advanced_sdu]]
 [requirements_class]
