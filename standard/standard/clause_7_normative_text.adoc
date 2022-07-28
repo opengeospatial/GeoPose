@@ -123,7 +123,9 @@ The Basic-YPR Target has a simple structure with no options. Position is specifi
 .Basic YPR SDU
 image::diagram/Basic-YPR_SDU.PNG[]
 
-include::requirements/requirements_class/Basic-YPR.adoc[]
+*Requirements Class*
+
+include::requirements/requirements_class/RC_Global.adoc[]
 
 ==== Requirements for Standardization Target 2: Basic-Quaternion
 
