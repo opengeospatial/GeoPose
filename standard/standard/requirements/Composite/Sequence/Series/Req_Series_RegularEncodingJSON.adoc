@@ -1,8 +1,0 @@
-
-[[req_series_regular_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/series/regular/encoding/json
-description:: A JSON-encoded GeoPose Regular Series SHALL conform to the following GeoPose Regular JSON-Schema 2019-9 definition.
-====

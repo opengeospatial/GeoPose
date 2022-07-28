@@ -1,7 +1,7 @@
 [[req_basic_ypr_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/basic/ypr/encoding/json
-description:: A JSON-encoded Basic-YPR GeoPose SHALL conform to the following Basic-YPR JSON-Schema 2019-9 definition.
-====
+[width="90%",cols="4,6"]
+|===
+<s|Requirement  s|B-YPR-Encoding-JSON
+<s|ID |<<req_basic_ypr_encoding__json,/req/basic/ypr/encoding/json>> 
+2+<|A JSON-encoded Basic-YPR GeoPose SHALL conform to the Basic-YPR JSON-Schema 2019-9 definition.
+|===

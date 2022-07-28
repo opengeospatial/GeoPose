@@ -1,8 +1,8 @@
+[[req_sdu_pose_geoposeinstant]]
+[width="100%",cols="4,6"]
+|===
+^|*Requirement GP-Instant-SDU* |*/req/pose/geoposeinstant/sdu* 
+^|Requirement |The Logical Model attribute GeoPoseInstant shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.
+^|ID |<<req_sdu_pose_geoposeinstant,/req/pose/geoposeinstant/sdu>>
+|===
 
-[requirement]
-.GP-Instant-SDU
-====
-[%metadata]
-label:: /req/time/geopose_instant/sdu
-description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
-====

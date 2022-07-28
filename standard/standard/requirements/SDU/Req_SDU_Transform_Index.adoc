@@ -1,8 +1,0 @@
-
-[requirement]
-.Transform_Index-SDU
-====
-[%metadata]
-label:: /req/chain/transform_index/sdu
-description:: Each index value in a FrameListTransformPair SHALL be a distinct integer value between 0 and one less than the number of elements in the frameList property.
-====
