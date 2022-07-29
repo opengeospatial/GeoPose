@@ -145,7 +145,6 @@ The Basic-YPR Target has a simple structure with no options. Position is specifi
 .Basic YPR SDU
 image::diagram/Basic-YPR_SDU.PNG[]
 
-*Requirements Class*
 
 [[req_class_basic_ypr_sdu]]
 [requirements_class]
