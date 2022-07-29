@@ -346,7 +346,6 @@ description:: An instance of a GeoPose Logical Model quaternion data type value 
 
 The Graph Target supports a network of object relative poses. The graph is a directed acyclic graph, each node must either be an Extrinsic Frame or reachable from an Extrinsic Frame.
 
-[[req_graph]]
 
 *Structure*
 
@@ -477,8 +476,6 @@ The Regular (Time) Series Target represents the time evolution of a single GeoPo
 
 *Structure*
 
-[[req_sequence_series_regular]]
-
 [[regular_series_sdu]]
 .Regular Series SDU
 image::diagram/Regular-Series_SDU.PNG[]
@@ -555,8 +552,6 @@ description:: A trailer property SHALL be implemented as a SeriesTrailer structu
 The Irregular (Time) Series Target represents the time evolution of a single GeoPose, with a variable time duration between successive inner frames.
 
 *Structure*
-
-[[req_sequence_series_irregular]]
 
 [[irregular_series_sdu]]
 .Irregular Series SDU
@@ -635,7 +630,6 @@ The Stream target consists of two parts: a single initial specification of a tra
 
 *Structure*
 
-[[req_sequence_stream]]
 [[stream_header_sdu]]
 .Stream Header SDU
 image::diagram/Stream-Header_SDU.PNG[]
