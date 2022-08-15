@@ -25,16 +25,16 @@ Recipients of this document are requested to submit, with their comments, notifi
 
 == Submitters
 
-All questions regarding this submission should be directed to the editors or the submitters:
+All questions regarding this submission should be directed to the editor or the
+submitters:
 
-.Submission Contact Points
-[options="header"]
 |===
-|Name |Institution
-|Nicolas Blanc|School of Management and Engineering Vaud, HES-SO University of
+|Name |Affiliation
+
+|Nicolas Blanc |School of Management and Engineering Vaud, HES-SO University of
 Applied Sciences and Arts Western Switzerland
 |Kyoung-Sook Kim |National Institute of Advanced Industrial Science and Technology
-|Jeremy Morley | Ordnance Survey
+|Jeremy Morley |Ordnance Survey
 |Christine Perey |Open AR Cloud Association
 |Mahmoud SAKR |Université Libre de BRUXELLES
 |Scott Simmons |Open Geospatial Consortium
@@ -42,17 +42,18 @@ Applied Sciences and Arts Western Switzerland
 |Jan-Erik Vinje |Open AR Cloud Association
 |===
 
+
 [.preface]
 == Participants in development
 
 The following individuals contributed to the GeoPose 1.0 development:
 
 .Participants in Development
-[options="header"]
 |===
 |Name |Institution
+
 |Nazih Fino |Global Nomad
-|Josh Lieberman | Open Geospatial Consortium
+|Josh Lieberman |Open Geospatial Consortium
 |Mikel Salazar |Augmented Interaction
 |Maxime Schoemans |Université Libre de Bruxelles
 |Marco Tillmann |Blackshark.ai
