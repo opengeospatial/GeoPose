@@ -14,9 +14,9 @@
 
 * [[[geovolumes,6]]], GeoVolumes charter ( https://portal.ogc.org/files/97171 )
 
-* [[[ref-frame,7]]], Ref frame https://en.wikipedia.org/wiki/Frame_of_reference
+* [[[ref-frame,7]]], Reference frame https://en.wikipedia.org/wiki/Frame_of_reference
 
-* [[[pose,8]]], Pose https://en.wikipedia.org/wiki/Pose_(computer_vision) 
+* [[[pose,8]]], Pose https://en.wikipedia.org/wiki/Pose_(computer_vision)
 
 * [[[owl-time,W3C CR-owl-time-20200326]]]
 
@@ -28,8 +28,12 @@
 
 * [[[nasa-spice,13]]], NASA SPICE https://naif.jpl.nasa.gov/naif/ Navigation and ancillary information facility
 
-* [[[ypr,14]]], YPR https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf 
+* [[[ypr,14]]], YPR https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf
 
+* [[[env1613,CEN ENV 1613:1994]]], CEN. ENV 1613:1994 Exchange of Laboratory Information.
 
+* [[[iso13972,ISO 13972:2022]]]
 
+* [[[iso8601-1,ISO 8601-1:2019]]]
 
+* [[[iso8601-2,ISO 8601-2:2019]]]

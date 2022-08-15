@@ -1,6 +1,8 @@
 == Scope
 
-The OGC GeoPose 1.0 Standard defines requirements (rules) for the interoperable exchange of the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The Standard specifies
+The OGC GeoPose 1.0 Standard defines requirements (rules) for the interoperable exchange of the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems.
+
+The Standard specifies:
 
 * A basic form with no configuration options for common use cases,
 * An advanced form with more flexibility for more complex applications, and

@@ -1,10 +1,11 @@
 [[annex-H]]
-[appendix,obligation=informative]
-== Revision History
+[appendix,obligation="informative"]
+== Revision history
 
-[%unnumbered,options="header"]
+[options="header"]
 |===
 |Date |Release |Editor | Primary clauses modified |Description
+
 |2020-11-21 |0.1.0 |Steve Smyth |all |initial integrated version
 |2021-08-25 |0.5.0 |Steve Smyth |all |assigned doc number 21-056
 |2021-08-26 |0.5.0 |Steve Smyth |all |doc number 21-056r1

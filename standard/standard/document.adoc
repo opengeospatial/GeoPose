@@ -1,4 +1,4 @@
-= Draft OGC GeoPose 1.0 Data Exchange Standard
+= GeoPose 1.0 Data Exchange Standard
 :doctype: standard
 :docsubtype: implementation
 :status: draft
@@ -42,14 +42,16 @@ include::clause_8_media_types.adoc[]
 
 include::annex-ats.adoc[]
 
+// TODO: These sections are currently empty
 //include::annex-b-sdu-definitions.adoc[]
-
+//
 //include::annex-c-json-schema-specifications.adoc[]
 
 include::annex-d-geopose-frame-specs.adoc[]
 
+// TODO: These sections are currently empty
 //include::annex-e-euler-angles.adoc[]
-
+//
 //include::annex-f-quaternions.adoc[]
 
 include::annex-g-time.adoc[]
