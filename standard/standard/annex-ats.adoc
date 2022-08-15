@@ -152,8 +152,8 @@ requirement:: /req/ypr_angles/sdu
 .Basic-Quaternion SDU
 ====
 [%metadata]
-label:: /conf/basic_quaternion_sdu
-requirement:: /req/basic_quaternion_sdu
+label:: /conf/basic_quaternion/sdu
+requirement:: /req/basic_quaternion/sdu
 classification:: Target Type:SDU
 description:: To confirm that components of a Basic Quaternion GeoPose conform to the Logical Model.
 inherit:: /conf/global
@@ -253,16 +253,6 @@ requirement:: /req/frame_specification_parameters/sdu
 test-method:: Inspection
 ====
 
-[abstract_test]
-.Quaternion-SDU
-====
-[%metadata]
-label:: /conf/basic_quaternion/sdu
-description:: To confirm the correct properties of a quaternion.
-test-purpose:: To confirm that the unit quaternion consists of four representations of real number values and that the square root of the sum of the squares of those numbers is approximately 1.
-requirement:: /req/basic_quaternion/sdu
-test-method:: Inspection
-====
 
 ==== Graph SDU Conformance Class
 
