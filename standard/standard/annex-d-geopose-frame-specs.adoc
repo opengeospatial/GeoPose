@@ -6,9 +6,8 @@ This annex has example Frame Specifications for the LTP-ENU and LTP-NED Referenc
 
 === Local Tangent Plane - East North Up (LTP-ENU)
 
-LTP-ENU ISO 19162 WKT
-
-[%unnumbered]
+[source]
+.LTP-ENU ISO 19162 WKT
 ----
 BASEGEOGCRS["WGS 84",
     DATUM["World Geodetic System 1984",
@@ -47,9 +46,8 @@ USAGE[
 
 === Local Tangent Plane - North East Down (LTP-NED)
 
-LTP-NED ISO 19162 WKT
-
-[%unnumbered]
+[source]
+.LTP-NED ISO 19162 WKT
 ----
 BASEGEOGCRS["WGS 84",
     DATUM["World Geodetic System 1984",

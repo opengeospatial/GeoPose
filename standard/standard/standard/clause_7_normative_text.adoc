@@ -1,6 +1,6 @@
 == Standardization Targets (Normative)
 
-The core abstraction in the GeoPose Standard is the Frame Transform. This is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a location and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification. 
+The core abstraction in the GeoPose Standard is the Frame Transform. This is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a location and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.
 
 There are eight independent Standardization Targets to specifically address the requirements of individual use cases. The Basic and Advanced Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms.  The Targets are the data classes that are specified by the GeoPose Standard. The eight targets are denoted by bold terms in the following categories:
 
@@ -45,7 +45,7 @@ The normative expression of the UML model is a Sparx Systems Enterprise Explorer
 
 The Logical Model consists of three packages: Core, Time, and Sequence. The Basic GeoPose targets rely on only the Core package. The Advanced GeoPose also incorporates the Time Package. Composite GeoPoses incorporate all three Packages.
 
-The coloring of the classes indicates whther they are normative in terms of concrete structural data units (SDUs) or the corresponding encodings (blue),  provide context for interpreting the SDUs (light yellow), or represent data types (bright yellow). 
+The coloring of the classes indicates whther they are normative in terms of concrete structural data units (SDUs) or the corresponding encodings (blue),  provide context for interpreting the SDUs (light yellow), or represent data types (bright yellow).
 
 [NOTE]
 Implementers of software using encoded SDUs must agree with the logical description of the blue model elements. The other elements are not expressed in the concrete data objects in the GeoPose 1.0 standard. Therefore they are not normative in the sense of requiring implementation of a specific internal representation. Stated another way, an implementation is free to use any internal representation needed for efficient implementation but the interpretation of the data objects themselves must conform to the standard, including the Logical Model.
@@ -101,7 +101,7 @@ For each Target, there is a requirement for how each data element that is mapped
 
 The Basic-Quaternion GeoPose is a rotation-only transformation from a WGS-84-referenced local tangent plane east-north-up coordinate system. The rotation is specified with four components of a normalized qusterion.
 
-=====  Requirements 
+=====  Requirements
 
 *Summary (Informative)*
 
@@ -114,8 +114,8 @@ There are two independent encoding targets, one a strict encoding not allowing a
 [[req_basic_quaternion_permissive]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement BQ-S-{counter:req-bq-id}* |*/req/basic/quaternion-permissive/structure* 
-^|Requirement |An implementation of a Basic-Quaternion Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. 
+^|*Requirement BQ-S-{counter:req-bq-id}* |*/req/basic/quaternion-permissive/structure*
+^|Requirement |An implementation of a Basic-Quaternion Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point.
 ^|ID |<<req_basic_quaternion_permissive,/req/basic/quaternion/structure>>
 |===
 
@@ -149,7 +149,7 @@ include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
 ----
 *JSON Encoding (Normative)*
 
-This JSON encoding is extensible in the sense that the JSON-Schema "addtionalProperties" property is set to the default value of *true*.
+This JSON encoding is extensible in the sense that the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
 include::requirements/target/basic-q/req_basic_quaternion.adoc[]
 
@@ -164,15 +164,15 @@ include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
 ----
 
 
-==== Standardization Target 2: Basic-Euler 
+==== Standardization Target 2: Basic-Euler
 
-The Basic-Euler GeoPose uses a rotation-only transformation from a WGS-84-referenced local tangent plane east-north-up coordinate system. The rotation is specified with three Euler angles denoting rotation angles about the three LTP-ENU axes. The axis order is X, Y, Z. 
+The Basic-Euler GeoPose uses a rotation-only transformation from a WGS-84-referenced local tangent plane east-north-up coordinate system. The rotation is specified with three Euler angles denoting rotation angles about the three LTP-ENU axes. The axis order is X, Y, Z.
 
 [NOTE]
 Add requirement on axes. Euler angles seem simple but there is wide variation on the axis order and whether the axes rotate in sequence or are fixed for the three rotations.
 
 
-===== Requirements 
+===== Requirements
 
 
 *Summary (Informative)*
@@ -184,7 +184,7 @@ The Basic-Euler Target shall consist of an Outer Frame specified by an implicit 
 [[req_basic_euler]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement BE-S-{counter:req-be-id}* |*/req/basic/euler/structure* 
+^|*Requirement BE-S-{counter:req-be-id}* |*/req/basic/euler/structure*
 ^|Requirement |An implementation of a Basic-Euler Target shall consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame shall be a rotation-only transformation using an Euler angles specification.
 ^|ID |<<req_basic_euler,/req/basic/euler/structure>>
 |===
@@ -201,7 +201,7 @@ include::requirements/sdu/Req_SDU_Euler_Angles.adoc[]
 
 *JSON Encoding (Normative)*
 
-This JSON encoding is extensible in the sense that the JSON-Schema "addtionalProperties" Boolean property is set to the default value of *true*.
+This JSON encoding is extensible in the sense that the JSON-Schema "additionalProperties" Boolean property is set to the default value of *true*.
 
 
 include::requirements/target/basic-e/req_basic_euler.adoc[]
@@ -226,14 +226,14 @@ include::instances/GeoPose.Basic.Euler.Instance.00.json[]
 
 *Summary (Informative)*
 
-The Advanced Target shall consist of 
+The Advanced Target shall consist of
 
 *Structure (Normative)*
 
 [[req_advanced]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement AD-S-{counter:req-ad-id}* |*/req/advanced/structure* 
+^|*Requirement AD-S-{counter:req-ad-id}* |*/req/advanced/structure*
 ^|Requirement |An implementation of an Advanced Target shall consist of a
 ^|ID |<<req_advanced/structure,/req/advanced/structure>>
 |===
@@ -263,14 +263,14 @@ include::instances/GeoPose.Advanced.Instance.json[]
 
 *Summary (Informative)*
 
-The TTTTT Target shall consist of 
+The TTTTT Target shall consist of
 
 *Structure (Normative)*
 
 [[req_advanced]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure* 
+^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure*
 ^|Requirement |An implementation of an TTTTT GeoPose shall consist of a
 ^|ID |<<req_TTTTT/structure,/req/TTTTT/structure>>
 |===
@@ -306,14 +306,14 @@ include::instances/GeoPose.Composite.Graph.Instance.json[]
 
 *Summary (Informative)*
 
-The TTTTT Target shall consist of 
+The TTTTT Target shall consist of
 
 *Structure (Normative)*
 
 [[req_advanced]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure* 
+^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure*
 ^|Requirement |An implementation of an TTTTT GeoPose shall consist of a
 ^|ID |<<req_TTTTT/structure,/req/TTTTT/structure>>
 |===
@@ -347,14 +347,14 @@ include::instances/GeoPose.Composite.Chain.Instance.json[]
 
 *Summary (Informative)*
 
-The TTTTT Target shall consist of 
+The TTTTT Target shall consist of
 
 *Structure (Normative)*
 
 [[req_advanced]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure* 
+^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure*
 ^|Requirement |An implementation of an TTTTT GeoPose shall consist of a
 ^|ID |<<req_TTTTT/structure,/req/TTTTT/structure>>
 |===
@@ -388,14 +388,14 @@ include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 
 *Summary (Informative)*
 
-The TTTTT Target shall consist of 
+The TTTTT Target shall consist of
 
 *Structure (Normative)*
 
 [[req_advanced]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure* 
+^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure*
 ^|Requirement |An implementation of an TTTTT GeoPose shall consist of a
 ^|ID |<<req_TTTTT/structure,/req/TTTTT/structure>>
 |===
@@ -433,14 +433,14 @@ include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
 
 *Summary (Informative)*
 
-The TTTTT Target shall consist of 
+The TTTTT Target shall consist of
 
 *Structure (Normative)*
 
 [[req_advanced]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure* 
+^|*Requirement TTTTT-S-{counter:req-TT-id}* |*/req/TTTTT/structure*
 ^|Requirement |An implementation of an TTTTT GeoPose shall consist of a
 ^|ID |<<req_TTTTT/structure,/req/TTTTT/structure>>
 |===
@@ -471,7 +471,7 @@ include::instances/GeoPose.Composite.Sequence.Stream.Instance.json[]
 
 .Table Required Implementations (Normative)
 |===
-|Frame Specification Type|Authority |Implementation Requirements 
+|Frame Specification Type|Authority |Implementation Requirements
 
 |LTP-ENU (WGS84 - EPSG 4979-CRS/EPSG 4461-CS)
 |https://epsg.org
@@ -490,7 +490,7 @@ include::instances/GeoPose.Composite.Sequence.Stream.Instance.json[]
 |Optional
 
 |ISO 19162
-|https://www.iso.org/obp/ui/#iso:std:iso:19162:ed-2:v1:en 
+|https://www.iso.org/obp/ui/#iso:std:iso:19162:ed-2:v1:en
 |Optional
 
 |===

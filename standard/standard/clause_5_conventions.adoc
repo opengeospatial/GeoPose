@@ -10,16 +10,16 @@ http://www.opengis.net/spec/GeoPose/1.0
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
-[[conventions-section]]
+
 === Use Cases, Concepts, Logical Model, Standardization Targets, Encodings
 
-[[uml_notation_section]]
+
 === UML Notation
 
 The logical structure of the elements used in the GeoPose Standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. 1997). The UML notations used in this standard are described in the diagram in <<figure-1>>.
 
 [[figure-1]]
-.UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
+.UML notation (<<iso19103>>)
 image::images/UML_Notation.png[]
 
 All associations between model elements in GeoPose are uni-directional. Thus, associations in GeoPose are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
@@ -56,11 +56,3 @@ image::images/White_UML.png[white,256,400,]
 
 The color white is used for notes and OCL constraints that are provided in the UML diagrams.
 
-[[conceptual-modeling-description]]
-=== Conceptual Modelling
-
-<<iso19101>> defines universe of discourse to be a view of the real or hypothetical world that includes everything of interest. That standard then defines conceptual model to be a model that defines concepts of a universe of discourse.
-
-The goal of this GeoPose Standard is to establish and document a common set of concepts that spans the targeted use cases. This does not attempt to redefine application concepts, but merely present a common set of concepts from and to which their concepts can be understood and mapped.
-
-The GeoPose conceptual model is a graph of related concepts. One technology-independent realization is given by the GeoPose Logical Model.

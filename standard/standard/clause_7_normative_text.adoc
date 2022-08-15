@@ -1,8 +1,9 @@
 == Logical Model
 
-=== Description (Informative)
+=== General
 
-The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification. The Logical Model relates these elements to represent different types of GeoPose data objects and also defines structures built of time series and linked GeoPoses.
+The Frame Transform is the core abstraction in the GeoPose Standard. The Frame Transform is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification. The Logical Model relates these elements to represent different types of GeoPose data objects and also defines structures built of time series and linked GeoPoses.
+
 
 === UML Logical Model
 
@@ -14,28 +15,28 @@ The coloring of the classes indicates their role in the logical design. Note tha
 
 ==== Core
 
-The Logical Model Core contains the essential elements specific to the GeoPose modelled as a transformation between an anchoring Outer Frame and one or more derived Inner Frames.
+The Logical Model Core contains the essential elements specific to the GeoPose modelled as a transformation between an anchoring Outer Frame and one or more derived Inner Frames. This is described in <<core_logical_model>>.
 
-[[metadata_governance]]
-.Core Logical Model
+[[core_logical_model]]
+.Core logical model
 image::models/Logical_Core.png[]
 
 ==== Time
 
-The time logical model is based on the link:https://www.w3.org/TR/2020/CR-owl-time-20200326/[OWL Time] document.
+The time logical model is based on <<owl-time>>.
 
-Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to seconds of UNIX Time.
+Only relevant classes, properties, and associations are included. GeoPose v1.0 has a very restricted idea of time position, limited to seconds of UNIX Time. This is described in <<time_logical_model>>.
 
-[[core_logical_model]]
-.Time Logical model
+[[time_logical_model]]
+.Time logical model
 image::models/Logical_time.png[]
 
 ==== Sequence
 
-The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same {{outer frame}} and there is a time-dependent changing {{inner frame}}.
+The sequence logical model defines a method for packaging of GeoPose data, where multiple GeoPoses in a sequence share the same {{outer frame}} and there is a time-dependent changing {{inner frame}}. This is displayed in <<sequence_logical_model>>.
 
 [[sequence_logical_model]]
-.Sequence Logical Model
+.Sequence logical model
 image::models/Logical_Sequence.png[]
 
 ==== Targets
@@ -52,7 +53,7 @@ The Chain and the Graph GeoPose composite structures respectively represent line
 
 [[chain_graph_logical_model]]
 .Chain and Graph Structural Data Units
-image::models/Logical_Target_Linked.png[Linked,]
+image::models/Logical_Target_Linked.png[]
 
 The Stream and each of the two Series composite structures represent time series of a single evolving GeoPose.
 
@@ -63,16 +64,15 @@ image::models/Logical_Target_Sequence.png[]
 [NOTE]
 The _integrityCheck_ attributes in the SeriesHeader and SeriesTrailer classes are defined as strings and have no prescribed method of use in GeoPose 1.0. They are placeholders to allow experimentation and possible standardization in a later version.
 
-[[requirements]]
+
 == Structural Data Units and Standardization Targets
 
-=== Description (Informative)
+=== General
 
 Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.
 
 SDUs provide Standardization Targets that are independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with a corresponding element (class or attribute) in the logical model.
 
-[[standardization_targets]]
 The Basic and Advanced Standardization Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms. The Targets are the data classes that are specified by the GeoPose Standard. There are eight Standardization Targets denoted by bold terms in the following categories:
 
 . Basic - Satisfy most use cases
@@ -91,12 +91,14 @@ The Basic and Advanced Standardization Targets differ in the level of options an
 [NOTE]
 The definition of a reference frame by an external standard in *not* specified. GeoPose does use a three-part designation of an external frame specification using the three fields _authority_, _ID_, and _parameters_. The interpretation of the contents of these fields is outside the scope of GeoPose.
 
+
 === Global Requirements
 
 Global requirements apply to all SDUs and Standardization Targets.
 
 [[rc_global]]
 [requirements_class]
+.Global requirements
 ====
 [%metadata]
 label:: /req/global
@@ -109,45 +111,45 @@ requirement:: /req/lm_general
 
 The individual global requirements are defined as follows:
 
-[[global]]
 [requirement]
+.Individual standardization targets shall not dependent on each other
 ====
 [%metadata]
 label:: /req/target_dependency
-description:: There SHALL be no dependency between or among the individual Standardization Targets.
+description:: There SHALL be no dependency between or among the individual
+Standardization Targets.
 ====
 
-[[sdu_confomance]]
 [requirement]
+.Implementations using encoded SDUs shall conform to the SDU stereotype
 ====
 [%metadata]
 label:: /req/sdu_general
-description:: Implementations using encoded SDUs SHALL conform to the logical description of the Logical Model elements with the "Structural Data Unit - SDU" stereotype.
+description:: Implementations using encoded SDUs SHALL conform to the logical
+description of the Logical Model elements with the "Structural Data Unit - SDU"
+stereotype.
 ====
 
-[[lm_confomance]]
 [requirement]
+.Implementations of concrete data shall conform to the LM
 ====
 [%metadata]
 label:: /req/lm_general
-description:: Implementations of concrete data conforming to this standard SHALL conform to all dependent or inherited classes, attributes, and associations, multiplicities, and data types in the Logical Model.
+description:: Implementations of concrete data conforming to this standard SHALL
+conform to all dependent or inherited classes, attributes, and associations,
+multiplicities, and data types in the Logical Model.
 ====
 
 ==== Requirements for Standardization Target 1: Basic-YPR
 
-*Summary (Informative)*
-
 The Basic-YPR Target has a simple structure with no options. Position is specified as a point in an LTP-ENU frame and rotation is specified by yaw, pitch, and roll angles specified in decimal degrees.
 
-*Structure*
-
 [[basic_ypr_sdu]]
-.Basic YPR SDU
+.Structure of the Basic YPR SDU
 image::diagram/Basic-YPR_SDU.PNG[]
 
-
-[[req_class_basic_ypr_sdu]]
 [requirements_class]
+.Standardization Target 1: Basic-YPR
 ====
 [%metadata]
 label:: /req/basic_ypr/sdu
@@ -161,42 +163,42 @@ requirement:: /req/tangent_plane_h/sdu
 requirement:: /req/orientation_ypr_angles/sdu
 ====
 
-Details of the individual requirements:
+Details of the individual requirements are listed below:
 
-[[req_basic_ypr_sdu]]
 [requirement]
+.Outer frame and inner frame requirements
 ====
 [%metadata]
 label:: /req/basic_ypr/sdu
 description:: An implementation of a Basic-YPR Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using Yaw, Pitch, and Roll angles specified in degrees and represented as signed real number values.
 ====
 
-[[req_tangent_plane_longitude]]
 [requirement]
+.GeoPose `tangentPoint.longitude` encoding requirements
 ====
 [%metadata]
 label:: /req/tangent_plane_longitude/sdu
-description:: An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
+description:: An instance of a GeoPose `tangentPoint.longitude` attribute SHALL be expressed as decimal degrees and represented as signed real number values.
 ====
 
-[[req_tangent_plane_latitude]]
 [requirement]
+.GeoPose `tangentPoint.latitude` encoding requirements
 ====
 [%metadata]
 label:: /req/tangent_plane_latitude/sdu
 description:: An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
 ====
 
-[[req_tangent_plane_h]]
 [requirement]
+.GeoPose `tangentPoint.h` encoding requirements
 ====
 [%metadata]
 label:: /req/tangent_plane_h/sdu
-description:: An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid and represented as a signed real number value.
+description:: An instance of a GeoPose `tangentPoint.h` attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid and represented as a signed real number value.
 ====
 
-[[req_sdu_orientation_ypr_angles]]
 [requirement]
+.GeoPose YPR encoding requirements
 ====
 [%metadata]
 label:: /req/orientation_ypr_angles/sdu
@@ -205,47 +207,27 @@ description:: Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three cons
 
 ==== Requirements for Standardization Target 2: Basic-Quaternion
 
-*Summary (Informative)*
-
 The Basic-Quaternion Target has a simple structure with no options. Position is specified as a point in an LTP-ENU frame and rotation is specified as a unit quaternion.
 
-*Structure*
-
 [[basic_quaternion_sdu]]
-.Basic Quaternion SDU
+.Structure of the Basic Quaternion SDU
 image::diagram/Basic-Quaternion_SDU.PNG[]
 
-
-[[req_basic_quaternion_sdu]]
 [requirements_class]
+.Standardization Target 2: Basic-Quaternion
 ====
 [%metadata]
 label:: /req/basic_quaternion/sdu
 subject:: Implementation of Logical Model
 inherit:: /req/global
 description:: Basic-Quaternion Logical Model SDU
-
 requirement:: /req/tangent_plane_longitude/sdu
 requirement:: /req/tangent_plane_latitude/sdu
 requirement:: /req/tangent_plane_h/sdu
 requirement:: /req/orientation_quaternion/sdu
 ====
 
-[requirement]
-.B-TP-Lon-SDU
-====
-[%metadata]
-label:: /req/tangent_plane_longitude/sdu
-description:: An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees, represented as a signed real number.
-====
-
-[requirement]
-.B-TP-Lat-SDU
-====
-[%metadata]
-label:: /req/tangent_plane_latitude/sdu
-description:: An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees, represented as a signed real number.
-====
+Details of the individual requirements are listed below:
 
 [requirement]
 .B-TP-h-SDU
@@ -269,26 +251,19 @@ description:: An instance of a GeoPose Logical Model quaternion data type value 
 
 ==== Requirements for Standardization Target 3: Advanced
 
-*Summary (Informative)*
-
 The Advanced Target has a more general structure, supporting flexible specification of Outer Frame and a Valid Time.
 
-*Structure*
-
-[[advanced_sdu]]
-.Basic Advanced SDU
+.Structure of the Basic Advanced SDU
 image::diagram/Advanced_SDU.PNG[]
 
-
-[[req_advanced_sdu]]
 [requirements_class]
+.Standardization Target 3: Advanced
 ====
 [%metadata]
 label:: /req/advanced/sdu
 subject:: Implementation of Logical Model
 description:: Advanced Logical Model SDU
 inherit:: /req/global
-
 requirement:: /req/time/geopose_instant/sdu
 requirement:: /req/frame_specification/authority/sdu
 requirement:: /req/frame_specification/id/sdu
@@ -296,7 +271,6 @@ requirement:: /req/frame_specification/parameters/sdu
 requirement:: /req/orientation/quaternion/sdu
 ====
 
-[[req_pose_geopose_instant_sdu]]
 [requirement]
 .GP-Instant-SDU
 ====
@@ -305,7 +279,6 @@ label:: /req/time/geopose_instant/sdu
 description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
 
-[[req_frame_specification_authority_sdu]]
 [requirement]
 .FS-Authority-SDU
 ====
@@ -314,7 +287,6 @@ label:: /req/frame_specification/authority/sdu
 description:: The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
 ====
 
-[[req_frame_specification_id_sdu]]
 [requirement]
 .FS-ID-SDU
 ====
@@ -323,7 +295,6 @@ label:: /req/frame_specification/id/sdu
 description:: The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 ====
 
-[[req_frame_specification_parameters_sdu]]
 [requirement]
 .FS-Parameters-SDU
 ====
@@ -342,26 +313,20 @@ description:: An instance of a GeoPose Logical Model quaternion data type value 
 
 ==== Requirements for Standardization Target 4: Graph
 
-*Summary (Informative)*
-
 The Graph Target supports a network of object relative poses. The graph is a directed acyclic graph, each node must either be an Extrinsic Frame or reachable from an Extrinsic Frame.
 
 
-*Structure*
-
-[[graph_sdu]]
-.Graph SDU
+.Structure of the Graph SDU
 image::diagram/Graph_SDU.PNG[]
 
-[[req_graph_sdu]]
 [requirements_class]
+.Standardization Target 4: Graph
 ====
 [%metadata]
 label:: /req/graph/sdu
 subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global
-
 requirement:: /req/time/geopose_instant/sdu
 requirement:: /req/frame_specification/authority/sdu
 requirement:: /req/frame_specification/id/sdu
@@ -369,13 +334,6 @@ requirement:: /req/frame_specification/parameters/sdu
 requirement:: /req/transform_index/sdu
 ====
 
-[requirement]
-.Graph-SDU
-====
-[%metadata]
-label:: /req/time/geopose_instant/sdu
-description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
-====
 
 [requirement]
 .FS-Authority-SDU
@@ -411,18 +369,13 @@ description:: Each index value in a FrameListTransformPair SHALL be a distinct i
 
 ==== Requirements for Standardization Target 5: Chain
 
-*Summary (Informative)*
-
 The Chain Target supports relationships between a linear sequence of pose relationships. The first frame in the sequence must be an Outer Frame.
 
-*Structure*
-
-[[chain_sdu]]
-.Chain SDU
+.Structure of the Chain SDU
 image::diagram/Chain_SDU.PNG[]
 
-[[req_chain_sdu]]
 [requirements_class]
+.Standardization Target 5: Chain
 ====
 [%metadata]
 label:: /req/chain/sdu
@@ -434,14 +387,6 @@ requirement:: /req/time/geopose_instant/sdu
 requirement:: /req/frame_specification/authority/sdu
 requirement:: /req/frame_specification/id/sdu
 requirement:: /req/frame_specification/parameters/sdu
-====
-
-[requirement]
-.GP-Instant-SDU
-====
-[%metadata]
-label:: /req/time/geopose_instant/sdu
-description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
 ====
 
 [requirement]
@@ -470,18 +415,13 @@ description:: The frame_specification.parameter attribute SHALL contain all para
 
 ==== Requirements for Standardization Target 6: Regular Series
 
-*Summary (Informative)*
-
 The Regular (Time) Series Target represents the time evolution of a single GeoPose, with a constant time duration between successive inner frames.
 
-*Structure*
-
-[[regular_series_sdu]]
-.Regular Series SDU
+.Structure of the Regular Series SDU
 image::diagram/Regular-Series_SDU.PNG[]
 
-[[req_regular_series_sdu]]
 [requirements_class]
+.Standardization Target 6: Regular Series
 ====
 [%metadata]
 label:: /req/regular_series/sdu
@@ -547,18 +487,13 @@ description:: A trailer property SHALL be implemented as a SeriesTrailer structu
 
 ==== Requirements for Standardization Target 7: Irregular Series
 
-*Summary (Informative)*
-
 The Irregular (Time) Series Target represents the time evolution of a single GeoPose, with a variable time duration between successive inner frames.
 
-*Structure*
-
-[[irregular_series_sdu]]
-.Irregular Series SDU
+.Structure of the Irregular Series SDU
 image::diagram/Irregular-Series_SDU.PNG[]
 
-[[req_irregular_series_sdu]]
 [requirements_class]
+.Standardization Target 7: Irregular Series
 ====
 [%metadata]
 label:: /req/irregular_series/sdu
@@ -624,22 +559,16 @@ description:: A trailer property SHALL be implemented as a SeriesTrailer.
 
 ==== Requirements for Standardization Target 8: Stream
 
-*Summary (Informative)*
-
 The Stream target consists of two parts: a single initial specification of a transition model and an outer frame (the Stream Header) and zero or more time-stamped frame specifications (the Stream Elements). In the delivery of a stream the Header and Elements are not part of a single data structure that exists at a single instant. Nevertheless, recording the Header and all of the Elements received up to some point in time in a single structure is possible. The result is that there are two kinds of data objects that may be involved in transmission of a stream: Headers and Elements and a third kind of object that represents a Recorded Stream.
 
-*Structure*
-
-[[stream_header_sdu]]
-.Stream Header SDU
+.Structure of the Stream Header SDU
 image::diagram/Stream-Header_SDU.PNG[]
 
-[[stream_trailer_sdu]]
-.Stream Element SDU
+.Structure of the Stream Element SDU
 image::diagram/Stream-Element_SDU.PNG[]
 
-[[req_stream_sdu]]
 [requirements_class]
+.Standardization Target 8: Stream
 ====
 [%metadata]
 label:: /req/stream/sdu
@@ -695,316 +624,347 @@ label:: /req/stream/frame_time_element/sdu
 description:: A FrameAndTimeElement property SHALL be implemented as as an ExplicitFrameSpec and a GeoPoseInstant.
 ====
 
+
 == Requirements for Encodings
 
-=== Description (Informative)
+=== General
 
 Requirements Classes are modularized based on the corresponding Standardization Target. This results in some SDU requirements being repeated between Targets. SDU requirements are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target's group of SDUs are encoded. If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target's section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified for the Basic-Q Target.
 
 === JSON Encoding
 
-==== Description (Informative)
+==== General
 
 The JSON encoding is one of many possible ways of implementing a concrete representation of any one or more of the GeoPose Standardization Targets. The specific JSON encoding in this section follows all of the normal rules and conventions of JSON. For example, the order of named properties is not significant and, except in the case of the "strict" Basic-Quaternion object, there is no restriction on adding additional properties not specified in the GeoPose 1.0 Standard. In addition to supporting specific application requirements outside the GeoPose 1.0 scope, this flexibility enables experimentation with useful properties that might be part of a future version of the OGC GeoPose Standard.
 
 ==== Standardization Target 1: Basic-YPR
 
+[requirement]
+.Basic-YPR: JSON encoding
+====
+[%metadata]
+label:: /req/basic_ypr/encoding/json
+description:: A JSON-encoded Basic-YPR GeoPose SHALL conform to the Basic-YPR
+JSON-Schema 2019-9 definition (<<basic_ypr_json_schema>>).
+====
+
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
-===== JSON Encoding
-
-[[req_basic_ypr_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/basic/ypr/encoding/json
-description:: A JSON-encoded Basic-YPR GeoPose SHALL conform to the following Basic-YPR JSON-Schema 2019-9 definition.
-====
-
-*JSON-Schema:*
-
-[%unnumbered]
+[[basic_ypr_json_schema]]
+[source,json]
+.Basic-YPR: JSON encoding schema
 ----
 include::schemata/GeoPose.Basic.YPR.Schema.json[]
 ----
 
-*Instance (Informative)*
-
-[%unnumbered]
+[example]
+====
+[source,json]
 ----
 include::instances/GeoPose.Basic.YPR.Instance.00.json[]
 ----
+====
 
 ==== Standardization Target 2: Basic-Quaternion
 
-[NOTE]
-Two JSON encodings are defined for the Basic-Quaternion Target: *Strict*, disallowing additional JSON properties not defined in the schema and *Extensible*, allowing additional JSON properties in addition to those required by the schema. All other targets follow the default and permit additional JSON properties.
+Two JSON encodings are defined for the Basic-Quaternion Target:
+
+*Strict*:: disallowing additional JSON properties not defined in the schema
+
+*Extensible*:: allowing additional JSON properties in addition to those required
+by the schema.
+
+All other targets follow the default and permit additional JSON properties.
 
 ===== Strict JSON Encoding
 
-[[req_basic_quaternion_encoding_json_strict]]
 [requirement]
+.Basic-Quaternion: Strict JSON encoding
 ====
 [%metadata]
-label:: /req/basic/quaternion/encoding/json_strict
-description:: A JSON-encoded Basic-Quaternion (Strict) GeoPose SHALL conform to the following Basic-Quaternion (Strict) JSON-Schema 2019-9 definition. There SHALL be no encoded properties not explicitly defined in the JSON-Schema definition.
+label:: /req/basic_quaternion/encoding/json_strict
+description:: A JSON-encoded Basic-Quaternion (Strict) GeoPose SHALL conform to
+the Basic-Quaternion (Strict) JSON-Schema 2019-9 definition
+(<<basic_quaternion_strict_json_schema>>). There SHALL be no encoded properties
+not explicitly defined in the JSON-Schema definition.
 ====
 
-*JSON-Schema:*
-
-[%unnumbered]
+[[basic_quaternion_strict_json_schema]]
+[source,json]
+.Basic-Quaternion: Strict JSON encoding schema
 ----
 include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
 ----
 
-*Instance-Strict (Informative)*
-
-[%unnumbered]
+[example]
+====
+[source,json]
 ----
 include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
 ----
+====
+
 
 ===== Permissive JSON Encoding
 
-[NOTE]
 This JSON encoding of the Basic-Quaternion GeoPose is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*. This encoding is intended to be the default GeoPose.
 
-
-[[req_basic_quaternion_encoding_json]]
 [requirement]
+.Basic-Quaternion: Permissive JSON encoding
 ====
 [%metadata]
-label:: /req/basic/quaternion/encoding/json
-description:: A JSON-encoded Basic-Quaternion GeoPose SHALL conform to the following Basic-Quaternion JSON-Schema 2019-9 definition.
+label:: /req/basic_quaternion/encoding/json
+description:: A JSON-encoded Basic-Quaternion GeoPose SHALL conform to the
+Basic-Quaternion JSON-Schema 2019-9 definition
+(<<basic_quaternion_permissive_json_schema>>).
 ====
 
-*JSON-Schema:*
-
-[%unnumbered]
+[[basic_quaternion_permissive_json_schema]]
+[source,json]
+.Basic-Quaternion: Permissive JSON encoding schema
 ----
 include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
 ----
 
-*Instance (Informative)*
-
-[%unnumbered]
+[example]
+====
+[source,json]
 ----
 include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
 ----
+====
+
 
 ==== Standardization Target 3: Advanced GeoPose
 
-[NOTE]
-This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
-
-===== JSON Encoding
-
-[[req_advanced_encoding_json]]
 [requirement]
+.Advanced GeoPose: JSON encoding
 ====
 [%metadata]
 label:: /req/advanced/encoding/json
-description:: A JSON-encoded Advanced GeoPose SHALL conform to the following Advanced JSON-Schema 2019-9 definition.
+description:: A JSON-encoded Advanced GeoPose SHALL conform to the Advanced
+JSON-Schema 2019-9 definition (<<advanced_geopose_json_schema>>).
 ====
 
-*JSON-Schema:*
+[NOTE]
+This JSON encoding is extensible because the JSON-Schema "additionalProperties"
+property is set to the default value of *true*.
 
-[%unnumbered]
+
+[[advanced_geopose_json_schema]]
+[source,json]
+.Advanced GeoPose: JSON encoding schema
 ----
 include::schemata/GeoPose.Advanced.Schema.json[]
 ----
 
-*Instance (Informative)*
-
-[%unnumbered]
+[example]
+====
+[source,json]
 ----
 include::instances/GeoPose.Advanced.Instance.json[]
 ----
+====
 
 ==== Standardization Target 4: Graph
+
+[requirement]
+.Graph: JSON encoding
+====
+[%metadata]
+label:: /req/graph/encoding/json
+description:: A JSON-encoded GeoPose Graph SHALL conform to the GeoPose Graph
+JSON-Schema 2019-9 definition (<<graph_json_schema>>).
+====
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
-===== JSON Encoding
 
-[[req_graph_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/graph/encoding/json
-description:: A JSON-encoded GeoPose Graph SHALL conform to the following GeoPose Graph JSON-Schema 2019-9 definition.
-====
-
-*JSON-Schema:*
-
-[%unnumbered]
+[[graph_json_schema]]
+[source,json]
+.Graph: JSON encoding schema
 ----
 include::schemata/GeoPose.Composite.Graph.Schema.json[]
 ----
 
-*Instance (Informative)*
-
-[%unnumbered]
+[example]
+====
+[source,json]
 ----
 include::instances/GeoPose.Composite.Graph.Instance.json[]
 ----
+====
 
 ==== Standardization Target 5: Chain
+
+[[req_chain_encoding_json]]
+[requirement]
+.Chain: JSON encoding
+====
+[%metadata]
+label:: /req/chain/encoding/json
+description:: A JSON-encoded GeoPose Chain SHALL conform to the GeoPose Chain
+JSON-Schema 2019-9 definition (<<chain_json_schema>>).
+====
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
-===== JSON Encoding
 
-*JSON-Schema:*
-
-[[req_chain_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/chain/encoding/json
-description:: A JSON-encoded GeoPose Chain SHALL conform to the following GeoPose Chain JSON-Schema 2019-9 definition.
-====
-
-[%unnumbered]
+[[chain_json_schema]]
+[source,json]
+.Chain: JSON encoding schema
 ----
 include::schemata/GeoPose.Composite.Chain.Schema.json[]
 ----
 
-*Instance (Informative)*
-
-[%unnumbered]
+[example]
+====
+[source,json]
 ----
 include::instances/GeoPose.Composite.Chain.Instance.json[]
 ----
+====
 
 ==== Standardization Target 6: Regular Series
+
+[requirement]
+.Regular series: JSON encoding
+====
+[%metadata]
+label:: /req/series/regular/encoding/json
+description:: A JSON-encoded GeoPose Regular Series SHALL conform to the GeoPose
+Regular JSON-Schema 2019-9 definition (<<regular_series_json_schema>>).
+====
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
-===== JSON Encoding
-
-*JSON-Schema:*
-
-[[req_series_regular_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/series/regular/encoding/json
-description:: A JSON-encoded GeoPose Regular Series SHALL conform to the following GeoPose Regular JSON-Schema 2019-9 definition.
-====
-
-[%unnumbered]
+[[regular_series_json_schema]]
+[source,json]
+.Regular series: JSON encoding schema
 ----
 include::schemata/GeoPose.Composite.Sequence.Series.Regular.Schema.json[]
 ----
 
-*Instance (Informative)*
-
-[%unnumbered]
+[example]
+====
+[source,json]
 ----
 include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 ----
+====
 
 ==== Standardization Target 7: Irregular Series
+
+[requirement]
+.Irregular series: JSON encoding
+====
+[%metadata]
+label:: /req/series/irregular/encoding/json
+description:: A JSON-encoded GeoPose Irregular Series SHALL conform to the
+GeoPose Irregular JSON-Schema 2019-9 definition
+(<<irregular_series_json_schema>>).
+====
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
-===== JSON Encoding
-
-*JSON-Schema:*
-
-[[req_series_irregular_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/series/irregular/encoding/json
-description:: A JSON-encoded GeoPose Irregular Series SHALL conform to the following GeoPose Irregular JSON-Schema 2019-9 definition.
-====
-
-[%unnumbered]
+[[irregular_series_json_schema]]
+[source,json]
+.Irregular series: JSON encoding schema
 ----
 include::schemata/GeoPose.Composite.Sequence.Series.Irregular.Schema.json[]
 ----
 
-*Instance (Informative)*
-
-[%unnumbered]
+[example]
+====
+[source,json]
 ----
 include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
 ----
+====
 
 ==== Standardization Target 8: Stream
+
+[requirement]
+.Stream header: JSON encoding
+====
+[%metadata]
+label:: /req/stream/header/encoding/json
+description:: A JSON-encoded GeoPose Stream Header SHALL conform to the GeoPose
+Stream Header JSON-Schema 2019-9 definition (<<streamheader_json_schema>>).
+====
 
 [NOTE]
 This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.
 
-===== JSON Encoding
-
-*JSON-Schemata:*
-
-[[req_stream_header_encoding_json]]
-[requirement]
-====
-[%metadata]
-label:: /req/stream/header/encoding/json
-description:: A JSON-encoded GeoPose Stream Header SHALL conform to the following GeoPose Stream Header JSON-Schema 2019-9 definition.
-====
-
-[%unnumbered]
+[[streamheader_json_schema]]
+[source,json]
+.Stream header: JSON encoding schema
 ----
 include::schemata/GeoPose.Composite.Sequence.StreamHeader.Schema.json[]
 ----
 
-[[req_stream_element_encoding_json]]
 [requirement]
+.Stream element: JSON encoding
 ====
 [%metadata]
 label:: /req/stream/element/encoding/json
-description:: A JSON-encoded GeoPose Stream Element SHALL conform to the following GeoPose Stream Element JSON-Schema 2019-9 definition.
+description:: A JSON-encoded GeoPose Stream Element SHALL conform to the GeoPose
+Stream Element JSON-Schema 2019-9 definition (<<streamelement_json_schema>>).
 ====
 
-[%unnumbered]
+[[streamelement_json_schema]]
+[source,json]
+.Stream element: JSON encoding schema
 ----
 include::schemata/GeoPose.Composite.Sequence.StreamElement.Schema.json[]
 ----
 
-[[req_stream_record_encoding_json]]
+
 [requirement]
+.Stream record: JSON encoding
 ====
 [%metadata]
 label:: /req/stream/record/encoding/json
-description:: A JSON-encoded GeoPose Stream Record (a recorded Stream) SHALL conform to the following GeoPose Stream Record JSON-Schema 2019-9 definition.
+description:: A JSON-encoded GeoPose Stream Record (a recorded Stream) SHALL
+conform to the GeoPose Stream Record JSON-Schema 2019-9 definition
+(<<streamrecord_json_schema>>).
 ====
 
-[%unnumbered]
+[[streamrecord_json_schema]]
+[source,json]
+.Stream record: JSON encoding schema
 ----
 include::schemata/GeoPose.Composite.Sequence.Stream.Schema.json[]
 ----
 
-*Instances (Informative)*
-
-Valid JSON encoding of a Stream Header instance:
-
-[%unnumbered]
+[example]
+.Valid JSON encoding of a Stream Header instance
+====
+[source,json]
 ----
 include::instances/GeoPose.Composite.Sequence.StreamHeader.Instance.json[]
 ----
+====
 
-Valid JSON encoding of a Stream Element instance:
-
-[%unnumbered]
+[example]
+.Valid JSON encoding of a Stream Element instance
+====
+[source,json]
 ----
 include::instances/GeoPose.Composite.Sequence.StreamElement.Instance.json[]
 ----
+====
 
-Valid JSON encoding of a Recorded Stream:
-
-[%unnumbered]
+[example]
+.Valid JSON encoding of a Recorded Stream
+====
+[source,json]
 ----
 include::instances/GeoPose.Composite.Sequence.Stream.Instance.json[]
 ----
+====

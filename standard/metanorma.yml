@@ -1,0 +1,9 @@
+---
+metanorma:
+  source:
+    files:
+      - standard/document.adoc
+
+  collection:
+    name: OGC GeoPose
+    organization: OGC

@@ -1,7 +1,9 @@
 [abstract]
 == Abstract
 
-GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The standard specifies two Basic forms with no configuration options for common use cases, an Advanced form with more flexibility for more complex applications, and five composite GeoPose structures that support time series plus chain and graph structures.
+GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects ("Poses") within reference frames anchored to the earth's surface ("Geo") or within other astronomical coordinate systems.
+
+The standard specifies two Basic forms with no configuration options for common use cases, an Advanced form with more flexibility for more complex applications, and five composite GeoPose structures that support time series plus chain and graph structures.
 
 These eight Standardization Targets are independent. There are no dependencies between Targets and each may be implemented as needed to support a specific use case.
 
@@ -9,19 +11,18 @@ The Standardization Targets share an implementation-neutral Logical Model which 
 
 For each Standardization Target, each implementation technology and corresponding encoding format defines the encoding or serialization specified in a manner appropriate to that technology.
 
-GeoPose Version 1.0 specifies a single encoding: http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf[IETF RFC 8259 / ECMA JavaScript Object Notation (JSON)]. Each Standardization Target has a JSON-Schema:2019-9 encoding specification. The key standardization requirements specify that concrete JSON-encoded GeoPose data objects must conform to the corresponding JSON-Schema definition. The individual elements identified in the encoding specification are composed of SDUs, tying the specifications back to the Logical Model.
+GeoPose Version 1.0 specifies a single encoding in JSON format (<<json2017>>).
+Each Standardization Target has a JSON Schema (<<jsonschema2019>>) encoding specification.
+The key standardization requirements specify that concrete JSON-encoded GeoPose data objects must conform to the corresponding JSON Schema definition. The individual elements identified in the encoding specification are composed of SDUs, tying the specifications back to the Logical Model.
 
 The GeoPose 1.0 Standard makes no assumptions about the interpretation of external specifications, for example, of reference frames. Nor does it assume or constrain services or interfaces providing conversion between GeoPoses of difference types or relying on different external reference frame definitions.
 
 == Preface
 
-[NOTE]
-====
-This is a draft implementation specification for GeoPose 1.0.
-Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+EDITOR: Please provide real preface content.
 
-Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
-====
+This is a draft implementation specification for GeoPose 1.0.
+
 
 == Submitters
 

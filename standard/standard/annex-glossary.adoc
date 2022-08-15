@@ -2,8 +2,6 @@
 [appendix]
 == Glossary
 
-// The following terms and concepts have appeared in the discussion of the use cases and design of the GeoPose standard but not part of the terms defined in Terms and Definitions.
-
 === acceleration
 
 time rate of change of {{velocity}}
@@ -27,7 +25,7 @@ context within which some technology or device is usefully applied
 === associated reference frame
 admitted:[pose frame]
 
-euclidean {{reference frame}} that is defined by the location and orientation of a
+Euclidean {{reference frame}} that is defined by the location and orientation of a
 {{pose}}
 
 NOTE: A pose defines the origin of its associated reference frame, and its
@@ -116,7 +114,7 @@ that approximates mean sea level.
 === east-north-up local tangent plane coordinate system
 admitted:[ENU coordinate system]
 
-euclidean 3-D coordinate system aligned with the Z-axis increasing
+Euclidean 3-D coordinate system aligned with the Z-axis increasing
 upward, the X-axis aligned toward the direction east, and the Y-axis aligned
 toward north
 
@@ -125,7 +123,7 @@ inherent orientation.
 
 === Euler angles
 
-description of the orientation of one euclidean {{reference frame}} to another by
+description of the orientation of one Euclidean {{reference frame}} to another by
 specifying the rotations about each of the three axes respectively to bring one
 in alignment with the other
 
@@ -165,7 +163,7 @@ any forces acting on the body
 === local tangent plane coordinate system
 admitted:[LTP coordinate system]
 
-right-hand {{euclidean coordinate system}} with a vertical (Z) axis extending
+right-hand {{Euclidean coordinate system}} with a vertical (Z) axis extending
 from an origin at a point defined by geographic coordinates with respect to an
 {{ellipsoid}}
 
