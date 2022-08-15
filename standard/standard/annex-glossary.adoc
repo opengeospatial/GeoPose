@@ -1,5 +1,5 @@
-[[annex-glossary]]
-[appendix,obligation=informative]
+
+[appendix]
 == Glossary
 
 // The following terms and concepts have appeared in the discussion of the use cases and design of the GeoPose standard but not part of the terms defined in Terms and Definitions.
