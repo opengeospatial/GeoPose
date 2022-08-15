@@ -104,7 +104,7 @@ requirement:: /req/basic_ypr/sdu
 ====
 [%metadata]
 label:: /conf/tangent_plane_longitude/sdu
-description:: To confirm that a GeoPose tangentPoint.longitude attribute is expressed as an angle in decimal degrees.
+description:: To confirm that a GeoPose `tangentPoint.longitude` attribute is expressed as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 requirement:: /req/tangent_plane_longitude/sdu
@@ -116,7 +116,7 @@ requirement:: /req/tangent_plane_longitude/sdu
 ====
 [%metadata]
 label:: /conf/tangent_plane_latitude/sdu
-description:: To confirm that a GeoPose tangentPoint.latitude attribute is expressed as an angle in decimal degrees.
+description:: To confirm that a GeoPose `tangentPoint.latitude` attribute is expressed as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 requirement:: /req/tangent_plane_latitude/sdu
@@ -128,7 +128,7 @@ requirement:: /req/tangent_plane_latitude/sdu
 ====
 [%metadata]
 label:: /conf/tangent_plane_h/sdu
-description:: To confirm that a GeoPose tangentPoint.h attribute is expressed as a height in meters above the WGS-84 ellipsoid.
+description:: To confirm that a GeoPose `tangentPoint.h` attribute is expressed as a height in meters above the WGS-84 ellipsoid.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
 requirement:: /req/tangent_plane_h/sdu
@@ -158,7 +158,7 @@ classification:: Target Type:SDU
 description:: To confirm that components of a Basic Quaternion GeoPose conform to the Logical Model.
 inherit:: /conf/global
 
-abstract-test:: /conf/basic_quaternion/sdu
+conformance-test:: /conf/basic_quaternion/sdu
 conformance-test:: /conf/tangent_plane_longitude/sdu
 conformance-test:: /conf/tangent_plane_latitude/sdu
 conformance-test:: /conf/tangent_plane_h/sdu
@@ -170,7 +170,7 @@ conformance-test:: /conf/quaternion/sdu
 [%metadata]
 label:: /conf/basic_quaternion/sdu
 test-purpose:: To confirm that a Basic-Q GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using a unit quaternion.
-inherit:: /req/basic_quaternion/sdu
+requirement:: /req/basic_quaternion/sdu
 test-method:: Inspection
 ====
 
@@ -341,7 +341,7 @@ conformance-test:: /conf/geopose_duration/sdu
 conformance-test:: /conf/frame_specification_authority/sdu
 conformance-test:: /conf/frame_specification_id/sdu
 conformance-test:: /conf/frame_specification_parameters/sdu
-conformance-test:: /conf/series_trailer/sdu
+conformance-test:: /conf/regular_series_trailer/sdu
 ====
 
 [[conf_series_header_sdu]]
@@ -374,10 +374,10 @@ test-method:: Inspection
 .Series-Trailer-SDU
 ====
 [%metadata]
-label:: /conf/series_trailer/sdu
+label:: /conf/regular_series_trailer/sdu
 description:: To confirm that an implementation of a Series Trailer conforms to the Logical Model.
 test-purpose:: To confirm that a Series Trailer is implemented in accordance with the Logical Model.
-requirement:: /req/series_trailer/sdu
+requirement:: /req/regular_series_trailer/sdu
 test-method:: Inspection
 ====
 
@@ -398,18 +398,18 @@ conformance-test:: /conf/geopose_duration/sdu
 conformance-test:: /conf/frame_specification_authority/sdu
 conformance-test:: /conf/frame_specification_id/sdu
 conformance-test:: /conf/frame_specification_parameters/sdu
-conformance-test:: /conf/series_frame_and_time/sdu
-conformance-test:: /conf/series_trailer/sdu
+conformance-test:: /conf/irregular_series_frame_and_time/sdu
+conformance-test:: /conf/regular_series_trailer/sdu
 ====
 
 [abstract_test]
-.Series-Frame-And-Time-SDU
+.Irregular Series Frame And Time SDU
 ====
 [%metadata]
-label:: /conf/series_frame_and_time/sdu
+label:: /conf/irregular_series_frame_and_time/sdu
 description:: To confirm that an implementation of a Series FrameAndTime object conforms to the Logical Model.
 test-purpose:: To confirm that a Series FrameAndTime is implemented in accordance with the Logical Model.
-requirement:: /req/series_frame_and_time/sdu
+requirement:: /req/irregular_series_frame_and_time/sdu
 test-method:: Inspection
 ====
 
@@ -430,10 +430,9 @@ conformance-test:: /conf/transition_model/sdu
 conformance-test:: /conf/frame_specification_authority/sdu
 conformance-test:: /conf/frame_specification_id/sdu
 conformance-test:: /conf/frame_specification_parameters/sdu
-abstract-test:: /conf/stream/frame_and_time/sdu
+conformance-test:: /conf/stream/frame_and_time/sdu
 ====
 
-[[conf_transition_model_sdu]]
 [abstract_test]
 .Transition-Model-SDU
 ====
@@ -445,13 +444,12 @@ requirement:: /req/transition_model/sdu
 test-method:: Inspection
 ====
 
-[[conf_stream_frame_and_time_sdu]]
 [abstract_test]
 ====
 [%metadata]
-label:: /conf/stream/frame_and_time/sdu
+label:: /conf/stream/frame_time_element/sdu
 test-purpose:: To confirm that a Stream frame_and_time is implemented as an innerFrameAndTime property with an ExplicitFrameSpec and GeoPoseInstant pair.
-inherit:: /req/Stream/fst/sdu
+requirement:: /req/stream/frame_time_element/sdu
 test-method:: Inspection
 ====
 
