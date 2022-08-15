@@ -10,7 +10,7 @@ The structure of the GeoPose Standard document flows from
 
 * the normative derivation of specific structural data units that represent abstract implementation and standardization targets.
 
-These Structural Data Units(SDU)s are abstract: they are independent of implementation or delivery technology and serialization or encoding formats. GeoPose Version 1.0 specifies one of many possible realizations of the structural data units in JSON.
+These Structural Data Units (SDUs) are abstract: they are independent of implementation or delivery technology and serialization or encoding formats. GeoPose Version 1.0 specifies one of many possible realizations of the structural data units in JSON.
 
 A key aspect of the GeoPose Standard is that specific use cases are tied to the standardization targets, which prescribe the structure and content of GeoPose data objects. Corresponding implementation examples appear in other documents.
 
