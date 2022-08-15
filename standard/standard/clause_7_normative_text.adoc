@@ -6,7 +6,7 @@ The Frame Transform is the core abstraction in the GeoPose Standard. The Frame T
 
 === UML Logical Model
 
-The normative expression of the UML model is a Sparx Systems Enterprise Explorer link:https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/Model.eapx[project ("eapx")file].
+The normative expression of the UML model is a Sparx Systems Enterprise Explorer link:https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/Model.eapx[project ("eapx") file].
 
 The Logical Model consists of four top-level packages: Core, Time, Sequence, and Targets. The Targets package contains two detail packages: Basic and Composite. The Composite package is in turn subdivided into a Linked package and a Sequence package. The Basic GeoPose targets depend on only the Core package. The Advanced GeoPose target also depends on the Time Package. Composite GeoPoses depend on all four top-level packages.
 
