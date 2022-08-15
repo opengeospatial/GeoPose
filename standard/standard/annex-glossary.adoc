@@ -6,11 +6,11 @@
 
 === acceleration
 
-time rate of change of {{velocity,options="noref"}}
+time rate of change of {{velocity}}
 
 === accelerometer
 
-sensor that can measure {{acceleration,options="noref"}}
+sensor that can measure {{acceleration}}
 
 NOTE: Low cost, accurate sensors for measuring 3 mutually perpendicular
 components of acceleration are widely deployed in vehicles, communications
@@ -18,7 +18,7 @@ devices, and other connected devices.
 
 === angular acceleration
 
-time rate of change of rotational {{velocity,options="noref"}}
+time rate of change of rotational {{velocity}}
 
 === application domain
 
@@ -27,11 +27,11 @@ context within which some technology or device is usefully applied
 === associated reference frame
 admitted:[pose frame]
 
-euclidean {{reference frame,options="noref"}} that is defined by the location and orientation of a
-{{pose,options="noref"}}
+euclidean {{reference frame}} that is defined by the location and orientation of a
+{{pose}}
 
 NOTE: A pose defines the origin of its associated reference frame, and its
-{{orientation,options="noref"}} defines the orientation of its associated reference frame.
+{{orientation}} defines the orientation of its associated reference frame.
 
 NOTE: Associated reference frames are useful in many simulation and graphics
 applications where poses are most naturally defined in terms of another (parent)
@@ -39,7 +39,7 @@ object's pose.
 
 === attribute
 
-{{property,options="noref"}} associated with an object
+{{property}} associated with an object
 
 NOTE: In object modelling, an attribute is the same as a property or data member.
 
@@ -85,7 +85,7 @@ NOTE: Accurate and low-cost compasses are widely deployed in connected devices.
 
 === coordinate reference system
 
-coordinate system referenced to a {{datum,options="noref"}}
+coordinate system referenced to a {{datum}}
 
 === data type
 
@@ -101,16 +101,16 @@ position of the origin, the scale, and the orientation of a coordinate system.
 
 === geodetic datum
 
-{{datum,options="noref"}} that defines the measurement of horizontal position (latitude and
+{{datum}} that defines the measurement of horizontal position (latitude and
 longitude) and/or vertical position (height)
 
 === ellipsoid
 
-mathematical surface that may be used as a {{datum,options="noref"}} in defining a {{geographic
-coordinate system,options="noref"}}
+mathematical surface that may be used as a {{datum}} in defining a {{geographic
+coordinate system}}
 
 NOTE: An ellipsoid is usually established by fitting the parameters of the
-ellipsoid to measurements of a gravitational equipotential surface ({{geoid,options="noref"}})
+ellipsoid to measurements of a gravitational equipotential surface ({{geoid}})
 that approximates mean sea level.
 
 === east-north-up local tangent plane coordinate system
@@ -125,13 +125,13 @@ inherent orientation.
 
 === Euler angles
 
-description of the orientation of one euclidean {{reference frame,options="noref"}} to another by
+description of the orientation of one euclidean {{reference frame}} to another by
 specifying the rotations about each of the three axes respectively to bring one
 in alignment with the other
 
 === geographic coordinates
 
-3-dimensional reference system based on a reference {{ellipsoid,options="noref"}}
+3-dimensional reference system based on a reference {{ellipsoid}}
 
 NOTE: Two of the coordinates are angles with respect to the axis of the
 ellipsoid and to a plane containing the axis of the ellipsoid and a specified
@@ -147,8 +147,8 @@ point defined in geographic coordinates
 approximation of surface of equal gravitational force, usually attempting to
 match average sea-level
 
-NOTE: A geoid is defined by measurements and is always inexact. The {{ellipsoid,options="noref"}}
-used in {{geographic coordinates,geographic coordinate systems,options="noref"}} is
+NOTE: A geoid is defined by measurements and is always inexact. The {{ellipsoid}}
+used in {{geographic coordinates,geographic coordinate systems}} is
 usually a mathematical approximation to a specific geoid.
 
 === gyro
@@ -165,29 +165,29 @@ any forces acting on the body
 === local tangent plane coordinate system
 admitted:[LTP coordinate system]
 
-right-hand {{euclidean coordinate system,options="noref"}} with a vertical (Z) axis extending
+right-hand {{euclidean coordinate system}} with a vertical (Z) axis extending
 from an origin at a point defined by geographic coordinates with respect to an
-{{ellipsoid,options="noref"}}
+{{ellipsoid}}
 
 === local tangent plane east-north-up coordinate system
 admitted:[local tangent plane east-north-up frame]
 admitted:[LTP-ENU coordinate system]
 
-{{local tangent plane coordinate system,options="noref"}} specialized to an east-north-up system,
+{{local tangent plane coordinate system}} specialized to an east-north-up system,
 where the X axis is aligned toward east and the Y axis toward north.
 
-NOTE: While a {{LTP coordinate system,options="noref"}} can be established at any location, an
+NOTE: While a {{LTP coordinate system}} can be established at any location, an
 ENU cannot be defined at the poles because it cannot be oriented.
 
 === position
 
-location of a point with respect to the origin of a specific {{reference frame,options="noref"}}
+location of a point with respect to the origin of a specific {{reference frame}}
 
 === property
 
-{{attribute,options="noref"}} associated with an object
+{{attribute}} associated with an object
 
-NOTE: In object modelling, it is the same as an {{attribute,options="noref"}} or data member.
+NOTE: In object modelling, it is the same as an {{attribute}} or data member.
 
 === quaternions
 
@@ -200,10 +200,10 @@ Euler Angles.
 === rotation
 
 angular relationship between a reference frame's axes and a direction in that
-{{reference frame,options="noref"}}
+{{reference frame}}
 
-NOTE: {{Euler angles,options="noref"}}, {{rotation matrix,rotation matrices,options="noref"}}, and
-{{quaternions,options="noref"}} are three ways to specify a rotation.
+NOTE: {{Euler angles}}, {{rotation matrix,rotation matrices}}, and
+{{quaternions}} are three ways to specify a rotation.
 
 === digital sensor
 admitted:[sensor]
@@ -216,16 +216,16 @@ interface between the liquid or solid surface of a planet and its atmosphere or
 surrounding empty space
 
 NOTE: The topographic surface is always approximate. It may be measured with
-reference to a gravitational equipotential surface (such as a {{geoid,options="noref"}}) or a
-mathematical reference surface (such as an {{ellipsoid,options="noref"}}).
+reference to a gravitational equipotential surface (such as a {{geoid}}) or a
+mathematical reference surface (such as an {{ellipsoid}}).
 
 === velocity
 
-time rate of change of {{position,options="noref"}}
+time rate of change of {{position}}
 
 === vertical datum
 
 reference level from which elevation or altitude can be measured
 
-NOTE: The {{topographic surface,options="noref"}}, a {{geoid,options="noref"}}, a level of constant
-{{barometric pressure,options="noref"}}, or an {{ellipsoid,options="noref"}} are examples.
+NOTE: The {{topographic surface}}, a {{geoid}}, a level of constant
+{{barometric pressure}}, or an {{ellipsoid}} are examples.
