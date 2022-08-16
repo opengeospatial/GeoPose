@@ -1,0 +1,13 @@
+
+[conformance_class]
+====
+[%metadata]
+label:: /conf/global
+requirement:: /req/global
+classification:: Target Type:SDU
+description:: Conformance with Global SDU requirements
+
+conformance-test:: /conf/target_dependency
+conformance-test:: /conf/sdu_general
+conformance-test:: /conf/lm_general
+====

@@ -1,0 +1,19 @@
+
+[conformance_class]
+.Irregular Series SDU
+====
+[%metadata]
+label:: /conf/irregular_series/sdu
+requirement:: /req/irregular_series/sdu
+classification:: Target Type:SDU
+description:: To confirm that a Regular Series conforms to the Logical Model.
+inherit:: /conf/global
+
+conformance-test:: /conf/series_header/sdu
+conformance-test:: /conf/geopose_duration/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+conformance-test:: /conf/irregular_series_frame_and_time/sdu
+conformance-test:: /conf/regular_series_trailer/sdu
+====

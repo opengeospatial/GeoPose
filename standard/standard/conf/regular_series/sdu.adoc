@@ -1,0 +1,18 @@
+
+[conformance_class]
+.Regular Series SDU
+====
+[%metadata]
+label:: /conf/regular_series/sdu
+requirement:: /req/regular_series/sdu
+classification:: Target Type:SDU
+description:: To confirm that components of a Regular Series conform to the Logical Model.
+inherit:: /conf/global
+
+conformance-test:: /conf/series_header/sdu
+conformance-test:: /conf/geopose_duration/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+conformance-test:: /conf/regular_series_trailer/sdu
+====

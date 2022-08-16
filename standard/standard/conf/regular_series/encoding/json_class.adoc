@@ -1,0 +1,14 @@
+
+EDITOR: This conformance is assigned a non-unique ID.
+
+[conformance_class]
+.GeoPose Regular Series JSON encoding
+====
+[%metadata]
+label:: /conf/regular_series/encoding/json
+requirement:: /req/regular_series/encoding/json
+description:: To confirm that a JSON-encoded Regular Series conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
+inherit:: /conf/regular_series/sdu
+
+conformance-test:: /conf/regular_series/encoding/json
+====

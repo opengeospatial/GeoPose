@@ -1,0 +1,11 @@
+
+[abstract_test]
+.G-Target
+====
+[%metadata]
+label:: /conf/target_dependency
+description:: There SHALL be no dependency between or among the individual Standardization Targets.
+test-purpose:: Verify that this requirement is satisfied
+test-method:: Inspection
+requirement:: /req/target_dependency
+====

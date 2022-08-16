@@ -1,0 +1,11 @@
+
+[abstract_test]
+.Graph JSON encoding member test
+====
+[%metadata]
+label:: /conf/graph/encoding/json/test
+description:: Confirm that GeoPose Graph data objects conform to the Graph JSON-Schema definition.
+test-purpose:: To confirm that Graph GeoPose data objects conform to the Graph JSON-Schema definition.
+test-method:: JSON-Schema validation.
+requirement:: /req/graph/sdu
+====
