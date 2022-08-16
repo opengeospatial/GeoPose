@@ -1,0 +1,10 @@
+
+[requirement]
+.Basic-Quaternion: Permissive JSON encoding
+====
+[%metadata]
+label:: /req/basic_quaternion/encoding/json
+description:: A JSON-encoded Basic-Quaternion GeoPose SHALL conform to the
+Basic-Quaternion JSON-Schema 2019-9 definition
+(<<basic_quaternion_permissive_json_schema>>).
+====

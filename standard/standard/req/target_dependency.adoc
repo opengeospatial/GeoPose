@@ -1,0 +1,9 @@
+
+[requirement]
+.Individual standardization targets shall not dependent on each other
+====
+[%metadata]
+label:: /req/target_dependency
+description:: There SHALL be no dependency between or among the individual
+Standardization Targets.
+====

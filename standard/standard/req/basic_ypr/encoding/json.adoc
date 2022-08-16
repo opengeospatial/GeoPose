@@ -1,0 +1,12 @@
+
+[requirement]
+.Basic-YPR: JSON encoding
+====
+[%metadata]
+label:: /req/basic_ypr/encoding/json
+description:: A JSON-encoded Basic-YPR GeoPose SHALL conform to the Basic-YPR
+JSON-Schema 2019-9 definition (<<basic_ypr_json_schema>>).
+====
+
+[NOTE]
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.

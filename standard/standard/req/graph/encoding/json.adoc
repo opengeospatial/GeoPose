@@ -1,0 +1,12 @@
+
+[requirement]
+.Graph: JSON encoding
+====
+[%metadata]
+label:: /req/graph/encoding/json
+description:: A JSON-encoded GeoPose Graph SHALL conform to the GeoPose Graph
+JSON-Schema 2019-9 definition (<<graph_json_schema>>).
+====
+
+[NOTE]
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.

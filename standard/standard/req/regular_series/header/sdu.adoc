@@ -1,0 +1,8 @@
+
+[requirement]
+.S-Header-SDU
+====
+[%metadata]
+label:: /req/regular_series/header/sdu
+description:: A header property SHALL be implemented as a SeriesHeader structure.
+====

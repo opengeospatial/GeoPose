@@ -1,0 +1,10 @@
+
+EDITOR: This requirement is assigned a non-unique ID.
+
+[requirement]
+.FS-Authority-SDU
+====
+[%metadata]
+label:: /req/frame_specification/authority/sdu
+description:: The frame_specification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
+====

@@ -1,0 +1,10 @@
+
+[requirement]
+.Implementations of concrete data shall conform to the LM
+====
+[%metadata]
+label:: /req/lm_general
+description:: Implementations of concrete data conforming to this standard SHALL
+conform to all dependent or inherited classes, attributes, and associations,
+multiplicities, and data types in the Logical Model.
+====

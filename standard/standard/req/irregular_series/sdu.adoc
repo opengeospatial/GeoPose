@@ -1,0 +1,17 @@
+
+[requirements_class]
+.Standardization Target 7: Irregular Series
+====
+[%metadata]
+label:: /req/irregular_series/sdu
+subject:: Implementation of Logical Model
+description:: Irregular Series Logical Model SDU
+inherit:: /req/global
+
+requirement:: /req/irregular_series_header/sdu
+requirement:: /req/frame_specification_authority/sdu
+requirement:: /req/frame_specification_id/sdu
+requirement:: /req/frame_specification_parameters/sdu
+requirement:: /req/irregular_series_frame_and_time/sdu
+requirement:: /req/regular_series_trailer/sdu
+====
