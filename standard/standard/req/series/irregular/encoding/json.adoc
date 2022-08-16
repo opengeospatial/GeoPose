@@ -1,0 +1,13 @@
+
+[requirement]
+.Irregular series: JSON encoding
+====
+[%metadata]
+label:: /req/series/irregular/encoding/json
+description:: A JSON-encoded GeoPose Irregular Series SHALL conform to the
+GeoPose Irregular JSON-Schema 2019-9 definition
+(<<irregular_series_json_schema>>).
+====
+
+[NOTE]
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.

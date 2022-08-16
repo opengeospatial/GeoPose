@@ -1,0 +1,9 @@
+
+[requirement]
+.Stream element: JSON encoding
+====
+[%metadata]
+label:: /req/stream/element/encoding/json
+description:: A JSON-encoded GeoPose Stream Element SHALL conform to the GeoPose
+Stream Element JSON-Schema 2019-9 definition (<<streamelement_json_schema>>).
+====

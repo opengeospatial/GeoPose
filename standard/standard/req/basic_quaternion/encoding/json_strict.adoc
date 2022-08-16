@@ -1,0 +1,11 @@
+
+[requirement]
+.Basic-Quaternion: Strict JSON encoding
+====
+[%metadata]
+label:: /req/basic_quaternion/encoding/json_strict
+description:: A JSON-encoded Basic-Quaternion (Strict) GeoPose SHALL conform to
+the Basic-Quaternion (Strict) JSON-Schema 2019-9 definition
+(<<basic_quaternion_strict_json_schema>>). There SHALL be no encoded properties
+not explicitly defined in the JSON-Schema definition.
+====

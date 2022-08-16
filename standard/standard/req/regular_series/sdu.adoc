@@ -1,0 +1,17 @@
+
+[requirements_class]
+.Standardization Target 6: Regular Series
+====
+[%metadata]
+label:: /req/regular_series/sdu
+subject:: Implementation of Logical Model
+description:: Regular Series Logical Model SDU
+inherit:: /req/global
+
+requirement:: /req/regular_series/header/sdu
+requirement:: /req/time/geopose_duration/sdu
+requirement:: /req/frame_specification/authority/sdu
+requirement:: /req/frame_specification/id/sdu
+requirement:: /req/frame_specification/parameters/sdu
+requirement:: /req/series/regular/trailer/sdu
+====

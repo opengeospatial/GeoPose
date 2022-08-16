@@ -1,0 +1,12 @@
+
+[requirement]
+.Chain: JSON encoding
+====
+[%metadata]
+label:: /req/chain/encoding/json
+description:: A JSON-encoded GeoPose Chain SHALL conform to the GeoPose Chain
+JSON-Schema 2019-9 definition (<<chain_json_schema>>).
+====
+
+[NOTE]
+This JSON encoding is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*.

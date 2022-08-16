@@ -1,0 +1,11 @@
+
+[requirement]
+.GeoPose `tangentPoint.h` encoding requirements
+====
+[%metadata]
+label:: /req/tangent_plane_h/sdu
+description:: An instance of a GeoPose `tangentPoint.h` attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid, represented as a signed real number. If the tangent point is above the WGS-84 ellipsoid, the value SHALL be positive. If the tangent point is below the WGS-84 ellipsoid, the value SHALL be negative.
+====
+
+[NOTE]
+The tangent plane `longitude`, `latitude`, and `h` parameters are specified without any conditions or constraints on precision to be used in an implementation. Any such constraints would be found as requirements on a specific implementation as an encoding.

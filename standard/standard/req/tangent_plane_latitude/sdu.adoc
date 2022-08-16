@@ -1,0 +1,7 @@
+[requirement]
+.GeoPose `tangentPoint.latitude` encoding requirements
+====
+[%metadata]
+label:: /req/tangent_plane_latitude/sdu
+description:: An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
+====
