@@ -1,0 +1,11 @@
+
+[abstract_test]
+.Graph-Index-SDU
+====
+[%metadata]
+label:: /conf/graph_index/sdu
+description:: To confirm that an implementation of Graph Index conforms to the Logical Model.
+test-purpose:: To confirm that each index value in a FrameListTransformPair is a distinct integer value between 0 and one less than the number of elements in the frameList property.
+requirement:: /req/graph_index/sdu
+test-method:: Inspection
+====

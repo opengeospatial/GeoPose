@@ -1,0 +1,17 @@
+
+[conformance_class]
+.Chain SDU
+====
+[%metadata]
+label:: /conf/chain_sdu
+requirement:: /req/chain_sdu
+classification:: Target Type:SDU
+description:: To confirm that an implementation of the GeoPose Chain conforms to the Logical Model.
+inherit:: /conf/global
+
+conformance-test:: /conf/geopose_instant/sdu
+conformance-test:: /conf/frame_specification_authority/sdu
+conformance-test:: /conf/frame_specification_id/sdu
+conformance-test:: /conf/frame_specification_parameters/sdu
+conformance-test:: /conf/chain_index/sdu
+====

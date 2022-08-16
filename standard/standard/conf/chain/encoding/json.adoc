@@ -1,0 +1,12 @@
+
+[conformance_class]
+.Chain JSON encoding
+====
+[%metadata]
+label:: /conf/chain/encoding/json
+requirement:: /req/chain/encoding/json
+description:: To confirm that a JSON-encoded GeoPose Chain conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
+inherit:: /conf/chain/sdu
+
+conformance-test:: /conf/chain/encoding/json/test
+====

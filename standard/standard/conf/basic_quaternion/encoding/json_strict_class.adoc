@@ -1,0 +1,13 @@
+
+EDITOR: This conformance is assigned a non-unique ID.
+
+[conformance_class]
+.Basic-Quaternion JSON encoding (strict)
+====
+[%metadata]
+label:: /conf/basic_quaternion/encoding/json_strict
+requirement:: /req/basic_quaternion/encoding/json_strict
+description:: Confirm that a strict JSON-encoded Basic-Quaternion GeoPose conforms to the relevant elements of the Logical Model and a corresponding JSON-Schema document.
+inherit:: /conf/basic_quaternion/sdu
+conformance-test:: /conf/basic_quaternion/encoding/json_strict
+====

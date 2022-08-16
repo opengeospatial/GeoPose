@@ -1,0 +1,12 @@
+
+[abstract_test]
+.G-SDU
+====
+[%metadata]
+label:: /conf/sdu_general
+description:: Implementations using encoded SDUs SHALL conform to the logical description of the Logical Model elements with the "Structural Data Unit - SDU" stereotype.
+test-purpose:: Verify that this requirement is satisfied
+test-method:: Inspection
+requirement:: /req/sdu_general
+====
+

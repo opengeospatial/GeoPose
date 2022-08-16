@@ -1,0 +1,13 @@
+
+EDITOR: This conformance is assigned a non-unique ID.
+
+[abstract_test]
+.Basic-YPR JSON encoding member test
+====
+[%metadata]
+label:: /conf/basic_ypr/encoding/json/test
+description:: To confirm that a JSON encoding of a Basic-YPR GeoPose conforms with the corresponding JSON-Schema definition.
+test-purpose:: To confirm that Basic-YPR GeoPose data objects conform to the Basic-YPR JSON-Schema definition.
+test-method:: JSON-Schema validation.
+requirement:: /req/basic_ypr/sdu
+====

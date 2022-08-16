@@ -1,0 +1,12 @@
+
+[conformance_class]
+.Stream JSON encoding
+====
+[%metadata]
+label:: /conf/stream/encoding/json
+requirement:: /req/stream/encoding/json
+description:: Confirm that GeoPose Stream data objects conform to the corresponding Stream JSON-Schema requirement.
+inherit:: /conf/stream/sdu
+
+conformance-test:: /conf/stream/encoding/json/test
+====

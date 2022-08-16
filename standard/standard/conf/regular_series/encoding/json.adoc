@@ -1,0 +1,13 @@
+
+EDITOR: This conformance is assigned a non-unique ID.
+
+[abstract_test]
+.GeoPose Regular Series JSON encoding member test
+====
+[%metadata]
+label:: /conf/regular_series/encoding/json
+description:: Confirm that GeoPose Regular Series data objects conform to the Regular Series JSON-Schema definition.
+test-purpose:: To confirm that Regular Series GeoPose data objects conform to the Regular Series JSON-Schema definition.
+test-method:: JSON-Schema validation.
+requirement:: /req/regular_series/sdu
+====

@@ -1,0 +1,12 @@
+
+
+[abstract_test]
+.B-TP-Lon-SDU
+====
+[%metadata]
+label:: /conf/tangent_plane_longitude/sdu
+description:: To confirm that a GeoPose `tangentPoint.longitude` attribute is expressed as an angle in decimal degrees.
+test-purpose:: Verify that this requirement is satisfied
+test-method:: Inspection
+requirement:: /req/tangent_plane_longitude/sdu
+====
