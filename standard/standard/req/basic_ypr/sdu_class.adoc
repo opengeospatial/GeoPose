@@ -1,4 +1,5 @@
 
+EDITOR: This requirement is assigned a non-unique ID.
 
 [requirements_class]
 ====
