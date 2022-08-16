@@ -1,4 +1,6 @@
 
+EDITOR: This requirement is assigned a non-unique ID.
+
 [requirement]
 ====
 [%metadata]
