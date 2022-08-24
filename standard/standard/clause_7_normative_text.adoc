@@ -428,7 +428,7 @@ include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 
 ==== Standardization Target 7: Irregular Series
 
-include::req/series/irregular/encoding/json.adoc[]
+include::req/irregular_series/encoding/json.adoc[]
 
 [source,json]
 .Irregular series: JSON encoding schema
