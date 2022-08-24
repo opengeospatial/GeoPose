@@ -1,7 +1,0 @@
-[[req_composite_sequence_stream]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement {counter:req-id}* |*/req/composite/sequence/stream* 
-^|Requirement |GeoPose data stream elements shall conform to the JSON-Schema definition.
-^|Requirement ID |<<req_composite_sequence_stream,/req/composite/sequence/stream>>
-|===

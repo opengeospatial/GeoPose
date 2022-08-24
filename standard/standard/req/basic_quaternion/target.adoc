@@ -1,0 +1,7 @@
+
+[requirement]
+====
+[%metadata]
+label:: /req/basic_quaternion/sdu/target
+description:: An implementation of a Basic-Quaternion GeoPose SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using a unit quaternion.
+====

@@ -8,5 +8,5 @@ requirement:: /req/basic_quaternion/encoding/json
 description:: Confirm that a JSON-encoded Basic-Quaternion GeoPose conforms to the relevant elements of the Logical Model and a corresponding JSON-Schema document.
 inherit:: /conf/basic_ypr_sdu
 
-conformance-test:: /conf/basic_ypr/encoding/json/test
+conformance-test:: /conf/basic_quaternion/encoding/json/test
 ====

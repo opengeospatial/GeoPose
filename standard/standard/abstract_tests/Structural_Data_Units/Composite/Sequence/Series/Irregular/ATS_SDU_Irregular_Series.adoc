@@ -1,8 +1,0 @@
-[[ats_composite_sequence_series_irregular]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/ats/composite/sequence/series/irregular* 
-^|Test Purpose |To validate that JSON-encoded GeoPose series conform to the Irregular Series JSON-Schema definition.
-^|Requirement |<<req_composite_sequence_series,/req/composite/sequence/series/irregular>>
-^|Test Method |JSON-Schema validation
-|===

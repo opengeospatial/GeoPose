@@ -1,8 +1,0 @@
-[[req_advanced_encoding_json_strict]]
-[width="90%",cols="4,6"]
-|===
-<s|Requirement  s|Advanced-Encoding-JSON
-<s|ID |<<req_advanced_encoding_json,/req/advanced/encoding/json>> 
-2+<|A JSON-encoded Advanced GeoPose SHALL conform to the Advanced JSON-Schema 2019-9 definition. 
-
-|===

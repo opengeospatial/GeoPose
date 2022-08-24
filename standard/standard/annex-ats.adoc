@@ -6,7 +6,7 @@
 
 GeoPose 1.0 specifies a eight Standardization Targets using elements of the Logical Model. These elements are Structural Data Units (SDUs) and they have the stereotype "Structural Data Unit - SDU". Each SDU is an element of the Logical Model that will be expressed in concrete data objects encoded using specific encoding or serialization technologies.
 
-Although implementation of the Standardization Targets, expressed as SDUs, is independent of the Logical Model, GeoPose 1.0 also defines one of many possible implementations, single encoding in JavaScript Object Notation (JSON). The encodings of the eight targets are specified using JSON-Schema-2019-09. To keep the individual Standardization targets independent, there are some SDU requirements and corresponding conformance tests that appear in more than one requirement or conformance class. This structure is based on the judgement that it is easier to understand the independence of targets with complete definitions than would be the case if the definitional requirements of the SDUs were factored out and referenced indirectly by individual encodings.
+Although implementation of the Standardization Targets, expressed as SDUs, is independent of the Logical Model, GeoPose 1.0 also defines one of many possible implementations, single encoding in JavaScript Object Notation (JSON). The encodings of the eight targets are specified using <<jsonschema2019>>. To keep the individual Standardization targets independent, there are some SDU requirements and corresponding conformance tests that appear in more than one requirement or conformance class. This structure is based on the judgement that it is easier to understand the independence of targets with complete definitions than would be the case if the definitional requirements of the SDUs were factored out and referenced indirectly by individual encodings.
 
 === Global conformance class
 
@@ -29,77 +29,77 @@ There are some universal requirements on values that appear in a concrete implem
 
 === Basic-YPR SDU Conformance Class
 
-include::conf/basic_ypr/sdu_class.adoc[]
+include::conf/basic_ypr.adoc[]
 
 The Basic-YPR SDU member tests are the following:
 
-include::conf/basic_ypr/sdu.adoc[]
+include::conf/basic_ypr/sdu/target.adoc[]
 
-include::conf/tangent_plane_longitude/sdu.adoc[]
+include::conf/tangent_plane/longitude.adoc[]
 
-include::conf/tangent_plane_latitude/sdu.adoc[]
+include::conf/tangent_plane/latitude.adoc[]
 
-include::conf/tangent_plane_h/sdu.adoc[]
+include::conf/tangent_plane/h.adoc[]
 
-include::conf/ypr_angles/sdu.adoc[]
+include::conf/orientation/ypr_angles.adoc[]
 
 ==== Basic-Quaternion SDU Conformance Class
 
-include::conf/basic_quaternion/sdu_class.adoc[]
+include::conf/basic_quaternion.adoc[]
 
-include::conf/basic_quaternion/sdu.adoc[]
+include::conf/basic_quaternion/sdu/target.adoc[]
 
 ==== Advanced SDU Conformance Class
 
-include::conf/advanced/sdu.adoc[]
+include::conf/advanced.adoc[]
 
-include::conf/geopose_instant/sdu.adoc[]
+include::conf/geopose_instant.adoc[]
 
-include::conf/frame_specification_authority/sdu.adoc[]
+include::conf/frame_specification/authority.adoc[]
 
-include::conf/frame_specification_id/sdu.adoc[]
+include::conf/frame_specification/id.adoc[]
 
-include::conf/frame_specification_parameters/sdu.adoc[]
+include::conf/frame_specification/parameters.adoc[]
 
 
 ==== Graph SDU Conformance Class
 
-include::conf/graph/sdu.adoc[]
+include::conf/graph.adoc[]
 
-include::conf/graph_index/sdu.adoc[]
+include::conf/graph/index.adoc[]
 
 
 ==== Chain SDU Conformance Class
 
-include::conf/chain_sdu.adoc[]
+include::conf/chain.adoc[]
 
-include::conf/chain_index/sdu.adoc[]
+include::conf/chain/index.adoc[]
 
 ==== Regular Series SDU Conformance Class
 
-include::conf/regular_series/sdu.adoc[]
+include::conf/regular_series.adoc[]
 
-include::conf/series_header/sdu.adoc[]
+include::conf/series_header.adoc[]
 
-include::conf/geopose_duration/sdu.adoc[]
+include::conf/geopose_duration.adoc[]
 
-include::conf/regular_series_trailer/sdu.adoc[]
+include::conf/regular_series/trailer.adoc[]
 
 
 ==== Irregular Series SDU Conformance Class
 
-include::conf/irregular_series/sdu.adoc[]
+include::conf/irregular_series.adoc[]
 
-include::conf/irregular_series_frame_and_time/sdu.adoc[]
+include::conf/irregular_series/frame_and_time.adoc[]
 
 
 ==== Stream SDU Conformance Class
 
-include::conf/stream/sdu.adoc[]
+include::conf/stream.adoc[]
 
-include::conf/transition_model/sdu.adoc[]
+include::conf/transition_model.adoc[]
 
-include::conf/stream/frame_time_element/sdu.adoc[]
+include::conf/stream/frame_time_element.adoc[]
 
 
 === Encodings Conformance
@@ -119,14 +119,15 @@ The *Basic-Quaternion GeoPose* JSON encoding is intended for applications using 
 
 include::conf/basic_quaternion/encoding/json.adoc[]
 
-include::conf/basic_ypr/encoding/json/test.adoc[]
+include::conf/basic_quaternion/encoding/json/test.adoc[]
 
 [NOTE]
 The *Basic-Quaternion (Strict) GeoPose* JSON encoding does not allow additional JSON members.
 
-include::conf/basic_quaternion/encoding/json_strict_class.adoc[]
-
 include::conf/basic_quaternion/encoding/json_strict.adoc[]
+
+include::conf/basic_quaternion/encoding/json_strict/test.adoc[]
+
 
 The *Advanced GeoPose* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
@@ -148,9 +149,9 @@ include::conf/graph/encoding/json/test.adoc[]
 
 The *GeoPose Regular Series* JSON encoding supports a time series of equally-spaced GeoPoses.
 
-include::conf/regular_series/encoding/json_class.adoc[]
-
 include::conf/regular_series/encoding/json.adoc[]
+
+include::conf/regular_series/encoding/json/test.adoc[]
 
 The *GeoPose Irregular Series* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
@@ -160,9 +161,7 @@ include::conf/irregular_series/encoding/json/test.adoc[]
 
 The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-
 include::conf/stream/encoding/json.adoc[]
-
 
 EDITOR: The following test should have been 3 tests: /req/stream/header/encoding/json,
 /req/stream/element/encoding/json and /req/stream/report/encoding/json.

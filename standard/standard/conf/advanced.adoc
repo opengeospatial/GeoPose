@@ -1,0 +1,18 @@
+
+[conformance_class]
+.Advanced SDU
+====
+[%metadata]
+label:: /conf/advanced
+requirement:: /req/advanced
+classification:: Target Type:SDU
+description:: To confirm that an implementation of the Advanced GeoPose conforms to
+the Logical Model.
+inherit:: /conf/global
+
+conformance-test:: /conf/geopose_instant
+conformance-test:: /conf/frame_specification/authority
+conformance-test:: /conf/frame_specification/id
+conformance-test:: /conf/frame_specification/parameters
+conformance-test:: /conf/basic_quaternion
+====

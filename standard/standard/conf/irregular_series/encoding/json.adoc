@@ -6,7 +6,7 @@
 label:: /conf/irregular_series/encoding/json
 requirement:: /req/irregular_series/encoding/json
 description:: To confirm that a JSON-encoded Irregular Series conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
-inherit:: /conf/irregular_series/sdu
+inherit:: /conf/irregular_series
 
 conformance-test:: /conf/irregular_series/encoding/json/test
 ====

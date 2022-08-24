@@ -1,7 +1,0 @@
-[[req_composite_sequence_series]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement {counter:req-id}* |*/req/composite/sequence/series* 
-^|Requirement |JSON-encoded GeoPose series shall conform to the Series JSON-Schema definition.
-^|Requirement ID|<<req_composite_sequence_series,/req/composite/sequence/series>>
-|===

@@ -1,0 +1,17 @@
+
+[requirements_class]
+.Standardization Target 8: Stream
+====
+[%metadata]
+label:: /req/stream
+subject:: Implementation of Logical Model
+description:: Stream Logical Model SDU
+inherit:: /req/global
+
+requirement:: /req/series_irregular_header
+requirement:: /req/frame_specification/authority
+requirement:: /req/frame_specification/id
+requirement:: /req/frame_specification/parameters
+requirement:: /req/irregular_series/frame_and_time
+requirement:: /req/regular_series/trailer
+====

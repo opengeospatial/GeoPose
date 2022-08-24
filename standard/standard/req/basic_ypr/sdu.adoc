@@ -1,9 +1,0 @@
-
-EDITOR: This requirement is assigned a non-unique ID.
-
-[requirement]
-====
-[%metadata]
-label:: /req/basic_ypr/sdu
-description:: An implementation of a Basic-YPR Target SHALL consist of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point. The Inner Frame SHALL be a rotation-only transformation using Yaw, Pitch, and Roll angles specified in degrees and represented as signed real number values.
-====

@@ -114,19 +114,19 @@ The Basic-YPR Target has a simple structure with no options. Position is specifi
 .Structure of the Basic YPR SDU
 image::diagram/Basic-YPR_SDU.PNG[]
 
-include::req/basic_ypr/sdu_class.adoc[]
+include::req/basic_ypr.adoc[]
 
 Details of the individual requirements are listed below:
 
-include::req/basic_ypr/sdu.adoc[]
+include::req/basic_ypr/sdu/target.adoc[]
 
-include::req/tangent_plane_longitude/sdu.adoc[]
+include::req/tangent_plane/longitude.adoc[]
 
-include::req/tangent_plane_latitude/sdu.adoc[]
+include::req/tangent_plane/latitude.adoc[]
 
-include::req/tangent_plane_h/sdu.adoc[]
+include::req/tangent_plane/h.adoc[]
 
-include::req/orientation_ypr_angles/sdu.adoc[]
+include::req/orientation/ypr_angles.adoc[]
 
 ==== Requirements for Standardization Target 2: Basic-Quaternion
 
@@ -136,11 +136,11 @@ The Basic-Quaternion Target has a simple structure with no options. Position is 
 .Structure of the Basic Quaternion SDU
 image::diagram/Basic-Quaternion_SDU.PNG[]
 
-include::req/basic_quaternion/sdu.adoc[]
+include::req/basic_quaternion.adoc[]
 
 Details of the individual requirements are listed below:
 
-include::req/orientation_quaternion/sdu.adoc[]
+include::req/orientation/quaternion.adoc[]
 
 ==== Requirements for Standardization Target 3: Advanced
 
@@ -149,17 +149,17 @@ The Advanced Target has a more general structure, supporting flexible specificat
 .Structure of the Basic Advanced SDU
 image::diagram/Advanced_SDU.PNG[]
 
-include::req/advanced/sdu.adoc[]
+include::req/advanced.adoc[]
 
-include::req/time/geopose_instant/sdu.adoc[]
+include::req/time/geopose_instant.adoc[]
 
-include::req/frame_specification/authority/sdu.adoc[]
+include::req/frame_specification/authority.adoc[]
 
-include::req/frame_specification/id/sdu.adoc[]
+include::req/frame_specification/id.adoc[]
 
-include::req/frame_specification/parameters/sdu.adoc[]
+include::req/frame_specification/parameters.adoc[]
 
-include::req/orientation_quaternion/sdu.adoc[]
+include::req/orientation/quaternion.adoc[]
 
 ==== Requirements for Standardization Target 4: Graph
 
@@ -169,15 +169,15 @@ The Graph Target supports a network of object relative poses. The graph is a dir
 .Structure of the Graph SDU
 image::diagram/Graph_SDU.PNG[]
 
-include::req/graph/sdu.adoc[]
+include::req/graph.adoc[]
 
-include::req/frame_specification/authority/sdu.adoc[]
+include::req/frame_specification/authority.adoc[]
 
-include::req/frame_specification/id/sdu.adoc[]
+include::req/frame_specification/id.adoc[]
 
-include::req/frame_specification/parameters/sdu.adoc[]
+include::req/frame_specification/parameters.adoc[]
 
-include::req/chain/transform_index/sdu.adoc[]
+include::req/chain/transform_index.adoc[]
 
 ==== Requirements for Standardization Target 5: Chain
 
@@ -186,13 +186,13 @@ The Chain Target supports relationships between a linear sequence of pose relati
 .Structure of the Chain SDU
 image::diagram/Chain_SDU.PNG[]
 
-include::req/chain/sdu.adoc[]
+include::req/chain.adoc[]
 
-include::req/frame_specification/authority/sdu.adoc[]
+include::req/frame_specification/authority.adoc[]
 
-include::req/frame_specification/id/sdu.adoc[]
+include::req/frame_specification/id.adoc[]
 
-include::req/frame_specification/parameters/sdu.adoc[]
+include::req/frame_specification/parameters.adoc[]
 
 
 ==== Requirements for Standardization Target 6: Regular Series
@@ -202,19 +202,19 @@ The Regular (Time) Series Target represents the time evolution of a single GeoPo
 .Structure of the Regular Series SDU
 image::diagram/Regular-Series_SDU.PNG[]
 
-include::req/regular_series/sdu.adoc[]
+include::req/regular_series.adoc[]
 
-include::req/regular_series/header/sdu.adoc[]
+include::req/regular_series/header.adoc[]
 
-include::req/time/geopose_duration/sdu.adoc[]
+include::req/time/geopose_duration.adoc[]
 
-include::req/frame_specification/authority/sdu.adoc[]
+include::req/frame_specification/authority.adoc[]
 
-include::req/frame_specification/id/sdu.adoc[]
+include::req/frame_specification/id.adoc[]
 
-include::req/frame_specification/parameters/sdu.adoc[]
+include::req/frame_specification/parameters.adoc[]
 
-include::req/series/regular/trailer/sdu.adoc[]
+include::req/series/regular/trailer.adoc[]
 
 
 ==== Requirements for Standardization Target 7: Irregular Series
@@ -224,19 +224,19 @@ The Irregular (Time) Series Target represents the time evolution of a single Geo
 .Structure of the Irregular Series SDU
 image::diagram/Irregular-Series_SDU.PNG[]
 
-include::req/irregular_series/sdu.adoc[]
+include::req/irregular_series.adoc[]
 
-include::req/irregular_series_header/sdu.adoc[]
+include::req/irregular_series_header.adoc[]
 
-include::req/frame_specification_authority/sdu.adoc[]
+include::req/frame_specification/authority.adoc[]
 
-include::req/frame_specification_id/sdu.adoc[]
+include::req/frame_specification/id.adoc[]
 
-include::req/frame_specification_parameters/sdu.adoc[]
+include::req/frame_specification/parameters.adoc[]
 
-include::req/irregular_series_frame_and_time/sdu.adoc[]
+include::req/irregular_series_frame_and_time.adoc[]
 
-include::req/regular_series_trailer/sdu.adoc[]
+include::req/regular_series_trailer.adoc[]
 
 
 ==== Requirements for Standardization Target 8: Stream
@@ -249,17 +249,17 @@ image::diagram/Stream-Header_SDU.PNG[]
 .Structure of the Stream Element SDU
 image::diagram/Stream-Element_SDU.PNG[]
 
-include::req/stream/sdu.adoc[]
+include::req/stream.adoc[]
 
-include::req/transition_model/sdu.adoc[]
+include::req/transition_model.adoc[]
 
-include::req/frame_specification/authority/sdu.adoc[]
+include::req/frame_specification/authority.adoc[]
 
-include::req/frame_specification/id/sdu.adoc[]
+include::req/frame_specification/id.adoc[]
 
-include::req/frame_specification/parameters/sdu.adoc[]
+include::req/frame_specification/parameters.adoc[]
 
-include::req/stream/frame_time_element/sdu.adoc[]
+include::req/stream/frame_time_element.adoc[]
 
 
 

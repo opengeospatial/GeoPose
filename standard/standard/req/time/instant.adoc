@@ -1,0 +1,8 @@
+
+[requirement]
+.GP-Instant-SDU
+====
+[%metadata]
+label:: /req/time/instant
+description:: The Logical Model attribute GeoPoseInstant SHALL be expressed in Unix Time in seconds multiplied by 1,000. The unit of measure SHALL be milliseconds.
+====

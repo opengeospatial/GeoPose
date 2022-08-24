@@ -1,0 +1,8 @@
+
+[requirement]
+.S-TM-SDU
+====
+[%metadata]
+label:: /req/transition_model
+description:: A TransitionModel property SHALL be implemented as one of the values in the TransitionModel enumeration.
+====

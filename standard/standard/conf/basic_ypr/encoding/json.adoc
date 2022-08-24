@@ -6,7 +6,7 @@
 label:: /conf/basic_ypr/encoding/json
 requirement:: /req/basic_ypr/encoding/json
 description:: To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.
-inherit:: /conf/basic_ypr/sdu
+inherit:: /conf/basic_ypr
 
 conformance-test:: /conf/basic_ypr/encoding/json/test
 ====
