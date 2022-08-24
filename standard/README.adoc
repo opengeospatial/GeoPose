@@ -1,8 +1,9 @@
-# Draft GeoPose Specification
+= Draft GeoPose Specification
 
-⚠️ The https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[OGC GeoPose specification] available in this repo is a draft (work in progress). This draft reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[here] in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
+WARNING: The https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[OGC GeoPose specification] available in this repo is a draft (work in progress). This draft reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[here] in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
 
-# Contributing
+== Contributing
+
 The OGC GeoPose SWG is the group at OGC responsible for the stewardship of the standard. As of our publication to this repo, the SWG will do as much work in public as possible.
 
 If you have input, comments or feedback for the SWG's consideration, please begin by reviewing the http://github.com/opengeospatial/GeoPose/issues[open issues]. If there is already an issue with your question, concern or input, please respond or discuss in the issue. If your input, feedback or question is new (not captured in a prior issue), please open a new issue.
