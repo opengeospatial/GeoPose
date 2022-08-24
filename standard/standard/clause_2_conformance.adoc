@@ -1,6 +1,6 @@
 == Conformance
 
-Conformance with this standard shall be checked using all the relevant tests specified in <<annex-A>> of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies (https://portal.ogc.org/files/?artifact_id=55234) and Procedures and the OGC Compliance Testing web site (https://www.ogc.org/compliance). GeoPose 1.0 JSON encodings are specified via JSON-Schema:2019-9 and most of the requirements are that conforming encoded data objects shall validate against the corresponding schema.
+Conformance with this standard shall be checked using all the relevant tests specified in <<annex-A>> of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies (https://portal.ogc.org/files/?artifact_id=55234) and Procedures and the OGC Compliance Testing web site (https://www.ogc.org/compliance). GeoPose 1.0 JSON encodings are specified via <<jsonschema2019>> and most of the requirements are that conforming encoded data objects shall validate against the corresponding schema.
 
 All requirements classes and conformance classes described in this document are owned by the standard(s) identified.
 
