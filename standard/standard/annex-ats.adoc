@@ -33,7 +33,7 @@ include::conf/basic_ypr.adoc[]
 
 The Basic-YPR SDU member tests are the following:
 
-include::conf/basic_ypr/sdu/target.adoc[]
+include::conf/basic_ypr/target.adoc[]
 
 include::conf/tangent_plane/longitude.adoc[]
 
@@ -47,7 +47,7 @@ include::conf/orientation/ypr_angles.adoc[]
 
 include::conf/basic_quaternion.adoc[]
 
-include::conf/basic_quaternion/sdu/target.adoc[]
+include::conf/basic_quaternion/target.adoc[]
 
 ==== Advanced SDU Conformance Class
 
