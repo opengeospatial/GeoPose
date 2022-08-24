@@ -10,7 +10,7 @@ description:: To confirm that a Regular Series conforms to the Logical Model.
 inherit:: /conf/global
 
 conformance-test:: /conf/series_header
-conformance-test:: /conf/geopose_duration
+conformance-test:: /conf/time/duration
 conformance-test:: /conf/frame_specification/authority
 conformance-test:: /conf/frame_specification/id
 conformance-test:: /conf/frame_specification/parameters

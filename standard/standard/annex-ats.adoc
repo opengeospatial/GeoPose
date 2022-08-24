@@ -81,7 +81,7 @@ include::conf/regular_series.adoc[]
 
 include::conf/series_header.adoc[]
 
-include::conf/geopose_duration.adoc[]
+include::conf/time/duration.adoc[]
 
 include::conf/regular_series/trailer.adoc[]
 
