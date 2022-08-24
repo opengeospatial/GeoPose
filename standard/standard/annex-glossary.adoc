@@ -163,7 +163,7 @@ any forces acting on the body
 === local tangent plane coordinate system
 admitted:[LTP coordinate system]
 
-right-hand {{Euclidean coordinate system}} with a vertical (Z) axis extending
+right-hand Euclidean coordinate system with a vertical (Z) axis extending
 from an origin at a point defined by geographic coordinates with respect to an
 {{ellipsoid}}
 
@@ -200,8 +200,8 @@ Euler Angles.
 angular relationship between a reference frame's axes and a direction in that
 {{reference frame}}
 
-NOTE: {{Euler angles}}, {{rotation matrix,rotation matrices}}, and
-{{quaternions}} are three ways to specify a rotation.
+NOTE: {{Euler angles}}, rotation matrices, and {{quaternions}} are three ways to
+specify a rotation.
 
 === digital sensor
 admitted:[sensor]

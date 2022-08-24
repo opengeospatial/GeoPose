@@ -34,9 +34,8 @@ environment
 ==== structural data unit
 admitted:[SDU]
 
-alias of an element of the {{logical model}} isolated to facilitate
-specification of their use in encoded GeoPose data objects for a specific
-standardization target
+element of the {{logical model}} expressed in concrete data objects encoded
+using specific encoding or serialization technologies
 
 
 === Spatial concepts
@@ -186,7 +185,7 @@ NOTE: Each {{pose}} in an {{irregular sequence}} has an associated {{valid time}
 ==== header
 admitted:[sequence header]
 
-metadata essential for interpretation of the following {{members}} of a {{sequence}}
+metadata essential for interpretation of the following members of a {{sequence}}
 
 ==== transition model
 
@@ -195,7 +194,7 @@ metadata that indicates whether or how it may be possible to estimate {{pose,pos
 ==== trailer
 admitted:[sequence trailer]
 
-metadata essential for validation of the preceding {{members}} of a {{sequence}}.
+metadata essential for validation of the preceding members of a {{sequence}}.
 
 
 === Temporal concepts
@@ -207,7 +206,7 @@ specification for the interpretation of points on a {{time line}} as {{instant,i
 ==== time line
 admitted:[time axis]
 
-one-dimensional {{Euclidean space}} whose points represent an ordered sequence of {{instant,instants}} directed from the past to the future
+one-dimensional Euclidean space whose points represent an ordered sequence of {{instant,instants}} directed from the past to the future
 
 ==== instant
 
@@ -222,7 +221,7 @@ timespan between two {{instant,instants}} on a {{time line}}, interpreted in con
 
 one-dimensional signed distance between the bounding {{instant,instants}} of an {{interval}}
 
-NOTE: The magnitude of a {{length}} value depends on the {{temporal frame}}.
+NOTE: The magnitude of a length value depends on the {{temporal frame}}.
 
 NOTE: A duration is semi-open: it includes the earlier {{instant}} but not the later {{instant}}.
 
