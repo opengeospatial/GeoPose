@@ -1,9 +1,0 @@
-
-[abstract_test]
-====
-[%metadata]
-label:: /conf/stream/frame_time_element/sdu
-test-purpose:: To confirm that a Stream frame_and_time is implemented as an innerFrameAndTime property with an ExplicitFrameSpec and GeoPoseInstant pair.
-requirement:: /req/stream/frame_time_element/sdu
-test-method:: Inspection
-====

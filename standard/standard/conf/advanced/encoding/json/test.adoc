@@ -7,5 +7,5 @@ label:: /conf/advanced/encoding/json/test
 description:: Confirm that a JSON-encoded Advanced GeoPose conforms to the corresponding JSON-Schema document.
 test-purpose:: To confirm that Advanced GeoPose data objects conform to the Advanced JSON-Schema definition.
 test-method:: JSON-Schema validation.
-requirement:: /req/advanced/sdu
+requirement:: /req/advanced
 ====

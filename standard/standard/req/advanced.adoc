@@ -1,0 +1,15 @@
+
+[requirements_class]
+.Standardization Target 3: Advanced
+====
+[%metadata]
+label:: /req/advanced
+subject:: Implementation of Logical Model
+description:: Advanced Logical Model SDU
+inherit:: /req/global
+requirement:: /req/time/geopose_instant
+requirement:: /req/frame_specification/authority
+requirement:: /req/frame_specification/id
+requirement:: /req/frame_specification/parameters
+requirement:: /req/orientation/quaternion
+====

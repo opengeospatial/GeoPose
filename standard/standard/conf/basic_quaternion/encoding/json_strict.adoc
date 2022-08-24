@@ -1,13 +1,11 @@
 
-EDITOR: This conformance is assigned a non-unique ID.
-
-[abstract_test]
-.Basic-Quaternion JSON encoding (strict) member test
+[conformance_class]
+.Basic-Quaternion JSON encoding (strict)
 ====
 [%metadata]
 label:: /conf/basic_quaternion/encoding/json_strict
-description:: Confirm that Basic-Quaternion (Strict) GeoPose data objects conform to the Basic-Quaternion (Strict) JSON-Schema definition.
-test-purpose:: To confirm that Basic-Quaternion (Strict) GeoPose data objects conform to the Basic-Quaternion (Strict) JSON-Schema definition.
-test-method:: JSON-Schema validation.
-requirement:: /req/basic_quaternion/sdu
+requirement:: /req/basic_quaternion/encoding/json_strict
+description:: Confirm that a strict JSON-encoded Basic-Quaternion GeoPose conforms to the relevant elements of the Logical Model and a corresponding JSON-Schema document.
+inherit:: /conf/basic_quaternion
+conformance-test:: /conf/basic_quaternion/encoding/json_strict/test
 ====

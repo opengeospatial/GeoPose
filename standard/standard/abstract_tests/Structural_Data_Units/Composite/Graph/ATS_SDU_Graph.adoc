@@ -1,8 +1,0 @@
-[[ats_composite_graph]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/ats/composite/graph* 
-^|Test Purpose |To validate that JSON-encoded GeoPose Graphs conform to the Graph JSON-Schema definition.
-^|Requirement |<<req_composite_graph,/req/composite/graph>>
-^|Test Method |JSON-Schema validation
-|===

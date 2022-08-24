@@ -1,8 +1,0 @@
-[[req_basic_quaternion_encoding_json_strict]]
-[width="90%",cols="4,6"]
-|===
-<s|Requirement  s|B-Quaternion-Encoding-JSON-Strict
-<s|ID |<<req_basic_quaternion_encoding_json_strict,/req/basic/quaternion/encoding/json_strict>> 
-2+<|A JSON-encoded Basic-Quaternion (Strict) GeoPose SHALL conform to the Basic-Quaternion (Strict) JSON-Schema 2019-9 definition. There SHALL be no encoded properties not explicitly defined in the JSON-Schema definition.
-
-|===

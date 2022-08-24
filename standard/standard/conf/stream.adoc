@@ -1,0 +1,17 @@
+
+[conformance_class]
+.Stream SDU
+====
+[%metadata]
+label:: /conf/stream
+requirement:: /req/stream
+classification:: Target Type:SDU
+description:: To confirm that a GeoPose Stream conforms to the Logical Model.
+inherit:: /conf/global
+
+conformance-test:: /conf/transition_model
+conformance-test:: /conf/frame_specification/authority
+conformance-test:: /conf/frame_specification/id
+conformance-test:: /conf/frame_specification/parameters
+conformance-test:: /conf/stream/frame_and_time
+====

@@ -1,0 +1,11 @@
+
+[abstract_test]
+.Transition-Model-SDU
+====
+[%metadata]
+label:: /conf/transition_model
+description:: To confirm that a TransitionModel attribute conforms to the Logical Model.
+test-purpose:: To confirm that a transition_model attribute is one of the values in the TransitionModel enumeration.
+requirement:: /req/transition_model
+test-method:: Inspection
+====

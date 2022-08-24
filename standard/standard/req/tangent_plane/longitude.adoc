@@ -1,0 +1,9 @@
+[requirement]
+.GeoPose `tangentPoint.longitude` encoding requirements
+====
+[%metadata]
+label:: /req/tangent_plane/longitude
+description:: An instance of a GeoPose `tangentPoint.longitude` attribute SHALL be expressed as decimal degrees and represented as signed real number values.
+====
+
+EDITOR: Consider this text also: "The Logical Model attribute tangentPoint.longitude attribute shall denote an angle in degrees, represented as an IEEE 754 floating point value in a Structural Data Unit. The minimum value shall be -180.0 degrees and the maximum value shall be 180.0 degrees."

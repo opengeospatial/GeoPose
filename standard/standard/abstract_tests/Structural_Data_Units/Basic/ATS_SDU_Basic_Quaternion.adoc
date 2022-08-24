@@ -1,8 +1,0 @@
-[[ats_basic_quaternion]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/ats/sdu/basic/quaternion* 
-^|Test Purpose |To validate that Basic-Quaternion GeoPose data objects conform to the JSON-Schema definition.
-^|Requirement |<<req_basic_quaternion,/req/sdu/basic/quaternion>>
-^|Test Method |Inspection
-|===

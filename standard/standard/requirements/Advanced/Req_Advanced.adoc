@@ -1,7 +1,0 @@
-[[req_advanced]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement {counter:req-id}* |*/req/advanced* 
-^|Requirement |Advanced GeoPose data objects shall conform to the Advanced JSON-Schema definition.
-^|Requirement ID|<<req_advanced,/req/advanced>>
-|===
