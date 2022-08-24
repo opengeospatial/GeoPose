@@ -25,5 +25,4 @@ jobs:
 
       - uses: actions-mn/setup@master
 
-      - working-directory: standard
-        run: metanorma site generate --agree-to-terms
+      - run: metanorma site generate --agree-to-terms
