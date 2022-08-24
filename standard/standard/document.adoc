@@ -18,6 +18,7 @@
 :toclevels: 3
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf,rxl
+:requirements-model: ogc
 :local-cache-only:
 :data-uri-image:
 
