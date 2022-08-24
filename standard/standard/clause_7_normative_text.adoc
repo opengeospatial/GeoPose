@@ -226,7 +226,7 @@ image::diagram/Irregular-Series_SDU.PNG[]
 
 include::req/irregular_series.adoc[]
 
-include::req/irregular_series_header.adoc[]
+include::req/irregular_series/header.adoc[]
 
 include::req/frame_specification/authority.adoc[]
 
@@ -234,7 +234,7 @@ include::req/frame_specification/id.adoc[]
 
 include::req/frame_specification/parameters.adoc[]
 
-include::req/irregular_series_frame_and_time.adoc[]
+include::req/irregular_series/frame_and_time.adoc[]
 
 include::req/regular_series_trailer.adoc[]
 
@@ -430,7 +430,6 @@ include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 
 include::req/series/irregular/encoding/json.adoc[]
 
-[[irregular_series_json_schema]]
 [source,json]
 .Irregular series: JSON encoding schema
 ----
