@@ -2,7 +2,7 @@
 metanorma:
   source:
     files:
-      - standard/document.adoc
+      - standard/standard/document.adoc
 
   collection:
     name: OGC GeoPose
