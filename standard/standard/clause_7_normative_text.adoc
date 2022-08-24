@@ -151,7 +151,7 @@ image::diagram/Advanced_SDU.PNG[]
 
 include::req/advanced.adoc[]
 
-include::req/time/geopose_instant.adoc[]
+include::req/time/instant.adoc[]
 
 include::req/frame_specification/authority.adoc[]
 
