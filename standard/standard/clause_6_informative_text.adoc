@@ -50,4 +50,133 @@ image::diagram/OGC_Process_Detail.png[]
 [[use_case_summary]]
 === Use Case Summary
 
-include::use_cases/use_cases.adoc[]
+The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPoses is to convey the position and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of related GeoPoses in a common geographic reference frame.
+
+Each use case is identified by a unique ID, has a brief description, and a list of the relevant standardization targets.
+
+==== Augmented and Mixed Reality [AR]
+
+Augmented reality (AR) integrates synthetic objects or synthetic representations of real objects with a physical environment. Geospatial AR experiences can use GeoPose to position synthetic objects or their representations in the physical environment. The geospatial connection provides a common reference frame to support integration in AR.
+
+[%header,cols="2,5,2"]
+|===
+|ID
+|Description
+|Standardization Target
+
+|/geopose/1.0/use_case/ar/01
+|Stored representation of synthetic objects
+|Basic-YPR, Basic-Quaternion, Advanced
+
+|/geopose/1.0/use_case/ar/02
+|Positioning information to support integration of synthetic object data in a representation or visualization of the physical environment
+|Basic-YPR, Basic-Quaternion, Advanced
+
+|/geopose/1.0/use_case/ar/03
+|Report of position and orientation from a mobile device to an AR network service
+|Advanced (time)
+
+|/geopose/1.0/use_case/ar/04
+|Input to visual occlusion calculations
+|Basic-YPR, Basic-Quaternion
+
+|/geopose/1.0/use_case/ar/05
+|Input to ray-casting and line-of-sight calculations
+|Basic-YPR, Basic-Quaternion, Chain
+
+|/geopose/1.0/use_case/ar/06
+|Input to proximity calculations
+Basic-YPR, Basic-Quaternion,
+
+|/geopose/1.0/use_case/ar/07
+|In time series, input and output to and from trajectory projection calculations
+|Regular Timeseries, Irregular Timeseries, Stream
+|===
+
+==== Autonomous Vehicles [AV]
+
+Autonomous vehicles are mobile objects that move through water, across a water surface, in the air, through the solid earth (tunnel boring machine), on the land surface, or in outer space without real-time control by an independent onboard operator. A pose captures the essential information in positioning and orienting a moving object. Sensors attached to mobile elements have their own poses and a chain of reference frame transformations enables common reference frames to be used for data fusion. The possibility of relating the vehicle to other elements of the environment via a common reference frame is essential.
+
+[%header,cols="2,5,2"]
+|===
+|ID
+|Description
+|Standardization Target
+
+|/geopose/1.0/use_case/av/01
+|Provide accurate visual positioning and guidance based on one or more services based on a 3D representation of the real world combined with real time detection and location of real world objects
+|Basic-YPR, Basic-Quaternion
+
+|/geopose/1.0/use_case/av/02
+|Calculate parameters such as distances and routes (reference to OGC Moving Features?)
+|Basic-YPR, Basic-Quaternion, Regular Timeseries, Irregular Timeseries, Stream
+
+|/geopose/1.0/use_case/av/03
+|Record the trajectory of a moving vehicle.
+|Regular Timeseries, Irregular Timeseries, Stream
+|===
+
+==== Built Environment [BE]
+
+The built environment consists of objects constructed by humans and located in physical space. Buildings, roads, dams, railways, and underground utilities are all part of the built environment. The location and orientation of built objects, especially those whose view is occluded by other objects is essential information needed for human interaction with the built environment. A common reference frame tied to the earth's surface facilitates the integration of these objects when their representations are supplied by different sources.
+
+[%header,cols="2,5,2"]
+|===
+|ID
+|Description
+|Standardization Target
+
+|/geopose/1.0/use_case/be/01
+|Specify the position and orientation of visible objects and objects that are underground or hidden within a construction.
+|Basic-YPR, Basic-Quaternion
+
+|/geopose/1.0/use_case/be/02
+|Compactly and consistently specify or share the location and pose of objects in architecture, design and construction.
+|Basic-YPR, Basic-Quaternion
+|===
+
+==== Synthetic Environments [SE]
+
+Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environment that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated over some time period to provide visualizations or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archival of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there are may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and implements is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations make a coherent assembly possible
+
+[%header,cols="2,5,2"]
+|===
+|ID
+|Description
+|Standardization Target
+
+|/geopose/1.0/use_case/se/01
+|Record pose relationships of all mobile elements in an environment
+|Graph
+
+|/geopose/1.0/use_case/se/02
+|Control animation of mobile elements in an environment using stored pose time sequences
+|Graph, Regular Timeseries, Irregular Timeseries, Stream
+|===
+
+==== Image Understanding [IM]
+
+Image understanding is the segmentation of an image or sequence of images into inferred 3D objects in specific semantic categories, possibly determining or constraining their motion and/or geometry. One important application of image understanding is the recognition of moving elements in a time series of images. A pose is a compact representation of the key geometric characteristics of a moving element. In addition to moving elements sensed by an imaging device, it is often useful to know the pose of the sensor or imaging device itself. A common geographic reference frame integrates the objects into a single environment.
+
+[%header,cols="2,5,2"]
+|===
+|ID
+|Description
+|Implementation Target
+
+|/geopose/1.0/use_case/im/01
+|Instantaneous and time series locations and orientations of mobile objects
+|Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream
+
+|/geopose/1.0/use_case/im/02
+|Instantaneous and time series location and orientation of an optical imaging device using Simultaneous Location And Mapping (SLAM)
+|Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream
+
+|/geopose/1.0/use_case/im/03
+|Instantaneous and time series estimation of the changes in location and orientation of an object using an optical imaging device (Visual Odometry)
+|Basic-YPR, Basic-Quaternion, Advanced, Regular Timeseries, Irregular Timeseries, Stream
+
+|/geopose/1.0/use_case/im/04
+|Instantaneous and time series location and orientation of an optical imaging device used for photogrammetry
+|Regular Timeseries, Irregular Timeseries, Stream
+|===
