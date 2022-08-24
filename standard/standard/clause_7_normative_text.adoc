@@ -118,7 +118,7 @@ include::req/basic_ypr.adoc[]
 
 Details of the individual requirements are listed below:
 
-include::req/basic_ypr/sdu/target.adoc[]
+include::req/basic_ypr/target.adoc[]
 
 include::req/tangent_plane/longitude.adoc[]
 
