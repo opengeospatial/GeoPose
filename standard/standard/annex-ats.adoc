@@ -53,7 +53,7 @@ include::conf/basic_quaternion/sdu/target.adoc[]
 
 include::conf/advanced.adoc[]
 
-include::conf/geopose_instant.adoc[]
+include::conf/time/instant.adoc[]
 
 include::conf/frame_specification/authority.adoc[]
 

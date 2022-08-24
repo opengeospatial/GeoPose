@@ -7,7 +7,7 @@ label:: /req/graph
 subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global
-requirement:: /req/time/geopose_instant
+requirement:: /req/time/instant
 requirement:: /req/frame_specification/authority
 requirement:: /req/frame_specification/id
 requirement:: /req/frame_specification/parameters
