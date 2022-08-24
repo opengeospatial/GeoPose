@@ -9,7 +9,7 @@ description:: Regular Series Logical Model SDU
 inherit:: /req/global
 
 requirement:: /req/regular_series/header
-requirement:: /req/time/geopose_duration
+requirement:: /req/time/duration
 requirement:: /req/frame_specification/authority
 requirement:: /req/frame_specification/id
 requirement:: /req/frame_specification/parameters

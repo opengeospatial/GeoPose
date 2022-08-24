@@ -206,7 +206,7 @@ include::req/regular_series.adoc[]
 
 include::req/regular_series/header.adoc[]
 
-include::req/time/geopose_duration.adoc[]
+include::req/time/duration.adoc[]
 
 include::req/frame_specification/authority.adoc[]
 
