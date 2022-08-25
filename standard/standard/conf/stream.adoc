@@ -4,7 +4,7 @@
 ====
 [%metadata]
 label:: /conf/stream
-requirement:: /req/stream
+target:: /req/stream
 classification:: Target Type:SDU
 description:: To confirm that a GeoPose Stream conforms to the Logical Model.
 inherit:: /conf/global

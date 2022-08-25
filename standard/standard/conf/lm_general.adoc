@@ -7,5 +7,5 @@ label:: /conf/lm_general
 description:: Implementations of concrete data conforming to this standard SHALL conform to all dependent or inherited classes, attributes, and associations, multiplicities, and data types in the Logical Model.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-requirement:: /req/lm_general
+target:: /req/lm_general
 ====

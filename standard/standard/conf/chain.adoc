@@ -4,7 +4,7 @@
 ====
 [%metadata]
 label:: /conf/chain
-requirement:: /req/chain
+target:: /req/chain
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the GeoPose Chain conforms to the Logical Model.
 inherit:: /conf/global
