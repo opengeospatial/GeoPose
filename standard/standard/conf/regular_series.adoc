@@ -4,7 +4,7 @@
 ====
 [%metadata]
 label:: /conf/regular_series
-requirement:: /req/regular_series
+target:: /req/regular_series
 classification:: Target Type:SDU
 description:: To confirm that components of a Regular Series conform to the Logical Model.
 inherit:: /conf/global

@@ -3,7 +3,7 @@
 ====
 [%metadata]
 label:: /conf/global
-requirement:: /req/global
+target:: /req/global
 classification:: Target Type:SDU
 description:: Conformance with Global SDU requirements
 
