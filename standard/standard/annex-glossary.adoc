@@ -104,8 +104,8 @@ longitude) and/or vertical position (height)
 
 === ellipsoid
 
-mathematical surface that may be used as a {{datum}} in defining a {{geographic
-coordinate system}}
+mathematical surface that may be used as a {{datum}} in defining a geographic
+coordinate system
 
 NOTE: An ellipsoid is usually established by fitting the parameters of the
 ellipsoid to measurements of a gravitational equipotential surface ({{geoid}})

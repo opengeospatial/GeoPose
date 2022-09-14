@@ -236,7 +236,7 @@ include::req/frame_specification/parameters.adoc[]
 
 include::req/irregular_series/frame_and_time.adoc[]
 
-include::req/regular_series_trailer.adoc[]
+include::req/series/regular/trailer.adoc[]
 
 
 ==== Requirements for Standardization Target 8: Stream
@@ -428,7 +428,7 @@ include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 
 ==== Standardization Target 7: Irregular Series
 
-include::req/irregular_series/encoding/json.adoc[]
+include::req/series/irregular/encoding/json.adoc[]
 
 [source,json]
 .Irregular series: JSON encoding schema
