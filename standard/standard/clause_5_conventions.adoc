@@ -52,7 +52,7 @@ Enumerations are painted in green.
 
 [[fig6]]
 .White Color Denotes a Note or Constraint
-image::images/White_UML.png[white,256,400,]
+image::images/White_UML.png[]
 
 The color white is used for notes and OCL constraints that are provided in the UML diagrams.
 
