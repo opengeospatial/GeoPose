@@ -3,7 +3,7 @@
 .Chain: JSON encoding
 ====
 [%metadata]
-label:: /req/chain/encoding/json
+identifier:: /req/chain/encoding/json
 description:: A JSON-encoded GeoPose Chain SHALL conform to the GeoPose Chain
 JSON-Schema 2019-9 definition (<<chain_json_schema>>).
 ====

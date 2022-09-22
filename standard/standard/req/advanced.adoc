@@ -3,7 +3,7 @@
 .Standardization Target 3: Advanced
 ====
 [%metadata]
-label:: /req/advanced
+identifier:: /req/advanced
 subject:: Implementation of Logical Model
 description:: Advanced Logical Model SDU
 inherit:: /req/global

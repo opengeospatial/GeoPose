@@ -3,7 +3,7 @@
 .Graph: JSON encoding
 ====
 [%metadata]
-label:: /req/graph/encoding/json
+identifier:: /req/graph/encoding/json
 description:: A JSON-encoded GeoPose Graph SHALL conform to the GeoPose Graph
 JSON-Schema 2019-9 definition (<<graph_json_schema>>).
 ====

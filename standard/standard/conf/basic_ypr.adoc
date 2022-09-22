@@ -3,7 +3,7 @@
 .Basic-YPR SDU
 ====
 [%metadata]
-label:: /conf/basic_ypr
+identifier:: /conf/basic_ypr
 target:: /req/basic_ypr
 classification:: Target Type:SDU
 description:: To confirm that a Basic-YPR GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using Yaw, Pitch, and Roll angles.

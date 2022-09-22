@@ -3,7 +3,7 @@
 .Advanced GeoPose: JSON encoding
 ====
 [%metadata]
-label:: /req/advanced/encoding/json
+identifier:: /req/advanced/encoding/json
 description:: A JSON-encoded Advanced GeoPose SHALL conform to the Advanced
 JSON-Schema 2019-9 definition (<<advanced_geopose_json_schema>>).
 ====

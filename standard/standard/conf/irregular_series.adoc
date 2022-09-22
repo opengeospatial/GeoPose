@@ -3,7 +3,7 @@
 .Irregular Series SDU
 ====
 [%metadata]
-label:: /conf/irregular_series
+identifier:: /conf/irregular_series
 target:: /req/irregular_series
 classification:: Target Type:SDU
 description:: To confirm that a Regular Series conforms to the Logical Model.

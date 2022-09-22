@@ -3,7 +3,7 @@
 .Standardization Target 7: Irregular Series
 ====
 [%metadata]
-label:: /req/irregular_series
+identifier:: /req/irregular_series
 subject:: Implementation of Logical Model
 description:: Irregular Series Logical Model SDU
 inherit:: /req/global

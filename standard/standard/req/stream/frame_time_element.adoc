@@ -3,6 +3,6 @@
 .S-FST-SDU
 ====
 [%metadata]
-label:: /req/stream/frame_time_element
+identifier:: /req/stream/frame_time_element
 description:: A FrameAndTimeElement property SHALL be implemented as as an ExplicitFrameSpec and a GeoPoseInstant.
 ====

@@ -3,7 +3,7 @@
 .Standardization Target 5: Chain
 ====
 [%metadata]
-label:: /req/chain
+identifier:: /req/chain
 subject:: Implementation of Logical Model
 description:: Chain Logical Model SDU
 inherit:: /req/global

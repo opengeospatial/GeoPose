@@ -3,7 +3,7 @@
 .Graph SDU
 ====
 [%metadata]
-label:: /conf/graph
+identifier:: /conf/graph
 target:: /req/graph
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the GeoPose Graph conforms to the Logical Model.

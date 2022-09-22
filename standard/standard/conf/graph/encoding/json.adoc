@@ -3,7 +3,7 @@
 .Graph JSON encoding
 ====
 [%metadata]
-label:: /conf/graph/encoding/json
+identifier:: /conf/graph/encoding/json
 requirement:: /req/graph/encoding/json
 description:: To confirm that a JSON-encoded GeoPose Graph conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/graph

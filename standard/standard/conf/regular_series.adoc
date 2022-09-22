@@ -3,7 +3,7 @@
 .Regular Series SDU
 ====
 [%metadata]
-label:: /conf/regular_series
+identifier:: /conf/regular_series
 target:: /req/regular_series
 classification:: Target Type:SDU
 description:: To confirm that components of a Regular Series conform to the Logical Model.

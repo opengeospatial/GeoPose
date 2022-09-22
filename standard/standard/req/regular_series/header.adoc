@@ -3,6 +3,6 @@
 .S-Header-SDU
 ====
 [%metadata]
-label:: /req/regular_series/header
+identifier:: /req/regular_series/header
 description:: A header property SHALL be implemented as a SeriesHeader structure.
 ====

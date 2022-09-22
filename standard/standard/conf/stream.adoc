@@ -3,7 +3,7 @@
 .Stream SDU
 ====
 [%metadata]
-label:: /conf/stream
+identifier:: /conf/stream
 target:: /req/stream
 classification:: Target Type:SDU
 description:: To confirm that a GeoPose Stream conforms to the Logical Model.
