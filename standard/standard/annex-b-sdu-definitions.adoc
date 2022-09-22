@@ -12,7 +12,7 @@ Each of the SDUs is specified here
 [requirement]
 ====
 [%metadata]
-label:: /conf/conf-class-a/req-name-1
+identifier:: /conf/conf-class-a/req-name-1
 requirement:: /req/req-class-a/req-name-1
 purpose:: Verify that...
 method:: Inspect...

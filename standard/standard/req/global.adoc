@@ -3,7 +3,7 @@
 .Global requirements
 ====
 [%metadata]
-label:: /req/global
+identifier:: /req/global
 subject:: SDU
 description:: Global SDU Requirements
 requirement:: /req/target_dependency

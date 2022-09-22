@@ -3,7 +3,7 @@
 .Standardization Target 4: Graph
 ====
 [%metadata]
-label:: /req/graph
+identifier:: /req/graph
 subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global

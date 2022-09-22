@@ -3,7 +3,7 @@
 .Advanced SDU
 ====
 [%metadata]
-label:: /conf/advanced
+identifier:: /conf/advanced
 target:: /req/advanced
 classification:: Target Type:SDU
 description:: To confirm that an implementation of the Advanced GeoPose conforms to

@@ -3,7 +3,7 @@
 .Standardization Target 6: Regular Series
 ====
 [%metadata]
-label:: /req/regular_series
+identifier:: /req/regular_series
 subject:: Implementation of Logical Model
 description:: Regular Series Logical Model SDU
 inherit:: /req/global

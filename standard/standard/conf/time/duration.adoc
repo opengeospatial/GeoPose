@@ -3,7 +3,7 @@
 .GP-Duration-SDU
 ====
 [%metadata]
-label:: /conf/time/duration
+identifier:: /conf/time/duration
 description:: To confirm the correct properties of a GeoPose Duration.
 test-purpose:: To confirm that a Logical Model attribute GeoPoseDuration is expressed in seconds multiplied by 1,000 and that the unit of measure is milliseconds.
 requirement:: /req/time/duration

@@ -3,7 +3,7 @@
 .Irregular Series JSON encoding
 ====
 [%metadata]
-label:: /conf/irregular_series/encoding/json
+identifier:: /conf/irregular_series/encoding/json
 requirement:: /req/irregular_series/encoding/json
 description:: To confirm that a JSON-encoded Irregular Series conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/irregular_series

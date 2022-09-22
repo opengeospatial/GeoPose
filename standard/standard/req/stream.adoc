@@ -3,7 +3,7 @@
 .Standardization Target 8: Stream
 ====
 [%metadata]
-label:: /req/stream
+identifier:: /req/stream
 subject:: Implementation of Logical Model
 description:: Stream Logical Model SDU
 inherit:: /req/global

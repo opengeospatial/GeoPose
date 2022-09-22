@@ -3,7 +3,7 @@
 .FS-ID-SDU
 ====
 [%metadata]
-label:: /conf/frame_specification/id
+identifier:: /conf/frame_specification/id
 description:: To confirm the correct properties of a Frame Specification ID.
 test-purpose:: To confirm that a FrameSpecification.id attribute contains a string uniquely specifying the identity of a reference frame specification as defined by that authority.
 requirement:: /req/frame_specification/id

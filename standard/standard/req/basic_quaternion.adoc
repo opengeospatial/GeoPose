@@ -2,7 +2,7 @@
 [requirements_class]
 ====
 [%metadata]
-label:: /req/basic_quaternion
+identifier:: /req/basic_quaternion
 subject:: Implementation of Logical Model
 inherit:: /req/global
 description:: Basic-Quaternion Logical Model SDU

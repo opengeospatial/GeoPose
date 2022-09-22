@@ -2,7 +2,7 @@
 [conformance_class]
 ====
 [%metadata]
-label:: /conf/global
+identifier:: /conf/global
 target:: /req/global
 classification:: Target Type:SDU
 description:: Conformance with Global SDU requirements

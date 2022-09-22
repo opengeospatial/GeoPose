@@ -3,6 +3,6 @@
 .S-Trailer-SDU
 ====
 [%metadata]
-label:: /req/series/regular/trailer
+identifier:: /req/series/regular/trailer
 description:: A trailer property SHALL be implemented as a SeriesTrailer structure.
 ====
