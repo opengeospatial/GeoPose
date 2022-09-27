@@ -1,0 +1,13 @@
+
+[abstract_test]
+.Quaternion-SDU
+====
+[%metadata]
+identifier:: /conf/orientation/quaternion
+description:: To confirm that an instance of a GeoPose Logical Model quaternion data type value is expressed as four real numbers, representing four quaternion components w, x, y, z, in that sequential order.
+The sum of the squares of the individual components is as close to 1.0 as the real number representation allows. The quaternion is applied to an initial reference frame oriented East-North-Up (ENU) coordinate system where the coordinate axes East, North, and Up correspond to the axes X, Y, Z.
+
+test-purpose:: Verify that this requirement is satisfied
+test-method:: Inspection
+requirement:: /req/orientation/quaternion
+====
