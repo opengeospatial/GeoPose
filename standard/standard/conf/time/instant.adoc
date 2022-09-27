@@ -7,6 +7,6 @@ identifier:: /conf/time/instant
 description:: To confirm the correct properties of a GeoPose Instant.
 test-purpose:: To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in
 seconds multiplied by 1,000 and that the unit of measure is milliseconds.
-requirement:: /req/time/instant
+target:: /req/time/instant
 test-method:: Inspection
 ====

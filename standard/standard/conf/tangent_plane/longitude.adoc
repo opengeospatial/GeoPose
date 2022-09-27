@@ -8,5 +8,5 @@ identifier:: /conf/tangent_plane/longitude
 description:: To confirm that a GeoPose `tangentPoint.longitude` attribute is expressed as an angle in decimal degrees.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-requirement:: /req/tangent_plane/longitude
+target:: /req/tangent_plane/longitude
 ====

@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /conf/chain/encoding/json
-requirement:: /req/chain/encoding/json
+target:: /req/chain/encoding/json
 description:: To confirm that a JSON-encoded GeoPose Chain conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/chain
 
