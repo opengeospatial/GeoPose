@@ -6,6 +6,6 @@
 identifier:: /conf/irregular_series/frame_and_time
 description:: To confirm that an implementation of a Series FrameAndTime object conforms to the Logical Model.
 test-purpose:: To confirm that a Series FrameAndTime is implemented in accordance with the Logical Model.
-requirement:: /req/irregular_series/frame_and_time
+target:: /req/irregular_series/frame_and_time
 test-method:: Inspection
 ====

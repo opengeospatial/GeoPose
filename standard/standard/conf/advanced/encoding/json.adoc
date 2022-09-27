@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /conf/advanced/encoding/json
-requirement:: /req/advanced/encoding/json
+target:: /req/advanced/encoding/json
 description:: To confirm that a JSON-encoded Advanced GeoPose conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/advanced_sdu
 
