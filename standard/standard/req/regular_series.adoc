@@ -13,5 +13,5 @@ requirement:: /req/time/duration
 requirement:: /req/frame_specification/authority
 requirement:: /req/frame_specification/id
 requirement:: /req/frame_specification/parameters
-requirement:: /req/series/regular/trailer
+requirement:: /req/regular_series/trailer
 ====

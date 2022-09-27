@@ -8,5 +8,5 @@ identifier:: /conf/basic_quaternion/encoding/json_strict/test
 description:: Confirm that Basic-Quaternion (Strict) GeoPose data objects conform to the Basic-Quaternion (Strict) JSON-Schema definition.
 test-purpose:: To confirm that Basic-Quaternion (Strict) GeoPose data objects conform to the Basic-Quaternion (Strict) JSON-Schema definition.
 test-method:: JSON-Schema validation.
-requirement:: /req/basic_quaternion
+requirement:: /req/basic_quaternion/encoding/json_strict
 ====
