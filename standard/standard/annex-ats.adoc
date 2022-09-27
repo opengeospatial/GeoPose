@@ -43,6 +43,8 @@ include::conf/tangent_plane/h.adoc[]
 
 include::conf/orientation/ypr_angles.adoc[]
 
+include::conf/orientation/quaternion.adoc[]
+
 ==== Basic-Quaternion SDU Conformance Class
 
 include::conf/basic_quaternion.adoc[]
@@ -141,7 +143,7 @@ include::conf/chain/encoding/json.adoc[]
 
 include::conf/chain/encoding/json/test.adoc[]
 
-The *GeoPose Graph* JSON encoding supports a directed graph stucture.
+The *GeoPose Graph* JSON encoding supports a directed graph structure.
 
 include::conf/graph/encoding/json.adoc[]
 

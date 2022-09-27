@@ -142,6 +142,15 @@ Details of the individual requirements are listed below:
 
 include::req/orientation/quaternion.adoc[]
 
+[[common-frame-specification]]
+==== Common requirements for frame specification
+
+include::req/frame_specification/authority.adoc[]
+
+include::req/frame_specification/id.adoc[]
+
+include::req/frame_specification/parameters.adoc[]
+
 ==== Requirements for Standardization Target 3: Advanced
 
 The Advanced Target has a more general structure, supporting flexible specification of Outer Frame and a Valid Time.
@@ -153,31 +162,23 @@ include::req/advanced.adoc[]
 
 include::req/time/instant.adoc[]
 
-include::req/frame_specification/authority.adoc[]
-
-include::req/frame_specification/id.adoc[]
-
-include::req/frame_specification/parameters.adoc[]
-
 include::req/orientation/quaternion.adoc[]
+
+This target also depends on requirements stated in <<common-frame-specification>>.
+
 
 ==== Requirements for Standardization Target 4: Graph
 
 The Graph Target supports a network of object relative poses. The graph is a directed acyclic graph, each node must either be an Extrinsic Frame or reachable from an Extrinsic Frame.
-
 
 .Structure of the Graph SDU
 image::diagram/Graph_SDU.PNG[]
 
 include::req/graph.adoc[]
 
-include::req/frame_specification/authority.adoc[]
+include::req/chain/index.adoc[]
 
-include::req/frame_specification/id.adoc[]
-
-include::req/frame_specification/parameters.adoc[]
-
-include::req/chain/transform_index.adoc[]
+This target also depends on requirements stated in <<common-frame-specification>>.
 
 ==== Requirements for Standardization Target 5: Chain
 
@@ -188,11 +189,7 @@ image::diagram/Chain_SDU.PNG[]
 
 include::req/chain.adoc[]
 
-include::req/frame_specification/authority.adoc[]
-
-include::req/frame_specification/id.adoc[]
-
-include::req/frame_specification/parameters.adoc[]
+This target also depends on requirements stated in <<common-frame-specification>>.
 
 
 ==== Requirements for Standardization Target 6: Regular Series
@@ -208,13 +205,9 @@ include::req/regular_series/header.adoc[]
 
 include::req/time/duration.adoc[]
 
-include::req/frame_specification/authority.adoc[]
+include::req/regular_series/trailer.adoc[]
 
-include::req/frame_specification/id.adoc[]
-
-include::req/frame_specification/parameters.adoc[]
-
-include::req/series/regular/trailer.adoc[]
+This target also depends on requirements stated in <<common-frame-specification>>.
 
 
 ==== Requirements for Standardization Target 7: Irregular Series
@@ -228,15 +221,11 @@ include::req/irregular_series.adoc[]
 
 include::req/irregular_series/header.adoc[]
 
-include::req/frame_specification/authority.adoc[]
-
-include::req/frame_specification/id.adoc[]
-
-include::req/frame_specification/parameters.adoc[]
-
 include::req/irregular_series/frame_and_time.adoc[]
 
-include::req/series/regular/trailer.adoc[]
+include::req/regular_series/trailer.adoc[]
+
+This target also depends on requirements stated in <<common-frame-specification>>.
 
 
 ==== Requirements for Standardization Target 8: Stream
@@ -253,13 +242,9 @@ include::req/stream.adoc[]
 
 include::req/transition_model.adoc[]
 
-include::req/frame_specification/authority.adoc[]
-
-include::req/frame_specification/id.adoc[]
-
-include::req/frame_specification/parameters.adoc[]
-
 include::req/stream/frame_time_element.adoc[]
+
+This target also depends on requirements stated in <<common-frame-specification>>.
 
 
 
@@ -409,7 +394,7 @@ include::instances/GeoPose.Composite.Chain.Instance.json[]
 
 ==== Standardization Target 6: Regular Series
 
-include::req/series/regular/encoding/json.adoc[]
+include::req/regular_series/encoding/json.adoc[]
 
 [[regular_series_json_schema]]
 [source,json]
@@ -428,8 +413,9 @@ include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 
 ==== Standardization Target 7: Irregular Series
 
-include::req/series/irregular/encoding/json.adoc[]
+include::req/irregular_series/encoding/json.adoc[]
 
+[[irregular_series_json_schema]]
 [source,json]
 .Irregular series: JSON encoding schema
 ----

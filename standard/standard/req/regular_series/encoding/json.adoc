@@ -3,7 +3,7 @@
 .Regular series: JSON encoding
 ====
 [%metadata]
-identifier:: /req/series/regular/encoding/json
+identifier:: /req/regular_series/encoding/json
 description:: A JSON-encoded GeoPose Regular Series SHALL conform to the GeoPose
 Regular JSON-Schema 2019-9 definition (<<regular_series_json_schema>>).
 ====
