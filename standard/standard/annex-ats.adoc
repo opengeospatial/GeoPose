@@ -43,13 +43,15 @@ include::conf/tangent_plane/h.adoc[]
 
 include::conf/orientation/ypr_angles.adoc[]
 
-include::conf/orientation/quaternion.adoc[]
 
 ==== Basic-Quaternion SDU Conformance Class
 
 include::conf/basic_quaternion.adoc[]
 
 include::conf/basic_quaternion/target.adoc[]
+
+include::conf/orientation/quaternion.adoc[]
+
 
 ==== Advanced SDU Conformance Class
 

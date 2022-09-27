@@ -162,8 +162,6 @@ include::req/advanced.adoc[]
 
 include::req/time/instant.adoc[]
 
-include::req/orientation/quaternion.adoc[]
-
 This target also depends on requirements stated in <<common-frame-specification>>.
 
 
