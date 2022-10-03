@@ -7,5 +7,5 @@ identifier:: /conf/stream/encoding/json/test
 description:: Confirm that GeoPose Stream data objects conform to the Stream JSON-Schema requirement.
 test-purpose:: To confirm that Stream data objects conform to the corresponding Stream JSON-Schema definition.
 test-method:: JSON-Schema validation.
-requirement:: /req/stream
+target:: /req/stream/encoding/json
 ====

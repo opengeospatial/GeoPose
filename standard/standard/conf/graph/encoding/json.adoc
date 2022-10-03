@@ -10,3 +10,4 @@ inherit:: /conf/graph
 
 conformance-test:: /conf/graph/encoding/json/test
 ====
+

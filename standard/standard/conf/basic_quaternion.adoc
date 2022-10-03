@@ -9,8 +9,9 @@ classification:: Target Type:SDU
 description:: To confirm that components of a Basic Quaternion GeoPose conform to the Logical Model.
 inherit:: /conf/global
 
+conformance-test:: /conf/basic_quaternion/target
+conformance-test:: /conf/orientation/quaternion
 conformance-test:: /conf/tangent_plane/longitude
 conformance-test:: /conf/tangent_plane/latitude
 conformance-test:: /conf/tangent_plane/h
-conformance-test:: /conf/quaternion
 ====

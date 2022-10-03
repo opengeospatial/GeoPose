@@ -7,5 +7,5 @@ identifier:: /conf/basic_quaternion/encoding/json/test
 description:: Confirm that a JSON-encoded Basic-Quaternion GeoPose conforms to the corresponding JSON-Schema document.
 test-purpose:: To confirm that Basic-Quaternion GeoPose data objects conform to the Basic-Quaternion JSON-Schema definition.
 test-method:: JSON-Schema validation.
-requirement:: /req/basic_quaternion/encoding/json
+target:: /req/basic_quaternion/encoding/json
 ====
