@@ -174,7 +174,7 @@ image::diagram/Graph_SDU.PNG[]
 
 include::req/graph.adoc[]
 
-include::req/chain/index.adoc[]
+include::req/graph/index.adoc[]
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 
@@ -186,6 +186,8 @@ The Chain Target supports relationships between a linear sequence of pose relati
 image::diagram/Chain_SDU.PNG[]
 
 include::req/chain.adoc[]
+
+include::req/chain/index.adoc[]
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 
@@ -220,8 +222,6 @@ include::req/irregular_series.adoc[]
 include::req/irregular_series/header.adoc[]
 
 include::req/irregular_series/frame_and_time.adoc[]
-
-include::req/regular_series/trailer.adoc[]
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 

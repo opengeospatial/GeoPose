@@ -7,6 +7,7 @@ identifier:: /req/graph
 subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global
+requirement:: /req/graph/index
 requirement:: /req/time/instant
 requirement:: /req/frame_specification/authority
 requirement:: /req/frame_specification/id

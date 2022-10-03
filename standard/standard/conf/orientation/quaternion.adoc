@@ -9,5 +9,5 @@ The sum of the squares of the individual components is as close to 1.0 as the re
 
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection
-requirement:: /req/orientation/quaternion
+target:: /req/orientation/quaternion
 ====
