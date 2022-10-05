@@ -1,5 +1,5 @@
 
-[abstract_test]
+[conformance_test]
 .B-YPR-SDU
 ====
 [%metadata]

@@ -1,5 +1,5 @@
 
-[abstract_test]
+[conformance_test]
 .Advanced JSON encoding member test
 ====
 [%metadata]

@@ -1,5 +1,5 @@
 
-[abstract_test]
+[conformance_test]
 .Basic-YPR JSON encoding member test
 ====
 [%metadata]
