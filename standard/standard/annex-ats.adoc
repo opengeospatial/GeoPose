@@ -167,7 +167,7 @@ The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Out
 
 include::conf/stream/encoding/json.adoc[]
 
-EDITOR: The following test should have been 3 tests: /req/stream/header/encoding/json,
-/req/stream/element/encoding/json and /req/stream/report/encoding/json.
+EDITOR: The following test should have been 3 tests: /req/stream-encoding-json/header,
+/req/stream-encoding-json/element and /req/stream/report/encoding/json.
 
 include::conf/stream/encoding/json/test.adoc[]
