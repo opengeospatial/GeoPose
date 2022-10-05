@@ -6,7 +6,7 @@
 identifier:: /req/global
 subject:: SDU
 description:: Global SDU Requirements
-requirement:: /req/target_dependency
-requirement:: /req/sdu_general
-requirement:: /req/lm_general
+requirement:: /req/global/target-dependency
+requirement:: /req/global/sdu-general
+requirement:: /req/global/lm-general
 ====

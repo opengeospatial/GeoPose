@@ -3,7 +3,7 @@
 .Stream header: JSON encoding
 ====
 [%metadata]
-identifier:: /req/stream/header/encoding/json
+identifier:: /req/stream-encoding-json/header
 description:: A JSON-encoded GeoPose Stream Header SHALL conform to the GeoPose
 Stream Header JSON-Schema 2019-9 definition (<<streamheader_json_schema>>).
 ====

@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /conf/basic_quaternion
-target:: /req/basic_quaternion
+target:: /req/basic-quaternion
 classification:: Target Type:SDU
 description:: To confirm that components of a Basic Quaternion GeoPose conform to the Logical Model.
 inherit:: /conf/global
