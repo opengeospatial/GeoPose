@@ -1,6 +1,6 @@
 
 
-[abstract_test]
+[conformance_test]
 .B-TP-h-SDU
 ====
 [%metadata]
