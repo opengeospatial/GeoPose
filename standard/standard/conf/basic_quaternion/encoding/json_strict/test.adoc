@@ -1,6 +1,6 @@
 
 
-[abstract_test]
+[conformance_test]
 .Basic-Quaternion JSON encoding (strict) member test
 ====
 [%metadata]
