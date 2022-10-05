@@ -8,9 +8,9 @@ subject:: Implementation of Logical Model
 description:: Graph Logical Model SDU
 inherit:: /req/global
 requirement:: /req/graph/index
-requirement:: /req/time/instant
-requirement:: /req/frame_specification/authority
-requirement:: /req/frame_specification/id
-requirement:: /req/frame_specification/parameters
-requirement:: /req/transform_index
+requirement:: /req/graph/sdu-time-geopose-instant
+requirement:: /req/graph/sdu-frame-specification-authority
+requirement:: /req/graph/sdu-frame-specification-id
+requirement:: /req/graph/sdu-frame-specification-parameters
+requirement:: /req/graph/sdu-graph-transform-index
 ====

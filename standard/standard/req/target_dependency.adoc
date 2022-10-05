@@ -3,7 +3,7 @@
 .Individual standardization targets shall not dependent on each other
 ====
 [%metadata]
-identifier:: /req/target_dependency
+identifier:: /req/global/target-dependency
 description:: There SHALL be no dependency between or among the individual
 Standardization Targets.
 ====
