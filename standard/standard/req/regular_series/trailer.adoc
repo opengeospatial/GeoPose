@@ -1,8 +1,0 @@
-
-[requirement]
-.S-Trailer-SDU
-====
-[%metadata]
-identifier:: /req/regular_series/trailer
-description:: A trailer property SHALL be implemented as a SeriesTrailer.
-====
