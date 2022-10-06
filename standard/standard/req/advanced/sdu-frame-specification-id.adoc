@@ -2,6 +2,6 @@
 .FS-ID-SDU
 ====
 [%metadata]
-identifier:: sdu-frame-specification-id
+identifier:: /req/advanced/sdu-frame-specification-id
 description:: The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
 ====
