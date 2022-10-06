@@ -174,7 +174,8 @@ image::diagram/Graph_SDU.PNG[]
 
 include::req/graph.adoc[]
 
-include::req/graph/index.adoc[]
+// Requirement not existent
+// include::req/graph/index.adoc[]
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 
