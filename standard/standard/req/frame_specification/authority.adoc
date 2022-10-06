@@ -1,8 +1,0 @@
-
-[requirement]
-.FS-Authority-SDU
-====
-[%metadata]
-identifier:: /req/frame_specification/authority
-description:: The FrameSpecification.authority attribute SHALL contain a string uniquely specifying a source of reference frame specifications.
-====
