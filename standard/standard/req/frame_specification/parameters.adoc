@@ -1,0 +1,10 @@
+
+[requirement]
+.FS-Parameters-SDU
+====
+[%metadata]
+identifier:: /req/frame_specification/parameters
+description:: The FrameSpecification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
++
+NOTE: The definition of these parameters is outside the scope of GeoPose.
+====
