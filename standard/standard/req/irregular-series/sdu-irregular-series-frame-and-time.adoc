@@ -1,0 +1,7 @@
+[requirement]
+.S-FT-Element-SDU
+====
+[%metadata]
+identifier:: /req/irregular-series/sdu-irregular-series-frame-and-time
+description:: An innerFrameAndTime property SHALL be implemented as an ExplicitFrameSpec and GeoPoseInstant pair.
+====

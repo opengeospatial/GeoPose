@@ -1,0 +1,7 @@
+[requirement]
+.FS-ID-SDU
+====
+[%metadata]
+identifier:: /req/irregular-series/sdu-frame-specification-id
+description:: The frame_specification.ID attribute SHALL be a string uniquely defining a frame within the authority.
+====
