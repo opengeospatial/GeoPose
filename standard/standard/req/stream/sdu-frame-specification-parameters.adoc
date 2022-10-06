@@ -1,0 +1,7 @@
+[requirement]
+.FS-Parameters-SDU
+====
+[%metadata]
+identifier:: /req/stream/sdu-frame-specification-parameters
+description:: The frame_specification.parameter attribute SHALL contain all parameters needed for the corresponding authority and ID.
+====

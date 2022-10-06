@@ -1,0 +1,8 @@
+
+[requirement]
+.S-FST-SDU
+====
+[%metadata]
+identifier:: /req/stream/sdu-stream-frame-time-element
+description:: A FrameAndTimeElement property SHALL be implemented as as an ExplicitFrameSpec and a GeoPoseInstant.
+====
