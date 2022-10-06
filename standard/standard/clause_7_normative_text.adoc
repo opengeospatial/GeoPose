@@ -100,11 +100,11 @@ include::req/global.adoc[]
 
 The individual global requirements are defined as follows:
 
-include::req/target_dependency.adoc[]
+include::req/global/target-dependency.adoc[]
 
-include::req/sdu_general.adoc[]
+include::req/global/sdu-general.adoc[]
 
-include::req/lm_general.adoc[]
+include::req/global/lm-general.adoc[]
 
 ==== Requirements for Standardization Target 1: Basic-YPR
 
@@ -114,19 +114,19 @@ The Basic-YPR Target has a simple structure with no options. Position is specifi
 .Structure of the Basic YPR SDU
 image::diagram/Basic-YPR_SDU.PNG[]
 
-include::req/basic_ypr.adoc[]
+include::req/basic-ypr.adoc[]
 
 Details of the individual requirements are listed below:
 
-include::req/basic_ypr/target.adoc[]
+include::req/basic-ypr/sdu.adoc[]
 
-include::req/tangent_plane/longitude.adoc[]
+include::req/basic-ypr/sdu-tangent-plane-longitude.adoc[]
 
-include::req/tangent_plane/latitude.adoc[]
+include::req/basic-ypr/sdu-tangent-plane-latitude.adoc[]
 
-include::req/tangent_plane/h.adoc[]
+include::req/basic-ypr/sdu-tangent-plane-h.adoc[]
 
-include::req/orientation/ypr_angles.adoc[]
+include::req/basic-ypr/sdu-orientation-ypr-angles.adoc[]
 
 ==== Requirements for Standardization Target 2: Basic-Quaternion
 
@@ -136,11 +136,17 @@ The Basic-Quaternion Target has a simple structure with no options. Position is 
 .Structure of the Basic Quaternion SDU
 image::diagram/Basic-Quaternion_SDU.PNG[]
 
-include::req/basic_quaternion.adoc[]
+include::req/basic-quaternion.adoc[]
 
 Details of the individual requirements are listed below:
 
-include::req/orientation/quaternion.adoc[]
+include::req/basic-quaternion/sdu-tangent-plane-longitude.adoc[]
+
+include::req/basic-quaternion/sdu-tangent-plane-latitude.adoc[]
+
+include::req/basic-quaternion/sdu-tangent-plane-h.adoc[]
+
+include::req/basic-quaternion/sdu-orientation_quaternion.adoc[]
 
 [[common-frame-specification]]
 ==== Common requirements for frame specification
@@ -160,7 +166,15 @@ image::diagram/Advanced_SDU.PNG[]
 
 include::req/advanced.adoc[]
 
-include::req/time/instant.adoc[]
+include::req/advanced/sdu-time-geopose-instant.adoc[]
+
+include::req/advanced/sdu-frame-specification-authority.adoc[]
+
+include::req/advanced/sdu-frame-specification-id.adoc[]
+
+include::req/advanced/sdu-frame-specification-parameters.adoc[]
+
+include::req/advanced/sdu-orientation-quaternion.adoc[]
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 
@@ -173,6 +187,16 @@ The Graph Target supports a network of object relative poses. The graph is a dir
 image::diagram/Graph_SDU.PNG[]
 
 include::req/graph.adoc[]
+
+include::req/graph/sdu-time-geopose-instant.adoc[]
+
+include::req/graph/sdu-frame-specification-authority.adoc[]
+
+include::req/graph/sdu-frame-specification-id.adoc[]
+
+include::req/graph/sdu-frame-specification-parameters.adoc[]
+
+include::req/graph/sdu-graph-transform-index.adoc[]
 
 // Requirement not existent
 // include::req/graph/index.adoc[]
@@ -188,7 +212,13 @@ image::diagram/Chain_SDU.PNG[]
 
 include::req/chain.adoc[]
 
-include::req/chain/index.adoc[]
+include::req/chain/sdu-time-geopose-instant.adoc[]
+
+include::req/chain/sdu-frame-specification-authority.adoc[]
+
+include::req/chain/sdu-frame-specification-id.adoc[]
+
+include::req/chain/sdu-frame-specification-parameters.adoc[]
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 
@@ -200,13 +230,19 @@ The Regular (Time) Series Target represents the time evolution of a single GeoPo
 .Structure of the Regular Series SDU
 image::diagram/Regular-Series_SDU.PNG[]
 
-include::req/regular_series.adoc[]
+include::req/regular-series.adoc[]
 
-include::req/regular_series/header.adoc[]
+include::req/regular-series/sdu-header.adoc[]
 
-include::req/time/duration.adoc[]
+include::req/regular-series/sdu-time/geopose-duration.adoc[]
 
-include::req/regular_series/trailer.adoc[]
+include::req/regular-series/sdu-frame-specification-authority.adoc[]
+
+include::req/regular-series/sdu-frame-specification-id.adoc[]
+
+include::req/regular-series/sdu-frame-specification-parameters.adoc[]
+
+include::req/regular-series/sdu-series-regular-trailer.adoc[]
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 
@@ -218,11 +254,19 @@ The Irregular (Time) Series Target represents the time evolution of a single Geo
 .Structure of the Irregular Series SDU
 image::diagram/Irregular-Series_SDU.PNG[]
 
-include::req/irregular_series.adoc[]
+include::req/irregular-series.adoc[]
 
-include::req/irregular_series/header.adoc[]
+include::req/irregular-series/sdu-header.adoc[]
 
-include::req/irregular_series/frame_and_time.adoc[]
+include::req/irregular-series/sdu-frame-specification-authority.adoc[]
+
+include::req/irregular-series/sdu-frame-specification-id.adoc[]
+
+include::req/irregular-series/sdu-frame-specification-parameters.adoc[]
+
+include::req/irregular-series/sdu-irregular-series-frame-and-time.adoc[]
+
+include::req/irregular-series/sdu-regular-series-trailer.adoc[]
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 
@@ -239,9 +283,16 @@ image::diagram/Stream-Element_SDU.PNG[]
 
 include::req/stream.adoc[]
 
-include::req/transition_model.adoc[]
+include::req/stream/sdu-transition-model.adoc[]
 
-include::req/stream/frame_time_element.adoc[]
+include::req/stream/sdu-frame-specification-authority.adoc[]
+
+include::req/stream/sdu-frame-specification-id.adoc[]
+
+include::req/stream/sdu-frame-specification-parameters.adoc[]
+
+include::req/stream/sdu-stream-frame-time-element.adoc[]
+
 
 This target also depends on requirements stated in <<common-frame-specification>>.
 
@@ -261,7 +312,7 @@ The JSON encoding is one of many possible ways of implementing a concrete repres
 
 ==== Standardization Target 1: Basic-YPR
 
-include::req/basic_ypr/encoding/json.adoc[]
+include::req/basic-ypr-encoding-json/definition.adoc[]
 
 [[basic_ypr_json_schema]]
 [source,json]
@@ -291,7 +342,7 @@ All other targets follow the default and permit additional JSON properties.
 
 ===== Strict JSON Encoding
 
-include::req/basic_quaternion/encoding/json_strict.adoc[]
+include::req/basic-quaternion-encoding-json-strict/definition.adoc[]
 
 [[basic_quaternion_strict_json_schema]]
 [source,json]
@@ -313,7 +364,7 @@ include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
 
 This JSON encoding of the Basic-Quaternion GeoPose is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*. This encoding is intended to be the default GeoPose.
 
-include::req/basic_quaternion/encoding/json.adoc[]
+include::req/basic-quaternion-encoding-json/definition.adoc[]
 
 [[basic_quaternion_permissive_json_schema]]
 [source,json]
@@ -333,7 +384,7 @@ include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
 
 ==== Standardization Target 3: Advanced GeoPose
 
-include::req/advanced/encoding/json.adoc[]
+include::req/advanced-encoding-json/definition.adoc[]
 
 
 [[advanced_geopose_json_schema]]
@@ -353,7 +404,7 @@ include::instances/GeoPose.Advanced.Instance.json[]
 
 ==== Standardization Target 4: Graph
 
-include::req/graph/encoding/json.adoc[]
+include::req/graph-encoding-json/definition.adoc[]
 
 
 [[graph_json_schema]]
@@ -373,7 +424,7 @@ include::instances/GeoPose.Composite.Graph.Instance.json[]
 
 ==== Standardization Target 5: Chain
 
-include::req/chain/encoding/json.adoc[]
+include::req/chain-encoding-json/definition.adoc[]
 
 
 [[chain_json_schema]]
@@ -393,7 +444,7 @@ include::instances/GeoPose.Composite.Chain.Instance.json[]
 
 ==== Standardization Target 6: Regular Series
 
-include::req/regular_series/encoding/json.adoc[]
+include::req/series-regular-encoding-json/definition.adoc[]
 
 [[regular_series_json_schema]]
 [source,json]
@@ -412,7 +463,7 @@ include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 
 ==== Standardization Target 7: Irregular Series
 
-include::req/irregular_series/encoding/json.adoc[]
+include::req/series-irregular-encoding-json/definition.adoc[]
 
 [[irregular_series_json_schema]]
 [source,json]
@@ -431,7 +482,7 @@ include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
 
 ==== Standardization Target 8: Stream
 
-include::req/stream/header/encoding/json.adoc[]
+include::req/stream-encoding-json/header.adoc[]
 
 [[streamheader_json_schema]]
 [source,json]
@@ -440,7 +491,7 @@ include::req/stream/header/encoding/json.adoc[]
 include::schemata/GeoPose.Composite.Sequence.StreamHeader.Schema.json[]
 ----
 
-include::req/stream/element/encoding/json.adoc[]
+include::req/stream-encoding-json/element.adoc[]
 
 [[streamelement_json_schema]]
 [source,json]
@@ -449,7 +500,7 @@ include::req/stream/element/encoding/json.adoc[]
 include::schemata/GeoPose.Composite.Sequence.StreamElement.Schema.json[]
 ----
 
-include::req/stream/record/encoding/json.adoc[]
+include::req/stream-encoding-json/record.adoc[]
 
 [[streamrecord_json_schema]]
 [source,json]
