@@ -112,7 +112,7 @@ The Basic-YPR Target has a simple structure with no options. Position is specifi
 
 [[basic_ypr_sdu]]
 .Structure of the Basic YPR SDU
-image::diagram/Basic-YPR_SDU.PNG[]
+image::diagram/Basic-YPR_SDU.png[]
 
 include::req/basic-ypr.adoc[]
 
@@ -134,7 +134,7 @@ The Basic-Quaternion Target has a simple structure with no options. Position is 
 
 [[basic_quaternion_sdu]]
 .Structure of the Basic Quaternion SDU
-image::diagram/Basic-Quaternion_SDU.PNG[]
+image::diagram/Basic-Quaternion_SDU.png[]
 
 include::req/basic-quaternion.adoc[]
 
@@ -162,7 +162,7 @@ include::req/frame_specification/parameters.adoc[]
 The Advanced Target has a more general structure, supporting flexible specification of Outer Frame and a Valid Time.
 
 .Structure of the Basic Advanced SDU
-image::diagram/Advanced_SDU.PNG[]
+image::diagram/Advanced_SDU.png[]
 
 include::req/advanced.adoc[]
 
@@ -184,7 +184,7 @@ This target also depends on requirements stated in <<common-frame-specification>
 The Graph Target supports a network of object relative poses. The graph is a directed acyclic graph, each node must either be an Extrinsic Frame or reachable from an Extrinsic Frame.
 
 .Structure of the Graph SDU
-image::diagram/Graph_SDU.PNG[]
+image::diagram/Graph_SDU.png[]
 
 include::req/graph.adoc[]
 
@@ -208,7 +208,7 @@ This target also depends on requirements stated in <<common-frame-specification>
 The Chain Target supports relationships between a linear sequence of pose relationships. The first frame in the sequence must be an Outer Frame.
 
 .Structure of the Chain SDU
-image::diagram/Chain_SDU.PNG[]
+image::diagram/Chain_SDU.png[]
 
 include::req/chain.adoc[]
 
@@ -228,7 +228,7 @@ This target also depends on requirements stated in <<common-frame-specification>
 The Regular (Time) Series Target represents the time evolution of a single GeoPose, with a constant time duration between successive inner frames.
 
 .Structure of the Regular Series SDU
-image::diagram/Regular-Series_SDU.PNG[]
+image::diagram/Regular-Series_SDU.png[]
 
 include::req/regular-series.adoc[]
 
@@ -252,7 +252,7 @@ This target also depends on requirements stated in <<common-frame-specification>
 The Irregular (Time) Series Target represents the time evolution of a single GeoPose, with a variable time duration between successive inner frames.
 
 .Structure of the Irregular Series SDU
-image::diagram/Irregular-Series_SDU.PNG[]
+image::diagram/Irregular-Series_SDU.png[]
 
 include::req/irregular-series.adoc[]
 
@@ -276,10 +276,10 @@ This target also depends on requirements stated in <<common-frame-specification>
 The Stream target consists of two parts: a single initial specification of a transition model and an outer frame (the Stream Header) and zero or more time-stamped frame specifications (the Stream Elements). In the delivery of a stream the Header and Elements are not part of a single data structure that exists at a single instant. Nevertheless, recording the Header and all of the Elements received up to some point in time in a single structure is possible. The result is that there are two kinds of data objects that may be involved in transmission of a stream: Headers and Elements and a third kind of object that represents a Recorded Stream.
 
 .Structure of the Stream Header SDU
-image::diagram/Stream-Header_SDU.PNG[]
+image::diagram/Stream-Header_SDU.png[]
 
 .Structure of the Stream Element SDU
-image::diagram/Stream-Element_SDU.PNG[]
+image::diagram/Stream-Element_SDU.png[]
 
 include::req/stream.adoc[]
 
