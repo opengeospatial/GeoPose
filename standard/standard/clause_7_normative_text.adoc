@@ -29,7 +29,7 @@ Only relevant classes, properties, and associations are included. GeoPose v1.0 h
 
 [[time_logical_model]]
 .Time logical model
-image::models/Logical_time.png[]
+image::models/Logical_Time.png[]
 
 ==== Sequence
 
