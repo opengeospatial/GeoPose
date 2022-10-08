@@ -1,9 +1,8 @@
 
 [abstract_test]
-.Quaternion-SDU
 ====
 [%metadata]
-identifier:: /conf/basic_quaternion/target
+identifier:: /conf/basic-quaternion/sdu
 test-purpose:: To confirm that a Basic-Q GeoPose consists of an Outer Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters defining the tangent point and that the Inner Frame is a rotation-only transformation using a unit quaternion.
 target:: /req/basic_quaternion/target
 test-method:: Inspection

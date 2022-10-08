@@ -1,0 +1,10 @@
+[conformance_test]
+.B-TP-Lat-SDU
+====
+[%metadata]
+identifier:: /conf/basic-quaternion/sdu-tangent-plane-latitude
+description:: To confirm that a GeoPose tangentPoint.latitude attribute is expressed as an angle in decimal degrees.
+test-purpose:: Verify that this requirement is satisfied
+target:: /req/basic-quaternion/sdu-tangent-plane-latitude
+test-method:: Inspection
+====

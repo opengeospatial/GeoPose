@@ -46,11 +46,17 @@ include::conf/basic-ypr/sdu-orientation-ypr-angles.adoc[]
 
 ==== Basic-Quaternion SDU Conformance Class
 
-include::conf/basic_quaternion.adoc[]
+include::conf/basic-quaternion.adoc[]
 
-include::conf/basic_quaternion/target.adoc[]
+include::conf/basic-quaternion/sdu.adoc[]
 
-include::conf/orientation/quaternion.adoc[]
+include::conf/basic-quaternion/sdu-tangent-plane-longitude.adoc[]
+
+include::conf/basic-quaternion/sdu-tangent-plane-latitude.adoc[]
+
+include::conf/basic-quaternion/sdu-tangent-plane-h.adoc[]
+
+include::conf/basic-quaternion/sdu-orientation_quaternion.adoc[]
 
 
 ==== Advanced SDU Conformance Class
@@ -123,16 +129,16 @@ include::conf/basic_ypr/encoding/json/test.adoc[]
 
 The *Basic-Quaternion GeoPose* JSON encoding is intended for applications using quaternions. It comes in two sub-versions: normal and strict. The only difference is that a strict sub-version does not allow additional JSON members.
 
-include::conf/basic_quaternion/encoding/json.adoc[]
+include::conf/basic-quaternion-encoding-json.adoc[]
 
-include::conf/basic_quaternion/encoding/json/test.adoc[]
+include::conf/basic-quaternion-encoding-json/definition.adoc[]
 
 [NOTE]
 The *Basic-Quaternion (Strict) GeoPose* JSON encoding does not allow additional JSON members.
 
-include::conf/basic_quaternion/encoding/json_strict.adoc[]
+include::conf/basic-quaternion-encoding-json-strict.adoc[]
 
-include::conf/basic_quaternion/encoding/json_strict/test.adoc[]
+include::conf/basic-quaternion-encoding-json-strict/definition.adoc[]
 
 
 The *Advanced GeoPose* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
