@@ -139,9 +139,15 @@ include::conf/irregular-series/sdu-irregular-series-frame-and-time.adoc[]
 
 include::conf/stream.adoc[]
 
-include::conf/transition_model.adoc[]
+include::conf/stream/sdu-transition-model.adoc[]
 
-include::conf/stream/frame_time_element.adoc[]
+include::conf/stream/sdu-frame-specification/authority.adoc[]
+
+include::conf/stream/sdu-frame-specification-id.adoc[]
+
+include::conf/stream/sdu-frame-specification-parameters.adoc[]
+
+include::conf/stream/sdu-stream-frame-time-element.adoc[]
 
 
 === Encodings Conformance

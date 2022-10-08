@@ -2,8 +2,8 @@
 [conformance_test]
 ====
 [%metadata]
-identifier:: /conf/stream/frame_time_element
+identifier:: /conf/stream/sdu-stream-frame-time-element
 test-purpose:: To confirm that a Stream frame_and_time is implemented as an innerFrameAndTime property with an ExplicitFrameSpec and GeoPoseInstant pair.
-target:: /req/stream/frame_time_element
+target:: /req/stream/sdu-stream-frame-time-element
 test-method:: Inspection
 ====

@@ -1,0 +1,10 @@
+[conformance_test]
+.Stream JSON encoding member test
+====
+[%metadata]
+identifier:: /conf/stream-encoding-json/element
+description:: Confirm that GeoPose Stream data objects conform to the Stream JSON-Schema requirement.
+test-purpose:: To confirm that Stream data objects conform to the corresponding Stream Element JSON-Schema definition.
+test-method:: JSON-Schema validation.
+target:: /req/stream-encoding-json/element
+====
