@@ -3,9 +3,9 @@
 .Series-Trailer-SDU
 ====
 [%metadata]
-identifier:: /conf/regular_series/trailer
+identifier:: /conf/regular-series/sdu-series-regular-trailer
 description:: To confirm that an implementation of a Series Trailer conforms to the Logical Model.
 test-purpose:: To confirm that a Series Trailer is implemented in accordance with the Logical Model.
-target:: /req/regular_series/trailer
+target:: /req/regular-series/sdu-series-regular-trailer
 test-method:: Inspection
 ====

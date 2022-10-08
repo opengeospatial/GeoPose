@@ -3,9 +3,9 @@
 .Series-Irregular JSON encoding member test
 ====
 [%metadata]
-identifier:: /conf/irregular_series/encoding/json/test
+identifier:: /conf/series-irregular-encoding-json/definition
 description:: Confirm that GeoPose Irregular Series data objects conform to the Regular Series JSON-Schema definition.
 test-purpose:: To confirm that GeoPose Irregular Series data objects conform to the Regular Series JSON-Schema definition.
 test-method:: JSON-Schema validation.
-target:: /req/irregular_series/encoding/json
+target:: /req/series-irregular-encoding-json/definition
 ====
