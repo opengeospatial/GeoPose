@@ -16,11 +16,11 @@ include::conf/global.adoc[]
 
 The individual global tests are as follows.
 
-include::conf/target_dependency.adoc[]
+include::conf/global/target-dependency.adoc[]
 
-include::conf/sdu_general.adoc[]
+include::conf/global/sdu-general.adoc[]
 
-include::conf/lm_general.adoc[]
+include::conf/global/lm-general.adoc[]
 
 
 === Structural Data Unit (SDU) Conformance

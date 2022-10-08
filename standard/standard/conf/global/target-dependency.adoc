@@ -3,7 +3,7 @@
 .G-Target
 ====
 [%metadata]
-identifier:: /conf/target_dependency
+identifier:: /conf/global/target-dependency
 description:: There SHALL be no dependency between or among the individual Standardization Targets.
 test-purpose:: Verify that this requirement is satisfied
 test-method:: Inspection

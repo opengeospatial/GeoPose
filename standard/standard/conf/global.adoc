@@ -7,7 +7,7 @@ target:: /req/global
 classification:: Target Type:SDU
 description:: Conformance with Global SDU requirements
 
-conformance-test:: /conf/target_dependency
-conformance-test:: /conf/sdu_general
-conformance-test:: /conf/lm_general
+conformance-test:: /conf/global/target-dependency
+conformance-test:: /conf/global/sdu-general
+conformance-test:: /conf/global/lm-general
 ====
