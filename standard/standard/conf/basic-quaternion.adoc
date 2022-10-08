@@ -1,0 +1,17 @@
+
+[conformance_class]
+.Basic-Quaternion SDU
+====
+[%metadata]
+identifier:: /conf/basic-quaternion
+target:: /req/basic-quaternion
+classification:: Target Type:SDU
+description:: To confirm that components of a Basic Quaternion GeoPose conform to the Logical Model.
+inherit:: /conf/global
+
+abstract-test:: /conf/basic-quaternion/sdu
+conformance-test:: /conf/basic-quaternion/sdu-orientation_quaternion
+conformance-test:: /conf/basic-quaternion/sdu-tangent-plane-longitude
+conformance-test:: /conf/basic-quaternion/sdu-tangent-plane-latitude
+conformance-test:: /conf/basic-quaternion/sdu-tangent-plane-h
+====
