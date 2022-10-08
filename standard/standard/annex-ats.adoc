@@ -57,13 +57,15 @@ include::conf/orientation/quaternion.adoc[]
 
 include::conf/advanced.adoc[]
 
-include::conf/time/instant.adoc[]
+include::conf/advanced/sdu-time-geopose-instant.adoc[]
 
-include::conf/frame_specification/authority.adoc[]
+include::conf/advanced/sdu-frame-specification-authority.adoc[]
 
-include::conf/frame_specification/id.adoc[]
+include::conf/advanced/sdu-frame-specification-id.adoc[]
 
-include::conf/frame_specification/parameters.adoc[]
+include::conf/advanced/sdu-frame-specification-parameters.adoc[]
+
+include::conf/advanced/sdu-orientation-quaternion.adoc[]
 
 
 ==== Graph SDU Conformance Class

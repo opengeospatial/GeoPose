@@ -10,9 +10,9 @@ description:: To confirm that an implementation of the Advanced GeoPose conforms
 the Logical Model.
 inherit:: /conf/global
 
-conformance-test:: /conf/time/instant
-conformance-test:: /conf/frame_specification/authority
-conformance-test:: /conf/frame_specification/id
-conformance-test:: /conf/frame_specification/parameters
-conformance-test:: /conf/basic_quaternion
+conformance-test:: /conf/advanced/sdu-time-geopose-instant
+conformance-test:: /conf/advanced/sdu-frame-specification-authority
+conformance-test:: /conf/advanced/sdu-frame-specification-id
+conformance-test:: /conf/advanced/sdu-frame-specification-parameters
+conformance-test:: /conf/advanced/sdu-orientation-quaternion
 ====
