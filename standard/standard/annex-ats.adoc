@@ -197,15 +197,15 @@ include::conf/graph-encoding-json/definition.adoc[]
 
 The *GeoPose Regular Series* JSON encoding supports a time series of equally-spaced GeoPoses.
 
-include::conf/regular_series/encoding/json.adoc[]
+include::conf/series-regular-encoding-json.adoc[]
 
-include::conf/regular_series/encoding/json/test.adoc[]
+include::conf/series-regular-encoding-json/definition.adoc[]
 
 The *GeoPose Irregular Series* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-include::conf/irregular_series/encoding/json.adoc[]
+include::conf/series-irregular-encoding-json.adoc[]
 
-include::conf/irregular_series/encoding/json/test.adoc[]
+include::conf/series-irregular-encoding-json/definition.adoc[]
 
 The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
