@@ -209,9 +209,20 @@ include::conf/irregular_series/encoding/json/test.adoc[]
 
 The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-include::conf/stream/encoding/json.adoc[]
+include::conf/stream-encoding-json.adoc[]
 
-EDITOR: The following test should have been 3 tests: /req/stream-encoding-json/header,
+EDITOR
+====
+There was one test before: /conf/stream/encoding/json/test
+
+But then, these were added according to OGC instructions: /req/stream-encoding-json/header,
 /req/stream-encoding-json/element and /req/stream/report/encoding/json.
 
-include::conf/stream/encoding/json/test.adoc[]
+Nevertheless, their content may not be correct, please check.
+====
+
+include::conf/stream-encoding-json/header.adoc[]
+
+include::conf/stream-encoding-json/element.adoc[]
+
+include::conf/stream-encoding-json/record.adoc[]
