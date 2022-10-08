@@ -93,7 +93,15 @@ include::conf/graph/index.adoc[]
 
 include::conf/chain.adoc[]
 
-include::conf/chain/index.adoc[]
+include::conf/chain/sdu-time-geopose-instant.adoc[]
+
+include::conf/chain/sdu-frame-specification-authority.adoc[]
+
+include::conf/chain/sdu-frame-specification-id.adoc[]
+
+include::conf/chain/sdu-frame-specification-parameters.adoc[]
+
+include::conf/chain/sdu-chain-index.adoc[]
 
 ==== Regular Series SDU Conformance Class
 
@@ -157,9 +165,9 @@ include::conf/advanced/encoding/json/test.adoc[]
 
 The *GeoPose Chain* JSON encoding supports a linear sequence of frame transformations for modelling articulated structures.
 
-include::conf/chain/encoding/json.adoc[]
+include::conf/chain-encoding-json.adoc[]
 
-include::conf/chain/encoding/json/test.adoc[]
+include::conf/chain-encoding-json/definition.adoc[]
 
 The *GeoPose Graph* JSON encoding supports a directed graph structure.
 
