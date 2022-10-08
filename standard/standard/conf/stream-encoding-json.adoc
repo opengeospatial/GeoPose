@@ -3,10 +3,12 @@
 .Stream JSON encoding
 ====
 [%metadata]
-identifier:: /conf/stream/encoding/json
+identifier:: /conf/stream-encoding-json
 target:: /req/stream-encoding-json
 description:: Confirm that GeoPose Stream data objects conform to the corresponding Stream JSON-Schema requirement.
 inherit:: /conf/stream
 
-conformance-test:: /conf/stream/encoding/json/test
+conformance-test:: /conf/stream-encoding-json/header
+conformance-test:: /conf/stream-encoding-json/element
+conformance-test:: /conf/stream-encoding-json/record
 ====

@@ -3,9 +3,9 @@
 .Transition-Model-SDU
 ====
 [%metadata]
-identifier:: /conf/transition_model
+identifier:: /conf/stream/sdu-transition-model
 description:: To confirm that a TransitionModel attribute conforms to the Logical Model.
 test-purpose:: To confirm that a transition_model attribute is one of the values in the TransitionModel enumeration.
-target:: /req/transition_model
+target:: /req/stream/sdu-transition-model
 test-method:: Inspection
 ====

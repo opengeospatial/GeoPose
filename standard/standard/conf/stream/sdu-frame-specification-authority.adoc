@@ -1,0 +1,10 @@
+[conformance_test]
+.FS-Authority-SDU
+====
+[%metadata]
+identifier:: /conf/stream/sdu-frame-specification-authority
+description:: To confirm the correct properties of a Frame Specification Authority.
+test-purpose:: To confirm that a FrameSpecification.authority attribute contains a string uniquely specifying a source of reference frame specifications.
+target:: /req/stream/sdu-frame-specification-authority
+test-method:: Inspection
+====
