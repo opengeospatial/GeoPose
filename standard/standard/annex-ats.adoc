@@ -158,9 +158,9 @@ Each encoding technology has its own independent test suite. There is one confor
 
 The *Basic-YPR GeoPose* is the JSON encoding intended for widest use.
 
-include::conf/basic_ypr/encoding/json.adoc[]
+include::conf/basic-ypr-encoding-json.adoc[]
 
-include::conf/basic_ypr/encoding/json/test.adoc[]
+include::conf/basic-ypr-encoding-json/definition.adoc[]
 
 
 The *Basic-Quaternion GeoPose* JSON encoding is intended for applications using quaternions. It comes in two sub-versions: normal and strict. The only difference is that a strict sub-version does not allow additional JSON members.
@@ -179,9 +179,9 @@ include::conf/basic-quaternion-encoding-json-strict/definition.adoc[]
 
 The *Advanced GeoPose* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-include::conf/advanced/encoding/json.adoc[]
+include::conf/advanced-encoding-json.adoc[]
 
-include::conf/advanced/encoding/json/test.adoc[]
+include::conf/advanced-encoding-json/definition.adoc[]
 
 The *GeoPose Chain* JSON encoding supports a linear sequence of frame transformations for modelling articulated structures.
 
