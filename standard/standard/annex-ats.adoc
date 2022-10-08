@@ -29,19 +29,19 @@ There are some universal requirements on values that appear in a concrete implem
 
 === Basic-YPR SDU Conformance Class
 
-include::conf/basic_ypr.adoc[]
+include::conf/basic-ypr.adoc[]
 
 The Basic-YPR SDU member tests are the following:
 
-include::conf/basic_ypr/target.adoc[]
+include::conf/basic-ypr/sdu.adoc[]
 
-include::conf/tangent_plane/longitude.adoc[]
+include::conf/basic-ypr/sdu-tangent-plane-longitude.adoc[]
 
-include::conf/tangent_plane/latitude.adoc[]
+include::conf/basic-ypr/sdu-tangent-plane-latitude.adoc[]
 
-include::conf/tangent_plane/h.adoc[]
+include::conf/basic-ypr/sdu-tangent-plane-h.adoc[]
 
-include::conf/orientation/ypr_angles.adoc[]
+include::conf/basic-ypr/sdu-orientation-ypr-angles.adoc[]
 
 
 ==== Basic-Quaternion SDU Conformance Class
