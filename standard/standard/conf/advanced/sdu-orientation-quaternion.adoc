@@ -1,0 +1,10 @@
+[conformance_test]
+.Quaternion-SDU
+====
+[%metadata]
+identifier:: /conf/advanced/sdu-orientation-quaternion
+description:: To confirm the correct properties of a quaternion.
+test-purpose:: To confirm that the unit quaternion consists of four representations of real number values and that the square root of the sum of the squares of those numbers is approximately 1.
+target:: /req/advanced/sdu-orientation-quaternion
+test-method:: Inspection
+====

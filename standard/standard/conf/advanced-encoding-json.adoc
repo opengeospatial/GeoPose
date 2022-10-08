@@ -3,10 +3,10 @@
 .Advanced JSON encoding
 ====
 [%metadata]
-identifier:: /conf/advanced/encoding/json
+identifier:: /conf/advanced-encoding-json
 target:: /req/advanced-encoding-json
 description:: To confirm that a JSON-encoded Advanced GeoPose conforms to the relevant elements of the Logical Model and a specific JSON-Schema document.
 inherit:: /conf/advanced_sdu
 
-conformance-test:: /conf/advanced/encoding/json/test
+conformance-test:: /conf/advanced-encoding-json/definition
 ====
