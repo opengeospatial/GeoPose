@@ -78,6 +78,14 @@ include::conf/advanced/sdu-orientation-quaternion.adoc[]
 
 include::conf/graph.adoc[]
 
+include::conf/graph/sdu-time-geopose-instant.adoc[]
+
+include::conf/graph/sdu-frame-specification-authority.adoc[]
+
+include::conf/graph/sdu-frame-specification-id.adoc[]
+
+include::conf/graph/sdu-frame-specification-parameters.adoc[]
+
 include::conf/graph/index.adoc[]
 
 
@@ -155,9 +163,9 @@ include::conf/chain/encoding/json/test.adoc[]
 
 The *GeoPose Graph* JSON encoding supports a directed graph structure.
 
-include::conf/graph/encoding/json.adoc[]
+include::conf/graph-encoding-json.adoc[]
 
-include::conf/graph/encoding/json/test.adoc[]
+include::conf/graph-encoding-json/definition.adoc[]
 
 The *GeoPose Regular Series* JSON encoding supports a time series of equally-spaced GeoPoses.
 
