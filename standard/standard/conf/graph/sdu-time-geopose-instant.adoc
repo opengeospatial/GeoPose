@@ -1,0 +1,12 @@
+
+[conformance_test]
+.GP-Instant-SDU
+====
+[%metadata]
+identifier:: /conf/graph/sdu-time-geopose-instant
+description:: To confirm the correct properties of a GeoPose Instant.
+test-purpose:: To confirm that a Logical Model attribute GeoPoseInstant is Unix Time in
+seconds multiplied by 1,000 and that the unit of measure is milliseconds.
+target:: /req/graph/sdu-time-geopose-instant
+test-method:: Inspection
+====

@@ -1,0 +1,11 @@
+
+[conformance_test]
+.FS-ID-SDU
+====
+[%metadata]
+identifier:: /conf/graph/sdu-frame-specification-id
+description:: To confirm the correct properties of a Frame Specification ID.
+test-purpose:: To confirm that a FrameSpecification.id attribute contains a string uniquely specifying the identity of a reference frame specification as defined by that authority.
+target:: /req/graph/sdu-frame-specification-id
+test-method:: Inspection
+====
