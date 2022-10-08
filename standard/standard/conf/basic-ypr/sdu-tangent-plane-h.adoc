@@ -1,0 +1,12 @@
+
+
+[conformance_test]
+.B-TP-h-SDU
+====
+[%metadata]
+identifier:: /conf/basic-ypr/sdu-tangent-plane-h
+description:: To confirm that a GeoPose `tangentPoint.h` attribute is expressed as a height in meters above the WGS-84 ellipsoid.
+test-purpose:: Verify that this requirement is satisfied
+test-method:: Inspection
+target:: /req/basic-ypr/sdu-tangent-plane-h
+====
