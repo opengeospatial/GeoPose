@@ -1,0 +1,11 @@
+
+[conformance_test]
+.FS-Parameters-SDU
+====
+[%metadata]
+identifier:: /conf/irregular-series/sdu-frame-specification-parameters
+description:: To confirm the correct properties of Frame Specification Parameters.
+test-purpose:: To confirm that a FrameSpecification.parameters attribute contains contain all parameters needed for the corresponding authority and ID.
+target:: /req/irregular-series/sdu-frame-specification-parameters
+test-method:: Inspection
+====

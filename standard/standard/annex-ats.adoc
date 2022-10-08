@@ -105,20 +105,34 @@ include::conf/chain/sdu-chain-index.adoc[]
 
 ==== Regular Series SDU Conformance Class
 
-include::conf/regular_series.adoc[]
+include::conf/regular-series.adoc[]
 
-include::conf/series_header.adoc[]
+include::conf/regular-series/sdu-header.adoc[]
 
-include::conf/time/duration.adoc[]
+include::conf/regular-series/sdu-time/geopose-duration.adoc[]
 
-include::conf/regular_series/trailer.adoc[]
+include::conf/regular-series/sdu-frame-specification-authority.adoc[]
+
+include::conf/regular-series/sdu-frame-specification-id.adoc[]
+
+include::conf/regular-series/sdu-frame-specification-parameters.adoc[]
+
+include::conf/regular-series/sdu-series-regular-trailer.adoc[]
 
 
 ==== Irregular Series SDU Conformance Class
 
-include::conf/irregular_series.adoc[]
+include::conf/irregular-series.adoc[]
 
-include::conf/irregular_series/frame_and_time.adoc[]
+include::conf/irregular-series/sdu-header.adoc[]
+
+include::conf/irregular-series/sdu-frame-specification-authority.adoc[]
+
+include::conf/irregular-series/sdu-frame-specification-id.adoc[]
+
+include::conf/irregular-series/sdu-frame-specification-parameters.adoc[]
+
+include::conf/irregular-series/sdu-irregular-series-frame-and-time.adoc[]
 
 
 ==== Stream SDU Conformance Class
