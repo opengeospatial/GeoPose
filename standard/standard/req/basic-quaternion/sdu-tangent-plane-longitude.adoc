@@ -2,6 +2,6 @@
 .B-TP-Lon-SDU
 ====
 [%metadata]
-identifier:: /req/basic-ypr/sdu-tangent-plane-longitude
+identifier:: /req/basic-quaternion/sdu-tangent-plane-longitude
 description:: An instance of a GeoPose tangentPoint.longitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
 ====

@@ -1,5 +1,5 @@
 
-[abstract_test]
+[conformance_test]
 .Series-Irregular JSON encoding member test
 ====
 [%metadata]

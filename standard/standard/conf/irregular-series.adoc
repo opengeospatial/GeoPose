@@ -10,7 +10,6 @@ description:: To confirm that a Regular Series conforms to the Logical Model.
 inherit:: /conf/global
 
 conformance-test:: /conf/irregular-series/sdu-header
-conformance-test:: /conf/time/duration
 conformance-test:: /conf/irregular-series/sdu-frame-specification-authority
 conformance-test:: /conf/irregular-series/sdu-frame-specification-id
 conformance-test:: /conf/irregular-series/sdu-frame-specification-parameters
