@@ -1,5 +1,5 @@
 
-[abstract_test]
+[conformance_test]
 .Graph-Index-SDU
 ====
 [%metadata]

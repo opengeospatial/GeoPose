@@ -1,0 +1,11 @@
+
+[conformance_test]
+.Series-Trailer-SDU
+====
+[%metadata]
+identifier:: /conf/irregular-series/sdu-regular-series-trailer
+description:: To confirm that an implementation of a Series Trailer conforms to the Logical Model.
+test-purpose:: To confirm that a Series Trailer is implemented in accordance with the Logical Model.
+target:: /req/irregular-series/sdu-regular-series-trailer
+test-method:: Inspection
+====

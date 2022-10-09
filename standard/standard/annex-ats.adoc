@@ -86,7 +86,7 @@ include::conf/graph/sdu-frame-specification-id.adoc[]
 
 include::conf/graph/sdu-frame-specification-parameters.adoc[]
 
-include::conf/graph/index.adoc[]
+include::conf/graph/sdu-graph-index.adoc[]
 
 
 ==== Chain SDU Conformance Class
@@ -134,6 +134,8 @@ include::conf/irregular-series/sdu-frame-specification-parameters.adoc[]
 
 include::conf/irregular-series/sdu-irregular-series-frame-and-time.adoc[]
 
+include::conf/irregular-series/sdu-regular-series-trailer.adoc[]
+
 
 ==== Stream SDU Conformance Class
 
@@ -141,7 +143,7 @@ include::conf/stream.adoc[]
 
 include::conf/stream/sdu-transition-model.adoc[]
 
-include::conf/stream/sdu-frame-specification/authority.adoc[]
+include::conf/stream/sdu-frame-specification-authority.adoc[]
 
 include::conf/stream/sdu-frame-specification-id.adoc[]
 

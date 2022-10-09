@@ -10,7 +10,7 @@ description:: To confirm that a GeoPose Stream conforms to the Logical Model.
 inherit:: /conf/global
 
 conformance-test:: /conf/stream/sdu-transition-model
-conformance-test:: /conf/stream/sdu-frame-specification/authority
+conformance-test:: /conf/stream/sdu-frame-specification-authority
 conformance-test:: /conf/stream/sdu-frame-specification-id
 conformance-test:: /conf/stream/sdu-frame-specification-parameters
 conformance-test:: /conf/stream/sdu-stream-frame-time-element
