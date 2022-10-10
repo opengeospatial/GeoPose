@@ -3,7 +3,8 @@
 :docsubtype: implementation
 :status: draft
 :language: en
-:committee: GeoPose Standard Working Group
+:committee: technical
+:workgroup: GeoPose Standard Working Group
 :docnumber: 21-056r10
 :edition: 1
 :received-date: 2022-02-08
@@ -15,13 +16,11 @@
 :role: editor
 :keywords: ogc, ogcdoc, OGC document, pose, geopose, ar, reference frame
 :submitting-organizations: Norkart AS; Open Site Plan; Open AR Cloud Association; Ordnance Survey; School of Management and Engineering Vaud, HES-SO University of Applied Sciences and Arts Western Switzerland
-:toclevels: 3
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf,rxl
 :requirements-model: ogc
 :local-cache-only:
 :data-uri-image:
-
 
 include::clause_0_front_material.adoc[]
 
