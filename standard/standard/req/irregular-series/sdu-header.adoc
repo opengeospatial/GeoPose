@@ -1,7 +1,0 @@
-[requirement]
-.S-IHeader-SDU
-====
-[%metadata]
-identifier:: /req/irregular-series/sdu-header
-description:: A header property SHALL be implemented as a SeriesHeader.
-====

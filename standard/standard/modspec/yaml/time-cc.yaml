@@ -1,0 +1,31 @@
+---
+scopes:
+- name: Time specification requirements
+  identifier: /conf/time
+  target: /req/time
+  description: Conformance with GeoPose time-related requirements
+
+  tests:
+  - name: Verify values of GeoPose_Instant
+    identifier: /conf/time/instant
+    targets:
+    - /req/time/instant
+    description: |
+      Verify that a `GeoPose_Instant` object expresses Unix time in seconds multiplied
+      by 1,000, with the unit of measure in milliseconds.
+    purpose: |
+      To confirm the correct properties of a GeoPose_Instant object.
+    method: Inspection
+
+  - name: Verify values of GeoPose_Duration
+    identifier: /conf/time/duration
+    targets:
+    - /req/time/duration
+    description: |
+      Verify that a `GeoPose_Duration` object expresses time in seconds multiplied
+      by 1,000, with the unit of measure in milliseconds.
+    purpose: |
+      To confirm that a FrameSpecification.id attribute contains a string
+      uniquely specifying the identity of a reference frame specification as
+      defined by that authority.
+    method: Inspection

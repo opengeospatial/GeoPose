@@ -1,0 +1,38 @@
+---
+scopes:
+- name: Basic-YPR logical model SDU conformance
+  identifier: /conf/basic-ypr
+  target: /req/basic-ypr
+  classification: "Target Type: SDU"
+  description: Conformance with Basic-YPR logical model SDU
+  dependencies:
+  - /conf/global
+  - /conf/tangent-point
+
+  tests:
+  - name: Verify expression of outer frame
+    identifier: /conf/basic-ypr/position
+    targets:
+    - /req/basic-ypr/position
+    description: |
+      To confirm that an implementation of a Basic-YPR consists of an Outer
+      Frame specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS
+      (LTP-ENU) coordinate system and explicit parameters to define the tangent
+      point.
+    purpose: |
+      Verify that this requirement is satisfied.
+    method: Inspection
+
+  - name: Verify expression of inner frame
+    identifier: /conf/basic-ypr/angles
+    targets:
+    - /req/basic-ypr/angles
+    description: |
+      To confirm that the Inner Frame is expressed as a rotation-only
+      transformation using Yaw, Pitch, and Roll angles. To confirm that GeoPose
+      YPR angles are expressed as three consecutive rotations about the local
+      axes Z, Y, and X, in that order, corresponding to the conventional Yaw,
+      Pitch, and Roll angles and that the unit of measure is the degree.
+    purpose: |
+      Verify that this requirement is satisfied.
+    method: Inspection

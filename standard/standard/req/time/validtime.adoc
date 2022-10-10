@@ -1,8 +1,0 @@
-
-[requirement]
-.Valid time
-====
-[%metadata]
-identifier:: /req/time/validtime
-description:: The Logical Model attribute Pose.validTime shall Unix Time in seconds multiplied by 1,000. The unit of measure shall be milliseconds.
-====

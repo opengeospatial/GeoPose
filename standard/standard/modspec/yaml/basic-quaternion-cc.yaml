@@ -1,0 +1,43 @@
+---
+scopes:
+- name: Basic-Quaternion logical model SDU conformance
+  identifier: /conf/basic-quaternion
+  target: /req/basic-quaternion
+  classification: "Target Type: SDU"
+  description: Conformance with Basic-Quaternion logical model SDU
+  dependencies:
+  - /conf/global
+  - /conf/tangent-point
+
+  tests:
+  - name: Verify expression of outer frame
+    identifier: /conf/basic-quaternion/position
+    targets:
+    - /req/basic-quaternion/position
+    description: |
+      To confirm that a Basic-Quaternion GeoPose contains an Outer Frame
+      specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU)
+      coordinate system and explicit parameters defining the tangent point.
+    purpose: |
+      Verify that this requirement is satisfied.
+    method: Inspection
+
+  - name: Verify expression of inner frame
+    identifier: /conf/basic-quaternion/quaternion
+    targets:
+    - /req/basic-quaternion/quaternion
+    description: |
+      To confirm that a Basic-Quaternion GeoPose contains an Inner Frame is a
+      rotation-only transformation using a unit quaternion, which is an instance
+      of a GeoPose Logical Model quaternion data type value that is expressed as
+      four real numbers, representing four quaternion components w, x, y, z, in
+      that sequential order.
+
+      The sum of the squares of the individual components is as close to 1.0 as
+      the real number representation allows. The quaternion is applied to an
+      initial reference frame oriented East-North-Up (ENU) coordinate system
+      where the coordinate axes East, North, and Up correspond to the axes X, Y,
+      Z.
+    purpose: |
+      Verify that this requirement is satisfied.
+    method: Inspection

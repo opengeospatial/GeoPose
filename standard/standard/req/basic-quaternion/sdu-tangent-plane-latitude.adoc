@@ -1,7 +1,0 @@
-[requirement]
-.B-TP-Lat-SDU
-====
-[%metadata]
-identifier:: /req/basic-quaternion/sdu-tangent-plane-latitude
-description:: An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed as decimal degrees and represented as signed real number values.
-====

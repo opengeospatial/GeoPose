@@ -1,8 +1,0 @@
-
-[requirement]
-.GeoPose YPR encoding requirements
-====
-[%metadata]
-identifier:: /req/basic-ypr/sdu-orientation-ypr-angles
-description:: Yaw, Pitch, and Roll (YPR) angles SHALL be expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU) coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure SHALL be the degree and the angles represented as signed real number values.
-====

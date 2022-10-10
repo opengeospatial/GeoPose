@@ -1,0 +1,16 @@
+---
+scopes:
+- name: JSON encoding of Advanced SDU
+  identifier: /req/advanced-encoding-json
+  description: |
+    Requirements for the JSON encoding of a Advanced SDU.
+  implements:
+  - /req/advanced
+
+  requirements:
+
+  - name: Specification as JSON schema
+    identifier: /req/advanced-encoding-json/definition
+    description: |
+      A JSON-encoded Advanced GeoPose SHALL conform to the
+      Advanced JSON-Schema 2019-9 definition (<<advanced_geopose_json_schema>>).

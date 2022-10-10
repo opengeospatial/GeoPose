@@ -1,0 +1,47 @@
+---
+scopes:
+- name: JSON encoding of Stream SDUs
+  identifier: /conf/stream-encoding-json
+  target: /req/stream-encoding-json
+  classification: "Target Type: JSON SDU"
+  description: |
+    Confirm that a JSON-encoded GeoPose Stream conforms to the
+    relevant elements of the Logical Model and a corresponding JSON-Schema
+    document.
+
+  tests:
+  - name: Verify Stream Element conformance to JSON schema
+    identifier: /conf/stream-encoding-json/element
+    targets:
+    - /req/stream-encoding-json/element
+    description: |
+      To confirm that a GeoPose Stream Element in JSON validates against the JSON schema.
+    purpose: |
+      Verify JSON data conforms to the JSON schema.
+    method: |
+      Validate the JSON data against the GeoPose Stream Element
+      JSON-Schema 2019-9 definition (<<streamelement_json_schema>>).
+
+  - name: Verify Stream Header conformance to JSON schema
+    identifier: /conf/stream-encoding-json/header
+    targets:
+    - /req/stream-encoding-json/header
+    description: |
+      To confirm that a GeoPose Stream Header in JSON validates against the JSON schema.
+    purpose: |
+      Verify JSON data conforms to the JSON schema.
+    method: |
+      Validate the JSON data against the GeoPose Stream Header
+      JSON-Schema 2019-9 definition (<<streamheader_json_schema>>).
+
+  - name: Verify Stream Record conformance to JSON schema
+    identifier: /conf/stream-encoding-json/record
+    targets:
+    - /req/stream-encoding-json/record
+    description: |
+      To confirm that a GeoPose Stream Record in JSON validates against the JSON schema.
+    purpose: |
+      Verify JSON data conforms to the JSON schema.
+    method: |
+      Validate the JSON data against the GeoPose Stream Record
+      JSON-Schema 2019-9 definition (<<streamrecord_json_schema>>).

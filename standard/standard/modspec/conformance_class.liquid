@@ -1,0 +1,89 @@
+{% assign count = 0 %}
+{% for scope in group.scopes %}
+{% assign count = count | plus: 1 %}
+[[cc-{{prefix}}-{{count}}]]
+.{{scope.name}}
+[conformance_class]
+====
+[%metadata]
+identifier:: {{scope.identifier}}
+description:: {{scope.description}}
+target:: {{scope.target}}
+
+{% for depend in {{scope.dependencies}} %}
+inherit:: {{depend}}
+{% endfor %}
+
+{% for test in {{scope.tests}} %}
+conformance-test:: {{test.identifier}}
+{% endfor %}
+
+{% if {{scope.guidance}} %}
+guidance::
++
+--
+{% for rec in {{scope.guidance}} %}
+* {{rec}}
+{% endfor %}
+--
+{% endif %}
+
+{% if {{scope.clause}} %}
+Clause::
++
+--
+{{scope.clause}}
+--
+{% endif %}
+====
+
+{% for test in {{scope.tests}} %}
+{% if {{test.name}} %}
+.{{test.name}}
+{% endif %}
+[conformance_test]
+====
+[%metadata]
+identifier:: {{test.identifier}}
+description:: {{test.description}}
+
+{% for target in {{test.targets}} %}
+target:: {{target}}
+
+{% endfor %}
+
+{% for depend in {{test.dependencies}} %}
+inherit:: {{depend}}
+{% endfor %}
+
+{% if {{test.guidance}} %}
+guidance::
++
+--
+{% for rec in {{test.guidance}} %}
+* {{rec}}
+{% endfor %}
+--
+{% endif %}
+
+
+{% if {{test.purpose}} %}
+test-purpose:: {{test.purpose}}
+{% endif %}
+
+{% if {{test.method}} %}
+test-method::
++
+--
+{{test.method}}
+--
+{% endif %}
+
+{% if {{test.type}} %}
+Test type:: {{test.type}}
+{% endif %}
+====
+
+{% endfor %}
+
+{% endfor %}

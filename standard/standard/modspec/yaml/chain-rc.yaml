@@ -1,0 +1,36 @@
+---
+scopes:
+- name: Chain logical model SDU
+  identifier: /req/chain
+  description: |
+    The Chain Target supports relationships between a linear sequence of pose
+    relationships. The first frame in the sequence must be an Outer Frame.
+
+  dependencies:
+  - /req/global
+  - /req/frame-spec
+  - /req/time
+
+  requirements:
+
+  - name: Expression of valid time as GeoPose_Instant
+    identifier: /req/chain/valid-time
+    dependencies:
+    - /req/time/instant
+    description: |
+      The `Chain.validTime` attribute shall be represented by a
+      `GeoPose_Instant` object.
+
+  - name: Specification of initial frame
+    identifier: /req/chain/initial-frame
+    description: |
+      The `Chain.outerFrame` attribute shall represent the first frame in the
+      sequence with the `ExplicitFrameSpec` object.
+
+  - name: Chain of frame specifications
+    identifier: /req/chain/frame-chain
+    description: |
+      The `Chain.frameChain` attribute shall represent a list of explicit
+      frame specifications with an array of `ExplicitFrameSpec` objects.
+      Each index value shall be a distinct integer value between 0 and one less
+      than the number of elements in the frameChain property.

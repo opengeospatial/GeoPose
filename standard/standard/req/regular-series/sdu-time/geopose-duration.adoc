@@ -1,8 +1,0 @@
-
-[requirement]
-.GP-Duration-SDU
-====
-[%metadata]
-identifier:: /req/regular-series/sdu-time/geopose-duration
-description:: An interposeDuration property SHALL be implemented as a GeoPoseDuration.
-====
