@@ -2,7 +2,8 @@
 scopes:
 - name: Tangent point requirements
   identifier: /req/tangent-point
-  description: Implements <<ISO_19115-2_2019,clause="6.3.2">>.
+  description: |
+    Common tangent point requirements for SDUs that include tangent points.
   guidance: |
     The tangent plane `longitude`, `latitude`, and `h` parameters are
     specified without any conditions or constraints on precision to be used in

@@ -50,7 +50,11 @@ Clause::
 ====
 [%metadata]
 identifier:: {{test.identifier}}
-description:: {{test.description}}
+description::
++
+--
+{{test.description}}
+--
 
 {% for target in {{test.targets}} %}
 target:: {{target}}

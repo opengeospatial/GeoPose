@@ -3,7 +3,9 @@ scopes:
 - name: Strict JSON encoding of Basic-Quaternion SDU
   identifier: /req/basic-quaternion-encoding-json-strict
   description: |
-    Requirements for the JSON encoding of a Basic-Quaternion SDU in strict mode. The strict encoding does not allow specification of JSON elements outside of the schema.
+    Requirements for the JSON encoding of a Basic-Quaternion SDU in strict mode.
+    The strict encoding does not allow specification of JSON elements outside of
+    the schema.
   implements:
   - /req/basic-quaternion
 
