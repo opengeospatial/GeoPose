@@ -7,7 +7,12 @@
 ====
 [%metadata]
 identifier:: {{scope.identifier}}
-description:: {{scope.description}}
+description::
++
+--
+{{scope.description}}
+--
+
 target:: {{scope.target}}
 
 {% for depend in {{scope.dependencies}} %}
