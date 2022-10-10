@@ -1,0 +1,23 @@
+---
+scopes:
+- name: JSON encoding of Advanced SDU
+  identifier: /conf/advanced-encoding-json
+  target: /req/advanced-encoding-json
+  classification: "Target Type: JSON SDU"
+  description: |
+    Confirm that a JSON-encoded Advanced GeoPose conforms to the
+    relevant elements of the Logical Model and a corresponding JSON-Schema
+    document.
+
+  tests:
+  - name: Verify conformance via JSON schema
+    identifier: /conf/advanced-encoding-json/definition
+    targets:
+    - /req/advanced-encoding-json/definition
+    description: |
+      To confirm that a Advanced GeoPose in JSON validates against the JSON schema.
+    purpose: |
+      Verify that data validates against the corresponding JSON schema.
+    method: |
+      Validate the JSON data against the Advanced JSON-Schema 2019-9 definition
+      (<<advanced_geopose_json_schema>>).

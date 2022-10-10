@@ -1,8 +1,0 @@
-
-[requirement]
-.S-TM-SDU
-====
-[%metadata]
-identifier:: /req/stream/sdu-transition-model
-description:: A TransitionModel property SHALL be implemented as one of the values in the TransitionModel enumeration.
-====

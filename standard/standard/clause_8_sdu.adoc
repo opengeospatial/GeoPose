@@ -1,0 +1,175 @@
+== Structural Data Units and Standardization Targets
+
+=== General
+
+Classes, attributes, and relationships of the GeoPose domain are specified in a (normative) GeoPose UML static class model - the GeoPose Logical Model. Standardization Targets are specified by encoding-neutral elements of the Logical Model. These Structural Data Units (SDUs) are elements (classes or attributes) in the Logical Model with the "Structural Data Unit - SDU" stereotype. SDUs may have additional Requirements limiting the range, multiplicity, representation or other constraining and testable characteristics. SDUs are used individually or in combination combined to express each of the Standardization Targets.
+
+SDUs provide Standardization Targets that are independent of serialization/encoding format. This allows multiple equivalent serializations to be defined. Each SDU that may be expressed as a concrete data object is associated with a corresponding element (class or attribute) in the logical model.
+
+The Basic and Advanced Standardization Targets differ in the level of options and flexibility in the Frame Specifications. The Composite Targets offer approaches to packaging Frame Transforms. The Targets are the data classes that are specified by the GeoPose Standard. There are eight Standardization Targets denoted by bold terms in the following categories:
+
+. Basic - Satisfy most use cases
+.. Orientation by Yaw, Pitch, and Roll (YPR) rotations about z, y, x axes: *Basic-YPR* Target
+.. Orientation by unit quaternion: *Basic-Quaternion* Target
+. Configurable - Flexible enough for complex use cases including full 6DoF transformations: *Advanced* Target
+. Composite - Efficient structures for linked and sequential GeoPoses
+.. Linked linear sequence of poses linked by full 6DoF transformations: *Chain* Target
+.. General linked poses: *Graph* Target
+.. Sequence
+... Series
+.... Time series with constant time spacing: *Regular* Time series Target
+.... Time series with per-GeoPose time: *Irregular* Time series Target
+... Open-ended sequence of time-stamped GeoPoses: *Stream* Target
+
+[NOTE]
+The definition of a reference frame by an external standard in *not* specified. GeoPose does use a three-part designation of an external frame specification using the three fields _authority_, _ID_, and _parameters_. The interpretation of the contents of these fields is outside the scope of GeoPose.
+
+
+=== Global requirements
+
+Global requirements apply to all SDUs and Standardization Targets.
+
+[yaml2text,modspec/yaml/global-rc.yaml,group]
+----
+{% assign prefix = "global" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+=== Common requirements
+
+[[tangent-point-specification]]
+==== Tangent point specification requirements
+
+[yaml2text,modspec/yaml/tangent-point-rc.yaml,group]
+----
+{% assign prefix = "tangent-point" %}
+include::modspec/requirements_class.liquid[]
+----
+
+[[common-frame-specification]]
+==== Frame specification requirements
+
+[yaml2text,modspec/yaml/frame-spec-rc.yaml,group]
+----
+{% assign prefix = "frame-spec" %}
+include::modspec/requirements_class.liquid[]
+----
+
+[[time-specification]]
+==== Time specification requirements
+
+[yaml2text,modspec/yaml/time-rc.yaml,group]
+----
+{% assign prefix = "time" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+=== SDU requirements
+
+==== Requirements for Standardization Target 1: Basic-YPR
+
+[[basic_ypr_sdu]]
+.Structure of the Basic YPR SDU
+image::diagram/Basic-YPR_SDU.png[]
+
+[yaml2text,modspec/yaml/basic-ypr-rc.yaml,group]
+----
+{% assign prefix = "basic-ypr" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+==== Requirements for Standardization Target 2: Basic-Quaternion
+
+[[basic_quaternion_sdu]]
+.Structure of the Basic Quaternion SDU
+image::diagram/Basic-Quaternion_SDU.png[]
+
+[yaml2text,modspec/yaml/basic-quaternion-rc.yaml,group]
+----
+{% assign prefix = "basic-quaternion" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+==== Requirements for Standardization Target 3: Advanced
+
+.Structure of the Basic Advanced SDU
+image::diagram/Advanced_SDU.png[]
+
+[yaml2text,modspec/yaml/advanced-rc.yaml,group]
+----
+{% assign prefix = "advanced" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+==== Requirements for Standardization Target 4: Graph
+
+.Structure of the Graph SDU
+image::diagram/Graph_SDU.png[]
+
+[yaml2text,modspec/yaml/graph-rc.yaml,group]
+----
+{% assign prefix = "graph" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+==== Requirements for Standardization Target 5: Chain
+
+.Structure of the Chain SDU
+image::diagram/Chain_SDU.png[]
+
+[yaml2text,modspec/yaml/chain-rc.yaml,group]
+----
+{% assign prefix = "chain" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+==== Requirements for Standardization Target 6: Regular Series
+
+.Structure of the Regular Series SDU
+image::diagram/Regular-Series_SDU.png[]
+
+[yaml2text,modspec/yaml/series-regular-rc.yaml,group]
+----
+{% assign prefix = "series-regular" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+==== Requirements for Standardization Target 7: Irregular Series
+
+.Structure of the Irregular Series SDU
+image::diagram/Irregular-Series_SDU.png[]
+
+[yaml2text,modspec/yaml/series-irregular-rc.yaml,group]
+----
+{% assign prefix = "series-irregular" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+==== Requirements for Standardization Target 8: Stream
+
+The Stream target consists of two parts: a single initial specification of a transition model and an outer frame (the Stream Header) and zero or more time-stamped frame specifications (the Stream Elements). In the delivery of a stream the Header and Elements are not part of a single data structure that exists at a single instant.
+
+Nevertheless, recording the Header and all of the Elements received up to some point in time in a single structure is possible. The result is that there are two kinds of data objects that may be involved in transmission of a stream: Headers and Elements and a third kind of object that represents a Recorded Stream.
+
+.Structure of the Stream Header SDU
+image::diagram/Stream-Header_SDU.png[]
+
+.Structure of the Stream Element SDU
+image::diagram/Stream-Element_SDU.png[]
+
+[yaml2text,modspec/yaml/stream-rc.yaml,group]
+----
+{% assign prefix = "stream" %}
+include::modspec/requirements_class.liquid[]
+----
+
+

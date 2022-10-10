@@ -1,0 +1,38 @@
+---
+scopes:
+- name: Graph logical model SDU
+  identifier: /req/graph
+  description: |
+    The Graph Target supports a network of object relative poses. The graph is a
+    directed acyclic graph, each node must either be an Extrinsic Frame or
+    reachable from an Extrinsic Frame.
+
+  dependencies:
+  - /req/global
+  - /req/frame-spec
+  - /req/time
+
+  requirements:
+
+  - name: Expression of valid time as GeoPose_Instant
+    identifier: /req/graph/valid-time
+    dependencies:
+    - /req/time/instant
+    description: |
+      The `Graph.validTime` attribute shall be represented by a
+      `GeoPose_Instant` object.
+
+  - name: List of frame specifications
+    identifier: /req/graph/frame-list
+    description: |
+      The `Graph.frameList` attribute shall represent a list of explicit
+      frame specifications with an array of `ExplicitFrameSpec` objects.
+
+  - name: Transforms for frame specification list
+    identifier: /req/graph/transform-list
+    description: |
+      The `Graph.transformList` attribute shall have a value of type
+      `FrameTransformIndexPair`.
+      Each index value in a `FrameListTransformPair` SHALL be a distinct integer
+      value between 0 and one less than the number of elements in the
+      `frameList` property.

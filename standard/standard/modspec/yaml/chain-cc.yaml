@@ -1,0 +1,49 @@
+---
+scopes:
+- name: Chain logical model SDU conformance
+  identifier: /conf/chain
+  target: /req/chain
+  classification: "Target Type: SDU"
+  description: To confirm that an implementation of the GeoPose Chain conforms to the Logical Model.
+  dependencies:
+  - /conf/global
+  - /conf/frame-spec
+  - /conf/time
+
+  tests:
+  - name: Verify expression of valid time as GeoPose_Instant
+    identifier: /conf/chain/valid-time
+    targets:
+    - /req/chain/valid-time
+    dependencies:
+    - /conf/time/instant
+    description: |
+      To confirm the correct properties of a GeoPose_Instant.
+    purpose: |
+      Confirm that the `Chain.validTime` attribute is represented by a
+      `GeoPose_Instant` object.
+    method: Inspection
+
+  - name: Verify specification of initial frame
+    identifier: /conf/chain/initial-frame
+    targets:
+    - /req/chain/initial-frame
+    description: |
+      To confirm that an implementation of an Chain SDU contains an initial
+      frame under `Chain.outerFrame`.
+    purpose: |
+      Verify that this requirement is satisfied.
+    method: Inspection
+
+  - name: Verify chain of frame specifications
+    identifier: /conf/chain/frame-chain
+    targets:
+    - /req/chain/frame-chain
+    description: |
+      To confirm that each index value in `Chain.frameChain` is a distinct
+      integer value between 0 and one less than the number of elements in the
+      frameChain property.
+    purpose: |
+      To confirm that an implementation of Chain Index conforms to the Logical Model.
+    method: Inspection
+

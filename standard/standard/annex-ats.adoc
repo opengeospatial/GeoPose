@@ -12,219 +12,216 @@ Although implementation of the Standardization Targets, expressed as SDUs, is in
 
 Conformance with the Global Requirements is required for all implementations.
 
-include::conf/global.adoc[]
+[yaml2text,modspec/yaml/global-cc.yaml,group]
+----
+{% assign prefix = "global" %}
+include::modspec/conformance_class.liquid[]
+----
 
-The individual global tests are as follows.
+=== Common conformance classes
 
-include::conf/global/target-dependency.adoc[]
+==== Tangent point specification conformance class
 
-include::conf/global/sdu-general.adoc[]
+[yaml2text,modspec/yaml/tangent-point-cc.yaml,group]
+----
+{% assign prefix = "tangent-point" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/global/lm-general.adoc[]
+==== Frame specification conformance class
+
+[yaml2text,modspec/yaml/frame-spec-cc.yaml,group]
+----
+{% assign prefix = "frame-spec" %}
+include::modspec/conformance_class.liquid[]
+----
+
+==== Time specification conformance class
+
+[yaml2text,modspec/yaml/time-cc.yaml,group]
+----
+{% assign prefix = "time" %}
+include::modspec/conformance_class.liquid[]
+----
 
 
-=== Structural Data Unit (SDU) Conformance
+=== SDU conformance
+
+==== General
 
 There are some universal requirements on values that appear in a concrete implementation using a specific encoding technology. For example, angles may be constrained to fall within a range of values corresponding to a circle. Because these are independent of encoding technology, they are specified here at a logical level. Tests of an implementation at the SDU level generally only be done by inspection.
 
-=== Basic-YPR SDU Conformance Class
+==== Basic-YPR SDU Conformance Class
 
-include::conf/basic-ypr.adoc[]
-
-The Basic-YPR SDU member tests are the following:
-
-include::conf/basic-ypr/sdu.adoc[]
-
-include::conf/basic-ypr/sdu-tangent-plane-longitude.adoc[]
-
-include::conf/basic-ypr/sdu-tangent-plane-latitude.adoc[]
-
-include::conf/basic-ypr/sdu-tangent-plane-h.adoc[]
-
-include::conf/basic-ypr/sdu-orientation-ypr-angles.adoc[]
-
+[yaml2text,modspec/yaml/basic-ypr-cc.yaml,group]
+----
+{% assign prefix = "basic-ypr" %}
+include::modspec/conformance_class.liquid[]
+----
 
 ==== Basic-Quaternion SDU Conformance Class
 
-include::conf/basic-quaternion.adoc[]
-
-include::conf/basic-quaternion/sdu.adoc[]
-
-include::conf/basic-quaternion/sdu-tangent-plane-longitude.adoc[]
-
-include::conf/basic-quaternion/sdu-tangent-plane-latitude.adoc[]
-
-include::conf/basic-quaternion/sdu-tangent-plane-h.adoc[]
-
-include::conf/basic-quaternion/sdu-orientation_quaternion.adoc[]
+[yaml2text,modspec/yaml/basic-quaternion-cc.yaml,group]
+----
+{% assign prefix = "basic-quaternion" %}
+include::modspec/conformance_class.liquid[]
+----
 
 
 ==== Advanced SDU Conformance Class
 
-include::conf/advanced.adoc[]
+[yaml2text,modspec/yaml/advanced-cc.yaml,group]
+----
+{% assign prefix = "advanced" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/advanced/sdu-time-geopose-instant.adoc[]
-
-include::conf/advanced/sdu-frame-specification-authority.adoc[]
-
-include::conf/advanced/sdu-frame-specification-id.adoc[]
-
-include::conf/advanced/sdu-frame-specification-parameters.adoc[]
-
-include::conf/advanced/sdu-orientation-quaternion.adoc[]
 
 
 ==== Graph SDU Conformance Class
 
-include::conf/graph.adoc[]
+[yaml2text,modspec/yaml/graph-cc.yaml,group]
+----
+{% assign prefix = "graph" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/graph/sdu-time-geopose-instant.adoc[]
-
-include::conf/graph/sdu-frame-specification-authority.adoc[]
-
-include::conf/graph/sdu-frame-specification-id.adoc[]
-
-include::conf/graph/sdu-frame-specification-parameters.adoc[]
-
-include::conf/graph/sdu-graph-index.adoc[]
 
 
 ==== Chain SDU Conformance Class
 
-include::conf/chain.adoc[]
+[yaml2text,modspec/yaml/chain-cc.yaml,group]
+----
+{% assign prefix = "chain" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/chain/sdu-time-geopose-instant.adoc[]
-
-include::conf/chain/sdu-frame-specification-authority.adoc[]
-
-include::conf/chain/sdu-frame-specification-id.adoc[]
-
-include::conf/chain/sdu-frame-specification-parameters.adoc[]
-
-include::conf/chain/sdu-chain-index.adoc[]
 
 ==== Regular Series SDU Conformance Class
 
-include::conf/regular-series.adoc[]
+[yaml2text,modspec/yaml/series-regular-cc.yaml,group]
+----
+{% assign prefix = "series-regular" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/regular-series/sdu-header.adoc[]
-
-include::conf/regular-series/sdu-time/geopose-duration.adoc[]
-
-include::conf/regular-series/sdu-frame-specification-authority.adoc[]
-
-include::conf/regular-series/sdu-frame-specification-id.adoc[]
-
-include::conf/regular-series/sdu-frame-specification-parameters.adoc[]
-
-include::conf/regular-series/sdu-series-regular-trailer.adoc[]
 
 
 ==== Irregular Series SDU Conformance Class
 
-include::conf/irregular-series.adoc[]
+[yaml2text,modspec/yaml/series-irregular-cc.yaml,group]
+----
+{% assign prefix = "series-irregular" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/irregular-series/sdu-header.adoc[]
-
-include::conf/irregular-series/sdu-frame-specification-authority.adoc[]
-
-include::conf/irregular-series/sdu-frame-specification-id.adoc[]
-
-include::conf/irregular-series/sdu-frame-specification-parameters.adoc[]
-
-include::conf/irregular-series/sdu-irregular-series-frame-and-time.adoc[]
-
-include::conf/irregular-series/sdu-regular-series-trailer.adoc[]
 
 
 ==== Stream SDU Conformance Class
 
-include::conf/stream.adoc[]
-
-include::conf/stream/sdu-transition-model.adoc[]
-
-include::conf/stream/sdu-frame-specification-authority.adoc[]
-
-include::conf/stream/sdu-frame-specification-id.adoc[]
-
-include::conf/stream/sdu-frame-specification-parameters.adoc[]
-
-include::conf/stream/sdu-stream-frame-time-element.adoc[]
+[yaml2text,modspec/yaml/stream-cc.yaml,group]
+----
+{% assign prefix = "stream" %}
+include::modspec/conformance_class.liquid[]
+----
 
 
-=== Encodings Conformance
+=== Encoding conformance
+
+==== JSON encoding
 
 Each encoding technology has its own independent test suite. There is one conformance class per Standardization target per encoding technology. The GeoPose Standard 1.0 has one encoding technology: JSON.
 
-==== JSON Conformance
+
+==== Basic-YPR SDU JSON conformance class
 
 The *Basic-YPR GeoPose* is the JSON encoding intended for widest use.
 
-include::conf/basic-ypr-encoding-json.adoc[]
+[yaml2text,modspec/yaml/basic-ypr-json-cc.yaml,group]
+----
+{% assign prefix = "basic-ypr-json" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/basic-ypr-encoding-json/definition.adoc[]
-
+==== Basic-Quaternion SDU JSON conformance class
 
 The *Basic-Quaternion GeoPose* JSON encoding is intended for applications using quaternions. It comes in two sub-versions: normal and strict. The only difference is that a strict sub-version does not allow additional JSON members.
 
-include::conf/basic-quaternion-encoding-json.adoc[]
-
-include::conf/basic-quaternion-encoding-json/definition.adoc[]
+[yaml2text,modspec/yaml/basic-quaternion-json-strict-cc.yaml,group]
+----
+{% assign prefix = "basic-quaternion-json-strict" %}
+include::modspec/conformance_class.liquid[]
+----
 
 [NOTE]
 The *Basic-Quaternion (Strict) GeoPose* JSON encoding does not allow additional JSON members.
 
-include::conf/basic-quaternion-encoding-json-strict.adoc[]
 
-include::conf/basic-quaternion-encoding-json-strict/definition.adoc[]
+[yaml2text,modspec/yaml/basic-quaternion-json-cc.yaml,group]
+----
+{% assign prefix = "basic-quaternion-json" %}
+include::modspec/conformance_class.liquid[]
+----
 
+==== Advanced SDU JSON conformance class
 
 The *Advanced GeoPose* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-include::conf/advanced-encoding-json.adoc[]
+[yaml2text,modspec/yaml/advanced-json-cc.yaml,group]
+----
+{% assign prefix = "advanced-json" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/advanced-encoding-json/definition.adoc[]
-
-The *GeoPose Chain* JSON encoding supports a linear sequence of frame transformations for modelling articulated structures.
-
-include::conf/chain-encoding-json.adoc[]
-
-include::conf/chain-encoding-json/definition.adoc[]
+==== Graph SDU JSON conformance class
 
 The *GeoPose Graph* JSON encoding supports a directed graph structure.
 
-include::conf/graph-encoding-json.adoc[]
+[yaml2text,modspec/yaml/graph-json-cc.yaml,group]
+----
+{% assign prefix = "graph-json" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/graph-encoding-json/definition.adoc[]
+
+==== Chain SDU JSON conformance class
+
+The *GeoPose Chain* JSON encoding supports a linear sequence of frame transformations for modelling articulated structures.
+
+[yaml2text,modspec/yaml/chain-json-cc.yaml,group]
+----
+{% assign prefix = "chain-json" %}
+include::modspec/conformance_class.liquid[]
+----
+
+
+==== Regular Series SDU JSON conformance class
 
 The *GeoPose Regular Series* JSON encoding supports a time series of equally-spaced GeoPoses.
 
-include::conf/series-regular-encoding-json.adoc[]
+[yaml2text,modspec/yaml/series-regular-json-cc.yaml,group]
+----
+{% assign prefix = "series-regular-json" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/series-regular-encoding-json/definition.adoc[]
+==== Irregular Series SDU JSON conformance class
 
 The *GeoPose Irregular Series* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-include::conf/series-irregular-encoding-json.adoc[]
+[yaml2text,modspec/yaml/series-irregular-json-cc.yaml,group]
+----
+{% assign prefix = "series-irregular-json" %}
+include::modspec/conformance_class.liquid[]
+----
 
-include::conf/series-irregular-encoding-json/definition.adoc[]
+==== Stream SDU JSON conformance class
 
 The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Outer Frame specification.
 
-include::conf/stream-encoding-json.adoc[]
+[yaml2text,modspec/yaml/stream-json-cc.yaml,group]
+----
+{% assign prefix = "stream-json" %}
+include::modspec/conformance_class.liquid[]
+----
 
-EDITOR
-====
-There was one test before: /conf/stream/encoding/json/test
-
-But then, these were added according to OGC instructions: /req/stream-encoding-json/header,
-/req/stream-encoding-json/element and /req/stream/report/encoding/json.
-
-Nevertheless, their content may not be correct, please check.
-====
-
-include::conf/stream-encoding-json/header.adoc[]
-
-include::conf/stream-encoding-json/element.adoc[]
-
-include::conf/stream-encoding-json/record.adoc[]

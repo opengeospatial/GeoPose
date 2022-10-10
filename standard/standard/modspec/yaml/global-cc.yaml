@@ -1,0 +1,37 @@
+---
+scopes:
+- name: Global SDU conformance
+  identifier: /conf/global
+  target: /req/global
+  classification: "Target Type: SDU"
+  description: Conformance with global SDU requirements
+
+  tests:
+  - name: Verify individual standardization targets are independent
+    identifier: /req/global/target-independence
+    targets:
+    - /req/global/target-independence
+    purpose: Verify standardization targets are independent.
+    method: Inspection
+
+  - name: Verify implementation conforms to the logical model
+    identifier: /req/global/logical-model
+    targets:
+    - /req/global/logical-model
+    description: |
+      Implementations of concrete data conforming to this standard SHALL
+      conform to all dependent or inherited classes, attributes, and
+      associations, multiplicities, and data types in the Logical Model.
+    purpose: Verify implementation conforms to the logical model.
+    method: Inspection
+
+  - name: Verify SDU conforms to the "Structural Data Unit - SDU" stereotype
+    identifier: /req/global/sdu
+    targets:
+    - /req/global/sdu
+    description: |
+      Implementations using encoded SDUs SHALL conform to the logical
+      description of the Logical Model elements with the "Structural Data Unit
+      - SDU" stereotype.
+    purpose: Verify SDU conforms to the "Structural Data Unit - SDU" stereotype.
+    method: Inspection

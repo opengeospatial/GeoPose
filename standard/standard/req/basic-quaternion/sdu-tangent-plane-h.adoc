@@ -1,7 +1,0 @@
-[requirement]
-.B-TP-h-SDU
-====
-[%metadata]
-identifier:: /req/basic-quaternion/sdu-tangent-plane-h
-description:: An instance of a GeoPose tangentPoint.h attribute SHALL be expressed as a height in meters above the WGS-84 ellipsoid and represented as a signed real number value.
-====

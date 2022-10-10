@@ -1,0 +1,26 @@
+---
+scopes:
+- name: Frame specification requirements
+  identifier: /req/frame-spec
+  description: Implements <<ISO_19115-2_2019,clause="6.3.2">>.
+  requirements:
+
+  - name: Frame specification authority uniquely specifies source of reference frame specification
+    identifier: /req/frame-spec/authority
+    description: |
+      The FrameSpecification.authority attribute SHALL contain a string uniquely
+      specifying a source of reference frame specifications.
+
+  - name: Frame specification ID uniquely defines frame within authority
+    identifier: /req/frame-spec/id
+    description: |
+      The FrameSpecification.ID attribute SHALL be a string uniquely defining a
+      frame within the authority.
+
+  - name: Frame specification parameter contains all parameters needed
+    identifier: /req/frame-spec/parameters
+    description: |
+      The FrameSpecification.parameter attribute SHALL contain all parameters
+      needed for the corresponding authority and ID.
+    guidance:
+    - The definition of these parameters is outside the scope of GeoPose.

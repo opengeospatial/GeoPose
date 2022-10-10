@@ -1,0 +1,85 @@
+{% assign rc_count = 0 %}
+
+{% for scope in group.scopes %}
+{% assign rc_count = rc_count | plus: 1 %}
+[[rc-{{prefix}}-{{rc_count}}]]
+.{{scope.name}}
+[requirements_class]
+====
+[%metadata]
+identifier:: {{scope.identifier}}
+description:: {{scope.name}}
+
+{% if {{scope.subject}} %}
+subject:: {{scope.subject}}
+{% endif %}
+
+{% if {{scope.source}} %}
+Source:: {{scope.source}}
+{% endif %}
+
+{% for depend in {{scope.dependencies}} %}
+inherit:: {{depend}}
+{% endfor %}
+
+{% for requirement in {{scope.requirements}} %}
+requirement:: {{requirement.identifier}}
+{% endfor %}
+
+{% if {{scope.guidance}} %}
+guidance::
++
+--
+{% for rec in {{scope.guidance}} %}
+* {{rec}}
+{% endfor %}
+--
+{% endif %}
+
+====
+
+{% assign r_count = 0 %}
+{% for requirement in {{scope.requirements}} %}
+{% assign r_count = r_count | plus: 1 %}
+{% if {{requirement.name}} %}
+.{{requirement.name}}
+{% endif %}
+[[r-{{prefix}}-{{rc_count}}-{{r_count}}]]
+[requirement]
+====
+[%metadata]
+identifier:: {{requirement.identifier}}
+description:: {{requirement.description}}
+
+{% for depend in {{requirement.dependencies}} %}
+inherit:: {{depend}}
+{% endfor %}
+
+{% if {{requirement.subject}} %}
+subject:: {{requirement.subject}}
+{% endif %}
+
+{% if {{requirement.uml-source}} %}
+UML source:: {{requirement.uml-source}}
+{% endif %}
+
+{% if {{requirement.uml-package}} %}
+UML package:: {{requirement.uml-package}}
+{% endif %}
+
+
+{% if {{requirement.guidance}} %}
+guidance::
++
+--
+{% for rec in {{requirement.guidance}} %}
+* {{rec}}
+{% endfor %}
+--
+{% endif %}
+
+====
+
+{% endfor %}
+
+{% endfor %}

@@ -1,0 +1,57 @@
+---
+scopes:
+- name: Irregular_Series logical model SDU conformance
+  identifier: /conf/series-irregular
+  target: /req/series-irregular
+  classification: "Target Type: SDU"
+  description: To confirm that components of a Irregular_Series conform to the Logical Model.
+  dependencies:
+  - /conf/global
+  - /conf/frame-spec
+  - /conf/time
+
+  tests:
+
+  - name: Verify expression of inner frames and time series
+    identifier: /conf/series-irregular/inner-frame-and-time
+    targets:
+    - /req/series-irregular/inner-frame-and-time
+    dependencies:
+    - /conf/time/instant
+    description: |
+      Confirm that the `Irregular_Series.innerFrameAndTime` attribute is
+      implemented as an array of `FrameAndTimeElement` objects, each of which is
+      a pair of `ExplicitFrameSpec` and `GeoPoseInstant` objects.
+    purpose: |
+      To confirm that the `innerFrameAndTime` attribute values are implemented
+      in accordance with the Logical Model.
+
+  - name: Verify expression of outer frame
+    identifier: /conf/series-irregular/outer-frame
+    targets:
+    - /req/series-irregular/outer-frame
+    purpose: |
+      The `Irregular_Series.outerFrame` attribute shall represent the first
+      frame in the series expressed by the `innerFrameAndTime` attribute.
+
+  - name: Verify expression of series header
+    identifier: /conf/series-irregular/header
+    targets:
+    - /req/series-irregular/header
+    description: |
+      Verify that the `Irregular_Series.header` attribute is implemented as an
+      instance of SeriesHeader.
+    purpose: |
+      To confirm that the implementation of Series Header conforms to the
+      Logical Model.
+
+  - name: Verify expression of series trailer
+    identifier: /conf/series-irregular/trailer
+    targets:
+    - /req/series-irregular/trailer
+    description: |
+      Verify that the `Irregular_Series.trailer` attribute is implemented as an
+      instance of SeriesTrailer.
+    purpose: |
+      To confirm that the implementation of SeriesTrailer conforms to the
+      Logical Model.

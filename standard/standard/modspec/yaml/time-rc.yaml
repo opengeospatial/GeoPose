@@ -1,0 +1,18 @@
+---
+scopes:
+- name: Time specification requirements
+  identifier: /req/time
+  description: Requirements on GeoPose time-related objects.
+  requirements:
+
+  - name: Implementation of GeoPose_Instant
+    identifier: /req/time/instant
+    description: |
+      The `GeoPose_Instant` object shall express Unix Time in seconds multiplied
+      by 1,000, with the unit of measure in milliseconds.
+
+  - name: Implementation of GeoPose_Duration
+    identifier: /req/time/duration
+    description: |
+      The `GeoPose_Duration` object shall express time in seconds multiplied by
+      1,000, with the unit of measure in milliseconds.
