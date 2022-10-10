@@ -2,7 +2,8 @@
 scopes:
 - name: Frame specification requirements
   identifier: /req/frame-spec
-  description: Implements <<ISO_19115-2_2019,clause="6.3.2">>.
+  description: |
+    Common frame specification requirements for SDUs that include frames.
   requirements:
 
   - name: Frame specification authority uniquely specifies source of reference frame specification

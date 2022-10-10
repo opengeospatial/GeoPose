@@ -8,7 +8,11 @@
 ====
 [%metadata]
 identifier:: {{scope.identifier}}
-description:: {{scope.name}}
+description::
++
+--
+{{scope.description}}
+--
 
 {% if {{scope.subject}} %}
 subject:: {{scope.subject}}
@@ -49,7 +53,11 @@ guidance::
 ====
 [%metadata]
 identifier:: {{requirement.identifier}}
-description:: {{requirement.description}}
+description::
++
+--
+{{requirement.description}}
+--
 
 {% for depend in {{requirement.dependencies}} %}
 inherit:: {{depend}}

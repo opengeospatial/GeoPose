@@ -2,7 +2,8 @@
 scopes:
 - name: Time specification requirements
   identifier: /req/time
-  description: Requirements on GeoPose time-related objects.
+  description: |
+    Requirements on GeoPose time-related objects.
   requirements:
 
   - name: Implementation of GeoPose_Instant
