@@ -1,0 +1,20 @@
+---
+scopes:
+- name: JSON encoding of Regular Series SDU
+  identifier: /req/series-regular-encoding-json
+  description: |
+    Requirements for the JSON encoding of a Regular Series SDU.
+  implements:
+  - /req/series-regular
+
+  requirements:
+
+  - name: Specification as JSON schema
+    identifier: /req/series-regular-encoding-json/definition
+    description: |
+      A JSON-encoded GeoPose Regular Series SHALL conform to the GeoPose Chain
+      JSON-Schema 2019-9 definition (<<regular_series_json_schema>>).
+    guidance:
+    - |
+      This JSON encoding is extensible because the JSON-Schema
+      "additionalProperties" property is set to the default value of *true*.

@@ -1,0 +1,21 @@
+---
+scopes:
+- name: JSON encoding of Basic-YPR SDU
+  identifier: /req/basic-ypr-encoding-json
+  description: |
+    Requirements for the JSON encoding of a Basic-YPR SDU.
+  implements:
+  - /req/basic-ypr
+
+  requirements:
+
+  - name: Specification as JSON schema
+    identifier: /req/basic-ypr-encoding-json/definition
+    description: |
+      A JSON-encoded Basic-YPR GeoPose SHALL conform to the Basic-YPR
+      JSON-Schema 2019-9 definition (<<basic_ypr_json_schema>>).
+
+    guidance:
+    - |
+      This JSON encoding is extensible because the JSON-Schema
+      "additionalProperties" property is set to the default value of *true*.

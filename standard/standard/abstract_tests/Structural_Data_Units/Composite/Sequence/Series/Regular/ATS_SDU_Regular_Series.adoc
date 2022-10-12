@@ -1,8 +1,0 @@
-[[ats_composite_sequence_series_regular]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/ats/composite/sequence/series/regular* 
-^|Test Purpose |To validate that JSON-encoded GeoPose series conform to the Regular Series JSON-Schema definition.
-^|Requirement |<<req_composite_sequence_series,/req/composite/sequence/series/regular>>
-^|Test Method |JSON-Schema validation
-|===

@@ -1,8 +1,0 @@
-[[req_basic_quaternion_encoding_json]]
-[width="90%",cols="4,6"]
-|===
-<s|Requirement  s|B-Quaternion-Encoding-JSON
-<s|ID |<<req_basic_quaternion_encoding__json,/req/basic/quaternion/encoding/json>> 
-2+<|A JSON-encoded Basic-Quaternion GeoPose SHALL conform to the Basic-Quaternion JSON-Schema 2019-9 definition.
-
-|===

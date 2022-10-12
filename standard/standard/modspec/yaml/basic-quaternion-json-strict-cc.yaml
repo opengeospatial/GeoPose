@@ -1,0 +1,21 @@
+---
+scopes:
+- name: Strict JSON encoding of Basic-Quaternion SDU
+  identifier: /conf/basic-quaternion-encoding-json-strict
+  target: /req/basic-quaternion-encoding-json-strict
+  classification: "Target Type: JSON SDU"
+  description: Conformance with the strict JSON encoding of Basic-Quaternion SDU
+
+  tests:
+  - name: Verify conformance via JSON schema
+    identifier: /conf/basic-quaternion-encoding-json-strict/definition
+    targets:
+    - /req/basic-quaternion-encoding-json-strict/definition
+    description: |
+      To confirm that a Basic-Quaternion GeoPose in strict JSON encoding
+      validates against the JSON schema.
+    purpose: |
+      Verify that data validates against the corresponding JSON schema.
+    method: |
+      Validate the JSON data against the strict Basic-Quaternion JSON-Schema 2019-9 definition
+      (<<basic_quaternion_strict_json_schema>>).

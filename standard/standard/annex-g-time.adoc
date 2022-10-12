@@ -1,14 +1,10 @@
-[appendix]
-:appendix-caption: Annex
-[[time-use]]
-
-
+[[annex-G]]
+[appendix,obligation=informative]
 == GeoPose Use and Interpretation of UNIX Time
 
-The GeoPose Standard has adopted a variation UNIX time as the method for denoting the location of Instants on a timeline. The reasons for this specific choice include the widespread availability of UNIX time in computer operating systems, the straightforward conversion to UTC at the level of precision required by the use cases considered in GeoPose 1.0: 1 millisecond. 
+The GeoPose Standard has adopted a variation UNIX time as the method for denoting the location of Instants on a timeline. The reasons for this specific choice include the widespread availability of UNIX time in computer operating systems, the straightforward conversion to UTC at the level of precision required by the use cases considered in GeoPose 1.0: 1 millisecond.
 
-Clearly, applications requiring higher precision and the recognition of non-Newtonian physical processes would require a more complex treatment of time. This has been left to possible future versions of the GeoPose Standard. 
-
+Clearly, applications requiring higher precision and the recognition of non-Newtonian physical processes would require a more complex treatment of time. This has been left to possible future versions of the GeoPose Standard.
 
 === Intended Precision
 
@@ -16,7 +12,7 @@ The intended precision of UNIX time in GeoPose 1.0 is 1 millisecond. Representat
 
 === Scaling
 
-Time values are represented and encoded as integer values in GeoPose 1.0. Note that a computing environment must support 64-bit signed integers in order to accomodate the range of possible values.  
+Time values are represented and encoded as integer values in GeoPose 1.0. Note that a computing environment must support 64-bit signed integers in order to accommodate the range of possible values.
 
 === Non-negative Time Positions
 
@@ -24,10 +20,8 @@ Times at or after the UNIX epoch of 1 January 1970 are represented as though clo
 
 === Negative Time Positions
 
-Times before the UNIX epoch of 1 January 1970 are represented as though clocks ticked backward with the same duration of a second as at the epoch. Conversion to time reference systems and calendars requires the consideration of the generally increasing rate of rotation of the earth with time decreasing into the past. The rate is about 0.015 millisecond/year. The accumulated time error is about 0.6 second/year in the recent past. 
+Times before the UNIX epoch of 1 January 1970 are represented as though clocks ticked backward with the same duration of a second as at the epoch. Conversion to time reference systems and calendars requires the consideration of the generally increasing rate of rotation of the earth with time decreasing into the past. The rate is about 0.015 millisecond/year. The accumulated time error is about 0.6 second/year in the recent past.
 
 === Positive Time Positions before 1 January 1972 UTC
 
 International timekeeping switched from an astronomical basis to a reference based on atomic processes in 1967. The details were in flux at the UNIX time epoch of 1 January 1970 until 1972, when the current system relating atomic time and UTC were adopted.
-
-

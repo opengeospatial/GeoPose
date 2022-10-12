@@ -1,6 +1,0 @@
-=== Conformance Class Advanced
-
-include::Advanced/req_Advanced.adoc[]
-
-
-

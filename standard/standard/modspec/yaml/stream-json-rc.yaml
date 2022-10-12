@@ -1,0 +1,32 @@
+---
+scopes:
+- name: JSON encoding of Stream SDUs
+  identifier: /req/stream-encoding-json
+  description: |
+    Requirements for the JSON encoding of Stream SDUs.
+  implements:
+  - /req/stream
+
+  requirements:
+
+  - name: Stream Element specification as JSON schema
+    identifier: /req/stream-encoding-json/element
+    description: |
+      A JSON-encoded GeoPose Stream Element SHALL conform to the GeoPose Stream Element
+      JSON-Schema 2019-9 definition (<<streamelement_json_schema>>).
+
+  - name: Stream Header specification as JSON schema
+    identifier: /req/stream-encoding-json/header
+    description: |
+      A JSON-encoded GeoPose Stream Element SHALL conform to the GeoPose Stream Header
+      JSON-Schema 2019-9 definition (<<streamheader_json_schema>>).
+    guidance:
+    - |
+      This JSON encoding is extensible because the JSON-Schema
+      "additionalProperties" property is set to the default value of *true*.
+
+  - name: Stream Record specification as JSON schema
+    identifier: /req/stream-encoding-json/record
+    description: |
+      A JSON-encoded GeoPose Stream Record (a recorded Stream) SHALL conform to the GeoPose Stream Record
+      JSON-Schema 2019-9 definition (<<streamrecord_json_schema>>).

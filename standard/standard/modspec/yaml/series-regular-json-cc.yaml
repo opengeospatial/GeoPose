@@ -1,0 +1,23 @@
+---
+scopes:
+- name: JSON encoding of Regular Series SDU
+  identifier: /conf/series-regular-encoding-json
+  target: /req/series-regular-encoding-json
+  classification: "Target Type: JSON SDU"
+  description: |
+    Confirm that a JSON-encoded GeoPose Regular Series conforms to the
+    relevant elements of the Logical Model and a corresponding JSON-Schema
+    document.
+
+  tests:
+  - name: Verify conformance via JSON schema
+    identifier: /conf/series-regular-encoding-json/definition
+    targets:
+    - /req/series-regular-encoding-json/definition
+    description: |
+      To confirm that a GeoPose Regular Series in JSON validates against the JSON schema.
+    purpose: |
+      Verify that data validates against the corresponding JSON schema.
+    method: |
+      Validate the JSON data against the GeoPose Regular Series JSON-Schema 2019-9
+      definition (<<regular_series_json_schema>>).

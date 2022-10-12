@@ -1,0 +1,34 @@
+---
+scopes:
+- name: Basic-Quaternion logical model SDU
+  identifier: /req/basic-quaternion
+  description: |
+    The Basic-Quaternion Target has a simple structure with no options. Position
+    is specified as a point in an LTP-ENU frame and rotation is specified as a
+    unit quaternion.
+
+  dependencies:
+  - /req/global
+  - /req/tangent-point
+  requirements:
+
+  - name: Expression of outer frame
+    identifier: /req/basic-quaternion/position
+    description: |
+      The `Basic_Quaternion.position` attribute shall represent the outer frame,
+      specified by an implicit WGS-84 CRS and an implicit EPSG 4461-CS (LTP-ENU)
+      coordinate system and explicit parameters to define the tangent point.
+
+  - name: Expression of inner frame
+    identifier: /req/basic-quaternion/quaternion
+    description: |
+      The `Basic_Quaternion.quaternion` attribute shall represent the inner
+      frame, which shall be a rotation-only transformation using a unit
+      quaternion. The uniq quaternion shall be represented as an instance of a
+      GeoPose Logical Model quaternion data type, expressed as four real
+      numbers, representing four quaternion components w, x, y, z, in that
+      sequential order. The sum of the squares of the individual components
+      shall be as close to 1.0 as the real number representation allows. The
+      quaternion shall be applied to an initial reference frame oriented
+      East-North-Up (ENU) coordinate system where the coordinate axes East,
+      North, and Up correspond to the axes X, Y, Z.

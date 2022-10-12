@@ -1,8 +1,261 @@
-== Terms and Definitions
-This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
+== Terms and definitions
 
-For the purposes of this document, the following additional terms and definitions apply.
+=== Basic concepts
+
+==== conceptual model
+admitted:[CM]
+
+description of common concepts and their relationships, particularly in order to
+facilitate exchange of information between parties within a specific domain
+
+NOTE: A conceptual model is explicitly chosen to be may be informed by, but
+independent of design or implementation concerns.
+
+EDITOR: Perhaps this is a better source:
+"model that defines concepts of a universe of discourse",
+ISO 19101-1:2014, 4.1.5.
+
+[.source]
+<<env1613>>
 
 
-[[geopose_conceptual_model]]
-include::models/conceptual_model.adoc[]
+==== logical model
+admitted:[logical information model]
+admitted:[LM]
+
+information model that specifies the structures and relationships between data
+elements but is independent of any particular technology or implementation
+environment
+
+[.source]
+<<iso13972,clause="3.1.8">>
+
+
+==== structural data unit
+admitted:[SDU]
+
+element of the {{logical model}} expressed in concrete data objects encoded
+using specific encoding or serialization technologies
+
+
+=== Spatial concepts
+
+==== position
+admitted:[OGC direct position]
+
+set of coordinates of a point in a 3D Euclidean space and associated {{reference frame}}
+
+==== orientation
+
+rotational relationship between two {{reference frame,reference frames}}
+
+==== pose
+
+representation of a {{frame transform}} mapping the space of an {{outer frame}} to the space of an {{inner frame}}
+
+NOTE: A {{pose}} may be associated with additional non-geometrical properties such as time of observation or validity. Poses in computer graphics often have an {{outer frame}} defined by a parent node in a scene graph and an {{inner frame}} define by a {{position}} and an orientation.
+
+==== GeoPose
+
+{{pose}} whose associated {{outer frame}} or a {{pose chain}} whose associated {{outermost frame}} is a {{topocentric frame,topocentric frame}} defined by an {{extrinsic frame specification}} related to the {{ephemeris object}} planet Earth.
+
+==== reference frame
+
+system of location and measurement often defined by a {{frame specification}} usually including a coordinate system to be used within a corresponding space
+
+==== frame transform
+
+pair of {{reference frame,reference frames}} and a bi-continuous coordinate transformation relating points in the corresponding spaces
+
+NOTE: The two {{reference frame,reference frames}} are called {{outer frame}} (domain) and {{inner frame}} (range).
+Only an {{outer frame}} may have an {{extrinsic frame specification}}.
+
+NOTE: A {{frame transform}} functions as a directed edge in a {{frame graph}} representation of the transformational relationship between {{reference frame,reference frames}}.
+
+==== outer frame
+admitted:[outer reference frame]
+
+first of two {{reference frame,reference frames}} associated with a {{frame transform}}
+
+[NOTE]
+In the NASA SPICE system, the {{outer frame}} is referred to as the *from* {{reference frame,frame}}. In the ROS SDF documentation, the {{outer frame}} is referred to as the *Parent* {{reference frame,frame}}. In ISO 19162, the {{outer frame}} is referred to as the *base* {{reference frame,frame}}.
+
+==== inner frame
+admitted:[inner reference frame]
+
+second of two {{reference frame,reference frames}} associated with a {{frame transform}}
+
+NOTE: An {{inner frame}} may not be a {{topocentric frame, topocentric frame}}.
+
+[NOTE]
+In the NASA SPICE system, the {{inner frame}} is referred to as the to {{reference frame,frame}}. In the ROS SDF documentation, the {{inner frame}} is referred to as the child {{reference frame,frame}}. In ISO 19162, the {{inner frame}} is referred to as the derived {{reference frame,frame}}.
+
+==== outermost frame
+
+{{outer frame}} of the first {{frame transform}} in a {{pose chain}}
+
+==== innermost frame
+
+{{inner frame}} of the last {{frame transform}} in a {{pose chain}}
+
+==== ephemeris object
+
+physical object or manifestation of a physical object that can be characterized by an externally-defined (possibly time-dependent) location and orientation in a 3-dimensional space
+
+==== topocentric frame
+admitted:[topocentric reference frame]
+
+{{reference frame,frame}} that has an {{extrinsic frame specification}} associated with a location on or near the surface of a natural body, such as planet Earth
+
+NOTE: This definition is sourced from the NASA SPICE system.
+
+NOTE: In connection with a GeoPose, one way that a {{topocentric frame,topocentric frame}} may be realized is by a {{local tangent plane coordinate system,local tangent plane east-north-up frame (LTP-ENU)}} attached to the surface of a body, to a gravitational equipotential surface ({{geoid}} in the case of planet Earth), or to a mathematical surface such as an {{ellipsoid}} approximating a {{geoid}}.
+
+==== frame specification
+
+data that completely and uniquely defines a {{reference frame}}
+
+NOTE: In the context of {{pose,poses}}, there are {{extrinsic frame specification}} defined by an external data source, and {{derived frame specification}} defined by a transformation from another {{reference frame}}.
+
+==== extrinsic frame specification
+admitted:[extrinsic specification]
+
+relates a {{reference frame}} to an {{ephemeris object}} or other external reference, which may be based on joint properties of a group of objects
+
+[example]
+The center of mass of the Earth-Moon system.
+
+==== derived frame specification
+admitted:[derived specification]
+
+relates a {{reference frame}} to another {{reference frame}} by a {{frame transform}} or its inverse
+
+==== frame graph
+admitted:[reference frame graph]
+
+directed acyclic graph representation of the transformational relationships between {{reference frame,reference frames}}
+
+NOTE: In the frame graph, {{reference frame,reference frames}} are the nodes or vertices of the graph. {{frame transform,Frame transforms}} are the edges of the graph, directed from the {{outer frame}} to the {{inner frame}}. Note that there may be zero, one, or many paths between two distinct vertices, i.e. {{reference frame,frames}}. Multiple paths correspond to real-world situations with, for example, redundant line-of-sight links in point-to-point radio networks used in communication systems.
+
+==== pose chain
+
+directed path in a {{frame graph}} connecting an {{outermost frame}} to an {{innermost frame}}
+
+NOTE: The sequence of {{frame transform,frame transforms}} in a {{pose chain}} may be combined in a single composite transformation.
+
+NOTE: There may exist multiple {{pose chain,pose chains}} linking the same {{outermost frame}} and {{innermost frame}} and the corresponding composite transformations may not agree. This is intentional, representing real-world configurations and capabilities of sensors and communication links.
+
+
+=== Sequence and stream concepts
+
+==== sequence
+admitted:[GeoPose sequence]
+
+set of {{pose,poses}} ordered by {{valid time}} and pertaining to the same underlying physical object or construct
+
+NOTE: A {{pose}} in a sequence is called a "member pose".
+
+NOTE: In a sequence, each successive member {{pose,pose}} must have a {{valid time}} after its predecessor.
+
+==== inter-pose duration
+
+time {{duration}} between consecutive {{pose,poses}} in a {{sequence}}
+
+==== closed sequence
+admitted:[closed pose sequence]
+
+{{sequence}} of fixed length with specific meta-data that fully characterize the sequence and its member {{pose,poses}}
+
+==== regular sequence
+admitted:[regular GeoPose sequence]
+
+{{closed sequence}} with a constant {{inter-pose duration}}
+
+==== irregular sequence
+admitted:[irregular GeoPose sequence]
+
+{{closed sequence}} with a variable {{inter-pose duration}}
+
+NOTE: Each {{pose}} in an {{irregular sequence}} has an associated {{valid time}}.
+
+==== GeoPose stream
+
+{{irregular sequence}} of unbounded length
+
+==== header
+admitted:[sequence header]
+
+metadata essential for interpretation of the following members of a {{sequence}}
+
+==== transition model
+
+metadata that indicates whether or how it may be possible to estimate {{pose,poses}} in the interval between consecutive {{pose,poses}} in a {{sequence}}
+
+==== trailer
+admitted:[sequence trailer]
+
+metadata essential for validation of the preceding members of a {{sequence}}.
+
+
+=== Temporal concepts
+
+==== temporal frame
+
+specification for the interpretation of points on a {{time line}} as {{instant,instants}} in relation to a specified {{epoch}}
+
+==== time line
+admitted:[time axis]
+
+one-dimensional Euclidean space whose points represent an ordered sequence of {{instant,instants}} directed from the past to the future
+
+==== instant
+
+specific point on a {{time line}}
+
+==== interval
+
+timespan between two {{instant,instants}} on a {{time line}}, interpreted in context of the associated {{temporal frame}}
+
+
+==== duration
+
+one-dimensional signed distance between the bounding {{instant,instants}} of an {{interval}}
+
+NOTE: The magnitude of a length value depends on the {{temporal frame}}.
+
+NOTE: A duration is semi-open: it includes the earlier {{instant}} but not the later {{instant}}.
+
+
+==== epoch
+
+specified {{instant}} that can be used as a reference point to calculate {{temporal relationship,temporal relationships}} and {{duration,durations}} between {{instant,instants}}.
+
+==== temporal relationship
+
+relationship between two {{instant,instants}}
+
+NOTE: Temporal relationships are only valid within the context of a specific {{temporal frame}}.
+
+NOTE: GeoPose supports three temporal relationships: "before", "coincident", and "after".
+
+=== Temporal database concepts
+
+==== valid time
+
+{{time line}} where the time of changes in the existence or validity of real-world objects or property values are located.
+
+NOTE: {{instant,Instants}} in {{valid time}} mark the temporal location of real-world transitions in existence, property values, or their validity.
+
+NOTE: This term may refer to {{instant,instants}} or to {{time line,time lines}}.
+
+==== transaction time
+
+{{time line}} where the time of changes in the presence or validity of the representations of real-world objects or their properties in an information system are located
+
+NOTE: {{instant,Instants}} in {{transaction time}} mark the temporal location of actions that create, update, or delete representations of objects or properties.
+
+NOTE: This term may refer to {{instant,instants}} or to {{time line,time lines}}.
+
+==== bi-temporality
+
+property of a data representation that denotes that it carries both {{valid time}} and {{transaction time}}

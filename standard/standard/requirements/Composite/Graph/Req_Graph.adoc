@@ -1,7 +1,0 @@
-[[req_composite_graph]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement {counter:req-id}* |*/req/composite/graph* 
-^|Requirement |JSON-encoded GeoPose Graphs shall conform to the Graph JSON-Schema definition.
-^|Requirement ID|<<req_composite_graph,/req/composite/graph>>
-|===

@@ -1,7 +1,0 @@
-[[req_composite_chain]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement {counter:req-id}* |*/req/composite/chain* 
-^|Requirement |GeoPose data Chains shall conform to the Chain JSON-Schema definition.
-^|Requirement ID|<<req_composite_chain,/req/composite/chain>>
-|===

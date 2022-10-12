@@ -1,0 +1,48 @@
+---
+scopes:
+- name: StreamHeader and StreamElement logical model SDUs conformance
+  identifier: /conf/stream
+  target: /req/stream
+  classification: "Target Type: SDU"
+  description: To confirm that an implementation of the GeoPose Stream SDUs conforms to the Logical Model.
+  dependencies:
+  - /conf/global
+  - /conf/frame-spec
+
+  tests:
+
+  - name: Verify outer frame in StreamHeader
+    identifier: /conf/stream/header-initial-frame
+    targets:
+    - /req/stream/header-initial-frame
+    description: |
+      To confirm the correct specification of the `StreamHeader.outerFrame`.
+    purpose: |
+      To confirm the initial frame is specified as an instance of the
+      `ExplicitFrameSpec` object.
+    method: Inspection
+
+  - name: Verify transition model in StreamHeader
+    identifier: /conf/stream/header-transition-model
+    targets:
+    - /req/stream/header-transition-model
+    description: |
+      To confirm the correct specification of the `StreamHeader.transitionModel`.
+    purpose: |
+      To confirm the `transitionModel` is specified as an instance of the
+      `TransitionModel` enumeration.
+    method: Inspection
+
+  - name: Verify stream elements in StreamElement
+    identifier: /conf/stream/element
+    targets:
+    - /req/stream/element
+    dependencies:
+    - /conf/time/instant
+    description: |
+      To confirm the correct specification of the `StreamElement`.
+    purpose: |
+      To confirm the StreamElement is implemented as an array of
+      `FrameAndTimeElement` objects, each of which is a pair of
+      `ExplicitFrameSpec` and `GeoPoseInstant` objects.
+    method: Inspection

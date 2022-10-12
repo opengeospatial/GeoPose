@@ -1,0 +1,46 @@
+---
+scopes:
+- name: Regular_Series logical model SDU
+  identifier: /req/series-regular
+  description: |
+    The Regular_Series Target represents the time evolution of a single GeoPose,
+    with a constant time duration between successive inner frames.
+
+  dependencies:
+  - /req/global
+  - /req/frame-spec
+  - /req/time
+
+  requirements:
+
+  - name: Expression of duration as GeoPose_Duration
+    identifier: /req/series-regular/duration
+    dependencies:
+    - /req/time/duration
+    description: |
+      The `Regular_Series.interPoseDuration` attribute shall be represented by
+      an instance of the `GeoPose_Duration` object.
+
+  - name: Expression of outer frame
+    identifier: /req/series-regular/outer-frame
+    description: |
+      The `Regular_Series.outerFrame` attribute shall represent the first frame
+      in the series with the `ExplicitFrameSpec` object.
+
+  - name: Expression of inner frames
+    identifier: /req/series-regular/inner-frame-series
+    description: |
+      The `Regular_Series.innerFrameSeries` attribute shall represent the
+      succession of inner frames as an array of `ExplicitFrameSpec` objects.
+
+  - name: Expression of series header
+    identifier: /req/series-regular/header
+    description: |
+      The `Regular_Series.header` attribute shall be implemented as an instance
+      of SeriesHeader.
+
+  - name: Expression of series trailer
+    identifier: /req/series-regular/trailer
+    description: |
+      The `Regular_Series.trailer` attribute shall be implemented as an instance
+      of SeriesTrailer.

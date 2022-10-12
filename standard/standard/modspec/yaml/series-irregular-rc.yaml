@@ -1,0 +1,41 @@
+---
+scopes:
+- name: Irregular_Series logical model SDU
+  identifier: /req/series-irregular
+  description: |
+    The Irregular_Series Target represents the time evolution of a single
+    GeoPose, with a variable time duration between successive inner frames.
+
+  dependencies:
+  - /req/global
+  - /req/frame-spec
+  - /req/time
+
+  requirements:
+
+  - name: Expression of inner frames and time series
+    identifier: /req/series-irregular/inner-frame-and-time
+    dependencies:
+    - /req/time/instant
+    description: |
+      The `Irregular_Series.innerFrameAndTime` attribute SHALL be implemented as
+      an array of `FrameAndTimeElement` objects, each of which is a pair of
+      `ExplicitFrameSpec` and `GeoPoseInstant` objects.
+
+  - name: Expression of outer frame
+    identifier: /req/series-irregular/outer-frame
+    description: |
+      The `Irregular_Series.outerFrame` attribute shall represent the first
+      frame in the series expressed by the `innerFrameAndTime` attribute.
+
+  - name: Expression of series header
+    identifier: /req/series-irregular/header
+    description: |
+      The `Irregular_Series.header` attribute shall be implemented as an instance
+      of SeriesHeader.
+
+  - name: Expression of series trailer
+    identifier: /req/series-irregular/trailer
+    description: |
+      The `Irregular_Series.trailer` attribute shall be implemented as an instance
+      of SeriesTrailer.
