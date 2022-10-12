@@ -1,0 +1,52 @@
+---
+scopes:
+- name: Basic-YPR logical model SDU conformance
+  identifier: /conf/advanced
+  target: /req/advanced
+  classification: "Target Type: SDU"
+  description: |
+    To confirm that an implementation of the Advanced GeoPose conforms to
+    the Logical Model.
+  dependencies:
+  - /conf/global
+  - /conf/frame-spec
+  - /conf/time
+
+  tests:
+  - name: Verify expression of valid time as GeoPose_Instant
+    identifier: /conf/advanced/valid-time
+    targets:
+    - /req/advanced/valid-time
+    dependencies:
+    - /conf/time/instant
+    description: |
+      To confirm the correct properties of a GeoPose_Instant.
+    purpose: |
+      Confirm that the `Advanced.validTime` attribute is represented by a
+      `GeoPose_Instant` object.
+    method: Inspection
+
+  - name: Verify expression of outer frame
+    identifier: /conf/advanced/frame-spec
+    targets:
+    - /req/advanced/frame-spec
+    description: |
+      To confirm that an implementation of an Advanced SDU contains an explicit
+      frame specification in frameSpecification using the `ExplicitFrameSpec`
+      object.
+    purpose: |
+      Verify that this requirement is satisfied.
+    method: Inspection
+
+  - name: Verify expression of inner frame
+    identifier: /conf/advanced/quaternion
+    targets:
+    - /req/advanced/quaternion
+    description: |
+      To confirm that the unit quaternion consists of four representations of
+      real number values and that the square root of the sum of the squares of
+      those numbers is approximately 1.
+    purpose: |
+      To confirm the correct properties of a quaternion.
+    method: Inspection
+

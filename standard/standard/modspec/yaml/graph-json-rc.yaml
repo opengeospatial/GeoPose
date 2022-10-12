@@ -1,0 +1,20 @@
+---
+scopes:
+- name: JSON encoding of Graph SDU
+  identifier: /req/graph-encoding-json
+  description: |
+    Requirements for the JSON encoding of a Graph SDU.
+  implements:
+  - /req/graph
+
+  requirements:
+
+  - name: Specification as JSON schema
+    identifier: /req/graph-encoding-json/definition
+    description: |
+      A JSON-encoded GeoPose Graph SHALL conform to the GeoPose Chain
+      JSON-Schema 2019-9 definition (<<graph_json_schema>>).
+    guidance:
+    - |
+      This JSON encoding is extensible because the JSON-Schema
+      "additionalProperties" property is set to the default value of *true*.

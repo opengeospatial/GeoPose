@@ -1,8 +1,0 @@
-[[ats_composite_sequence_stream]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/ats/composite/sequence/stream* 
-^|Test Purpose |To validate that GeoPose data stream elements conform to the JSON-Schema definition.
-^|Requirement |<<req_composite_sequence_stream,/req/composite/sequence/stream>>
-^|Test Method |JSON-Schema validation
-|===

@@ -1,39 +1,39 @@
-[appendix]
-:appendix-caption: Annex
-[[Bibliography]]
-= Bibliography
 
+[bibliography]
+== Bibliography
 
-[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).
+* [[[ogc-testbed12,1]]], OGC: OGC Testbed 12 Annex B: Architecture. (2015).
 
-[2] PHILIP J. SCHNEIDER, DAVID H. EBERLY, Geometric Tools for Computer Graphics, Morgan Kaufmann, 2003.
+* [[[geometric-tools,2]]], PHILIP J. SCHNEIDER, DAVID H. EBERLY, Geometric Tools for Computer Graphics, Morgan Kaufmann, 2003.
 
-[3] OGC Testbed-14: CityGML and AR Engineering Report ( https://docs.ogc.org/per/18-025.html )
+* [[[ogc-testbed14,OGC 18-025]]]
 
-[4] Interoperable Simulation and Gaming Sprint Engineering Report ( http://docs.ogc.org/per/20-087.html )
+* [[[simulation,OGC 20-087]]]
 
-[5] ISG Year 2 ER ( https://github.com/opengeospatial/OGC-ISG-Sprint-Sep-2020/tree/master/Sprint%20Report )
+* [[[isg,5]]], ISG Year 2 ER ( https://github.com/opengeospatial/OGC-ISG-Sprint-Sep-2020/tree/master/Sprint%20Report )
 
-[6] GeoVolumes charter ( https://portal.ogc.org/files/97171 )
+* [[[geovolumes,6]]], GeoVolumes charter ( https://portal.ogc.org/files/97171 )
 
-[7] Ref frame  https://en.wikipedia.org/wiki/Frame_of_reference
+* [[[ref-frame,7]]], Reference frame https://en.wikipedia.org/wiki/Frame_of_reference
 
-[8] Pose https://en.wikipedia.org/wiki/Pose_(computer_vision) 
+* [[[pose,8]]], Pose https://en.wikipedia.org/wiki/Pose_(computer_vision)
 
-[9] OWL Time: https://www.w3.org/TR/2020/CR-owl-time-20200326/
+* [[[owl-time,W3C CR-owl-time-20200326]]]
 
-[10] ISO 19162:2019
-Geographic information — Well-known text representation of coordinate reference systems
-https://www.iso.org/standard/76496.html
+* [[[iso-19162, ISO 19162:2019]]]
 
-[11] ISO 19111:2019 Geographic information — Referencing by coordinates https://www.iso.org/standard/74039.html 
+* [[[iso-19111, ISO 19111:2019]]]
 
-[12] EPSG https://epsg.org
+* [[[epsg,12]]], EPSG https://epsg.org
 
-[13] NASA SPICE https://naif.jpl.nasa.gov/naif/  Navigation and ancillary information facility
+* [[[nasa-spice,13]]], NASA SPICE https://naif.jpl.nasa.gov/naif/ Navigation and ancillary information facility
 
-[14] YPR https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf 
+* [[[ypr,14]]], YPR https://www.gwg.nga.mil/misb//docs/standards/ST0601.8.pdf
 
+* [[[env1613,CEN ENV 1613:1994]]], CEN. ENV 1613:1994 Exchange of Laboratory Information.
 
+* [[[iso13972,ISO 13972:2022]]]
 
+* [[[iso8601-1,ISO 8601-1:2019]]]
 
+* [[[iso8601-2,ISO 8601-2:2019]]]

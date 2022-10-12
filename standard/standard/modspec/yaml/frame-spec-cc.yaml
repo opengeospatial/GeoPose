@@ -1,0 +1,42 @@
+---
+scopes:
+- name: Frame specification requirements
+  identifier: /conf/frame-spec
+  target: /req/frame-spec
+  classification: "Target Type: SDU"
+  description: Conformance with frame specification requirements
+
+  tests:
+  - name: Verify frame specification authority uniquely specifies source of reference frame specification
+    identifier: /conf/frame-spec/authority
+    targets:
+    - /req/frame-spec/authority
+    description: |
+      To confirm the correct properties of a Frame Specification Authority.
+    purpose: |
+      To confirm that a FrameSpecification.authority attribute contains a string
+      uniquely specifying a source of reference frame specifications.
+    method: Inspection
+
+  - name: Frame specification ID uniquely defines frame within authority
+    identifier: /conf/frame-spec/id
+    targets:
+    - /req/frame-spec/id
+    description: |
+      To confirm the correct properties of a Frame Specification ID.
+    purpose: |
+      To confirm that a FrameSpecification.id attribute contains a string
+      uniquely specifying the identity of a reference frame specification as
+      defined by that authority.
+    method: Inspection
+
+  - name: Frame specification parameter contains all parameters needed
+    identifier: /conf/frame-spec/parameters
+    targets:
+    - /req/frame-spec/parameters
+    description: |
+      To confirm the correct properties of Frame Specification Parameters.
+    purpose: |
+      To confirm that a FrameSpecification.parameters attribute contains contain
+      all parameters needed for the corresponding authority and ID.
+    method: Inspection

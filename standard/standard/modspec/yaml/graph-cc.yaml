@@ -1,0 +1,47 @@
+---
+scopes:
+- name: Graph logical model SDU conformance
+  identifier: /conf/graph
+  target: /req/graph
+  classification: "Target Type: SDU"
+  description: To confirm that an implementation of the GeoPose Graph conforms to the Logical Model.
+  dependencies:
+  - /conf/global
+  - /conf/frame-spec
+
+  tests:
+  - name: Verify expression of valid time as GeoPose_Instant
+    identifier: /conf/graph/valid-time
+    targets:
+    - /req/graph/valid-time
+    dependencies:
+    - /conf/time/instant
+    description: |
+      To confirm the correct properties of a GeoPose_Instant.
+    purpose: |
+      Confirm that the `Graph.validTime` attribute is represented by a
+      `GeoPose_Instant` object.
+    method: Inspection
+
+  - name: Verify list of frame specifications
+    identifier: /conf/graph/frame-list
+    targets:
+    - /req/graph/frame-list
+    description: |
+      To confirm that an implementation of an Graph SDU contains a list of
+      explicit frame specifications as `ExplicitFrameSpec` objects.
+    purpose: |
+      Verify that this requirement is satisfied.
+    method: Inspection
+
+  - name: Verify transforms for frame specification list
+    identifier: /conf/graph/transform-list
+    targets:
+    - /req/graph/transform-list
+    description: |
+      To confirm that each index value in a FrameListTransformPair is a distinct
+      integer value between 0 and one less than the number of elements in the
+      frameList property.
+    purpose: |
+      To confirm that an implementation of Graph Index conforms to the Logical Model.
+    method: Inspection

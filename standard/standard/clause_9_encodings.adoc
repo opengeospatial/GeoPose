@@ -1,0 +1,280 @@
+
+== Requirements for Encodings
+
+=== General
+
+Requirements Classes are modularized based on the corresponding Standardization Target. This results in some SDU requirements being repeated between Targets. SDU requirements are abstract in the sense that SDUs are implemented as concrete data objects via serialization formats or encodings. Therefore, there are additional requirements that specify how each Target's group of SDUs are encoded. If there are multiple encodings of a Target, then there is a corresponding additional set of encoding requirements in the Target's section. This occurs only once in GeoPose 1.0, with two different levels of JSON encoding strictness individually specified for the Basic-Q Target.
+
+=== JSON Encoding
+
+==== General
+
+The JSON encoding is one of many possible ways of implementing a concrete representation of any one or more of the GeoPose Standardization Targets. The specific JSON encoding in this section follows all of the normal rules and conventions of JSON. For example, the order of named properties is not significant and, except in the case of the "strict" Basic-Quaternion object, there is no restriction on adding additional properties not specified in the GeoPose 1.0 Standard. In addition to supporting specific application requirements outside the GeoPose 1.0 scope, this flexibility enables experimentation with useful properties that might be part of a future version of the OGC GeoPose Standard.
+
+==== Standardization Target 1: Basic-YPR
+
+[yaml2text,modspec/yaml/basic-ypr-json-rc.yaml,group]
+----
+{% assign prefix = "basic-ypr-json" %}
+include::modspec/requirements_class.liquid[]
+----
+
+[[basic_ypr_json_schema]]
+[source,json]
+.Basic-YPR: JSON encoding schema
+----
+include::schemata/GeoPose.Basic.YPR.Schema.json[]
+----
+
+[example]
+.Basic-YPR: JSON encoding example
+====
+[source,json]
+----
+include::instances/GeoPose.Basic.YPR.Instance.00.json[]
+----
+====
+
+==== Standardization Target 2: Basic-Quaternion
+
+Two JSON encodings are defined for the Basic-Quaternion Target:
+
+*Strict*:: disallowing additional JSON properties not defined in the schema
+
+*Extensible*:: allowing additional JSON properties in addition to those required
+by the schema.
+
+All other targets follow the default and permit additional JSON properties.
+
+===== Strict JSON Encoding
+
+[yaml2text,modspec/yaml/basic-quaternion-json-strict-rc.yaml,group]
+----
+{% assign prefix = "basic-quaternion-json-strict" %}
+include::modspec/requirements_class.liquid[]
+----
+
+[[basic_quaternion_strict_json_schema]]
+[source,json]
+.Basic-Quaternion: Strict JSON encoding schema
+----
+include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
+----
+
+[example]
+====
+[source,json]
+----
+include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
+----
+====
+
+
+===== Permissive JSON Encoding
+
+This JSON encoding of the Basic-Quaternion GeoPose is extensible because the JSON-Schema "additionalProperties" property is set to the default value of *true*. This encoding is intended to be the default GeoPose.
+
+[yaml2text,modspec/yaml/basic-quaternion-json-rc.yaml,group]
+----
+{% assign prefix = "basic-quaternion-json" %}
+include::modspec/requirements_class.liquid[]
+----
+
+[[basic_quaternion_permissive_json_schema]]
+[source,json]
+.Basic-Quaternion: Permissive JSON encoding schema
+----
+include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
+----
+
+[example]
+.Basic-Quaternion: Permissive JSON encoding example
+====
+[source,json]
+----
+include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
+----
+====
+
+
+==== Standardization Target 3: Advanced GeoPose
+
+[yaml2text,modspec/yaml/advanced-json-rc.yaml,group]
+----
+{% assign prefix = "advanced-json" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+[[advanced_geopose_json_schema]]
+[source,json]
+.Advanced GeoPose: JSON encoding schema
+----
+include::schemata/GeoPose.Advanced.Schema.json[]
+----
+
+[example]
+.Advanced GeoPose: JSON encoding example
+====
+[source,json]
+----
+include::instances/GeoPose.Advanced.Instance.json[]
+----
+====
+
+==== Standardization Target 4: Graph
+
+[yaml2text,modspec/yaml/graph-json-rc.yaml,group]
+----
+{% assign prefix = "graph-json" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+[[graph_json_schema]]
+[source,json]
+.Graph: JSON encoding schema
+----
+include::schemata/GeoPose.Composite.Graph.Schema.json[]
+----
+
+[example]
+.Graph: JSON encoding example
+====
+[source,json]
+----
+include::instances/GeoPose.Composite.Graph.Instance.json[]
+----
+====
+
+==== Standardization Target 5: Chain
+
+[yaml2text,modspec/yaml/chain-json-rc.yaml,group]
+----
+{% assign prefix = "chain-json" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+[[chain_json_schema]]
+[source,json]
+.Chain: JSON encoding schema
+----
+include::schemata/GeoPose.Composite.Chain.Schema.json[]
+----
+
+[example]
+.Chain: JSON encoding example
+====
+[source,json]
+----
+include::instances/GeoPose.Composite.Chain.Instance.json[]
+----
+====
+
+==== Standardization Target 6: Regular Series
+
+[yaml2text,modspec/yaml/series-regular-json-rc.yaml,group]
+----
+{% assign prefix = "series-regular-json" %}
+include::modspec/requirements_class.liquid[]
+----
+
+[[regular_series_json_schema]]
+[source,json]
+.Regular series: JSON encoding schema
+----
+include::schemata/GeoPose.Composite.Sequence.Series.Regular.Schema.json[]
+----
+
+[example]
+.Regular series: JSON encoding example
+====
+[source,json]
+----
+include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
+----
+====
+
+==== Standardization Target 7: Irregular Series
+
+[yaml2text,modspec/yaml/series-irregular-json-rc.yaml,group]
+----
+{% assign prefix = "series-irregular-json" %}
+include::modspec/requirements_class.liquid[]
+----
+
+[[irregular_series_json_schema]]
+[source,json]
+.Irregular series: JSON encoding schema
+----
+include::schemata/GeoPose.Composite.Sequence.Series.Irregular.Schema.json[]
+----
+
+[example]
+.Irregular series: JSON encoding example
+====
+[source,json]
+----
+include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
+----
+====
+
+==== Standardization Target 8: Stream
+
+[yaml2text,modspec/yaml/stream-json-rc.yaml,group]
+----
+{% assign prefix = "stream-json" %}
+include::modspec/requirements_class.liquid[]
+----
+
+
+[[streamheader_json_schema]]
+[source,json]
+.Stream header: JSON encoding schema
+----
+include::schemata/GeoPose.Composite.Sequence.StreamHeader.Schema.json[]
+----
+
+[[streamelement_json_schema]]
+[source,json]
+.Stream element: JSON encoding schema
+----
+include::schemata/GeoPose.Composite.Sequence.StreamElement.Schema.json[]
+----
+
+include::req/stream-encoding-json/record.adoc[]
+
+[[streamrecord_json_schema]]
+[source,json]
+.Stream record: JSON encoding schema
+----
+include::schemata/GeoPose.Composite.Sequence.Stream.Schema.json[]
+----
+
+[example]
+.Valid JSON encoding of a Stream Header instance
+====
+[source,json]
+----
+include::instances/GeoPose.Composite.Sequence.StreamHeader.Instance.json[]
+----
+====
+
+[example]
+.Valid JSON encoding of a Stream Element instance
+====
+[source,json]
+----
+include::instances/GeoPose.Composite.Sequence.StreamElement.Instance.json[]
+----
+====
+
+[example]
+.Valid JSON encoding of a Recorded Stream
+====
+[source,json]
+----
+include::instances/GeoPose.Composite.Sequence.Stream.Instance.json[]
+----
+====

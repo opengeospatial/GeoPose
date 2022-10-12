@@ -1,0 +1,23 @@
+---
+scopes:
+- name: JSON encoding of Graph SDU
+  identifier: /conf/graph-encoding-json
+  target: /req/graph-encoding-json
+  classification: "Target Type: JSON SDU"
+  description: |
+    Confirm that a JSON-encoded GeoPose Graph conforms to the
+    relevant elements of the Logical Model and a corresponding JSON-Schema
+    document.
+
+  tests:
+  - name: Verify conformance via JSON schema
+    identifier: /conf/graph-encoding-json/definition
+    targets:
+    - /req/graph-encoding-json/definition
+    description: |
+      To confirm that a GeoPose Graph in JSON validates against the JSON schema.
+    purpose: |
+      Verify that data validates against the corresponding JSON schema.
+    method: |
+      Validate the JSON data against the GeoPose Graph JSON-Schema 2019-9
+      definition (<<graph_json_schema>>).

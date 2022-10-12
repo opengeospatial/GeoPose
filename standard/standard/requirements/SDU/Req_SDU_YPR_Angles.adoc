@@ -1,7 +1,0 @@
-[[req_sdu_orientation_ypr_angles]]
-[width="100%",cols="4,6"]
-|===
-^|*Requirement B-YPR-SDU* |*/req/orientation/ypr_angles/sdu* 
-^|Requirement |Euler angles shall be expressed as three consecutive rotations about the local axes Z, Y, and X, in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The unit of measure shall be the degree. 
-^|ID |<<req_sdu_orientation_euler_angles,/req/orientation/ypr_angles/sdu>>
-|===

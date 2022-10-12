@@ -1,6 +1,0 @@
-[[req_sequence]]
-[width="90%",cols="2,6"]
-
-include::series/req_Series.adoc[]
-
-include::stream/req_Stream.adoc[]

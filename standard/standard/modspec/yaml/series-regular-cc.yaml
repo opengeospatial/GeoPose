@@ -1,0 +1,62 @@
+---
+scopes:
+- name: Regular_Series logical model SDU conformance
+  identifier: /conf/series-regular
+  target: /req/series-regular
+  classification: "Target Type: SDU"
+  description: To confirm that components of a Regular Series conform to the Logical Model.
+  dependencies:
+  - /conf/global
+  - /conf/frame-spec
+  - /conf/time
+
+  tests:
+
+  - name: Verify expression of duration as GeoPose_Duration
+    identifier: /conf/series-regular/duration
+    targets:
+    - /req/series-regular/duration
+    dependencies:
+    - /conf/time/duration
+    description: |
+      To confirm that the `Regular_Series.interPoseDuration` attribute is
+      represented by an instance of the `GeoPose_Duration` object.
+    purpose: To confirm the correct properties of a GeoPose Duration.
+
+  - name: Verify expression of outer frame
+    identifier: /conf/series-regular/outer-frame
+    targets:
+    - /req/series-regular/outer-frame
+    purpose: |
+      The `Regular_Series.outerFrame` attribute shall represent the first frame
+      in the series with the `ExplicitFrameSpec` object.
+
+  - name: Verify expression of inner frames
+    identifier: /conf/series-regular/inner-frame-series
+    targets:
+    - /req/series-regular/inner-frame-series
+    purpose: |
+      The `Regular_Series.innerFrameSeries` attribute shall represent the
+      succession of inner frames as an array of `ExplicitFrameSpec` objects.
+
+  - name: Verify expression of series header
+    identifier: /conf/series-regular/header
+    targets:
+    - /req/series-regular/header
+    description: |
+      Verify that the `Regular_Series.header` attribute is implemented as an
+      instance of SeriesHeader.
+    purpose: |
+      To confirm that the implementation of Series Header conforms to the
+      Logical Model.
+
+  - name: Verify expression of series trailer
+    identifier: /conf/series-regular/trailer
+    targets:
+    - /req/series-regular/trailer
+    description: |
+      Verify that the `Regular_Series.trailer` attribute is implemented as an
+      instance of SeriesTrailer.
+    purpose: |
+      To confirm that the implementation of SeriesTrailer conforms to the
+      Logical Model.

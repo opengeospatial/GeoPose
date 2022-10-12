@@ -1,0 +1,23 @@
+---
+scopes:
+- name: JSON encoding of Irregular Series SDU
+  identifier: /conf/series-irregular-encoding-json
+  target: /req/series-irregular-encoding-json
+  classification: "Target Type: JSON SDU"
+  description: |
+    Confirm that a JSON-encoded GeoPose Irregular Series conforms to the
+    relevant elements of the Logical Model and a corresponding JSON-Schema
+    document.
+
+  tests:
+  - name: Verify conformance via JSON schema
+    identifier: /conf/series-irregular-encoding-json/definition
+    targets:
+    - /req/series-irregular-encoding-json/definition
+    description: |
+      To confirm that a GeoPose Irregular Series in JSON validates against the JSON schema.
+    purpose: |
+      Verify that data validates against the corresponding JSON schema.
+    method: |
+      Validate the JSON data against the GeoPose Irregular Series JSON-Schema 2019-9
+      definition (<<irregular_series_json_schema>>).

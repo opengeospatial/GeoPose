@@ -1,0 +1,22 @@
+---
+scopes:
+- name: JSON encoding of Basic-YPR SDU
+  identifier: /conf/basic-ypr-encoding-json
+  target: /req/basic-ypr-encoding-json
+  classification: "Target Type: JSON SDU"
+  description: |
+    Confirm that a JSON-encoded Basic-YPR GeoPose conforms to the relevant
+    elements of the Logical Model and a corresponding JSON-Schema document.
+
+  tests:
+  - name: Verify conformance via JSON schema
+    identifier: /conf/basic-ypr-encoding-json/definition
+    targets:
+    - /req/basic-ypr-encoding-json/definition
+    description: |
+      To confirm that a Basic-YPR GeoPose in JSON validates against the JSON schema.
+    purpose: |
+      Verify that data validates against the corresponding JSON schema.
+    method: |
+      Validate the JSON data against the Basic-YPR JSON Schema 2019-9 definition
+      (<<basic_ypr_json_schema>>).

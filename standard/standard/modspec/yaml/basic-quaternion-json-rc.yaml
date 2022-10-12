@@ -1,0 +1,17 @@
+---
+scopes:
+- name: Permissive JSON encoding of Basic-Quaternion SDU
+  identifier: /req/basic-quaternion-encoding-json
+  description: |
+    Requirements for the JSON encoding of a Basic-Quaternion SDU.
+  implements:
+  - /req/basic-quaternion
+
+  requirements:
+
+  - name: Specification as JSON schema
+    identifier: /req/basic-quaternion-encoding-json/definition
+    description: |
+      A JSON-encoded Basic-Quaternion GeoPose SHALL conform to the
+      Basic-Quaternion JSON-Schema 2019-9 definition
+      (<<basic_quaternion_permissive_json_schema>>).

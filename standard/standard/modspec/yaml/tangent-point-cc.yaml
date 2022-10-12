@@ -1,0 +1,42 @@
+---
+scopes:
+- name: Tangent point conformance
+  identifier: /conf/tangent-point
+  target: /req/tangent-point
+  classification: "Target Type: SDU"
+  description: Conformance with tangent point requirements
+
+  tests:
+  - name: Verify tangent point height value meets specification
+    identifier: /conf/tangent-point/height
+    targets:
+    - /req/tangent-point/height
+    description: |
+      To confirm that a GeoPose `tangentPoint.h` attribute is expressed as a
+      height in meters above the WGS-84 ellipsoid and represented as a signed
+      real number.
+    purpose: |
+      Verify that this requirement is satisfied.
+    method: Inspection
+
+  - name: Verify tangent point latitude value meets specification
+    identifier: /conf/tangent-point/latitude
+    targets:
+    - /req/tangent-point/latitude
+    description: |
+      To confirm that a GeoPose `tangentPoint.latitude` attribute is expressed
+      as an angle in decimal degrees.
+    purpose: |
+      Verify that this requirement is satisfied
+    method: Inspection
+
+  - name: Verify tangent point longitude value meets specification
+    identifier: /conf/tangent-point/longitude
+    targets:
+    - /req/tangent-point/longitude
+    description: |
+      To confirm that a GeoPose `tangentPoint.longitude` attribute is expressed
+      as an angle in decimal degrees.
+    purpose: |
+      Verify that this requirement is satisfied
+    method: Inspection

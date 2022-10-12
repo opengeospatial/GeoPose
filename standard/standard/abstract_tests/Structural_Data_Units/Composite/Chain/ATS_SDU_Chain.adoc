@@ -1,8 +1,0 @@
-[[ats_composite_chain]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/ats/composite/chain* 
-^|Test Purpose |To validate that GeoPose data Chains conform to their JSON-Schema definition.
-^|Requirement |<<req_composite_chain,/req/composite/chain>>
-^|Test Method |JSON-Schema validation
-|===

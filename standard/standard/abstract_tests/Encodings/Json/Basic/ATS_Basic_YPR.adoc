@@ -1,8 +1,0 @@
-[[ats_json_basic_ypr]]
-[width="90%",cols="2,6"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/ats/basic/YPRr* 
-^|Test Purpose |To validate that Basic-YPR GeoPose data objects conform to the JSON-Schema definition.
-^|Requirement |<<req_basic_ypr,/req/basic/YPRr>>
-^|Test Method |JSON-Schema validation
-|===

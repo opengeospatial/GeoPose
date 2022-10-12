@@ -1,0 +1,36 @@
+---
+scopes:
+- name: StreamHeader and StreamElement logical model SDUs
+  identifier: /req/stream
+  description: |
+    The Stream target supports a network of object relative poses. The graph is a
+    directed acyclic graph, each node must either be an Extrinsic Frame or
+    reachable from an Extrinsic Frame.
+
+  dependencies:
+  - /req/global
+  - /req/frame-spec
+
+  requirements:
+
+  - name: Expression of outer frame in StreamHeader
+    identifier: /req/stream/header-initial-frame
+    description: |
+      The `StreamHeader.outerFrame` attribute shall represent the initial frame
+      of the stream with a value that is an instant of the `ExplicitFrameSpec`
+      object.
+
+  - name: Expression of transition model in StreamHeader
+    identifier: /req/stream/header-transition-model
+    description: |
+      The `StreamHeader.transitionModel` attribute shall have a value that is
+      an instance of the `TransitionModel` enumeration.
+
+  - name: Expression of stream elements in StreamElement
+    identifier: /req/stream/element
+    dependencies:
+    - /req/time/instant
+    description: |
+      The `StreamElement.streamElement` attribute shall be implemented as an
+      array of `FrameAndTimeElement` objects, each of which is a pair of
+      `ExplicitFrameSpec` and `GeoPoseInstant` objects.
