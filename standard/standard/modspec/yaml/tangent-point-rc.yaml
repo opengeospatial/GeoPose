@@ -26,7 +26,7 @@ scopes:
     description: |
       An instance of GeoPose tangentPoint.latitude attribute SHALL be expressed
       as decimal degrees and represented as a signed floating point
-      value conforming to IEEE 754.. The minimum value shall be 90.0 degrees
+      value conforming to IEEE 754. The minimum value shall be 90.0 degrees
       and the maximum value shall be 90.0 degrees.
 
   - name: Tangent point longitude value specification

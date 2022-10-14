@@ -4,7 +4,7 @@ scopes:
   identifier: /conf/series-irregular
   target: /req/series-irregular
   classification: "Target Type: SDU"
-  description: To confirm that components of a Irregular_Series conform to the Logical Model.
+  description: To confirm that components of an Irregular_Series conform to the Logical Model.
   dependencies:
   - /conf/global
   - /conf/frame-spec

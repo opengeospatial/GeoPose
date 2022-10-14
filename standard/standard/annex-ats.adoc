@@ -4,7 +4,7 @@
 
 === Introduction
 
-GeoPose 1.0 specifies a eight Standardization Targets using elements of the Logical Model. These elements are Structural Data Units (SDUs) and they have the stereotype "Structural Data Unit - SDU". Each SDU is an element of the Logical Model that will be expressed in concrete data objects encoded using specific encoding or serialization technologies.
+GeoPose 1.0 specifies eight Standardization Targets using elements of the Logical Model. These elements are Structural Data Units (SDUs) and they have the stereotype "Structural Data Unit - SDU". Each SDU is an element of the Logical Model that will be expressed in concrete data objects encoded using specific encoding or serialization technologies.
 
 Although implementation of the Standardization Targets, expressed as SDUs, is independent of the Logical Model, GeoPose 1.0 also defines one of many possible implementations, single encoding in JavaScript Object Notation (JSON). The encodings of the eight targets are specified using <<jsonschema2019>>. To keep the individual Standardization targets independent, there are some SDU requirements and corresponding conformance tests that appear in more than one requirement or conformance class. This structure is based on the judgement that it is easier to understand the independence of targets with complete definitions than would be the case if the definitional requirements of the SDUs were factored out and referenced indirectly by individual encodings.
 
@@ -224,4 +224,3 @@ The *GeoPose Stream* JSON encoding has an optional time stamp and a flexible Out
 {% assign prefix = "stream-json" %}
 include::modspec/conformance_class.liquid[]
 ----
-
