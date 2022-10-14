@@ -11,7 +11,7 @@ The Standardization Targets share an implementation-neutral Logical Model which 
 
 For each Standardization Target, each implementation technology and corresponding encoding format defines the encoding or serialization specified in a manner appropriate to that technology.
 
-GeoPose Version 1.0 specifies a single encoding in JSON format (<<json2017>>).
+GeoPose 1.0 specifies a single encoding in JSON format (<<json2017>>).
 Each Standardization Target has a JSON Schema (<<jsonschema2019>>) encoding specification.
 The key standardization requirements specify that concrete JSON-encoded GeoPose data objects must conform to the corresponding JSON Schema definition. The individual elements identified in the encoding specification are composed of SDUs, tying the specifications back to the Logical Model.
 
@@ -19,9 +19,27 @@ The GeoPose 1.0 Standard makes no assumptions about the interpretation of extern
 
 == Preface
 
-EDITOR: Please provide real preface content.
+////
+*OGC Declaration*
+////
 
-This is a draft implementation specification for GeoPose 1.0.
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+
+////
+NOTE: Uncomment ISO section if necessary
+
+*ISO Declaration*
+
+ISO (the International Organization for Standardization) is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out through ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization.
+
+International Standards are drafted in accordance with the rules given in the ISO/IEC Directives, Part 2.
+
+The main task of technical committees is to prepare International Standards. Draft International Standards adopted by the technical committees are circulated to the member bodies for voting. Publication as an International Standard requires approval by at least 75 % of the member bodies casting a vote.
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights.
+////
 
 
 == Submitters
@@ -37,7 +55,7 @@ Applied Sciences and Arts Western Switzerland
 |Kyoung-Sook Kim |National Institute of Advanced Industrial Science and Technology
 |Jeremy Morley |Ordnance Survey
 |Christine Perey |Open AR Cloud Association
-|Mahmoud SAKR |Université Libre de BRUXELLES
+|Mahmoud Sakr |Université Libre de Bruxelles
 |Scott Simmons |Open Geospatial Consortium
 |Carl Stephen Smyth |OpenSitePlan, USA
 |Jan-Erik Vinje |Open AR Cloud Association
@@ -62,4 +80,4 @@ The following individuals contributed to the GeoPose 1.0 development:
 
 == Acknowledgements
 
-The GeoPose SWG wishes to thank the 3D Information Management (3DIM) Working Group of the OGC as well as Augmented City, Immersal, Trevor F. Smith, Transmutable, Khronos Group, SEDRIS, Roger Lott and Chris Little for their support and insight.
+The GeoPose Standards Working Group (SWG) wishes to thank the 3D Information Management (3DIM) Working Group of the OGC as well as Augmented City, Immersal, Trevor F. Smith, Transmutable, Khronos Group, SEDRIS, Roger Lott and Chris Little for their support and insight.

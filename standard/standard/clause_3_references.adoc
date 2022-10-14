@@ -7,7 +7,7 @@
 
 * [[[jsonschemavalidation2019,IETF I-D.draft-handrews-json-schema-validation-02]]]
 
-* [[[iso19101,ISO 19101]]]
+* [[[iso19101-1,ISO 19101-1:2014]]]
 
 * [[[iso19103,ISO 19103:2015]]]
 
