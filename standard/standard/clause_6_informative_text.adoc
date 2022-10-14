@@ -2,17 +2,17 @@
 
 === General
 
-<<iso19101>> defines universe of discourse to be a view of the real or hypothetical world that includes everything of interest. That standard then defines conceptual model to be a model that defines concepts of a universe of discourse.
+<<iso19101-1>> defines a universe of discourse to be a view of the real or hypothetical world that includes everything of interest. That standard  defines a conceptual model to be a model that defines concepts of a universe of discourse.
 
-The goal of this GeoPose Standard is to establish and document a common set of concepts that spans the targeted use cases. This does not attempt to redefine application concepts, but merely present a common set of concepts from and to which their concepts can be understood and mapped.
+The goal of this GeoPose Standard is to establish and document a common set of concepts that spans the targeted use cases. This does not attempt to redefine application concepts, but merely to present a common set of concepts from and to which their concepts can be understood and mapped.
 
-The GeoPose conceptual model is a graph of related concepts. One technology-independent realization is given by the GeoPose Logical Model.
+The GeoPose Conceptual Model (CM) is a graph of related concepts. One technology-independent realization is given by the GeoPose Logical Model (LM).
 
-The GeoPose conceptual model (CM) consists of linked definitions of terms denoting concepts expressed in the GeoPose logical model (LM) and structural data unit (SDU) specifications for the standardization targets.
+The GeoPose CM consists of linked definitions of terms denoting concepts expressed in the GeoPose LM and Structural Data Unit (SDU) specifications for the standardization targets.
 
-The CM describes a (non-normative) domain of discourse for terms used in defining a precise and normative Logical Model (LM) expressed as a Unified Modelling Language (UML) class diagram.
+The CM describes a (non-normative) domain of discourse for terms used in defining a precise and normative LM expressed as a Unified Modelling Language (UML) class diagram.
 
-The scope of the standardization targets is a subset of the scope of the LM. The scope of the LM is a subset of the scope of the Conceptual Model. The standardization targets are mutually independent implementations of subsets of the LM.
+The scope of the standardization targets is a subset of the scope of the LM. The scope of the LM is a subset of the scope of the CM. The standardization targets are mutually independent implementations of subsets of the LM.
 
 
 === Temporal concepts and reference frame
@@ -37,7 +37,7 @@ The structure of the GeoPose Standard document flows from:
 
 * the normative derivation of specific structural data units that represent abstract implementation and standardization targets.
 
-These Structural Data Units (SDUs) are abstract: they are independent of implementation or delivery technology and serialization or encoding formats. GeoPose Version 1.0 specifies one of many possible realizations of the structural data units in JSON.
+These Structural Data Units (SDUs) are abstract: they are independent of implementation or delivery technology and serialization or encoding formats. GeoPose 1.0 specifies one of many possible realizations of the structural data units in JSON.
 
 A key aspect of the GeoPose Standard is that specific use cases are tied to the standardization targets, which prescribe the structure and content of GeoPose data objects. Corresponding implementation examples appear in other documents.
 
@@ -50,15 +50,16 @@ image::diagram/OGC_Process_Detail.png[]
 [[use_case_summary]]
 === Use Case Summary
 
-The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPoses is to convey the position and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of related GeoPoses in a common geographic reference frame.
+The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPose is to convey the position and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of related GeoPoses in a common geographic reference frame.
 
 Each use case is identified by a unique ID, has a brief description, and a list of the relevant standardization targets.
 
 ==== Augmented and Mixed Reality [AR]
 
-Augmented reality (AR) integrates synthetic objects or synthetic representations of real objects with a physical environment. Geospatial AR experiences can use GeoPose to position synthetic objects or their representations in the physical environment. The geospatial connection provides a common reference frame to support integration in AR.
+Augmented Reality (AR) integrates synthetic objects or synthetic representations of real objects with a physical environment. Geospatial AR experiences can use GeoPose to position synthetic objects or their representations in the physical environment. The geospatial connection provides a common reference frame to support integration in AR.
 
 [%header,cols="2,5,2"]
+.GeoPose use cases for Augmented and Mixed Reality
 |===
 |ID
 |Description
@@ -98,6 +99,7 @@ Basic-YPR, Basic-Quaternion,
 Autonomous vehicles are mobile objects that move through water, across a water surface, in the air, through the solid earth (tunnel boring machine), on the land surface, or in outer space without real-time control by an independent onboard operator. A pose captures the essential information in positioning and orienting a moving object. Sensors attached to mobile elements have their own poses and a chain of reference frame transformations enables common reference frames to be used for data fusion. The possibility of relating the vehicle to other elements of the environment via a common reference frame is essential.
 
 [%header,cols="2,5,2"]
+.GeoPose use cases for Autonomous Vehicles
 |===
 |ID
 |Description
@@ -108,7 +110,7 @@ Autonomous vehicles are mobile objects that move through water, across a water s
 |Basic-YPR, Basic-Quaternion
 
 |/geopose/1.0/use_case/av/02
-|Calculate parameters such as distances and routes (reference to OGC Moving Features?)
+|Calculate parameters such as distances and routes
 |Basic-YPR, Basic-Quaternion, Regular Timeseries, Irregular Timeseries, Stream
 
 |/geopose/1.0/use_case/av/03
@@ -121,6 +123,7 @@ Autonomous vehicles are mobile objects that move through water, across a water s
 The built environment consists of objects constructed by humans and located in physical space. Buildings, roads, dams, railways, and underground utilities are all part of the built environment. The location and orientation of built objects, especially those whose view is occluded by other objects is essential information needed for human interaction with the built environment. A common reference frame tied to the earth's surface facilitates the integration of these objects when their representations are supplied by different sources.
 
 [%header,cols="2,5,2"]
+.GeoPose use cases for the Built Environment
 |===
 |ID
 |Description
@@ -137,9 +140,10 @@ The built environment consists of objects constructed by humans and located in p
 
 ==== Synthetic Environments [SE]
 
-Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environment that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated over some time period to provide visualizations or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archival of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there are may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and implements is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations make a coherent assembly possible
+Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environment that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated over some time period to provide visualizations or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archival of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and other objects is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations makes a coherent assembly possible.
 
 [%header,cols="2,5,2"]
+.GeoPose use cases for Synthetic Environments
 |===
 |ID
 |Description
@@ -159,6 +163,7 @@ Synthetic environments contain collections of moving objects, which themselves m
 Image understanding is the segmentation of an image or sequence of images into inferred 3D objects in specific semantic categories, possibly determining or constraining their motion and/or geometry. One important application of image understanding is the recognition of moving elements in a time series of images. A pose is a compact representation of the key geometric characteristics of a moving element. In addition to moving elements sensed by an imaging device, it is often useful to know the pose of the sensor or imaging device itself. A common geographic reference frame integrates the objects into a single environment.
 
 [%header,cols="2,5,2"]
+.GeoPose use cases for Image Understanding
 |===
 |ID
 |Description

@@ -88,7 +88,7 @@ coordinate system referenced to a {{datum}}
 === data type
 
 representational form for a concrete data element such as a number, character,
-or colour
+or color
 
 === datum
 

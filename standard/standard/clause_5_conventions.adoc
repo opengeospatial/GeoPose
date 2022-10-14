@@ -16,7 +16,7 @@ All requirements and conformance tests that appear in this document are denoted 
 
 === UML Notation
 
-The logical structure of the elements used in the GeoPose Standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. 1997). The UML notations used in this standard are described in the diagram in <<figure-1>>.
+The logical structure of the elements used in the GeoPose Standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. <<Booch1997>>). The UML notations used in this standard are described in the diagram in <<figure-1>>.
 
 [[figure-1]]
 .UML notation (<<iso19103>>)
@@ -55,4 +55,3 @@ Enumerations are painted in green.
 image::images/White_UML.png[]
 
 The color white is used for notes and OCL constraints that are provided in the UML diagrams.
-
