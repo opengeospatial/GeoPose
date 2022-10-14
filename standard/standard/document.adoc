@@ -1,4 +1,4 @@
-= GeoPose Data Exchange Standard 1.0
+= GeoPose Data Exchange Standard
 :doctype: standard
 :docsubtype: implementation
 :status: draft
@@ -6,7 +6,7 @@
 :committee: technical
 :workgroup: GeoPose Standard Working Group
 :docnumber: 21-056r10
-:edition: 1
+:edition: 1.0.0
 :received-date: 2022-02-08
 :issued-date:
 :published-date:
