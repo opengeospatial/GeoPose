@@ -1,4 +1,4 @@
-= GeoPose Data Exchange Standard
+= OGC GeoPose 1.0 Data Exchange Draft Standard
 :doctype: standard
 :docsubtype: implementation
 :status: draft
