@@ -10,7 +10,11 @@ The SWG will then examine whether the proposed standard maintains interoperabili
 
 # Draft GeoPose Specification
 
-⚠️ The https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[OGC GeoPose specification] available in this repo is a draft (work in progress). This draft reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[here] in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
+⚠️ The https://opengeospatial.github.io/ogcna-auto-review/21-056r10.html[OGC GeoPose specification] available in this repo is a draft (work in progress). This draft reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[here] in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
+
+The daily built *HTML* version of the GeoPose 1.0 Draft Standard can be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10.html[here].
+
+The daily built *PDF* version of the GeoPose 1.0 Draft Standard can be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10.pdf[here].
 
 # Get More Information
 The OGC GeoPose SWG is currently developing a pair of informational guides and a set of sample implementations which will be made public on GitHub. The guides will support reviewers of this specification and those who seek to implement it.
