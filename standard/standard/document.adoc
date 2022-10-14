@@ -14,7 +14,7 @@
 :external-id: http://www.opengis.net/doc/standard/21-056r10/1.0
 :fullname: Carl Stephen Smyth
 :role: editor
-:keywords: ogc, ogcdoc, OGC document, pose, geopose, ar, reference frame
+:keywords: ogc, ogcdoc, OGC document, pose, geopose, augmented reality, ar, mixed reality, xr, reference frame
 :submitting-organizations: Norkart AS; Open Site Plan; Open AR Cloud Association; Ordnance Survey; School of Management and Engineering Vaud, HES-SO University of Applied Sciences and Arts Western Switzerland
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf,rxl
