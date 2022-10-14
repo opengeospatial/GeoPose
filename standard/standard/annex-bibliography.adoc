@@ -37,3 +37,5 @@
 * [[[iso8601-1,ISO 8601-1:2019]]]
 
 * [[[iso8601-2,ISO 8601-2:2019]]]
+
+* [[[Booch1997,10]]], Booch, G., Rumbaugh, J., Jacobson, I.: Unified Modeling Language User Guide. Addison-Wesley (1997)

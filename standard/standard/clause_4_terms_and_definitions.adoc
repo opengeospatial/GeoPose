@@ -5,18 +5,12 @@
 ==== conceptual model
 admitted:[CM]
 
-description of common concepts and their relationships, particularly in order to
-facilitate exchange of information between parties within a specific domain
+model that defines concepts of a universe of discourse
 
-NOTE: A conceptual model is explicitly chosen to be may be informed by, but
-independent of design or implementation concerns.
-
-EDITOR: Perhaps this is a better source:
-"model that defines concepts of a universe of discourse",
-ISO 19101-1:2014, 4.1.5.
+NOTE: A conceptual model is explicitly chosen to be informed by, but be independent of design or implementation concerns.
 
 [.source]
-<<env1613>>
+<<iso19101-1,clause="4.1.5">>
 
 
 ==== logical model

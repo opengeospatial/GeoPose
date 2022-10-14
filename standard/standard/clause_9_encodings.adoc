@@ -243,7 +243,7 @@ include::schemata/GeoPose.Composite.Sequence.StreamHeader.Schema.json[]
 include::schemata/GeoPose.Composite.Sequence.StreamElement.Schema.json[]
 ----
 
-include::req/stream-encoding-json/record.adoc[]
+Refer to the specification of Requirement <<r-stream-json-1-3,/req/stream-encoding-json/record>>.
 
 [[streamrecord_json_schema]]
 [source,json]
