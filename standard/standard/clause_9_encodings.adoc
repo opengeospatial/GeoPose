@@ -31,7 +31,7 @@ include::schemata/GeoPose.Basic.YPR.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Basic.YPR.Instance.00.json[]
+include::Instances/GeoPose.Basic.YPR.Instance.00.json[]
 ----
 ====
 
@@ -65,7 +65,7 @@ include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
+include::Instances/GeoPose.Basic.Strict_Quaternion.Instance.00.json[]
 ----
 ====
 
@@ -92,7 +92,7 @@ include::schemata/GeoPose.Basic.Strict_Quaternion.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Basic.Quaternion.Instance.00.json[]
+include::Instances/GeoPose.Basic.Quaternion.Instance.00.json[]
 ----
 ====
 
@@ -118,7 +118,7 @@ include::schemata/GeoPose.Advanced.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Advanced.Instance.json[]
+include::Instances/GeoPose.Advanced.Instance.json[]
 ----
 ====
 
@@ -143,7 +143,7 @@ include::schemata/GeoPose.Composite.Graph.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Composite.Graph.Instance.json[]
+include::Instances/GeoPose.Composite.Graph.Instance.json[]
 ----
 ====
 
@@ -168,7 +168,7 @@ include::schemata/GeoPose.Composite.Chain.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Composite.Chain.Instance.json[]
+include::Instances/GeoPose.Composite.Chain.Instance.json[]
 ----
 ====
 
@@ -192,7 +192,7 @@ include::schemata/GeoPose.Composite.Sequence.Series.Regular.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
+include::Instances/GeoPose.Composite.Sequence.Series.Regular.Instance.json[]
 ----
 ====
 
@@ -216,7 +216,7 @@ include::schemata/GeoPose.Composite.Sequence.Series.Irregular.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
+include::Instances/GeoPose.Composite.Sequence.Series.Irregular.Instance.json[]
 ----
 ====
 
@@ -257,7 +257,7 @@ include::schemata/GeoPose.Composite.Sequence.Stream.Schema.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Composite.Sequence.StreamHeader.Instance.json[]
+include::Instances/GeoPose.Composite.Sequence.StreamHeader.Instance.json[]
 ----
 ====
 
@@ -266,7 +266,7 @@ include::instances/GeoPose.Composite.Sequence.StreamHeader.Instance.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Composite.Sequence.StreamElement.Instance.json[]
+include::Instances/GeoPose.Composite.Sequence.StreamElement.Instance.json[]
 ----
 ====
 
@@ -275,6 +275,6 @@ include::instances/GeoPose.Composite.Sequence.StreamElement.Instance.json[]
 ====
 [source,json]
 ----
-include::instances/GeoPose.Composite.Sequence.Stream.Instance.json[]
+include::Instances/GeoPose.Composite.Sequence.Stream.Instance.json[]
 ----
 ====
