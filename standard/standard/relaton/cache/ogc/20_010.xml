@@ -1,0 +1,78 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard</title>
+  <title type="main" format="text/plain" language="en" script="Latn">OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard</title>
+  <uri type="obp">https://docs.ogc.org/is/20-010/20-010.html</uri>
+  <docidentifier type="OGC" primary="true">20-010</docidentifier>
+  <date type="published">
+    <on>2021-09-13</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Thomas H. Kolbe</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Tatjana Kutzner</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Carl Stephen Smyth</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Claus Nagel</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Carsten Roensdorf</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Charles Heazel</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This Standard defines the open CityGML Conceptual Model for the storage and exchange of virtual 3D city models. The CityGML Conceptual Model is defined by a Unified Modeling Language (UML) object model. This UML model builds on the ISO Technical Committee 211 (ISO/TC 211) conceptual model standards for spatial and temporal data. Building on the ISO foundation assures that the man-made features described in the city models share the same spatiotemporal universe as the surrounding countryside within which they reside.
+
+A key goal for the development of the CityGML Conceptual Model is to provide a common definition of the basic entities, attributes, and relations of a 3D city model. This is especially important with respect to the cost-effective sustainable maintenance of 3D city models, allowing the reuse of the same data in different application fields.
+
+The class models described in this standard are also available at https://github.com/opengeospatial/CityGML3-Workspace/tree/1.0/UML/CityGML</abstract>
+  <ext>
+    <doctype>standard</doctype>
+    <subdoctype>implementation</subdoctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

@@ -8,10 +8,10 @@
 :docnumber: 21-056r10
 :edition: 1.0.0
 :received-date: 2022-02-08
-:issued-date:
-:published-date:
+:issued-date: 2022-06-20
+:published-date: 2022-10-19
 :copyright-year: 2022
-:external-id: http://www.opengis.net/doc/standard/21-056r10/1.0
+:external-id: http://www.opengis.net/doc/IS/geopose/1.0
 :fullname: Carl Stephen Smyth
 :role: editor
 :keywords: ogc, ogcdoc, OGC document, pose, geopose, augmented reality, ar, mixed reality, xr, reference frame

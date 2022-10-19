@@ -1,0 +1,48 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title format="text/plain">Time Ontology in OWL</title>
+  <uri type="src">https://www.w3.org/TR/2020/CR-owl-time-20200326/</uri>
+  <uri type="current">https://w3c.github.io/sdw/time/</uri>
+  <docidentifier type="W3C" primary="true">W3C CR-owl-time-20200326</docidentifier>
+  <docnumber>CR-owl-time-20200326</docnumber>
+  <date type="published">
+    <on>2020-03-26</on>
+  </date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename language="en" script="Latn">Chris Little</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename language="en" script="Latn">Simon Cox</completename>
+      </name>
+    </person>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>candidateRecommendation</stage>
+  </status>
+  <relation type="obsoletes">
+    <bibitem>
+      <formattedref format="text/plain">W3C REC-owl-time-20171019</formattedref>
+      <docidentifier type="W3C" primary="true">W3C REC-owl-time-20171019</docidentifier>
+    </bibitem>
+  </relation>
+  <series>
+    <title format="text/plain">W3C CR</title>
+    <number>CR-owl-time-20200326</number>
+  </series>
+  <ext>
+    <doctype>technicalReport</doctype>
+    <editorialgroup>
+      <technical-committee>Spatial Data on the Web Working Group</technical-committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

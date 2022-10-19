@@ -1,0 +1,61 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title format="text/plain" language="en" script="Latn">JSON Schema Validation: A Vocabulary for Structural Validation of JSON</title>
+  <uri type="TXT">https://www.ietf.org/archive/id/draft-handrews-json-schema-validation-02.txt</uri>
+  <docidentifier type="Internet-Draft" primary="true">draft-handrews-json-schema-validation-02</docidentifier>
+  <docidentifier type="IETF" scope="anchor">I-D.handrews-json-schema-validation</docidentifier>
+  <docnumber>I-D.handrews-json-schema-validation</docnumber>
+  <date type="published">
+    <on>2019-09</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename language="en">Austin Wright</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename language="en">Henry Andrews</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename language="en">Ben Hutton</completename>
+      </name>
+      <affiliation>
+        <organization>
+          <name>Wellcome Sanger Institute</name>
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>
+    <draft>02</draft>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p>JSON Schema (application/schema+json) has several purposes, one of which is JSON instance validation. This document specifies a vocabulary for JSON Schema to describe the meaning of JSON documents, provide hints for user interfaces working with JSON data, and to make assertions about what a valid document must look like.</p>
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref format="text/plain">draft-handrews-json-schema-validation-01</formattedref>
+      <docidentifier type="Internet-Draft" primary="true">draft-handrews-json-schema-validation-01</docidentifier>
+    </bibitem>
+  </relation>
+  <series type="main">
+    <title format="text/plain" language="en" script="Latn">Internet-Draft</title>
+    <number>draft-handrews-json-schema-validation-02</number>
+  </series>
+  <ext>
+    <doctype>internet-draft</doctype>
+  </ext>
+</bibdata>

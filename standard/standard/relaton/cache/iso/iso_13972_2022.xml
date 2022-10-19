@@ -1,0 +1,70 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Health informatics</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Clinical information models</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">Characteristics, structures and requirements</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Health informatics - Clinical information models - Characteristics, structures and requirements</title>
+  <uri type="src">https://www.iso.org/standard/79498.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:79498:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/07/94/79498.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 13972:2022</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:13972:ed-1</docidentifier>
+  <docnumber>13972</docnumber>
+  <date type="published">
+    <on>2022-02</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document:
+—    Specifies clinical information models (CIMs) as health and care concepts that can be used to define and to structure information for various purposes in health care, also enabling information reuse;
+—    Describes requirements for CIMs content, structure and context and specification of their data elements, data element relationships, meta-data and versioning, and provides guidance and examples;
+—    Specifies key characteristics of CIMs used in conceptual and logical analysis for use cases such as (reference) architectures, information layers, EHR and PHR systems, interoperability, systems integration in the health domain, and secondary use of data including for public health reporting;
+—    Defines a Quality Management System (QMS) for a systematic and effective governance, quality management, and measurement of CIMs through their lifecycle of development, testing, distribution, application and maintenance;
+—    Provides principles for the transformation and application of clinical information models through the wide variation of health information technology.
+This document excludes:
+—    Requirements on the content or application of any particular clinical information model or clinical information modelling methodology;
+—    Specific applications of clinical information models such as for dynamic modelling of workflow;
+—    Specifications for modelling entire domains or aggregates of many CIMs such as complete assessment documents or discharge summaries. It does not specify CIMs compositions;
+—    Specification of how to involve specific clinicians, how to carry out governance including information governance, or how to ensure patient safety.</abstract>
+  <status>
+    <stage>60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2022</from>
+    <owner>
+      <organization>
+        <name>ISO</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/TS 13972:2015</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/TS 13972:2015</docidentifier>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="215" type="TC" identifier="ISO/TC 215">Health informatics</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>35.240.80</code>
+      <text>IT applications in health care technology</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO 13972</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>
