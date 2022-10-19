@@ -1,0 +1,62 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Information technology</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Object Management Group Object Constraint Language (OCL)</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Information technology - Object Management Group Object Constraint Language (OCL)</title>
+  <uri type="src">https://www.iso.org/standard/57306.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:57306:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/05/73/57306.detail.rss</uri>
+  <uri type="pub">http://standards.iso.org/ittf/PubliclyAvailableStandards/index.html</uri>
+  <docidentifier type="ISO" primary="true">ISO/IEC 19507:2012</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso-iec:19507:ed-1</docidentifier>
+  <docnumber>19507</docnumber>
+  <date type="published">
+    <on>2012-04</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Electrotechnical Commission</name>
+      <abbreviation>IEC</abbreviation>
+      <uri>www.iec.ch</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">ISO/IEC 19507:2012 defines the Object Constraint Language (OCL), version 2.3.1. OCL version 2.3.1 is the version of OCL that is aligned with UML 2.3 and MOF 2.0. </abstract>
+  <status>
+    <stage>90</stage>
+    <substage>93</substage>
+  </status>
+  <copyright>
+    <from>2012</from>
+    <owner>
+      <organization>
+        <name>ISO/IEC</name>
+      </organization>
+    </owner>
+  </copyright>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="1" type="IEC" identifier="ISO/IEC JTC 1">Information technology</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>35.060</code>
+      <text>Languages used in information technology</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO 19507</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

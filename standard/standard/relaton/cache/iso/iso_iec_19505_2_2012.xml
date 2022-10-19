@@ -1,0 +1,62 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Information technology</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Object Management Group Unified Modeling Language (OMG UML)</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">Part 2: Superstructure</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Information technology - Object Management Group Unified Modeling Language (OMG UML) - Part 2: Superstructure</title>
+  <uri type="src">https://www.iso.org/standard/52854.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:52854:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/05/28/52854.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO/IEC 19505-2:2012</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso-iec:19505:-2:ed-1</docidentifier>
+  <docnumber>19505</docnumber>
+  <date type="published">
+    <on>2012-04</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Electrotechnical Commission</name>
+      <abbreviation>IEC</abbreviation>
+      <uri>www.iec.ch</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">ISO/IEC 19505-2:2012 defines the Unified Modeling Language (UML), revision 2. The objective of UML is to provide system architects, software engineers, and software developers with tools for analysis, design, and implementation of software-based systems as well as for modeling business and similar processes.</abstract>
+  <status>
+    <stage>90</stage>
+    <substage>20</substage>
+  </status>
+  <copyright>
+    <from>2012</from>
+    <owner>
+      <organization>
+        <name>ISO/IEC</name>
+      </organization>
+    </owner>
+  </copyright>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="1" type="IEC" identifier="ISO/IEC JTC 1">Information technology</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>35.060</code>
+      <text>Languages used in information technology</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number part="2">ISO 19505</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

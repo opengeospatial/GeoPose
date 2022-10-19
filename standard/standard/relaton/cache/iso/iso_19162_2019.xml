@@ -1,0 +1,59 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Well-known text representation of coordinate reference systems</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Geographic information - Well-known text representation of coordinate reference systems</title>
+  <uri type="src">https://www.iso.org/standard/76496.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:76496:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/07/64/76496.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 19162:2019</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:19162:ed-2</docidentifier>
+  <docnumber>19162</docnumber>
+  <date type="published">
+    <on>2019-07</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>2</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document defines the structure and content of a text string implementation of the abstract model for coordinate reference systems described in ISO 19111. The string defines frequently needed types of coordinate reference systems and coordinate operations in a self-contained form that is easily readable by machines and by humans. The essence is its simplicity; as a consequence there are some constraints upon the more open content allowed in ISO 19111. To retain simplicity in the well-known text (WKT) description of coordinate reference systems and coordinate operations, the scope of this document excludes parameter grouping and pass-through coordinate operations. The text string provides a means for humans and machines to correctly and unambiguously interpret and utilise a coordinate reference system definition with look-ups or cross references only to define coordinate operation mathematics. A WKT string is not suitable for the storage of definitions of coordinate reference systems or coordinate operations because it omits metadata about the source of the data and may omit metadata about the applicability of the information.</abstract>
+  <status>
+    <stage>60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>ISO</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 19162:2015</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19162:2015</docidentifier>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="211" type="TC" identifier="ISO/TC 211">Geographic information/Geomatics</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>35.240.70</code>
+      <text>IT applications in science</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO 19162</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

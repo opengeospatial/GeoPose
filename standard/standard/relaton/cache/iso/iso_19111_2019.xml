@@ -1,0 +1,87 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Referencing by coordinates</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Geographic information - Referencing by coordinates</title>
+  <uri type="src">https://www.iso.org/standard/74039.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:74039:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/07/40/74039.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 19111:2019</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:19111:ed-3</docidentifier>
+  <docnumber>19111</docnumber>
+  <date type="published">
+    <on>2019-01</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>3</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document defines the conceptual schema for the description of referencing by coordinates. It describes the minimum data required to define coordinate reference systems. This document supports the definition of:
+—          spatial coordinate reference systems where coordinate values do not change with time. The system may:
+- —   be geodetic and apply on a national or regional basis, or
+- —   apply locally such as for a building or construction site, or
+- —   apply locally to an image or image sensor;
+- —   be referenced to a moving platform such as a car, a ship, an aircraft or a spacecraft. Such a coordinate reference system can be related to a second coordinate reference system which is referenced to the Earth through a transformation that includes a time element;
+—          spatial coordinate reference systems in which coordinate values of points on or near the surface of the earth change with time due to tectonic plate motion or other crustal deformation. Such dynamic systems include time evolution, however they remain spatial in nature;
+—          parametric coordinate reference systems which use a non-spatial parameter that varies monotonically with height or depth;
+—          temporal coordinate reference systems which use dateTime, temporal count or temporal measure quantities that vary monotonically with time;
+—          mixed spatial, parametric or temporal coordinate reference systems.
+The definition of a coordinate reference system does not change with time, although in some cases some of the defining parameters can include a rate of change of the parameter. The coordinate values within a dynamic and in a temporal coordinate reference system can change with time.
+This document also describes the conceptual schema for defining the information required to describe operations that change coordinate values.
+In addition to the minimum data required for the definition of the coordinate reference system or coordinate operation, the conceptual schema allows additional descriptive information - coordinate reference system metadata - to be provided.
+This document is applicable to producers and users of geographic information. Although it is applicable to digital geographic data, the principles described in this document can be extended to many other forms of spatial data such as maps, charts and text documents.</abstract>
+  <status>
+    <stage>60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>ISO</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 19111-2:2009</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19111-2:2009</docidentifier>
+    </bibitem>
+  </relation>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 19111:2007</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19111:2007</docidentifier>
+    </bibitem>
+  </relation>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 19111:2019/Amd 1:2021</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19111:2019/Amd 1:2021</docidentifier>
+      <date type="circulated">
+        <on>2019-01-31</on>
+      </date>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="211" type="TC" identifier="ISO/TC 211">Geographic information/Geomatics</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>35.240.70</code>
+      <text>IT applications in science</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO 19111</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

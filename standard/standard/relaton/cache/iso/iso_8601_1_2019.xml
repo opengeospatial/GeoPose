@@ -1,0 +1,70 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Date and time</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Representations for information interchange</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Basic rules</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Date and time - Representations for information interchange - Part 1: Basic rules</title>
+  <uri type="src">https://www.iso.org/standard/70907.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:70907:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/07/09/70907.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 8601-1:2019</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:8601:-1:ed-1</docidentifier>
+  <docnumber>8601</docnumber>
+  <date type="published">
+    <on>2019-02</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document specifies representations of dates of the Gregorian calendar and times based on the 24-hour clock, as well as composite elements of them, as character strings for use in information interchange. It is also applicable for representing times and time shifts based on Coordinated Universal Time (UTC).
+This document excludes the representation of date elements from non-Gregorian calendars or times not from the 24-hour clock. This document does not address character encoding of representations specified in this document.</abstract>
+  <status>
+    <stage>60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>ISO</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 8601:2004</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 8601:2004</docidentifier>
+    </bibitem>
+  </relation>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 8601-1:2019/Amd 1</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 8601-1:2019/Amd 1</docidentifier>
+      <date type="circulated">
+        <on>2019-02-25</on>
+      </date>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="154" type="TC" identifier="ISO/TC 154">Processes, data elements and documents in commerce, industry and administration</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>01.140.30</code>
+      <text>Documents in administration, commerce and industry</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number part="1">ISO 8601</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

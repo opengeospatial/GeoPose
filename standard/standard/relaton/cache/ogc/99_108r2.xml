@@ -1,0 +1,35 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Topic 8</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Relationships Between Features</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Topic 8 - Relationships Between Features</title>
+  <uri type="obp">https://portal.ogc.org/files/?artifact_id=894</uri>
+  <docidentifier type="OGC" primary="true">99-108r2</docidentifier>
+  <date type="published">
+    <on>1999-03-26</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Cliff Kottman</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <edition>2</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This Topic introduces an abstraction for the relationships between entities in the real world. This abstraction is modeled as relationships between the features introduced in Topic 5.</abstract>
+  <ext>
+    <doctype>abstract-specification-topic</doctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

@@ -1,0 +1,34 @@
+<bibdata type="standard">
+  <fetched>2022-10-14</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Topic 5</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Features</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Topic 5 - Features</title>
+  <uri type="obp">https://portal.ogc.org/files/?artifact_id=29536</uri>
+  <docidentifier type="OGC" primary="true">08-126</docidentifier>
+  <date type="published">
+    <on>2009-01-15</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Cliff Kottman and Carl Reed</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">From ISO 19101, “A feature is an abstraction of a real world phenomenon”; it is a geographic feature if it is associated with a location relative to the Earth. </abstract>
+  <ext>
+    <doctype>abstract-specification-topic</doctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>
