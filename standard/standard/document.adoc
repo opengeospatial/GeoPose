@@ -1,5 +1,5 @@
 = OGC GeoPose 1.0 Data Exchange Draft Standard
-:doctype: standard
+:doctype: draft-standard
 :docsubtype: implementation
 :status: draft
 :language: en
