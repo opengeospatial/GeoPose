@@ -1,3 +1,3 @@
-# GeoPose in glTF Encoding of CityGML 3.0 Conceptual Model
+# GeoPose in glTF 2.0 Encoding of CityGML 3.0 Conceptual Model
 
 Some results from a separate development effort are copied here. The first is the C# library impplementing GeoPose 1.0 Basic and Advanced GeoPose 1.0 in the glTF 2.0 representation: GeoPose.cs. This module combines all of the three standardization targets in a single hierarchy.

@@ -1,0 +1,3 @@
+# GeoPose C# Library
+
+The C# library impplementing GeoPose 1.0 Basic and Advanced GeoPose 1.0 in the glTF 2.0 representation: GeoPose.cs. This module combines all of the three standardization targets in a single class hierarchy. An additional ENU Pose, useful within the Basic frames, **not part of the standard** also appears.
