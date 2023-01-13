@@ -4,31 +4,31 @@ In this file, we will maintain status of projects that demonstrate the eight Geo
 
 ## Basic-Quaternion
 
-Implementation #1:
+Implementation #1: SolarPose Service
 
-Implementation #2:
+Implementation #2: GeoPose.cs - glTF encoding support library.
 
 Implementation #3:
 
 ## Basic-Yaw-Pitch-Roll (Angles)
 
-Implementation #1:
+Implementation #1: SolarPose Service
 
-Implementation #2:
+Implementation #2:  GeoPose.cs - glTF encoding support library.
 
 Implementation #3:
 
 ## Advanced
 
-Implementation #1:
+Implementation #1: SolarPose Service
 
-Implementation #2:
+Implementation #2:  GeoPose.cs - glTF encoding support library.
 
 Implementation #3:
 
 ## Graph
 
-Implementation #1:
+Implementation #1: SolarPose Service
 
 Implementation #2:
 
@@ -36,7 +36,7 @@ Implementation #3:
 
 ## Chain
 
-Implementation #1:
+Implementation #1: SolarPose Service
 
 Implementation #2:
 
@@ -44,7 +44,7 @@ Implementation #3:
 
 ## Regular Series
 
-Implementation #1:
+Implementation #1: SolarPose Service
 
 Implementation #2:
 
@@ -52,7 +52,7 @@ Implementation #3:
 
 ## Irregular Series
 
-Implementation #1:
+Implementation #1: SolarPose Service
 
 Implementation #2:
 
@@ -60,7 +60,7 @@ Implementation #3:
 
 ## Stream
 
-Implementation #1:
+Implementation #1: SolarPose Service
 
 Implementation #2:
 
