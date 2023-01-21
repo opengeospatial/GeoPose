@@ -8,13 +8,19 @@ To determine how well the proposed standard works in real world spatial computin
 
 The SWG will then examine whether the proposed standard maintains interoperability with the OGC Standards Baseline and assess whether extensions of existing standards could achieve the goals of GeoPose.
 
-# Draft GeoPose Specification
+# Draft GeoPose Data Exchange Standard
 
-⚠️ The https://opengeospatial.github.io/ogcna-auto-review/21-056r10.html[OGC GeoPose specification] available in this repo is a draft (work in progress). This draft reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[here] in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
+OGC GeoPose 1.0 Data Exchange was approved as a Draft OGC Standard (pending three implementations) and is available:
 
-The daily built *HTML* version of the GeoPose 1.0 Draft Standard can be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10.html[here].
+here in https://docs.ogc.org/dis/21-056r10/21-056r10.html[HTML] and
 
-The daily built *PDF* version of the GeoPose 1.0 Draft Standard can be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10.pdf[here].
+here in https://docs.ogc.org/dis/21-056r10/21-056r10.pdf[PDF].
+
+⚠️ The documents available in this repo is the latest Editor's Draft (work in progress). This draft reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020.
+
+The daily built *HTML* version of the latest Editor's Draft GeoPose Data Exchange Standard (will) be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10r1.html[here].
+
+The daily built *PDF* version of the latest Editor's Draft GeoPose Data Exchange Standard (will) be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10r1.pdf[here].
 
 # Get More Information
 The OGC GeoPose SWG is currently developing a pair of informational guides and a set of sample implementations which will be made public on GitHub. The guides will support reviewers of this specification and those who seek to implement it.
