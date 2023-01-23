@@ -8,14 +8,14 @@ scopes:
 
   tests:
   - name: Verify individual standardization targets are independent
-    identifier: /req/global/target-independence
+    identifier: /conf/global/target-independence
     targets:
     - /req/global/target-independence
     purpose: Verify standardization targets are independent.
     method: Inspection
 
   - name: Verify implementation conforms to the logical model
-    identifier: /req/global/logical-model
+    identifier: /conf/global/logical-model
     targets:
     - /req/global/logical-model
     description: |
@@ -26,7 +26,7 @@ scopes:
     method: Inspection
 
   - name: Verify SDU conforms to the "Structural Data Unit - SDU" stereotype
-    identifier: /req/global/sdu
+    identifier: /conf/global/sdu
     targets:
     - /req/global/sdu
     description: |
