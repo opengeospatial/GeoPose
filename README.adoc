@@ -10,9 +10,11 @@ The SWG will then examine whether the proposed standard maintains interoperabili
 
 # OGC GeoPose 1.0 Data Exchange Draft Standard
 
-⚠️ The https://docs.ogc.org/dis/21-056r10/21-056r10.html[OGC GeoPose 1.0 Data Exchange Draft Standard] available in this repo has been approved by the OGC Technical Committee as an OGC Draft Standard. Once there is evidence of implementation, through a minimum of 3 implementations, the specification will be considered for approval as an OGC Implementation Standard. This draft reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided https://docs.ogc.org/dis/21-056r10/21-056r10.html[here] in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
+⚠️ The https://docs.ogc.org/dis/21-056r10/21-056r10.html[OGC GeoPose 1.0 Data Exchange Draft Standard] has been approved by the OGC Technical Committee as an OGC Draft Standard. Once there is evidence of implementation, through a minimum of 3 implementations, the specification will be considered for approval as an OGC Implementation Standard. 
 
-The official *HTML* version of the GeoPose 1.0 Draft Standard can be found https://docs.ogc.org/dis/21-056r10/21-056r10.html[here].
+This repository holds the latest Editor's Draft of the specification and reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided here in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
+
+The official *HTML* version of the GeoPose 1.0 Draft Standard can be found on the https://docs.ogc.org/dis/21-056r10/21-056r10.html[OGC website].
 
 ////
 The daily built *HTML* version of the GeoPose 1.0 Draft Standard can be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10.html[here].
