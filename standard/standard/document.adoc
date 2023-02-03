@@ -1,15 +1,15 @@
-= OGC GeoPose 1.0 Data Exchange Draft Standard
-:doctype: draft-standard
+= OGC GeoPose 1.0 Data Exchange Standard
+:doctype: standard
 :docsubtype: implementation
 :status: draft
 :language: en
 :committee: technical
 :workgroup: GeoPose Standard Working Group
-:docnumber: 21-056r10
+:docnumber: 21-056r11
 :edition: 1.0.0
-:received-date: 2022-02-08
-:issued-date: 2022-06-20
-:published-date: 2022-10-19
+:received-date: 2029-02-08
+:issued-date: 2029-06-20
+:published-date: 2029-10-19
 :copyright-year: 2022
 :external-id: http://www.opengis.net/doc/IS/geopose/1.0
 :fullname: Carl Stephen Smyth
