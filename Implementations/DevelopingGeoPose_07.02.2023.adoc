@@ -74,9 +74,8 @@ When you incorporate GeoPose data
 
 #### Integrate with external coordinate transformation databases and libraries
 
-1.	GDAL
-2.	Proj
-3.	
+* GDAL
+* Proj
 
 #### Experiment with possible new features
 
@@ -92,26 +91,6 @@ Approach is one of many possible implementations. My primary consideration is a 
 
 I describe the parts in reverse order of dependency. By the time you get to the GeoPose, there are enough elements to start assembling them into the final structures.
 
-### Extras Classes
-
-This is the place to start.
-
-There are two simple datatypes that encapsulate an identifier and a time instant: PoseID and TimeValue. The design of these is dependent on the application domain and the need to interoperate with other systems. The GeoPose 1.0 standard does not specify any identifier and it defines a "valid Time" for only some of the GeoPose forms. Experience with the GeoPose since the initial development shows the utility of references to GeoPoses and to having times associated with many individual GeoPoses. The design of these two elements can be extended to meet specialized needs.
-
-
-[.left]
-.The PoseID and UnixTime Extras Classes
-image::extras.png[Support Classes, 400, 256]
-
-
-
-#### PoseID
-    
-    PoseID has a single property - an id string.
-
-#### UnixTime
-
-    UnixTime has a single property - a string representation of the number of Unix time seconds multiplied by 1 000 for millisecond resolution.
 
 
 ## Development Outline
@@ -128,71 +107,425 @@ image::extras.png[Support Classes, 400, 256]
 
 ## Detailed Steps using Typescript as an Example
 
-## Supporting Datatypes
+### Supporting Datatypes
 
-## Positions
+This is the place to start.
+
+There are two simple datatypes that encapsulate an identifier and a time instant: PoseID and TimeValue. The design of these is dependent on the application domain and the need to interoperate with other systems. The GeoPose 1.0 standard does not specify any identifier and it defines a "valid Time" for only some of the GeoPose forms. Experience with the GeoPose since the initial development shows the utility of references to GeoPoses and to having times associated with many individual GeoPoses. The design of these two elements can be extended to meet specialized needs.
+
+
+[.left]
+.The PoseID and UnixTime Extras Classes
+image::extras.png[Support Classes, 300, 256]
+
+
+
+#### PoseID
+    
+    PoseID has a single property - an id string.
+
+#### UnixTime
+
+    UnixTime has a single property - a string representation of the number of Unix time seconds multiplied by 1 000 for millisecond resolution.
+
+
+### Positions
+
+The Position class and its derivatives represent different styles of using three coordinate values to designate a position in a three-dimensional space.
 
 [.left]
 .Positions
-image::Position.png[Support Classes, 200, 256]
+image::Position.png[Support Classes, 600, 256]
+
+GeoPose 1.0 supports both a geodetic form and a Cartesian form.
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 
 ### Frame Transforms
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 [.left]
 .Frame Transform
-image::FrameTransform.png[Support Classes, 200, 256]
+image::FrameTransform.png[Support Classes, 600, 256]
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 ### Orientations
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 [.left]
 .Orientations
-image::Orientation.png[Support Classes, 200, 256]
+image::Orientation.png[Support Classes, 450, 256]
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 #### Yaw, Pitch, Roll
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 #### Unit Quaternions
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 ### GeoPose
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 [.left]
 .GeoPose
 image::GeoPose.png[Support Classes, 200, 256]
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 ### Basic GeoPoses
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 [.left]
 .Basic
-image::Basic.png[Support Classes, 200, 256]
+image::Basic.png[Support Classes, 450, 256]
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 #### YPR
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 #### Quaternion
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 ### Advanced GeoPose
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
+
 [.left]
-.The Advanced Classe
+.The Advanced Class
 image::advanced.png[Support Classes, 200, 256]
 
-
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 [.left]
-.The Calculation Support Classes
+.Calculation Support Classes
 image::support.png[Support Classes, 200, 256]
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 ### Local [Geo]Pose
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 [.left]
 .Local
 image::Local.png[Support Classes, 200, 256]
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 ## Examples
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 ### Typescript
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 ### C#
 
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+
 ## References
+
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
 
 Typescript https://www.typescriptlang.org[]
 
