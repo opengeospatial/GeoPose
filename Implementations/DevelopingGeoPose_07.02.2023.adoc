@@ -1,0 +1,214 @@
+# Implementing OGC&#8482; GeoPose 1.0
+07.02.2023 Steve Smyth <steve@opensiteplan.org>
+
+One of the questions that I often hear is "How should I implement software that makes or manipulates GeoPoses?" This post is an answer in the form of a tutorial. It may not describe exactly the software you may need to build but I hope it gives you the necessary building blocks to see how you might proceed. 
+
+##	The OGC GeoPose 1.0 Standard
+
+https://docs.ogc.org/dis/21-056r10/21-056r10.html[OGC GeoPose 1.0] is a draft international standard for a family of JSON data objects representing the position and orientation of real or virtual entities. There are eight independent forms described in the standard. There are no dependencies between the forms. Each may be implemented independently. There is no requirement to implement any specific form or number of forms.
+
+This tutorial describes one template for developing a software implementation using any one of many modern object-oriented programming languages. The main focus is on a Typescript implementation. It is accompanied by a parallel implementation in C#, targeting open-source .NET 6.
+
+This tutorial only touches briefly of the **use** of GeoPose - another important topic.
+
+## Use Cases
+
+Here are some examples of use cases where GeoPose can play a role.
+
+The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPose is to convey the position and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of related GeoPoses in a common geographic reference frame.
+
+### Augmented and Mixed Reality
+
+Augmented Reality (AR) integrates synthetic objects or synthetic representations of real objects with a physical environment. Geospatial AR experiences can use GeoPose to position synthetic objects or their representations in the physical environment. The geospatial connection provides a common reference frame to support integration in AR.
+
+* Stored representation of synthetic objects
+* Positioning information to support integration of synthetic object data in a representation or visualization of the physical environment
+* Report of position and orientation from a mobile device to an AR network service
+* Input to visual occlusion calculations
+* Input to ray-casting and line-of-sight calculations
+* Input to proximity calculations
+* Input and output to and from trajectory projection calculations
+
+### Mobile Autonomy
+
+Autonomous vehicles are mobile objects that move through water, across a water surface, in the air, through the solid earth (tunnel boring machine), on the land surface, or in outer space without real-time control by an independent onboard operator. A pose captures the essential information in positioning and orienting a moving object. Sensors attached to mobile elements have their own poses and a chain of reference frame transformations enables common reference frames to be used for data fusion. The possibility of relating the vehicle to other elements of the environment via a common reference frame is essential.
+
+* Provide accurate visual positioning and guidance based on one or more services based on a 3D representation of the real world combined with real time detection and location of real world objects
+* Calculate parameters such as distances and routes
+* Record the trajectory of a moving vehicle.
+
+### Built Environment
+
+The built environment consists of objects constructed by humans and located in physical space. Buildings, roads, dams, railways, and underground utilities are all part of the built environment. The location and orientation of built objects, especially those whose view is occluded by other objects is essential information needed for human interaction with the built environment. A common reference frame tied to the earth's surface facilitates the integration of these objects when their representations are supplied by different sources.
+
+* Specify the position and orientation of visible objects and objects that are underground or hidden within a construction.
+* Compactly and consistently specify or share the location and pose of objects in architecture, design and construction.
+
+### Synthetic Environments: Simulations, Replicas, and the Metaverse
+
+Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environment that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated over some time period to provide visualizations or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archival of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and other objects is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations makes a coherent assembly possible.
+
+* Record pose relationships of all mobile elements in an environment
+* Track targets from a moving platform
+* Control animation of mobile elements in an environment using stored pose time sequences
+
+### Image Understanding
+
+3D image understanding is the segmentation of an image or sequence of images into inferred 3D objects in specific semantic categories, possibly determining or constraining their motion and/or geometry. One important application of image understanding is the recognition of moving elements in a time series of images. A pose is a compact representation of the key geometric characteristics of a moving element. In addition to moving elements sensed by an imaging device, it is often useful to know the pose of the sensor or imaging device itself. A common geographic reference frame integrates the objects into a single environment.
+
+* Instantaneous and time series locations and orientations of mobile objects
+* Instantaneous and time series location and orientation of an optical and/or depth imaging device using Simultaneous Location And Mapping (SLAM)
+* Instantaneous and time series estimation of the changes in location and orientation of an object using an optical imaging device (Visual Odometry)
+* Instantaneous and time series location and orientation of an optical imaging device used for photogrammetry
+
+
+## Development Goals
+
+This goal of this tutorial is to walk through the a working example of one of many possible templates for developing software that works well with OGC GeoPose 1.0. There are unlimited approaches to design. The OGC GeoPose 1.0 standard does not specify anything about software design or language. This document describes an approach to implementation based on an easly extended  object-oriented design. 
+
+### Implement structures and processes that can work with GeoPose 1.X
+
+When you incorporate GeoPose data 
+
+#### Add GeoPose to applications
+
+#### Integrate with external coordinate transformation databases and libraries
+
+1.	GDAL
+2.	Proj
+3.	
+
+#### Experiment with possible new features
+
+Having a working implementation of the standardized elements of GeoPose 1.0 makes it easy to experiment wih new features that might be proposed for a new version of the standard. I give two examples of how this can be done. First, I have  provided three new properties for the Basic and Advanced GeoPoses that have proved to be useful in my GeoPose applications. These additional properties serialize as additional JSON properties, which are explicitly allowed by the standard. Second, I have included the "Local" (Geo)Pose. Local is the closest to the usual concept of a pose in computer graphics. It is designed to allow chains and trees in the space of the rortated local tangent plane, east-north-up Cartesian coordinate system associated with the inner frame of Basic GeoPoses. The Local GeoPose can be expressed as an Advanced GeoPose but creating a simplified version with the frame transormation hardwired makes for clearer programming. I have not done so in this tutorial but it would be possible to configure the JSON serialization to output the Advanced equivalent, rather than a non-standard form.
+
+### Template Applies to a Wide range of object-oriented languages
+
+The design only relies on a few basic O-O concepts and capabilities. These are supported by a wide range of old and new languages. In this post, I will only describe implementation in **Typescript 4.9.5** and **C# 11 - .NET 6**. In future posts, I will continue with C++, Java, Swift, Kotlin, and Python.
+
+##  Architecture
+
+Approach is one of many possible implementations. My primary consideration is a simple and completely hierarchical design - patterned to meet the capibilities of common object-oriented languages. I also wanted to make it possible to consider individual parts in isolation and then to assemble them into a GeoPose tree.
+
+I describe the parts in reverse order of dependency. By the time you get to the GeoPose, there are enough elements to start assembling them into the final structures.
+
+### Extras Classes
+
+This is the place to start.
+
+There are two simple datatypes that encapsulate an identifier and a time instant: PoseID and TimeValue. The design of these is dependent on the application domain and the need to interoperate with other systems. The GeoPose 1.0 standard does not specify any identifier and it defines a "valid Time" for only some of the GeoPose forms. Experience with the GeoPose since the initial development shows the utility of references to GeoPoses and to having times associated with many individual GeoPoses. The design of these two elements can be extended to meet specialized needs.
+
+
+[.left]
+.The PoseID and UnixTime Extras Classes
+image::extras.png[Support Classes, 400, 256]
+
+
+
+#### PoseID
+    
+    PoseID has a single property - an id string.
+
+#### UnixTime
+
+    UnixTime has a single property - a string representation of the number of Unix time seconds multiplied by 1 000 for millisecond resolution.
+
+
+## Development Outline
+
+* Supporting Datatypes
+* Positions
+* Frame Transforms
+* Orientations
+* Abstract GeoPose
+* Basic GeoPoses
+* Advanced GeoPose
+* Local Pose
+
+
+## Detailed Steps using Typescript as an Example
+
+## Supporting Datatypes
+
+## Positions
+
+[.left]
+.Positions
+image::Position.png[Support Classes, 200, 256]
+
+### Frame Transforms
+
+[.left]
+.Frame Transform
+image::FrameTransform.png[Support Classes, 200, 256]
+
+### Orientations
+
+[.left]
+.Orientations
+image::Orientation.png[Support Classes, 200, 256]
+
+#### Yaw, Pitch, Roll
+
+#### Unit Quaternions
+
+### GeoPose
+
+[.left]
+.GeoPose
+image::GeoPose.png[Support Classes, 200, 256]
+
+### Basic GeoPoses
+
+[.left]
+.Basic
+image::Basic.png[Support Classes, 200, 256]
+
+#### YPR
+
+#### Quaternion
+
+### Advanced GeoPose
+
+[.left]
+.The Advanced Classe
+image::advanced.png[Support Classes, 200, 256]
+
+
+[.left]
+.The Calculation Support Classes
+image::support.png[Support Classes, 200, 256]
+
+### Local [Geo]Pose
+
+[.left]
+.Local
+image::Local.png[Support Classes, 200, 256]
+
+## Examples
+
+### Typescript
+
+### C#
+
+## References
+
+Typescript https://www.typescriptlang.org[]
+
+C#
+
+.NET 6
+
+C++
+
+Java
+
+Kotlin
+
+Python
+
+SfM
+
+SLAM
+
+Swift
