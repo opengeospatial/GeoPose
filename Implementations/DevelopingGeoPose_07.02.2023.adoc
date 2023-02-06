@@ -111,8 +111,9 @@ I describe the parts in reverse order of dependency. By the time you get to the 
 
 This is the place to start.
 
-There are two simple datatypes that encapsulate an identifier and a time instant: PoseID and TimeValue. The design of these is dependent on the application domain and the need to interoperate with other systems. The GeoPose 1.0 standard does not specify any identifier and it defines a "valid Time" for only some of the GeoPose forms. Experience with the GeoPose since the initial development shows the utility of references to GeoPoses and to having times associated with many individual GeoPoses. The design of these two elements can be extended to meet specialized needs.
+There are two simple datatypes that encapsulate an identifier and a time instant: PoseID and TimeValue. They are used in several of the classes. They are separated out because their design is dependent on the application domain and the need to interoperate with other systems. The GeoPose 1.0 standard does not specify any identifier and it defines a "valid Time" for only some of the GeoPose forms. Experience with the GeoPose since the initial publication shows the utility of references to GeoPoses and to having times associated with many individual GeoPoses. 
 
+Note that additional (private) properties may be added to most otherwise compliant GeoPose elements. 
 
 [.left]
 .The PoseID and UnixTime Extras Classes
@@ -128,6 +129,29 @@ image::extras.png[Support Classes, 300, 256]
 
     UnixTime has a single property - a string representation of the number of Unix time seconds multiplied by 1 000 for millisecond resolution.
 
+=== TypeScript implemention:
+
+----
+// Implemention order: 1 - start here.
+// These classes are non-structural elements.
+// These are part of optional elements that are allowed but not standardized.
+
+export class PoseID {
+    public constructor(id: string) {
+        this.id = id;
+    }
+    public id: string = "";
+}
+
+export class UnixTime {
+    // Constructor from long integer count of UNIX Time seconds x 1000
+    public constructor(longTime: number) {
+        this.timeValue = longTime.toString();
+    }
+    public timeValue: string = "";
+}
+
+----
 
 ### Positions
 
