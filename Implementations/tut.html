@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="07.02.2023 Steve Smyth">
+<title>Implementing OGC&#8482; GeoPose 1.0</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Implementing OGC&#8482; GeoPose 1.0</h1>
+<div class="details">
+<span id="author" class="author">07.02.2023 Steve Smyth</span><br>
+<span id="email" class="email"><a href="mailto:steve@opensiteplan.org">steve@opensiteplan.org</a></span><br>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_the_ogc_geopose_1_0_standard">The OGC GeoPose 1.0 Standard</a></li>
+<li><a href="#_use_cases">Use Cases</a>
+<ul class="sectlevel2">
+<li><a href="#_augmented_and_mixed_reality">Augmented and Mixed Reality</a></li>
+<li><a href="#_mobile_autonomy">Mobile Autonomy</a></li>
+<li><a href="#_built_environment">Built Environment</a></li>
+<li><a href="#_synthetic_environments_simulations_replicas_and_the_metaverse">Synthetic Environments: Simulations, Replicas, and the Metaverse</a></li>
+<li><a href="#_image_understanding">Image Understanding</a></li>
+</ul>
+</li>
+<li><a href="#_development_goals">Development Goals</a>
+<ul class="sectlevel2">
+<li><a href="#_add_geopose_to_applications">Add GeoPose to applications</a></li>
+<li><a href="#_external_coordinate_transformation_libraries">External coordinate transformation libraries</a></li>
+<li><a href="#_experiment_with_possible_new_features">Experiment with possible new features</a></li>
+<li><a href="#_template_applies_to_a_wide_range_of_object_oriented_languages">Template Applies to a Wide range of object-oriented languages</a></li>
+</ul>
+</li>
+<li><a href="#_architecture">Architecture</a></li>
+<li><a href="#_implementation_in_eight_steps">Implementation in Eight Steps</a></li>
+<li><a href="#_implementing_geopose_in_typescript">Implementing GeoPose in TypeScript</a>
+<ul class="sectlevel2">
+<li><a href="#_step_1_supporting_datatypes_and_functions">Step 1: Supporting Datatypes and Functions</a></li>
+<li><a href="#_step_2_positions">Step 2: Positions</a></li>
+<li><a href="#_step_3_frame_transforms">Step 3: Frame Transforms</a></li>
+<li><a href="#_step_4_orientations">Step 4: Orientations</a></li>
+<li><a href="#_step_5_abstract_geopose">Step 5: Abstract GeoPose</a></li>
+<li><a href="#_step_6_basic_geoposes">Step 6: Basic GeoPoses</a></li>
+<li><a href="#_step_7_advanced_geopose">Step 7: Advanced GeoPose</a></li>
+<li><a href="#_step_8_local_geopose">Step 8: Local [Geo]Pose</a></li>
+</ul>
+</li>
+<li><a href="#_examples">Examples</a>
+<ul class="sectlevel2">
+<li><a href="#_typescript">TypeScript</a></li>
+<li><a href="#_c">C#</a></li>
+</ul>
+</li>
+<li><a href="#_references">References</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_the_ogc_geopose_1_0_standard">The OGC GeoPose 1.0 Standard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A frequent question is "How should I implement software that makes or manipulates OGC GeoPoses?" This tutorial is one answer. It may not describe exactly the software you may need to build but I hope it gives you the necessary building blocks to see how you might proceed.  This post features a TypeScript implementation, to be followed by posts on testing, C#, C++, Java, Python, Swift, and Kotlin.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.ogc.org/dis/21-056r10/21-056r10.html">OGC GeoPose 1.0</a> is a draft international standard for a family of JSON data objects representing the position and orientation of real or virtual entities. There are eight independent forms described in the standard. There are no dependencies between the forms. Each may be implemented independently. There is no requirement to implement any specific form or number of forms.</p>
+</div>
+<div class="paragraph">
+<p>This tutorial describes one template for developing a software implementation supporting GeoPose 1.0 using any one of many modern object-oriented programming languages. This post focuses on a TypeScript implementation. It is accompanied by a parallel implementation in C#, targeting open-source .NET 6.</p>
+</div>
+<div class="paragraph">
+<p>This tutorial only touches briefly of the <strong>use</strong> of GeoPose - another important topic.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_cases">Use Cases</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here are some examples of use cases where GeoPose can play a role.</p>
+</div>
+<div class="paragraph">
+<p>The GeoPose use cases involve interactions between information systems or between an information system and a storage medium. The essential role of a GeoPose is to convey the position and orientation of a real or virtual object. The possibility of chained transformational relationships and cross-linkages between chains affords representation of complex pose relationships and a way to bring a collection of related GeoPoses in a common geographic reference frame.</p>
+</div>
+<div class="sect2">
+<h3 id="_augmented_and_mixed_reality">Augmented and Mixed Reality</h3>
+<div class="paragraph">
+<p>Augmented Reality (AR) integrates synthetic objects or synthetic representations of real objects with a physical environment. Geospatial AR experiences can use GeoPose to position synthetic objects or their representations in the physical environment. The geospatial connection provides a common reference frame to support integration in AR.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Stored representation of synthetic objects</p>
+</li>
+<li>
+<p>Positioning information to support integration of synthetic object data in a representation or visualization of the physical environment</p>
+</li>
+<li>
+<p>Report of position and orientation from a mobile device to an AR network service</p>
+</li>
+<li>
+<p>Input to visual occlusion calculations</p>
+</li>
+<li>
+<p>Input to ray-casting and line-of-sight calculations</p>
+</li>
+<li>
+<p>Input to proximity calculations</p>
+</li>
+<li>
+<p>Input and output to and from trajectory projection calculations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mobile_autonomy">Mobile Autonomy</h3>
+<div class="paragraph">
+<p>Autonomous vehicles are mobile objects that move through water, across a water surface, in the air, through the solid earth (tunnel boring machine), on the land surface, or in outer space without real-time control by an independent onboard operator. A pose captures the essential information in positioning and orienting a moving object. Sensors attached to mobile elements have their own poses and a chain of reference frame transformations enables common reference frames to be used for data fusion. The possibility of relating the vehicle to other elements of the environment via a common reference frame is essential.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide accurate visual positioning and guidance based on one or more services based on a 3D representation of the real world combined with real time detection and location of real world objects</p>
+</li>
+<li>
+<p>Calculate parameters such as distances and routes</p>
+</li>
+<li>
+<p>Record the trajectory of a moving vehicle.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_built_environment">Built Environment</h3>
+<div class="paragraph">
+<p>The built environment consists of objects constructed by humans and located in physical space. Buildings, roads, dams, railways, and underground utilities are all part of the built environment. The location and orientation of built objects, especially those whose view is occluded by other objects is essential information needed for human interaction with the built environment. A common reference frame tied to the earth&#8217;s surface facilitates the integration of these objects when their representations are supplied by different sources.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Specify the position and orientation of visible objects and objects that are underground or hidden within a construction.</p>
+</li>
+<li>
+<p>Compactly and consistently specify or share the location and pose of objects in architecture, design and construction.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_synthetic_environments_simulations_replicas_and_the_metaverse">Synthetic Environments: Simulations, Replicas, and the Metaverse</h3>
+<div class="paragraph">
+<p>Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environment that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated over some time period to provide visualizations or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archival of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and other objects is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations makes a coherent assembly possible.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Record pose relationships of all mobile elements in an environment</p>
+</li>
+<li>
+<p>Track targets from a moving platform</p>
+</li>
+<li>
+<p>Control animation of mobile elements in an environment using stored pose time sequences</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_image_understanding">Image Understanding</h3>
+<div class="paragraph">
+<p>3D image understanding is the segmentation of an image or sequence of images into inferred 3D objects in specific semantic categories, possibly determining or constraining their motion and/or geometry. One important application of image understanding is the recognition of moving elements in a time series of images. A pose is a compact representation of the key geometric characteristics of a moving element. In addition to moving elements sensed by an imaging device, it is often useful to know the pose of the sensor or imaging device itself. A common geographic reference frame integrates the objects into a single environment.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Instantaneous and time series locations and orientations of mobile objects</p>
+</li>
+<li>
+<p>Instantaneous and time series location and orientation of an optical and/or depth imaging device using Simultaneous Location And Mapping (SLAM)</p>
+</li>
+<li>
+<p>Instantaneous and time series estimation of the changes in location and orientation of an object using an optical imaging device (Visual Odometry)</p>
+</li>
+<li>
+<p>Instantaneous and time series location and orientation of an optical imaging device used for photogrammetry</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development_goals">Development Goals</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The OGC GeoPose 1.0 standard does not specify anything about software design or programming language. This goal of this tutorial is to walk through for design and implementation of software that works well with OGC GeoPose 1.0 and which can be integrated in to applications that create or receive GeoPose 1.0 data objects. The only requirement is that the language offer basic object-oriented programming support.</p>
+</div>
+<div class="paragraph">
+<p>There are several specific goals:</p>
+</div>
+<div class="sect2">
+<h3 id="_add_geopose_to_applications">Add GeoPose to applications</h3>
+<div class="paragraph">
+<p>This is an obvious motivation for adding GeoPose software. Using a standard library makes it less difficult to start quickly and have a level of confidence that the operations are performed correctly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_external_coordinate_transformation_libraries">External coordinate transformation libraries</h3>
+<div class="paragraph">
+<p>GeoPose is based on an abstraction of transformations linking pairs of spaces or their associated reference frames. Many of the definitions of reference frames are complex and described in terms specific to a particular discipline, such as geodesy, surveying, or astrophysics. Experts in these disciplines have built specialized databases and transformation software and it is highly desirable to be able to use their work.</p>
+</div>
+<div class="paragraph">
+<p>One very useful example is the PROJ coordinate transformation library eith used by itself or as part of the Geospatial Data Abstraction Library (GDAL) library. This tutorial uses an interface to PROJ to implement a range of more general transformations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_experiment_with_possible_new_features">Experiment with possible new features</h3>
+<div class="paragraph">
+<p>Having a working implementation of the standardized elements of GeoPose 1.0 makes it easy to experiment wih new features that might be proposed for a new version of the standard. I give two examples of how this can be done. First, I have  provided three new properties for the Basic and Advanced GeoPoses that have proved to be useful in my GeoPose applications. These additional properties serialize as additional JSON properties, which are explicitly allowed by the standard. Second, I have included the "Local" (Geo)Pose. Local is the closest to the usual concept of a pose in computer graphics. It is designed to allow chains and trees in the space of the rortated local tangent plane, east-north-up Cartesian coordinate system associated with the inner frame of Basic GeoPoses. The Local GeoPose can be expressed as an Advanced GeoPose but creating a simplified version with the frame transormation hardwired makes for clearer programming. I have not done so in this tutorial but it would be possible to configure the JSON serialization to output the Advanced equivalent, rather than a non-standard form.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_template_applies_to_a_wide_range_of_object_oriented_languages">Template Applies to a Wide range of object-oriented languages</h3>
+<div class="paragraph">
+<p>The design only relies on a few basic O-O concepts and capabilities. These are supported by a wide range of old and new languages. In this post, I will only describe implementation in <strong>TypeScript 4.9.5</strong> and <strong>C# 11 - .NET 6</strong>. In future posts, I will continue with C++, Java, Swift, Kotlin, and Python.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture">Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are many possible implementations. My primary consideration is a simple and completely hierarchical design - patterned to meet the capibilities of common object-oriented languages. I also wanted to make it possible to consider individual parts in isolation and then to assemble them into a GeoPose tree.</p>
+</div>
+<div class="paragraph">
+<p>I describe the parts in reverse order of dependency. By the time you get to the GeoPose, there are enough elements to start assembling them into the final structures.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementation_in_eight_steps">Implementation in Eight Steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The development steps outlined here proceed from independent components to three categories of GeoPoses: Basic, Advanced, and Local. Note that Local GeoPoses are within the scope of the GeoPose 1.0 logical model but must be serialized as Advanced GeoPoses to be compliant data objects.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Step 1: Supporting Datatypes and Functions</p>
+</li>
+<li>
+<p>Step 2: Positions</p>
+</li>
+<li>
+<p>Step 3: Frame Transforms</p>
+</li>
+<li>
+<p>Step 4: Orientations</p>
+</li>
+<li>
+<p>Step 5: Abstract GeoPose</p>
+</li>
+<li>
+<p>Step 6: Basic GeoPoses</p>
+</li>
+<li>
+<p>Step 7: Advanced GeoPose</p>
+</li>
+<li>
+<p>Step 8: Local Pose</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementing_geopose_in_typescript">Implementing GeoPose in TypeScript</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following is the sequence of steps for a TypeScript implementation:</p>
+</div>
+<div class="sect2">
+<h3 id="_step_1_supporting_datatypes_and_functions">Step 1: Supporting Datatypes and Functions</h3>
+<div class="paragraph">
+<p>Start here.</p>
+</div>
+<div class="paragraph">
+<p>There are two simple datatypes that encapsulate an identifier and a time instant: PoseID and TimeValue. They are used in several of the classes. They are separated out because their design is dependent on the application domain and the need to interoperate with other systems. The GeoPose 1.0 standard does not specify any identifier and it defines a "valid Time" for only some of the GeoPose forms. Experience with the GeoPose since the initial publication shows the utility of references to GeoPoses and to having times associated with many individual GeoPoses.</p>
+</div>
+<div class="paragraph">
+<p>Note that additional (private) properties may be added to most otherwise compliant GeoPose elements.</p>
+</div>
+<div class="sect3">
+<h4 id="_poseid">PoseID</h4>
+<div class="literalblock">
+<div class="content">
+<pre>PoseID has a single property - an id string.</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_unixtime">UnixTime</h4>
+<div class="literalblock">
+<div class="content">
+<pre>UnixTime has a single property - a string representation of the number of Unix time seconds multiplied by 1 000 for millisecond resolution.</pre>
+</div>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="extras.png" alt="Support Classes" width="400" height="256">
+</div>
+<div class="title">Figure 1. The PoseID and UnixTime Extras Classes</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_coordinate_conversion">Coordinate conversion</h4>
+<div class="paragraph">
+<p>The methodes of the LTP_ENU class are needed to support the Basic and Advanced classes' frame transformations. The GeoPose implementations must implement the actual transformations implied or designated by the class or outer and inner frame definitions. This in contrast to the GeoPose data objects, which carry no explicit information about how the transformations should be carried out.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="support.png" alt="Support Classes" width="200" height="256">
+</div>
+<div class="title">Figure 2. Calculation Support Classes</div>
+</div>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_typescript_implemention">TypeScript implemention:</h4>
+<div class="sect4">
+<h5 id="_datatypes">Datatypes</h5>
+<div class="listingblock">
+<div class="content">
+<pre>// Implemention order: 1 - start here.
+// These classes are non-structural elements.
+// These are part of optional elements that are allowed but not standardized.
+
+export class PoseID {
+    public constructor(id: string) {
+        this.id = id;
+    }
+    public id: string = "";
+}
+
+export class UnixTime {
+    // Constructor from long integer count of UNIX Time seconds x 1000
+    public constructor(longTime: number) {
+        this.timeValue = longTime.toString();
+    }
+    public timeValue: string = "";
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ltp_enu_coordinate_conversion">LTP_ENU coordinate conversion</h5>
+<div class="listingblock">
+<div class="content">
+<pre>import * as Position from './Position';
+
+export class LTP_ENU {
+    // WGS-84 geodetic constants
+    readonly a: number = 6378137.0;         // WGS-84 Earth semimajor axis (m)
+    readonly b: number = 6356752.314245;     // Derived Earth semiminor axis (m)
+    readonly f: number = (this.a - this.b) / this.a;           // Ellipsoid Flatness
+    readonly f_inv: number = 1.0 / this.f;       // Inverse flattening
+    readonly a_sq: number = this.a * this.a;
+    readonly b_sq: number = this.b * this.b;
+    readonly e_sq: number = this.f * (2.0 - this.f);    // Square of Eccentricity
+    readonly toRadians: number = Math.PI / 180.0;
+    readonly toDegrees: number = 180.0 / Math.PI;
+
+    // Convert WGS-84 Geodetic point (lat, lon, h) to the
+    // Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z).
+    public GeodeticToEcef(from: Position.GeodeticPosition, to: Position.CartesianPosition): void {
+        // Convert to radians in notation consistent with the paper:
+        var lambda = from.lat * this.toRadians;
+        var phi = from.lon * this.toDegrees;
+        var s = Math.sin(lambda);
+        var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
+
+        var sin_lambda = Math.sin(lambda);
+        var cos_lambda = Math.cos(lambda);
+        var cos_phi = Math.cos(phi);
+        var sin_phi = Math.sin(phi);
+
+        to.x = (from.h + N) * cos_lambda * cos_phi;
+        to.y = (from.h + N) * cos_lambda * sin_phi;
+        to.z = (from.h + (1 - this.e_sq) * N) * sin_lambda;
+    }
+
+    // Convert the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z) to
+    // (WGS-84) Geodetic point (lat, lon, h).
+    public EcefToGeodetic(from: Position.CartesianPosition, to: Position.GeodeticPosition): void {
+        var eps = this.e_sq / (1.0 - this.e_sq);
+        var p = Math.sqrt(from.x * from.x + from.y * from.y);
+        var q = Math.atan2((from.z * this.a), (p * this.b));
+        var sin_q = Math.sin(q);
+        var cos_q = Math.cos(q);
+        var sin_q_3 = sin_q * sin_q * sin_q;
+        var cos_q_3 = cos_q * cos_q * cos_q;
+        var phi = Math.atan2((from.z + eps * this.b * sin_q_3), (p - this.e_sq * this.a * cos_q_3));
+        var lambda = Math.atan2(from.y, from.x);
+        var v = this.a / Math.sqrt(1.0 - this.e_sq * Math.sin(phi) * Math.sin(phi));
+        to.h = (p / Math.cos(phi)) - v;
+
+        to.lat = phi * this.toDegrees;
+        to.lon = lambda * this.toDegrees;
+    }
+
+    // Converts the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z) to
+    // East-North-Up coordinates in a Local Tangent Plane that is centered at the
+    // (WGS-84) Geodetic point (lat0, lon0, h0).
+    public EcefToEnu(from: Position.CartesianPosition, origin: Position.GeodeticPosition, to: Position.CartesianPosition):
+        //double x, double y, double z,
+        //double lat0, double lon0, double h0,
+        //out double xEast, out double yNorth, out double zUp):
+        void {
+        // Convert to radians in notation consistent with the paper:
+        var lambda = origin.lat * this.toRadians;
+        var phi = origin.lon * this.toDegrees;
+        var s = Math.sin(lambda);
+        var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
+
+        var sin_lambda = Math.sin(lambda);
+        var cos_lambda = Math.cos(lambda);
+        var cos_phi = Math.cos(phi);
+        var sin_phi = Math.sin(phi);
+
+        var x0: number = (origin.h + N) * cos_lambda * cos_phi;
+        var y0: number = (origin.h + N) * cos_lambda * sin_phi;
+        var z0: number = (origin.h + (1 - this.e_sq) * N) * sin_lambda;
+
+        var xd: number = from.x - x0;
+        var yd: number = from.y - y0;
+        var zd: number = from.z - z0;
+
+        // This is the matrix multiplication
+        to.x = -sin_phi * xd + cos_phi * yd;
+        to.y = -cos_phi * sin_lambda * xd - sin_lambda * sin_phi * yd + cos_lambda * zd;
+        to.z = cos_lambda * cos_phi * xd + cos_lambda * sin_phi * yd + sin_lambda * zd;
+    }
+
+    // Inverse of EcefToEnu. Converts East-North-Up coordinates (xEast, yNorth, zUp) in a
+    // Local Tangent Plane that is centered at the (WGS-84) Geodetic point (lat0, lon0, h0)
+    // to the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z).
+    public EnuToEcef(from: Position.CartesianPosition, origin: Position.GeodeticPosition, to: Position.CartesianPosition): void {
+        // Convert to radians in notation consistent with the paper:
+        var lambda = origin.lat * this.toRadians;
+        var phi = origin.lon * this.toRadians;
+        var s = Math.sin(lambda);
+        var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
+
+        var sin_lambda = Math.sin(lambda);
+        var cos_lambda = Math.cos(lambda);
+        var cos_phi = Math.cos(phi);
+        var sin_phi = Math.sin(phi);
+
+        var x0: number = (origin.h + N) * cos_lambda * cos_phi;
+        var y0: number = (origin.h + N) * cos_lambda * sin_phi;
+        var z0: number = (origin.h + (1.0 - this.e_sq) * N) * sin_lambda;
+
+        var xd: number = -sin_phi * from.x - cos_phi * sin_lambda * from.y + cos_lambda * cos_phi * from.z;
+        var yd: number = cos_phi * from.x - sin_lambda * sin_phi * from.y + cos_lambda * sin_phi * from.z;
+        var zd: number = cos_lambda * from.y + sin_lambda * from.z;
+
+        to.x = xd + x0;
+        to.y = yd + y0;
+        to.z = zd + z0;
+    }
+
+    // Converts the geodetic WGS-84 coordinated (lat, lon, h) to
+    // East-North-Up coordinates in a Local Tangent Plane that is centered at the
+    // (WGS-84) Geodetic point (lat0, lon0, h0).
+    public GeodeticToEnu(from: Position.GeodeticPosition, origin: Position.GeodeticPosition, to: Position.CartesianPosition): void
+    //double lat0, double lon0, double h0,
+    //out double xEast, out double yNorth, out double zUp)
+    {
+        let ecef = new Position.CartesianPosition(0, 0, 0);
+        this.GeodeticToEcef(from, ecef);
+        this.EcefToEnu(ecef, origin, to);
+    }
+    public EnuToGeodetic(from: Position.CartesianPosition, origin: Position.GeodeticPosition, to: Position.GeodeticPosition): void
+    //double xEast, double yNorth, double zUp,
+    //double lat0, double lon0, double h0,
+    //out double lat, out double lon, out double h
+    {
+        let ecef = new Position.CartesianPosition(0, 0, 0);
+        this.EnuToEcef(from, origin, ecef);
+        this.EcefToGeodetic(ecef, to);
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_2_positions">Step 2: Positions</h3>
+<div class="paragraph">
+<p>The Position class and its derivatives represent different styles of using three coordinate values to designate a position in a three-dimensional space.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="Position.png" alt="Support Classes" width="600" height="256">
+</div>
+<div class="title">Figure 3. Positions</div>
+</div>
+<div class="paragraph">
+<p>GeoPose 1.0 supports both a geodetic form and a Cartesian form. These forms are used in both frame transformations and orientation (rotation) transformations, both as quantities to be transformed and, in some cases, as a parameter of a family of transformations. Since some transformations are not possible, due to a mathematical singularity, unavailability of a transformation, or a runtime error in the tranformation calculation, the NoPosition position is used as a "null" value. Each of the coordinates of the NoPosition are the IEEE 754 value NaN.</p>
+</div>
+<div class="sect3">
+<h4 id="_typescript_implemention_2">TypeScript implemention:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>// Implemention order: 2 - follows Extras.
+// These classes define positions in a 3D frame using different conventions.
+
+/// &lt;summary&gt;
+/// The abstract root of the Position hierarchy.
+/// &lt;note&gt;
+/// Because these various ways to express Position share no underlying structure,
+/// the abstract root class definition is simply an empty shell.
+/// &lt;/note&gt;
+/// &lt;/summary&gt;
+export abstract class Position {
+}
+
+/// &lt;summary&gt;
+/// GeodeticPosition is a specialization of Position for using two angles and a height for geodetic reference systems.
+/// &lt;/summary&gt;
+export class GeodeticPosition extends Position {
+    public constructor(lat: number, lon: number, h: number) {
+        super();
+        this.lat = lat;
+        this.lon = lon;
+        this.h = h;
+    }
+
+    /// &lt;summary&gt;
+    /// A latitude in degrees, positive north of equator and negative south of equator.
+    /// The latitude is the angle between the plane of the equator and a plane tangent to the ellipsoid at the given point.
+    /// &lt;/summary&gt;
+    public lat: number;
+    /// &lt;summary&gt;
+    /// A longitude in degrees, positive east of the prime meridian and negative west of prime meridian.
+    /// &lt;/summary&gt;
+    public lon: number;
+    /// &lt;summary&gt;
+    /// A distance in meters, measured with respect to an implied (Basic) or specified (Advanced) reference surface,
+    /// postive opposite the direction of the force of gravity,
+    /// and negative in the direction of the force of gravity.
+    /// &lt;/summary&gt;
+    public h: number
+}
+/// &lt;summary&gt;
+/// CartesianPosition is a specialization of Position for geocentric, topocentric, and engineering reference systems.
+/// &lt;/summary&gt;
+export class CartesianPosition extends Position {
+    public constructor(x: number, y: number, z: number) {
+        super();
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    /// &lt;summary&gt;
+    /// A coordinate value in meters, along an axis (x-axis) that typically has origin at
+    /// the center of mass, lies in the same plane as the y axis, and perpendicular to the y axis,
+    /// forming a right-hand coordinate system with the z-axis in the up direction.
+    /// &lt;/summary&gt;
+    public x: number;
+    /// &lt;summary&gt;
+    /// A coordinate value in meters, along an axis (y-axis) that typically has origin at
+    /// the center of mass, lies in the same plane as the x axis, and perpendicular to the x axis,
+    /// forming a right-hand coordinate system with the z-axis in the up direction.
+    /// &lt;/summary&gt;
+    public y: number;
+    /// &lt;summary&gt;
+    /// A coordinate value in meters, along the z-axis.
+    /// &lt;/summary&gt;
+    public z: number;
+}
+
+export class NoPosition extends Position {
+    public constructor() {
+        super();
+        this.x = this.y = this.z = NaN;
+    }
+    /// &lt;summary&gt;
+    /// A coordinate value in meters, along an axis (x-axis) that typically has origin at
+    /// the center of mass, lies in the same plane as the y axis, and perpendicular to the y axis,
+    /// forming a right-hand coordinate system with the z-axis in the up direction.
+    /// &lt;/summary&gt;
+    public x: number;
+    /// &lt;summary&gt;
+    /// A coordinate value in meters, along an axis (y-axis) that typically has origin at
+    /// the center of mass, lies in the same plane as the x axis, and perpendicular to the x axis,
+    /// forming a right-hand coordinate system with the z-axis in the up direction.
+    /// &lt;/summary&gt;
+    public y: number;
+    /// &lt;summary&gt;
+    /// A coordinate value in meters, along the z-axis.
+    /// &lt;/summary&gt;
+    public z: number;
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_3_frame_transforms">Step 3: Frame Transforms</h3>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="FrameTransform.png" alt="Support Classes" width="600" height="256">
+</div>
+<div class="title">Figure 4. Frame Transform</div>
+</div>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="sect3">
+<h4 id="_typescript_implemention_3">TypeScript implemention:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>import * as proj4 from 'proj4';
+import * as Position from './Position';
+
+// Implemention order: 3 - follows Position.
+// These classes define transformations of a Position in one 3D frame to a Position in another 3D frame.
+
+/// &lt;summary&gt;
+/// A FrameTransform is a generic container for information that defines mapping between reference frames.
+/// Most transformation have a context with necessary ancillary information
+/// that parameterizes the transformation of a Position in one frame to a corresponding Position is another.
+/// Such context may include, for example, some or all of the information that may be conveyed in an ISO 19111 CRS specification
+/// or a proprietary naming, numbering, or modelling scheme as used by EPSG, NASA Spice, or SEDRIS SRM.
+/// Subclasses of FrameTransform exist precisely to hold this context in conjunction with code
+/// implementing a Transform function.
+/// &lt;remark&gt;
+/// &lt;/remark&gt;
+/// &lt;/summary&gt;
+export abstract class FrameTransform {
+    public abstract Transform(point: Position.Position): Position.Position;
+}
+
+/// &lt;summary&gt;
+/// A FrameSpecification is a generic container for information that defines a reference frame.
+/// &lt;remark&gt;
+/// A FrameSpecification can be abstracted as a Position:
+/// The origin of the coordinate system associated with the frame is a Position and serves in that role
+/// in the Advanced GeoPose.
+/// The origin, is in fact the *only* distinguished Position associated with the coodinate system.
+/// &lt;/remark&gt;
+/// &lt;/summary&gt;
+export class Extrinsic extends FrameTransform {
+    public constructor(authority: string, id: string, parameters: string) {
+        super();
+        this.authority = authority;
+        this.id = id;
+        this.parameters = parameters;
+    }
+    /// &lt;summary&gt;
+    /// The core function of a transformation is to implement a specific frame transformation
+    /// i.e. the transformation of a triple of point coordinates in the outer frame to a triple of point coordinates in the inner frame.
+    /// When this is not possible due to lack of an appropriate tranformation procedure,
+    /// the triple (NaN, NaN, NaN) [three IEEE 574 not-a-number vales] is returned.
+    /// Note that an "authority" is not necessarily a standards organization but rather an entity that provides
+    /// a register of some kind for a category of frame- and/or frame transform specifications that is useful and stable enough
+    /// for someone to implement transformation functions.
+    /// An implementation need not implement all possbile transforms.
+    /// &lt;/summary&gt;
+    /// &lt;note&gt;
+    /// This would be a good element to implement as a set of plugin.
+    /// &lt;/note&gt;
+    /// &lt;param name="point"&gt;&lt;/param&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    public override Transform(point: Position.Position): Position.Position {
+        let uri = this.authority.toLowerCase().replace("//www.", "");
+        if (uri == "https://proj.org" || uri == "https://osgeo.org") {
+            var outer = proj4.Proj('EPSG:4326');    //source coordinates will be in Longitude/Latitude, WGS84
+            var inner = proj4.Proj('EPSG:3785');     //destination coordinates in meters, global spherical mercato
+            var cp = point as Position.CartesianPosition;
+            let p = proj4.Point(cp.x, cp.y, cp.z);
+            proj4.transform(outer, inner, p);
+            // convert points from one coordinate system to another
+            let outP = new Position.CartesianPosition(p.x, p.y, p.z);
+            return outP;
+        }
+        else if (uri == "https://epsg.org") {
+            return Position.NoPosition;
+        }
+        else if (uri == "https://iers.org") {
+            return Position.NoPosition;
+        }
+        else if (uri == "https://naif.jpl.nasa.gov") {
+            return Position.NoPosition;
+        }
+        else if (uri == "https://sedris.org") {
+            return Position.NoPosition;
+        }
+        else if (uri == "https://iau.org") {
+            return Position.NoPosition;
+        }
+        return Position.NoPosition;
+    }
+    /// &lt;summary&gt;
+    /// The name or identification of the definer of the category of frame specification.
+    /// A Uri that usually but not always points to a valid web address.
+    /// &lt;/summary&gt;
+    public authority: string;
+    /// &lt;summary&gt;
+    /// A string that uniquely identifies a frame type.
+    /// The interpretation of the string is determined by the authority.
+    /// &lt;/summary&gt;
+    public id: string;
+    /// &lt;summary&gt;
+    /// A string that holds any parameters required by the authority to define a frame of the given type as specified by the id.
+    /// The interpretation of the string is determined by the authority.
+    /// &lt;/summary&gt;
+    public parameters: string;
+    public static noTransform: Position.Position = new Position.NoPosition();
+}
+/// &lt;summary&gt;
+/// A specialized specification of the WGS84 (EPSG 4326) geodetic frame to a local tangent plane East, North, Up frame.
+/// &lt;remark&gt;
+/// The origin of the coordinate system associated with the frame is a Position - the origin -
+/// which is the *only* distinguished Position associated with the coodinate system associated with the inner frame (range).
+/// &lt;/remark&gt;
+/// &lt;/summary&gt;
+export class WGS84ToLTPENU extends FrameTransform {
+    public constructor(origin: Position.GeodeticPosition) {
+        super();
+        this.Origin = origin;
+    }
+    public override Transform(point: Position.Position): Position.Position {
+        let geoPoint = point as Position.GeodeticPosition;
+        let outPoint: Position.CartesianPosition;
+        GeodeticToEnu(this.Origin, geoPoint, outPoint);
+        return outPoint;
+    }
+
+    /// &lt;summary&gt;
+    /// A single geodetic position defines the tangent point for a transform to LTP-ENU.
+    /// &lt;/summary&gt;
+    public Origin: Position.GeodeticPosition;
+}
+
+export function GeodeticToEnu(origin: Position.GeodeticPosition, geoPoint: Position.GeodeticPosition, enuPoint: Position.CartesianPosition) {
+    let out = new Position.CartesianPosition(0, 0, 0);
+    return out;
+}
+
+// A simple translation frame transform.
+// The FrameTransform is created with an offset.
+// The Transform adds the offset ot an input Cartesian Position and reurns a Cartesian Position
+export class Translation extends FrameTransform {
+    public constructor(xOffset: number, yOffset: number, zOffset: number) {
+        super();
+        this.xOffset = xOffset;
+        this.yOffset = yOffset;
+        this.zOffset = zOffset;
+    }
+    public override Transform(point: Position.Position): Position.Position {
+        let cp = point as Position.CartesianPosition;
+        let p = new Position.CartesianPosition(cp.x + this.xOffset, cp.y + this.yOffset, cp.z + this.zOffset);
+        return p;
+    }
+    public xOffset: number;
+    public yOffset: number;
+    public zOffset: number;
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_4_orientations">Step 4: Orientations</h3>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="Orientation.png" alt="Support Classes" width="450" height="256">
+</div>
+<div class="title">Figure 5. Orientations</div>
+</div>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="sect3">
+<h4 id="_yaw_pitch_roll">Yaw, Pitch, Roll</h4>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_unit_quaternions">Unit Quaternions</h4>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_typescript_implemention_4">TypeScript implemention:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>import * as Position from './Position';
+
+// Implemention order: 4 - follows FrameTransform.
+// These classes define rotations of a 3D frame transforming a Position to a rotated Position.
+
+
+/// &lt;summary&gt;
+/// The abstract root of the Orientation hierarchy.
+/// &lt;note&gt;
+/// An Orientation is a generic container for information that defines rotation within a coordinate system associated with a reference frame.
+/// An Orientation may have a specialized context with necessary ancillary information
+/// that parameterizes the rotation.
+/// Such context may include, for example, part of the information that may be conveyed in an ISO 19111 CRS specification
+/// or a proprietary naming, numbering, or modelling scheme as used by EPSG, NASA Spice, or SEDRIS SRM.
+/// Subclasses of Orientation exist precisely to hold this context in conjunction with code
+/// implementing a Rotate function.
+/// &lt;/note&gt;
+/// &lt;/summary&gt;
+export abstract class Orientation {
+    abstract Rotate(point: Position.CartesianPosition): Position.Position;
+}
+
+/// &lt;summary&gt;
+/// A specialization of Orientation using Yaw, Pitch, and Roll angles measured in degrees.
+/// &lt;remark&gt;
+/// This style of Orientation is best for easy human interpretation.
+/// It suffers from some computational inefficiencies, awkward interpolation, and singularities.
+/// &lt;/remark&gt;
+/// &lt;/summary&gt;
+export class YPRAngles extends Orientation {
+    public constructor(yaw: number, pitch: number, roll: number) {
+        super();
+        this.yaw = yaw;
+        this.pitch = pitch;
+        this.roll = roll;
+    }
+
+    /// &lt;summary&gt;
+    /// The function is to apply a YPR transformation
+    /// &lt;/summary&gt;
+    public override Rotate(point: Position.CartesianPosition): Position.Position {
+        // convert to quaternion and use quaternion rotation
+        let q = YPRAngles.ToQuaternion(this.yaw, this.pitch, this.roll);
+        return Quaternion.Transform(point, q);
+    }
+    public static ToQuaternion(yaw: number, pitch: number, roll: number): Quaternion {
+        // GeoPose angles are measured in degrees for human readability
+        // Convert degrees to radians.
+        yaw *= (Math.PI / 180.0);
+        pitch *= (Math.PI / 180.0);
+        roll *= (Math.PI / 180.0);
+
+        let cosRoll = Math.cos(roll * 0.5);
+        let sinRoll = Math.sin(roll * 0.5);
+        let cosPitch = Math.cos(pitch * 0.5);
+        let sinPitch = Math.sin(pitch * 0.5);
+        let cosYaw = Math.cos(yaw * 0.5);
+        let sinYaw = Math.sin(yaw * 0.5);
+
+        let w = cosRoll * cosPitch * cosYaw + sinRoll * sinPitch * sinYaw;
+        let x = sinRoll * cosPitch * cosYaw - cosRoll * sinPitch * sinYaw;
+        let y = cosRoll * sinPitch * cosYaw + sinRoll * cosPitch * sinYaw;
+        let z = cosRoll * cosPitch * sinYaw - sinRoll * sinPitch * cosYaw;
+
+        let norm = Math.sqrt(x * x + y * y + z * z + w * w);
+        let q = new Quaternion(x, y, z, w);
+        if (norm &gt; 0.0) {
+            q.x = q.x / norm;
+            q.y = q.y / norm;
+            q.z = q.z / norm;
+            q.w = q.w / norm;
+        }
+        return q;
+    }
+    /// &lt;summary&gt;
+    /// A left-right angle in degrees.
+    /// &lt;/summary&gt;
+    public yaw: number;
+    /// &lt;summary&gt;
+    /// A forward-looking up-down angle in degrees.
+    /// &lt;/summary&gt;
+    public pitch: number;
+    /// &lt;summary&gt;
+    /// A side-to-side angle in degrees.
+    /// &lt;/summary&gt;
+    public roll: number;
+}
+/// &lt;summary&gt;
+/// Quaternion is a specialization of Orientation using a unit quaternion.
+/// &lt;/summary&gt;
+/// &lt;remark&gt;
+/// This style of Orientation is best for computation.
+/// It is not easily interpreted or visualized by humans.
+/// &lt;/remark&gt;
+export class Quaternion extends Orientation {
+    public constructor(x: number, y: number, z: number, w: number) {
+        super();
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.w = w;
+    }
+    public override Rotate(point: Position.CartesianPosition): Position.Position {
+        return Quaternion.Transform(point, this);
+    }
+    public ToYPRAngles(q: Quaternion): YPRAngles {
+
+        // roll (x-axis rotation)
+        let sinRollCosPitch = 2.0 * (q.w * q.x + q.y * q.z);
+        let cosRollCosPitch = 1.0 - 2.0 * (q.x * q.x + q.y * q.y);
+        let roll = Math.atan2(sinRollCosPitch, cosRollCosPitch) * (180.0 / Math.PI); // in degrees
+
+        // pitch (y-axis rotation)
+        let sinPitch = Math.sqrt(1.0 + 2.0 * (q.w * q.y - q.x * q.z));
+        let cosPitch = Math.sqrt(1.0 - 2.0 * (q.w * q.y - q.x * q.z));
+        let pitch = (2.0 * Math.atan2(sinPitch, cosPitch) - Math.PI / 2.0) * (180.0 / Math.PI); // in degrees
+
+        // yaw (z-axis rotation)
+        let sinYawCosPitch = 2.0 * (q.w * q.z + q.x * q.y);
+        let cosYawCosPitch = 1.0 - 2.0 * (q.y * q.y + q.z * q.z);
+        let yaw = Math.atan2(sinYawCosPitch, cosYawCosPitch) * (180.0 / Math.PI); // in degrees
+        let yprAngles = new YPRAngles(yaw, pitch, roll);
+        return yprAngles;
+    }
+    public static Transform(inPoint: Position.CartesianPosition, rotation: Quaternion): Position.CartesianPosition {
+        let point = new Position.CartesianPosition(inPoint.x, inPoint.y, inPoint.z);
+        let x2 = rotation.x + rotation.x;
+        let y2 = rotation.y + rotation.y;
+        let z2 = rotation.z + rotation.z;
+
+        let wx2 = rotation.w * x2;
+        let wy2 = rotation.w * y2;
+        let wz2 = rotation.w * z2;
+        let xx2 = rotation.x * x2;
+        let xy2 = rotation.x * y2;
+        let xz2 = rotation.x * z2;
+        let yy2 = rotation.y * y2;
+        let yz2 = rotation.y * z2;
+        let zz2 = rotation.z * z2;
+
+        let p = new Position.CartesianPosition(
+            point.x * (1.0 - yy2 - zz2) + point.y * (xy2 - wz2) + point.z * (xz2 + wy2),
+            point.x * (xy2 + wz2) + point.y * (1.0 - xx2 - zz2) + point.z * (yz2 - wx2),
+            point.x * (xz2 - wy2) + point.y * (yz2 + wx2) + point.z * (1.0 - xx2 - yy2));
+        return p;
+    }
+    /// &lt;summary&gt;
+    /// The x component.
+    /// &lt;/summary&gt;
+    public x: number;
+    /// &lt;summary&gt;
+    /// The y component.
+    /// &lt;/summary&gt;
+    public y: number;
+    /// &lt;summary&gt;
+    /// The z component.
+    /// &lt;/summary&gt;
+    public z: number;
+    /// &lt;summary&gt;
+    /// The w component.
+    /// &lt;/summary&gt;
+    public w: number;
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_5_abstract_geopose">Step 5: Abstract GeoPose</h3>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="GeoPose.png" alt="Support Classes" width="200" height="256">
+</div>
+<div class="title">Figure 6. GeoPose</div>
+</div>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="sect3">
+<h4 id="_typescript_implemention_5">TypeScript implemention:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>import * as Extras from './Extras';
+import * as FrameTransform from './FrameTransform';
+import * as Orientation from './Orientation';
+
+// Implemention order: 5 - follows Orientation.
+// This is the root of the GeoPose inheritance hierarchy.
+
+/// &lt;summary&gt;
+/// A GeoPose has a position and an orientation.
+/// The position is abstracted as a transformation between one reference frame (outer frame)
+/// and another (inner frame).
+/// The position is the origin of the coordinate system of the inner frame.
+/// The orientation is applied to the coordinate system of the inner frame.
+/// &lt;remark&gt;
+/// See the OGS GeoPose 1.0 standard for a full description.
+/// &lt;/remark&gt;
+/// &lt;remark&gt;
+/// This implementation includes some optional properties not define in the 1.0 standard
+/// but allowed by JSON serializations of all but the Basic-Quaternion(Strict) standardization target.
+/// The optional properties are identifiers and time values that are useful in practice.
+/// They may be part of a future version of the standard but, as of February 2023, they are optianl add-ons.
+/// &lt;/remark&gt;
+/// &lt;/summary&gt;
+export abstract class GeoPose {
+    // Optional and non-standard but conforming added property:
+    // an identifier unique within an application.
+    public poseID: Extras.PoseID;
+
+    // Optional and non-standard but conforming added property:
+    // a PoseID type identifier of another GeoPose in the direction of the root of a pose tree.
+    public parentPoseID: Extras.PoseID;
+
+    // Optional and non-standard (except in Advanced) but conforming added property:
+    // a validTime with milliseconds of Unix time.
+    public validTime: number;
+    abstract FrameTransform: FrameTransform.FrameTransform;
+    abstract Orientation: Orientation.Orientation;
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_6_basic_geoposes">Step 6: Basic GeoPoses</h3>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="Basic.png" alt="Support Classes" width="450" height="256">
+</div>
+<div class="title">Figure 7. Basic</div>
+</div>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="sect3">
+<h4 id="_ypr">YPR</h4>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_quaternion">Quaternion</h4>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_typescript_implemention_6">TypeScript implemention:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>// Implemention order: 6 - follows GeoPose.
+// This is the simplest family of GeoPoses - the 80% part of a 80/20 solution.
+
+/// &lt;summary&gt;
+/// The Basic GeoPoses share the use of a local tangent plane, east-north-up frame transform.
+/// The types of Basic GeoPose are distinguished by the method used to specify orientation of the inner frame.
+/// &lt;/summary&gt;
+export abstract class Basic extends GeoPose.GeoPose {
+    /// &lt;summary&gt;
+    /// A Position specified in geographic coordinates with height above a reference surface -
+    /// usually an ellipsoid of revolution or a gravitational equipotential surface is
+    /// transformed to a local Cartesian frame, suitable for use over an extent of a few km.
+    /// &lt;/summary&gt;
+    public override FrameTransform: FrameTransform.WGS84ToLTPENU;
+}
+
+/// &lt;summary&gt;
+/// A Basic-YPR GeoPose uses yaw, pitch, and roll angles measured in degrees to define the orientation of the inner frame..
+/// &lt;/summary&gt;
+export class BasicYPR extends Basic {
+    public constructor(id: string, tangentPoint: Position.GeodeticPosition, yprAngles: Orientation.YPRAngles) {
+        super();
+        this.poseID = new Extras.PoseID(id);
+        this.FrameTransform = new FrameTransform.WGS84ToLTPENU(tangentPoint);
+        this.Orientation = yprAngles;
+    }
+    /// &lt;summary&gt;
+    /// An Orientation specified as three successive rotations about the local Z, Y, and X axes, in that order..
+    /// &lt;/summary&gt;
+    public override Orientation: Orientation.YPRAngles;
+
+    /// &lt;summary&gt;
+    /// This function returns a Json encoding of a Basic-YPR GeoPose
+    /// &lt;/summary&gt;
+    public toJSON(): string {
+        let indent: string = "";
+        let sb:string[] = [''];
+        if (FrameTransform != null &amp;&amp; Orientation != null) {
+            sb.push("{\r\n  " + indent);
+            if (this.validTime != null ) {
+                sb.push("\"validTime\": " + this.validTime.toString() + ",\r\n" + indent + "  ");
+            }
+            if (this.poseID != null &amp;&amp; this.poseID.id != "") {
+                sb.push("\"poseID\": \"" + this.poseID.id + "\",\r\n" + indent + "  ");
+            }
+            if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
+                sb.push("\"parentPoseID\": \"" + this.parentPoseID.id + "\",\r\n" + indent + "  ");
+            }
+            sb.push("\"position\": \r\n  {\r\n    " + indent + "\"lat\": " +
+                (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lat + ",\r\n    " + indent +
+                "\"lon\": " + (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lon + ",\r\n    " + indent +
+                "\"h\":   " + (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.h);
+            sb.push("\r\n  " + indent + "},");
+            sb.push("\r\n  " + indent);
+            sb.push("\"angles\": \r\n  {\r\n    " + indent + "\"yaw\":   " +
+                (this.Orientation as Orientation.YPRAngles).yaw + ",\r\n    " + indent +
+                "\"pitch\": " + (this.Orientation as Orientation.YPRAngles).pitch + ",\r\n    " + indent +
+                "\"roll\":  " + (this.Orientation as Orientation.YPRAngles).roll);
+            sb.push("\r\n  " + indent + "}");
+            sb.push("\r\n" + indent + "}");
+        }
+        return sb.join('');
+    }
+
+}
+
+/// &lt;summary&gt;
+/// A Basic-Quaternion GeoPose uses a unit quaternions to define the orientation of the inner frame..
+/// &lt;remark&gt;
+/// See the OGS GeoPose 1.0 standard for a full description.
+/// &lt;/remark&gt;
+/// &lt;/summary&gt;
+export class BasicQuaternion extends Basic {
+    public constructor(id: string, tangentPoint: Position.GeodeticPosition, quaternion: Orientation.Quaternion) {
+        super();
+        this.poseID = new Extras.PoseID(id);
+        this.FrameTransform = new FrameTransform.WGS84ToLTPENU(tangentPoint);
+        this.Orientation = quaternion;
+    }
+
+    /// &lt;summary&gt;
+    /// An Orientation specified as a unit quaternion.
+    /// &lt;/summary&gt;
+    public override Orientation: Orientation.Quaternion;
+
+    /// &lt;summary&gt;
+    /// This function returns a Json encoding of a Basic-Quaternion GeoPose
+    /// &lt;/summary&gt;
+    public toJSON(): string {
+        let indent: string = "";
+        let sb: string[] = [''];
+        if ((this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin != null &amp;&amp; (this.Orientation as Orientation.Quaternion) != null) {
+            sb.push("{\r\n  " + indent);
+            if (this.validTime != null) {
+                sb.push("\"validTime\": " + this.validTime.toString() + ",\r\n" + indent + "  ");
+            }
+            if (this.poseID != null &amp;&amp; this.poseID.id != "") {
+                sb.push("\"poseID\": \"" + this.poseID.id + "\",\r\n" + indent + "  ");
+            }
+            if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
+                sb.push("\"parentPoseID\": \"" + this.parentPoseID.id + "\",\r\n" + indent + "  ");
+            }
+            sb.push("\"position\": \r\n  {\r\n    " + indent + "\"lat\": " +
+                (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lat + ",\r\n    " + indent +
+                "\"lon\": " + (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lon +
+                ",\r\n    " + indent +
+                "\"h\":   " + (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.h);
+            sb.push("\r\n  " + indent + "},");
+            sb.push("\r\n  " + indent);
+            sb.push("\"quaternion\": \r\n  {\r\n    " + indent + "\"x\":   " +
+                (this.Orientation as Orientation.Quaternion).x + ",\r\n      " + indent +
+                "\"y\": " + (this.Orientation as Orientation.Quaternion).y + ",\r\n      " + indent +
+                "\"z\": " + (this.Orientation as Orientation.Quaternion).z + ",\r\n      " + indent +
+                "\"w\":  " + (this.Orientation as Orientation.Quaternion).w);
+            sb.push("\r\n  " + indent + "}");
+            sb.push("\r\n" + indent + "}");
+            return sb.join('');
+        }
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_7_advanced_geopose">Step 7: Advanced GeoPose</h3>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="imageblock center center-text">
+<div class="content">
+<img src="advanced.png" alt="Support Classes" width="200" height="256">
+</div>
+<div class="title">Figure 8. The Advanced Class</div>
+</div>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="sect3">
+<h4 id="_typescript_implemention_7">TypeScript implemention:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>import * as Extras from './Extras';
+import * as FrameTransform from './FrameTransform';
+import * as Orientation from './Orientation';
+import * as GeoPose from './GeoPose';
+
+// Implemention order: 7 - follows Basic GeoPose.
+// This is the most general GeoPose - the largest part of the 20% part of a 80/20 solution.
+// The difficult implementation is creating the interface layer between the
+// Extrinsic specification and external authorities and data sources.
+
+/// &lt;summary&gt;
+/// Advanced GeoPose.
+/// &lt;/summary&gt;
+export class Advanced extends GeoPose.GeoPose {
+    public constructor(id: string, frameTransform: FrameTransform.Extrinsic, orientation: Orientation.Quaternion) {
+        super();
+        this.poseID = new Extras.PoseID(id);
+        this.FrameTransform = frameTransform;
+        this.Orientation = orientation;
+    }
+
+    /// &lt;summary&gt;
+    /// A Frame Specification defining a frame with associated coordinate system whose Position is the origin.
+    /// &lt;/summary&gt;
+    public override FrameTransform: FrameTransform.Extrinsic;
+
+    /// &lt;summary&gt;
+    /// An Orientation specified as a unit quaternion.
+    /// &lt;/summary&gt;
+    public override Orientation: Orientation.Quaternion;
+
+    /// &lt;summary&gt;
+    /// This function returns a Json encoding of an Advanced GeoPose
+    /// &lt;/summary&gt;
+    public toJSON(): string {
+        let indent: string = "";
+        let sb: string[] = [''];
+        {
+            sb.push("{\r\n" + indent + "  ");
+            if (this.validTime != null) {
+                sb.push("\"validTime\": " + this.validTime.toString() + ",\r\n" + indent + "  ");
+            }
+            if (this.poseID != null &amp;&amp; this.poseID.id != "") {
+                sb.push("\"poseID\": \"" + this.poseID.id + "\",\r\n" + indent + "  ");
+            }
+            if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
+                sb.push("\"parentPoseID\": \"" + this.parentPoseID.id + "\",\r\n" + indent + "  ");
+            }
+            sb.push("\"frameSpecification\":\r\n" + indent + "  " + "{\r\n" + indent + "    \"authority\": \"" +
+                (this.FrameTransform as FrameTransform.Extrinsic).authority.replace("\"", "\\\"") + "\",\r\n" + indent + "    \"id\": \"" +
+                (this.FrameTransform as FrameTransform.Extrinsic).id.replace("\"", "\\\"") + "\",\r\n" + indent + "    \"parameters\": \"" +
+                (this.FrameTransform as FrameTransform.Extrinsic).parameters.replace("\"", "\\\"") + "\"\r\n" + indent + "  },\r\n" + indent + "  ");
+            sb.push("\"quaternion\":\r\n" + indent + "  {\r\n" + indent + "    \"x\":" + (this.Orientation as Orientation.Quaternion).x + ",\"y\":" +
+                (this.Orientation as Orientation.Quaternion).y + ",\"z\":" +
+                (this.Orientation as Orientation.Quaternion).z + ",\"w\":" +
+                (this.Orientation as Orientation.Quaternion).w);
+            sb.push("\r\n" + indent + "  }\r\n" + indent + "}\r\n");
+            return sb.join('');
+        }
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_8_local_geopose">Step 8: Local [Geo]Pose</h3>
+<div class="paragraph">
+<p>The Local GeoPose is in essence, an implementation of the pose concept from computer graphics. It can be implemented as an Advanced geoPose but a lightweight implementation for operations within a local Carsian coordinate system is often useful. I hope that a future version of OGC GeoPose has something like the Local form. Until then, there are three alternatives</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>use a non-standard serialized form,</p>
+</li>
+<li>
+<p>serialize this class structure as an Advanced and compliant data object, or</p>
+</li>
+<li>
+<p>rely on the Advanced form.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="Local.png" alt="Support Classes" width="200" height="256">
+</div>
+<div class="title">Figure 9. Local</div>
+</div>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="sect3">
+<h4 id="_typescript_implemention_8">TypeScript implemention:</h4>
+<div class="listingblock">
+<div class="content">
+<pre>// Implemention order: 8 -a useful GeoPose for working within a local Cartesian (i.e. engineering) frame.
+// Local can be expressed as an Advanced form, but the Advanced form is more complex and this implementation is a shortcut.
+
+/// &lt;summary&gt;
+/// Local GeoPose is a derived pose within an engineering CRS with a Cartesian coordinate system.
+/// This form is the closest to the classical computer graphics pose concept.
+/// &lt;remark&gt;
+/// WARNING: Local is not (yet) part of the OGC GeoPose standard and not backwards-compatible.
+/// Useful when operating within a local Cartesian frame defined by a Basic (or other) GeoPose.
+/// It is possible to define Local via the Advanced GeoPose with
+///   "authority": "steve@opensiteplan.org-experimental", "id": "translation", "parameters": {&lt;dx&gt;, &lt;dy&gt;, &lt;dz&gt; }
+/// &lt;/remark&gt;
+/// &lt;/summary&gt;
+export class Local extends GeoPose.GeoPose {
+    public constructor(id: string, frameTransform: FrameTransform.Translation, orientation: Orientation.YPRAngles) {
+        super();
+        this.poseID = new Extras.PoseID(id);
+        this.FrameTransform = frameTransform;
+        this.Orientation = orientation;
+    }
+    /// &lt;summary&gt;
+    /// The xOffset, yOffset, zOffset from the origin of the rotated inner frame of a "parent" GeoPose.
+    /// &lt;/summary&gt;
+    public override FrameTransform: FrameTransform.Translation;
+
+    /// &lt;summary&gt;
+    /// An Orientation specified as three rotations.
+    /// &lt;/summary&gt;
+    public override Orientation: Orientation.YPRAngles;
+
+
+    /// &lt;summary&gt;
+    /// This function returns a Json encoding of an Advanced GeoPose
+    /// &lt;/summary&gt;
+    public toJSON(): string {
+        let indent: string = "";
+        let sb: string[] = [''];
+        {
+            sb.push("{\r\n  ");
+            if (this.validTime != null) {
+                sb.push("\"validTime\": " + this.validTime.toString() + ",\r\n" + indent + "  ");
+            }
+            if (this.poseID != null &amp;&amp; this.poseID.id != "") {
+                sb.push("\"poseID\": \"" + this.poseID.id + "\",\r\n" + indent + "  ");
+            }
+            if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
+                sb.push("\"parentPoseID\": \"" + this.parentPoseID.id + "\",\r\n" + indent + "  ");
+            }
+            sb.push("\"position\": \r\n  {\r\n    " + "\"x\": " + (this.FrameTransform as FrameTransform.Translation).xOffset + ",\r\n    " +
+                "\"y\": " + (this.FrameTransform as FrameTransform.Translation).yOffset + ",\r\n    " +
+                "\"z\":   " + (this.FrameTransform as FrameTransform.Translation).zOffset);
+            sb.push("\r\n  " + "},");
+            sb.push("\r\n  ");
+            sb.push("\"angles\": \r\n  {\r\n    " + "\"yaw\":   " + (this.Orientation as Orientation.YPRAngles).yaw + ",\r\n    " +
+                "\"pitch\": " + (this.Orientation as Orientation.YPRAngles).pitch + ",\r\n    " +
+                "\"roll\":  " + (this.Orientation as Orientation.YPRAngles).roll);
+            sb.push("\r\n  " + "}");
+            sb.push("\r\n" + "}\r\n");
+
+            return sb.join('');
+        }
+    }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples">Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="sect2">
+<h3 id="_typescript">TypeScript</h3>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_c">C#</h3>
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.
+Pile o text pile o text I am filler and I feel puffy.</p>
+</div>
+<div class="paragraph">
+<p>TypeScript <a href="https://www.typescriptlang.org" class="bare">https://www.typescriptlang.org</a></p>
+</div>
+<div class="paragraph">
+<p>C#</p>
+</div>
+<div class="paragraph">
+<div class="title">NET 6</div>
+<p>C++</p>
+</div>
+<div class="paragraph">
+<p>IEEE 754 Floating Point</p>
+</div>
+<div class="paragraph">
+<p>Java</p>
+</div>
+<div class="paragraph">
+<p>Kotlin</p>
+</div>
+<div class="paragraph">
+<p>Python</p>
+</div>
+<div class="paragraph">
+<p>SfM</p>
+</div>
+<div class="paragraph">
+<p>SLAM</p>
+</div>
+<div class="paragraph">
+<p>Swift</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2023-02-06 23:30:11 -0800
+</div>
+</div>
+</body>
+</html>
