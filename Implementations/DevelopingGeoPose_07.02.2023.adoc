@@ -1,13 +1,14 @@
 # Implementing OGC&#8482; GeoPose 1.0
 07.02.2023 Steve Smyth <steve@opensiteplan.org>
-
-One of the questions that I often hear is "How should I implement software that makes or manipulates GeoPoses?" This post is an answer in the form of a tutorial. It may not describe exactly the software you may need to build but I hope it gives you the necessary building blocks to see how you might proceed. 
+:toc: 
 
 ##	The OGC GeoPose 1.0 Standard
 
+A frequent question is "How should I implement software that makes or manipulates OGC GeoPoses?" This tutorial is one answer. It may not describe exactly the software you may need to build but I hope it gives you the necessary building blocks to see how you might proceed.  This post features a TypeScript implementation, to be followed by posts on testing, C#, C++, Java, Python, Swift, and Kotlin.
+
 https://docs.ogc.org/dis/21-056r10/21-056r10.html[OGC GeoPose 1.0] is a draft international standard for a family of JSON data objects representing the position and orientation of real or virtual entities. There are eight independent forms described in the standard. There are no dependencies between the forms. Each may be implemented independently. There is no requirement to implement any specific form or number of forms.
 
-This tutorial describes one template for developing a software implementation using any one of many modern object-oriented programming languages. The main focus is on a TypeScript implementation. It is accompanied by a parallel implementation in C#, targeting open-source .NET 6.
+This tutorial describes one template for developing a software implementation supporting GeoPose 1.0 using any one of many modern object-oriented programming languages. This post focuses on a TypeScript implementation. It is accompanied by a parallel implementation in C#, targeting open-source .NET 6.
 
 This tutorial only touches briefly of the **use** of GeoPose - another important topic.
 
@@ -64,20 +65,21 @@ Synthetic environments contain collections of moving objects, which themselves m
 
 ## Development Goals
 
-This goal of this tutorial is to walk through the a working example of one of many possible templates for developing software that works well with OGC GeoPose 1.0. There are unlimited approaches to design. The OGC GeoPose 1.0 standard does not specify anything about software design or language. This document describes an approach to implementation based on an easly extended  object-oriented design. 
+The OGC GeoPose 1.0 standard does not specify anything about software design or programming language. This goal of this tutorial is to walk through for design and implementation of software that works well with OGC GeoPose 1.0 and which can be integrated in to applications that create or receive GeoPose 1.0 data objects. The only requirement is that the language offer basic object-oriented programming support. 
 
-### Implement structures and processes that can work with GeoPose 1.X
+There are several specific goals:
 
-When you incorporate GeoPose data 
+### Add GeoPose to applications
 
-#### Add GeoPose to applications
+This is an obvious motivation for adding GeoPose software. Using a standard library makes it less difficult to start quickly and have a level of confidence that the operations are performed correctly.
 
-#### Integrate with external coordinate transformation databases and libraries
+### External coordinate transformation libraries
 
-* GDAL
-* Proj
+GeoPose is based on an abstraction of transformations linking pairs of spaces or their associated reference frames. Many of the definitions of reference frames are complex and described in terms specific to a particular discipline, such as geodesy, surveying, or astrophysics. Experts in these disciplines have built specialized databases and transformation software and it is highly desirable to be able to use their work.
 
-#### Experiment with possible new features
+One very useful example is the PROJ coordinate transformation library eith used by itself or as part of the Geospatial Data Abstraction Library (GDAL) library. This tutorial uses an interface to PROJ to implement a range of more general transformations. 
+
+### Experiment with possible new features
 
 Having a working implementation of the standardized elements of GeoPose 1.0 makes it easy to experiment wih new features that might be proposed for a new version of the standard. I give two examples of how this can be done. First, I have  provided three new properties for the Basic and Advanced GeoPoses that have proved to be useful in my GeoPose applications. These additional properties serialize as additional JSON properties, which are explicitly allowed by the standard. Second, I have included the "Local" (Geo)Pose. Local is the closest to the usual concept of a pose in computer graphics. It is designed to allow chains and trees in the space of the rortated local tangent plane, east-north-up Cartesian coordinate system associated with the inner frame of Basic GeoPoses. The Local GeoPose can be expressed as an Advanced GeoPose but creating a simplified version with the frame transormation hardwired makes for clearer programming. I have not done so in this tutorial but it would be possible to configure the JSON serialization to output the Advanced equivalent, rather than a non-standard form.
 
@@ -93,23 +95,26 @@ I describe the parts in reverse order of dependency. By the time you get to the 
 
 
 
-## Development Outline
+## Implementation in Eight Steps
 
-* Supporting Datatypes
-* Positions
-* Frame Transforms
-* Orientations
-* Abstract GeoPose
-* Basic GeoPoses
-* Advanced GeoPose
-* Local Pose
+The development steps outlined here proceed from independent components to three categories of GeoPoses: Basic, Advanced, and Local. Note that Local GeoPoses are within the scope of the GeoPose 1.0 logical model but must be serialized as Advanced GeoPoses to be compliant data objects.
 
+* Step 1: Supporting Datatypes and Functions
+* Step 2: Positions
+* Step 3: Frame Transforms
+* Step 4: Orientations
+* Step 5: Abstract GeoPose
+* Step 6: Basic GeoPoses
+* Step 7: Advanced GeoPose
+* Step 8: Local Pose
 
-## Detailed Steps using TypeScript as an Example
+## Implementing GeoPose in TypeScript
 
-### Supporting Datatypes
+The following is the sequence of steps for a TypeScript implementation:
 
-This is the place to start.
+### Step 1: Supporting Datatypes and Functions
+
+Start here.
 
 There are two simple datatypes that encapsulate an identifier and a time instant: PoseID and TimeValue. They are used in several of the classes. They are separated out because their design is dependent on the application domain and the need to interoperate with other systems. The GeoPose 1.0 standard does not specify any identifier and it defines a "valid Time" for only some of the GeoPose forms. Experience with the GeoPose since the initial publication shows the utility of references to GeoPoses and to having times associated with many individual GeoPoses. 
 
@@ -153,7 +158,7 @@ export class UnixTime {
 
 ----
 
-### Positions
+### Step 2: Positions
 
 The Position class and its derivatives represent different styles of using three coordinate values to designate a position in a three-dimensional space.
 
@@ -161,22 +166,7 @@ The Position class and its derivatives represent different styles of using three
 .Positions
 image::Position.png[Support Classes, 600, 256]
 
-GeoPose 1.0 supports both a geodetic form and a Cartesian form.
-
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+GeoPose 1.0 supports both a geodetic form and a Cartesian form. These forms are used in both frame transformations and orientation (rotation) transformations, both as quantities to be transformed and, in some cases, as a parameter of a family of transformations. Since some transformations are not possible, due to a mathematical singularity, unavailability of a transformation, or a runtime error in the tranformation calculation, the NoPosition position is used as a "null" value. Each of the coordinates of the NoPosition are the IEEE 754 value NaN.
 
 ==== TypeScript implemention:
 
@@ -276,7 +266,7 @@ export class NoPosition extends Position {
 
 ----
 
-### Frame Transforms
+### Step 3: Frame Transforms
 
 Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.
@@ -465,7 +455,7 @@ export class Translation extends FrameTransform {
 
 ----
 
-### Orientations
+### Step 4: Orientations
 
 Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.
@@ -706,7 +696,7 @@ export class Quaternion extends Orientation {
 
 ----
 
-### GeoPose
+### Step 5: Abstract GeoPose
 
 Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.
@@ -787,7 +777,7 @@ export abstract class GeoPose {
 
 ----
 
-### Basic GeoPoses
+### Step 6: Basic GeoPoses
 
 Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.
@@ -983,7 +973,7 @@ export class BasicQuaternion extends Basic {
 
 ----
 
-### Advanced GeoPose
+### Step 7: Advanced GeoPose
 
 Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.
@@ -1243,24 +1233,15 @@ export class LTP_ENU {
 
 ----
 
-### Local [Geo]Pose
+### Step 8: Local [Geo]Pose
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+The Local GeoPose is in essence, an implementation of the pose concept from computer graphics. It can be implemented as an Advanced geoPose but a lightweight implementation for operations within a local Carsian coordinate system is often useful. I hope that a future version of OGC GeoPose has something like the Local form. Until then, there are three alternatives
 
-[.left]
+* use a non-standard serialized form,
+* serialize this class structure as an Advanced and compliant data object, or
+* rely on the Advanced form.
+
+[.center]
 .Local
 image::Local.png[Support Classes, 200, 256]
 
@@ -1424,6 +1405,8 @@ C#
 .NET 6
 
 C++
+
+IEEE 754 Floating Point
 
 Java
 
