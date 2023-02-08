@@ -482,7 +482,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_example">Example</a>
 <ul class="sectlevel2">
 <li><a href="#_typescript">TypeScript</a></li>
-<li><a href="#_c">C#</a></li>
+<li><a href="#_output">Output</a></li>
 </ul>
 </li>
 <li><a href="#software-license">License (MIT)</a></li>
@@ -1088,20 +1088,7 @@ export class NoPosition extends Position {
 <div class="sect2">
 <h3 id="_step_3_frame_transforms">Step 3: Frame Transforms</h3>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The frame transform is the first of the two key elements of a GeoPose. It is a function that transforms a Position defined by three coordinates in a starting reference frame - the <strong>outer</strong> frame - to a Position in a destination reference frame - the <strong>*inner</strong> frame. The GeoPose 1.0 structure holds an explicit (Advanced form) or an implicit (Basic form) specification of the outer frame, the transformation, and the inner frame.</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -1110,20 +1097,32 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 <div class="title">Figure 4. Frame Transform</div>
 </div>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The Basic form uses an implicit specification of an outer frame based on the WGS84 datum and geodetic coordinates, a transformation to a Cartesian tangent plane coordinate system in the inner frame. The outer frame is the EPSG 4979, the transformation is EPSG 9837, and the inner frame is EPSG 5819.</p>
+</div>
+<div class="paragraph">
+<p>The Advanced form uses three strings - <strong>authority</strong>, <strong>id</strong>, and <strong>parameters</strong> to provide a linkage between the GeoPose structure and an external method of denoting either</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>an outer frame (datum) and Position + transformation,</p>
+</li>
+<li>
+<p>an outer frame, and an inner frame with an implicit transformation, or</p>
+</li>
+<li>
+<p>an outer frame, a transformation, and an inner frame.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The usage of these three fields to provide the linkage <strong>is determined by the software provider</strong> since GeoPose is independent of the external organizations and correspondingly, the external organizations are not aware of GeoPose. One example linkage is provided in the included code, linking to the PROJ library for JavaScript (ProjJS).</p>
+</div>
+<div class="paragraph">
+<p>The Local form uses an implicit Translation transformation between outer and inner frames, where Positions in both are expressed as Cartesian coordinates.</p>
+</div>
+<div class="paragraph">
+<p>It is important to note that the GeoPose implementation not only contains the references needed to define outer frame, transformation, and inner frame but also must <strong>implement</strong> the transformation.</p>
 </div>
 <div class="sect3">
 <h4 id="_typescript_implementation_4">TypeScript implementation:</h4>
@@ -1289,20 +1288,7 @@ export class Translation extends FrameTransform {
 <div class="sect2">
 <h3 id="_step_4_orientations">Step 4: Orientations</h3>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The Orientation is the second key GeoPose element. The Orientation is a rotational transformation that takes a (any) Position in the inner frame and rotates it to a new position. It is best thought of as a rotation of the inner frame.</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -1311,57 +1297,43 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 <div class="title">Figure 5. Orientations</div>
 </div>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>There are several possible ways to specify a rotation.</p>
+</div>
+<div class="paragraph">
+<p>One approach is to use consecutive rotations about each of the three axes. This is the easiest for human interpretation at a glance, but suffers from four difficulties, which may or may not outweigh the human-friendliness of successive rotations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>there is an arbitrary choice of the order of axes about which to rotate,</p>
+</li>
+<li>
+<p>there is an arbitrary choice of whether the axes of rotation are the original unrotated axes or the new local axes are to be used after each rotation,</p>
+</li>
+<li>
+<p>there are singularities for rotation of a multiple of half of a circle, and</p>
+</li>
+<li>
+<p>interpolation of angular rotations is not uniform.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A second approach is to use a unit quaternion, which cannot be easily visualized but which offers good interpolation properties and an unambiguous interpretation.</p>
+</div>
+<div class="paragraph">
+<p>As with the FrameTransform, Orientation classes must implement the actual rotational transformation.</p>
 </div>
 <div class="sect3">
 <h4 id="_yaw_pitch_roll">Yaw, Pitch, Roll</h4>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>yaw, pitch, and roll angles are one choice for a representation based on successive rotations about the z, y, and x axes, the axes being the local rotated axes after previous rotations.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_unit_quaternions">Unit Quaternions</h4>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>Unit quaternions have four components, the square root of the sum of the squares of which is 1.0.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1555,20 +1527,7 @@ export class Quaternion extends Orientation {
 <div class="sect2">
 <h3 id="_step_5_abstract_geopose">Step 5: Abstract GeoPose</h3>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The Abstract GeoPose is the root of the inheritance hierarchy. The distinction between GeoPose forms is determined by overriding implementations of the two elements of type FrameTransform and Orientation, respectively.</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -1577,20 +1536,7 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 <div class="title">Figure 6. GeoPose</div>
 </div>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The three properties PoseID, parentPoseID, and validTime are additional properties not define by GeoPose 1.0 but allowed as additional properties in the serialized JSON data objects.</p>
 </div>
 <div class="sect3">
 <h4 id="_typescript_implementation_6">TypeScript implementation:</h4>
@@ -1644,20 +1590,7 @@ export abstract class GeoPose {
 <div class="sect2">
 <h3 id="_step_6_basic_geoposes">Step 6: Basic GeoPoses</h3>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>Basic GeoPoses are a family where the FrameTransform is a transform from a WGS84 geodetic system to a local tangent plane, east-north-up inner frame.</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -1666,58 +1599,7 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 <div class="title">Figure 7. Basic</div>
 </div>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
-</div>
-<div class="sect3">
-<h4 id="_ypr">YPR</h4>
-<div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_quaternion">Quaternion</h4>
-<div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
-</div>
+<p>The two members of the Basic family are distinguished by the rotational transformation implementing the Orientation: BasicYPR and BasicQuaternion.</p>
 </div>
 <div class="sect3">
 <h4 id="_typescript_implementation_7">TypeScript implementation:</h4>
@@ -1727,7 +1609,7 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 <div class="listingblock">
 <div class="content">
 <pre>// Implementation step: 6 - follows GeoPose.
-// This is the simplest family of GeoPoses - the 80% part of a 80/20 solution.
+// Basic is the simplest family of GeoPoses - the 80% part of a 80/20 solution.
 
 /// &lt;summary&gt;
 /// The Basic GeoPoses share the use of a local tangent plane, east-north-up frame transform.
@@ -2210,57 +2092,603 @@ export class Local extends GeoPose.GeoPose {
 <h2 id="_example">Example</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The following example uses each of the GeoPose forms to show different pose relationships can be modelled.</p>
+</div>
+<div class="paragraph">
+<p>The example starts out with a helper class to display the current pose status of a "Space Train" that is somewhere in interplanetary space, possibly headed to Mars.
+Then there is a check of PROJ and finally the model of the Space Train itself.</p>
 </div>
 <div class="sect2">
 <h3 id="_typescript">TypeScript</h3>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>import { stdin as input } from 'node:process';
+import * as proj4 from 'proj4';
+import * as GeoPose from './GeoPose'
+import * as Position from './Position';
+import * as Orientation from './Orientation';
+import * as LTPENU from './WGS84ToLTPENU';
+import * as Basic from './Basic';
+import * as Advanced from './Advanced';
+import * as Local from './Local';
+import * as FrameTransform from './FrameTransform';
+import * as Extras from './Extras';
+
+class Display {
+    public static Output(spaceTrain: GeoPose.GeoPose, trainWagons: GeoPose.GeoPose[], trainPassengers: GeoPose.GeoPose[]): void {
+        console.log("\r\n========== Space Train at Local Clock UNIX Time " + spaceTrain.validTime.toString() + "==========\r\n");
+        console.log(spaceTrain.toJSON());
+        trainWagons.forEach(function (wagon) {
+
+            console.log("=-=-=-=-=- Wagon -=-=-=-=-=: " + wagon.poseID.id.substring(1 + wagon.poseID.id.lastIndexOf('/')) + "\r\n");
+            console.log(wagon.toJSON());
+            trainPassengers.forEach(function (passenger) {
+
+                if (passenger.parentPoseID.id == wagon.poseID.id) {
+                    console.log("---------- Passenger ----------: " + passenger.poseID.id.substring(1 + passenger.poseID.id.lastIndexOf('/')) + "\r\n");
+                    console.log(passenger.toJSON());
+                }
+            })
+        })
+    }
+}
+
+//  - Verify that PROJ is configured and working
+console.log("========== Checking PROJ ==========");
+//    Source coordinates will be in Longitude/Latitude, WGS84
+var source = proj4.Proj('EPSG:4326');
+//    Destination coordinates in meters, global spherical mercators projection
+var dest = proj4.Proj('EPSG:3785');
+
+//  - Transform point coordinates
+var p = proj4.toPoint([-76.0, 45.0, 11.0]);
+let q = proj4.transform(source, dest, p);
+let r = proj4.transform(dest, source, q);
+console.log("X : " + p.x + " \nY : " + p.y + " \nZ : " + p.z);
+console.log("X : " + q.x + " \nY : " + q.y + " \nZ : " + q.z);
+console.log("X : " + r.x + " \nY : " + r.y + " \nZ : " + r.z);
+
+let d = new LTPENU.LTP_ENU();
+let from = new Position.GeodeticPosition(-1.0, 52.0, 15.0);
+let origin = new Position.GeodeticPosition(-1.00005, 52.0, 15.3);
+let to = new Position.CartesianPosition(0, 0, 0);
+d.GeodeticToEnu(from, origin, to);
+console.log('from: lat: ' + from.lat.toString() + " lon: " + from.lon.toString() + " h: " + from.h.toString());
+console.log('  to: x: ' + to.x.toString() + " y: " + to.y.toString() + " z: " + to.z.toString());
+
+//  - Display some example GeoPoses
+console.log("========== Example GeoPoses ==========");
+let myYPRLocal = new Basic.BasicYPR("OS_GB: BasicYPR",
+    new Position.GeodeticPosition(51.5, -1.5, 12.3),
+    new Orientation.YPRAngles(1, 2, 3));
+let json = myYPRLocal.toJSON();
+console.log(json);
+let myQLocal = new Basic.BasicQuaternion("OS_GB: BasicQ",
+    new Position.GeodeticPosition(51.5, -1.5, 23.4),
+    new Orientation.Quaternion(0.1, 0.2, 0.3, 1.0));
+json = myQLocal.toJSON();
+console.log(json);
+let myALocal = new Advanced.Advanced("OS_GB: Advanced",
+    new FrameTransform.Extrinsic("epsg", "5819", "[1.5, -1.5, 23.4]"),
+    new Orientation.Quaternion(0.1, 0.2, 0.3, 1.0));
+json = myALocal.toJSON();
+console.log(json);
+let myLLocal = new Local.Local("OS_GB: Local",
+    new FrameTransform.Translation(9.0, 8.7, 7.6),
+    new Orientation.YPRAngles(1, 2, 3));
+json = myLLocal.toJSON();
+console.log(json);
+
+//  - A "Space Train" example with interpose linkages
+console.log("========== Space Train ==========");
+// Create Mars Express in the current International Celestial Reference Frame ICRF2
+let marsExpress = new Advanced.Advanced("https://example.com/nodes/MarsExpress/1",
+    new FrameTransform.Extrinsic("https://www.iers.org/",
+        "icrf3",
+        "{\"x\": 1234567890.9876,\"y\": 2345678901.8765, \"z\": 3456789012.7654}"),
+    new Orientation.Quaternion(0, 0, 0, 1));
+marsExpress.validTime = 1674767748003;
+
+//  - Create four 10 m long wagons with identical seat layouts in frames local to Mars Express
+//    and remember them in a wagons array
+let wagons: Local.Local[] = [];
+let wagon1 = new Local.Local("https://example.com/nodes/MarsExpress/1/Wagons/1",
+    new FrameTransform.Translation(2.2, 0.82, -7.0),
+    new Orientation.YPRAngles(0.2, 0.0, 23.0));
+wagon1.parentPoseID = marsExpress.poseID;
+wagons.push(wagon1);
+let wagon2 = new Local.Local("https://example.com/nodes/MarsExpress/1/Wagons/2",
+    new FrameTransform.Translation(12.2, 0.78, -7.0),
+    new Orientation.YPRAngles(0.2, 0.0, 23.0));
+wagon2.parentPoseID = marsExpress.poseID;
+wagons.push(wagon2);
+let wagon3 = new Local.Local("https://example.com/nodes/MarsExpress/1/Wagons/3",
+    new FrameTransform.Translation(22.5, 0.77, -7.0),
+    new Orientation.YPRAngles(0.2, 0.0, 23.0));
+wagon3.parentPoseID = marsExpress.poseID;
+wagons.push(wagon3);
+let wagon4 = new Local.Local("https://example.com/nodes/MarsExpress/1/Wagons/4",
+    new FrameTransform.Translation(33.2, 0.74, -7.0),
+    new Orientation.YPRAngles(0.2, 0.0, 23.0));
+wagon4.parentPoseID = marsExpress.poseID;
+wagons.push(wagon4);
+
+//  - Create passengers from the Cryptography Example Family (Alice, Bob, Carol, and Charlie)
+//    in wagons 1 and 3 in local frames local to specific wagons and
+//    remember them in a passenger list
+let passengers: GeoPose.GeoPose[] = [];
+
+//  - Alice is a clever thinker who has many questions and good ideas
+let Alice = new Local.Local("https://example.com/nodes/MarsExpress/1/Passengers/Alice", new FrameTransform.Translation(2.2, 0.8, -7.0), new Orientation.YPRAngles(180.0, 1.0, 0.0));
+Alice.parentPoseID = wagon1.poseID;
+passengers.push(Alice);
+
+//  - Bob is a nice fellow who guided us towrd the frame transform in the early days
+let Bob = new Local.Local("https://example.com/nodes/MarsExpress/1/Passengers/Bob", new FrameTransform.Translation(2.0, 0.8, -6.0), new Orientation.YPRAngles(180.0, 2.0, 0.0));
+Bob.parentPoseID = wagon1.poseID;
+passengers.push(Bob);
+
+//  - Carol thinks that the Local GeoPose is needed and should be added to version 1.1.0
+let Carol = new Local.Local("https://example.com/nodes/MarsExpress/1/Passengers/Carol", new FrameTransform.Translation(-5.0, 0.82, 6.0), new Orientation.YPRAngles(-2.0, 1.5, 0.0));
+Carol.parentPoseID = wagon3.poseID;
+passengers.push(Carol);
+
+//  - Charlie is one of Carol's multiple personalities. Charlie does not believe in using any GeoPose not in the 1.0.0 standard
+let Charlie =
+    new Advanced.Advanced("https://charlie.com",
+        new FrameTransform.Extrinsic(
+            "https://ogc.org",
+            "PROJCRS[\"GeoPose Local\",+GEOGCS[\"None)\"]+CS[Cartesian,3],+AXIS[\"x\",,ORDER[1],LENGTHUNIT[\"metre\",1]],+AXIS[\"y\",,ORDER[2],LENGTHUNIT[\"metre\",1]],+AXIS[\"z\",,ORDER[3],LENGTHUNIT[\"metre\",1]]+USAGE[AREA[\"+/-1000 m\"],BBOX[-1000,-1000,1000,1000],ID[\"GeoPose\",Local]]",
+            "{\"x\": 1234567890.9876,\"y\": 2345678901.8765, \"z\": 3456789012.7654}"),
+        new Orientation.Quaternion(0.0174509, 0.0130876, -0.0002284, 0.9997621));
+Charlie.parentPoseID = wagon3.poseID;
+
+//  - Charlie is going to do something time-dependent so we need to timestamp the current info
+Charlie.validTime = marsExpress.validTime; // Use the Mars Express local clock
+passengers.push(Charlie);
+
+//  - Display the pose tree
+Display.Output(marsExpress, wagons, passengers);
+
+//  - After a minute, the Charlie personality decides that he must split from the Carol personality and
+//    moves to the same seat in wagon 4.
+//    Charlie's clock has an error of 327 millisecond with respect to marsExpress' clock
+marsExpress.validTime = 1674767748003 + 60 * 1000;
+Charlie.parentPoseID = wagon4.poseID;
+//  - Charlie moved so we need to update his clock
+Charlie.validTime = marsExpress.validTime + 327; // Use the Mars Express local clock
+
+//  - Display new pose tree
+Display.Output(marsExpress, wagons, passengers);
+
+// - Done
+console.log("Enter to exit")
+input.read();</pre>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_c">C#</h3>
-<div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<h3 id="_output">Output</h3>
+<div class="listingblock">
+<div class="content">
+<pre>========== Checking PROJ ==========
+X : -76
+Y : 45
+Z : 11
+X : -8460281.300288793
+Y : 5621521.486192066
+Z : 11
+X : -76.00000000000001
+Y : 44.99999999999999
+Z : 11
+from: lat: -1 lon: 52 h: 15
+  to: x: -4.058880592738845e-10 y: 5.528743791653243 z: -0.3000024121489482
+========== Example GeoPoses ==========
+{
+  "poseID": "OS_GB: BasicYPR",
+  "position":
+  {
+    "lat": 51.5,
+    "lon": -1.5,
+    "h":   12.3
+  },
+  "angles":
+  {
+    "yaw":   1,
+    "pitch": 2,
+    "roll":  3
+  }
+}
+{
+  "poseID": "OS_GB: BasicQ",
+  "position":
+  {
+    "lat": 51.5,
+    "lon": -1.5,
+    "h":   23.4
+  },
+  "quaternion":
+  {
+    "x":   0.1,
+      "y": 0.2,
+      "z": 0.3,
+      "w":  1
+  }
+}
+{
+  "poseID": "OS_GB: Advanced",
+  "frameSpecification":
+  {
+    "authority": "epsg",
+    "id": "5819",
+    "parameters": "[1.5, -1.5, 23.4]"
+  },
+  "quaternion":
+  {
+    "x":0.1,"y":0.2,"z":0.3,"w":1
+  }
+}
+
+{
+  "poseID": "OS_GB: Local",
+  "position":
+  {
+    "x": 9,
+    "y": 8.7,
+    "z":   7.6
+  },
+  "angles":
+  {
+    "yaw":   1,
+    "pitch": 2,
+    "roll":  3
+  }
+}
+
+========== Space Train ==========
+
+========== Space Train at Local Clock UNIX Time 1674767748003==========
+
+{
+  "validTime": 1674767748003,
+  "poseID": "https://example.com/nodes/MarsExpress/1",
+  "frameSpecification":
+  {
+    "authority": "https://www.iers.org/",
+    "id": "icrf3",
+    "parameters": "{\"x": 1234567890.9876,"y": 2345678901.8765, "z": 3456789012.7654}"
+  },
+  "quaternion":
+  {
+    "x":0,"y":0,"z":0,"w":1
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 1
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 2.2,
+    "y": 0.82,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+---------- Passenger ----------: Alice
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Alice",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "position":
+  {
+    "x": 2.2,
+    "y": 0.8,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   180,
+    "pitch": 1,
+    "roll":  0
+  }
+}
+
+---------- Passenger ----------: Bob
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Bob",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "position":
+  {
+    "x": 2,
+    "y": 0.8,
+    "z":   -6
+  },
+  "angles":
+  {
+    "yaw":   180,
+    "pitch": 2,
+    "roll":  0
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 2
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/2",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 12.2,
+    "y": 0.78,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 3
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 22.5,
+    "y": 0.77,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+---------- Passenger ----------: Carol
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Carol",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "position":
+  {
+    "x": -5,
+    "y": 0.82,
+    "z":   6
+  },
+  "angles":
+  {
+    "yaw":   -2,
+    "pitch": 1.5,
+    "roll":  0
+  }
+}
+
+---------- Passenger ----------: charlie.com
+
+{
+  "validTime": 1674767748003,
+  "poseID": "https://charlie.com",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "frameSpecification":
+  {
+    "authority": "https://ogc.org",
+    "id": "PROJCRS[\"GeoPose Local",+GEOGCS["None)"]+CS[Cartesian,3],+AXIS["x",,ORDER[1],LENGTHUNIT["metre",1]],+AXIS["y",,ORDER[2],LENGTHUNIT["metre",1]],+AXIS["z",,ORDER[3],LENGTHUNIT["metre",1]]+USAGE[AREA["+/-1000 m"],BBOX[-1000,-1000,1000,1000],ID["GeoPose",Local]]",
+    "parameters": "{\"x": 1234567890.9876,"y": 2345678901.8765, "z": 3456789012.7654}"
+  },
+  "quaternion":
+  {
+    "x":0.0174509,"y":0.0130876,"z":-0.0002284,"w":0.9997621
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 4
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/4",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 33.2,
+    "y": 0.74,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+
+========== Space Train at Local Clock UNIX Time 1674767808003==========
+
+{
+  "validTime": 1674767808003,
+  "poseID": "https://example.com/nodes/MarsExpress/1",
+  "frameSpecification":
+  {
+    "authority": "https://www.iers.org/",
+    "id": "icrf3",
+    "parameters": "{\"x": 1234567890.9876,"y": 2345678901.8765, "z": 3456789012.7654}"
+  },
+  "quaternion":
+  {
+    "x":0,"y":0,"z":0,"w":1
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 1
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 2.2,
+    "y": 0.82,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+---------- Passenger ----------: Alice
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Alice",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "position":
+  {
+    "x": 2.2,
+    "y": 0.8,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   180,
+    "pitch": 1,
+    "roll":  0
+  }
+}
+
+---------- Passenger ----------: Bob
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Bob",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "position":
+  {
+    "x": 2,
+    "y": 0.8,
+    "z":   -6
+  },
+  "angles":
+  {
+    "yaw":   180,
+    "pitch": 2,
+    "roll":  0
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 2
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/2",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 12.2,
+    "y": 0.78,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 3
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 22.5,
+    "y": 0.77,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+---------- Passenger ----------: Carol
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Carol",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "position":
+  {
+    "x": -5,
+    "y": 0.82,
+    "z":   6
+  },
+  "angles":
+  {
+    "yaw":   -2,
+    "pitch": 1.5,
+    "roll":  0
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 4
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/4",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 33.2,
+    "y": 0.74,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+---------- Passenger ----------: charlie.com
+
+{
+  "validTime": 1674767808330,
+  "poseID": "https://charlie.com",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/4",
+  "frameSpecification":
+  {
+    "authority": "https://ogc.org",
+    "id": "PROJCRS[\"GeoPose Local",+GEOGCS["None)"]+CS[Cartesian,3],+AXIS["x",,ORDER[1],LENGTHUNIT["metre",1]],+AXIS["y",,ORDER[2],LENGTHUNIT["metre",1]],+AXIS["z",,ORDER[3],LENGTHUNIT["metre",1]]+USAGE[AREA["+/-1000 m"],BBOX[-1000,-1000,1000,1000],ID["GeoPose",Local]]",
+    "parameters": "{\"x": 1234567890.9876,"y": 2345678901.8765, "z": 3456789012.7654}"
+  },
+  "quaternion":
+  {
+    "x":0.0174509,"y":0.0130876,"z":-0.0002284,"w":0.9997621
+  }
+}
+
+Enter to exit</pre>
+</div>
 </div>
 </div>
 </div>
@@ -2336,7 +2764,7 @@ SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-07 11:57:16 -0800
+Last updated 2023-02-08 10:56:12 -0800
 </div>
 </div>
 </body>
