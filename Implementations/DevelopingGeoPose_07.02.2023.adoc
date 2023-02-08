@@ -454,39 +454,25 @@ export class NoPosition extends Position {
 
 ### Step 3: Frame Transforms
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+The frame transform is the first of the two key elements of a GeoPose. It is a function that transforms a Position defined by three coordinates in a starting reference frame - the **outer** frame - to a Position in a destination reference frame - the **inner* frame. The GeoPose 1.0 structure holds an explicit (Advanced form) or an implicit (Basic form) specification of the outer frame, the transformation, and the inner frame.
 
 [.center]
 .Frame Transform
 image::FrameTransform.png[Support Classes, 600, 256]
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+The Basic form uses an implicit specification of an outer frame based on the WGS84 datum and geodetic coordinates, a transformation to a Cartesian tangent plane coordinate system in the inner frame. The outer frame is the EPSG 4979, the transformation is EPSG 9837, and the inner frame is EPSG 5819.
+
+The Advanced form uses three strings - **authority**, **id**, and **parameters** to provide a linkage between the GeoPose structure and an external method of denoting either
+
+* an outer frame (datum) and Position + transformation,
+* an outer frame, and an inner frame with an implicit transformation, or
+* an outer frame, a transformation, and an inner frame.
+
+The usage of these three fields to provide the linkage **is determined by the software provider** since GeoPose is independent of the external organizations and correspondingly, the external organizations are not aware of GeoPose. One example linkage is provided in the included code, linking to the PROJ library for JavaScript (ProjJS).
+
+The Local form uses an implicit Translation transformation between outer and inner frames, where Positions in both are expressed as Cartesian coordinates.
+
+It is important to note that the GeoPose implementation not only contains the references needed to define outer frame, transformation, and inner frame but also must **implement** the transformation.
 
 ==== TypeScript implementation:
 
@@ -649,73 +635,32 @@ export class Translation extends FrameTransform {
 
 ### Step 4: Orientations
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+The Orientation is the second key GeoPose element. The Orientation is a rotational transformation that takes a (any) Position in the inner frame and rotates it to a new position. It is best thought of as a rotation of the inner frame.
 
 [.center]
 .Orientations
 image::Orientation.png[Support Classes, 450, 256]
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+There are several possible ways to specify a rotation.
+
+One approach is to use consecutive rotations about each of the three axes. This is the easiest for human interpretation at a glance, but suffers from four difficulties, which may or may not outweigh the human-friendliness of successive rotations:
+
+* there is an arbitrary choice of the order of axes about which to rotate,
+* there is an arbitrary choice of whether the axes of rotation are the original unrotated axes or the new local axes are to be used after each rotation,
+* there are singularities for rotation of a multiple of half of a circle, and
+* interpolation of angular rotations is not uniform.
+
+A second approach is to use a unit quaternion, which cannot be easily visualized but which offers good interpolation properties and an unambiguous interpretation.
+
+As with the FrameTransform, Orientation classes must implement the actual rotational transformation.
 
 #### Yaw, Pitch, Roll
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+yaw, pitch, and roll angles are one choice for a representation based on successive rotations about the z, y, and x axes, the axes being the local rotated axes after previous rotations.
 
 #### Unit Quaternions
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+Unit quaternions have four components, the square root of the sum of the squares of which is 1.0.
 
 ==== TypeScript implementation:
 
@@ -905,39 +850,13 @@ export class Quaternion extends Orientation {
 
 ### Step 5: Abstract GeoPose
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+The Abstract GeoPose is the root of the inheritance hierarchy. The distinction between GeoPose forms is determined by overriding implementations of the two elements of type FrameTransform and Orientation, respectively.
 
 [.center]
 .GeoPose
 image::GeoPose.png[Support Classes, 200, 256]
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+The three properties PoseID, parentPoseID, and validTime are additional properties not define by GeoPose 1.0 but allowed as additional properties in the serialized JSON data objects.
 
 ==== TypeScript implementation:
 
@@ -988,39 +907,13 @@ export abstract class GeoPose {
 
 ### Step 6: Basic GeoPoses
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+Basic GeoPoses are a family where the FrameTransform is a transform from a WGS84 geodetic system to a local tangent plane, east-north-up inner frame.
 
 [.center]
 .Basic
 image::Basic.png[Support Classes, 450, 256]
 
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
+The two members of the Basic family iare distinguished by the rotational transformation implementing the Orientation.
 
 #### YPR
 
@@ -1061,7 +954,7 @@ Pile o text pile o text I am filler and I feel puffy.
 <<software-license>>
 ----
 // Implementation step: 6 - follows GeoPose.
-// This is the simplest family of GeoPoses - the 80% part of a 80/20 solution.
+// Basic is the simplest family of GeoPoses - the 80% part of a 80/20 solution.
 
 /// <summary>
 /// The Basic GeoPoses share the use of a local tangent plane, east-north-up frame transform.
