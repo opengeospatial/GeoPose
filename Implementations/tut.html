@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="07.02.2023 Steve Smyth">
-<title>Implementing OGC&#8482; GeoPose 1.0</title>
+<title>OGC&#8482; GeoPose 1.0: TypeScript</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Implementing OGC&#8482; GeoPose 1.0</h1>
+<h1>OGC&#8482; GeoPose 1.0: TypeScript</h1>
 <div class="details">
 <span id="author" class="author">07.02.2023 Steve Smyth</span><br>
 <span id="email" class="email"><a href="mailto:steve@opensiteplan.org">steve@opensiteplan.org</a></span><br>
@@ -447,7 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_the_ogc_geopose_1_0_standard">The OGC GeoPose 1.0 Standard</a></li>
+<li><a href="#_introduction">Introduction</a></li>
 <li><a href="#_use_cases">Use Cases</a>
 <ul class="sectlevel2">
 <li><a href="#_augmented_and_mixed_reality">Augmented and Mixed Reality</a></li>
@@ -457,17 +457,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_image_understanding">Image Understanding</a></li>
 </ul>
 </li>
-<li><a href="#_development_goals">Development Goals</a>
+<li><a href="#_goals_of_this_tutorial">Goals of this Tutorial</a>
 <ul class="sectlevel2">
 <li><a href="#_add_geopose_to_applications">Add GeoPose to applications</a></li>
-<li><a href="#_external_coordinate_transformation_libraries">External coordinate transformation libraries</a></li>
+<li><a href="#_linkage_to_wkt_parsers_and_coordinate_transformation_libraries">Linkage to WKT parsers and coordinate transformation libraries</a></li>
 <li><a href="#_experiment_with_possible_new_features">Experiment with possible new features</a></li>
-<li><a href="#_template_applies_to_a_wide_range_of_object_oriented_languages">Template Applies to a Wide range of object-oriented languages</a></li>
+<li><a href="#_template_applies_to_a_wide_range_of_object_oriented_languages">Template applies to a wide range of object-oriented languages</a></li>
 </ul>
 </li>
 <li><a href="#_architecture">Architecture</a></li>
-<li><a href="#_implementation_in_eight_steps">Implementation in Eight Steps</a></li>
-<li><a href="#_implementing_geopose_in_typescript">Implementing GeoPose in TypeScript</a>
+<li><a href="#_eight_steps">Eight Steps</a></li>
+<li><a href="#_typescript_implementation">TypeScript implementation</a>
 <ul class="sectlevel2">
 <li><a href="#_step_1_supporting_datatypes_and_functions">Step 1: Supporting Datatypes and Functions</a></li>
 <li><a href="#_step_2_positions">Step 2: Positions</a></li>
@@ -479,31 +479,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_step_8_local_geopose">Step 8: Local [Geo]Pose</a></li>
 </ul>
 </li>
-<li><a href="#_examples">Examples</a>
+<li><a href="#_example">Example</a>
 <ul class="sectlevel2">
 <li><a href="#_typescript">TypeScript</a></li>
 <li><a href="#_c">C#</a></li>
 </ul>
 </li>
+<li><a href="#software-license">License (MIT)</a></li>
 <li><a href="#_references">References</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_the_ogc_geopose_1_0_standard">The OGC GeoPose 1.0 Standard</h2>
+<h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A frequent question is "How should I implement software that makes or manipulates OGC GeoPoses?" This tutorial is one answer. It may not describe exactly the software you may need to build but I hope it gives you the necessary building blocks to see how you might proceed.  This post features a TypeScript implementation, to be followed by posts on testing, C#, C++, Java, Python, Swift, and Kotlin.</p>
+<p>A frequent question is "How should I implement software that makes or manipulates OGC GeoPoses?" This tutorial is one answer. It may not describe exactly the software you may need to build but I hope it gives you the necessary building blocks to see how you might proceed.</p>
+</div>
+<div class="paragraph">
+<p>This tutorial describes one template for developing a software implementation supporting GeoPose 1.0 using any one of many modern object-oriented programming languages. The focus is on a TypeScript implementation but the principles are very similar for most programming languages supporting object-oriented design.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://docs.ogc.org/dis/21-056r10/21-056r10.html">OGC GeoPose 1.0</a> is a draft international standard for a family of JSON data objects representing the position and orientation of real or virtual entities. There are eight independent forms described in the standard. There are no dependencies between the forms. Each may be implemented independently. There is no requirement to implement any specific form or number of forms.</p>
 </div>
 <div class="paragraph">
-<p>This tutorial describes one template for developing a software implementation supporting GeoPose 1.0 using any one of many modern object-oriented programming languages. This post focuses on a TypeScript implementation. It is accompanied by a parallel implementation in C#, targeting open-source .NET 6.</p>
-</div>
-<div class="paragraph">
-<p>This tutorial only touches briefly of the <strong>use</strong> of GeoPose - another important topic.</p>
+<p>This tutorial only touches briefly on the <strong>use</strong> of GeoPose - another important topic.</p>
 </div>
 </div>
 </div>
@@ -626,10 +627,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_development_goals">Development Goals</h2>
+<h2 id="_goals_of_this_tutorial">Goals of this Tutorial</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The OGC GeoPose 1.0 standard does not specify anything about software design or programming language. This goal of this tutorial is to walk through for design and implementation of software that works well with OGC GeoPose 1.0 and which can be integrated in to applications that create or receive GeoPose 1.0 data objects. The only requirement is that the language offer basic object-oriented programming support.</p>
+<p>The OGC GeoPose 1.0 standard does not specify anything about software design or programming language. The primary goal of this tutorial is to walk through a design and implementation of software that works well with OGC GeoPose 1.0 and which can be integrated in to applications that create or receive GeoPose 1.0 data objects. The only requirement is that the language offer basic object-oriented programming support.</p>
 </div>
 <div class="paragraph">
 <p>There are several specific goals:</p>
@@ -637,28 +638,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_add_geopose_to_applications">Add GeoPose to applications</h3>
 <div class="paragraph">
-<p>This is an obvious motivation for adding GeoPose software. Using a standard library makes it less difficult to start quickly and have a level of confidence that the operations are performed correctly.</p>
+<p>An example library makes it less difficult to start quickly and have a level of confidence that the operations are performed correctly. The answers to many practical questions can be found in the code.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_external_coordinate_transformation_libraries">External coordinate transformation libraries</h3>
+<h3 id="_linkage_to_wkt_parsers_and_coordinate_transformation_libraries">Linkage to WKT parsers and coordinate transformation libraries</h3>
 <div class="paragraph">
-<p>GeoPose is based on an abstraction of transformations linking pairs of spaces or their associated reference frames. Many of the definitions of reference frames are complex and described in terms specific to a particular discipline, such as geodesy, surveying, or astrophysics. Experts in these disciplines have built specialized databases and transformation software and it is highly desirable to be able to use their work.</p>
+<p>GeoPose is based on an abstraction of transformations linking pairs of spaces or their associated reference frames. Many of the definitions of reference frames are complex and described in terms specific to a particular discipline, such as geodesy, surveying, or astrophysics. Experts in these disciplines have built specialized databases and transformation software. It is highly desirable to be able to use their work.</p>
 </div>
 <div class="paragraph">
-<p>One very useful example is the PROJ coordinate transformation library eith used by itself or as part of the Geospatial Data Abstraction Library (GDAL) library. This tutorial uses an interface to PROJ to implement a range of more general transformations.</p>
+<p>One very useful example is the PROJ coordinate transformation library either used by itself or as part of the Geospatial Data Abstraction Library (GDAL) library. This tutorial uses an interface to PROJ to implement a range of more general transformations.</p>
+</div>
+<div class="paragraph">
+<p>Many frame specifications follow ISO 19111 and can be expressed as "well-known-text" structures that define datum, coordinate system, and transformation methods. Linkage to mature libraries such as GDAL and PROJ can also eliminate the need to parse and interpret these specialized structures within a GeoPose implementation.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_experiment_with_possible_new_features">Experiment with possible new features</h3>
 <div class="paragraph">
-<p>Having a working implementation of the standardized elements of GeoPose 1.0 makes it easy to experiment wih new features that might be proposed for a new version of the standard. I give two examples of how this can be done. First, I have  provided three new properties for the Basic and Advanced GeoPoses that have proved to be useful in my GeoPose applications. These additional properties serialize as additional JSON properties, which are explicitly allowed by the standard. Second, I have included the "Local" (Geo)Pose. Local is the closest to the usual concept of a pose in computer graphics. It is designed to allow chains and trees in the space of the rortated local tangent plane, east-north-up Cartesian coordinate system associated with the inner frame of Basic GeoPoses. The Local GeoPose can be expressed as an Advanced GeoPose but creating a simplified version with the frame transormation hardwired makes for clearer programming. I have not done so in this tutorial but it would be possible to configure the JSON serialization to output the Advanced equivalent, rather than a non-standard form.</p>
+<p>Having a working implementation of the standardized elements of GeoPose 1.0 makes it easy to experiment wih new features that might be proposed for a new version of the standard. I give two examples of how this can be done. First, I have  provided three new properties for the Basic and Advanced GeoPoses that have proved to be useful in my GeoPose applications. These additional properties serialize as additional JSON properties, which are explicitly allowed by the standard. Second, I have included the "Local" (Geo)Pose. Local is the closest to the usual concept of a pose in computer graphics. It is designed to allow chains and trees in the space of the rotated local tangent plane, east-north-up Cartesian coordinate system associated with the inner frame of Basic GeoPoses. The Local GeoPose can be expressed as an Advanced GeoPose but creating a simplified version with the frame transformation hardwired makes for clearer programming. I have not done so in this tutorial but it would be possible to configure the JSON serialization to output the Advanced equivalent, rather than a non-standard form.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_template_applies_to_a_wide_range_of_object_oriented_languages">Template Applies to a Wide range of object-oriented languages</h3>
+<h3 id="_template_applies_to_a_wide_range_of_object_oriented_languages">Template applies to a wide range of object-oriented languages</h3>
 <div class="paragraph">
-<p>The design only relies on a few basic O-O concepts and capabilities. These are supported by a wide range of old and new languages. In this post, I will only describe implementation in <strong>TypeScript 4.9.5</strong> and <strong>C# 11 - .NET 6</strong>. In future posts, I will continue with C++, Java, Swift, Kotlin, and Python.</p>
+<p>The design only relies on a few basic O-O concepts and capabilities. These are supported by a wide range of old and new languages. In this and a companion C# post, I will cover <strong>TypeScript 4.9.5</strong> and <strong>C# 11 - .NET 6</strong>. In future posts, I will continue with some or all of C++, Java, Swift, Kotlin, and Python.</p>
 </div>
 </div>
 </div>
@@ -667,15 +671,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_architecture">Architecture</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are many possible implementations. My primary consideration is a simple and completely hierarchical design - patterned to meet the capibilities of common object-oriented languages. I also wanted to make it possible to consider individual parts in isolation and then to assemble them into a GeoPose tree.</p>
+<p>There are many possible implementations. My primary consideration is a simple and completely hierarchical design - patterned to meet the capabilities of common object-oriented languages. I also wanted to make it possible to consider individual parts in isolation and then to assemble them into a GeoPose inheritance tree.</p>
 </div>
 <div class="paragraph">
-<p>I describe the parts in reverse order of dependency. By the time you get to the GeoPose, there are enough elements to start assembling them into the final structures.</p>
+<p>I describe the parts in reverse order of dependency. By the time you get to the Abstract GeoPose, there will be enough elements to start assembling them into the final structures.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_implementation_in_eight_steps">Implementation in Eight Steps</h2>
+<h2 id="_eight_steps">Eight Steps</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The development steps outlined here proceed from independent components to three categories of GeoPoses: Basic, Advanced, and Local. Note that Local GeoPoses are within the scope of the GeoPose 1.0 logical model but must be serialized as Advanced GeoPoses to be compliant data objects.</p>
@@ -711,7 +715,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_implementing_geopose_in_typescript">Implementing GeoPose in TypeScript</h2>
+<h2 id="_typescript_implementation">TypeScript implementation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following is the sequence of steps for a TypeScript implementation:</p>
@@ -729,18 +733,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect3">
 <h4 id="_poseid">PoseID</h4>
-<div class="literalblock">
-<div class="content">
-<pre>PoseID has a single property - an id string.</pre>
-</div>
+<div class="paragraph">
+<p>PoseID has a single property - an id string.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_unixtime">UnixTime</h4>
-<div class="literalblock">
-<div class="content">
-<pre>UnixTime has a single property - a string representation of the number of Unix time seconds multiplied by 1 000 for millisecond resolution.</pre>
-</div>
+<div class="paragraph">
+<p>UnixTime has a single property - a string representation of the number of Unix time seconds multiplied by 1 000 for millisecond resolution.</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -752,7 +752,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_coordinate_conversion">Coordinate conversion</h4>
 <div class="paragraph">
-<p>The methodes of the LTP_ENU class are needed to support the Basic and Advanced classes' frame transformations. The GeoPose implementations must implement the actual transformations implied or designated by the class or outer and inner frame definitions. This in contrast to the GeoPose data objects, which carry no explicit information about how the transformations should be carried out.</p>
+<p>The methods of the LTP_ENU class are needed to support the Basic and Advanced classes' frame transformations. The GeoPose implementations must implement the actual transformations implied or designated by the class or outer and inner frame definitions. This in contrast to the GeoPose data objects, which carry no explicit information about how the transformations should be carried out.</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -761,186 +761,209 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Figure 2. Calculation Support Classes</div>
 </div>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The calculation support classes are not needed to create or consume GeoPose data objects but they <strong>are</strong> needed to actually use the GeoPoses in an application.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_typescript_implemention">TypeScript implemention:</h4>
+<h4 id="_typescript_implementation_2">TypeScript implementation:</h4>
 <div class="sect4">
 <h5 id="_datatypes">Datatypes</h5>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>// Implemention order: 1 - start here.
+<pre>// Implementation step: 1 - start here.
 // These classes are non-structural elements.
 // These are part of optional elements that are allowed but not standardized.
 
 export class PoseID {
-    public constructor(id: string) {
-        this.id = id;
-    }
-    public id: string = "";
+  public constructor(id: string) {
+    this.id = id;
+  }
+  public id: string = "";
 }
 
 export class UnixTime {
-    // Constructor from long integer count of UNIX Time seconds x 1000
-    public constructor(longTime: number) {
-        this.timeValue = longTime.toString();
-    }
-    public timeValue: string = "";
+  // Constructor from long integer count of UNIX Time seconds x 1000
+  public constructor(longTime: number) {
+    this.timeValue = longTime.toString();
+  }
+  public timeValue: string = "";
 }</pre>
 </div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_ltp_enu_coordinate_conversion">LTP_ENU coordinate conversion</h5>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>import * as Position from './Position';
+<pre>import * as Position from "./Position";
 
 export class LTP_ENU {
-    // WGS-84 geodetic constants
-    readonly a: number = 6378137.0;         // WGS-84 Earth semimajor axis (m)
-    readonly b: number = 6356752.314245;     // Derived Earth semiminor axis (m)
-    readonly f: number = (this.a - this.b) / this.a;           // Ellipsoid Flatness
-    readonly f_inv: number = 1.0 / this.f;       // Inverse flattening
-    readonly a_sq: number = this.a * this.a;
-    readonly b_sq: number = this.b * this.b;
-    readonly e_sq: number = this.f * (2.0 - this.f);    // Square of Eccentricity
-    readonly toRadians: number = Math.PI / 180.0;
-    readonly toDegrees: number = 180.0 / Math.PI;
+  // WGS-84 geodetic constants
+  readonly a: number = 6378137.0; // WGS-84 Earth semimajor axis (m)
+  readonly b: number = 6356752.314245; // Derived Earth semiminor axis (m)
+  readonly f: number = (this.a - this.b) / this.a; // Ellipsoid Flatness
+  readonly f_inv: number = 1.0 / this.f; // Inverse flattening
+  readonly a_sq: number = this.a * this.a;
+  readonly b_sq: number = this.b * this.b;
+  readonly e_sq: number = this.f * (2.0 - this.f); // Square of Eccentricity
+  readonly toRadians: number = Math.PI / 180.0;
+  readonly toDegrees: number = 180.0 / Math.PI;
 
-    // Convert WGS-84 Geodetic point (lat, lon, h) to the
-    // Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z).
-    public GeodeticToEcef(from: Position.GeodeticPosition, to: Position.CartesianPosition): void {
-        // Convert to radians in notation consistent with the paper:
-        var lambda = from.lat * this.toRadians;
-        var phi = from.lon * this.toDegrees;
-        var s = Math.sin(lambda);
-        var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
+  // Convert WGS-84 Geodetic point (lat, lon, h) to the
+  // Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z).
+  public GeodeticToEcef(
+    from: Position.GeodeticPosition,
+    to: Position.CartesianPosition
+  ): void {
+    // Convert to radians in notation consistent with the paper:
+    var lambda = from.lat * this.toRadians;
+    var phi = from.lon * this.toDegrees;
+    var s = Math.sin(lambda);
+    var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
 
-        var sin_lambda = Math.sin(lambda);
-        var cos_lambda = Math.cos(lambda);
-        var cos_phi = Math.cos(phi);
-        var sin_phi = Math.sin(phi);
+    var sin_lambda = Math.sin(lambda);
+    var cos_lambda = Math.cos(lambda);
+    var cos_phi = Math.cos(phi);
+    var sin_phi = Math.sin(phi);
 
-        to.x = (from.h + N) * cos_lambda * cos_phi;
-        to.y = (from.h + N) * cos_lambda * sin_phi;
-        to.z = (from.h + (1 - this.e_sq) * N) * sin_lambda;
-    }
+    to.x = (from.h + N) * cos_lambda * cos_phi;
+    to.y = (from.h + N) * cos_lambda * sin_phi;
+    to.z = (from.h + (1 - this.e_sq) * N) * sin_lambda;
+  }
 
-    // Convert the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z) to
-    // (WGS-84) Geodetic point (lat, lon, h).
-    public EcefToGeodetic(from: Position.CartesianPosition, to: Position.GeodeticPosition): void {
-        var eps = this.e_sq / (1.0 - this.e_sq);
-        var p = Math.sqrt(from.x * from.x + from.y * from.y);
-        var q = Math.atan2((from.z * this.a), (p * this.b));
-        var sin_q = Math.sin(q);
-        var cos_q = Math.cos(q);
-        var sin_q_3 = sin_q * sin_q * sin_q;
-        var cos_q_3 = cos_q * cos_q * cos_q;
-        var phi = Math.atan2((from.z + eps * this.b * sin_q_3), (p - this.e_sq * this.a * cos_q_3));
-        var lambda = Math.atan2(from.y, from.x);
-        var v = this.a / Math.sqrt(1.0 - this.e_sq * Math.sin(phi) * Math.sin(phi));
-        to.h = (p / Math.cos(phi)) - v;
+  // Convert the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z) to
+  // (WGS-84) Geodetic point (lat, lon, h).
+  public EcefToGeodetic(
+    from: Position.CartesianPosition,
+    to: Position.GeodeticPosition
+  ): void {
+    var eps = this.e_sq / (1.0 - this.e_sq);
+    var p = Math.sqrt(from.x * from.x + from.y * from.y);
+    var q = Math.atan2(from.z * this.a, p * this.b);
+    var sin_q = Math.sin(q);
+    var cos_q = Math.cos(q);
+    var sin_q_3 = sin_q * sin_q * sin_q;
+    var cos_q_3 = cos_q * cos_q * cos_q;
+    var phi = Math.atan2(
+      from.z + eps * this.b * sin_q_3,
+      p - this.e_sq * this.a * cos_q_3
+    );
+    var lambda = Math.atan2(from.y, from.x);
+    var v = this.a / Math.sqrt(1.0 - this.e_sq * Math.sin(phi) * Math.sin(phi));
+    to.h = p / Math.cos(phi) - v;
 
-        to.lat = phi * this.toDegrees;
-        to.lon = lambda * this.toDegrees;
-    }
+    to.lat = phi * this.toDegrees;
+    to.lon = lambda * this.toDegrees;
+  }
 
-    // Converts the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z) to
-    // East-North-Up coordinates in a Local Tangent Plane that is centered at the
-    // (WGS-84) Geodetic point (lat0, lon0, h0).
-    public EcefToEnu(from: Position.CartesianPosition, origin: Position.GeodeticPosition, to: Position.CartesianPosition):
-        //double x, double y, double z,
-        //double lat0, double lon0, double h0,
-        //out double xEast, out double yNorth, out double zUp):
-        void {
-        // Convert to radians in notation consistent with the paper:
-        var lambda = origin.lat * this.toRadians;
-        var phi = origin.lon * this.toDegrees;
-        var s = Math.sin(lambda);
-        var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
+  // Converts the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z) to
+  // East-North-Up coordinates in a Local Tangent Plane that is centered at the
+  // (WGS-84) Geodetic point (lat0, lon0, h0).
+  public EcefToEnu(
+    from: Position.CartesianPosition,
+    origin: Position.GeodeticPosition,
+    to: Position.CartesianPosition
+  ): //double x, double y, double z,
+  //double lat0, double lon0, double h0,
+  //out double xEast, out double yNorth, out double zUp):
+  void {
+    // Convert to radians in notation consistent with the paper:
+    var lambda = origin.lat * this.toRadians;
+    var phi = origin.lon * this.toDegrees;
+    var s = Math.sin(lambda);
+    var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
 
-        var sin_lambda = Math.sin(lambda);
-        var cos_lambda = Math.cos(lambda);
-        var cos_phi = Math.cos(phi);
-        var sin_phi = Math.sin(phi);
+    var sin_lambda = Math.sin(lambda);
+    var cos_lambda = Math.cos(lambda);
+    var cos_phi = Math.cos(phi);
+    var sin_phi = Math.sin(phi);
 
-        var x0: number = (origin.h + N) * cos_lambda * cos_phi;
-        var y0: number = (origin.h + N) * cos_lambda * sin_phi;
-        var z0: number = (origin.h + (1 - this.e_sq) * N) * sin_lambda;
+    var x0: number = (origin.h + N) * cos_lambda * cos_phi;
+    var y0: number = (origin.h + N) * cos_lambda * sin_phi;
+    var z0: number = (origin.h + (1 - this.e_sq) * N) * sin_lambda;
 
-        var xd: number = from.x - x0;
-        var yd: number = from.y - y0;
-        var zd: number = from.z - z0;
+    var xd: number = from.x - x0;
+    var yd: number = from.y - y0;
+    var zd: number = from.z - z0;
 
-        // This is the matrix multiplication
-        to.x = -sin_phi * xd + cos_phi * yd;
-        to.y = -cos_phi * sin_lambda * xd - sin_lambda * sin_phi * yd + cos_lambda * zd;
-        to.z = cos_lambda * cos_phi * xd + cos_lambda * sin_phi * yd + sin_lambda * zd;
-    }
+    // This is the matrix multiplication
+    to.x = -sin_phi * xd + cos_phi * yd;
+    to.y =
+      -cos_phi * sin_lambda * xd - sin_lambda * sin_phi * yd + cos_lambda * zd;
+    to.z =
+      cos_lambda * cos_phi * xd + cos_lambda * sin_phi * yd + sin_lambda * zd;
+  }
 
-    // Inverse of EcefToEnu. Converts East-North-Up coordinates (xEast, yNorth, zUp) in a
-    // Local Tangent Plane that is centered at the (WGS-84) Geodetic point (lat0, lon0, h0)
-    // to the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z).
-    public EnuToEcef(from: Position.CartesianPosition, origin: Position.GeodeticPosition, to: Position.CartesianPosition): void {
-        // Convert to radians in notation consistent with the paper:
-        var lambda = origin.lat * this.toRadians;
-        var phi = origin.lon * this.toRadians;
-        var s = Math.sin(lambda);
-        var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
+  // Inverse of EcefToEnu. Converts East-North-Up coordinates (xEast, yNorth, zUp) in a
+  // Local Tangent Plane that is centered at the (WGS-84) Geodetic point (lat0, lon0, h0)
+  // to the Earth-Centered Earth-Fixed (ECEF) coordinates (x, y, z).
+  public EnuToEcef(
+    from: Position.CartesianPosition,
+    origin: Position.GeodeticPosition,
+    to: Position.CartesianPosition
+  ): void {
+    // Convert to radians in notation consistent with the paper:
+    var lambda = origin.lat * this.toRadians;
+    var phi = origin.lon * this.toRadians;
+    var s = Math.sin(lambda);
+    var N = this.a / Math.sqrt(1.0 - this.e_sq * s * s);
 
-        var sin_lambda = Math.sin(lambda);
-        var cos_lambda = Math.cos(lambda);
-        var cos_phi = Math.cos(phi);
-        var sin_phi = Math.sin(phi);
+    var sin_lambda = Math.sin(lambda);
+    var cos_lambda = Math.cos(lambda);
+    var cos_phi = Math.cos(phi);
+    var sin_phi = Math.sin(phi);
 
-        var x0: number = (origin.h + N) * cos_lambda * cos_phi;
-        var y0: number = (origin.h + N) * cos_lambda * sin_phi;
-        var z0: number = (origin.h + (1.0 - this.e_sq) * N) * sin_lambda;
+    var x0: number = (origin.h + N) * cos_lambda * cos_phi;
+    var y0: number = (origin.h + N) * cos_lambda * sin_phi;
+    var z0: number = (origin.h + (1.0 - this.e_sq) * N) * sin_lambda;
 
-        var xd: number = -sin_phi * from.x - cos_phi * sin_lambda * from.y + cos_lambda * cos_phi * from.z;
-        var yd: number = cos_phi * from.x - sin_lambda * sin_phi * from.y + cos_lambda * sin_phi * from.z;
-        var zd: number = cos_lambda * from.y + sin_lambda * from.z;
+    var xd: number =
+      -sin_phi * from.x -
+      cos_phi * sin_lambda * from.y +
+      cos_lambda * cos_phi * from.z;
+    var yd: number =
+      cos_phi * from.x -
+      sin_lambda * sin_phi * from.y +
+      cos_lambda * sin_phi * from.z;
+    var zd: number = cos_lambda * from.y + sin_lambda * from.z;
 
-        to.x = xd + x0;
-        to.y = yd + y0;
-        to.z = zd + z0;
-    }
+    to.x = xd + x0;
+    to.y = yd + y0;
+    to.z = zd + z0;
+  }
 
-    // Converts the geodetic WGS-84 coordinated (lat, lon, h) to
-    // East-North-Up coordinates in a Local Tangent Plane that is centered at the
-    // (WGS-84) Geodetic point (lat0, lon0, h0).
-    public GeodeticToEnu(from: Position.GeodeticPosition, origin: Position.GeodeticPosition, to: Position.CartesianPosition): void
-    //double lat0, double lon0, double h0,
-    //out double xEast, out double yNorth, out double zUp)
-    {
-        let ecef = new Position.CartesianPosition(0, 0, 0);
-        this.GeodeticToEcef(from, ecef);
-        this.EcefToEnu(ecef, origin, to);
-    }
-    public EnuToGeodetic(from: Position.CartesianPosition, origin: Position.GeodeticPosition, to: Position.GeodeticPosition): void
-    //double xEast, double yNorth, double zUp,
-    //double lat0, double lon0, double h0,
-    //out double lat, out double lon, out double h
-    {
-        let ecef = new Position.CartesianPosition(0, 0, 0);
-        this.EnuToEcef(from, origin, ecef);
-        this.EcefToGeodetic(ecef, to);
-    }
+  // Convert the geodetic WGS-84 coordinated (lat, lon, h) to
+  // East-North-Up coordinates in a Local Tangent Plane that is centered at the
+  // (WGS-84) Geodetic point (lat0, lon0, h0).
+  public GeodeticToEnu(
+    from: Position.GeodeticPosition,
+    origin: Position.GeodeticPosition,
+    to: Position.CartesianPosition
+  ): void //double lat0, double lon0, double h0,
+  //out double xEast, out double yNorth, out double zUp)
+  {
+    let ecef = new Position.CartesianPosition(0, 0, 0);
+    this.GeodeticToEcef(from, ecef);
+    this.EcefToEnu(ecef, origin, to);
+  }
+  public EnuToGeodetic(
+    from: Position.CartesianPosition,
+    origin: Position.GeodeticPosition,
+    to: Position.GeodeticPosition
+  ): void //double xEast, double yNorth, double zUp,
+  //double lat0, double lon0, double h0,
+  //out double lat, out double lon, out double h
+  {
+    let ecef = new Position.CartesianPosition(0, 0, 0);
+    this.EnuToEcef(from, origin, ecef);
+    this.EcefToGeodetic(ecef, to);
+  }
 }</pre>
 </div>
 </div>
@@ -959,13 +982,16 @@ export class LTP_ENU {
 <div class="title">Figure 3. Positions</div>
 </div>
 <div class="paragraph">
-<p>GeoPose 1.0 supports both a geodetic form and a Cartesian form. These forms are used in both frame transformations and orientation (rotation) transformations, both as quantities to be transformed and, in some cases, as a parameter of a family of transformations. Since some transformations are not possible, due to a mathematical singularity, unavailability of a transformation, or a runtime error in the tranformation calculation, the NoPosition position is used as a "null" value. Each of the coordinates of the NoPosition are the IEEE 754 value NaN.</p>
+<p>GeoPose 1.0 supports both a geodetic form and a Cartesian form. These forms are used in both frame transformations and orientation (rotation) transformations, both as quantities to be transformed and, in some cases, as a parameter of a family of transformations. Since some transformations are not possible, due to a mathematical singularity, unavailability of a transformation, or a runtime error in the transformation calculation, the NoPosition position is used as a "null" value. Each of the coordinates of the NoPosition are the IEEE 754 value NaN.</p>
 </div>
 <div class="sect3">
-<h4 id="_typescript_implemention_2">TypeScript implemention:</h4>
+<h4 id="_typescript_implementation_3">TypeScript implementation:</h4>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>// Implemention order: 2 - follows Extras.
+<pre>// Implementation step: 2 - follows Extras.
 // These classes define positions in a 3D frame using different conventions.
 
 /// &lt;summary&gt;
@@ -975,86 +1001,85 @@ export class LTP_ENU {
 /// the abstract root class definition is simply an empty shell.
 /// &lt;/note&gt;
 /// &lt;/summary&gt;
-export abstract class Position {
-}
+export abstract class Position {}
 
 /// &lt;summary&gt;
 /// GeodeticPosition is a specialization of Position for using two angles and a height for geodetic reference systems.
 /// &lt;/summary&gt;
 export class GeodeticPosition extends Position {
-    public constructor(lat: number, lon: number, h: number) {
-        super();
-        this.lat = lat;
-        this.lon = lon;
-        this.h = h;
-    }
+  public constructor(lat: number, lon: number, h: number) {
+    super();
+    this.lat = lat;
+    this.lon = lon;
+    this.h = h;
+  }
 
-    /// &lt;summary&gt;
-    /// A latitude in degrees, positive north of equator and negative south of equator.
-    /// The latitude is the angle between the plane of the equator and a plane tangent to the ellipsoid at the given point.
-    /// &lt;/summary&gt;
-    public lat: number;
-    /// &lt;summary&gt;
-    /// A longitude in degrees, positive east of the prime meridian and negative west of prime meridian.
-    /// &lt;/summary&gt;
-    public lon: number;
-    /// &lt;summary&gt;
-    /// A distance in meters, measured with respect to an implied (Basic) or specified (Advanced) reference surface,
-    /// postive opposite the direction of the force of gravity,
-    /// and negative in the direction of the force of gravity.
-    /// &lt;/summary&gt;
-    public h: number
+  /// &lt;summary&gt;
+  /// A latitude in degrees, positive north of equator and negative south of equator.
+  /// The latitude is the angle between the plane of the equator and a plane tangent to the ellipsoid at the given point.
+  /// &lt;/summary&gt;
+  public lat: number;
+  /// &lt;summary&gt;
+  /// A longitude in degrees, positive east of the prime meridian and negative west of prime meridian.
+  /// &lt;/summary&gt;
+  public lon: number;
+  /// &lt;summary&gt;
+  /// A distance in meters, measured with respect to an implied (Basic) or specified (Advanced) reference surface,
+  /// positive opposite the direction of the force of gravity,
+  /// and negative in the direction of the force of gravity.
+  /// &lt;/summary&gt;
+  public h: number;
 }
 /// &lt;summary&gt;
 /// CartesianPosition is a specialization of Position for geocentric, topocentric, and engineering reference systems.
 /// &lt;/summary&gt;
 export class CartesianPosition extends Position {
-    public constructor(x: number, y: number, z: number) {
-        super();
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
+  public constructor(x: number, y: number, z: number) {
+    super();
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
 
-    /// &lt;summary&gt;
-    /// A coordinate value in meters, along an axis (x-axis) that typically has origin at
-    /// the center of mass, lies in the same plane as the y axis, and perpendicular to the y axis,
-    /// forming a right-hand coordinate system with the z-axis in the up direction.
-    /// &lt;/summary&gt;
-    public x: number;
-    /// &lt;summary&gt;
-    /// A coordinate value in meters, along an axis (y-axis) that typically has origin at
-    /// the center of mass, lies in the same plane as the x axis, and perpendicular to the x axis,
-    /// forming a right-hand coordinate system with the z-axis in the up direction.
-    /// &lt;/summary&gt;
-    public y: number;
-    /// &lt;summary&gt;
-    /// A coordinate value in meters, along the z-axis.
-    /// &lt;/summary&gt;
-    public z: number;
+  /// &lt;summary&gt;
+  /// A coordinate value in meters, along an axis (x-axis) that typically has origin at
+  /// the center of mass, lies in the same plane as the y axis, and perpendicular to the y axis,
+  /// forming a right-hand coordinate system with the z-axis in the up direction.
+  /// &lt;/summary&gt;
+  public x: number;
+  /// &lt;summary&gt;
+  /// A coordinate value in meters, along an axis (y-axis) that typically has origin at
+  /// the center of mass, lies in the same plane as the x axis, and perpendicular to the x axis,
+  /// forming a right-hand coordinate system with the z-axis in the up direction.
+  /// &lt;/summary&gt;
+  public y: number;
+  /// &lt;summary&gt;
+  /// A coordinate value in meters, along the z-axis.
+  /// &lt;/summary&gt;
+  public z: number;
 }
 
 export class NoPosition extends Position {
-    public constructor() {
-        super();
-        this.x = this.y = this.z = NaN;
-    }
-    /// &lt;summary&gt;
-    /// A coordinate value in meters, along an axis (x-axis) that typically has origin at
-    /// the center of mass, lies in the same plane as the y axis, and perpendicular to the y axis,
-    /// forming a right-hand coordinate system with the z-axis in the up direction.
-    /// &lt;/summary&gt;
-    public x: number;
-    /// &lt;summary&gt;
-    /// A coordinate value in meters, along an axis (y-axis) that typically has origin at
-    /// the center of mass, lies in the same plane as the x axis, and perpendicular to the x axis,
-    /// forming a right-hand coordinate system with the z-axis in the up direction.
-    /// &lt;/summary&gt;
-    public y: number;
-    /// &lt;summary&gt;
-    /// A coordinate value in meters, along the z-axis.
-    /// &lt;/summary&gt;
-    public z: number;
+  public constructor() {
+    super();
+    this.x = this.y = this.z = NaN;
+  }
+  /// &lt;summary&gt;
+  /// A coordinate value in meters, along an axis (x-axis) that typically has origin at
+  /// the center of mass, lies in the same plane as the y axis, and perpendicular to the y axis,
+  /// forming a right-hand coordinate system with the z-axis in the up direction.
+  /// &lt;/summary&gt;
+  public x: number;
+  /// &lt;summary&gt;
+  /// A coordinate value in meters, along an axis (y-axis) that typically has origin at
+  /// the center of mass, lies in the same plane as the x axis, and perpendicular to the x axis,
+  /// forming a right-hand coordinate system with the z-axis in the up direction.
+  /// &lt;/summary&gt;
+  public y: number;
+  /// &lt;summary&gt;
+  /// A coordinate value in meters, along the z-axis.
+  /// &lt;/summary&gt;
+  public z: number;
 }</pre>
 </div>
 </div>
@@ -1101,13 +1126,16 @@ Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.</p>
 </div>
 <div class="sect3">
-<h4 id="_typescript_implemention_3">TypeScript implemention:</h4>
+<h4 id="_typescript_implementation_4">TypeScript implementation:</h4>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>import * as proj4 from 'proj4';
-import * as Position from './Position';
+<pre>import * as proj4 from "proj4";
+import * as Position from "./Position";
 
-// Implemention order: 3 - follows Position.
+// Implementation step: 3 - follows Position.
 // These classes define transformations of a Position in one 3D frame to a Position in another 3D frame.
 
 /// &lt;summary&gt;
@@ -1122,7 +1150,7 @@ import * as Position from './Position';
 /// &lt;/remark&gt;
 /// &lt;/summary&gt;
 export abstract class FrameTransform {
-    public abstract Transform(point: Position.Position): Position.Position;
+  public abstract Transform(point: Position.Position): Position.Position;
 }
 
 /// &lt;summary&gt;
@@ -1131,76 +1159,71 @@ export abstract class FrameTransform {
 /// A FrameSpecification can be abstracted as a Position:
 /// The origin of the coordinate system associated with the frame is a Position and serves in that role
 /// in the Advanced GeoPose.
-/// The origin, is in fact the *only* distinguished Position associated with the coodinate system.
+/// The origin, is in fact the *only* distinguished Position associated with the coordinate system.
 /// &lt;/remark&gt;
 /// &lt;/summary&gt;
 export class Extrinsic extends FrameTransform {
-    public constructor(authority: string, id: string, parameters: string) {
-        super();
-        this.authority = authority;
-        this.id = id;
-        this.parameters = parameters;
+  public constructor(authority: string, id: string, parameters: string) {
+    super();
+    this.authority = authority;
+    this.id = id;
+    this.parameters = parameters;
+  }
+  /// &lt;summary&gt;
+  /// The core function of a transformation is to implement a specific frame transformation
+  /// i.e. the transformation of a triple of point coordinates in the outer frame to a triple of point coordinates in the inner frame.
+  /// When this is not possible due to lack of an appropriate transformation procedure,
+  /// the triple (NaN, NaN, NaN) [three IEEE 574 not-a-number vales] is returned.
+  /// Note that an "authority" is not necessarily a standards organization but rather an entity that provides
+  /// a register of some kind for a category of frame- and/or frame transform specifications that is useful and stable enough
+  /// for someone to implement transformation functions.
+  /// An implementation need not implement all possible transforms.
+  /// &lt;/summary&gt;
+  /// &lt;note&gt;
+  /// This would be a good element to implement as a set of plugin.
+  /// &lt;/note&gt;
+  /// &lt;param name="point"&gt;&lt;/param&gt;
+  /// &lt;returns&gt;&lt;/returns&gt;
+  public override Transform(point: Position.Position): Position.Position {
+    let uri = this.authority.toLowerCase().replace("//www.", "");
+    if (uri == "https://proj.org" || uri == "https://osgeo.org") {
+      var outer = proj4.Proj("EPSG:4326"); //source coordinates will be in Longitude/Latitude, WGS84
+      var inner = proj4.Proj("EPSG:3785"); //destination coordinates in meters, global spherical mercator
+      var cp = point as Position.CartesianPosition;
+      let p = proj4.Point(cp.x, cp.y, cp.z);
+      proj4.transform(outer, inner, p);
+      // convert points from one coordinate system to another
+      let outP = new Position.CartesianPosition(p.x, p.y, p.z);
+      return outP;
+    } else if (uri == "https://epsg.org") {
+      return Position.NoPosition;
+    } else if (uri == "https://iers.org") {
+      return Position.NoPosition;
+    } else if (uri == "https://naif.jpl.nasa.gov") {
+      return Position.NoPosition;
+    } else if (uri == "https://sedris.org") {
+      return Position.NoPosition;
+    } else if (uri == "https://iau.org") {
+      return Position.NoPosition;
     }
-    /// &lt;summary&gt;
-    /// The core function of a transformation is to implement a specific frame transformation
-    /// i.e. the transformation of a triple of point coordinates in the outer frame to a triple of point coordinates in the inner frame.
-    /// When this is not possible due to lack of an appropriate tranformation procedure,
-    /// the triple (NaN, NaN, NaN) [three IEEE 574 not-a-number vales] is returned.
-    /// Note that an "authority" is not necessarily a standards organization but rather an entity that provides
-    /// a register of some kind for a category of frame- and/or frame transform specifications that is useful and stable enough
-    /// for someone to implement transformation functions.
-    /// An implementation need not implement all possbile transforms.
-    /// &lt;/summary&gt;
-    /// &lt;note&gt;
-    /// This would be a good element to implement as a set of plugin.
-    /// &lt;/note&gt;
-    /// &lt;param name="point"&gt;&lt;/param&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
-    public override Transform(point: Position.Position): Position.Position {
-        let uri = this.authority.toLowerCase().replace("//www.", "");
-        if (uri == "https://proj.org" || uri == "https://osgeo.org") {
-            var outer = proj4.Proj('EPSG:4326');    //source coordinates will be in Longitude/Latitude, WGS84
-            var inner = proj4.Proj('EPSG:3785');     //destination coordinates in meters, global spherical mercato
-            var cp = point as Position.CartesianPosition;
-            let p = proj4.Point(cp.x, cp.y, cp.z);
-            proj4.transform(outer, inner, p);
-            // convert points from one coordinate system to another
-            let outP = new Position.CartesianPosition(p.x, p.y, p.z);
-            return outP;
-        }
-        else if (uri == "https://epsg.org") {
-            return Position.NoPosition;
-        }
-        else if (uri == "https://iers.org") {
-            return Position.NoPosition;
-        }
-        else if (uri == "https://naif.jpl.nasa.gov") {
-            return Position.NoPosition;
-        }
-        else if (uri == "https://sedris.org") {
-            return Position.NoPosition;
-        }
-        else if (uri == "https://iau.org") {
-            return Position.NoPosition;
-        }
-        return Position.NoPosition;
-    }
-    /// &lt;summary&gt;
-    /// The name or identification of the definer of the category of frame specification.
-    /// A Uri that usually but not always points to a valid web address.
-    /// &lt;/summary&gt;
-    public authority: string;
-    /// &lt;summary&gt;
-    /// A string that uniquely identifies a frame type.
-    /// The interpretation of the string is determined by the authority.
-    /// &lt;/summary&gt;
-    public id: string;
-    /// &lt;summary&gt;
-    /// A string that holds any parameters required by the authority to define a frame of the given type as specified by the id.
-    /// The interpretation of the string is determined by the authority.
-    /// &lt;/summary&gt;
-    public parameters: string;
-    public static noTransform: Position.Position = new Position.NoPosition();
+    return Position.NoPosition;
+  }
+  /// &lt;summary&gt;
+  /// The name or identification of the definer of the category of frame specification.
+  /// A Uri that usually but not always points to a valid web address.
+  /// &lt;/summary&gt;
+  public authority: string;
+  /// &lt;summary&gt;
+  /// A string that uniquely identifies a frame type.
+  /// The interpretation of the string is determined by the authority.
+  /// &lt;/summary&gt;
+  public id: string;
+  /// &lt;summary&gt;
+  /// A string that holds any parameters required by the authority to define a frame of the given type as specified by the id.
+  /// The interpretation of the string is determined by the authority.
+  /// &lt;/summary&gt;
+  public parameters: string;
+  public static noTransform: Position.Position = new Position.NoPosition();
 }
 /// &lt;summary&gt;
 /// A specialized specification of the WGS84 (EPSG 4326) geodetic frame to a local tangent plane East, North, Up frame.
@@ -1210,46 +1233,54 @@ export class Extrinsic extends FrameTransform {
 /// &lt;/remark&gt;
 /// &lt;/summary&gt;
 export class WGS84ToLTPENU extends FrameTransform {
-    public constructor(origin: Position.GeodeticPosition) {
-        super();
-        this.Origin = origin;
-    }
-    public override Transform(point: Position.Position): Position.Position {
-        let geoPoint = point as Position.GeodeticPosition;
-        let outPoint: Position.CartesianPosition;
-        GeodeticToEnu(this.Origin, geoPoint, outPoint);
-        return outPoint;
-    }
+  public constructor(origin: Position.GeodeticPosition) {
+    super();
+    this.Origin = origin;
+  }
+  public override Transform(point: Position.Position): Position.Position {
+    let geoPoint = point as Position.GeodeticPosition;
+    let outPoint: Position.CartesianPosition;
+    GeodeticToEnu(this.Origin, geoPoint, outPoint);
+    return outPoint;
+  }
 
-    /// &lt;summary&gt;
-    /// A single geodetic position defines the tangent point for a transform to LTP-ENU.
-    /// &lt;/summary&gt;
-    public Origin: Position.GeodeticPosition;
+  /// &lt;summary&gt;
+  /// A single geodetic position defines the tangent point for a transform to LTP-ENU.
+  /// &lt;/summary&gt;
+  public Origin: Position.GeodeticPosition;
 }
 
-export function GeodeticToEnu(origin: Position.GeodeticPosition, geoPoint: Position.GeodeticPosition, enuPoint: Position.CartesianPosition) {
-    let out = new Position.CartesianPosition(0, 0, 0);
-    return out;
+export function GeodeticToEnu(
+  origin: Position.GeodeticPosition,
+  geoPoint: Position.GeodeticPosition,
+  enuPoint: Position.CartesianPosition
+) {
+  let out = new Position.CartesianPosition(0, 0, 0);
+  return out;
 }
 
 // A simple translation frame transform.
 // The FrameTransform is created with an offset.
 // The Transform adds the offset ot an input Cartesian Position and reurns a Cartesian Position
 export class Translation extends FrameTransform {
-    public constructor(xOffset: number, yOffset: number, zOffset: number) {
-        super();
-        this.xOffset = xOffset;
-        this.yOffset = yOffset;
-        this.zOffset = zOffset;
-    }
-    public override Transform(point: Position.Position): Position.Position {
-        let cp = point as Position.CartesianPosition;
-        let p = new Position.CartesianPosition(cp.x + this.xOffset, cp.y + this.yOffset, cp.z + this.zOffset);
-        return p;
-    }
-    public xOffset: number;
-    public yOffset: number;
-    public zOffset: number;
+  public constructor(xOffset: number, yOffset: number, zOffset: number) {
+    super();
+    this.xOffset = xOffset;
+    this.yOffset = yOffset;
+    this.zOffset = zOffset;
+  }
+  public override Transform(point: Position.Position): Position.Position {
+    let cp = point as Position.CartesianPosition;
+    let p = new Position.CartesianPosition(
+      cp.x + this.xOffset,
+      cp.y + this.yOffset,
+      cp.z + this.zOffset
+    );
+    return p;
+  }
+  public xOffset: number;
+  public yOffset: number;
+  public zOffset: number;
 }</pre>
 </div>
 </div>
@@ -1334,14 +1365,16 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_typescript_implemention_4">TypeScript implemention:</h4>
+<h4 id="_typescript_implementation_5">TypeScript implementation:</h4>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>import * as Position from './Position';
+<pre>import * as Position from "./Position";
 
-// Implemention order: 4 - follows FrameTransform.
+// Implementation step: 4 - follows FrameTransform.
 // These classes define rotations of a 3D frame transforming a Position to a rotated Position.
-
 
 /// &lt;summary&gt;
 /// The abstract root of the Orientation hierarchy.
@@ -1356,7 +1389,7 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 /// &lt;/note&gt;
 /// &lt;/summary&gt;
 export abstract class Orientation {
-    abstract Rotate(point: Position.CartesianPosition): Position.Position;
+  abstract Rotate(point: Position.CartesianPosition): Position.Position;
 }
 
 /// &lt;summary&gt;
@@ -1367,62 +1400,66 @@ export abstract class Orientation {
 /// &lt;/remark&gt;
 /// &lt;/summary&gt;
 export class YPRAngles extends Orientation {
-    public constructor(yaw: number, pitch: number, roll: number) {
-        super();
-        this.yaw = yaw;
-        this.pitch = pitch;
-        this.roll = roll;
+  public constructor(yaw: number, pitch: number, roll: number) {
+    super();
+    this.yaw = yaw;
+    this.pitch = pitch;
+    this.roll = roll;
+  }
+
+  /// &lt;summary&gt;
+  /// The function is to apply a YPR transformation
+  /// &lt;/summary&gt;
+  public override Rotate(point: Position.CartesianPosition): Position.Position {
+    // convert to quaternion and use quaternion rotation
+    let q = YPRAngles.ToQuaternion(this.yaw, this.pitch, this.roll);
+    return Quaternion.Transform(point, q);
+  }
+  public static ToQuaternion(
+    yaw: number,
+    pitch: number,
+    roll: number
+  ): Quaternion {
+    // GeoPose angles are measured in degrees for human readability
+    // Convert degrees to radians.
+    yaw *= Math.PI / 180.0;
+    pitch *= Math.PI / 180.0;
+    roll *= Math.PI / 180.0;
+
+    let cosRoll = Math.cos(roll * 0.5);
+    let sinRoll = Math.sin(roll * 0.5);
+    let cosPitch = Math.cos(pitch * 0.5);
+    let sinPitch = Math.sin(pitch * 0.5);
+    let cosYaw = Math.cos(yaw * 0.5);
+    let sinYaw = Math.sin(yaw * 0.5);
+
+    let w = cosRoll * cosPitch * cosYaw + sinRoll * sinPitch * sinYaw;
+    let x = sinRoll * cosPitch * cosYaw - cosRoll * sinPitch * sinYaw;
+    let y = cosRoll * sinPitch * cosYaw + sinRoll * cosPitch * sinYaw;
+    let z = cosRoll * cosPitch * sinYaw - sinRoll * sinPitch * cosYaw;
+
+    let norm = Math.sqrt(x * x + y * y + z * z + w * w);
+    let q = new Quaternion(x, y, z, w);
+    if (norm &gt; 0.0) {
+      q.x = q.x / norm;
+      q.y = q.y / norm;
+      q.z = q.z / norm;
+      q.w = q.w / norm;
     }
-
-    /// &lt;summary&gt;
-    /// The function is to apply a YPR transformation
-    /// &lt;/summary&gt;
-    public override Rotate(point: Position.CartesianPosition): Position.Position {
-        // convert to quaternion and use quaternion rotation
-        let q = YPRAngles.ToQuaternion(this.yaw, this.pitch, this.roll);
-        return Quaternion.Transform(point, q);
-    }
-    public static ToQuaternion(yaw: number, pitch: number, roll: number): Quaternion {
-        // GeoPose angles are measured in degrees for human readability
-        // Convert degrees to radians.
-        yaw *= (Math.PI / 180.0);
-        pitch *= (Math.PI / 180.0);
-        roll *= (Math.PI / 180.0);
-
-        let cosRoll = Math.cos(roll * 0.5);
-        let sinRoll = Math.sin(roll * 0.5);
-        let cosPitch = Math.cos(pitch * 0.5);
-        let sinPitch = Math.sin(pitch * 0.5);
-        let cosYaw = Math.cos(yaw * 0.5);
-        let sinYaw = Math.sin(yaw * 0.5);
-
-        let w = cosRoll * cosPitch * cosYaw + sinRoll * sinPitch * sinYaw;
-        let x = sinRoll * cosPitch * cosYaw - cosRoll * sinPitch * sinYaw;
-        let y = cosRoll * sinPitch * cosYaw + sinRoll * cosPitch * sinYaw;
-        let z = cosRoll * cosPitch * sinYaw - sinRoll * sinPitch * cosYaw;
-
-        let norm = Math.sqrt(x * x + y * y + z * z + w * w);
-        let q = new Quaternion(x, y, z, w);
-        if (norm &gt; 0.0) {
-            q.x = q.x / norm;
-            q.y = q.y / norm;
-            q.z = q.z / norm;
-            q.w = q.w / norm;
-        }
-        return q;
-    }
-    /// &lt;summary&gt;
-    /// A left-right angle in degrees.
-    /// &lt;/summary&gt;
-    public yaw: number;
-    /// &lt;summary&gt;
-    /// A forward-looking up-down angle in degrees.
-    /// &lt;/summary&gt;
-    public pitch: number;
-    /// &lt;summary&gt;
-    /// A side-to-side angle in degrees.
-    /// &lt;/summary&gt;
-    public roll: number;
+    return q;
+  }
+  /// &lt;summary&gt;
+  /// A left-right angle in degrees.
+  /// &lt;/summary&gt;
+  public yaw: number;
+  /// &lt;summary&gt;
+  /// A forward-looking up-down angle in degrees.
+  /// &lt;/summary&gt;
+  public pitch: number;
+  /// &lt;summary&gt;
+  /// A side-to-side angle in degrees.
+  /// &lt;/summary&gt;
+  public roll: number;
 }
 /// &lt;summary&gt;
 /// Quaternion is a specialization of Orientation using a unit quaternion.
@@ -1432,73 +1469,84 @@ export class YPRAngles extends Orientation {
 /// It is not easily interpreted or visualized by humans.
 /// &lt;/remark&gt;
 export class Quaternion extends Orientation {
-    public constructor(x: number, y: number, z: number, w: number) {
-        super();
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.w = w;
-    }
-    public override Rotate(point: Position.CartesianPosition): Position.Position {
-        return Quaternion.Transform(point, this);
-    }
-    public ToYPRAngles(q: Quaternion): YPRAngles {
+  public constructor(x: number, y: number, z: number, w: number) {
+    super();
+    this.x = x;
+    this.y = y;
+    this.z = z;
+    this.w = w;
+  }
+  public override Rotate(point: Position.CartesianPosition): Position.Position {
+    return Quaternion.Transform(point, this);
+  }
+  public ToYPRAngles(q: Quaternion): YPRAngles {
+    // roll (x-axis rotation)
+    let sinRollCosPitch = 2.0 * (q.w * q.x + q.y * q.z);
+    let cosRollCosPitch = 1.0 - 2.0 * (q.x * q.x + q.y * q.y);
+    let roll = Math.atan2(sinRollCosPitch, cosRollCosPitch) * (180.0 / Math.PI); // in degrees
 
-        // roll (x-axis rotation)
-        let sinRollCosPitch = 2.0 * (q.w * q.x + q.y * q.z);
-        let cosRollCosPitch = 1.0 - 2.0 * (q.x * q.x + q.y * q.y);
-        let roll = Math.atan2(sinRollCosPitch, cosRollCosPitch) * (180.0 / Math.PI); // in degrees
+    // pitch (y-axis rotation)
+    let sinPitch = Math.sqrt(1.0 + 2.0 * (q.w * q.y - q.x * q.z));
+    let cosPitch = Math.sqrt(1.0 - 2.0 * (q.w * q.y - q.x * q.z));
+    let pitch =
+      (2.0 * Math.atan2(sinPitch, cosPitch) - Math.PI / 2.0) *
+      (180.0 / Math.PI); // in degrees
 
-        // pitch (y-axis rotation)
-        let sinPitch = Math.sqrt(1.0 + 2.0 * (q.w * q.y - q.x * q.z));
-        let cosPitch = Math.sqrt(1.0 - 2.0 * (q.w * q.y - q.x * q.z));
-        let pitch = (2.0 * Math.atan2(sinPitch, cosPitch) - Math.PI / 2.0) * (180.0 / Math.PI); // in degrees
+    // yaw (z-axis rotation)
+    let sinYawCosPitch = 2.0 * (q.w * q.z + q.x * q.y);
+    let cosYawCosPitch = 1.0 - 2.0 * (q.y * q.y + q.z * q.z);
+    let yaw = Math.atan2(sinYawCosPitch, cosYawCosPitch) * (180.0 / Math.PI); // in degrees
+    let yprAngles = new YPRAngles(yaw, pitch, roll);
+    return yprAngles;
+  }
+  public static Transform(
+    inPoint: Position.CartesianPosition,
+    rotation: Quaternion
+  ): Position.CartesianPosition {
+    let point = new Position.CartesianPosition(inPoint.x, inPoint.y, inPoint.z);
+    let x2 = rotation.x + rotation.x;
+    let y2 = rotation.y + rotation.y;
+    let z2 = rotation.z + rotation.z;
 
-        // yaw (z-axis rotation)
-        let sinYawCosPitch = 2.0 * (q.w * q.z + q.x * q.y);
-        let cosYawCosPitch = 1.0 - 2.0 * (q.y * q.y + q.z * q.z);
-        let yaw = Math.atan2(sinYawCosPitch, cosYawCosPitch) * (180.0 / Math.PI); // in degrees
-        let yprAngles = new YPRAngles(yaw, pitch, roll);
-        return yprAngles;
-    }
-    public static Transform(inPoint: Position.CartesianPosition, rotation: Quaternion): Position.CartesianPosition {
-        let point = new Position.CartesianPosition(inPoint.x, inPoint.y, inPoint.z);
-        let x2 = rotation.x + rotation.x;
-        let y2 = rotation.y + rotation.y;
-        let z2 = rotation.z + rotation.z;
+    let wx2 = rotation.w * x2;
+    let wy2 = rotation.w * y2;
+    let wz2 = rotation.w * z2;
+    let xx2 = rotation.x * x2;
+    let xy2 = rotation.x * y2;
+    let xz2 = rotation.x * z2;
+    let yy2 = rotation.y * y2;
+    let yz2 = rotation.y * z2;
+    let zz2 = rotation.z * z2;
 
-        let wx2 = rotation.w * x2;
-        let wy2 = rotation.w * y2;
-        let wz2 = rotation.w * z2;
-        let xx2 = rotation.x * x2;
-        let xy2 = rotation.x * y2;
-        let xz2 = rotation.x * z2;
-        let yy2 = rotation.y * y2;
-        let yz2 = rotation.y * z2;
-        let zz2 = rotation.z * z2;
-
-        let p = new Position.CartesianPosition(
-            point.x * (1.0 - yy2 - zz2) + point.y * (xy2 - wz2) + point.z * (xz2 + wy2),
-            point.x * (xy2 + wz2) + point.y * (1.0 - xx2 - zz2) + point.z * (yz2 - wx2),
-            point.x * (xz2 - wy2) + point.y * (yz2 + wx2) + point.z * (1.0 - xx2 - yy2));
-        return p;
-    }
-    /// &lt;summary&gt;
-    /// The x component.
-    /// &lt;/summary&gt;
-    public x: number;
-    /// &lt;summary&gt;
-    /// The y component.
-    /// &lt;/summary&gt;
-    public y: number;
-    /// &lt;summary&gt;
-    /// The z component.
-    /// &lt;/summary&gt;
-    public z: number;
-    /// &lt;summary&gt;
-    /// The w component.
-    /// &lt;/summary&gt;
-    public w: number;
+    let p = new Position.CartesianPosition(
+      point.x * (1.0 - yy2 - zz2) +
+        point.y * (xy2 - wz2) +
+        point.z * (xz2 + wy2),
+      point.x * (xy2 + wz2) +
+        point.y * (1.0 - xx2 - zz2) +
+        point.z * (yz2 - wx2),
+      point.x * (xz2 - wy2) +
+        point.y * (yz2 + wx2) +
+        point.z * (1.0 - xx2 - yy2)
+    );
+    return p;
+  }
+  /// &lt;summary&gt;
+  /// The x component.
+  /// &lt;/summary&gt;
+  public x: number;
+  /// &lt;summary&gt;
+  /// The y component.
+  /// &lt;/summary&gt;
+  public y: number;
+  /// &lt;summary&gt;
+  /// The z component.
+  /// &lt;/summary&gt;
+  public z: number;
+  /// &lt;summary&gt;
+  /// The w component.
+  /// &lt;/summary&gt;
+  public w: number;
 }</pre>
 </div>
 </div>
@@ -1545,14 +1593,17 @@ Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.</p>
 </div>
 <div class="sect3">
-<h4 id="_typescript_implemention_5">TypeScript implemention:</h4>
+<h4 id="_typescript_implementation_6">TypeScript implementation:</h4>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>import * as Extras from './Extras';
-import * as FrameTransform from './FrameTransform';
-import * as Orientation from './Orientation';
+<pre>import * as Extras from "./Extras";
+import * as FrameTransform from "./FrameTransform";
+import * as Orientation from "./Orientation";
 
-// Implemention order: 5 - follows Orientation.
+// Implementation step: 5 - follows Orientation.
 // This is the root of the GeoPose inheritance hierarchy.
 
 /// &lt;summary&gt;
@@ -1568,23 +1619,23 @@ import * as Orientation from './Orientation';
 /// This implementation includes some optional properties not define in the 1.0 standard
 /// but allowed by JSON serializations of all but the Basic-Quaternion(Strict) standardization target.
 /// The optional properties are identifiers and time values that are useful in practice.
-/// They may be part of a future version of the standard but, as of February 2023, they are optianl add-ons.
+/// They may be part of a future version of the standard but, as of February 2023, they are optional add-ons.
 /// &lt;/remark&gt;
 /// &lt;/summary&gt;
 export abstract class GeoPose {
-    // Optional and non-standard but conforming added property:
-    // an identifier unique within an application.
-    public poseID: Extras.PoseID;
+  // Optional and non-standard but conforming added property:
+  // an identifier unique within an application.
+  public poseID: Extras.PoseID;
 
-    // Optional and non-standard but conforming added property:
-    // a PoseID type identifier of another GeoPose in the direction of the root of a pose tree.
-    public parentPoseID: Extras.PoseID;
+  // Optional and non-standard but conforming added property:
+  // a PoseID type identifier of another GeoPose in the direction of the root of a pose tree.
+  public parentPoseID: Extras.PoseID;
 
-    // Optional and non-standard (except in Advanced) but conforming added property:
-    // a validTime with milliseconds of Unix time.
-    public validTime: number;
-    abstract FrameTransform: FrameTransform.FrameTransform;
-    abstract Orientation: Orientation.Orientation;
+  // Optional and non-standard (except in Advanced) but conforming added property:
+  // a validTime with milliseconds of Unix time.
+  public validTime: number;
+  abstract FrameTransform: FrameTransform.FrameTransform;
+  abstract Orientation: Orientation.Orientation;
 }</pre>
 </div>
 </div>
@@ -1669,10 +1720,13 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_typescript_implemention_6">TypeScript implemention:</h4>
+<h4 id="_typescript_implementation_7">TypeScript implementation:</h4>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>// Implemention order: 6 - follows GeoPose.
+<pre>// Implementation step: 6 - follows GeoPose.
 // This is the simplest family of GeoPoses - the 80% part of a 80/20 solution.
 
 /// &lt;summary&gt;
@@ -1680,62 +1734,89 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 /// The types of Basic GeoPose are distinguished by the method used to specify orientation of the inner frame.
 /// &lt;/summary&gt;
 export abstract class Basic extends GeoPose.GeoPose {
-    /// &lt;summary&gt;
-    /// A Position specified in geographic coordinates with height above a reference surface -
-    /// usually an ellipsoid of revolution or a gravitational equipotential surface is
-    /// transformed to a local Cartesian frame, suitable for use over an extent of a few km.
-    /// &lt;/summary&gt;
-    public override FrameTransform: FrameTransform.WGS84ToLTPENU;
+  /// &lt;summary&gt;
+  /// A Position specified in geographic coordinates with height above a reference surface -
+  /// usually an ellipsoid of revolution or a gravitational equipotential surface is
+  /// transformed to a local Cartesian frame, suitable for use over an extent of a few km.
+  /// &lt;/summary&gt;
+  public override FrameTransform: FrameTransform.WGS84ToLTPENU;
 }
 
 /// &lt;summary&gt;
 /// A Basic-YPR GeoPose uses yaw, pitch, and roll angles measured in degrees to define the orientation of the inner frame..
 /// &lt;/summary&gt;
 export class BasicYPR extends Basic {
-    public constructor(id: string, tangentPoint: Position.GeodeticPosition, yprAngles: Orientation.YPRAngles) {
-        super();
-        this.poseID = new Extras.PoseID(id);
-        this.FrameTransform = new FrameTransform.WGS84ToLTPENU(tangentPoint);
-        this.Orientation = yprAngles;
-    }
-    /// &lt;summary&gt;
-    /// An Orientation specified as three successive rotations about the local Z, Y, and X axes, in that order..
-    /// &lt;/summary&gt;
-    public override Orientation: Orientation.YPRAngles;
+  public constructor(
+    id: string,
+    tangentPoint: Position.GeodeticPosition,
+    yprAngles: Orientation.YPRAngles
+  ) {
+    super();
+    this.poseID = new Extras.PoseID(id);
+    this.FrameTransform = new FrameTransform.WGS84ToLTPENU(tangentPoint);
+    this.Orientation = yprAngles;
+  }
+  /// &lt;summary&gt;
+  /// An Orientation specified as three successive rotations about the local Z, Y, and X axes, in that order..
+  /// &lt;/summary&gt;
+  public override Orientation: Orientation.YPRAngles;
 
-    /// &lt;summary&gt;
-    /// This function returns a Json encoding of a Basic-YPR GeoPose
-    /// &lt;/summary&gt;
-    public toJSON(): string {
-        let indent: string = "";
-        let sb:string[] = [''];
-        if (FrameTransform != null &amp;&amp; Orientation != null) {
-            sb.push("{\r\n  " + indent);
-            if (this.validTime != null ) {
-                sb.push("\"validTime\": " + this.validTime.toString() + ",\r\n" + indent + "  ");
-            }
-            if (this.poseID != null &amp;&amp; this.poseID.id != "") {
-                sb.push("\"poseID\": \"" + this.poseID.id + "\",\r\n" + indent + "  ");
-            }
-            if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
-                sb.push("\"parentPoseID\": \"" + this.parentPoseID.id + "\",\r\n" + indent + "  ");
-            }
-            sb.push("\"position\": \r\n  {\r\n    " + indent + "\"lat\": " +
-                (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lat + ",\r\n    " + indent +
-                "\"lon\": " + (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lon + ",\r\n    " + indent +
-                "\"h\":   " + (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.h);
-            sb.push("\r\n  " + indent + "},");
-            sb.push("\r\n  " + indent);
-            sb.push("\"angles\": \r\n  {\r\n    " + indent + "\"yaw\":   " +
-                (this.Orientation as Orientation.YPRAngles).yaw + ",\r\n    " + indent +
-                "\"pitch\": " + (this.Orientation as Orientation.YPRAngles).pitch + ",\r\n    " + indent +
-                "\"roll\":  " + (this.Orientation as Orientation.YPRAngles).roll);
-            sb.push("\r\n  " + indent + "}");
-            sb.push("\r\n" + indent + "}");
-        }
-        return sb.join('');
+  /// &lt;summary&gt;
+  /// This function returns a Json encoding of a Basic-YPR GeoPose
+  /// &lt;/summary&gt;
+  public toJSON(): string {
+    let indent: string = "";
+    let sb: string[] = [""];
+    if (FrameTransform != null &amp;&amp; Orientation != null) {
+      sb.push("{\r\n  " + indent);
+      if (this.validTime != null) {
+        sb.push(
+          '"validTime": ' + this.validTime.toString() + ",\r\n" + indent + "  "
+        );
+      }
+      if (this.poseID != null &amp;&amp; this.poseID.id != "") {
+        sb.push('"poseID": "' + this.poseID.id + '",\r\n' + indent + "  ");
+      }
+      if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
+        sb.push(
+          '"parentPoseID": "' + this.parentPoseID.id + '",\r\n' + indent + "  "
+        );
+      }
+      sb.push(
+        '"position": \r\n  {\r\n    ' +
+          indent +
+          '"lat": ' +
+          (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lat +
+          ",\r\n    " +
+          indent +
+          '"lon": ' +
+          (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lon +
+          ",\r\n    " +
+          indent +
+          '"h":   ' +
+          (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.h
+      );
+      sb.push("\r\n  " + indent + "},");
+      sb.push("\r\n  " + indent);
+      sb.push(
+        '"angles": \r\n  {\r\n    ' +
+          indent +
+          '"yaw":   ' +
+          (this.Orientation as Orientation.YPRAngles).yaw +
+          ",\r\n    " +
+          indent +
+          '"pitch": ' +
+          (this.Orientation as Orientation.YPRAngles).pitch +
+          ",\r\n    " +
+          indent +
+          '"roll":  ' +
+          (this.Orientation as Orientation.YPRAngles).roll
+      );
+      sb.push("\r\n  " + indent + "}");
+      sb.push("\r\n" + indent + "}");
     }
-
+    return sb.join("");
+  }
 }
 
 /// &lt;summary&gt;
@@ -1745,52 +1826,85 @@ export class BasicYPR extends Basic {
 /// &lt;/remark&gt;
 /// &lt;/summary&gt;
 export class BasicQuaternion extends Basic {
-    public constructor(id: string, tangentPoint: Position.GeodeticPosition, quaternion: Orientation.Quaternion) {
-        super();
-        this.poseID = new Extras.PoseID(id);
-        this.FrameTransform = new FrameTransform.WGS84ToLTPENU(tangentPoint);
-        this.Orientation = quaternion;
-    }
+  public constructor(
+    id: string,
+    tangentPoint: Position.GeodeticPosition,
+    quaternion: Orientation.Quaternion
+  ) {
+    super();
+    this.poseID = new Extras.PoseID(id);
+    this.FrameTransform = new FrameTransform.WGS84ToLTPENU(tangentPoint);
+    this.Orientation = quaternion;
+  }
 
-    /// &lt;summary&gt;
-    /// An Orientation specified as a unit quaternion.
-    /// &lt;/summary&gt;
-    public override Orientation: Orientation.Quaternion;
+  /// &lt;summary&gt;
+  /// An Orientation specified as a unit quaternion.
+  /// &lt;/summary&gt;
+  public override Orientation: Orientation.Quaternion;
 
-    /// &lt;summary&gt;
-    /// This function returns a Json encoding of a Basic-Quaternion GeoPose
-    /// &lt;/summary&gt;
-    public toJSON(): string {
-        let indent: string = "";
-        let sb: string[] = [''];
-        if ((this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin != null &amp;&amp; (this.Orientation as Orientation.Quaternion) != null) {
-            sb.push("{\r\n  " + indent);
-            if (this.validTime != null) {
-                sb.push("\"validTime\": " + this.validTime.toString() + ",\r\n" + indent + "  ");
-            }
-            if (this.poseID != null &amp;&amp; this.poseID.id != "") {
-                sb.push("\"poseID\": \"" + this.poseID.id + "\",\r\n" + indent + "  ");
-            }
-            if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
-                sb.push("\"parentPoseID\": \"" + this.parentPoseID.id + "\",\r\n" + indent + "  ");
-            }
-            sb.push("\"position\": \r\n  {\r\n    " + indent + "\"lat\": " +
-                (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lat + ",\r\n    " + indent +
-                "\"lon\": " + (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lon +
-                ",\r\n    " + indent +
-                "\"h\":   " + (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.h);
-            sb.push("\r\n  " + indent + "},");
-            sb.push("\r\n  " + indent);
-            sb.push("\"quaternion\": \r\n  {\r\n    " + indent + "\"x\":   " +
-                (this.Orientation as Orientation.Quaternion).x + ",\r\n      " + indent +
-                "\"y\": " + (this.Orientation as Orientation.Quaternion).y + ",\r\n      " + indent +
-                "\"z\": " + (this.Orientation as Orientation.Quaternion).z + ",\r\n      " + indent +
-                "\"w\":  " + (this.Orientation as Orientation.Quaternion).w);
-            sb.push("\r\n  " + indent + "}");
-            sb.push("\r\n" + indent + "}");
-            return sb.join('');
-        }
+  /// &lt;summary&gt;
+  /// This function returns a Json encoding of a Basic-Quaternion GeoPose
+  /// &lt;/summary&gt;
+  public toJSON(): string {
+    let indent: string = "";
+    let sb: string[] = [""];
+    if (
+      (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin != null &amp;&amp;
+      (this.Orientation as Orientation.Quaternion) != null
+    ) {
+      sb.push("{\r\n  " + indent);
+      if (this.validTime != null) {
+        sb.push(
+          '"validTime": ' + this.validTime.toString() + ",\r\n" + indent + "  "
+        );
+      }
+      if (this.poseID != null &amp;&amp; this.poseID.id != "") {
+        sb.push('"poseID": "' + this.poseID.id + '",\r\n' + indent + "  ");
+      }
+      if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
+        sb.push(
+          '"parentPoseID": "' + this.parentPoseID.id + '",\r\n' + indent + "  "
+        );
+      }
+      sb.push(
+        '"position": \r\n  {\r\n    ' +
+          indent +
+          '"lat": ' +
+          (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lat +
+          ",\r\n    " +
+          indent +
+          '"lon": ' +
+          (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.lon +
+          ",\r\n    " +
+          indent +
+          '"h":   ' +
+          (this.FrameTransform as FrameTransform.WGS84ToLTPENU).Origin.h
+      );
+      sb.push("\r\n  " + indent + "},");
+      sb.push("\r\n  " + indent);
+      sb.push(
+        '"quaternion": \r\n  {\r\n    ' +
+          indent +
+          '"x":   ' +
+          (this.Orientation as Orientation.Quaternion).x +
+          ",\r\n      " +
+          indent +
+          '"y": ' +
+          (this.Orientation as Orientation.Quaternion).y +
+          ",\r\n      " +
+          indent +
+          '"z": ' +
+          (this.Orientation as Orientation.Quaternion).z +
+          ",\r\n      " +
+          indent +
+          '"w":  ' +
+          (this.Orientation as Orientation.Quaternion).w
+      );
+      sb.push("\r\n  " + indent + "}");
+      sb.push("\r\n" + indent + "}");
+      return sb.join("");
     }
+  }
 }</pre>
 </div>
 </div>
@@ -1837,15 +1951,18 @@ Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.</p>
 </div>
 <div class="sect3">
-<h4 id="_typescript_implemention_7">TypeScript implemention:</h4>
+<h4 id="_typescript_implementation_8">TypeScript implementation:</h4>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>import * as Extras from './Extras';
-import * as FrameTransform from './FrameTransform';
-import * as Orientation from './Orientation';
-import * as GeoPose from './GeoPose';
+<pre>import * as Extras from "./Extras";
+import * as FrameTransform from "./FrameTransform";
+import * as Orientation from "./Orientation";
+import * as GeoPose from "./GeoPose";
 
-// Implemention order: 7 - follows Basic GeoPose.
+// Implementation step: 7 - follows Basic GeoPose.
 // This is the most general GeoPose - the largest part of the 20% part of a 80/20 solution.
 // The difficult implementation is creating the interface layer between the
 // Extrinsic specification and external authorities and data sources.
@@ -1854,52 +1971,97 @@ import * as GeoPose from './GeoPose';
 /// Advanced GeoPose.
 /// &lt;/summary&gt;
 export class Advanced extends GeoPose.GeoPose {
-    public constructor(id: string, frameTransform: FrameTransform.Extrinsic, orientation: Orientation.Quaternion) {
-        super();
-        this.poseID = new Extras.PoseID(id);
-        this.FrameTransform = frameTransform;
-        this.Orientation = orientation;
+  public constructor(
+    id: string,
+    frameTransform: FrameTransform.Extrinsic,
+    orientation: Orientation.Quaternion
+  ) {
+    super();
+    this.poseID = new Extras.PoseID(id);
+    this.FrameTransform = frameTransform;
+    this.Orientation = orientation;
+  }
+
+  /// &lt;summary&gt;
+  /// A Frame Specification defining a frame with associated coordinate system whose Position is the origin.
+  /// &lt;/summary&gt;
+  public override FrameTransform: FrameTransform.Extrinsic;
+
+  /// &lt;summary&gt;
+  /// An Orientation specified as a unit quaternion.
+  /// &lt;/summary&gt;
+  public override Orientation: Orientation.Quaternion;
+
+  /// &lt;summary&gt;
+  /// This function returns a Json encoding of an Advanced GeoPose
+  /// &lt;/summary&gt;
+  public toJSON(): string {
+    let indent: string = "";
+    let sb: string[] = [""];
+    {
+      sb.push("{\r\n" + indent + "  ");
+      if (this.validTime != null) {
+        sb.push(
+          '"validTime": ' + this.validTime.toString() + ",\r\n" + indent + "  "
+        );
+      }
+      if (this.poseID != null &amp;&amp; this.poseID.id != "") {
+        sb.push('"poseID": "' + this.poseID.id + '",\r\n' + indent + "  ");
+      }
+      if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
+        sb.push(
+          '"parentPoseID": "' + this.parentPoseID.id + '",\r\n' + indent + "  "
+        );
+      }
+      sb.push(
+        '"frameSpecification":\r\n' +
+          indent +
+          "  " +
+          "{\r\n" +
+          indent +
+          '    "authority": "' +
+          (this.FrameTransform as FrameTransform.Extrinsic).authority.replace(
+            '"',
+            '\\"'
+          ) +
+          '",\r\n' +
+          indent +
+          '    "id": "' +
+          (this.FrameTransform as FrameTransform.Extrinsic).id.replace(
+            '"',
+            '\\"'
+          ) +
+          '",\r\n' +
+          indent +
+          '    "parameters": "' +
+          (this.FrameTransform as FrameTransform.Extrinsic).parameters.replace(
+            '"',
+            '\\"'
+          ) +
+          '"\r\n' +
+          indent +
+          "  },\r\n" +
+          indent +
+          "  "
+      );
+      sb.push(
+        '"quaternion":\r\n' +
+          indent +
+          "  {\r\n" +
+          indent +
+          '    "x":' +
+          (this.Orientation as Orientation.Quaternion).x +
+          ',"y":' +
+          (this.Orientation as Orientation.Quaternion).y +
+          ',"z":' +
+          (this.Orientation as Orientation.Quaternion).z +
+          ',"w":' +
+          (this.Orientation as Orientation.Quaternion).w
+      );
+      sb.push("\r\n" + indent + "  }\r\n" + indent + "}\r\n");
+      return sb.join("");
     }
-
-    /// &lt;summary&gt;
-    /// A Frame Specification defining a frame with associated coordinate system whose Position is the origin.
-    /// &lt;/summary&gt;
-    public override FrameTransform: FrameTransform.Extrinsic;
-
-    /// &lt;summary&gt;
-    /// An Orientation specified as a unit quaternion.
-    /// &lt;/summary&gt;
-    public override Orientation: Orientation.Quaternion;
-
-    /// &lt;summary&gt;
-    /// This function returns a Json encoding of an Advanced GeoPose
-    /// &lt;/summary&gt;
-    public toJSON(): string {
-        let indent: string = "";
-        let sb: string[] = [''];
-        {
-            sb.push("{\r\n" + indent + "  ");
-            if (this.validTime != null) {
-                sb.push("\"validTime\": " + this.validTime.toString() + ",\r\n" + indent + "  ");
-            }
-            if (this.poseID != null &amp;&amp; this.poseID.id != "") {
-                sb.push("\"poseID\": \"" + this.poseID.id + "\",\r\n" + indent + "  ");
-            }
-            if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
-                sb.push("\"parentPoseID\": \"" + this.parentPoseID.id + "\",\r\n" + indent + "  ");
-            }
-            sb.push("\"frameSpecification\":\r\n" + indent + "  " + "{\r\n" + indent + "    \"authority\": \"" +
-                (this.FrameTransform as FrameTransform.Extrinsic).authority.replace("\"", "\\\"") + "\",\r\n" + indent + "    \"id\": \"" +
-                (this.FrameTransform as FrameTransform.Extrinsic).id.replace("\"", "\\\"") + "\",\r\n" + indent + "    \"parameters\": \"" +
-                (this.FrameTransform as FrameTransform.Extrinsic).parameters.replace("\"", "\\\"") + "\"\r\n" + indent + "  },\r\n" + indent + "  ");
-            sb.push("\"quaternion\":\r\n" + indent + "  {\r\n" + indent + "    \"x\":" + (this.Orientation as Orientation.Quaternion).x + ",\"y\":" +
-                (this.Orientation as Orientation.Quaternion).y + ",\"z\":" +
-                (this.Orientation as Orientation.Quaternion).z + ",\"w\":" +
-                (this.Orientation as Orientation.Quaternion).w);
-            sb.push("\r\n" + indent + "  }\r\n" + indent + "}\r\n");
-            return sb.join('');
-        }
-    }
+  }
 }</pre>
 </div>
 </div>
@@ -1908,7 +2070,7 @@ export class Advanced extends GeoPose.GeoPose {
 <div class="sect2">
 <h3 id="_step_8_local_geopose">Step 8: Local [Geo]Pose</h3>
 <div class="paragraph">
-<p>The Local GeoPose is in essence, an implementation of the pose concept from computer graphics. It can be implemented as an Advanced geoPose but a lightweight implementation for operations within a local Carsian coordinate system is often useful. I hope that a future version of OGC GeoPose has something like the Local form. Until then, there are three alternatives</p>
+<p>The Local GeoPose is in essence, an implementation of the pose concept from computer graphics. It can be implemented as an Advanced geoPose but a lightweight implementation for operations within a local Cartesian coordinate system is often useful. I hope that a future version of OGC GeoPose has something like the Local form. Until then, there are three alternatives</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1946,10 +2108,13 @@ Pile o text pile o text I am filler and I feel puffy.
 Pile o text pile o text I am filler and I feel puffy.</p>
 </div>
 <div class="sect3">
-<h4 id="_typescript_implemention_8">TypeScript implemention:</h4>
+<h4 id="_typescript_implementation_9">TypeScript implementation:</h4>
+<div class="paragraph">
+<p><a href="#software-license">License (MIT)</a></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>// Implemention order: 8 -a useful GeoPose for working within a local Cartesian (i.e. engineering) frame.
+<pre>// Implementation step: 8 -a useful GeoPose for working within a local Cartesian (i.e. engineering) frame.
 // Local can be expressed as an Advanced form, but the Advanced form is more complex and this implementation is a shortcut.
 
 /// &lt;summary&gt;
@@ -1963,54 +2128,77 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 /// &lt;/remark&gt;
 /// &lt;/summary&gt;
 export class Local extends GeoPose.GeoPose {
-    public constructor(id: string, frameTransform: FrameTransform.Translation, orientation: Orientation.YPRAngles) {
-        super();
-        this.poseID = new Extras.PoseID(id);
-        this.FrameTransform = frameTransform;
-        this.Orientation = orientation;
+  public constructor(
+    id: string,
+    frameTransform: FrameTransform.Translation,
+    orientation: Orientation.YPRAngles
+  ) {
+    super();
+    this.poseID = new Extras.PoseID(id);
+    this.FrameTransform = frameTransform;
+    this.Orientation = orientation;
+  }
+  /// &lt;summary&gt;
+  /// The xOffset, yOffset, zOffset from the origin of the rotated inner frame of a "parent" GeoPose.
+  /// &lt;/summary&gt;
+  public override FrameTransform: FrameTransform.Translation;
+
+  /// &lt;summary&gt;
+  /// An Orientation specified as three rotations.
+  /// &lt;/summary&gt;
+  public override Orientation: Orientation.YPRAngles;
+
+  /// &lt;summary&gt;
+  /// This function returns a Json encoding of an Advanced GeoPose
+  /// &lt;/summary&gt;
+  public toJSON(): string {
+    let indent: string = "";
+    let sb: string[] = [""];
+    {
+      sb.push("{\r\n  ");
+      if (this.validTime != null) {
+        sb.push(
+          '"validTime": ' + this.validTime.toString() + ",\r\n" + indent + "  "
+        );
+      }
+      if (this.poseID != null &amp;&amp; this.poseID.id != "") {
+        sb.push('"poseID": "' + this.poseID.id + '",\r\n' + indent + "  ");
+      }
+      if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
+        sb.push(
+          '"parentPoseID": "' + this.parentPoseID.id + '",\r\n' + indent + "  "
+        );
+      }
+      sb.push(
+        '"position": \r\n  {\r\n    ' +
+          '"x": ' +
+          (this.FrameTransform as FrameTransform.Translation).xOffset +
+          ",\r\n    " +
+          '"y": ' +
+          (this.FrameTransform as FrameTransform.Translation).yOffset +
+          ",\r\n    " +
+          '"z":   ' +
+          (this.FrameTransform as FrameTransform.Translation).zOffset
+      );
+      sb.push("\r\n  " + "},");
+      sb.push("\r\n  ");
+      sb.push(
+        '"angles": \r\n  {\r\n    ' +
+          '"yaw":   ' +
+          (this.Orientation as Orientation.YPRAngles).yaw +
+          ",\r\n    " +
+          '"pitch": ' +
+          (this.Orientation as Orientation.YPRAngles).pitch +
+          ",\r\n    " +
+          '"roll":  ' +
+          (this.Orientation as Orientation.YPRAngles).roll
+      );
+      sb.push("\r\n  " + "}");
+      sb.push("\r\n" + "}\r\n");
+
+      return sb.join("");
     }
-    /// &lt;summary&gt;
-    /// The xOffset, yOffset, zOffset from the origin of the rotated inner frame of a "parent" GeoPose.
-    /// &lt;/summary&gt;
-    public override FrameTransform: FrameTransform.Translation;
-
-    /// &lt;summary&gt;
-    /// An Orientation specified as three rotations.
-    /// &lt;/summary&gt;
-    public override Orientation: Orientation.YPRAngles;
-
-
-    /// &lt;summary&gt;
-    /// This function returns a Json encoding of an Advanced GeoPose
-    /// &lt;/summary&gt;
-    public toJSON(): string {
-        let indent: string = "";
-        let sb: string[] = [''];
-        {
-            sb.push("{\r\n  ");
-            if (this.validTime != null) {
-                sb.push("\"validTime\": " + this.validTime.toString() + ",\r\n" + indent + "  ");
-            }
-            if (this.poseID != null &amp;&amp; this.poseID.id != "") {
-                sb.push("\"poseID\": \"" + this.poseID.id + "\",\r\n" + indent + "  ");
-            }
-            if (this.parentPoseID != null &amp;&amp; this.parentPoseID.id != "") {
-                sb.push("\"parentPoseID\": \"" + this.parentPoseID.id + "\",\r\n" + indent + "  ");
-            }
-            sb.push("\"position\": \r\n  {\r\n    " + "\"x\": " + (this.FrameTransform as FrameTransform.Translation).xOffset + ",\r\n    " +
-                "\"y\": " + (this.FrameTransform as FrameTransform.Translation).yOffset + ",\r\n    " +
-                "\"z\":   " + (this.FrameTransform as FrameTransform.Translation).zOffset);
-            sb.push("\r\n  " + "},");
-            sb.push("\r\n  ");
-            sb.push("\"angles\": \r\n  {\r\n    " + "\"yaw\":   " + (this.Orientation as Orientation.YPRAngles).yaw + ",\r\n    " +
-                "\"pitch\": " + (this.Orientation as Orientation.YPRAngles).pitch + ",\r\n    " +
-                "\"roll\":  " + (this.Orientation as Orientation.YPRAngles).roll);
-            sb.push("\r\n  " + "}");
-            sb.push("\r\n" + "}\r\n");
-
-            return sb.join('');
-        }
-    }
+  }
 }</pre>
 </div>
 </div>
@@ -2019,7 +2207,7 @@ export class Local extends GeoPose.GeoPose {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_examples">Examples</h2>
+<h2 id="_example">Example</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Pile o text pile o text I am filler and I feel puffy.
@@ -2078,24 +2266,40 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_references">References</h2>
+<h2 id="software-license">License (MIT)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The following (MIT) license applies to all software and data in this document:</p>
 </div>
+<div class="paragraph">
+<p>Copyright (c) 2023 Dani Elenga Foundation</p>
+</div>
+<div class="paragraph">
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+</div>
+<div class="paragraph">
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+</div>
+<div class="paragraph">
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">References</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>TypeScript <a href="https://www.typescriptlang.org" class="bare">https://www.typescriptlang.org</a></p>
 </div>
@@ -2132,7 +2336,7 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-06 23:30:11 -0800
+Last updated 2023-02-07 11:57:16 -0800
 </div>
 </div>
 </body>
