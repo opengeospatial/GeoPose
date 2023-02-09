@@ -1,0 +1,338 @@
+
+========== Mars Express at Local Clock UNIX Time 1674767748003==========
+
+{
+  "validTime": 1674767748003,
+  "poseID": "https://example.com/nodes/MarsExpress/1",
+  "frameSpecification":
+  {
+    "authority": "https://www.iers.org/",
+    "id": "icrf3",
+    "parameters": "{\"x\": 1234567890.9876,\"y\": 2345678901.8765, \"z\": 3456789012.7654}"
+  },
+  "quaternion":
+  {
+    "x":0,"y":0,"z":0,"w":1
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 1
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 2.2,
+    "y": 0.82,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+---------- Passenger ----------: Jerome
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Jerome",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "position":
+  {
+    "x": 2.2,
+    "y": 0.8,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   180,
+    "pitch": 1,
+    "roll":  0
+  }
+}
+
+---------- Passenger ----------: Josh
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Josh",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "position":
+  {
+    "x": 2,
+    "y": 0.8,
+    "z":   -6
+  },
+  "angles":
+  {
+    "yaw":   180,
+    "pitch": 2,
+    "roll":  0
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 2
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/2",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 12.2,
+    "y": 0.78,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23.4
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 3
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 22.5,
+    "y": 0.77,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  21
+  }
+}
+
+---------- Passenger ----------: Steve
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Steve",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "position":
+  {
+    "x": -5,
+    "y": 0.82,
+    "z":   6
+  },
+  "angles":
+  {
+    "yaw":   -2,
+    "pitch": 1.5,
+    "roll":  0
+  }
+}
+
+---------- Passenger ----------: carlsmyth.com
+
+{
+  "validTime": 1674767748003,
+  "poseID": "https://carlsmyth.com",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "frameSpecification":
+  {
+    "authority": "https://ogc.org",
+    "id": "PROJCRS[\"GeoPose Local\",+GEOGCS[\"None)\"]+CS[Cartesian,3],+AXIS[\"x\",,ORDER[1],LENGTHUNIT[\"metre\",1]],+AXIS[\"y\",,ORDER[2],LENGTHUNIT[\"metre\",1]],+AXIS[\"z\",,ORDER[3],LENGTHUNIT[\"metre\",1]]+USAGE[AREA[\"+/-1000 m\"],BBOX[-1000,-1000,1000,1000],ID[\"GeoPose\",Local]]",
+    "parameters": "{\"x\": 1234567890.9876,\"y\": 2345678901.8765, \"z\": 3456789012.7654}"
+  },
+  "quaternion":
+  {
+    "x":0.0174509,"y":0.0130876,"z":-0.0002284,"w":0.9997621
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 4
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/4",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 33.2,
+    "y": 0.74,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  42
+  }
+}
+
+
+========== Mars Express at Local Clock UNIX Time 1674767808330==========
+
+{
+  "validTime": 1674767808330,
+  "poseID": "https://example.com/nodes/MarsExpress/1",
+  "frameSpecification":
+  {
+    "authority": "https://www.iers.org/",
+    "id": "icrf3",
+    "parameters": "{\"x\": 1234567890.9876,\"y\": 2345678901.8765, \"z\": 3456789012.7654}"
+  },
+  "quaternion":
+  {
+    "x":0,"y":0,"z":0,"w":1
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 1
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 2.2,
+    "y": 0.82,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23
+  }
+}
+
+---------- Passenger ----------: Jerome
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Jerome",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "position":
+  {
+    "x": 2.2,
+    "y": 0.8,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   180,
+    "pitch": 1,
+    "roll":  0
+  }
+}
+
+---------- Passenger ----------: Josh
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Josh",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/1",
+  "position":
+  {
+    "x": 2,
+    "y": 0.8,
+    "z":   -6
+  },
+  "angles":
+  {
+    "yaw":   180,
+    "pitch": 2,
+    "roll":  0
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 2
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/2",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 12.2,
+    "y": 0.78,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  23.4
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 3
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 22.5,
+    "y": 0.77,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  21
+  }
+}
+
+---------- Passenger ----------: Steve
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Passengers/Steve",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/3",
+  "position":
+  {
+    "x": -5,
+    "y": 0.82,
+    "z":   6
+  },
+  "angles":
+  {
+    "yaw":   -2,
+    "pitch": 1.5,
+    "roll":  0
+  }
+}
+
+=-=-=-=-=- Wagon -=-=-=-=-=: 4
+
+{
+  "poseID": "https://example.com/nodes/MarsExpress/1/Wagons/4",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1",
+  "position":
+  {
+    "x": 33.2,
+    "y": 0.74,
+    "z":   -7
+  },
+  "angles":
+  {
+    "yaw":   0.2,
+    "pitch": 0,
+    "roll":  42
+  }
+}
+
+---------- Passenger ----------: carlsmyth.com
+
+{
+  "validTime": 1674767808330,
+  "poseID": "https://carlsmyth.com",
+  "parentPoseID": "https://example.com/nodes/MarsExpress/1/Wagons/4",
+  "frameSpecification":
+  {
+    "authority": "https://ogc.org",
+    "id": "PROJCRS[\"GeoPose Local\",+GEOGCS[\"None)\"]+CS[Cartesian,3],+AXIS[\"x\",,ORDER[1],LENGTHUNIT[\"metre\",1]],+AXIS[\"y\",,ORDER[2],LENGTHUNIT[\"metre\",1]],+AXIS[\"z\",,ORDER[3],LENGTHUNIT[\"metre\",1]]+USAGE[AREA[\"+/-1000 m\"],BBOX[-1000,-1000,1000,1000],ID[\"GeoPose\",Local]]",
+    "parameters": "{\"x\": 1234567890.9876,\"y\": 2345678901.8765, \"z\": 3456789012.7654}"
+  },
+  "quaternion":
+  {
+    "x":0.0174509,"y":0.0130876,"z":-0.0002284,"w":0.9997621
+  }
+}
+
