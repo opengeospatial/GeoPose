@@ -453,7 +453,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_augmented_and_mixed_reality">Augmented and Mixed Reality</a></li>
 <li><a href="#_mobile_autonomy">Mobile Autonomy</a></li>
 <li><a href="#_built_environment">Built Environment</a></li>
-<li><a href="#_synthetic_environments_simulations_replicas_and_the_metaverse">Synthetic Environments: Simulations, Replicas, and the Metaverse</a></li>
+<li><a href="#_simulations_replicas_and_the_metaverse">Simulations, Replicas, and the Metaverse</a></li>
 <li><a href="#_image_understanding">Image Understanding</a></li>
 </ul>
 </li>
@@ -482,7 +482,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_example">Example</a>
 <ul class="sectlevel2">
 <li><a href="#_typescript">TypeScript</a></li>
-<li><a href="#_output">Output</a></li>
+<li><a href="#_results">Results</a></li>
 </ul>
 </li>
 <li><a href="#software-license">License (MIT)</a></li>
@@ -494,6 +494,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Latest version 7 February 2023.
+This documentation is maintained by Steve Smyth <a href="mailto:steve@opensiteplan.org">steve@opensiteplan.org</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>A frequent question is "How should I implement software that makes or manipulates OGC GeoPoses?" This tutorial is one answer. It may not describe exactly the software you may need to build but I hope it gives you the necessary building blocks to see how you might proceed.</p>
 </div>
@@ -584,7 +599,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_synthetic_environments_simulations_replicas_and_the_metaverse">Synthetic Environments: Simulations, Replicas, and the Metaverse</h3>
+<h3 id="_simulations_replicas_and_the_metaverse">Simulations, Replicas, and the Metaverse</h3>
 <div class="paragraph">
 <p>Synthetic environments contain collections of moving objects, which themselves may be composed of connected and articulated parts, in an animation or simulation environment that contains a fixed background of air, land, water, vegetation, built objects, and other non-moving elements. The assembly is animated over some time period to provide visualizations or analytical results of the evolving state of the modelled environment. Synthetic environments support training, rehearsal, and archival of activities and events. The location and orientation of the movable elements of a scene are the key data controlling animation of in a synthetic environment. Since there may be multiple possible animations consistent with observations, storage of the sequences of poses of the actors, vehicles, and other objects is a direct and compact way of representing the variable aspects of the event. Access to one or more common reference frames through a graph of frame transformations makes a coherent assembly possible.</p>
 </div>
@@ -1795,20 +1810,23 @@ export class BasicQuaternion extends Basic {
 <div class="sect2">
 <h3 id="_step_7_advanced_geopose">Step 7: Advanced GeoPose</h3>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The Advanced GeoPose provides an interface to external repositories and libraries supporting</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>definition of coordinate reference systems</p>
+</li>
+<li>
+<p>definition of coordinate systems</p>
+</li>
+<li>
+<p>transformations between reference frames</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This interface is defined in the Advanced class by the creation of the Extrinsic FrameTransform. The Extrinsic FrameTransform is a contained for a three element interface, each a string, and named <strong>authority</strong>, <strong>id</strong>, and <strong>parameters</strong>. The usage of the interface is outside the scope of the GeoPose 1.0 standard. It can vary between external sources and the <strong>final definition and interface protocol is determined by the implementer of the Advanced class</strong>.</p>
 </div>
 <div class="imageblock center center-text">
 <div class="content">
@@ -1817,20 +1835,7 @@ Pile o text pile o text I am filler and I feel puffy.</p>
 <div class="title">Figure 8. The Advanced Class</div>
 </div>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The Advanced class should implement each of the frame transforms, where validity is determined by the implementer. Presentation of an invalid frame specification via the Extrinsic interface should result in a returned NoPosition value. Note that these are suggestions to the implementer, not requirements.</p>
 </div>
 <div class="sect3">
 <h4 id="_typescript_implementation_8">TypeScript implementation:</h4>
@@ -1974,20 +1979,7 @@ export class Advanced extends GeoPose.GeoPose {
 <div class="title">Figure 9. Local</div>
 </div>
 <div class="paragraph">
-<p>Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.
-Pile o text pile o text I am filler and I feel puffy.</p>
+<p>The FrameTransform supported by the Local GeoPose is Translation.</p>
 </div>
 <div class="sect3">
 <h4 id="_typescript_implementation_9">TypeScript implementation:</h4>
@@ -2271,10 +2263,14 @@ input.read();</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_output">Output</h3>
+<h3 id="_results">Results</h3>
+<div class="paragraph">
+<p>Here is the console log when running the Space Train example with node.js:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre>========== Checking PROJ ==========
+
 X : -76
 Y : 45
 Z : 11
@@ -2286,6 +2282,7 @@ Y : 44.99999999999999
 Z : 11
 from: lat: -1 lon: 52 h: 15
   to: x: -4.058880592738845e-10 y: 5.528743791653243 z: -0.3000024121489482
+
 ========== Example GeoPoses ==========
 {
   "poseID": "OS_GB: BasicYPR",
@@ -2764,7 +2761,7 @@ SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-08 10:56:12 -0800
+Last updated 2023-02-08 12:16:27 -0800
 </div>
 </div>
 </body>
