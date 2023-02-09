@@ -140,7 +140,7 @@ let Alice = new Local.Local("https://example.com/nodes/MarsExpress/1/Passengers/
 Alice.parentPoseID = wagon1.poseID;
 passengers.push(Alice);
 
-//  - Bob is a nice fellow who guided us towrd the frame transform in the early days
+//  - Bob is a nice fellow who guided us toward the frame transform in the early days
 let Bob = new Local.Local("https://example.com/nodes/MarsExpress/1/Passengers/Bob", new FrameTransform.Translation(2.0, 0.8, -6.0), new Orientation.YPRAngles(180.0, 2.0, 0.0));
 Bob.parentPoseID = wagon1.poseID;
 passengers.push(Bob);
