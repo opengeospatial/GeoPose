@@ -1,4 +1,5 @@
-Copyright (c) 2023 The Dani Elenga Foundation
+/*
+ * Copyright (c) 2023 The Dani Elenga Foundation
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -17,6 +18,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
 
 // Implemention order: 8 -a useful GeoPose for working within a local Cartesian (i.e. engineering) frame.
 // Local can be expressed as an Advanced form, but the Advanced form is more complex and this implementation is a shortcut.
