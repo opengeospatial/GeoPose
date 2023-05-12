@@ -14,9 +14,9 @@ Implementation #3:
 
 Implementation #1: SolarPose Service
 
-Implementation #2:  GeoPose.cs - glTF encoding support library.
+Implementation #2: GeoPose.cs - glTF encoding support library.
 
-Implementation #3:
+Implementation #3: https://smapshot.heig-vd.ch/[smapshot]
 
 ## Advanced
 
