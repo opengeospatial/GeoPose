@@ -1,0 +1,8 @@
+ENGCRS["Local"
+    ENGDATUM["Local Cartesian"],
+    CS[Cartesian,3],
+        AXIS["(x)",x],
+        AXIS["(y)",y],
+        AXIS[" (z)",z],
+        LENGTHUNIT["metre",1.0],
+	ID["OGC-GeoPose", "SCRS-C3"]]

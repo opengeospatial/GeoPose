@@ -1,0 +1,6 @@
+TIMECRS["UNIX Time",
+    TDATUM["Time origin",TIMEORIGIN[1970-01-01T00:00:00.0Z]],
+    CS[temporal,1],
+        AXIS["time",future],
+        TIMEUNIT["second",1],
+    ID["OGC-GeoPose", "TCRS-UNIX-T"]]

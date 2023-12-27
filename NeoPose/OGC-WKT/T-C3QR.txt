@@ -1,0 +1,7 @@
+CONVERSION["Local Cartesian to Local Cartesian via quaternion Rotation",
+    METHOD["Geographic/topocentric conversions"],
+    PARAMETER["x",0],
+    PARAMETER["y",0],
+    PARAMETER["z",0],
+    PARAMETER["w",0],
+    ID["OGC-GeoPose","T-C3QR"]]

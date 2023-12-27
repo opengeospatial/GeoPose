@@ -1,0 +1,11 @@
+CONVERSION["Minkowski Spacetime to Spacetime via Lorentz Transformation",
+    METHOD["Geographic/topocentric conversions"],
+    PARAMETER["x offset",0,
+       LENGTHUNIT["metre",1]],
+    PARAMETER["y offset",0,
+       LENGTHUNIT["metre",1]],
+    PARAMETER["z offset",0,
+       LENGTHUNIT["metre",1]],
+    PARAMETER["ct offset",0,
+       LENGTHUNIT["metre",1]],
+    ID["OGC-GeoPose","T-ML"]]

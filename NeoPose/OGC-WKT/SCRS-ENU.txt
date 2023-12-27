@@ -1,0 +1,8 @@
+ENGCRS["LTP-ENU"
+    ENGDATUM["LTP-ENU"],
+    CS[Cartesian,3],
+        AXIS["east(x)",east],
+        AXIS["north(y)",north],
+        AXIS["up(z)",up],
+        LENGTHUNIT["metre",1.0],
+		ID["OGC-GeoPose", "SCRS-ENU"]]

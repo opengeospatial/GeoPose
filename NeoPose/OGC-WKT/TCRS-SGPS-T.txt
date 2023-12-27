@@ -1,0 +1,6 @@
+TIMECRS["GPS Scaled Time",
+    TDATUM["Time origin",TIMEORIGIN[1980-01-01T00:00:00.0Z]],
+    CS[temporal,1],
+        AXIS["time",future],
+        TIMEUNIT["picosecond",0.00000000001],
+    ID["OGC-GeoPose", "TCRS-SGPS-T"]]

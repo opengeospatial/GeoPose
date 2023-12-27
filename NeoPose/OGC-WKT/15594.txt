@@ -1,0 +1,13 @@
+CONVERSION["EPSG topocentric example A",
+    METHOD["Geographic/topocentric conversions",
+        ID["EPSG",9837]],
+    PARAMETER["Latitude of topocentric origin",55,
+        ANGLEUNIT["degree",0.0174532925199433],
+        ID["EPSG",8834]],
+    PARAMETER["Longitude of topocentric origin",5,
+        ANGLEUNIT["degree",0.0174532925199433],
+        ID["EPSG",8835]],
+    PARAMETER["Ellipsoidal height of topocentric origin",0,
+        LENGTHUNIT["metre",1],
+        ID["EPSG",8836]],
+    ID["EPSG","15594"]]
