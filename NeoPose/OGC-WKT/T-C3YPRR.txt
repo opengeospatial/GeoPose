@@ -1,0 +1,9 @@
+CONVERSION["Local Cartesian to Local Cartesian via YPR Rotation",
+    METHOD["Angular rotations"],
+    PARAMETER["Yaw",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    PARAMETER["Pitch",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    PARAMETER["Ellipsoidal height of topocentric origin",0,
+        LENGTHUNIT["metre",1]],
+    ID["OGC-GeoPose","T-C3YPRR"]]

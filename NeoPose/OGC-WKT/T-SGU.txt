@@ -1,0 +1,7 @@
+CONVERSION["Scaled GPS Time to UNIX Time",
+    METHOD["LIGO"],
+    PARAMETER["tsg",0,
+       LENGTHUNIT["picosecond",1]],
+    PARAMETER["ts",0,
+       LENGTHUNIT["second",1]],
+    ID["OGC-GeoPose","T-SGU"]]
