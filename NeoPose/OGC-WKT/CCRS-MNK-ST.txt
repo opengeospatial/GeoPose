@@ -1,0 +1,10 @@
+EVENTCRS["Minkowski Spacetime",
+    ENGCRS["Local"
+        ENGDATUM["Local Minkowski"],
+        CS[Cartesian,4],
+            AXIS["(x)",x],
+            AXIS["(y)",y],
+            AXIS["(z)",z],
+            AXIS["(ct)",ct],
+        LENGTHUNIT["metre",1.0]]
+	ID["OGC-GeoPose", "CCRS-MNK-ST"]]

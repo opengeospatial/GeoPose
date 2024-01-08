@@ -1,5 +1,5 @@
-CONVERSION["Local Cartesian to Local Cartesian via quaternion Rotation",
-    METHOD["Geographic/topocentric conversions"],
+COORDINATEOPERATION["Local Cartesian to Local Cartesian via quaternion Rotation",
+    METHOD["Quaternion rotation"],
     PARAMETER["x",0],
     PARAMETER["y",0],
     PARAMETER["z",0],

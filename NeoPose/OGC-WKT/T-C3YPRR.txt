@@ -1,4 +1,4 @@
-CONVERSION["Local Cartesian to Local Cartesian via YPR Rotation",
+COORDINATEOPERATION["Local Cartesian to Local Cartesian via YPR Rotation",
     METHOD["Angular rotations"],
     PARAMETER["Yaw",0,
         ANGLEUNIT["degree",0.0174532925199433]],
