@@ -1,4 +1,4 @@
-CONVERSION["Local Cartesian to Local Cartesian via Translation",
+COORDINATEOPERATION["Local Cartesian to Local Cartesian via Translation",
     METHOD["Translation"],
     PARAMETER["x offset",0,
        LENGTHUNIT["metre",1]],

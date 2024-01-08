@@ -1,4 +1,4 @@
-CONVERSION["Scaled GPS Time to UNIX Time",
+COORDINATEOPERATION["Scaled GPS Time to UNIX Time",
     METHOD["LIGO"],
     PARAMETER["tsg",0,
        LENGTHUNIT["picosecond",1]],

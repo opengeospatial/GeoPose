@@ -1,5 +1,5 @@
-CONVERSION["Minkowski Spacetime to Spacetime via Lorentz Transformation",
-    METHOD["Geographic/topocentric conversions"],
+COORDINATEOPERATION["Minkowski Spacetime to Spacetime via Lorentz Transformation",
+    METHOD["Lorentz transformation"],
     PARAMETER["x offset",0,
        LENGTHUNIT["metre",1]],
     PARAMETER["y offset",0,
