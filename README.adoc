@@ -16,11 +16,6 @@ This repository holds the latest Editor's Draft of the specification and reflect
 
 The official *HTML* version of the GeoPose 1.0 Draft Standard can be found on the https://docs.ogc.org/dis/21-056r10/21-056r10.html[OGC website].
 
-////
-The daily built *HTML* version of the GeoPose 1.0 Draft Standard can be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10.html[here].
-
-The daily built *PDF* version of the GeoPose 1.0 Draft Standard can be found https://opengeospatial.github.io/ogcna-auto-review/21-056r10.pdf[here].
-////
 
 # Get More Information
 The OGC GeoPose SWG is currently developing a pair of informational guides and a set of sample implementations which will be made public on GitHub. The guides will support reviewers of this specification and those who seek to implement it.
