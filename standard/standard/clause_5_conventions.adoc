@@ -10,10 +10,6 @@ http://www.opengis.net/spec/GeoPose/1.0
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
-
-=== Use Cases, Concepts, Logical Model, Standardization Targets, Encodings
-
-
 === UML Notation
 
 The logical structure of the elements used in the GeoPose Standard is presented in this document in diagrams using the Unified Modeling Language (UML) static structure diagram (see Booch et al. <<Booch1997>>). The UML notations used in this standard are described in the diagram in <<figure-1>>.
