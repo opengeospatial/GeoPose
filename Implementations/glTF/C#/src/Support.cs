@@ -1,5 +1,4 @@
-/*
- * Copyright (c) 2023 The Dani Elenga Foundation
+Copyright (c) 2023 The Dani Elenga Foundation
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -18,7 +17,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-*/
 
 // * Copyright(c) 2023 The Dani Elenga Foundation
 // *
@@ -42,15 +40,7 @@ SOFTWARE.
 // *
 
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-
-using ProjNet;
-using ProjNet.CoordinateSystems;
-using ProjNet.CoordinateSystems.Transformations;
-using GeoAPI.CoordinateSystems.Transformations;
+using System.Diagnostics;
 
 namespace Support
 {
@@ -189,19 +179,6 @@ namespace Support
             GeodeticToEcef(lat, lon, h, out x, out y, out z);
             EcefToEnu(x, y, z, lat0, lon0, h0, out xEast, out yNorth, out zUp);
         }
-        // Converts the geodetic WGS-84 coordinated (lat, lon, h) to 
-        // East-North-Up coordinates in a Local Tangent Plane that is centered at the 
-        // (WGS-84) Geodetic point (lat0, lon0, h0).
-        public static Positions.CartesianPosition GeodeticToEnu(Positions.GeodeticPosition geodeticPosition,
-            Positions.GeodeticPosition tangentPosition)
-        {
-            double x, y, z;
-            double xEast, yNorth, zUp; 
-            GeodeticToEcef(geodeticPosition.lat, geodeticPosition.lon, geodeticPosition.h, out x, out y, out z);
-            EcefToEnu(x, y, z, tangentPosition.lat, tangentPosition.lon, tangentPosition.h, out xEast, out yNorth, out zUp);
-            Positions.CartesianPosition enuPosition = new Positions.CartesianPosition(xEast, yNorth, zUp);
-            return enuPosition;
-        }
         public static void EnuToGeodetic(double xEast, double yNorth, double zUp,
                                              double lat0, double lon0, double h0,
                                             out double lat, out double lon, out double h
@@ -221,108 +198,5 @@ namespace Support
         {
             return 180.0 / Math.PI * radians;
         }
-    }
-    public class ExtrinsicSupport
-    {
-        public static bool IsDerivedCRS(string idString)
-        {
-            return idString.ToLower().Contains("conversion[");
-        }
-        public static bool IsFromAndToCRS(string idString)
-        {
-            return idString.Contains("=>");
-        }
-        public static bool GetFromAndToCRS(string idString, out string fromCRS, out string toCRS)
-        {
-            fromCRS = "";
-            toCRS = "";
-            // Split at =>
-            int arrowIndex = idString.IndexOf("=>");
-            if (arrowIndex < 1)
-            {
-                return false;
-            }
-            fromCRS = idString.Substring(0, arrowIndex);
-            toCRS = idString.Substring(arrowIndex + 2);
-            return true;
-        }
-        public static string GetEPSGNumber(string wktString)
-        {
-            string epsgNumber = "";
-            // look at end of WKT for WKT1 or WKT2 ID
-            // "ID\["EPSG",\d+\]\]$" or "AUTHORITY\["EPSG",\"\d+\"\]\]$"
-            Regex reID = new Regex("(id\\[\\\"epsg\\\",\\d+\\]\\]$)");
-            Regex reAuthority = new Regex("(authority\\[\\\"epsg\\\",\\\"\\d+\\\"\\]\\]$)");
-            string thisMatch = "";
-            MatchCollection matches;
-            if ((matches = reID.Matches(wktString.ToLower())).Count > 0)
-            {
-                thisMatch = matches[0].Value;
-            }
-            else if ((matches = reAuthority.Matches(wktString.ToLower())).Count > 0)
-            {
-                thisMatch = matches[0].Value;
-            }
-            if (thisMatch != "")
-            {
-                Regex reNumber = new Regex("\\d+");
-                matches = reNumber.Matches(thisMatch);
-                if (matches.Count > 0)
-                {
-                    epsgNumber = matches[0].Value;
-                }
-            }
-            return epsgNumber;
-        }
-        public static bool GetOriginParameters(string wktString, ref double[] origin)
-        {
-            // PARAMETER[\"Latitude of topocentric origin\",55,
-            origin[0] = GetSignedDoubleInRe("parameter\\[\\\"latitude.+,-?\\d+\\.?\\d*", wktString);
-            origin[1] = GetSignedDoubleInRe("parameter\\[\\\"longitude.+,-?\\d+\\.?\\d*", wktString);
-            origin[2] = GetSignedDoubleInRe("parameter\\[\\\"[^\\]]*height.+,-?\\d+\\.?\\d*", wktString);
-            return (!double.IsNaN(origin[0]) && !double.IsNaN(origin[1]) && !double.IsNaN(origin[2]));
-        }
-        public static Positions.GeodeticPosition GetOriginParameters(string wktString)
-        {
-            // PARAMETER[\"Latitude of topocentric origin\",55,
-            double lat = GetSignedDoubleInRe("parameter\\[\\\"latitude.+,-?\\d+\\.?\\d*", wktString);
-            double lon = GetSignedDoubleInRe("parameter\\[\\\"longitude.+,-?\\d+\\.?\\d*", wktString);
-            double h = GetSignedDoubleInRe("parameter\\[\\\"[^\\]]*height.+,-?\\d+\\.?\\d*", wktString);
-            if (!double.IsNaN(lat) && !double.IsNaN(lon) && !double.IsNaN(h))
-            {
-                return new Positions.GeodeticPosition(lat, lon, h);
-            }
-            return new Positions.NoPosition();
-        }
-        public static double GetSignedDoubleInRe(string reString, string inputString)
-        {
-            double result = double.NaN;
-            Regex re = new Regex(reString);
-            MatchCollection matches = re.Matches(inputString.ToLower());
-            if (matches.Count > 0)
-            {
-                string thisMatch = matches[0].Value;
-                re = new Regex("-?\\d+\\.?\\d*");
-                matches = re.Matches(thisMatch);
-                if (matches.Count > 0)
-                {
-                    result = double.Parse(matches[0].Value);
-                }
-            }
-            return result;
-        }
-        public static Positions.GeodeticPosition GetPositionFromParameters(string paramString)
-        {
-            // JSON encoded: {"lat": 12.345, "lon": -22.54, "h": 11.22}
-            double lat = GetSignedDoubleInRe("\\\"lat\\\"\\s*:\\s*-?\\d+(\\.\\d*)?", paramString);
-            double lon = GetSignedDoubleInRe("\\\"lon\\\"\\s*:\\s*-?\\d+(\\.\\d*)?", paramString);
-            double h = GetSignedDoubleInRe("\\\"h\\\"\\s*:\\s*-?\\d+(\\.\\d*)?", paramString);
-            if (!double.IsNaN(lat) && !double.IsNaN(lon) && !double.IsNaN(h))
-            {
-                return new Positions.GeodeticPosition(lat, lon, h);
-            }
-            return new Positions.NoPosition();
-        }
-
     }
 }

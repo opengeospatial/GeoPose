@@ -1,5 +1,4 @@
-/*
- * Copyright (c) 2023 The Dani Elenga Foundation
+Copyright (c) 2023 The Dani Elenga Foundation
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -18,7 +17,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-*/
+
 // Implemention order: 2 - follows Extras.
 // These classes define positions in a 3D frame using different conventions.
 
@@ -53,10 +52,6 @@ namespace Positions
             this.lon = lon;
             this.h = h;
         }
-        public static implicit operator GeodeticPosition(NoPosition noPosition)
-        {
-            return new GeodeticPosition(double.NaN, double.NaN, double.NaN);
-        }
 
         /// <summary>
         /// A latitude in degrees, positive north of equator and negative south of equator.
@@ -79,9 +74,6 @@ namespace Positions
     /// </summary>
     public class CartesianPosition : Position
     {
-        protected CartesianPosition()
-        {
-        }
         public CartesianPosition(double x, double y, double z)
         {
             this.x = x;
@@ -106,30 +98,24 @@ namespace Positions
         /// </summary>
         public double z { get; set; } = double.NaN;
     }
-    public class NoPosition : CartesianPosition
+    public class NoPosition : Position
     {
-        public NoPosition()
-        {
-            base.x = double.NaN;
-            base.y = double.NaN;
-            base.z = double.NaN;
-        }
         /// <summary>
         /// A coordinate value in meters, along an axis (x-axis) that typically has origin at
         /// the center of mass, lies in the same plane as the y axis, and perpendicular to the y axis,
         /// forming a right-hand coordinate system with the z-axis in the up direction.
         /// </summary>
-        //public double x { get; set; } = double.NaN;
+        public double x { get; set; } = double.NaN;
         /// <summary>
         /// A coordinate value in meters, along an axis (y-axis) that typically has origin at
         /// the center of mass, lies in the same plane as the x axis, and perpendicular to the x axis,
         /// forming a right-hand coordinate system with the z-axis in the up direction.
         /// </summary>
-        //public double y { get; set; } = double.NaN;
+        public double y { get; set; } = double.NaN;
         /// <summary>
         /// A coordinate value in meters, along the z-axis.
         /// </summary>
-        //public double z { get; set; } = double.NaN;
+        public double z { get; set; } = double.NaN;
     }
     /// <summary>
     /// The abstract root of the Position hierarchy.
