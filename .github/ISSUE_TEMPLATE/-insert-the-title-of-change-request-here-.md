@@ -1,5 +1,5 @@
 ---
-name: Change Request
+name: "[INSERT the title of Change Request HERE]"
 about: Once a change request is pretty solid, fill in the prompts in this template
 title: ''
 labels: ''
