@@ -7,21 +7,21 @@ assignees: ''
 
 ---
 
-* ##Description
+* ## Description
  * **[Grab this text and insert the description here]
-##Target Version
+## Target Version
         [choose between 1.1, 1.2 and 1.3]
-##Use Cases
+## Use Cases
         [Grab this text and insert the use cases you have in mind here]
-##Requirements
+## Requirements
         [Grab this text and insert the requirements here]
-##Backward Compatibility
+## Backward Compatibility
         [Grab this text and insert the expected level of backward compatibility here]
-##Encoding
+## Encoding
         [Grab this text and insert the encoding here]
-##Examples
+## Examples
         [Grab this text and insert any examples here]
-##Demos
+## Demos
         [Grab this text and insert the description and links to here]
-##References
+## References
         [Grab this text and insert the references here]
