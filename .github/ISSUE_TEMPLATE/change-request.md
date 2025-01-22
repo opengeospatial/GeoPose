@@ -7,7 +7,6 @@ assignees: ''
 
 ---
 
-#[INSERT THE TITLE HERE]: 
 ##Description
 [Grab this text and insert the description here]
 ##Target Version
