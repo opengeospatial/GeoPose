@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-* ## Description
- * **[Grab this text and insert the description here]
+## Description
+[Grab this text and insert the description here]
 ## Target Version
         [choose between 1.1, 1.2 and 1.3]
 ## Use Cases
