@@ -1,7 +1,7 @@
 ---
-name: Custom issue template
+name: Use Case
 about: Describe this issue template's purpose here.
-title: Use Case
+title: "[Use Case Name]"
 labels: ''
 assignees: ''
 
