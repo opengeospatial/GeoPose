@@ -7,7 +7,6 @@ assignees: ''
 
 ---
 
-Use Case Template for Change Requests
 ## Title
 [title text]
 ## Primary Actor
