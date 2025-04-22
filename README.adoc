@@ -2,38 +2,44 @@
 
 Welcome to the OGC GeoPose SWG GitHub Repo.
 
-The https://www.ogc.org/projects/groups/geoposeswg[GeoPose Standards Working Group (SWG)] is working under the auspices of the https://www.ogc.org/[Open Geospatial Consortium].  The purpose of this SWG is to develop a standard for geographically-anchored pose (GeoPose) with 6 degrees of freedom referenced to one or more standardized Coordinate Reference Systems (CRSs). The proposed standard will provide an interoperable way to seamlessly express, record, and share the GeoPose of objects in an entirely consistent manner across different applications, users, devices, services, and platforms which adopt the standard or are able to translate/exchange the GeoPose into another CRS.
+The https://www.ogc.org/projects/groups/geoposeswg[GeoPose Standards Working Group (SWG)] is working under the auspices of the https://www.ogc.org/[Open Geospatial Consortium]. This SWG maintains, enhances and promotes a standard for geographically-anchored pose (GeoPose) with 6 degrees of freedom referenced to one or more standardized Coordinate Reference Systems (CRSs). 
 
-To determine how well the proposed standard works in real world spatial computing scenarios and to assess its ease of use for average developers, there will be multiple https://github.com/opengeospatial/GeoPose/tree/main/Implementations/[implementations] and use cases examined.
+Computational concepts represented in the GeoPose standard, and its components are very common in software for 3D representations. The standard provides an interoperable way to seamlessly express, record, and share the GeoPose of objects in an entirely consistent manner across different applications, users, devices, services, and platforms that adopt the standard or are able to translate/exchange the GeoPose into another CRS.
 
-The SWG will then examine whether the proposed standard maintains interoperability with the OGC Standards Baseline and assess whether extensions of existing standards could achieve the goals of GeoPose.
+Multiple https://github.com/opengeospatial/GeoPose/tree/main/Implementations/[implementations]  confirm that the standard works in real world use cases. 
+
+The standard conforms to the OGC Standards Baseline.
 
 # OGC GeoPose 1.0 Data Exchange Standard
 
-⚠️ In June 2022, the OGC Technical Committee approved the https://docs.ogc.org/is/21-056r11/21-056r11.html[OGC GeoPose 1.0 Data Exchange Standard] as an OGC Specification. Based on evidence of at least 3 implementations, the specification was approved as an OGC Implementation Standard. 
+In June 2022, the OGC Technical Committee approved the https://docs.ogc.org/is/21-056r11/21-056r11.html[OGC GeoPose 1.0 Data Exchange Standard] as an OGC Specification. Based on evidence of at least 3 implementations, the specification was approved as an OGC Implementation Standard. 
 
 This repository holds the latest Editor's Draft of the specification and reflects the current agreement of members of the https://www.ogc.org/projects/groups/geoposeswg[GeoPose SWG] who have been actively working on the document since January 2020. It is provided here in order to solicit feedback and inputs from those who have need for the specification and plan to implement it but are not participating in the OGC GeoPose SWG.
 
-The official *HTML* version of the GeoPose 1.0 Draft Standard can be found on the https://docs.ogc.org/is/21-056r11/21-056r11.html[OGC website].
+The official *HTML* version of the GeoPose 1.0 Standard can be found on the https://docs.ogc.org/is/21-056r11/21-056r11.html[OGC website].
 
-# New OGC GeoPose 1.x Version Development
+# OGC GeoPose 1.x Version Development
 
-After three years of experience with GeoPose 1.0, the GeoPose SWG has received a number of requests for enhancements and extensions. These have been sorted into three categories and tentatively assigned to one of three proposed future versions:
+Since GeoPose 1.0 was published, the GeoPose SWG has received requests for enhancements and extensions. These have been assigned to future versions.
 
-- Version 1.1: Separate conceptual model and encodings, expose the Structural Data Unit (SDU) components via new normative language adding the corresponding requirements and conformance tests. This version would be fully backward compatible with Version 1.0 but reformulate the specification in terms of separate conceptual model and SDU components that could be used normatively in other standards.
-- Version 1.2: improve time support with well-defined temporal coordinate system, resolution to picosecond (1/3 mm of light speed travel distance), add binary encoding, add uncertainty via a new SDU component
-- Version 1.3: add a number of new SDU components to support additional use cases, including support for the Metaverse Standards Forum Ride-Hailing Use Case prototype.
+- Version 1.1: Separate conceptual and logical model and encodings, and expose underlying GeoPose components via new normative language as well as adding the corresponding requirements and conformance tests. 
+- Version 1.2: Improve time support with well-defined temporal coordinate system, resolution to picosecond (1/3 mm of light speed travel distance), add binary encoding, add uncertainty via a new component.
+- Version 1.3: Add new GeoPose components to support additional use cases, including support for the Metaverse Standards Forum Ride-Hailing Use Case prototype.
+
+As indicated by keeping the first number of the standard constant (v 1.0 and v 1.x), the future versions will be fully backward compatible so any investment based on v 1.0 will not be lost. One benefit of v1.1 will be that other standards can reference one or more GeoPose components normatively.
 
 # Get More Information
-The OGC GeoPose SWG is currently developing a pair of informational guides and a set of sample implementations which will be made public on GitHub. The guides will support reviewers of this specification and those who seek to implement it.
+Information about GeoPose 1.0 and its implementers is found on https://geopose.org/[this site].
 
 # Contributing
-The OGC GeoPose SWG is the group at OGC responsible for the stewardship of the standard. As of our publication to this repo, the SWG will do as much work in public as possible.
+The OGC GeoPose SWG is the group at OGC responsible for the stewardship of the standard. As of our publication to this repo, the SWG works in public as much as possible. 
 
-If you have input, comments or feedback for the SWG's consideration, please begin by reviewing the http://github.com/opengeospatial/GeoPose/issues[open issues]. If there is already an issue with your question, concern or input, please respond or discuss in the issue. If your input, feedback or question is new (not captured in a prior issue), please open a new issue.
+For a full list of the issues being addressed in the next versions of GeoPose, and to see how you can contribute to the work packages, https://geopose.org/CallForContributors.html[visit this page].
+
+If you have other input, comments or feedback for the SWG's consideration, please begin by reviewing the http://github.com/opengeospatial/GeoPose/issues[open issues]. If there is already an issue with your question, concern or input, please respond or discuss it in the issue. If your input, feedback or question is new (not captured in a prior issue), please open a new issue.
 
 The GeoPose SWG will promptly review open issues and address or reply to new issues in a timely manner.
 
-If necessary, make a branch from the "working" branch of this repo. Make any changes to your own branch of "working" Pull Requests from contributors may only be made on the "working" branch. Please note that by sending a Pull Request or Commit to this GitHub repository, you are agreeing to the terms in the [OGC GeoPose SWG Observer Agreement].
+If necessary, make a branch from the "working" branch of this repo. Make any changes to your own branch of "working." Pull Requests from contributors may only be made on the "working" branch. Please note that by sending a Pull Request or Commit to this GitHub repository, you are agreeing to the terms in the [OGC GeoPose SWG Observer Agreement].
 
-The contributor understands that any contributions, if accepted by the OGC GeoPose SWG, shall be incorporated into a final OGC standards document and that all copyright and intellectual property shall be vested to the OGC. See http://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/LICENSE[Copy of OGC License Language].
+The contributor understands that any contributions, if accepted by the OGC GeoPose SWG, shall be incorporated into a final OGC standards document and that all copyright and intellectual property shall be vested to the OGC. See http://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/LICENSE[the OGC License Language].
