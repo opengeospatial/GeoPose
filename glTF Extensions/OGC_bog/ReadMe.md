@@ -7,7 +7,13 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ## Contributors
 
-* Steve Smyth, OpenSitePlan, steve@opensiteplan.org
+* Jan-Erik Vinje, _, _@_
+* Rob Smith, _, _@_
+* Jeremy Morley, _, _@_
+* .
+* .
+* Steve Smyth, co-Chair OGC GeoPose SWG, steve@opensiteplan.org
+
 
 ## Status
 
@@ -22,7 +28,7 @@ Written against the glTF 2.0 spec.
 The OGC_bog extension bounds, anchors, and orients a glTF Scene in space and time. 
 
 ### Bounds: 
-The extension gives a maximum distance from the origin of the glTF coordinate system. This defines the valid extens of a model. It mmay also represent a real-world property such as a cell-tower service radius.
+The extension specifies a maximum distance from the origin of the glTF coordinate system. This defines the valid extent of a model. It may represent a real-world property such as a cell-tower service radius or a collision volume.
 
 ### Anchor: 
 The extension identifies the 3D origin of the glTF coordinate system as a position in geographically located three-dimensional space. The extension also identifies the proper time at the origin.
@@ -46,8 +52,12 @@ The OGC_bog is an additional property of a glTF Scene object. If a glTF model co
 
 ## Known Implementations
 
-* TODO: List of known implementations, with links to each if available.
+* .
+* .
+* .
 
 ## Resources
 
-* TODO: Resources, if any.
+* .
+* .
+* .
