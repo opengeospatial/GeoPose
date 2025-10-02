@@ -52,9 +52,11 @@ The OGC_bog is a JSON object carrying the bound, orientation, and geolocation pa
 
 ## Known Implementations
 
-* [Hillyfields Bubble](https://github.com/opengeospatial/GeoPose/blob/Version-1.x-editors-/glTF%20Extensions/OGC_bog/OGC_bog_example.json) 
+* Hillyfields Bubble [JSON object](https://github.com/opengeospatial/GeoPose/blob/Version-1.x-editors-/glTF%20Extensions/OGC_bog/OGC_bog_example.json) .
 
-![Alt text](2025-10-02-224001.png)
+<img src="2025-10-02-224001.png" alt="hfb" width="200">
+
+
 * .
 * .
 
