@@ -3,7 +3,7 @@ Copyright 2015-2021 The Khronos Group Inc.
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-# **OGC_bog**: A glTF Extension to Bound, Orient, and Geolocate a glTF Scene.
+# **OGC_bog**: An Extension to Bound, Orient, and Geolocate a glTF Scene.
 
 ## Contributors
 
@@ -44,7 +44,7 @@ The extension provides the 3D rotational relationship between that 3D Cartesian 
 
 ## glTF Schema Updates
 
-The OGC_bog is an additional property of a glTF Scene object. If a glTF model contains multiple Scenes, it may contain multiple OGC_bog properties. A Scene shall **not** have more than one OGC_bog property.
+The OGC_bog is a JSON object carrying the bound, orientation, and geolocation parameters of a scenegraph. It becomes an additional property of a glTF Scene object. If a glTF model contains multiple Scenes, it may contain multiple OGC_bog properties. A Scene shall **not** have more than one OGC_bog property.
 
 ### JSON Schema
 
@@ -52,7 +52,9 @@ The OGC_bog is an additional property of a glTF Scene object. If a glTF model co
 
 ## Known Implementations
 
-* .
+* [Hillyfields Bubble](https://github.com/opengeospatial/GeoPose/blob/Version-1.x-editors-/glTF%20Extensions/OGC_bog/OGC_bog_example.json) 
+
+![Alt text](2025-10-02-224001.png)
 * .
 * .
 
