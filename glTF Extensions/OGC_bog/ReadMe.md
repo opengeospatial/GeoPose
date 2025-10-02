@@ -21,7 +21,7 @@ Draft
 
 ## Dependencies
 
-Written against the glTF 2.0 spec.
+Written against the glTF 2.0 spec and the OGC GeoPose 1.0 standard.
 
 ## Overview
 
