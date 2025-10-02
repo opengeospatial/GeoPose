@@ -1,0 +1,676 @@
+{
+	"components": [
+		{
+			"description": "Position: a geodetic or geographic position defined by two angles and a height",
+			"type": "object",
+			"properties": {
+				"lat": {
+					"type": "number"
+				},
+				"lon": {
+					"type": "number"
+				},
+				"h": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"lat",
+				"lon",
+				"h"
+			]
+		},
+		{
+			"description": "Quaternion: orientation defined by the three vector and one scalar components of a unit quaternion",
+			"type": "object",
+			"properties": {
+				"x": {
+					"type": "number"
+				},
+				"y": {
+					"type": "number"
+				},
+				"z": {
+					"type": "number"
+				},
+				"w": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z",
+				"w"
+			]
+		},
+		{
+			"description": "Angles: orientation defined by three angles in degrees - yaw, pich, and roll",
+			"type": "object",
+			"properties": {
+				"yaw": {
+					"type": "number"
+				},
+				"pitch": {
+					"type": "number"
+				},
+				"roll": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"yaw",
+				"pitch",
+				"roll"
+			]
+		},
+		{
+			"description": "Coordinates: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"coordinates": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"type": "number"
+					}
+				}
+			},
+			"required": [
+				"coordinates"
+			]
+		},
+		{
+			"description": "Instant: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"timeCoordinate": {
+					"type": "integer"
+				},
+				"epoch": {
+					"type": [
+						"integer",
+						"null"
+					]
+				},
+				"TCRS": {
+					"type": [
+						"string",
+						"null"
+					]
+				}
+			},
+			"required": [
+				"timeCoordinate",
+				"epoch",
+				"TCRS"
+			]
+		},
+		{
+			"description": "Instant2: time coordinate value with optional origin",
+			"type": "object",
+			"properties": {
+				"timeCoordinate": {
+					"type": "integer"
+				},
+				"epoch": {
+					"type": [
+						"integer",
+						"null"
+					]
+				},
+				"TCRS": {
+					"type": [
+						"string",
+						"null"
+					]
+				}
+			},
+			"required": [
+				"timeCoordinate",
+				"epoch",
+				"TCRS"
+			]
+		},
+		{
+			"description": "Instant: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"timeCoordinate": {
+					"type": "integer"
+				},
+				"epoch": {
+					"type": [
+						"integer",
+						"null"
+					]
+				},
+				"TCRS": {
+					"type": [
+						"string",
+						"null"
+					]
+				}
+			},
+			"required": [
+				"timeCoordinate",
+				"epoch",
+				"TCRS"
+			]
+		},
+		{
+			"description": "Duration: noun defined by WW",
+			"definitions": {
+				"Instant": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"timeCoordinate": {
+							"type": "integer"
+						},
+						"epoch": {
+							"type": [
+								"integer",
+								"null"
+							]
+						},
+						"TCRS": {
+							"type": [
+								"string",
+								"null"
+							]
+						}
+					},
+					"required": [
+						"timeCoordinate",
+						"epoch",
+						"TCRS"
+					]
+				}
+			},
+			"type": "object",
+			"properties": {
+				"beginning": {
+					"$ref": "#/definitions/Instant"
+				},
+				"end": {
+					"$ref": "#/definitions/Instant"
+				}
+			},
+			"required": [
+				"beginning",
+				"end"
+			]
+		},
+		{
+			"description": "Precision: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"precision": {
+					"type": [
+						"number",
+						"null"
+					]
+				}
+			},
+			"required": [
+				"precision"
+			]
+		},
+		{
+			"description": "Accuracy: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"accuracy": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"accuracy"
+			]
+		},
+		{
+			"description": "Resolution: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"resolution": {
+					"type": [
+						"number",
+						"null"
+					]
+				}
+			},
+			"required": [
+				"resolution"
+			]
+		},
+		{
+			"description": "Confidence: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"confidence": {
+					"type": [
+						"number",
+						"null"
+					]
+				}
+			},
+			"required": [
+				"confidence"
+			]
+		},
+		{
+			"description": "DepthMap: noun defined by WW",
+			"definitions": {
+				"DepthPixel": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"rgba_d": {
+							"type": [
+								"string",
+								"null"
+							]
+						}
+					},
+					"required": [
+						"rgba_d"
+					]
+				}
+			},
+			"type": "object",
+			"properties": {
+				"depthMap": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"$ref": "#/definitions/DepthPixel"
+					}
+				},
+				"height": {
+					"type": "integer"
+				},
+				"width": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"depthMap",
+				"height",
+				"width"
+			]
+		},
+		{
+			"description": "DepthPixel: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"rgba_d": {
+					"type": [
+						"string",
+						"null"
+					]
+				}
+			},
+			"required": [
+				"rgba_d"
+			]
+		},
+		{
+			"description": "CameraModel: noun defined by WW",
+			"definitions": {
+				"Quaternion": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"x": {
+							"type": "number"
+						},
+						"y": {
+							"type": "number"
+						},
+						"z": {
+							"type": "number"
+						},
+						"w": {
+							"type": "number"
+						}
+					},
+					"required": [
+						"x",
+						"y",
+						"z",
+						"w"
+					]
+				},
+				"Vector3": {
+					"type": [
+						"object",
+						"null"
+					],
+					"additionalProperties": false,
+					"properties": {
+						"X": {
+							"type": "number"
+						},
+						"Y": {
+							"type": "number"
+						},
+						"Z": {
+							"type": "number"
+						}
+					},
+					"required": [
+						"X",
+						"Y",
+						"Z"
+					]
+				}
+			},
+			"type": "object",
+			"properties": {
+				"FocalLength": {
+					"type": "number"
+				},
+				"AspectRatio": {
+					"type": "number"
+				},
+				"NearClip": {
+					"type": "number"
+				},
+				"FarClip": {
+					"type": "number"
+				},
+				"FieldOfView": {
+					"type": "number"
+				},
+				"SensorWidth": {
+					"type": "number"
+				},
+				"SensorHeight": {
+					"type": "number"
+				},
+				"Position": {
+					"$ref": "#/definitions/Vector3"
+				},
+				"Rotation": {
+					"$ref": "#/definitions/Quaternion"
+				}
+			},
+			"required": [
+				"FocalLength",
+				"AspectRatio",
+				"NearClip",
+				"FarClip",
+				"FieldOfView",
+				"SensorWidth",
+				"SensorHeight",
+				"Position",
+				"Rotation"
+			]
+		},
+		{
+			"description": "CameraCalibration: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"Fx": {
+					"type": "number"
+				},
+				"Fy": {
+					"type": "number"
+				},
+				"Cx": {
+					"type": "number"
+				},
+				"Cy": {
+					"type": "number"
+				},
+				"K1": {
+					"type": "number"
+				},
+				"K2": {
+					"type": "number"
+				},
+				"P1": {
+					"type": "number"
+				},
+				"P2": {
+					"type": "number"
+				},
+				"K3": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"Fx",
+				"Fy",
+				"Cx",
+				"Cy",
+				"K1",
+				"K2",
+				"P1",
+				"P2",
+				"K3"
+			]
+		},
+		{
+			"description": "TargetSet: noun defined by WW",
+			"definitions": {
+				"Target": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"azimuth": {
+							"type": "number"
+						},
+						"altitude": {
+							"type": "number"
+						},
+						"range": {
+							"type": "number"
+						}
+					},
+					"required": [
+						"azimuth",
+						"altitude",
+						"range"
+					]
+				}
+			},
+			"type": "object",
+			"properties": {
+				"targets": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"$ref": "#/definitions/Target"
+					}
+				}
+			},
+			"required": [
+				"targets"
+			]
+		},
+		{
+			"description": "Target: noun defined by WW",
+			"type": "object",
+			"properties": {
+				"azimuth": {
+					"type": "number"
+				},
+				"altitude": {
+					"type": "number"
+				},
+				"range": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"azimuth",
+				"altitude",
+				"range"
+			]
+		},
+		{
+			"description": "RadianceField: noun defined by WW",
+			"definitions": {
+				"GaussianRadianceSample3D": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"Position": {
+							"$ref": "#/definitions/Vector3"
+						},
+						"Scale": {
+							"$ref": "#/definitions/Vector3"
+						},
+						"Rotation": {
+							"$ref": "#/definitions/Quaternion"
+						},
+						"Color": {
+							"$ref": "#/definitions/Vector3"
+						},
+						"Opacity": {
+							"type": "number"
+						}
+					},
+					"required": [
+						"Position",
+						"Scale",
+						"Rotation",
+						"Color",
+						"Opacity"
+					]
+				},
+				"Quaternion": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"x": {
+							"type": "number"
+						},
+						"y": {
+							"type": "number"
+						},
+						"z": {
+							"type": "number"
+						},
+						"w": {
+							"type": "number"
+						}
+					},
+					"required": [
+						"x",
+						"y",
+						"z",
+						"w"
+					]
+				},
+				"Vector3": {
+					"type": [
+						"object",
+						"null"
+					],
+					"additionalProperties": false,
+					"properties": {
+						"X": {
+							"type": "number"
+						},
+						"Y": {
+							"type": "number"
+						},
+						"Z": {
+							"type": "number"
+						}
+					},
+					"required": [
+						"X",
+						"Y",
+						"Z"
+					]
+				}
+			},
+			"type": "object",
+			"properties": {
+				"radianceField": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"$ref": "#/definitions/GaussianRadianceSample3D"
+					}
+				}
+			},
+			"required": [
+				"radianceField"
+			]
+		},
+		{
+			"description": "TimeLimitedID: noun defined by WW",
+			"definitions": {
+				"Instant": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"timeCoordinate": {
+							"type": "integer"
+						},
+						"epoch": {
+							"type": [
+								"integer",
+								"null"
+							]
+						},
+						"TCRS": {
+							"type": [
+								"string",
+								"null"
+							]
+						}
+					},
+					"required": [
+						"timeCoordinate",
+						"epoch",
+						"TCRS"
+					]
+				}
+			},
+			"type": "object",
+			"properties": {
+				"ID": {
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"termination": {
+					"$ref": "#/definitions/Instant"
+				}
+			},
+			"required": [
+				"ID",
+				"termination"
+			]
+		}
+	]
+}

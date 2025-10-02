@@ -1,0 +1,86 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"OGC_bog1": {
+			"type": "object",
+			"properties": {
+				"bog_uri": {
+					"type": "string"
+				},
+				"bog_name": {
+					"type": "string"
+				},
+				"bog_geopose": {
+					"type": "object",
+					"properties": {
+						"position": {
+							"type": "object",
+							"properties": {
+								"lat": {
+									"type": "number"
+								},
+								"lon": {
+									"type": "number"
+								},
+								"h": {
+									"type": "number"
+								}
+							},
+							"required": [
+								"lat",
+								"lon",
+								"h"
+							]
+						},
+						"angles": {
+							"type": "object",
+							"properties": {
+								"yaw": {
+									"type": "number"
+								},
+								"pitch": {
+									"type": "number"
+								},
+								"roll": {
+									"type": "number"
+								}
+							},
+							"required": [
+								"yaw",
+								"pitch",
+								"roll"
+							]
+						}
+					},
+					"required": [
+						"position",
+						"angles"
+					]
+				},
+				"bog_unixTime": {
+					"type": "integer"
+				},
+				"bog_radius": {
+					"type": "number"
+				},
+				"bog_minunixtime": {
+					"type": "integer"
+				},
+				"bog_maxunixtime": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"bog_geopose",
+				"bog_unixTime",
+				"bog_radius",
+				"bog_minunixtime",
+				"bog_maxunixtime"
+			]
+		}
+	},
+	"required": [
+		"OGC_bog"
+	]
+}
