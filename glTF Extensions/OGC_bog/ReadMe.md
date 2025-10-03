@@ -38,7 +38,7 @@ The extension provides the 3D rotational relationship between that 3D Cartesian 
 
 ### Use cases:
 1. Publication of CityGML models in glTF 2.
-2. Preloading of artificial visual percention systems.
+2. Preloading of visual perception systems.
 3. Exchange of visual perception fragments from vehicle mounted mobile platfforms.
 4. Archive of geolocated surveillance video, including video with WebVMT tracks.
 
