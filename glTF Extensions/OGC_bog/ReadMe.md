@@ -12,7 +12,7 @@ SPDX-License-Identifier: CC-BY-4.0
 * Jeremy Morley, _, _@_
 * .
 * .
-* . Christine Perey, PEREY Research & Consulting, cperey@perey.com
+* Christine Perey, PEREY Research & Consulting, cperey@perey.com
 * Steve Smyth, co-Chair OGC GeoPose SWG, steve@opensiteplan.org
 
 
