@@ -11,6 +11,7 @@ SPDX-License-Identifier: CC-BY-4.0
 * Rob Smith, _, _@_
 * Jeremy Morley, _, _@_
 * Mikel Salazar, _, _@_
+* Josh Lieberman, _, _@_
 * .
 * .
 * Christine Perey, PEREY Research & Consulting, cperey@perey.com
