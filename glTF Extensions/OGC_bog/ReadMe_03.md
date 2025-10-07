@@ -3,7 +3,7 @@ Copyright 2015-2021 The Khronos Group Inc.
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-# **OGC_geolocate_orient_bound**: An Extension to Support Spatial Content in a glTF Scene.
+# **OGC_geolocate_orient_bound**: An Extension to Support GeoSpatial Content in a glTF Scene.
 
 ## Contributors
 
@@ -28,10 +28,10 @@ Written against the Khronos glTF 2.0 spec and the Open Geospatial Consortium (OG
 
 ## Overview
 
-The proposed extension anchors, orients, and bounds a glTF Scene in space and time. 
+The proposed extension geolocates, orients, and bounds a glTF Scene in space and time. 
 
 
-### Anchors: 
+### Geolocates: 
 The extension links the "floating" 3D origin of the glTF coordinate system to a position in geographically located three-dimensional space. The extension also identifies the proper time, measured by a clock at the origin, and well-defined even with very high velocities between unaccelerated reference frames. 
 
 
