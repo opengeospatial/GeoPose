@@ -31,17 +31,17 @@ Written against the Khronos glTF 2.0 spec and the Open Geospatial Consortium (OG
 The proposed extension geolocates, orients, and bounds a glTF Scene in space and time. 
 
 
-### Geolocates: 
+### Geolocates 
 The extension links the "floating" 3D origin of the glTF coordinate system to a position in geographically located three-dimensional space. The extension also identifies the proper time, measured by a clock at the origin, and well-defined even with very high velocities between unaccelerated reference frames. 
 
 
-### Orients: 
+### Orients 
 The extension provides the 3D rotational relationship between that 3D Cartesian coordinate system and coordinates in an East(X), North(Y), Up(Z) plane tangent to the earth at the origin, using a JSON-encoded Basic-YPR OGC GeoPose v1.0. 
 
-### Bounds: 
+### Bounds 
 The extension specifies spatial bounds as a maximum distance in meters from the origin of the glTF coordinate system. This defines the valid extent of a model. It may represent a real-world property such as a cell-tower service radius or a collision volume.
 
-### Use cases:
+### Use cases
 1. Publication of CityGML models in glTF 2.
 2. Preloading of visual perception systems.
 3. Exchange of visual perception fragments from vehicle mounted mobile platfforms.
