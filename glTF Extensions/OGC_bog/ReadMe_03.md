@@ -7,16 +7,9 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ## Contributors
 
-* Jan-Erik Vinje, _, _@_
-* Rob Smith, _, _@_
-* Jeremy Morley, _, _@_
-* Mikel Salazar, _, _@_
-* Josh Lieberman, _, _@_
-* .
-* .
 * Christine Perey, PEREY Research & Consulting, cperey@perey.com
 * Steve Smyth, co-Chair OGC GeoPose SWG, steve@opensiteplan.org
-
+* Jeremy Morley, University College London, ucfsjmg@ucl.ac.uk
 
 ## Status
 
