@@ -6,5 +6,21 @@ The GeoPoses provided in the samples and in the validator are the pose of a came
 
 This service is used to validate the specifications and instances in the JSON encodings in the GeoPose standard.
 
+The Solar Pose service is avaiable as a Web service. An http GET request using the URL template https://geopose.io/solarpose/<geopose type>?longitude=<longitude>&latitude=<latitude>&height=<height above ellipsoid>&unixTimeMs=<milliseconds since January 1st, 1970> will return a GeoPose of type <geopose type>. The GeoPose type choices are *quaternion*, *advanced*, and *ypr*. For example, https://geopose.io/solarpose/YPR?longitude=-105.24567&latitude=40.032074&height=0&unixTimeMs=1760209666368 (UCAR Center in Boulder, Colorado, USA at 16:30 UTC on 11 October 2025) returns 
+```
+{
+  "position": {
+    "lat": 40.032074,
+    "lon": -105.24567,
+    "h": 0
+  },
+  "angles": {
+    "yaw": 186.85202367802975,
+    "pitch": 42.95363113107107,
+    "roll": 0
+  }
+
+```
+
 A demo web app using the service is in the demo folder.
 [link]
