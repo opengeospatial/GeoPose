@@ -1,4 +1,4 @@
-== Web Service for Solar GeoPose Examples and Validation
+== Web Service for Solar GeoPose Examples and GeoPose 1.0 Validation
 
 The service responds to HTTPS GET requests for examples of any of the JSON-encoded Standardization Targets, giving a single or sequence of GeoPoses for a specified latitude, longitude, and Unix time - default time "Now". It also responds to HTTPS POST requests to validate examples of any of the Standardization Targets. To see the OpenAPI/Swagger spec for the service, visit the link:https://geopose.io/swagger/index.html[SolarPose Swagger - OpenAPI]  UI.
 
