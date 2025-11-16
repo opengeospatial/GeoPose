@@ -1,0 +1,419 @@
+----Existing Core Components{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Position",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "lat": {
+      "type": "number",
+      "format": "double"
+    },
+    "lon": {
+      "type": "number",
+      "format": "double"
+    },
+    "h": {
+      "type": "number",
+      "format": "double"
+    }
+  }
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Quaternion",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "x": {
+      "type": "number",
+      "format": "double"
+    },
+    "y": {
+      "type": "number",
+      "format": "double"
+    },
+    "z": {
+      "type": "number",
+      "format": "double"
+    },
+    "w": {
+      "type": "number",
+      "format": "double"
+    }
+  }
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Angles",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "yaw": {
+      "type": "number",
+      "format": "double"
+    },
+    "pitch": {
+      "type": "number",
+      "format": "double"
+    },
+    "roll": {
+      "type": "number",
+      "format": "double"
+    }
+  }
+}
+----Proposed Core Component(s){
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Coordinates",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "coordinates": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "format": "double"
+      }
+    }
+  }
+}
+----Proposed Time Components{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Instant",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "timeCoordinate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "epoch": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int64"
+    },
+    "TCRS": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Duration",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "beginning": {
+      "$ref": "#/definitions/Instant"
+    },
+    "end": {
+      "$ref": "#/definitions/Instant"
+    }
+  },
+  "definitions": {
+    "Instant": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "timeCoordinate": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "epoch": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "int64"
+        },
+        "TCRS": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    }
+  }
+}
+}
+----Proposed Uncertainty Components{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Coordinates",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "coordinates": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "format": "double"
+      }
+    }
+  }
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Accuracy",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "accuracy": {
+      "type": "number",
+      "format": "double"
+    }
+  }
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Precision",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "precision": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "format": "double"
+    }
+  }
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Confidence",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "confidence": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "format": "double"
+    }
+  }
+}
+----Proposed VSP Components{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "DepthMap",
+  "type": "object",
+  "additionalProperties": false
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "CameraModel",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "FocalLength": {
+      "type": "number",
+      "format": "float"
+    },
+    "AspectRatio": {
+      "type": "number",
+      "format": "float"
+    },
+    "NearClip": {
+      "type": "number",
+      "format": "float"
+    },
+    "FarClip": {
+      "type": "number",
+      "format": "float"
+    },
+    "FieldOfView": {
+      "type": "number",
+      "format": "float"
+    },
+    "SensorWidth": {
+      "type": "number",
+      "format": "float"
+    },
+    "SensorHeight": {
+      "type": "number",
+      "format": "float"
+    },
+    "Position": {
+      "$ref": "#/definitions/Vector3"
+    },
+    "Rotation": {
+      "$ref": "#/definitions/Quaternion"
+    }
+  },
+  "definitions": {
+    "Vector3": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "Quaternion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "format": "double"
+        },
+        "y": {
+          "type": "number",
+          "format": "double"
+        },
+        "z": {
+          "type": "number",
+          "format": "double"
+        },
+        "w": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    }
+  }
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "CameraCalibration",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "Fx": {
+      "type": "number",
+      "format": "float"
+    },
+    "Fy": {
+      "type": "number",
+      "format": "float"
+    },
+    "Cx": {
+      "type": "number",
+      "format": "float"
+    },
+    "Cy": {
+      "type": "number",
+      "format": "float"
+    },
+    "K1": {
+      "type": "number",
+      "format": "float"
+    },
+    "K2": {
+      "type": "number",
+      "format": "float"
+    },
+    "P1": {
+      "type": "number",
+      "format": "float"
+    },
+    "P2": {
+      "type": "number",
+      "format": "float"
+    },
+    "K3": {
+      "type": "number",
+      "format": "float"
+    }
+  }
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "TargetSet",
+  "type": "object",
+  "additionalProperties": false
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "RadianceField",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "radianceField": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/GaussianRadianceSample3D"
+      }
+    }
+  },
+  "definitions": {
+    "GaussianRadianceSample3D": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Position": {
+          "$ref": "#/definitions/Vector3"
+        },
+        "Scale": {
+          "$ref": "#/definitions/Vector3"
+        },
+        "Rotation": {
+          "$ref": "#/definitions/Quaternion"
+        },
+        "Color": {
+          "$ref": "#/definitions/Vector3"
+        },
+        "Opacity": {
+          "type": "number",
+          "format": "float"
+        }
+      }
+    },
+    "Vector3": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "Quaternion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "format": "double"
+        },
+        "y": {
+          "type": "number",
+          "format": "double"
+        },
+        "z": {
+          "type": "number",
+          "format": "double"
+        },
+        "w": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    }
+  }
+}{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "TimeLimitedID",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "ID": {
+      "type": "string"
+    },
+    "termination": {
+      "$ref": "#/definitions/Instant"
+    }
+  },
+  "definitions": {
+    "Instant": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "timeCoordinate": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "epoch": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "int64"
+        },
+        "TCRS": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+	"OGC_bog": {
+		"bog_uri": "https://citygml.info/ogc-khronos-forum/prototype/proto.gltf",
+		"bog_name": "Hillyfields",
+		"bog_geopose": {
+			"position": {
+				"lat": 50.938138822,
+				"lon": -1.470733806,
+				"h": 17.0
+			},
+			"angles": {
+				"yaw": 0,
+				"pitch": -90.0,
+				"roll": 0.0
+			}
+		},
+		"bog_unixTime": 1560618000,
+		"bog_radius": 500.0,
+		"bog_minunixtime": 1560618000,
+		"bog_maxunixtime": 1560621600
+	}
+}

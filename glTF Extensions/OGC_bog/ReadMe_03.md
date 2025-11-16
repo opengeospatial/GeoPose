@@ -1,0 +1,65 @@
+<!--
+Copyright 2015-2021 The Khronos Group Inc.
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+# **OGC_geolocate_orient_bound**: An Extension to Support GeoSpatial Content in a glTF Scene.
+
+## Contributors
+
+* Christine Perey, PEREY Research & Consulting, cperey@perey.com
+* Steve Smyth, co-Chair OGC GeoPose SWG, steve@opensiteplan.org
+* Jeremy Morley, University College London, ucfsjmg@ucl.ac.uk
+
+## Status
+
+Draft
+
+## Dependencies
+
+Written against the Khronos glTF 2.0 spec and the Open Geospatial Consortium (OGC) GeoPose 1.0 standard.
+
+## Overview
+
+The proposed extension geolocates, orients, and bounds a glTF Scene in space and time. 
+
+
+### Geolocates 
+The extension links the "floating" 3D origin of the glTF coordinate system to a position in geographically located three-dimensional space. The extension also identifies the proper time, measured by a clock at the origin, and well-defined even with very high velocities between unaccelerated reference frames. 
+
+
+### Orients 
+The extension provides the 3D rotational relationship between that 3D Cartesian coordinate system and coordinates in an East(X), North(Y), Up(Z) plane tangent to the earth at the origin, using a JSON-encoded Basic-YPR OGC GeoPose v1.0. 
+
+### Bounds 
+The extension specifies spatial bounds as a maximum distance in meters from the origin of the glTF coordinate system. This defines the valid extent of a model. It may represent a real-world property such as a cell-tower service radius or a collision volume.
+
+### Use cases
+1. Publication of CityGML models in glTF 2.
+2. Preloading of visual perception systems.
+3. Exchange of visual perception fragments from vehicle mounted mobile platfforms.
+4. Archive of geolocated surveillance video, including video with WebVMT tracks.
+
+## glTF Schema Updates
+
+OGC_geolocate_orient_bound is implemented as a JSON object carrying the bounds, orientation, and geolocation parameters of a scenegraph. It becomes an additional property of a glTF Scene object. If a glTF model contains multiple Scenes, it may contain multiple OGC_geolocate_orient_bound properties. A Scene shall **not** have more than one OGC_geolocate_orient_bound property.
+
+### JSON Schema
+
+[JSON-Schema](https://github.com/opengeospatial/GeoPose/blob/Version-1.x-editors-/glTF%20Extensions/OGC_bog/OGC_bog_schema.json)
+
+## Known Implementations
+
+* Hillyfields Bubble [JSON object](https://github.com/opengeospatial/GeoPose/blob/Version-1.x-editors-/glTF%20Extensions/OGC_bog/OGC_bog_example.json) .
+
+<img src="2025-10-02-224001.png" alt="hfb" width="200">
+
+
+* .
+* .
+
+## Resources
+
+* .
+* .
+* .

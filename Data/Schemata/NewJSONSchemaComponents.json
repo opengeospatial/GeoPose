@@ -1,0 +1,114 @@
+{
+	"position": {
+		"type": "object",
+		"properties": {
+			"lat": {
+				"type": "number",
+				"format": "double"
+			},
+			"lon": {
+				"type": "number",
+				"format": "double"
+			},
+			"h": {
+				"type": "number",
+				"format": "double"
+			}
+		},
+		"required": [
+			"lat",
+			"lon",
+			"h"
+		]
+	},
+	"quaternion": {
+		"type": "object",
+		"properties": {
+			"x": {
+				"type": "number",
+				"format": "double"
+			},
+			"y": {
+				"type": "number",
+				"format": "double"
+			},
+			"z": {
+				"type": "number",
+				"format": "double"
+			},
+			"w": {
+				"type": "number",
+				"format": "double"
+			}
+		},
+		"required": [
+			"x",
+			"y",
+			"z",
+			"w"
+		]
+	},
+	"angles": {
+		"type": "object",
+		"properties": {
+			"yaw": {
+				"type": "number",
+				"format": "double"
+			},
+			"pitch": {
+				"type": "number",
+				"format": "double"
+			},
+			"roll": {
+				"type": "number",
+				"format": "double"
+			}
+		},
+		"required": [
+			"yaw",
+			"pitch",
+			"roll"
+		]
+	},
+	"instant": {
+		"type": "object",
+		"additionalProperties": false,
+		"properties": {
+			"time": {
+				"type": "integer",
+				"format": "int64"
+			},
+			"epoch": {
+				"type": "integer",
+				"format": "int64"
+			}
+		},
+		"TCRS": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"required": [
+			"time"
+		],
+		"dependentRequired": {
+			"epoch": [
+				"TCRS"
+			]
+		}
+	},
+	"coordinates": {
+		"type": "object",
+		"additionalProperties": false,
+		"properties": {
+			"coordinates": {
+				"type": "array",
+				"items": {
+					"type": "number",
+					"format": "double"
+				}
+			}
+		}
+	}
+}
