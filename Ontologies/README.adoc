@@ -1,0 +1,1 @@
+This folder contains work by the OGC GeoPose SWG and others on OWL/RDF ontologies for GeoPose, Reality Modeling Language, and other pose-involving standards.
