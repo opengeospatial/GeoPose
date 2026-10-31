@@ -1,6 +1,6 @@
 # Reference Frame Graphs
 
-**Subtitle:** A conceptual model for interoperable reference frame specification.
+**Subtitle:** A practical and complete conceptual model for interoperable reference frame specification.
 **Document type:** Research paper  
 **Status:** In-progress background paper; reference for normative GeoPose 1.1 standard  
 **Target length:** Approximately 35 pages of main text, suitable for journal publication  
@@ -8,7 +8,7 @@
 **Affiliation(s):** [To be completed]  
 **Version/date:** Draft 0.31 — October 2026
 
-> **Note:** Each subsection contains a short writing instruction and a `Content goes here.` placeholder. I am replacing these as the manuscript develops. 
+> **Note:** Each subsection has some placeholder text.  I am replacing these as the manuscript develops. 
 
 ## Abstract
 
@@ -42,7 +42,7 @@ Differential geometry provides a framework for understanding how a locally Eucli
 
 ### 1.3 Central principle
 
-GeoPose encapsulates the specification of a three-dimensional local spatial reference frame, expressed relative to one of three designated reference frames. The local representation is independent of geometry-dependent relations and transformations between frames.
+The linked frame model encapsulates the specification of a three-dimensional local spatial reference frame, expressed relative to one of three designated standard The linked framereference frames. The local representation is independent of geometry-dependent relations and transformations between frames.
 
 A local spatial reference frame, consists of a position and an orientation. A linked frame has a transformation to another reference frame. A floating frame has no linking transformation.
 
@@ -358,7 +358,7 @@ The ENU frame is right-handed:
 
 $$\hat{\mathbf e}_E\times\hat{\mathbf e}_N=\hat{\mathbf e}_U.$$
 
-This local frame is useful for representing a GeoPose relative to a terrestrial reference position.
+This local frame is useful for representing a frame relative to a terrestrial reference position.
 
 ##### 2.4.1.7. Relationship to ITRF2020
 
@@ -403,7 +403,7 @@ where $\mathbf V$ is a station or point velocity and $t_0$ is a reference epoch.
 - A local East–North–Up reference frame can be constructed at a selected geodetic point.
 - WGS84 is widely used in GPS and global geospatial applications.
 
-##### 2.4.1.10. Relevance to the GeoPose Conceptual Model
+##### 2.4.1.10. Relevance to the linked frame Conceptual Model
 
 A single terrestrial reference system supports several coordinate representations and a locally defined spatial frame. In the linked frame conceptual model, the LTP-ENU frame provides an example of a local Euclidean frame whose origin and orientation are specified relative to a larger, externally defined terrestrial frame.
 
@@ -497,7 +497,7 @@ VLBI observations measure directions to distant radio sources with microarcsecon
 
 #### 2.4.4.6. Relationship to other reference systems
 
-The supplied infographic identifies these relationships:
+The ICRF is related to three important standard frames:
 
 - **BCRS:** ICRS orientation is aligned with the BCRS at J2000.0, stated as within approximately 0.1 milliarcseconds.
 - **GCRS:** The Geocentric Celestial Reference System provides a related framework for applications near Earth.
@@ -527,9 +527,9 @@ The time-line illustration in the source shows epochs J2000.0, 2100, 2200, and 2
 
 **TCB — Barycentric Coordinate Time:** The coordinate time scale associated with the barycentric reference system.
 
-#### 2.4.4.9. Relevance to the GeoPose conceptual model
+#### 2.4.4.9. Relevance to the linked frame conceptual model
 
-The ICRS provides an example of an externally defined celestial reference system to which a local GeoPose may be related. For example, a spacecraft antenna's local Euclidean frame can be oriented toward a target whose direction is determined using celestial navigation data.
+The ICRS provides an example of an externally defined celestial reference system to which a local frame may be related. For example, a spacecraft antenna's local Euclidean frame can be oriented toward a target whose direction is determined using celestial navigation data.
 
 The linked frame model represents the local frame and the existence of a transformation to another frame; celestial ephemerides, light-time calculations, reference-frame transformations, and other geometry-dependent computations are supplied by separate standards and implementations.
 
@@ -601,7 +601,7 @@ The ICRS provides a stable orientation reference for precise celestial observati
 
 *Content goes here.*
 
-### 4.4 Definition of GeoPose
+### 4.4 Definition of a local frame
 
 A local frame defines a local Euclidean spatial reference frame at a point in space or at an event in spacetime. Its orientation may be established relative to another reference frame using locally defined directions, including tangents to geodesics. The mathematical operations required to relate the frames depend on the geometry of the containing space or spacetime. A complete orientation requires sufficient independent constraints to determine all three rotational degrees of freedom.
 
@@ -610,7 +610,7 @@ There are three distinct concepts:
 1. **The local spatial frame**.
 2. Geometric relationship: The mathematical relationship between points, events, directions, and frames.
 3. Frame transformation: The operation that establishes the position and orientation of one frame relative to another.
-There is one further subtlety: in curved space, comparing orientations at different points generally requires parallel transport along a specified path. Different paths may produce different orientations because of curvature. This is a property of the geometry, not a limitation of the GeoPose representation.
+There is one further subtlety: in curved space, comparing orientations at different points generally requires parallel transport along a specified path. Different paths may produce different orientations because of curvature. This is a property of the geometry, not a limitation of the frame representation.
 
 ### 4.5 Reference frame and reference context
 
@@ -630,7 +630,7 @@ There is one further subtlety: in curved space, comparing orientations at differ
 
 *Content goes here.*
 
-**Figure placeholder:** Core GeoPose UML conceptual model.
+**Figure placeholder:** Core frame graph UML conceptual model.
 
 ## 5. Representations of Position and Orientation
 
@@ -721,7 +721,7 @@ Transformation algorithms, ephemeris computation, Earth-orientation models, and 
 
 6Componentization
 
-**TBD** Describe the components and how they may be combined to form a GeoPose.
+**TBD** Describe the components and how they may be combined to form a frame graph.
 **TBD** Evaluate the proposed parameter-quality naming pattern (e.g., positionResolution, positionBias). Distinguish conceptual quality from a chosen serialization.
 
 *Content goes here.*
@@ -768,7 +768,7 @@ The calculation involves four reference frames:
 3. **Spacecraft body local frame:** A frame attached to the spacecraft, with attitude provided by navigation data.
 4. **Antenna local frame:** A frame attached to the antenna, with its origin at a reference point and its $Z$-axis aligned with the boresight.
 
-The ITRF2020-to-celestial transformation depends on time and Earth orientation parameters. The body-frame transformation depends on spacecraft attitude. These transformations are supplied by external standards and implementations, not by the GeoPose conceptual model.
+The ITRF2020-to-celestial transformation depends on time and Earth orientation parameters. The body-frame transformation depends on spacecraft attitude. These transformations are supplied by external standards and implementations, not by the  conceptual model.
 
 ### 8.3. Compute position and direction
 
@@ -826,11 +826,11 @@ $$
 
 Alignment determines the pointing direction but leaves rotation about the boresight undetermined. A roll convention or mechanical constraint supplies the remaining orientation constraint. The complete rotation can be represented by a quaternion or matrix.
 
-### 8.5. Define the antenna GeoPose
+### 8.5. Define the antenna frame
 
 ![Illustration of the spacecraft antenna local frame and boresight](images/antenna_geopose_frame.png)
 
-The antenna GeoPose specifies a local spatial reference frame at the antenna reference point, with its local $Z$-axis aligned with the antenna boresight.
+The antenna frame is a local spatial reference frame at the antenna reference point, with its local $Z$-axis aligned with the antenna boresight.
 
 #### 8.5.1. Components
 
@@ -880,7 +880,7 @@ The original infographic provides these example values. They are **not** calcula
 
 ### 8.6. Use of the Frame
 
-The computed local frame specifies the antenna's local reference frame relative to the spacecraft body frame. It can support antenna pointing commands, subject to the spacecraft's mechanical configuration and capabilities, and can be combined with other GeoPoses representing the spacecraft and instruments.
+The computed local frame specifies the antenna's local reference frame relative to the spacecraft body frame. It can support antenna pointing commands, subject to the spacecraft's mechanical configuration and capabilities, and can be combined with other linked frames representing the spacecraft and instruments.
 
 **Central principle:** A frame provides a simple local Euclidean representation of position and orientation, while the operations needed to relate frames may involve Earth orientation, celestial mechanics, light propagation, and relativistic spacetime geometry.
 
@@ -905,7 +905,7 @@ The frame is a simple local Euclidean representation of position and orientation
 
 ### 8.4 Comparison of examples across scales
 
-**TBD** Demonstrate which GeoPose concepts remain unchanged and which contextual geometric/physical models vary across the three examples.
+**TBD** Demonstrate which  concepts remain unchanged and which contextual geometric/physical models vary across the three examples.
 
 *Content goes here.*
 
@@ -957,7 +957,7 @@ The frame is a simple local Euclidean representation of position and orientation
 
 ### 10.3 External transformation standards and implementations
 
-**TBD** Specify the division of responsibility between GeoPose concepts and separate reference-frame transformation specifications, software, ephemerides, and test suites.
+**TBD** Specify the division of responsibility between linked frame concepts and separate reference-frame transformation specifications, software, ephemerides, and test suites.
 
 *Content goes here.*
 
@@ -1063,9 +1063,9 @@ There is no single canonical reference bridging spacetime geometry and spatial c
 
 ## Notes (remove before submission)
 
-- **Primary argument:** GeoPose is a simple local spatial-frame specification; differential geometry provides the general mathematical context in which such frames are interpreted and related.
+- **Primary argument:** linked frames are a simple local spatial-frame specification; differential geometry provides the general mathematical context in which such frames are interpreted and related.
 - **Scope:** The conceptual model does not prescribe transformation algorithms or ephemeris computation.
-- **Important distinction:** A 3D spatial frame in relativistic spacetime requires observer-related context; the GeoPose alone is not a full 4D spacetime frame.
+- **Important distinction:** A 3D spatial frame in relativistic spacetime requires observer-related context; the frame and link alone are not a full 4D spacetime frame.
 - **Important distinction:** A geodesic tangent provides a direction, not a full three-axis orientation. This is the same as a look-at pose specification in computer graphics. Another basis vector is needed, such as the "up" direction.
 - **Spacecraft example:** Use **TAI** (International Atomic Time), not “TIA”; verify time-scale conversions required by ephemeris and Earth-orientation implementations.
 - **Review checkpoints:** After completing Sections 1–4, request a conceptual/mathematical review. After Sections 5–8, request a representation and worked-example review. After Sections 9–11, request a publication-readiness review.
