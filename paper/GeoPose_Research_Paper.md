@@ -1,30 +1,30 @@
-# GeoPose: A Generalized Conceptual Model for Local Spatial Reference Frames
+# Reference Frame Graphs
 
-**Subtitle:** Differential-Geometric Foundations, Reference Frames, Quality, and Geospatial Applications  
+**Subtitle:** A conceptual model for interoperable reference frame specification.
 **Document type:** Research paper  
-**Status:** Outline for background paper; reference for normative GeoPose 1.1 standard  
-**Target length:** Approximately 25 pages of main text, suitable for journal publication  
-**Author(s):** Morley, Antonisse, Smith, Smyth, Vinje  
+**Status:** In-progress background paper; reference for normative GeoPose 1.1 standard  
+**Target length:** Approximately 35 pages of main text, suitable for journal publication  
+**Author(s):**  Smyth  
 **Affiliation(s):** [To be completed]  
-**Version/date:** Draft 0.3 — October 2026
+**Version/date:** Draft 0.31 — October 2026
 
 > **Note:** Each subsection contains a short writing instruction and a `Content goes here.` placeholder. I am replacing these as the manuscript develops. 
 
 ## Abstract
 
-An observer in physical space may record (proper) time and three orthogonal measures of distance in a local reference frame. The observer's local frame has a defining origin and an orientation. The pose concept, taken from computer graphics and mirroring everyday human visual perception, can be shown to work rigorously as a means to specify any such local Euclidean frame embedded in our most general conception of physical space and time: Riemannian spacetime. A local Euclidean frame is always possible for any time and 3-space origin, even though the relationship between local frames may involve the full complexity of Einsteinian spacetime. When a local frame is related to another frame defined by arbitrary convention, such as earth or celestial reference frames, the existence of this relationship may be denoted by calling the pose a GeoPose. This paper details the mathematical foundation that allows the basic GeoPose concept as specified in the OGC GeoPose 1.0 standard to be extended across space, time, and spacetime.
+An observer in physical space may record (proper) time and three orthogonal measures of distance in a local reference frame. The observer's local frame has a defining origin and an orientation. The pose concept, taken from computer graphics and mirroring everyday human visual perception, can be shown to work rigorously as a means to specify any such local Euclidean frame embedded in our most general conception of physical space and time: Riemannian spacetime. A local Euclidean frame is always possible for any time and 3-space origin, even though the relationship between local frames may involve the full complexity of Einsteinian spacetime. When a local frame is related to a standard frame defined by arbitrary convention, such as earth or celestial reference frames, the existence of this relationship may be denoted linking the frames. This paper details the mathematical foundation of this frame graph framework and its extension across space, time, and spacetime.
 
-In addition to a structure that supports interoperable exchange of reference frame specifications via GeoPose, we describe three additional aspects of frame data exchange:
+In addition to a structure that supports interoperable exchange of reference frame specifications,  three additional aspects of frame data exchange are described:
 
-- uncertainty: bias, resolution, error, and belief
-- the steps and external resources needed to locate and orient one local frame with another
-- a componentized model of the components of a GeoPose.
+- **uncertainty**: bias, resolution, error, and belief
+- **transformation**: the steps and external resources needed to locate and orient one local frame with another
+- **components** that can be combined to represent a frame graph.
 
-The result is a frame representation that works for all physical spaces: GeoPose.
+The result is a frame graph representation that works for all physical spaces.
 
 ## Keywords
 
-GeoPose; conceptual model; origin, orientation, local reference frame; Riemannian manifold, differential geometry; spatial computing; geodesy; spacetime; uncertainty; bias; resolution; error; belief;  interoperability.
+conceptual model; origin, orientation, local reference frame; Riemannian manifold, differential geometry; spatial computing; geodesy; spacetime; uncertainty; bias; resolution; error; belief;  interoperability.
 
 ## 1. Introduction
 
@@ -32,11 +32,11 @@ GeoPose; conceptual model; origin, orientation, local reference frame; Riemannia
 
 There is a need for a simple, interoperable description of local position and orientation that can be used in terrestrial, visual-positioning, and astronomical contexts without embedding transformation algorithms or parameters in the representation.
 
-Differential geometry provides a framework for understanding how a locally Euclidean concept, the pose of computer graphics, can meet this need without serious modification. The only extra information that may be needed is the proper time at the origin of the pose, and linkage to one of three externally defined reference frames. The linkage makes a pose a GeoPose. This paper demonstrates how the precise relationship to generalised physical space make the GeoPose applicable to any local frame definition in the Universe.
+Differential geometry provides a framework for understanding how a locally Euclidean concept, the pose of computer graphics, can meet this need without serious modification. The only extra information that may be needed is the proper time at the origin of the pose, and linkage to one of three externally defined standard reference frames. This paper demonstrates how the precise relationship to generalised physical space makes the model applicable to any local frame definition in the Universe.
 
 ### 1.2 Objectives and questions
 
-**TBD** State the questions addressed: what a GeoPose specifies; which geometric structures make it meaningful; how a local spatial frame can be situated in broader physical geometry; and what information is needed to compare frames.
+**TBD** State the questions addressed: what a frame graph specifies; which geometric structures make it meaningful; how a local spatial frame can be situated in broader physical geometry; and what information is needed to compare frames.
 
 *Content goes here.*
 
@@ -44,15 +44,15 @@ Differential geometry provides a framework for understanding how a locally Eucli
 
 GeoPose encapsulates the specification of a three-dimensional local spatial reference frame, expressed relative to one of three designated reference frames. The local representation is independent of geometry-dependent relations and transformations between frames.
 
-A GeoPose encapsulates the local specification of a spatial reference frame, consisting of a position and an orientation expressed relative to another reference frame.
+A local spatial reference frame, consists of a position and an orientation. A linked frame has a transformation to another reference frame. A floating frame has no linking transformation.
 
 The concept is independent of the global geometry of the space or spacetime in which the frame is defined. It is applicable to Euclidean space, curved spatial manifolds, and physical spacetime modeled using special or general relativity.
 
 The mathematical foundation for this generality is differential geometry. A smooth manifold provides a locally Euclidean coordinate structure, while its tangent spaces provide the setting for defining local spatial frames. Metrics, connections, and transformations provide the additional mathematical structures needed to establish geometric relationships between frames.
 
-Consequently, a GeoPose can retain a simple local representation while participating in geometric configurations extending across arbitrary spatial and temporal scales and relative velocities, provided that the necessary geometric and physical structures are specified.
+A linked frame can retain a simple local representation while participating in geometric configurations extending across arbitrary spatial and temporal scales and relative velocities, provided that the necessary geometric and physical structures are specified.
 
-This approach does not introduce a new theory of space or time. Rather, it places the GeoPose concept within established mathematical treatments of space, time, and spacetime, using local reference frames as the common foundation for representing position and orientation.
+This approach does not introduce a new theory of space or time. Rather, it places the linked frame concept within established mathematical treatments of space, time, and spacetime, using local reference frames as the common foundation for representing position and orientation.
 
 *Content goes here.*
 
@@ -250,7 +250,7 @@ $$
 SE(3) is used in:
 
 - **Robotics:** End-effector pose and kinematics.
-- **Computer vision:** Camera pose and simultaneous localization and mapping (SLAM).
+- **Computer vision:** Camera pose, simultaneous localization and mapping (SLAM), and visual positioning.
 - **State estimation:** Estimation and optimization on manifolds.
 - **Rigid-body registration and calibration:** Alignment of objects, sensors, and coordinate frames.
 
@@ -262,14 +262,11 @@ $$
 
 SE(3) is the mathematical backbone of three-dimensional pose representation and rigid-body motion.
 
-##### Relevance to GeoPose
+##### Relevance to linked frames
 
-SE(3) provides a natural mathematical representation for the six-degree-of-freedom relationship between two Euclidean spatial frames. For the proposed GeoPose conceptual model, this representation is particularly appropriate within a local tangent space or another specified Euclidean spatial region. Relating such frames across a curved manifold may require additional geometric structures and transformation procedures external to the GeoPose representation.
+SE(3) provides a natural mathematical representation for the six-degree-of-freedom relationship between two Euclidean spatial frames. For the proposed GeoPose conceptual model, this representation is particularly appropriate within a local tangent space or another specified Euclidean spatial region. Relating such frames across a curved manifold may require additional geometric structures and transformation procedures external to the linked frame representation.
 
 ---
-
-**Editorial note:** The infographic's mathematical content has been transcribed into standard notation. The numerical matrix is shown with rounded entries. The exact interpretation of a frame transformation depends on the adopted active/passive and source/target frame conventions, which should be specified in the paper.
-
 
 ### 2.4 Reference systems in geodesy and astronomy
 
@@ -408,9 +405,9 @@ where $\mathbf V$ is a station or point velocity and $t_0$ is a reference epoch.
 
 ##### 2.4.1.10. Relevance to the GeoPose Conceptual Model
 
-A single terrestrial reference system supports several coordinate representations and a locally defined spatial frame. In the GeoPose conceptual model, the LTP-ENU frame provides an example of a local Euclidean frame whose origin and orientation are specified relative to a larger, externally defined terrestrial frame.
+A single terrestrial reference system supports several coordinate representations and a locally defined spatial frame. In the linked frame conceptual model, the LTP-ENU frame provides an example of a local Euclidean frame whose origin and orientation are specified relative to a larger, externally defined terrestrial frame.
 
-The coordinate conversions and transformations are separate mathematical operations; they need not be defined by the GeoPose representation itself.
+The coordinate conversions and transformations are separate mathematical operations; they need not be defined by the linked frame representation itself.
 
 #### 2.4.2. International Terrestrial Reference Frame
 
@@ -534,7 +531,7 @@ The time-line illustration in the source shows epochs J2000.0, 2100, 2200, and 2
 
 The ICRS provides an example of an externally defined celestial reference system to which a local GeoPose may be related. For example, a spacecraft antenna's local Euclidean frame can be oriented toward a target whose direction is determined using celestial navigation data.
 
-The GeoPose represents the local frame; celestial ephemerides, light-time calculations, reference-frame transformations, and other geometry-dependent computations are supplied by separate standards and implementations.
+The linked frame model represents the local frame and the existence of a transformation to another frame; celestial ephemerides, light-time calculations, reference-frame transformations, and other geometry-dependent computations are supplied by separate standards and implementations.
 
 #### 2.4.4.10. Summary and editorial notes
 
@@ -572,7 +569,7 @@ The ICRS provides a stable orientation reference for precise celestial observati
 
 ### 3.5 Local spatial frames in relativistic spacetime
 
-**TBD** Explain the observer-dependent spatial subspace at an event, its Euclidean inner product, and the additional observer/time information required for relativistic interpretation. Avoid treating a 3D GeoPose as a complete 4D spacetime frame.
+**TBD** Explain the observer-dependent spatial subspace at an event, its Euclidean inner product, and the additional observer/time information required for relativistic interpretation. Avoid treating a local frame as a complete 4D spacetime frame.
 
 *Content goes here.*
 
@@ -584,7 +581,7 @@ The ICRS provides a stable orientation reference for precise celestial observati
 
 **Figure placeholder:** Local tangent frames situated within a curved manifold.
 
-## 4. GeoPose Conceptual Model
+## 4. Conceptual Model
 
 ### 4.1 Conceptual design principles
 
@@ -606,11 +603,11 @@ The ICRS provides a stable orientation reference for precise celestial observati
 
 ### 4.4 Definition of GeoPose
 
-A GeoPose specifies a local Euclidean spatial reference frame at a point in space or at an event in spacetime. Its orientation may be established relative to another reference frame using locally defined directions, including tangents to geodesics. The mathematical operations required to relate the frames depend on the geometry of the containing space or spacetime. A complete orientation requires sufficient independent constraints to determine all three rotational degrees of freedom.
+A local frame defines a local Euclidean spatial reference frame at a point in space or at an event in spacetime. Its orientation may be established relative to another reference frame using locally defined directions, including tangents to geodesics. The mathematical operations required to relate the frames depend on the geometry of the containing space or spacetime. A complete orientation requires sufficient independent constraints to determine all three rotational degrees of freedom.
 
 There are three distinct concepts:
 
-1. GeoPose: The local spatial frame.
+1. **The local spatial frame**.
 2. Geometric relationship: The mathematical relationship between points, events, directions, and frames.
 3. Frame transformation: The operation that establishes the position and orientation of one frame relative to another.
 There is one further subtlety: in curved space, comparing orientations at different points generally requires parallel transport along a specified path. Different paths may produce different orientations because of curvature. This is a property of the geometry, not a limitation of the GeoPose representation.
@@ -623,7 +620,7 @@ There is one further subtlety: in curved space, comparing orientations at differ
 
 ### 4.6 Core concept dictionary
 
-**TBD** Provide concise definitions for Space, Spacetime, Event, Point, Position, Direction, Orientation, Local Frame, Reference Frame, GeoPose, Metric, Connection, Geodesic, and Transformation. Keep the exhaustive dictionary in an appendix or companion standards document.
+**TBD** Provide concise definitions for Space, Spacetime, Event, Point, Position, Direction, Orientation, Local Frame, Reference Frame,  Metric, Connection, Geodesic, and Transformation. Keep the exhaustive dictionary in an appendix or companion standards document.
 
 *Content goes here.*
 
@@ -662,7 +659,7 @@ SO(3) and SE(3) are mathematical tools for relating local frames.
 
 *Content goes here.*
 
-## 6. Relating GeoPoses in Geometric Contexts
+## 6. Relating Linked Frames in Geometric Contexts
 
 ### 6.1 Relationship between two local frames
 
@@ -688,7 +685,7 @@ SO(3) and SE(3) are mathematical tools for relating local frames.
 
 *Content goes here.*
 
-### 6.5 Scope of the GeoPose standard
+### 6.5 Scope of the model
 
 Transformation algorithms, ephemeris computation, Earth-orientation models, and relativistic propagation calculations are outside the proposed conceptual standard. 
 
@@ -731,19 +728,19 @@ Transformation algorithms, ephemeris computation, Earth-orientation models, and 
 
 ### 7.6 Semantic identity and confidence (optional extension)
 
-Visual-positioning applications may attach identity and semantic predictions to features. Make clear that categorical confidence is distinct from geometric measurement uncertainty and is outside the GeoPose core.
+Visual-positioning applications may attach identity and semantic predictions to features. Make clear that categorical confidence is distinct from geometric measurement uncertainty and is outside the core.
 
 ## 8. Worked Examples and Use Cases
 
-These examples illustrate the use of GeoPose in complex configurations of reference frame at large distances and in complex states of relative motion.
+These examples illustrate the use of linked frames in complex configurations at large distances and in complex states of relative motion.
 
 ### 8.1. Pointing a Spacecraft Antenna Toward a Terrestrial Target
 
-This example describes computing a GeoPose for a spacecraft antenna, such as one on Voyager 1, directed toward a fixed terrestrial target. It is an illustrative conceptual example, not an operational pointing solution.
+This example describes computing a local frame for a spacecraft antenna, such as one on Voyager 1, directed toward a fixed terrestrial target. It is an illustrative conceptual example, not an operational pointing solution.
 
 #### 8.1.1. Specify the inputs
 
-The objective is to compute a GeoPose specifying the position and orientation of an antenna mounted on a spacecraft so that its boresight points toward a specified terrestrial target at a given time.
+The objective is to compute a local frame specifying the position and orientation of an antenna mounted on a spacecraft so that its boresight points toward a specified terrestrial target at a given time.
 
 #### 8.1.1.1 Ground target (ITRF2020)
 
@@ -835,7 +832,7 @@ Alignment determines the pointing direction but leaves rotation about the boresi
 
 The antenna GeoPose specifies a local spatial reference frame at the antenna reference point, with its local $Z$-axis aligned with the antenna boresight.
 
-#### 8.5.1. GeoPose components
+#### 8.5.1. Components
 
 **Position:** The antenna reference point relative to the spacecraft body-frame origin, for example:
 
@@ -856,7 +853,7 @@ R_{\mathrm{antenna}\rightarrow\mathrm{body}} & \mathbf p_{\mathrm{antenna}}\\
 \end{bmatrix}\in SE(3).
 $$
 
-The GeoPose remains a six-degree-of-freedom local representation even when astronomical ephemerides and relativistic models are used to calculate the direction.
+The frame remains a six-degree-of-freedom local representation even when astronomical ephemerides and relativistic models are used to calculate the direction.
 
 #### 8.5.2. Example numerical results (illustrative)
 
@@ -881,23 +878,21 @@ The original infographic provides these example values. They are **not** calcula
 
 **Note and TBD** The illustrative directions and quaternion are not a mutually consistent numerical solution. Need to derive all values from one documented ephemeris, attitude, time convention, and frame-transformation pipeline.
 
-### 8.6. Use of the GeoPose
+### 8.6. Use of the Frame
 
-The computed GeoPose specifies the antenna's local reference frame relative to the spacecraft body frame. It can support antenna pointing commands, subject to the spacecraft's mechanical configuration and capabilities, and can be combined with other GeoPoses representing the spacecraft and instruments.
+The computed local frame specifies the antenna's local reference frame relative to the spacecraft body frame. It can support antenna pointing commands, subject to the spacecraft's mechanical configuration and capabilities, and can be combined with other GeoPoses representing the spacecraft and instruments.
 
-**Central principle:** A GeoPose provides a simple local Euclidean representation of position and orientation, while the operations needed to relate frames may involve Earth orientation, celestial mechanics, light propagation, and relativistic spacetime geometry.
+**Central principle:** A frame provides a simple local Euclidean representation of position and orientation, while the operations needed to relate frames may involve Earth orientation, celestial mechanics, light propagation, and relativistic spacetime geometry.
 
-The GeoPose conceptual model defines the local representation and its meaning. Separate standards and implementations are responsible for the transformations used to calculate and relate GeoPoses.
+The conceptual model defines the local representation and its meaning. Separate standards and implementations are responsible for the transformations used to calculate and relate linked frames.
 
-The GeoPose can be used to support antenna pointing commands, subject to the spacecraft's actual mechanical configuration and pointing capabilities.
+The local frame can be used to support antenna pointing commands, subject to the spacecraft's actual mechanical configuration and pointing capabilities.
 
-The antenna GeoPose can also be combined with other GeoPoses representing the spacecraft, its instruments, and associated reference frames to form a larger spatial model.
+The antenna frame can also be linked with other frames representing the spacecraft, its instruments, and associated reference frames to form a larger spatial model.
 
-The calculation demonstrates the central principle of the proposed GeoPose conceptual model:
+The calculation demonstrates the central principle of the proposed conceptual model:
 
-A GeoPose provides a simple local Euclidean representation of position and orientation, while the mathematical operations needed to establish relationships between frames may involve Earth orientation, celestial mechanics, light propagation, and relativistic spacetime geometry.
-
-The GeoPose standard defines the local representation and its conceptual meaning. The transformations used to calculate and relate GeoPoses remain the responsibility of separate standards and implementations.
+The frame is a simple local Euclidean representation of position and orientation, while the mathematical operations needed to establish relationships between frames may involve Earth orientation, celestial mechanics, light propagation, and relativistic spacetime geometry. The transformations used to calculate and relate frames remain the responsibility of separate standards and implementations.
 
 ### 8.2 Visual positioning of a camera
 
