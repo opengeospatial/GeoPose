@@ -1,6 +1,6 @@
-# Reference Frame Graphs
+# Frame Graphs
 
-**Subtitle:** A practical and complete conceptual model for interoperable reference frame specification.
+**Subtitle:** A practical and complete conceptual model for interoperable reference frame specifications.
 **Document type:** Research paper  
 **Status:** In-progress background paper; reference for normative GeoPose 1.1 standard  
 **Target length:** Approximately 35 pages of main text, suitable for journal publication  
@@ -12,7 +12,7 @@
 
 ## Abstract
 
-An observer in physical space may record (proper) time and three orthogonal measures of distance in a local reference frame. The observer's local frame has a defining origin and an orientation. The pose concept, taken from computer graphics and mirroring everyday human visual perception, can be shown to work rigorously as a means to specify any such local Euclidean frame embedded in our most general conception of physical space and time: Riemannian spacetime. A local Euclidean frame is always possible for any time and 3-space origin, even though the relationship between local frames may involve the full complexity of Einsteinian spacetime. When a local frame is related to a standard frame defined by arbitrary convention, such as earth or celestial reference frames, the existence of this relationship may be denoted linking the frames. This paper details the mathematical foundation of this frame graph framework and its extension across space, time, and spacetime.
+An observer in physical space may record (proper) time and three orthogonal measures of distance in a local reference frame. The observer's local frame has a defining origin and an orientation. The pose concept, taken from computer graphics and mirroring everyday human visual perception, can be shown to work rigorously as a means to specify any such local Euclidean frame embedded in our most general conception of physical space and time: the pseudo-Riemannian manifold. A local Euclidean frame is always possible for any time and 3-space origin, even though the relationship between local frames may involve the full complexity of curved spacetime. When a local frame is related to a standard frame defined by arbitrary convention, such as earth or celestial reference frames, the existence of this relationship may be denoted by linking the frames. This paper details the mathematical foundation of a frame graph and its extension across space, time, and spacetime.
 
 In addition to a structure that supports interoperable exchange of reference frame specifications,  three additional aspects of frame data exchange are described:
 
@@ -31,6 +31,8 @@ conceptual model; origin, orientation, local reference frame; Riemannian manifol
 ### 1.1 Motivation and problem statement
 
 There is a need for a simple, interoperable description of local position and orientation that can be used in terrestrial, visual-positioning, and astronomical contexts without embedding transformation algorithms or parameters in the representation.
+
+Different expressions of the pose concept as the basis for frame specification are used in may spatial applications. Although the underlying concepts may be the same, the expression in different forms works against interoperability. Further, the applicability of a local Euclidean pose specification in frames across domains involving dynamic reference frame relationships.
 
 Differential geometry provides a framework for understanding how a locally Euclidean concept, the pose of computer graphics, can meet this need without serious modification. The only extra information that may be needed is the proper time at the origin of the pose, and linkage to one of three externally defined standard reference frames. This paper demonstrates how the precise relationship to generalised physical space makes the model applicable to any local frame definition in the Universe.
 
@@ -72,7 +74,7 @@ This approach does not introduce a new theory of space or time. Rather, it place
 
 ### 2.1 OGC GeoPose 1.0 and proposed GeoPose 1.1
 
-**TBD** Summarize existing definitions and representations. Specify precisely which elements are retained, clarified, generalized, or newly proposed. Do not assume all proposed changes are novel.
+**TBD** Summarize existing definitions and representations. Specify precisely which elements are retained, clarified, generalized, or newly proposed. Mostl proposed changes are not novel but rather reflect refactoring or repackaging. The primary new elements are the background within which Geo{oseor linked rference frames can be used across all of the pseudo-Riemannan spaces relevant to the physical universe.
 
 *Content goes here.*
 
@@ -232,7 +234,7 @@ $$
 
 where \(R=\exp([\phi]_\times)\in SO(3)\) and \(J(\phi)\) is the left Jacobian of SO(3).
 
-For small \(\|\phi\|\), the infographic gives the series approximation
+For small \(\|\phi\|\),  the infographic gives the series approximation
 
 $$
 J(\phi)\approx I+\frac12[\phi]_\times+\frac16[\phi]_\times^2.
@@ -270,7 +272,7 @@ SE(3) provides a natural mathematical representation for the six-degree-of-freed
 
 ### 2.4 Reference systems in geodesy and astronomy
 
-**TBD** Introduce ITRF2020, WGS 84 realizations, ICRS/ICRF, and BCRS. Carefully distinguish systems, frames, realizations, coordinate systems, and epochs.
+**TBD** Introduce ITRF2020, WGS 84 realizations, ICRS/ICRF, and BCRS. Distinguish systems, frames, realizations, coordinate systems, and epochs.
 
 #### 2.4.1. WGS84 G2296 Geodetic Reference System
 
@@ -358,13 +360,13 @@ The ENU frame is right-handed:
 
 $$\hat{\mathbf e}_E\times\hat{\mathbf e}_N=\hat{\mathbf e}_U.$$
 
-This local frame is useful for representing a frame relative to a terrestrial reference position.
+This local frame is useful for representing a frame relative to a terrestrial reference position, usually identified by a physical marker.
 
 ##### 2.4.1.7. Relationship to ITRF2020
 
 WGS84 G2296 is aligned with the International Terrestrial Reference Frame 2020 (ITRF2020).
 
-**TBD** There are specific dates that correspond to the WGS83 realizations of ITRF2020. There needs to be a final scrub of the dates and id numbers to make certain they are all consistent.
+**NOTE** There are specific dates that correspond to the WGS83 realizations of ITRF2020. There needs to be a final scrub of the dates and id numbers to make certain they are all consistent.
 
 It describes the origin, orientation, and scale of WGS84 G2296 as consistent with ITRF2020 at the stated realization epoch, and gives a schematic epoch-dependent relation:
 
@@ -396,7 +398,7 @@ where $\mathbf V$ is a station or point velocity and $t_0$ is a reference epoch.
 
 ##### 2.4.1.9. Summary
 
-- WGS84 G2296 is presented as an official realization of the WGS 84 geodetic reference system.
+- WGS84 G2296 is an official realization of the WGS 84 geodetic reference system.
 - It is Earth-centered, Earth-fixed, and aligned with ITRF2020.
 - The WGS84 ellipsoid defines the reference shape for geodetic latitude, longitude, and ellipsoidal height.
 - Positions can be expressed using geodetic $(\phi,\lambda,h)$ or Cartesian $(X,Y,Z)$ coordinates.
@@ -407,7 +409,7 @@ where $\mathbf V$ is a station or point velocity and $t_0$ is a reference epoch.
 
 A single terrestrial reference system supports several coordinate representations and a locally defined spatial frame. In the linked frame conceptual model, the LTP-ENU frame provides an example of a local Euclidean frame whose origin and orientation are specified relative to a larger, externally defined terrestrial frame.
 
-The coordinate conversions and transformations are separate mathematical operations; they need not be defined by the linked frame representation itself.
+The coordinate conversions and transformations are separate mathematical operations; they are not defined by the linked frame representation itself.
 
 #### 2.4.2. International Terrestrial Reference Frame
 
@@ -446,7 +448,7 @@ The ICRS uses a right-handed Cartesian coordinate system with origin at the Sola
 - **Y axis:** Completes the right-handed system.
 - **Z axis:** Toward the ICRS reference pole, declination +90°.
 
-The source notes that the ICRS axes are approximately aligned with the BCRS axes at J2000.0.
+The ICRS axes are approximately aligned with the BCRS axes at J2000.0.
 
 #### 2.4.4.4. Spherical celestial coordinates
 
