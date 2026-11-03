@@ -411,9 +411,29 @@ A single terrestrial reference system supports several coordinate representation
 
 The coordinate conversions and transformations are separate mathematical operations; they are not defined by the linked frame representation itself.
 
-#### 2.4.2. International Terrestrial Reference Frame
+#### 2.4.2. International Terrestrial Reference Frame (ITRF)
+
+#### 2.4.2.1. Overview
+
+
+| Concept | Center / Origin | Definition Type | Primary Function |
+| :--- | :--- | :--- | :--- |
+| BCRS | Solar System Barycenter | Theoretical & Relativistic  (Metric)| Models gravity, time, and light trajectories in the Solar System  |
+| ICRF| Solar System Barycenter | Theoretical & Relativistic (Metric) | Provides a fixed, non-rotating physical reference frame using quasars. |
+
+ ITRF is based on the precise measurement of the location of each of more than 1,800 reference stations on the Earth's surface. In addition to a position at the time of measurement, each station has an estimated velocity vector giving the speed and direction of motion of the station with respect to the underlying geodetic model. These velocities directly reflect the continuous drift of tectonic plates—typically moving at rates of about 1 to 10 centimeters per year. A practical consequence is that a position should include a time in order to account for crustal motion. The ITRF position of a physical marker on the Earth's surface will change over time.
+
+There are plate boundary and plate motion models based on the reference station positions and velocities, but these derived products do not affect the positions referencing the ITRF model.
 
 #### 2.4.3. Barycentric Coordinate Reference System
+
+#### 2.4.3.1. Overview
+
+BCRS (The Mathematical System): BCRS is a relativistic, four-dimensional spacetime coordinate system centered at the Solar System Barycenter. It defines the fundamental physics, metric tensors, and time scales (like Barycentric Coordinate Time, TCB) dictated by the International Astronomical Union (IAU).
+
+The Barycentric Celestial Reference System (BCRS) is a relativistic reference system centered at the center of mass (barycenter) of the Solar System. It is defined within the framework of General Relativity and is kinematically non-rotating with respect to distant extragalactic objects. The BCRS provides the fundamental coordinate system for modeling the motion of celestial bodies within the Solar System.
+
+In geodesy, the BCRS is essential for high-precision modeling of satellite dynamics, planetary ephemerides, and Very Long Baseline Interferometry (VLBI) observations. It forms the theoretical foundation for linking celestial and terrestrial reference systems and ensures consistency in the treatment of relativistic effects in Earth rotation, time scales, and space-geodetic observations.
 
 #### 2.4.4. International Celestial Reference Frame
 
@@ -719,11 +739,13 @@ Transformation algorithms, ephemeris computation, Earth-orientation models, and 
 
 ### 7.5 Quality metadata and naming conventions
 
-### 7.5 Describemetadata and naming conventions
+**TBD** Explain metadata.
 
-6Componentization
+*Content goes here.*
 
-**TBD** Describe the components and how they may be combined to form a frame graph.
+## 6.Componentization
+
+**TBD** Describe components and how they may be combined to form a frame graph.
 **TBD** Evaluate the proposed parameter-quality naming pattern (e.g., positionResolution, positionBias). Distinguish conceptual quality from a chosen serialization.
 
 *Content goes here.*
