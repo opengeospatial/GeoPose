@@ -1,0 +1,88 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn" type="title-intro">Date and time</title>
+  <title language="en" script="Latn" type="title-main">Representations for information interchange</title>
+  <title language="en" script="Latn" type="title-part">Part 2: Extensions</title>
+  <title language="en" script="Latn" type="main">Date and time - Representations for information interchange - Part 2: Extensions</title>
+  <title language="fr" script="Latn" type="title-intro">Date et heure</title>
+  <title language="fr" script="Latn" type="title-main">Représentations pour l'échange d'information</title>
+  <title language="fr" script="Latn" type="title-part">Partie 2: Extensions</title>
+  <title language="fr" script="Latn" type="main">Date et heure - Représentations pour l'échange d'information - Partie 2: Extensions</title>
+  <uri type="src">https://www.iso.org/standard/70908.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:70908:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/07/09/70908.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 8601-2:2019</docidentifier>
+  <docidentifier type="iso-undated">ISO 8601-2</docidentifier>
+  <docidentifier type="iso-reference">ISO 8601-2:2019(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:8601:-2:stage-90.92</docidentifier>
+  <docnumber>8601</docnumber>
+  <date type="published">
+    <on>2019-02-25</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="technical-committee" subtype="TC">
+        <name>Processes, data elements and documents in commerce, industry and administration</name>
+        <identifier>ISO/TC 154</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This document specifies additional representations of dates of the Gregorian calendar and times based on the 24-hour clock that extend the basic rules and composite elements of those defined in ISO 8601-1. These representations are specified as character strings for use in information interchange. It is also applicable for representing times and time shifts based on Coordinated Universal Time (UTC). These extensions include: — uncertain or approximate dates, or dates with portions unspecified; — extended time intervals; — divisions of a year; — sets and choices of calendar dates; — grouped time scale units; — repeat rules for recurring time intervals; and — date and time arithmetic. This document excludes the representation of date elements from non-Gregorian calendars, or times not from the 24-hour clock. This document does not address character encoding of representations specified in this document.</abstract>
+  <status>
+    <stage>90</stage>
+    <substage>92</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>ISO</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem>
+      <formattedref>ISO 8601:2004</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 8601:2004</docidentifier>
+      <date type="published">
+        <on>2004-12-03</on>
+      </date>
+    </bibitem>
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO/CD 8601-2</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/CD 8601-2</docidentifier>
+    </bibitem>
+  </relation>
+  <place>
+    <city>Geneva</city>
+  </place>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <ics>
+      <code>01.140.30</code>
+      <text>Documents in administration, commerce and industry</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>70908</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

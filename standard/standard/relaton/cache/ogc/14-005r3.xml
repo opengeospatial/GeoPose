@@ -1,0 +1,86 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn" type="title-main">OGC® IndoorGML</title>
+  <title language="en" script="Latn" type="main">OGC® IndoorGML</title>
+  <uri type="src">http://www.opengis.net/doc/IS/indoorgml/1.0.0</uri>
+  <uri type="html">https://docs.ogc.org/is/14-005r3/14-005r3.html</uri>
+  <docidentifier type="OGC" primary="true">14-005r3</docidentifier>
+  <date type="published">
+    <on>2014-12-02</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Jiyeong Lee</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Ki-Joune Li</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Sisi Zlatanova</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Thomas H. Kolbe</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Claus Nagel</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Thomas Becker</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+      <subdivision type="technical-committee">
+        <name>technical</name>
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>3</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This OGC® IndoorGML standard specifies an open data model and XML schema for indoor spatial information. IndoorGML is an application schema of OGC® GML 3.2.1. While there are several 3D building modelling standards such as CityGML, KML, and IFC, which deal with interior space of buildings from geometric, cartographic, and semantic viewpoints, IndoorGML intentionally focuses on modelling indoor spaces for navigation purposes.</abstract>
+  <ext schema-version="v1.1.2">
+    <doctype>standard</doctype>
+    <subdoctype>implementation</subdoctype>
+    <flavor>ogc</flavor>
+  </ext>
+</bibdata>

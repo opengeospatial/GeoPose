@@ -1,0 +1,81 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn" type="title-intro">Information technology</title>
+  <title language="en" script="Latn" type="title-main">Object Management Group Unified Modeling Language (OMG UML)</title>
+  <title language="en" script="Latn" type="title-part">Part 2: Superstructure</title>
+  <title language="en" script="Latn" type="main">Information technology - Object Management Group Unified Modeling Language (OMG UML) - Part 2: Superstructure</title>
+  <title language="fr" script="Latn" type="title-intro">Technologies de l'information</title>
+  <title language="fr" script="Latn" type="title-main">Langage de modélisation unifié OMG (OMG UML)</title>
+  <title language="fr" script="Latn" type="title-part">Partie 2: Superstructure</title>
+  <title language="fr" script="Latn" type="main">Technologies de l'information - Langage de modélisation unifié OMG (OMG UML) - Partie 2: Superstructure</title>
+  <uri type="src">https://www.iso.org/standard/52854.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:52854:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/05/28/52854.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO/IEC 19505-2:2012</docidentifier>
+  <docidentifier type="iso-undated">ISO/IEC 19505-2</docidentifier>
+  <docidentifier type="iso-reference">ISO/IEC 19505-2:2012(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso-iec:19505:-2:stage-90.93</docidentifier>
+  <docnumber>19505</docnumber>
+  <date type="published">
+    <on>2012-04-20</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Electrotechnical Commission</name>
+      <abbreviation>IEC</abbreviation>
+      <uri>www.iec.ch</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="technical-committee" subtype="IEC">
+        <name>Information technology</name>
+        <identifier>ISO/IEC JTC 1</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">ISO/IEC 19505-2:2012 defines the Unified Modeling Language (UML), revision 2. The objective of UML is to provide system architects, software engineers, and software developers with tools for analysis, design, and implementation of software-based systems as well as for modeling business and similar processes.</abstract>
+  <status>
+    <stage>90</stage>
+    <substage>93</substage>
+  </status>
+  <copyright>
+    <from>2012</from>
+    <owner>
+      <organization>
+        <name>ISO/IEC</name>
+      </organization>
+    </owner>
+  </copyright>
+  <place>
+    <city>Geneva</city>
+  </place>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <ics>
+      <code>35.060</code>
+      <text>Languages used in information technology</text>
+    </ics>
+    <structuredidentifier type="ISO/IEC">
+      <project-number>52854</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

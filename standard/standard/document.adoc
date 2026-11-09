@@ -1,7 +1,7 @@
 = OGC GeoPose 1.0 Data Exchange Standard
 :doctype: standard
 :docsubtype: implementation
-:status: draft
+:status: approved
 :language: en
 :committee: technical
 :workgroup: GeoPose Standard Working Group
@@ -9,7 +9,7 @@
 :edition: 1.0.0
 :received-date: 2022-02-08
 :issued-date: 2022-06-20
-:published-date: 2022-10-19
+:published-date: 2023-09-08
 :copyright-year: 2022
 :external-id: http://www.opengis.net/doc/IS/geopose/1.0
 :fullname: Carl Stephen Smyth

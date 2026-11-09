@@ -1,0 +1,85 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <formattedref>W3C CR-owl-time-20200326</formattedref>
+  <title language="en" script="Latn">Time Ontology in OWL</title>
+  <uri type="src">https://www.w3.org/TR/2020/CR-owl-time-20200326/</uri>
+  <docidentifier type="W3C" primary="true">W3C CR-owl-time-20200326</docidentifier>
+  <docnumber>CR-owl-time-20200326</docnumber>
+  <date type="published">
+    <on>2020-03-26</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>World Wide Web Consortium</name>
+      <abbreviation>W3C</abbreviation>
+      <uri>https://www.w3.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Simon</forename>
+        <surname language="en" script="Latn">Cox</surname>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Chris</forename>
+        <surname language="en" script="Latn">Little</surname>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>World Wide Web Consortium</name>
+      <subdivision type="technical-committee">
+        <name>Spatio-temporal Data on the Web Working Group</name>
+      </subdivision>
+      <abbreviation>W3C</abbreviation>
+      <uri>https://www.w3.org</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>Candidate Recommendation Snapshot</stage>
+  </status>
+  <relation type="editionOf">
+    <bibitem>
+      <title language="en" script="Latn">Time Ontology in OWL</title>
+      <uri type="src">https://www.w3.org/TR/owl-time/</uri>
+      <docidentifier type="W3C" primary="true">W3C owl-time</docidentifier>
+    </bibitem>
+  </relation>
+  <relation type="obsoletes">
+    <bibitem>
+      <title language="en" script="Latn">Time Ontology in OWL</title>
+      <uri type="src">https://www.w3.org/TR/2017/REC-owl-time-20171019/</uri>
+      <docidentifier type="W3C" primary="true">W3C REC-owl-time-20171019</docidentifier>
+    </bibitem>
+  </relation>
+  <relation type="updatedBy">
+    <description>errata</description>
+    <bibitem>
+      <title language="en" script="Latn">Time Ontology in OWL</title>
+      <uri type="src">https://www.w3.org/TR/2022/CRD-owl-time-20221115/</uri>
+      <docidentifier type="W3C" primary="true">W3C CRD-owl-time-20221115</docidentifier>
+    </bibitem>
+  </relation>
+  <series>
+    <title language="en" script="Latn">W3C Candidate Recommendation Snapshot</title>
+    <number>CR-owl-time-20200326</number>
+  </series>
+  <ext schema-version="v1.0.0">
+    <doctype>technicalReport</doctype>
+    <flavor>w3c</flavor>
+  </ext>
+</bibdata>

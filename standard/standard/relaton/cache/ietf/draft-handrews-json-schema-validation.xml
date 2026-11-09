@@ -1,0 +1,73 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn">JSON Schema Validation: A Vocabulary for Structural Validation of JSON</title>
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-validation-02</uri>
+  <docidentifier type="Internet-Draft">draft-handrews-json-schema-validation</docidentifier>
+  <docidentifier type="Internet-Draft" primary="true">draft-handrews-json-schema-validation-02</docidentifier>
+  <docnumber>I-D.handrews-json-schema-validation</docnumber>
+  <date type="published">
+    <on>2019-09-17</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Austin</forename>
+        <forename language="en" script="Latn" initial="A"/>
+        <formatted-initials language="en">A.</formatted-initials>
+        <surname language="en">Wright</surname>
+        <completename language="en">Austin Wright</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Henry</forename>
+        <forename language="en" script="Latn" initial="H"/>
+        <formatted-initials language="en">H.</formatted-initials>
+        <surname language="en">Andrews</surname>
+        <completename language="en">Henry Andrews</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Ben</forename>
+        <forename language="en" script="Latn" initial="B"/>
+        <formatted-initials language="en">B.</formatted-initials>
+        <surname language="en">Hutton</surname>
+        <completename language="en">Ben Hutton</completename>
+      </name>
+      <affiliation>
+        <organization>
+          <name language="en">Wellcome Sanger Institute</name>
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <version>02</version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p>JSON Schema (application/schema+json) has several purposes, one of
+   which is JSON instance validation.  This document specifies a
+   vocabulary for JSON Schema to describe the meaning of JSON documents,
+   provide hints for user interfaces working with JSON data, and to make
+   assertions about what a valid document must look like.</p>
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref>draft-handrews-json-schema-validation-01</formattedref>
+      <uri type="src">https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-validation-01</uri>
+      <docidentifier type="Internet-Draft" primary="true">draft-handrews-json-schema-validation-01</docidentifier>
+    </bibitem>
+  </relation>
+  <series type="main">
+    <title language="en" script="Latn">Internet-Draft</title>
+    <number>draft-handrews-json-schema-validation-02</number>
+  </series>
+</bibdata>

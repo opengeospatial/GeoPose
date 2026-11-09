@@ -1,0 +1,87 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn">JSON Schema: A Media Type for Describing JSON Documents</title>
+  <uri type="src">https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-02</uri>
+  <docidentifier type="Internet-Draft">draft-handrews-json-schema</docidentifier>
+  <docidentifier type="Internet-Draft" primary="true">draft-handrews-json-schema-02</docidentifier>
+  <docnumber>I-D.handrews-json-schema</docnumber>
+  <date type="published">
+    <on>2019-09-17</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Austin</forename>
+        <forename language="en" script="Latn" initial="A"/>
+        <formatted-initials language="en">A.</formatted-initials>
+        <surname language="en">Wright</surname>
+        <completename language="en">Austin Wright</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Henry</forename>
+        <forename language="en" script="Latn" initial="H"/>
+        <formatted-initials language="en">H.</formatted-initials>
+        <surname language="en">Andrews</surname>
+        <completename language="en">Henry Andrews</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Ben</forename>
+        <forename language="en" script="Latn" initial="B"/>
+        <formatted-initials language="en">B.</formatted-initials>
+        <surname language="en">Hutton</surname>
+        <completename language="en">Ben Hutton</completename>
+      </name>
+      <affiliation>
+        <organization>
+          <name language="en">Wellcome Sanger Institute</name>
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <forename language="en" script="Latn">Greg</forename>
+        <forename language="en" script="Latn" initial="G"/>
+        <formatted-initials language="en">G.</formatted-initials>
+        <surname language="en">Dennis</surname>
+        <completename language="en">Greg Dennis</completename>
+      </name>
+    </person>
+  </contributor>
+  <version>02</version>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p>JSON Schema defines the media type "application/schema+json", a JSON-
+   based format for describing the structure of JSON data.  JSON Schema
+   asserts what a JSON document must look like, ways to extract
+   information from it, and how to interact with it.  The "application/
+   schema-instance+json" media type provides additional feature-rich
+   integration with "application/schema+json" beyond what can be offered
+   for "application/json" documents.</p>
+  </abstract>
+  <relation type="updates">
+    <bibitem>
+      <formattedref>draft-handrews-json-schema-01</formattedref>
+      <uri type="src">https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-01</uri>
+      <docidentifier type="Internet-Draft" primary="true">draft-handrews-json-schema-01</docidentifier>
+    </bibitem>
+  </relation>
+  <series type="main">
+    <title language="en" script="Latn">Internet-Draft</title>
+    <number>draft-handrews-json-schema-02</number>
+  </series>
+</bibdata>

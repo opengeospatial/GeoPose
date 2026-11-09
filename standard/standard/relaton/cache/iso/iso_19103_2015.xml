@@ -1,16 +1,21 @@
-<bibdata type="standard">
-  <fetched>2022-10-14</fetched>
-  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
-  <title type="title-main" format="text/plain" language="en" script="Latn">Conceptual schema language</title>
-  <title type="main" format="text/plain" language="en" script="Latn">Geographic information - Conceptual schema language</title>
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn" type="title-intro">Geographic information</title>
+  <title language="en" script="Latn" type="title-main">Conceptual schema language</title>
+  <title language="en" script="Latn" type="main">Geographic information - Conceptual schema language</title>
+  <title language="fr" script="Latn" type="title-intro">Information géographique</title>
+  <title language="fr" script="Latn" type="title-main">Langage de schéma conceptuel</title>
+  <title language="fr" script="Latn" type="main">Information géographique - Langage de schéma conceptuel</title>
   <uri type="src">https://www.iso.org/standard/56734.html</uri>
-  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:56734:en</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:56734:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/05/67/56734.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 19103:2015</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:19103:ed-1</docidentifier>
+  <docidentifier type="iso-undated">ISO 19103</docidentifier>
+  <docidentifier type="iso-reference">ISO 19103:2015(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:19103:stage-95.99</docidentifier>
   <docnumber>19103</docnumber>
   <date type="published">
-    <on>2015-12</on>
+    <on>2015-12-02</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -20,15 +25,26 @@
       <uri>www.iso.org</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="technical-committee" subtype="TC">
+        <name>Geographic information/Geomatics</name>
+        <identifier>ISO/TC 211</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>1</edition>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">ISO 19103:2015 provides rules and guidelines for the use of a conceptual schema language within the context of geographic information. The chosen conceptual schema language is the Unified Modeling Language (UML).
-ISO 19103.2015 provides a profile of the Unified Modelling Language (UML).
-The standardization target type of this standard is UML schemas describing geographic information.</abstract>
+  <abstract language="en" script="Latn">ISO 19103:2015 provides rules and guidelines for the use of a conceptual schema language within the context of geographic information. The chosen conceptual schema language is the Unified Modeling Language (UML). ISO 19103.2015 provides a profile of the Unified Modelling Language (UML). The standardization target type of this standard is UML schemas describing geographic information.</abstract>
   <status>
-    <stage>90</stage>
-    <substage>92</substage>
+    <stage>60</stage>
+    <substage>60</substage>
   </status>
   <copyright>
     <from>2015</from>
@@ -39,29 +55,26 @@ The standardization target type of this standard is UML schemas describing geogr
     </owner>
   </copyright>
   <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO/TS 19103:2005</formattedref>
+    <bibitem>
+      <formattedref>ISO/TS 19103:2005</formattedref>
       <docidentifier type="ISO" primary="true">ISO/TS 19103:2005</docidentifier>
+      <date type="published">
+        <on>2005-07-18</on>
+      </date>
     </bibitem>
   </relation>
-  <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO/CD 19103</formattedref>
-      <docidentifier type="ISO" primary="true">ISO/CD 19103</docidentifier>
-    </bibitem>
-  </relation>
-  <place>Geneva</place>
-  <ext>
+  <place>
+    <city>Geneva</city>
+  </place>
+  <ext schema-version="v1.1.2">
     <doctype>international-standard</doctype>
-    <editorialgroup>
-      <technical-committee number="211" type="TC" identifier="ISO/TC 211">Geographic information/Geomatics</technical-committee>
-    </editorialgroup>
+    <flavor>iso</flavor>
     <ics>
       <code>35.240.70</code>
       <text>IT applications in science</text>
     </ics>
     <structuredidentifier type="ISO">
-      <project-number>ISO 19103</project-number>
+      <project-number>56734</project-number>
     </structuredidentifier>
   </ext>
 </bibdata>

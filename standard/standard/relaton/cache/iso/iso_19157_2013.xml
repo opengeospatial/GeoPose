@@ -1,16 +1,21 @@
-<bibdata type="standard">
-  <fetched>2022-10-14</fetched>
-  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information </title>
-  <title type="title-main" format="text/plain" language="en" script="Latn">Data quality</title>
-  <title type="main" format="text/plain" language="en" script="Latn">Geographic information  - Data quality</title>
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn" type="title-intro">Geographic information </title>
+  <title language="en" script="Latn" type="title-main">Data quality</title>
+  <title language="en" script="Latn" type="main">Geographic information  - Data quality</title>
+  <title language="fr" script="Latn" type="title-intro">Information géographique</title>
+  <title language="fr" script="Latn" type="title-main">Qualité des données</title>
+  <title language="fr" script="Latn" type="main">Information géographique - Qualité des données</title>
   <uri type="src">https://www.iso.org/standard/32575.html</uri>
-  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:32575:en</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:32575:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/03/25/32575.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 19157:2013</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:19157:ed-1</docidentifier>
+  <docidentifier type="iso-undated">ISO 19157</docidentifier>
+  <docidentifier type="iso-reference">ISO 19157:2013(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:19157:stage-90.92</docidentifier>
   <docnumber>19157</docnumber>
   <date type="published">
-    <on>2013-12</on>
+    <on>2013-12-06</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -20,17 +25,24 @@
       <uri>www.iso.org</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="technical-committee" subtype="TC">
+        <name>Geographic information/Geomatics</name>
+        <identifier>ISO/TC 211</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>1</edition>
   <language>en</language>
+  <language>fr</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">
-ISO 19157:2013 establishes the principles for describing the quality of geographic data. It
--   defines components for describing data quality;
--   specifies components and content structure of a register for data quality measures;
--   describes general procedures for evaluating the quality of geographic data;
--   establishes principles for reporting data quality.
-ISO 19157:2013 also defines a set of data quality measures for use in evaluating and reporting data quality. It is applicable to data producers providing quality information to describe and assess how well a data set conforms to its product specification and to data users attempting to determine whether or not specific geographic data are of sufficient quality for their particular application.
-ISO 19157:2013 does not attempt to define minimum acceptable levels of quality for geographic data.</abstract>
+  <abstract language="en" script="Latn">﻿ISO 19157:2013 establishes the principles for describing the quality of geographic data. It - defines components for describing data quality; - specifies components and content structure of a register for data quality measures; - describes general procedures for evaluating the quality of geographic data; - establishes principles for reporting data quality. ISO 19157:2013 also defines a set of data quality measures for use in evaluating and reporting data quality. It is applicable to data producers providing quality information to describe and assess how well a data set conforms to its product specification and to data users attempting to determine whether or not specific geographic data are of sufficient quality for their particular application. ISO 19157:2013 does not attempt to define minimum acceptable levels of quality for geographic data.</abstract>
   <status>
     <stage>90</stage>
     <substage>92</substage>
@@ -44,56 +56,77 @@ ISO 19157:2013 does not attempt to define minimum acceptable levels of quality f
     </owner>
   </copyright>
   <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 19113:2002</formattedref>
+    <bibitem>
+      <formattedref>ISO 19113:2002</formattedref>
       <docidentifier type="ISO" primary="true">ISO 19113:2002</docidentifier>
-    </bibitem>
-  </relation>
-  <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 19114:2003</formattedref>
-      <docidentifier type="ISO" primary="true">ISO 19114:2003</docidentifier>
-    </bibitem>
-  </relation>
-  <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO/TS 19138:2006</formattedref>
-      <docidentifier type="ISO" primary="true">ISO/TS 19138:2006</docidentifier>
-    </bibitem>
-  </relation>
-  <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO/FDIS 19157-1</formattedref>
-      <docidentifier type="ISO" primary="true">ISO/FDIS 19157-1</docidentifier>
-    </bibitem>
-  </relation>
-  <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO/AWI 19157-3</formattedref>
-      <docidentifier type="ISO" primary="true">ISO/AWI 19157-3</docidentifier>
-    </bibitem>
-  </relation>
-  <relation type="updates">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 19157:2013/Amd 1:2018</formattedref>
-      <docidentifier type="ISO" primary="true">ISO 19157:2013/Amd 1:2018</docidentifier>
-      <date type="circulated">
-        <on>2019-07-01</on>
+      <date type="published">
+        <on>2002-11-20</on>
       </date>
     </bibitem>
   </relation>
-  <place>Geneva</place>
-  <ext>
+  <relation type="obsoletes">
+    <bibitem>
+      <formattedref>ISO/TS 19138:2006</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/TS 19138:2006</docidentifier>
+      <date type="published">
+        <on>2006-11-22</on>
+      </date>
+    </bibitem>
+  </relation>
+  <relation type="obsoletes">
+    <bibitem>
+      <formattedref>ISO 19114:2003</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19114:2003</docidentifier>
+      <date type="published">
+        <on>2003-09-04</on>
+      </date>
+    </bibitem>
+  </relation>
+  <relation type="obsoletes">
+    <bibitem>
+      <formattedref>ISO 19114:2003/Cor 1:2005</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19114:2003/Cor 1:2005</docidentifier>
+      <date type="published">
+        <on>2005-09-15</on>
+      </date>
+    </bibitem>
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO/WD 19157-3</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WD 19157-3</docidentifier>
+    </bibitem>
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO 19157-1:2023</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19157-1:2023</docidentifier>
+      <date type="published">
+        <on>2023-04-19</on>
+      </date>
+    </bibitem>
+  </relation>
+  <relation type="updatedBy">
+    <bibitem>
+      <formattedref>ISO 19157:2013/Amd 1:2018</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19157:2013/Amd 1:2018</docidentifier>
+      <date type="published">
+        <on>2018-01-09</on>
+      </date>
+    </bibitem>
+  </relation>
+  <place>
+    <city>Geneva</city>
+  </place>
+  <ext schema-version="v1.1.2">
     <doctype>international-standard</doctype>
-    <editorialgroup>
-      <technical-committee number="211" type="TC" identifier="ISO/TC 211">Geographic information/Geomatics</technical-committee>
-    </editorialgroup>
+    <flavor>iso</flavor>
     <ics>
       <code>35.240.70</code>
       <text>IT applications in science</text>
     </ics>
     <structuredidentifier type="ISO">
-      <project-number>ISO 19157</project-number>
+      <project-number>32575</project-number>
     </structuredidentifier>
   </ext>
 </bibdata>

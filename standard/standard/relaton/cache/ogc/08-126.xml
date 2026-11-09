@@ -1,0 +1,52 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn" type="title-intro">Topic 5</title>
+  <title language="en" script="Latn" type="title-main">Features</title>
+  <title language="en" script="Latn" type="main">Topic 5 - Features</title>
+  <uri type="html">https://docs.ogc.org/as/08-126/08-126/pdf</uri>
+  <docidentifier type="OGC" primary="true">08-126</docidentifier>
+  <date type="published">
+    <on>2009-01-15</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Cliff Kottman</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Carl Reed</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+      <subdivision type="technical-committee">
+        <name>technical</name>
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">From ISO 19101, “A feature is an abstraction of a real world phenomenon”; it is a geographic feature if it is associated with a location relative to the Earth. </abstract>
+  <ext schema-version="v1.1.2">
+    <doctype>abstract-specification-topic</doctype>
+    <flavor>ogc</flavor>
+  </ext>
+</bibdata>

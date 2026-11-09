@@ -1,1 +1,5 @@
-.DS_Store
+document.err.html
+document.pdf.err
+document.presentation.xml
+document.xml
+document.asciidoc.log.txt

@@ -1,17 +1,21 @@
-<bibdata type="standard">
-  <fetched>2022-10-14</fetched>
-  <title type="title-intro" format="text/plain" language="en" script="Latn">Information technology</title>
-  <title type="title-main" format="text/plain" language="en" script="Latn">Object Management Group Object Constraint Language (OCL)</title>
-  <title type="main" format="text/plain" language="en" script="Latn">Information technology - Object Management Group Object Constraint Language (OCL)</title>
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn" type="title-intro">Information technology</title>
+  <title language="en" script="Latn" type="title-main">Object Management Group Object Constraint Language (OCL)</title>
+  <title language="en" script="Latn" type="main">Information technology - Object Management Group Object Constraint Language (OCL)</title>
+  <title language="fr" script="Latn" type="title-intro">Technologies de l'information</title>
+  <title language="fr" script="Latn" type="title-main">Langage de contraintes orienté-objet (OCL) de l'OMG</title>
+  <title language="fr" script="Latn" type="main">Technologies de l'information - Langage de contraintes orienté-objet (OCL) de l'OMG</title>
   <uri type="src">https://www.iso.org/standard/57306.html</uri>
-  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:57306:en</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:57306:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/05/73/57306.detail.rss</uri>
-  <uri type="pub">http://standards.iso.org/ittf/PubliclyAvailableStandards/index.html</uri>
   <docidentifier type="ISO" primary="true">ISO/IEC 19507:2012</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso-iec:19507:ed-1</docidentifier>
+  <docidentifier type="iso-undated">ISO/IEC 19507</docidentifier>
+  <docidentifier type="iso-reference">ISO/IEC 19507:2012(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso-iec:19507:stage-90.93</docidentifier>
   <docnumber>19507</docnumber>
   <date type="published">
-    <on>2012-04</on>
+    <on>2012-04-20</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -29,10 +33,23 @@
       <uri>www.iec.ch</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="technical-committee" subtype="IEC">
+        <name>Information technology</name>
+        <identifier>ISO/IEC JTC 1</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>1</edition>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">ISO/IEC 19507:2012 defines the Object Constraint Language (OCL), version 2.3.1. OCL version 2.3.1 is the version of OCL that is aligned with UML 2.3 and MOF 2.0. </abstract>
+  <abstract language="en" script="Latn">ISO/IEC 19507:2012 defines the Object Constraint Language (OCL), version 2.3.1. OCL version 2.3.1 is the version of OCL that is aligned with UML 2.3 and MOF 2.0.</abstract>
   <status>
     <stage>90</stage>
     <substage>93</substage>
@@ -45,18 +62,18 @@
       </organization>
     </owner>
   </copyright>
-  <place>Geneva</place>
-  <ext>
+  <place>
+    <city>Geneva</city>
+  </place>
+  <ext schema-version="v1.1.2">
     <doctype>international-standard</doctype>
-    <editorialgroup>
-      <technical-committee number="1" type="IEC" identifier="ISO/IEC JTC 1">Information technology</technical-committee>
-    </editorialgroup>
+    <flavor>iso</flavor>
     <ics>
       <code>35.060</code>
       <text>Languages used in information technology</text>
     </ics>
-    <structuredidentifier type="ISO">
-      <project-number>ISO 19507</project-number>
+    <structuredidentifier type="ISO/IEC">
+      <project-number>57306</project-number>
     </structuredidentifier>
   </ext>
 </bibdata>

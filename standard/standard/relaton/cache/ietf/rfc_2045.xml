@@ -1,6 +1,6 @@
-<bibdata type="standard">
-  <fetched>2022-10-14</fetched>
-  <title type="main" format="text/plain">Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</title>
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title type="main">Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc2045</uri>
   <docidentifier type="IETF" primary="true">RFC 2045</docidentifier>
   <docidentifier type="DOI">10.17487/RFC2045</docidentifier>
@@ -12,6 +12,9 @@
     <role type="author"/>
     <person>
       <name>
+        <forename language="en" script="Latn" initial="N"/>
+        <formatted-initials language="en" script="Latn">N.</formatted-initials>
+        <surname language="en" script="Latn">Freed</surname>
         <completename language="en" script="Latn">N. Freed</completename>
       </name>
     </person>
@@ -20,26 +23,63 @@
     <role type="author"/>
     <person>
       <name>
+        <forename language="en" script="Latn" initial="N"/>
+        <formatted-initials language="en" script="Latn">N.</formatted-initials>
+        <surname language="en" script="Latn">Borenstein</surname>
         <completename language="en" script="Latn">N. Borenstein</completename>
       </name>
     </person>
   </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name language="en">RFC Publisher</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      <name language="en">RFC Series</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name language="en">Internet Engineering Task Force</name>
+      <subdivision type="workgroup">
+        <name>Internet Message Extensions</name>
+        <identifier>822ext</identifier>
+      </subdivision>
+      <abbreviation language="en">IETF</abbreviation>
+    </organization>
+  </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
+  <abstract language="en" script="Latn">
     <p>This initial document specifies the various headers used to describe the structure of MIME messages. [STANDARDS-TRACK]</p>
   </abstract>
+  <status>
+    <stage>DRAFT STANDARD</stage>
+  </status>
   <series>
-    <title format="text/plain">RFC</title>
+    <title>RFC</title>
     <number>2045</number>
   </series>
-  <keyword>MIME</keyword>
-  <keyword>media</keyword>
-  <keyword>types</keyword>
-  <keyword>headers</keyword>
-  <ext>
-    <editorialgroup>
-      <committee>822ext</committee>
-    </editorialgroup>
-  </ext>
+  <series type="stream">
+    <title>IETF</title>
+  </series>
+  <keyword>
+    <vocab>MIME</vocab>
+  </keyword>
+  <keyword>
+    <vocab>media</vocab>
+  </keyword>
+  <keyword>
+    <vocab>types</vocab>
+  </keyword>
+  <keyword>
+    <vocab>headers</vocab>
+  </keyword>
 </bibdata>

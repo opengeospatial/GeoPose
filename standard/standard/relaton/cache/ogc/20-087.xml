@@ -1,0 +1,52 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <fetched>2026-11-09</fetched>
+  <title language="en" script="Latn" type="title-main">Interoperable Simulation and Gaming Sprint Engineering Report</title>
+  <title language="en" script="Latn" type="main">Interoperable Simulation and Gaming Sprint Engineering Report</title>
+  <uri type="src">http://www.opengis.net/doc/PER/ISG-Sprint</uri>
+  <uri type="html">https://docs.ogc.org/per/20-087.html</uri>
+  <docidentifier type="OGC" primary="true">20-087</docidentifier>
+  <date type="published">
+    <on>2021-01-26</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Leonard Daly</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Scott Serich</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+      <subdivision type="technical-committee">
+        <name>technical</name>
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">The OGC Interoperable Simulation and Gaming Sprint advanced the use of relevant OGC and Khronos standards in the modeling and simulation community through practical exercise and testing of the GeoVolumes API draft specification produced by the 3D Data Container and Tiles API Pilot. Of particular interest was the handling and integration of glTF models coming from multiple sources, but the sprint also examined the specification’s implementability, consistency, completeness, and maturity.</abstract>
+  <ext schema-version="v1.1.2">
+    <doctype>engineering-report</doctype>
+    <flavor>ogc</flavor>
+  </ext>
+</bibdata>
