@@ -43,6 +43,12 @@ set of coordinates of a point in a 3D Euclidean space and associated {{reference
 
 rotational relationship between two {{reference frame,reference frames}}
 
+==== yaw, pitch, roll (YPR) angles
+
+a convention for expressing orientation as three angles within a 3-dimensional Cartesian local coordinate system, where the YPR rotation angles are each measured counter-clockwise about the negative direction of the corresponding axis. There are sequential rotations about the Z, Y’, and X’’ axes, where the Y’ axis is based on the rotated local coordinate system after the Z(yaw) rotation and the X’’ axis is based on the twice-rotated local coordinate system after both the Z(yaw) and Y(pitch) rotations. 
+
+**Note:** this definition makes the yaw angle the negative of the heading or yaw angles as used conventionally in air and water vessel navigation but conforms to practice in robotics and computer graphics. 
+
 ==== pose
 
 representation of a {{frame transform}} mapping the space of an {{outer frame}} to the space of an {{inner frame}}
