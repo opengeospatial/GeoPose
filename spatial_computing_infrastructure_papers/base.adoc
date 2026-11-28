@@ -1,15 +1,21 @@
 :stem: latexmath
-== Reference Frames
+= Spatial Computing Infrastructure - Space, Time, Spacetime, and Orientation
+:title-separator: -
 
-*Subtitle:* A  conceptual model for interoperable
-reference frame specifications. *Document type:* Reference documentation for practice and standardisation in support of spatial, temporal, and spatiotemporal observations and modelling. +
+== Summary: A  conceptual model for interoperable reference frame specifications. 
+
+*Document type:* Reference documentation for practice and standardisation in support of spatial, temporal, and spatiotemporal observations and modelling. +
+
 *Status:* In-progress background paper; reference for spatial, temporal, and geographic reference frames, measures, and metric relationships. +
-*Target length:* Approximately 35 pages of main text, suitable for
-journal publication +
-*Author(s):* Smyth + <co-authors>
-*Affiliation(s):* ++[++To be completed++]++ +
-*Version/date:* Draft 0.37 — 25th November 2026
 
+*Target cimpletion date:* 1st anuary 2026
+*Target length:* Approximately 35 pages of main text, suitable for archive and journal publication +
+
+*Author(s):* Smyth + <co-authors>
+
+*Affiliation(s):* ++[++To be completed++]++ +
+
+*Version/date:* Draft 0.37 — 25th November 2026
 ____
 *Note:* Each subsection has some placeholder text. I am replacing these
 as the manuscript develops.
